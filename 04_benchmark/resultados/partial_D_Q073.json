@@ -1,0 +1,46 @@
+{
+  "result": {
+    "answer": "La técnica MITRE ATT&CK T1562 se llama \"Impair Defenses\". Esta técnica se refiere a la modificación maliciosa de componentes en el entorno de una víctima para obstaculizar o deshabilitar mecanismos defensivos. Se clasifica dentro de la táctica de evasión de defensa y es aplicable a diversas plataformas, incluyendo Windows, Linux, macOS, y más.\n\n**Fuentes consultadas:** query_mitre_graph",
+    "steps": [
+      {
+        "thought": "",
+        "action": "query_mitre_graph",
+        "action_input": {
+          "question": "¿Cuál es el nombre de la técnica MITRE ATT&CK T1562?"
+        },
+        "observation_preview": "{\n  \"context\": \"=== SUBGRAFO MITRE ATT&CK ===\\n\\n--- Entidades recuperadas ---\\n  [course-of-action] M1026 — Privileged Account Management\\n     Privileged Account Management focuses on implementing policies, controls, and tools to securely manage privileged accounts (e.g., SYSTEM, root, or administ…"
+      }
+    ],
+    "tools_used": [
+      "query_mitre_graph"
+    ],
+    "iterations": 1,
+    "forced_final": false,
+    "hallucination_risk": false,
+    "usage": {
+      "prompt_tokens": 2419,
+      "completion_tokens": 187,
+      "total_tokens": 2606,
+      "total_latency_s": 4.802
+    },
+    "architecture": "D_Toolformer"
+  },
+  "metrics": {
+    "question_id": "Q073",
+    "level": 1,
+    "domain": "MITRE",
+    "architecture": "D_Toolformer",
+    "accuracy": 0.6,
+    "hallucination_risk": 0.0,
+    "traceability": 0.5,
+    "error_handling": 1.0,
+    "latency_s": 4.802,
+    "total_tokens": 2606,
+    "accuracy_detail": "Score=0.600 | completas=['T1562', 'Impair Defenses', 'defenses'] | parciales=[] | ausentes=['antivirus', 'desactivar']",
+    "hallucination_detail": "Sin señales de alucinación detectadas",
+    "traceability_detail": "Markers texto: ['mitre', 'att&ck', 'fuente'] | Fuente estructurada: api_source=False, seed_nodes=False, sql=False",
+    "error_handling_detail": "Sin errores detectados en el pipeline",
+    "latency_detail": "total_react=4.80s iterations=1",
+    "answer_preview": "La técnica MITRE ATT&CK T1562 se llama \"Impair Defenses\". Esta técnica se refiere a la modificación maliciosa de componentes en el entorno de una víctima para obstaculizar o deshabilitar mecanismos defensivos. Se clasifica dentro de la táctica de evasión de defensa y es aplicable a diversas platafor…"
+  }
+}

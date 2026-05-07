@@ -1,0 +1,47 @@
+{
+  "result": {
+    "answer": "El subgrafo proporcionado no contiene información específica sobre la técnica MITRE ATT&CK T1055 (Process Injection). Por lo tanto, no puedo ofrecer una descripción de esta técnica basada en el contenido disponible.\n\nPara obtener información sobre T1055, se recomienda consultar directamente la base de datos del framework MITRE ATT&CK.",
+    "seed_nodes": [
+      "T1055",
+      "T1053.002",
+      "S0110"
+    ],
+    "subgraph_nodes": 40,
+    "subgraph_edges": 10,
+    "coverage": {
+      "sufficient": false,
+      "missing_entities": [
+        "descripción de T1055"
+      ],
+      "confidence": 0.4
+    },
+    "hallucination_risk": true,
+    "usage": {
+      "prompt_tokens": 3006,
+      "completion_tokens": 102,
+      "total_tokens": 3108,
+      "retrieval_latency_s": 0.011,
+      "coverage_latency_s": 1.107,
+      "synthesis_latency_s": 2.256
+    },
+    "architecture": "C_GraphRAG"
+  },
+  "metrics": {
+    "question_id": "Q064",
+    "level": 1,
+    "domain": "MITRE",
+    "architecture": "C_GraphRAG",
+    "accuracy": 0.4,
+    "hallucination_risk": 0.7,
+    "traceability": 1.0,
+    "error_handling": 1.0,
+    "latency_s": 3.374,
+    "total_tokens": 3108,
+    "accuracy_detail": "Score=0.400 | completas=['T1055', 'process injection'] | parciales=[] | ausentes=['inyección', 'proceso', 'memory']",
+    "hallucination_detail": "Flag de riesgo activo (sin datos de fuente verificados)",
+    "traceability_detail": "Markers texto: ['mitre', 'att&ck', 'base de datos'] | Fuente estructurada: api_source=False, seed_nodes=True, sql=False",
+    "error_handling_detail": "Sin errores detectados en el pipeline",
+    "latency_detail": "retrieval=0.01s coverage=1.11s synth=2.26s",
+    "answer_preview": "El subgrafo proporcionado no contiene información específica sobre la técnica MITRE ATT&CK T1055 (Process Injection). Por lo tanto, no puedo ofrecer una descripción de esta técnica basada en el contenido disponible.\n\nPara obtener información sobre T1055, se recomienda consultar directamente la base …"
+  }
+}

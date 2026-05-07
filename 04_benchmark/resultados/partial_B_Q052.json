@@ -1,0 +1,37 @@
+{
+  "result": {
+    "answer": "La vulnerabilidad CVE-2020-1472, también conocida como \"Zerologon\", presenta diferentes niveles de severidad según las métricas de CVSS.\n\n1. **CVSS v3.1 (NVD)**: Según el NVD, esta vulnerabilidad tiene una puntuación base de **10.0**, lo que la clasifica como **CRÍTICA**. Esto se debe a que permite a un atacante no autenticado obtener acceso de administrador de dominio a través de una conexión vulnerable al protocolo Netlogon. La vectorización de ataque es a través de la red, con una complejidad de ataque baja y sin necesidad de interacción del usuario. Además, tiene un impacto alto en la confidencialidad, integridad y disponibilidad (C:H/I:H/A:H) (Fuente: NVD).\n\n2. **CVSS v3.1 (Microsoft)**: Microsoft clasifica la severidad de esta vulnerabilidad como **MEDIA**, con una puntuación base de **5.5**. En este caso, se requiere que el atacante tenga privilegios bajos y que la explotación se realice en un entorno local (AV:L) (Fuente: Microsoft).\n\n3. **CVSS v2.0 (NVD)**: También se reporta una puntuación de **9.3**, que se clasifica como **ALTA**, con un impacto completo en la confidencialidad, integridad y disponibilidad (C:C/I:C/A:C) (Fuente: NVD).\n\nEn resumen, la severidad de CVE-2020-1472 varía entre **MEDIA** y **CRÍTICA** dependiendo de la fuente y el contexto de explotación. Se recomienda aplicar las actualizaciones proporcionadas por Microsoft para mitigar esta vulnerabilidad.",
+    "intent": "get_cve_by_id",
+    "api_source": "https://services.nvd.nist.gov/rest/json/cves/2.0?cveId=CVE-2020-1472",
+    "api_error": null,
+    "router_confidence": 0.9,
+    "usage": {
+      "prompt_tokens": 2865,
+      "completion_tokens": 403,
+      "total_tokens": 3268,
+      "router_latency_s": 1.43,
+      "api_latency_s": 1.125,
+      "synthesis_latency_s": 7.473
+    },
+    "hallucination_risk": false,
+    "architecture": "B_API"
+  },
+  "metrics": {
+    "question_id": "Q052",
+    "level": 1,
+    "domain": "NVD",
+    "architecture": "B_API",
+    "accuracy": 0.6667,
+    "hallucination_risk": 0.0,
+    "traceability": 1.0,
+    "error_handling": 1.0,
+    "latency_s": 10.028,
+    "total_tokens": 3268,
+    "accuracy_detail": "Score=0.667 | completas=['10.0', 'crítica', 'zerologon', 'netlogon'] | parciales=[] | ausentes=['critical', 'active directory']",
+    "hallucination_detail": "Sin señales de alucinación detectadas",
+    "traceability_detail": "Markers texto: ['nvd', 'nist', 'según'] | Fuente estructurada: api_source=True, seed_nodes=False, sql=False",
+    "error_handling_detail": "Sin errores detectados en el pipeline",
+    "latency_detail": "router=1.43s api=1.12s synth=7.47s",
+    "answer_preview": "La vulnerabilidad CVE-2020-1472, también conocida como \"Zerologon\", presenta diferentes niveles de severidad según las métricas de CVSS.\n\n1. **CVSS v3.1 (NVD)**: Según el NVD, esta vulnerabilidad tiene una puntuación base de **10.0**, lo que la clasifica como **CRÍTICA**. Esto se debe a que permite …"
+  }
+}

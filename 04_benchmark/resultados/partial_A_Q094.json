@@ -1,0 +1,39 @@
+{
+  "result": {
+    "answer": "Para una organización que enfrenta campañas de phishing (T1566) con adjuntos que explotan vulnerabilidades en Microsoft Office, es crucial implementar una estrategia defensiva robusta. Según los datos obtenidos de la base de datos NVD/NIST, se destaca la vulnerabilidad **CVE-2022-21840**, que permite la ejecución remota de código en Microsoft Office y tiene una severidad clasificada como **ALTA**. Esta vulnerabilidad puede ser explotada a través de documentos maliciosos enviados por correo electrónico.\n\nAquí hay algunas recomendaciones estratégicas:\n\n1. **Capacitación y Concienciación**: Educar a los empleados sobre los riesgos del phishing y cómo identificar correos electrónicos sospechosos. Esto incluye no abrir adjuntos de fuentes desconocidas y verificar la autenticidad de los remitentes.\n\n2. **Filtrado de Correo Electrónico**: Implementar soluciones de filtrado de correo electrónico que detecten y bloqueen correos electrónicos de phishing antes de que lleguen a la bandeja de entrada del usuario.\n\n3. **Actualizaciones y Parches**: Asegurarse de que todos los sistemas y aplicaciones, especialmente Microsoft Office, estén actualizados con los últimos parches de seguridad. La vulnerabilidad CVE-2022-21840, por ejemplo, debe ser abordada mediante la aplicación de las actualizaciones recomendadas por Microsoft.\n\n4. **Protección de Endpoint**: Utilizar software de seguridad en los endpoints que incluya protección contra malware y análisis de comportamiento para detectar actividades sospechosas.\n\n5. **Segmentación de Red**: Implementar segmentación de red para limitar el acceso a recursos críticos y minimizar el impacto de un posible ataque exitoso.\n\n6. **Respuestas a Incidentes**: Establecer un plan de respuesta a incidentes que incluya procedimientos para manejar ataques de phishing y explotación de vulnerabilidades.\n\nEstas medidas ayudarán a mitigar el riesgo asociado con las campañas de phishing y la explotación de vulnerabilidades en Microsoft Office.",
+    "sql": "SELECT cve.cve_id, cve.description, cve.cvss_v3_severity, cve_reference.url, cve_reference.source\nFROM cve\nJOIN cve_cpe ON cve.cve_id = cve_cpe.cve_id\nJOIN cve_reference ON cve.cve_id = cve_reference.cve_id\nWHERE cve_cpe.cpe_uri LIKE '%microsoft%office%' AND cve.cvss_v3_severity IS NOT NULL\nLIMIT 10;",
+    "sql_rows": 10,
+    "correction_attempts": 0,
+    "sql_error": null,
+    "api_fallback": null,
+    "hallucination_risk": false,
+    "usage": {
+      "prompt_tokens": 3903,
+      "completion_tokens": 661,
+      "total_tokens": 4564,
+      "schema_linking_latency_s": 3.649,
+      "sql_generation_latency_s": 2.576,
+      "self_correction_latency_s": 0,
+      "synthesis_latency_s": 8.899
+    },
+    "architecture": "A_Text2SQL"
+  },
+  "metrics": {
+    "question_id": "Q094",
+    "level": 3,
+    "domain": "BOTH",
+    "architecture": "A_Text2SQL",
+    "accuracy": 0.625,
+    "hallucination_risk": 0.0,
+    "traceability": 1.0,
+    "error_handling": 1.0,
+    "latency_s": 15.124,
+    "total_tokens": 4564,
+    "accuracy_detail": "Score=0.625 | completas=['T1566', 'phishing', 'office', 'CVE', 'parche'] | parciales=[] | ausentes=['M1049', 'email filtering', 'sandbox']",
+    "hallucination_detail": "Sin señales de alucinación detectadas",
+    "traceability_detail": "Markers texto: ['nvd', 'nist', 'según'] | Fuente estructurada: api_source=False, seed_nodes=False, sql=True",
+    "error_handling_detail": "Sin errores detectados en el pipeline",
+    "latency_detail": "linking=3.65s sql=2.58s corr=0.00s synth=8.90s",
+    "answer_preview": "Para una organización que enfrenta campañas de phishing (T1566) con adjuntos que explotan vulnerabilidades en Microsoft Office, es crucial implementar una estrategia defensiva robusta. Según los datos obtenidos de la base de datos NVD/NIST, se destaca la vulnerabilidad **CVE-2022-21840**, que permit…"
+  }
+}

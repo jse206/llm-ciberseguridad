@@ -1,0 +1,41 @@
+{
+  "result": {
+    "answer": "No he encontrado información relevante en el grafo MITRE ATT&CK para responder a tu pregunta sobre el score CVSS v3 de CVE-2022-22965 (Spring4Shell). \n\nEl sistema MITRE ATT&CK se centra en técnicas de ataque, grupos APT, tácticas, mitigaciones y herramientas relacionadas con la ciberseguridad. Si tienes preguntas sobre alguno de estos temas, estaré encantado de ayudarte.",
+    "seed_nodes": [],
+    "subgraph_nodes": 0,
+    "subgraph_edges": 0,
+    "coverage": {
+      "sufficient": false,
+      "missing_entities": [],
+      "confidence": 0.0
+    },
+    "hallucination_risk": true,
+    "usage": {
+      "prompt_tokens": 145,
+      "completion_tokens": 90,
+      "total_tokens": 235,
+      "retrieval_latency_s": 0.017,
+      "coverage_latency_s": 0,
+      "synthesis_latency_s": 1.976
+    },
+    "architecture": "C_GraphRAG"
+  },
+  "metrics": {
+    "question_id": "Q054",
+    "level": 1,
+    "domain": "NVD",
+    "architecture": "C_GraphRAG",
+    "accuracy": 0.1667,
+    "hallucination_risk": 0.7,
+    "traceability": 0.5,
+    "error_handling": 1.0,
+    "latency_s": 1.993,
+    "total_tokens": 235,
+    "accuracy_detail": "Score=0.167 | completas=['spring'] | parciales=[] | ausentes=['9.8', 'critical', 'java', 'RCE', 'remote code execution']",
+    "hallucination_detail": "Flag de riesgo activo (sin datos de fuente verificados)",
+    "traceability_detail": "Markers texto: ['mitre', 'att&ck', 'grafo'] | Fuente estructurada: api_source=False, seed_nodes=False, sql=False",
+    "error_handling_detail": "Sin errores detectados en el pipeline",
+    "latency_detail": "retrieval=0.02s coverage=0.00s synth=1.98s",
+    "answer_preview": "No he encontrado información relevante en el grafo MITRE ATT&CK para responder a tu pregunta sobre el score CVSS v3 de CVE-2022-22965 (Spring4Shell). \n\nEl sistema MITRE ATT&CK se centra en técnicas de ataque, grupos APT, tácticas, mitigaciones y herramientas relacionadas con la ciberseguridad. Si ti…"
+  }
+}

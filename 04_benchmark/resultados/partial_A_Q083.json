@@ -1,0 +1,39 @@
+{
+  "result": {
+    "answer": "Los resultados de la consulta SQL ejecutada contra la base de datos NVD/NIST indican que existen varias vulnerabilidades (CVEs) que afectan a Fortinet FortiOS y que fueron publicadas entre 2022 y 2023. A continuación se detallan los CVEs encontrados:\n\n1. **CVE-2021-44168**\n   - Publicado: 2022-01-04\n   - Última modificación: 2025-10-24\n\n2. **CVE-2021-26092**\n   - Publicado: 2022-02-24\n   - Última modificación: 2024-11-21\n\n3. **CVE-2020-15936**\n   - Publicado: 2022-03-01\n   - Última modificación: 2024-11-21\n\n4. **CVE-2021-41032**\n   - Publicado: 2022-05-04\n   - Última modificación: 2024-11-21\n\n5. **CVE-2021-43206**\n   - Publicado: 2022-05-04\n   - Última modificación: 2024-11-21\n\n6. **CVE-2021-43081**\n   - Publicado: 2022-05-11\n   - Última modificación: 2024-11-21\n\n7. **CVE-2022-22306**\n   - Publicado: 2022-05-24\n   - Última modificación: 2024-11-21\n\n8. **CVE-2021-42755**\n   - Publicado: 2022-07-18\n   - Última modificación: 2024-11-21\n\nEs importante mencionar que algunos de estos CVEs aparecen múltiples veces en los resultados, lo que puede deberse a diferentes registros en la base de datos. Sin embargo, todos los CVEs listados son relevantes para Fortinet FortiOS y están documentados en la base de datos NVD/NIST.",
+    "sql": "SELECT c.cve_id, c.published, c.last_modified\nFROM cve AS c\nJOIN cve_cpe AS cp ON c.cve_id = cp.cve_id\nWHERE cp.cpe_uri LIKE '%fortinet%fortios%' AND c.published >= '2022-01-01' AND c.published < '2024-01-01'",
+    "sql_rows": 20,
+    "correction_attempts": 0,
+    "sql_error": null,
+    "api_fallback": null,
+    "hallucination_risk": false,
+    "usage": {
+      "prompt_tokens": 4258,
+      "completion_tokens": 628,
+      "total_tokens": 4886,
+      "schema_linking_latency_s": 2.862,
+      "sql_generation_latency_s": 2.085,
+      "self_correction_latency_s": 0,
+      "synthesis_latency_s": 8.939
+    },
+    "architecture": "A_Text2SQL"
+  },
+  "metrics": {
+    "question_id": "Q083",
+    "level": 2,
+    "domain": "NVD",
+    "architecture": "A_Text2SQL",
+    "accuracy": 0.8333,
+    "hallucination_risk": 0.0,
+    "traceability": 1.0,
+    "error_handling": 1.0,
+    "latency_s": 13.886,
+    "total_tokens": 4886,
+    "accuracy_detail": "Score=0.833 | completas=['fortinet', 'fortios', '2022', '2023', 'CVE'] | parciales=[] | ausentes=['VPN']",
+    "hallucination_detail": "Sin señales de alucinación detectadas",
+    "traceability_detail": "Markers texto: ['nvd', 'nist', 'base de datos'] | Fuente estructurada: api_source=False, seed_nodes=False, sql=True",
+    "error_handling_detail": "Sin errores detectados en el pipeline",
+    "latency_detail": "linking=2.86s sql=2.08s corr=0.00s synth=8.94s",
+    "answer_preview": "Los resultados de la consulta SQL ejecutada contra la base de datos NVD/NIST indican que existen varias vulnerabilidades (CVEs) que afectan a Fortinet FortiOS y que fueron publicadas entre 2022 y 2023. A continuación se detallan los CVEs encontrados:\n\n1. **CVE-2021-44168**\n   - Publicado: 2022-01-04…"
+  }
+}

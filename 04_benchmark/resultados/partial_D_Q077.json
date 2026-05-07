@@ -1,0 +1,73 @@
+{
+  "result": {
+    "answer": "APT32 (OceanLotus) utiliza varias herramientas y técnicas maliciosas según el marco de MITRE ATT&CK. Algunas de las herramientas y técnicas más relevantes son:\n\n1. **PHOREAL**: Un backdoor utilizado por APT32 para mantener acceso a sistemas comprometidos.\n2. **schtasks**: Herramienta de Windows utilizada para programar la ejecución de programas o scripts en momentos específicos.\n3. **T1570 - Lateral Tool Transfer**: Técnica para transferir herramientas o archivos entre sistemas en un entorno comprometido.\n4. **T1560.001 - Archive via Utility**: Uso de utilidades para comprimir o cifrar datos recolectados antes de la exfiltración.\n5. **T1574.001 - DLL**: Abuso de archivos de biblioteca de enlace dinámico (DLL) para lograr persistencia y escalar privilegios.\n6. **T1071.001 - Web Protocols**: Comunicación utilizando protocolos de capa de aplicación asociados con tráfico web para evitar detección.\n7. **T1049 - System Network Connections Discovery**: Descubrimiento de conexiones de red para obtener información sobre sistemas comprometidos.\n8. **T1021.001 - Remote Desktop Protocol**: Uso de RDP para acceder a computadoras de forma remota.\n9. **T1018 - Remote System Discovery**: Intento de listar otros sistemas en la red para facilitar el movimiento lateral.\n\nEstas herramientas y técnicas reflejan la sofisticación de APT32 en sus operaciones de ciberespionaje y ataque.\n\n**Fuentes consultadas:** query_mitre_graph",
+    "steps": [
+      {
+        "thought": "",
+        "action": "query_mitre_graph",
+        "action_input": {
+          "question": "¿Qué herramientas maliciosas usa APT32 (OceanLotus)?"
+        },
+        "observation_preview": "{\n  \"context\": \"=== SUBGRAFO MITRE ATT&CK ===\\n\\n--- Entidades recuperadas ---\\n  [attack-pattern] T1570 — Lateral Tool Transfer\\n     Adversaries may transfer tools or other files between systems in a compromised environment. Once brought into the victim environment (i.e., [Ingress Tool Transfer](h…"
+      },
+      {
+        "thought": "",
+        "action": "query_mitre_graph",
+        "action_input": {
+          "question": "Resume las herramientas maliciosas usadas por APT32 (OceanLotus)"
+        },
+        "observation_preview": "{\n  \"context\": \"=== SUBGRAFO MITRE ATT&CK ===\\n\\n--- Entidades recuperadas ---\\n  [attack-pattern] T1570 — Lateral Tool Transfer\\n     Adversaries may transfer tools or other files between systems in a compromised environment. Once brought into the victim environment (i.e., [Ingress Tool Transfer](h…"
+      },
+      {
+        "thought": "",
+        "action": "query_mitre_graph",
+        "action_input": {
+          "question": "Lista las herramientas maliciosas específicas de APT32 (OceanLotus)"
+        },
+        "observation_preview": "{\n  \"context\": \"=== SUBGRAFO MITRE ATT&CK ===\\n\\n--- Entidades recuperadas ---\\n  [attack-pattern] T1570 — Lateral Tool Transfer\\n     Adversaries may transfer tools or other files between systems in a compromised environment. Once brought into the victim environment (i.e., [Ingress Tool Transfer](h…"
+      },
+      {
+        "thought": "",
+        "action": "query_mitre_graph",
+        "action_input": {
+          "question": "Resume las herramientas maliciosas específicas de APT32 (OceanLotus)"
+        },
+        "observation_preview": "{\n  \"context\": \"=== SUBGRAFO MITRE ATT&CK ===\\n\\n--- Entidades recuperadas ---\\n  [attack-pattern] T1570 — Lateral Tool Transfer\\n     Adversaries may transfer tools or other files between systems in a compromised environment. Once brought into the victim environment (i.e., [Ingress Tool Transfer](h…"
+      }
+    ],
+    "tools_used": [
+      "query_mitre_graph",
+      "query_mitre_graph",
+      "query_mitre_graph",
+      "query_mitre_graph"
+    ],
+    "iterations": 4,
+    "forced_final": false,
+    "hallucination_risk": false,
+    "usage": {
+      "prompt_tokens": 12395,
+      "completion_tokens": 653,
+      "total_tokens": 13048,
+      "total_latency_s": 14.85
+    },
+    "architecture": "D_Toolformer"
+  },
+  "metrics": {
+    "question_id": "Q077",
+    "level": 2,
+    "domain": "MITRE",
+    "architecture": "D_Toolformer",
+    "accuracy": 0.3333,
+    "hallucination_risk": 0.0,
+    "traceability": 0.5,
+    "error_handling": 1.0,
+    "latency_s": 14.85,
+    "total_tokens": 13048,
+    "accuracy_detail": "Score=0.333 | completas=['APT32', 'OceanLotus'] | parciales=[] | ausentes=['G0050', 'vietnam', 'malware', 'software']",
+    "hallucination_detail": "Sin señales de alucinación detectadas",
+    "traceability_detail": "Markers texto: ['mitre', 'att&ck', 'según'] | Fuente estructurada: api_source=False, seed_nodes=False, sql=False",
+    "error_handling_detail": "Sin errores detectados en el pipeline",
+    "latency_detail": "total_react=14.85s iterations=4",
+    "answer_preview": "APT32 (OceanLotus) utiliza varias herramientas y técnicas maliciosas según el marco de MITRE ATT&CK. Algunas de las herramientas y técnicas más relevantes son:\n\n1. **PHOREAL**: Un backdoor utilizado por APT32 para mantener acceso a sistemas comprometidos.\n2. **schtasks**: Herramienta de Windows util…"
+  }
+}

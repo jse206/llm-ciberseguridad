@@ -1,0 +1,46 @@
+{
+  "result": {
+    "answer": "Según MITRE ATT&CK, la táctica de **Lateral Movement** (Movimiento Lateral) incluye la técnica **T1570 — Lateral Tool Transfer**. Esta técnica se refiere a la capacidad de los adversarios para transferir herramientas u otros archivos entre sistemas dentro de un entorno comprometido. Esto puede ser parte de un esfuerzo para moverse lateralmente a través de la red y controlar sistemas remotos.\n\nLa técnica T1570 es aplicable a múltiples plataformas, incluyendo ESXi, Linux, macOS y Windows, lo que la hace versátil para diferentes entornos operativos.\n\nAdemás, el subgrafo no proporciona información sobre otras técnicas específicas relacionadas con la táctica de Lateral Movement, por lo que no se pueden listar más técnicas en este contexto.\n\nEn resumen, la técnica identificada en el subgrafo para la táctica de Lateral Movement es:\n\n- **T1570 — Lateral Tool Transfer**\n\nEsto indica que los adversarios pueden utilizar esta técnica para facilitar su movimiento lateral dentro de una red comprometida.",
+    "seed_nodes": [
+      "TA0008",
+      "T1053.002",
+      "S0110",
+      "T1570"
+    ],
+    "subgraph_nodes": 40,
+    "subgraph_edges": 53,
+    "coverage": {
+      "sufficient": true,
+      "missing_entities": [],
+      "confidence": 0.85
+    },
+    "hallucination_risk": false,
+    "usage": {
+      "prompt_tokens": 2888,
+      "completion_tokens": 240,
+      "total_tokens": 3128,
+      "retrieval_latency_s": 0.008,
+      "coverage_latency_s": 1.097,
+      "synthesis_latency_s": 4.202
+    },
+    "architecture": "C_GraphRAG"
+  },
+  "metrics": {
+    "question_id": "Q023",
+    "level": 2,
+    "domain": "BOTH",
+    "architecture": "C_GraphRAG",
+    "accuracy": 0.4,
+    "hallucination_risk": 0.0,
+    "traceability": 1.0,
+    "error_handling": 1.0,
+    "latency_s": 5.307,
+    "total_tokens": 3128,
+    "accuracy_detail": "Score=0.400 | completas=['lateral movement', 'T1570'] | parciales=[] | ausentes=['T1021', 'remote services', 'TA0008']",
+    "hallucination_detail": "Sin señales de alucinación detectadas",
+    "traceability_detail": "Markers texto: ['mitre', 'att&ck', 'según'] | Fuente estructurada: api_source=False, seed_nodes=True, sql=False",
+    "error_handling_detail": "Sin errores detectados en el pipeline",
+    "latency_detail": "retrieval=0.01s coverage=1.10s synth=4.20s",
+    "answer_preview": "Según MITRE ATT&CK, la táctica de **Lateral Movement** (Movimiento Lateral) incluye la técnica **T1570 — Lateral Tool Transfer**. Esta técnica se refiere a la capacidad de los adversarios para transferir herramientas u otros archivos entre sistemas dentro de un entorno comprometido. Esto puede ser p…"
+  }
+}

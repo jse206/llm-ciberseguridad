@@ -1,0 +1,39 @@
+{
+  "result": {
+    "answer": "Los datos provienen de la base de datos NVD/NIST. A continuación, se presentan los 5 productos (CPE) con más CVEs críticos registrados:\n\n1. **Apple macOS**: 143 CVEs críticos\n   - CPE URI: `cpe:2.3:o:apple:macos:*:*:*:*:*:*:*:*`\n\n2. **Microsoft Windows**: 138 CVEs críticos\n   - CPE URI: `cpe:2.3:o:microsoft:windows:-:*:*:*:*:*:*:*`\n\n3. **XWiki**: 115 CVEs críticos\n   - CPE URI: `cpe:2.3:a:xwiki:xwiki:*:*:*:*:*:*:*:*`\n\n4. **Debian Linux 11.0**: 98 CVEs críticos\n   - CPE URI: `cpe:2.3:o:debian:debian_linux:11.0:*:*:*:*:*:*:*`\n\n5. **Google Android**: 88 CVEs críticos\n   - CPE URI: `cpe:2.3:o:google:android:-:*:*:*:*:*:*:*`\n\nEstos resultados reflejan la cantidad de vulnerabilidades críticas registradas para cada uno de los productos mencionados en la base de datos NVD/CVE.",
+    "sql": "SELECT ccpe.cpe_uri, COUNT(*) AS critical_cve_count\nFROM cve_cpe AS ccpe\nJOIN cve AS c ON ccpe.cve_id = c.cve_id\nWHERE c.cvss_v3_severity = 'CRITICAL'\nGROUP BY ccpe.cpe_uri\nORDER BY critical_cve_count DESC\nLIMIT 5;",
+    "sql_rows": 5,
+    "correction_attempts": 0,
+    "sql_error": null,
+    "api_fallback": null,
+    "hallucination_risk": false,
+    "usage": {
+      "prompt_tokens": 3244,
+      "completion_tokens": 476,
+      "total_tokens": 3720,
+      "schema_linking_latency_s": 3.239,
+      "sql_generation_latency_s": 2.15,
+      "self_correction_latency_s": 0,
+      "synthesis_latency_s": 7.092
+    },
+    "architecture": "A_Text2SQL"
+  },
+  "metrics": {
+    "question_id": "Q040",
+    "level": 2,
+    "domain": "NVD",
+    "architecture": "A_Text2SQL",
+    "accuracy": 0.5,
+    "hallucination_risk": 0.0,
+    "traceability": 1.0,
+    "error_handling": 1.0,
+    "latency_s": 12.481,
+    "total_tokens": 3720,
+    "accuracy_detail": "Score=0.500 | completas=['cpe', 'más vulnerabilidades'] | parciales=[] | ausentes=['critical', 'top']",
+    "hallucination_detail": "Sin señales de alucinación detectadas",
+    "traceability_detail": "Markers texto: ['nvd', 'nist', 'base de datos'] | Fuente estructurada: api_source=False, seed_nodes=False, sql=True",
+    "error_handling_detail": "Sin errores detectados en el pipeline",
+    "latency_detail": "linking=3.24s sql=2.15s corr=0.00s synth=7.09s",
+    "answer_preview": "Los datos provienen de la base de datos NVD/NIST. A continuación, se presentan los 5 productos (CPE) con más CVEs críticos registrados:\n\n1. **Apple macOS**: 143 CVEs críticos\n   - CPE URI: `cpe:2.3:o:apple:macos:*:*:*:*:*:*:*:*`\n\n2. **Microsoft Windows**: 138 CVEs críticos\n   - CPE URI: `cpe:2.3:o:m…"
+  }
+}

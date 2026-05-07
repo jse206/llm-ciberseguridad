@@ -1,0 +1,88 @@
+{
+  "result": {
+    "answer": "El grupo APT28 utiliza diversas técnicas que pueden ser relevantes para la explotación de vulnerabilidades en productos de Microsoft. Algunas de las técnicas identificadas incluyen:\n\n1. **T1560.001 - Archive via Utility**: Utilización de utilidades para comprimir o cifrar datos antes de la exfiltración.\n2. **T1589.001 - Credentials**: Recolección de credenciales que pueden ser utilizadas durante el ataque.\n3. **T1110.001 - Password Guessing**: Intentos de adivinar contraseñas para acceder a cuentas.\n4. **T1071.001 - Web Protocols**: Comunicación utilizando protocolos de aplicación asociados con tráfico web para evitar detección.\n\nEn cuanto a las vulnerabilidades críticas en Microsoft, se identificó:\n\n- **CVE-2000-1218**: Esta vulnerabilidad permite a atacantes remotos envenenar la caché DNS debido a una configuración predeterminada insegura en varios sistemas operativos de Microsoft. Tiene un CVSS de 9.8, lo que la clasifica como crítica.\n\nAunque no se encontraron más vulnerabilidades críticas en Microsoft en esta búsqueda, es importante monitorear las técnicas mencionadas y estar al tanto de nuevas vulnerabilidades que puedan surgir, ya que APT28 es conocido por su adaptabilidad y uso de múltiples vectores de ataque.\n\n**Fuentes consultadas:** query_mitre_graph, query_nvd_api",
+    "steps": [
+      {
+        "thought": "",
+        "action": "query_mitre_graph",
+        "action_input": {
+          "question": "¿Qué técnicas usa el grupo APT28?"
+        },
+        "observation_preview": "{\n  \"context\": \"=== SUBGRAFO MITRE ATT&CK ===\\n\\n--- Entidades recuperadas ---\\n  [attack-pattern] T1560.001 — Archive via Utility\\n     Adversaries may use utilities to compress and/or encrypt collected data prior to exfiltration. Many utilities include functionalities to compress, encrypt, or othe…"
+      },
+      {
+        "thought": "",
+        "action": "query_nvd_api",
+        "action_input": {
+          "keyword": "Microsoft",
+          "severity": "CRITICAL",
+          "max_results": 5
+        },
+        "observation_preview": "{\n  \"data\": [\n    {\n      \"id\": \"CVE-2000-1218\",\n      \"sourceIdentifier\": \"cve@mitre.org\",\n      \"published\": \"2000-04-14T04:00:00.000\",\n      \"lastModified\": \"2026-04-16T00:27:16.627\",\n      \"vulnStatus\": \"Modified\",\n      \"cveTags\": [],\n      \"descriptions\": [\n        {\n          \"lang\": \"en\",\n  …"
+      },
+      {
+        "thought": "",
+        "action": "query_nvd_api",
+        "action_input": {
+          "keyword": "Microsoft",
+          "severity": "CRITICAL",
+          "max_results": 5
+        },
+        "observation_preview": "{\n  \"data\": [\n    {\n      \"id\": \"CVE-2000-1218\",\n      \"sourceIdentifier\": \"cve@mitre.org\",\n      \"published\": \"2000-04-14T04:00:00.000\",\n      \"lastModified\": \"2026-04-16T00:27:16.627\",\n      \"vulnStatus\": \"Modified\",\n      \"cveTags\": [],\n      \"descriptions\": [\n        {\n          \"lang\": \"en\",\n  …"
+      },
+      {
+        "thought": "",
+        "action": "query_nvd_api",
+        "action_input": {
+          "keyword": "Microsoft",
+          "max_results": 5
+        },
+        "observation_preview": "{\n  \"data\": [\n    {\n      \"id\": \"CVE-1999-0280\",\n      \"sourceIdentifier\": \"cve@mitre.org\",\n      \"published\": \"1997-04-01T05:00:00.000\",\n      \"lastModified\": \"2026-04-16T00:27:16.627\",\n      \"vulnStatus\": \"Modified\",\n      \"cveTags\": [],\n      \"descriptions\": [\n        {\n          \"lang\": \"en\",\n  …"
+      },
+      {
+        "thought": "",
+        "action": "query_nvd_api",
+        "action_input": {
+          "keyword": "Microsoft",
+          "max_results": 10
+        },
+        "observation_preview": "{\n  \"data\": [\n    {\n      \"id\": \"CVE-1999-0280\",\n      \"sourceIdentifier\": \"cve@mitre.org\",\n      \"published\": \"1997-04-01T05:00:00.000\",\n      \"lastModified\": \"2026-04-16T00:27:16.627\",\n      \"vulnStatus\": \"Modified\",\n      \"cveTags\": [],\n      \"descriptions\": [\n        {\n          \"lang\": \"en\",\n  …"
+      }
+    ],
+    "tools_used": [
+      "query_mitre_graph",
+      "query_nvd_api",
+      "query_nvd_api",
+      "query_nvd_api",
+      "query_nvd_api"
+    ],
+    "iterations": 5,
+    "forced_final": false,
+    "hallucination_risk": false,
+    "usage": {
+      "prompt_tokens": 17964,
+      "completion_tokens": 869,
+      "total_tokens": 18833,
+      "total_latency_s": 29.999
+    },
+    "architecture": "D_Toolformer"
+  },
+  "metrics": {
+    "question_id": "Q047",
+    "level": 3,
+    "domain": "BOTH",
+    "architecture": "D_Toolformer",
+    "accuracy": 0.3333,
+    "hallucination_risk": 0.0,
+    "traceability": 0.5,
+    "error_handling": 1.0,
+    "latency_s": 29.999,
+    "total_tokens": 18833,
+    "accuracy_detail": "Score=0.333 | completas=['APT28', 'microsoft'] | parciales=[] | ausentes=['outlook', 'CVE-2023-23397', 'T1566', 'fancy bear']",
+    "hallucination_detail": "Sin señales de alucinación detectadas",
+    "traceability_detail": "Markers texto: ['nvd', 'mitre', 'fuente'] | Fuente estructurada: api_source=False, seed_nodes=False, sql=False",
+    "error_handling_detail": "Sin errores detectados en el pipeline",
+    "latency_detail": "total_react=30.00s iterations=5",
+    "answer_preview": "El grupo APT28 utiliza diversas técnicas que pueden ser relevantes para la explotación de vulnerabilidades en productos de Microsoft. Algunas de las técnicas identificadas incluyen:\n\n1. **T1560.001 - Archive via Utility**: Utilización de utilidades para comprimir o cifrar datos antes de la exfiltrac…"
+  }
+}

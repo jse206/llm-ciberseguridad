@@ -1,0 +1,82 @@
+{
+  "result": {
+    "answer": "No se ha encontrado información específica sobre las mitigaciones recomendadas por MITRE ATT&CK para la técnica T1486 (ransomware). Es posible que esta técnica no esté bien documentada en la base de datos consultada.\n\n**Fuentes consultadas:** query_mitre_graph",
+    "steps": [
+      {
+        "thought": "",
+        "action": "query_mitre_graph",
+        "action_input": {
+          "question": "¿Qué mitigaciones cubre T1486 (ransomware)?"
+        },
+        "observation_preview": "{\n  \"context\": \"=== SUBGRAFO MITRE ATT&CK ===\\n\\n--- Entidades recuperadas ---\\n  [intrusion-set] G1015 — Scattered Spider\\n     [Scattered Spider](https://attack.mitre.org/groups/G1015) is a native English-speaking cybercriminal group active since at least 2022. (Citation: CrowdStrike Scattered Spi…"
+      },
+      {
+        "thought": "",
+        "action": "query_mitre_graph",
+        "action_input": {
+          "question": "¿Cuáles son las mitigaciones para T1486 (ransomware)?"
+        },
+        "observation_preview": "{\n  \"context\": \"=== SUBGRAFO MITRE ATT&CK ===\\n\\n--- Entidades recuperadas ---\\n  [attack-pattern] T1071.001 — Web Protocols\\n     Adversaries may communicate using application layer protocols associated with web traffic to avoid detection/network filtering by blending in with existing traffic. Comm…"
+      },
+      {
+        "thought": "",
+        "action": "query_mitre_graph",
+        "action_input": {
+          "question": "Mitigaciones para T1486 ransomware"
+        },
+        "observation_preview": "{\n  \"context\": \"=== SUBGRAFO MITRE ATT&CK ===\\n\\n--- Entidades recuperadas ---\\n  [attack-pattern] T1489 — Service Stop\\n     Adversaries may stop or disable services on a system to render those services unavailable to legitimate users. Stopping critical services or processes can inhibit or stop res…"
+      },
+      {
+        "thought": "",
+        "action": "query_mitre_graph",
+        "action_input": {
+          "question": "Información sobre T1486 ransomware y sus mitigaciones"
+        },
+        "observation_preview": "{\n  \"context\": \"=== SUBGRAFO MITRE ATT&CK ===\\n\\n--- Entidades recuperadas ---\\n  [attack-pattern] T1489 — Service Stop\\n     Adversaries may stop or disable services on a system to render those services unavailable to legitimate users. Stopping critical services or processes can inhibit or stop res…"
+      },
+      {
+        "thought": "",
+        "action": "query_mitre_graph",
+        "action_input": {
+          "question": "Detalles sobre T1486 ransomware y mitigaciones"
+        },
+        "observation_preview": "{\n  \"context\": \"=== SUBGRAFO MITRE ATT&CK ===\\n\\n--- Entidades recuperadas ---\\n  [attack-pattern] T1489 — Service Stop\\n     Adversaries may stop or disable services on a system to render those services unavailable to legitimate users. Stopping critical services or processes can inhibit or stop res…"
+      }
+    ],
+    "tools_used": [
+      "query_mitre_graph",
+      "query_mitre_graph",
+      "query_mitre_graph",
+      "query_mitre_graph",
+      "query_mitre_graph"
+    ],
+    "iterations": 5,
+    "forced_final": false,
+    "hallucination_risk": false,
+    "usage": {
+      "prompt_tokens": 18491,
+      "completion_tokens": 564,
+      "total_tokens": 19055,
+      "total_latency_s": 15.137
+    },
+    "architecture": "D_Toolformer"
+  },
+  "metrics": {
+    "question_id": "Q024",
+    "level": 2,
+    "domain": "BOTH",
+    "architecture": "D_Toolformer",
+    "accuracy": 0.2,
+    "hallucination_risk": 0.0,
+    "traceability": 0.5,
+    "error_handling": 1.0,
+    "latency_s": 15.137,
+    "total_tokens": 19055,
+    "accuracy_detail": "Score=0.200 | completas=['ransomware'] | parciales=[] | ausentes=['backup', 'M1053', 'M1040', 'data protection']",
+    "hallucination_detail": "Sin señales de alucinación detectadas",
+    "traceability_detail": "Markers texto: ['mitre', 'att&ck', 'fuente'] | Fuente estructurada: api_source=False, seed_nodes=False, sql=False",
+    "error_handling_detail": "Sin errores detectados en el pipeline",
+    "latency_detail": "total_react=15.14s iterations=5",
+    "answer_preview": "No se ha encontrado información específica sobre las mitigaciones recomendadas por MITRE ATT&CK para la técnica T1486 (ransomware). Es posible que esta técnica no esté bien documentada en la base de datos consultada.\n\n**Fuentes consultadas:** query_mitre_graph"
+  }
+}

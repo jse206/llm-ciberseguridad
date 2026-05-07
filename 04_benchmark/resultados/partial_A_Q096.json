@@ -1,0 +1,39 @@
+{
+  "result": {
+    "answer": "Los resultados de la consulta SQL ejecutada contra la base de datos NVD/CVE no arrojaron ningún resultado. Esto indica que no se encontraron vulnerabilidades (CVEs) documentadas específicamente relacionadas con APT28 o APT29 en la base de datos consultada.\n\nEs importante mencionar que APT28 y APT29 son grupos de amenazas avanzadas persistentes (APT) conocidos por sus sofisticadas capacidades ofensivas. APT28, también conocido como Fancy Bear, ha sido asociado principalmente con ataques dirigidos a entidades gubernamentales y militares, utilizando técnicas como spear phishing y explotación de vulnerabilidades en software. Por otro lado, APT29, conocido como Cozy Bear, se ha centrado en la recopilación de inteligencia, utilizando tácticas similares, pero con un enfoque más en la infiltración y el espionaje a largo plazo.\n\nAmbos grupos utilizan diversas TTPs (Tácticas, Técnicas y Procedimientos) documentadas en el marco MITRE ATT&CK, que incluyen técnicas de acceso inicial, ejecución, persistencia, escalación de privilegios, y exfiltración de datos. Sin embargo, sin datos específicos de CVEs asociados a estos grupos en la consulta realizada, no se puede proporcionar una comparación detallada basada en vulnerabilidades explotadas.\n\nPara un análisis más profundo, se recomienda consultar directamente la base de datos NVD/NIST o fuentes adicionales que puedan contener información sobre las TTPs y CVEs asociadas a APT28 y APT29.",
+    "sql": "SELECT c.cve_id, c.description, c.cvss_v3_score, c.cvss_v3_severity, r.url, r.source\nFROM cve AS c\nJOIN cve_cwe AS cw ON c.cve_id = cw.cve_id\nJOIN cve_reference AS r ON c.cve_id = r.cve_id\nWHERE cw.cwe_id LIKE '%APT28%' OR cw.cwe_id LIKE '%APT29%'\nLIMIT 10;",
+    "sql_rows": 0,
+    "correction_attempts": 0,
+    "sql_error": null,
+    "api_fallback": null,
+    "hallucination_risk": false,
+    "usage": {
+      "prompt_tokens": 3183,
+      "completion_tokens": 608,
+      "total_tokens": 3791,
+      "schema_linking_latency_s": 5.574,
+      "sql_generation_latency_s": 2.334,
+      "self_correction_latency_s": 0,
+      "synthesis_latency_s": 5.151
+    },
+    "architecture": "A_Text2SQL"
+  },
+  "metrics": {
+    "question_id": "Q096",
+    "level": 3,
+    "domain": "BOTH",
+    "architecture": "A_Text2SQL",
+    "accuracy": 0.5714,
+    "hallucination_risk": 0.0,
+    "traceability": 1.0,
+    "error_handling": 1.0,
+    "latency_s": 13.059,
+    "total_tokens": 3791,
+    "accuracy_detail": "Score=0.571 | completas=['APT28', 'APT29', 'Fancy Bear', 'Cozy Bear'] | parciales=[] | ausentes=['T1566', 'T1078', 'CVE-2023-23397']",
+    "hallucination_detail": "Sin señales de alucinación detectadas",
+    "traceability_detail": "Markers texto: ['nvd', 'nist', 'mitre'] | Fuente estructurada: api_source=False, seed_nodes=False, sql=True",
+    "error_handling_detail": "Sin errores detectados en el pipeline",
+    "latency_detail": "linking=5.57s sql=2.33s corr=0.00s synth=5.15s",
+    "answer_preview": "Los resultados de la consulta SQL ejecutada contra la base de datos NVD/CVE no arrojaron ningún resultado. Esto indica que no se encontraron vulnerabilidades (CVEs) documentadas específicamente relacionadas con APT28 o APT29 en la base de datos consultada.\n\nEs importante mencionar que APT28 y APT29 …"
+  }
+}

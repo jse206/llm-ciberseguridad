@@ -1,0 +1,77 @@
+{
+  "result": {
+    "answer": "Para comprometer una infraestructura industrial (ICS/OT), un grupo APT podría utilizar las siguientes técnicas de MITRE ATT&CK:\n\n1. **T1570 - Lateral Tool Transfer**: Esta técnica permite a los adversarios transferir herramientas o archivos entre sistemas en un entorno comprometido, facilitando el movimiento lateral dentro de la red.\n\n2. **T1547.012 - Print Processors**: Los atacantes pueden abusar de los procesadores de impresión para ejecutar DLLs maliciosas durante el arranque del sistema, lo que puede ser utilizado para persistencia y escalación de privilegios.\n\n3. **T1566 - Phishing**: Los adversarios pueden enviar mensajes de phishing para obtener acceso a los sistemas de las víctimas, lo que es una técnica común para iniciar un ataque.\n\nEn cuanto a las vulnerabilidades recientes (CVEs) que podrían ser explotadas en este contexto, se destacan:\n\n- **CVE-2018-0101**: Una vulnerabilidad en la funcionalidad VPN SSL de Cisco ASA que permite a un atacante remoto no autenticado ejecutar código arbitrario, afectando a varios dispositivos de seguridad industrial de Cisco.\n\n- **CVE-2019-10012**: Permite a atacantes remotos cargar y ejecutar código .aspx arbitrario en sistemas Jenzabar, lo que podría comprometer la integridad y disponibilidad de los sistemas ICS.\n\nEstas técnicas y vulnerabilidades ilustran cómo un APT podría comprometer una infraestructura industrial, utilizando tanto métodos de ataque como vulnerabilidades específicas para lograr sus objetivos.\n\n**Fuentes consultadas:** query_mitre_graph, query_nvd_api",
+    "steps": [
+      {
+        "thought": "",
+        "action": "query_mitre_graph",
+        "action_input": {
+          "question": "Técnicas de ataque APT en infraestructura industrial (ICS/OT)"
+        },
+        "observation_preview": "{\n  \"context\": \"=== SUBGRAFO MITRE ATT&CK ===\\n\\n--- Entidades recuperadas ---\\n  [attack-pattern] T1570 — Lateral Tool Transfer\\n     Adversaries may transfer tools or other files between systems in a compromised environment. Once brought into the victim environment (i.e., [Ingress Tool Transfer](h…"
+      },
+      {
+        "thought": "",
+        "action": "query_nvd_api",
+        "action_input": {
+          "keyword": "ICS",
+          "max_results": 5
+        },
+        "observation_preview": "{\n  \"data\": [\n    {\n      \"id\": \"CVE-2000-1074\",\n      \"sourceIdentifier\": \"cve@mitre.org\",\n      \"published\": \"2000-12-11T05:00:00.000\",\n      \"lastModified\": \"2026-04-16T00:27:16.627\",\n      \"vulnStatus\": \"Modified\",\n      \"cveTags\": [],\n      \"descriptions\": [\n        {\n          \"lang\": \"en\",\n  …"
+      },
+      {
+        "thought": "",
+        "action": "query_nvd_api",
+        "action_input": {
+          "keyword": "industrial control system",
+          "max_results": 5
+        },
+        "observation_preview": "{\n  \"data\": [\n    {\n      \"id\": \"CVE-2018-0101\",\n      \"sourceIdentifier\": \"psirt@cisco.com\",\n      \"published\": \"2018-01-29T20:29:00.280\",\n      \"lastModified\": \"2024-11-21T03:37:31.353\",\n      \"vulnStatus\": \"Modified\",\n      \"cveTags\": [],\n      \"descriptions\": [\n        {\n          \"lang\": \"en\",\n…"
+      },
+      {
+        "thought": "",
+        "action": "query_nvd_api",
+        "action_input": {
+          "keyword": "ICS",
+          "severity": "HIGH",
+          "max_results": 5
+        },
+        "observation_preview": "{\n  \"data\": [\n    {\n      \"id\": \"CVE-2019-10012\",\n      \"sourceIdentifier\": \"cve@mitre.org\",\n      \"published\": \"2019-03-25T19:29:01.413\",\n      \"lastModified\": \"2024-11-21T04:18:12.843\",\n      \"vulnStatus\": \"Modified\",\n      \"cveTags\": [],\n      \"descriptions\": [\n        {\n          \"lang\": \"en\",\n …"
+      }
+    ],
+    "tools_used": [
+      "query_mitre_graph",
+      "query_nvd_api",
+      "query_nvd_api",
+      "query_nvd_api"
+    ],
+    "iterations": 4,
+    "forced_final": false,
+    "hallucination_risk": false,
+    "usage": {
+      "prompt_tokens": 12644,
+      "completion_tokens": 877,
+      "total_tokens": 13521,
+      "total_latency_s": 23.749
+    },
+    "architecture": "D_Toolformer"
+  },
+  "metrics": {
+    "question_id": "Q089",
+    "level": 3,
+    "domain": "BOTH",
+    "architecture": "D_Toolformer",
+    "accuracy": 0.5,
+    "hallucination_risk": 0.0,
+    "traceability": 0.5,
+    "error_handling": 1.0,
+    "latency_s": 23.749,
+    "total_tokens": 13521,
+    "accuracy_detail": "Score=0.500 | completas=['ICS', 'OT', 'CVE'] | parciales=['lateral movement(50%)'] | ausentes=['T1190', 'T1486', 'initial access']",
+    "hallucination_detail": "Sin señales de alucinación detectadas",
+    "traceability_detail": "Markers texto: ['nvd', 'mitre', 'att&ck'] | Fuente estructurada: api_source=False, seed_nodes=False, sql=False",
+    "error_handling_detail": "Sin errores detectados en el pipeline",
+    "latency_detail": "total_react=23.75s iterations=4",
+    "answer_preview": "Para comprometer una infraestructura industrial (ICS/OT), un grupo APT podría utilizar las siguientes técnicas de MITRE ATT&CK:\n\n1. **T1570 - Lateral Tool Transfer**: Esta técnica permite a los adversarios transferir herramientas o archivos entre sistemas en un entorno comprometido, facilitando el m…"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "result": {
+    "answer": "Los resultados de la consulta SQL ejecutada contra la base de datos NVD/NIST no arrojan información sobre las plataformas que afectan la técnica T1059.001 (PowerShell). Esto indica que no se encontraron entradas en la base de datos relacionadas con esta técnica específica en el contexto de las vulnerabilidades registradas. Por lo tanto, no hay datos disponibles sobre las plataformas afectadas por T1059.001 en la base de datos NVD/NIST.",
+    "sql": "SELECT cpe.cpe_uri \nFROM cve_cpe AS cpe\nJOIN cve AS c ON cpe.cve_id = c.cve_id\nWHERE c.description LIKE '%T1059.001%'",
+    "sql_rows": 0,
+    "correction_attempts": 0,
+    "sql_error": null,
+    "api_fallback": null,
+    "hallucination_risk": false,
+    "usage": {
+      "prompt_tokens": 2939,
+      "completion_tokens": 233,
+      "total_tokens": 3172,
+      "schema_linking_latency_s": 2.266,
+      "sql_generation_latency_s": 1.604,
+      "self_correction_latency_s": 0,
+      "synthesis_latency_s": 2.393
+    },
+    "architecture": "A_Text2SQL"
+  },
+  "metrics": {
+    "question_id": "Q014",
+    "level": 1,
+    "domain": "MITRE",
+    "architecture": "A_Text2SQL",
+    "accuracy": 0.6667,
+    "hallucination_risk": 0.0,
+    "traceability": 1.0,
+    "error_handling": 1.0,
+    "latency_s": 6.263,
+    "total_tokens": 3172,
+    "accuracy_detail": "Score=0.667 | completas=['T1059.001', 'powershell'] | parciales=[] | ausentes=['windows']",
+    "hallucination_detail": "Sin señales de alucinación detectadas",
+    "traceability_detail": "Markers texto: ['nvd', 'nist', 'base de datos'] | Fuente estructurada: api_source=False, seed_nodes=False, sql=True",
+    "error_handling_detail": "Sin errores detectados en el pipeline",
+    "latency_detail": "linking=2.27s sql=1.60s corr=0.00s synth=2.39s",
+    "answer_preview": "Los resultados de la consulta SQL ejecutada contra la base de datos NVD/NIST no arrojan información sobre las plataformas que afectan la técnica T1059.001 (PowerShell). Esto indica que no se encontraron entradas en la base de datos relacionadas con esta técnica específica en el contexto de las vulne…"
+  }
+}

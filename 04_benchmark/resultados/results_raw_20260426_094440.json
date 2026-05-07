@@ -1,0 +1,1561 @@
+[
+  {
+    "question_id": "Q001",
+    "architecture": "C",
+    "result": {
+      "answer": "No he encontrado información relevante en el grafo MITRE ATT&CK para responder a tu pregunta sobre el score CVSS v3 de la vulnerabilidad CVE-2021-44228. \n\nEl sistema MITRE ATT&CK se centra en técnicas, tácticas, grupos APT, mitigaciones y herramientas relacionadas con ciberseguridad. Si tienes preguntas sobre alguna de estas áreas, estaré encantado de ayudarte.",
+      "seed_nodes": [],
+      "subgraph_nodes": 0,
+      "subgraph_edges": 0,
+      "coverage": {
+        "sufficient": false,
+        "missing_entities": [],
+        "confidence": 0.0
+      },
+      "hallucination_risk": true,
+      "usage": {
+        "prompt_tokens": 146,
+        "completion_tokens": 86,
+        "total_tokens": 232,
+        "retrieval_latency_s": 0.051,
+        "coverage_latency_s": 0,
+        "synthesis_latency_s": 3.5
+      },
+      "architecture": "C_GraphRAG"
+    }
+  },
+  {
+    "question_id": "Q002",
+    "architecture": "C",
+    "result": {
+      "answer": "No he encontrado información relevante en el grafo MITRE ATT&CK para responder a tu pregunta sobre la severidad CVSS v3 de CVE-2017-0144. \n\nEl sistema MITRE ATT&CK se centra en técnicas de ataque, grupos APT, tácticas, mitigaciones y herramientas relacionadas con la ciberseguridad. Si tienes preguntas sobre alguno de estos temas, estaré encantado de ayudarte.",
+      "seed_nodes": [],
+      "subgraph_nodes": 0,
+      "subgraph_edges": 0,
+      "coverage": {
+        "sufficient": false,
+        "missing_entities": [],
+        "confidence": 0.0
+      },
+      "hallucination_risk": true,
+      "usage": {
+        "prompt_tokens": 142,
+        "completion_tokens": 87,
+        "total_tokens": 229,
+        "retrieval_latency_s": 0.005,
+        "coverage_latency_s": 0,
+        "synthesis_latency_s": 2.126
+      },
+      "architecture": "C_GraphRAG"
+    }
+  },
+  {
+    "question_id": "Q003",
+    "architecture": "C",
+    "result": {
+      "answer": "No he encontrado información relevante en el grafo MITRE ATT&CK sobre la descripción de CVE-2023-23397. MITRE ATT&CK se centra en técnicas de ataque, grupos APT, tácticas, mitigaciones y herramientas, pero no proporciona detalles sobre vulnerabilidades específicas como las CVE.\n\nSi tienes preguntas sobre técnicas de ataque, grupos APT, tácticas, mitigaciones o herramientas relacionadas con la ciberseguridad, estaré encantado de ayudarte con eso.",
+      "seed_nodes": [],
+      "subgraph_nodes": 0,
+      "subgraph_edges": 0,
+      "coverage": {
+        "sufficient": false,
+        "missing_entities": [],
+        "confidence": 0.0
+      },
+      "hallucination_risk": true,
+      "usage": {
+        "prompt_tokens": 139,
+        "completion_tokens": 100,
+        "total_tokens": 239,
+        "retrieval_latency_s": 0.004,
+        "coverage_latency_s": 0,
+        "synthesis_latency_s": 2.76
+      },
+      "architecture": "C_GraphRAG"
+    }
+  },
+  {
+    "question_id": "Q004",
+    "architecture": "C",
+    "result": {
+      "answer": "No se encontró información relevante en el grafo MITRE ATT&CK para responder a tu pregunta sobre las debilidades CWE asociadas a CVE-2021-44228. \n\nEl sistema MITRE ATT&CK se centra en técnicas de ataque, grupos APT, tácticas, mitigaciones y herramientas utilizadas en ciberseguridad. Si tienes preguntas sobre alguna de estas áreas, estaré encantado de ayudarte.",
+      "seed_nodes": [],
+      "subgraph_nodes": 0,
+      "subgraph_edges": 0,
+      "coverage": {
+        "sufficient": false,
+        "missing_entities": [],
+        "confidence": 0.0
+      },
+      "hallucination_risk": true,
+      "usage": {
+        "prompt_tokens": 143,
+        "completion_tokens": 86,
+        "total_tokens": 229,
+        "retrieval_latency_s": 0.006,
+        "coverage_latency_s": 0,
+        "synthesis_latency_s": 1.832
+      },
+      "architecture": "C_GraphRAG"
+    }
+  },
+  {
+    "question_id": "Q005",
+    "architecture": "C",
+    "result": {
+      "answer": "No se encontró información relevante en el grafo MITRE ATT&CK para responder a tu pregunta sobre la fecha de publicación de la vulnerabilidad CVE-2022-30190. \n\nEl sistema MITRE ATT&CK se centra en técnicas de ataque, grupos APT, tácticas, mitigaciones y herramientas utilizadas en ciberseguridad. Si tienes preguntas sobre alguno de estos temas, estaré encantado de ayudarte.",
+      "seed_nodes": [],
+      "subgraph_nodes": 0,
+      "subgraph_edges": 0,
+      "coverage": {
+        "sufficient": false,
+        "missing_entities": [],
+        "confidence": 0.0
+      },
+      "hallucination_risk": true,
+      "usage": {
+        "prompt_tokens": 142,
+        "completion_tokens": 86,
+        "total_tokens": 228,
+        "retrieval_latency_s": 0.005,
+        "coverage_latency_s": 0,
+        "synthesis_latency_s": 1.938
+      },
+      "architecture": "C_GraphRAG"
+    }
+  },
+  {
+    "question_id": "Q006",
+    "architecture": "C",
+    "result": {
+      "answer": "El subgrafo proporcionado no contiene información sobre el vector CVSS v3 de CVE-2021-26084. Por lo tanto, no puedo responder a la pregunta. \n\nSi necesitas información específica sobre esta vulnerabilidad, te recomendaría consultar fuentes adicionales como la base de datos de CVE o el NVD (National Vulnerability Database).",
+      "seed_nodes": [
+        "S0183"
+      ],
+      "subgraph_nodes": 40,
+      "subgraph_edges": 47,
+      "coverage": {
+        "sufficient": false,
+        "missing_entities": [
+          "CVSS v3 vector",
+          "CVE-2021-26084"
+        ],
+        "confidence": 0.3
+      },
+      "hallucination_risk": true,
+      "usage": {
+        "prompt_tokens": 2869,
+        "completion_tokens": 115,
+        "total_tokens": 2984,
+        "retrieval_latency_s": 0.007,
+        "coverage_latency_s": 1.022,
+        "synthesis_latency_s": 2.036
+      },
+      "architecture": "C_GraphRAG"
+    }
+  },
+  {
+    "question_id": "Q007",
+    "architecture": "C",
+    "result": {
+      "answer": "El subgrafo proporcionado no contiene información sobre vulnerabilidades, su severidad, ni datos específicos del año 2024. Por lo tanto, no puedo responder a la pregunta sobre cuántas vulnerabilidades con severidad CRITICAL existen en la base de datos local del año 2024.\n\nSegún MITRE ATT&CK, la información disponible se centra en malware, grupos de amenazas, técnicas de ataque y mitigaciones, pero no incluye detalles sobre vulnerabilidades específicas o su clasificación por severidad. \n\nSi necesitas información sobre otro aspecto relacionado con el framework MITRE ATT&CK, estaré encantado de ayudarte.",
+      "seed_nodes": [
+        "T1053.002",
+        "S0110",
+        "T1680",
+        "T1596.005",
+        "T1596"
+      ],
+      "subgraph_nodes": 40,
+      "subgraph_edges": 39,
+      "coverage": {
+        "sufficient": false,
+        "missing_entities": [
+          "vulnerabilidades",
+          "severidad CRITICAL",
+          "año 2024"
+        ],
+        "confidence": 0.2
+      },
+      "hallucination_risk": true,
+      "usage": {
+        "prompt_tokens": 3158,
+        "completion_tokens": 171,
+        "total_tokens": 3329,
+        "retrieval_latency_s": 0.008,
+        "coverage_latency_s": 1.218,
+        "synthesis_latency_s": 2.972
+      },
+      "architecture": "C_GraphRAG"
+    }
+  },
+  {
+    "question_id": "Q008",
+    "architecture": "C",
+    "result": {
+      "answer": "No he encontrado información relevante en el grafo MITRE ATT&CK para responder a tu pregunta sobre las vulnerabilidades con mayor CVSS v3 score publicadas en 2023. \n\nEl sistema MITRE ATT&CK se centra en técnicas de ataque, grupos APT, tácticas, mitigaciones y herramientas utilizadas en ciberseguridad. Si tienes preguntas sobre alguno de estos temas, estaré encantado de ayudarte.",
+      "seed_nodes": [],
+      "subgraph_nodes": 0,
+      "subgraph_edges": 0,
+      "coverage": {
+        "sufficient": false,
+        "missing_entities": [],
+        "confidence": 0.0
+      },
+      "hallucination_risk": true,
+      "usage": {
+        "prompt_tokens": 144,
+        "completion_tokens": 86,
+        "total_tokens": 230,
+        "retrieval_latency_s": 0.006,
+        "coverage_latency_s": 0,
+        "synthesis_latency_s": 1.645
+      },
+      "architecture": "C_GraphRAG"
+    }
+  },
+  {
+    "question_id": "Q009",
+    "architecture": "C",
+    "result": {
+      "answer": "El subgrafo proporcionado no contiene información sobre vulnerabilidades específicas asociadas a la debilidad CWE-79. CWE-79 se refiere a \"Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')\" y, aunque es una debilidad común en el ámbito de la seguridad informática, no se menciona en el contexto del subgrafo.\n\nPor lo tanto, no puedo proporcionar el número de vulnerabilidades asociadas a CWE-79 basándome en la información disponible. \n\nSi necesitas información adicional o específica sobre CWE-79, te recomendaría consultar bases de datos de vulnerabilidades como la NVD (National Vulnerability Database) o el propio sitio de CWE.",
+      "seed_nodes": [
+        "T1053.002",
+        "S0110",
+        "T1596.005",
+        "T1596",
+        "T1497.003"
+      ],
+      "subgraph_nodes": 40,
+      "subgraph_edges": 13,
+      "coverage": {
+        "sufficient": false,
+        "missing_entities": [
+          "CWE-79",
+          "vulnerabilidades asociadas"
+        ],
+        "confidence": 0.2
+      },
+      "hallucination_risk": true,
+      "usage": {
+        "prompt_tokens": 3020,
+        "completion_tokens": 179,
+        "total_tokens": 3199,
+        "retrieval_latency_s": 0.008,
+        "coverage_latency_s": 1.013,
+        "synthesis_latency_s": 2.747
+      },
+      "architecture": "C_GraphRAG"
+    }
+  },
+  {
+    "question_id": "Q010",
+    "architecture": "C",
+    "result": {
+      "answer": "El subgrafo proporcionado no contiene información sobre la vulnerabilidad CVE-2023-44487 (HTTP/2 Rapid Reset) ni su score CVSS v3. Por lo tanto, no puedo responder a la pregunta sobre el score CVSS v3 de dicha vulnerabilidad.\n\nSi necesitas información específica sobre CVE-2023-44487, te recomendaría consultar bases de datos de vulnerabilidades como el NVD (National Vulnerability Database) o el sitio web de MITRE.",
+      "seed_nodes": [
+        "S1113"
+      ],
+      "subgraph_nodes": 40,
+      "subgraph_edges": 42,
+      "coverage": {
+        "sufficient": false,
+        "missing_entities": [
+          "CVE-2023-44487",
+          "CVSS v3 score"
+        ],
+        "confidence": 0.3
+      },
+      "hallucination_risk": true,
+      "usage": {
+        "prompt_tokens": 3069,
+        "completion_tokens": 144,
+        "total_tokens": 3213,
+        "retrieval_latency_s": 0.009,
+        "coverage_latency_s": 1.318,
+        "synthesis_latency_s": 1.945
+      },
+      "architecture": "C_GraphRAG"
+    }
+  },
+  {
+    "question_id": "Q011",
+    "architecture": "C",
+    "result": {
+      "answer": "La técnica T1059 se clasifica en la táctica de \"Execution\" (Ejecución). Según MITRE ATT&CK, esta técnica se refiere al uso de intérpretes de comandos y scripts para ejecutar comandos, scripts o binarios, lo que permite a los adversarios interactuar con los sistemas informáticos de diversas maneras. \n\nLa técnica T1059 incluye varias sub-técnicas, como T1059.001 (PowerShell), T1059.003 (Windows Command Shell), T1059.005 (Visual Basic), y T1059.007 (JavaScript), todas ellas también clasificadas bajo la táctica de ejecución. \n\nPor lo tanto, la respuesta a tu pregunta es que T1059 se clasifica en la táctica de \"Execution\".",
+      "seed_nodes": [
+        "T1059",
+        "T1053.002",
+        "S0110"
+      ],
+      "subgraph_nodes": 40,
+      "subgraph_edges": 89,
+      "coverage": {
+        "sufficient": false,
+        "missing_entities": [
+          "táctica MITRE ATT&CK"
+        ],
+        "confidence": 0.4
+      },
+      "hallucination_risk": true,
+      "usage": {
+        "prompt_tokens": 2831,
+        "completion_tokens": 196,
+        "total_tokens": 3027,
+        "retrieval_latency_s": 0.006,
+        "coverage_latency_s": 1.116,
+        "synthesis_latency_s": 3.073
+      },
+      "architecture": "C_GraphRAG"
+    }
+  },
+  {
+    "question_id": "Q012",
+    "architecture": "C",
+    "result": {
+      "answer": "El subgrafo proporcionado no contiene información sobre la técnica MITRE ATT&CK T1566. Por lo tanto, no puedo ofrecer una descripción de esta técnica. \n\nSi necesitas información sobre otra técnica, táctica, grupo APT, mitigación o herramienta de ataque, por favor házmelo saber.",
+      "seed_nodes": [
+        "T1566",
+        "T1053.002",
+        "S0110"
+      ],
+      "subgraph_nodes": 40,
+      "subgraph_edges": 35,
+      "coverage": {
+        "sufficient": false,
+        "missing_entities": [
+          "descripción de T1566"
+        ],
+        "confidence": 0.4
+      },
+      "hallucination_risk": true,
+      "usage": {
+        "prompt_tokens": 2675,
+        "completion_tokens": 98,
+        "total_tokens": 2773,
+        "retrieval_latency_s": 0.006,
+        "coverage_latency_s": 0.916,
+        "synthesis_latency_s": 1.451
+      },
+      "architecture": "C_GraphRAG"
+    }
+  },
+  {
+    "question_id": "Q013",
+    "architecture": "C",
+    "result": {
+      "answer": "La técnica MITRE ATT&CK con ID T1078 se denomina \"Valid Accounts\". Según MITRE ATT&CK, esta técnica se refiere a la obtención y abuso de credenciales válidas para acceder a sistemas y redes. Los adversarios pueden utilizar cuentas válidas para lograr acceso inicial, persistencia, escalación de privilegios o evasión de defensas. Esta técnica incluye sub-técnicas como T1078.001 \"Default Accounts\", T1078.003 \"Local Accounts\" y T1078.004 \"Cloud Accounts\", que abordan diferentes tipos de cuentas que pueden ser explotadas.\n\nSegún MITRE ATT&CK, las tácticas asociadas a esta técnica incluyen \"initial-access\", \"persistence\", \"privilege-escalation\" y \"defense-evasion\". Las plataformas afectadas abarcan una variedad de entornos, incluyendo Windows, Linux, macOS, y servicios en la nube.\n\nPara más información, puedes consultar la entrada correspondiente en el sitio de MITRE ATT&CK.",
+      "seed_nodes": [
+        "T1078",
+        "T1053.002",
+        "S0110"
+      ],
+      "subgraph_nodes": 40,
+      "subgraph_edges": 25,
+      "coverage": {
+        "sufficient": false,
+        "missing_entities": [
+          "nombre de la técnica T1078"
+        ],
+        "confidence": 0.3
+      },
+      "hallucination_risk": true,
+      "usage": {
+        "prompt_tokens": 2830,
+        "completion_tokens": 244,
+        "total_tokens": 3074,
+        "retrieval_latency_s": 0.008,
+        "coverage_latency_s": 0.991,
+        "synthesis_latency_s": 3.992
+      },
+      "architecture": "C_GraphRAG"
+    }
+  },
+  {
+    "question_id": "Q014",
+    "architecture": "C",
+    "result": {
+      "answer": "La técnica T1059.001, que se refiere a PowerShell, afecta principalmente a la plataforma Microsoft Windows. PowerShell es un marco de automatización y configuración de tareas que se utiliza en sistemas operativos Windows, lo que lo convierte en un objetivo común para diversas técnicas de ataque que utilizan scripts y comandos para ejecutar acciones maliciosas.\n\nSegún MITRE ATT&CK, PowerShell es ampliamente utilizado por actores de amenazas para ejecutar comandos y scripts en sistemas Windows, lo que permite la ejecución de código malicioso, la recolección de información y la manipulación de sistemas. Esta técnica es particularmente efectiva debido a la integración de PowerShell en el sistema operativo Windows, lo que facilita su uso por parte de los atacantes.\n\nEn el contexto del subgrafo proporcionado, no se menciona explícitamente la afectación a otras plataformas, lo que refuerza la idea de que PowerShell es principalmente relevante en entornos Windows. Por lo tanto, se puede concluir que la técnica T1059.001 está diseñada para ser utilizada en sistemas operativos Windows.\n\nEn resumen, la técnica T1059.001 (PowerShell) afecta a la plataforma Microsoft Windows. \n\nFuente: \"Según MITRE ATT&CK…\".",
+      "seed_nodes": [
+        "T1059.001",
+        "T1053.002",
+        "S0110"
+      ],
+      "subgraph_nodes": 40,
+      "subgraph_edges": 4,
+      "coverage": {
+        "sufficient": false,
+        "missing_entities": [
+          "plataformas afectadas"
+        ],
+        "confidence": 0.3
+      },
+      "hallucination_risk": true,
+      "usage": {
+        "prompt_tokens": 3101,
+        "completion_tokens": 282,
+        "total_tokens": 3383,
+        "retrieval_latency_s": 0.006,
+        "coverage_latency_s": 1.939,
+        "synthesis_latency_s": 4.058
+      },
+      "architecture": "C_GraphRAG"
+    }
+  },
+  {
+    "question_id": "Q015",
+    "architecture": "C",
+    "result": {
+      "answer": "La técnica T1486, conocida como \"Data Encrypted for Impact\", se encuentra en la táctica de **Impacto** (ID: TA0040). Esta técnica implica que los adversarios pueden cifrar datos en sistemas objetivo o en un gran número de sistemas dentro de una red para interrumpir la disponibilidad de los recursos del sistema y la red, intentando hacer que los datos almacenados sean inaccesibles.\n\nSegún MITRE ATT&CK, la táctica de Impacto se refiere a las acciones que los adversarios llevan a cabo para manipular, interrumpir o destruir sistemas y datos. Esto incluye técnicas que buscan interrumpir la disponibilidad o comprometer la integridad de los datos.\n\nPor lo tanto, la respuesta a tu pregunta es que la técnica T1486 (Data Encrypted for Impact) se encuentra en la táctica de **Impacto** (TA0040).",
+      "seed_nodes": [
+        "T1486",
+        "TA0040",
+        "T1053.002",
+        "S0110",
+        "T1573"
+      ],
+      "subgraph_nodes": 40,
+      "subgraph_edges": 41,
+      "coverage": {
+        "sufficient": false,
+        "missing_entities": [
+          "táctica correspondiente a T1486"
+        ],
+        "confidence": 0.6
+      },
+      "hallucination_risk": true,
+      "usage": {
+        "prompt_tokens": 3043,
+        "completion_tokens": 219,
+        "total_tokens": 3262,
+        "retrieval_latency_s": 0.006,
+        "coverage_latency_s": 1.153,
+        "synthesis_latency_s": 3.528
+      },
+      "architecture": "C_GraphRAG"
+    }
+  },
+  {
+    "question_id": "Q016",
+    "architecture": "C",
+    "result": {
+      "answer": "Según MITRE ATT&CK, para la técnica T1078 (Valid Accounts), existen varias mitigaciones que pueden ayudar a prevenir el abuso de cuentas válidas. Estas mitigaciones incluyen:\n\n1. **User Account Management (M1018)**: Implementar y hacer cumplir políticas para la gestión del ciclo de vida de las cuentas de usuario, que incluyen la creación, modificación y desactivación de cuentas. Una gestión adecuada de las cuentas puede reducir la posibilidad de que las cuentas sean utilizadas de manera indebida.\n\n2. **Account Use Policies (M1036)**: Establecer políticas de uso de cuentas que ayuden a mitigar el acceso no autorizado. Estas políticas deben incluir mecanismos de bloqueo de cuentas, requisitos de autenticación y reglas sobre cómo y cuándo se pueden utilizar las cuentas.\n\n3. **Password Policies (M1027)**: Establecer y hacer cumplir políticas de contraseñas seguras para las cuentas. Esto incluye requisitos para la complejidad de las contraseñas y la frecuencia de cambio, lo que puede reducir la probabilidad de que las credenciales sean comprometidas.\n\n4. **User Training (M1017)**: Capacitar a los empleados y contratistas sobre cómo reconocer, reportar y prevenir amenazas cibernéticas que dependen de la interacción humana, como el phishing y la ingeniería social. La educación puede ayudar a los usuarios a ser más conscientes de los riesgos asociados con el uso de cuentas.\n\nEstas mitigaciones son esenciales para proteger las cuentas válidas y, por ende, la seguridad general de la organización. Implementar estas medidas puede ayudar a prevenir que los adversarios obtengan acceso no autorizado a los sistemas a través de cuentas válidas.\n\nEn resumen, las mitigaciones para la técnica T1078 incluyen la gestión de cuentas de usuario, políticas de uso de cuentas, políticas de contraseñas y capacitación de usuarios. Estas prácticas son fundamentales para fortalecer la seguridad y reducir el riesgo de compromisos de cuentas.",
+      "seed_nodes": [
+        "T1078",
+        "S0066"
+      ],
+      "subgraph_nodes": 40,
+      "subgraph_edges": 43,
+      "coverage": {
+        "sufficient": false,
+        "missing_entities": [
+          "mitigaciones",
+          "técnica T1078"
+        ],
+        "confidence": 0.3
+      },
+      "hallucination_risk": true,
+      "usage": {
+        "prompt_tokens": 2807,
+        "completion_tokens": 435,
+        "total_tokens": 3242,
+        "retrieval_latency_s": 0.007,
+        "coverage_latency_s": 1.061,
+        "synthesis_latency_s": 5.64
+      },
+      "architecture": "C_GraphRAG"
+    }
+  },
+  {
+    "question_id": "Q017",
+    "architecture": "C",
+    "result": {
+      "answer": "La técnica T1059 (Command and Scripting Interpreter) tiene un total de 10 sub-técnicas. Estas sub-técnicas son:\n\n1. **T1059.001** — PowerShell\n2. **T1059.002** — AppleScript\n3. **T1059.003** — Windows Command Shell\n4. **T1059.004** — Unix Shell\n5. **T1059.006** — Python\n6. **T1059.008** — Network Device CLI\n7. **T1059.009** — Cloud API\n8. **T1059.010** — AutoHotKey & AutoIT\n9. **T1059.012** — Hypervisor CLI\n10. **T1059.013** — Container CLI/API\n\nSegún MITRE ATT&CK, estas sub-técnicas permiten a los adversarios abusar de diferentes intérpretes de comandos y scripts para ejecutar comandos, scripts o binarios en diversas plataformas.",
+      "seed_nodes": [
+        "T1059"
+      ],
+      "subgraph_nodes": 40,
+      "subgraph_edges": 58,
+      "coverage": {
+        "sufficient": true,
+        "missing_entities": [],
+        "confidence": 0.9
+      },
+      "hallucination_risk": false,
+      "usage": {
+        "prompt_tokens": 2827,
+        "completion_tokens": 235,
+        "total_tokens": 3062,
+        "retrieval_latency_s": 0.006,
+        "coverage_latency_s": 0.939,
+        "synthesis_latency_s": 6.648
+      },
+      "architecture": "C_GraphRAG"
+    }
+  },
+  {
+    "question_id": "Q018",
+    "architecture": "C",
+    "result": {
+      "answer": "La táctica que corresponde a la fase inicial de un ataque, donde el adversario intenta entrar en la red, es la táctica de **\"Initial Access\"**. Sin embargo, en el subgrafo proporcionado no se menciona explícitamente esta táctica ni se detallan técnicas específicas asociadas a ella.\n\nSegún MITRE ATT&CK, la táctica de \"Initial Access\" incluye técnicas como el uso de phishing, explotación de vulnerabilidades, y el uso de credenciales válidas para obtener acceso a sistemas. Aunque el subgrafo contiene información sobre diversas técnicas y grupos de amenazas, no se proporciona información específica sobre las técnicas de \"Initial Access\".\n\nPor lo tanto, no puedo proporcionar detalles sobre las técnicas específicas de \"Initial Access\" basándome únicamente en el subgrafo proporcionado.",
+      "seed_nodes": [
+        "T1053.002",
+        "S0110"
+      ],
+      "subgraph_nodes": 40,
+      "subgraph_edges": 24,
+      "coverage": {
+        "sufficient": false,
+        "missing_entities": [
+          "táctica de fase inicial de ataque",
+          "adversario",
+          "red"
+        ],
+        "confidence": 0.3
+      },
+      "hallucination_risk": true,
+      "usage": {
+        "prompt_tokens": 2632,
+        "completion_tokens": 209,
+        "total_tokens": 2841,
+        "retrieval_latency_s": 0.011,
+        "coverage_latency_s": 1.196,
+        "synthesis_latency_s": 3.89
+      },
+      "architecture": "C_GraphRAG"
+    }
+  },
+  {
+    "question_id": "Q019",
+    "architecture": "C",
+    "result": {
+      "answer": "No he encontrado información relevante en el grafo MITRE ATT&CK para responder a tu pregunta sobre el estado de la vulnerabilidad CVE-2024-3400 en NVD. \n\nEl sistema MITRE ATT&CK se centra en técnicas de ataque, grupos APT, tácticas, mitigaciones y herramientas utilizadas en ciberseguridad. Si tienes preguntas sobre alguno de estos temas, estaré encantado de ayudarte.",
+      "seed_nodes": [],
+      "subgraph_nodes": 0,
+      "subgraph_edges": 0,
+      "coverage": {
+        "sufficient": false,
+        "missing_entities": [],
+        "confidence": 0.0
+      },
+      "hallucination_risk": true,
+      "usage": {
+        "prompt_tokens": 145,
+        "completion_tokens": 87,
+        "total_tokens": 232,
+        "retrieval_latency_s": 0.006,
+        "coverage_latency_s": 0,
+        "synthesis_latency_s": 2.039
+      },
+      "architecture": "C_GraphRAG"
+    }
+  },
+  {
+    "question_id": "Q020",
+    "architecture": "C",
+    "result": {
+      "answer": "El subgrafo proporcionado no contiene información sobre el score CVSS v3 de CVE-2022-26134 (Atlassian Confluence). Según MITRE ATT&CK, no se menciona esta vulnerabilidad específica ni se proporciona información relacionada con su puntuación CVSS. \n\nPara obtener el score CVSS v3 de CVE-2022-26134, se recomienda consultar fuentes específicas de seguridad cibernética o bases de datos de vulnerabilidades como el NVD (National Vulnerability Database) o el sitio web de CVE.",
+      "seed_nodes": [
+        "T1213.001",
+        "T1053.002",
+        "S0110"
+      ],
+      "subgraph_nodes": 40,
+      "subgraph_edges": 20,
+      "coverage": {
+        "sufficient": false,
+        "missing_entities": [
+          "CVE-2022-26134",
+          "CVSS v3 score",
+          "Atlassian Confluence"
+        ],
+        "confidence": 0.0
+      },
+      "hallucination_risk": true,
+      "usage": {
+        "prompt_tokens": 2639,
+        "completion_tokens": 164,
+        "total_tokens": 2803,
+        "retrieval_latency_s": 0.006,
+        "coverage_latency_s": 1.118,
+        "synthesis_latency_s": 2.559
+      },
+      "architecture": "C_GraphRAG"
+    }
+  },
+  {
+    "question_id": "Q021",
+    "architecture": "C",
+    "result": {
+      "answer": "Según el subgrafo recuperado del framework MITRE ATT&CK, el grupo APT29 utiliza varias técnicas en sus operaciones. A continuación, se enumeran algunas de las técnicas más relevantes:\n\n1. **Técnica T1204.001 - Malicious Link**: APT29 puede depender de que un usuario haga clic en un enlace malicioso para ejecutar código. Esta técnica se basa en la ingeniería social para engañar a los usuarios. (Táctica: execution).\n\n2. **Técnica T1566.001 - Spearphishing Attachment**: Este grupo puede enviar correos electrónicos de spearphishing con archivos adjuntos maliciosos para obtener acceso a los sistemas de las víctimas. (Táctica: initial-access).\n\n3. **Técnica T1078.003 - Local Accounts**: APT29 puede obtener y abusar de las credenciales de cuentas locales para lograr acceso inicial, persistencia, escalación de privilegios o evasión de defensas. (Tácticas: defense-evasion, persistence, privilege-escalation, initial-access).\n\n4. **Técnica T1548.002 - Bypass User Account Control**: Este grupo puede eludir los mecanismos de Control de Cuentas de Usuario (UAC) para elevar privilegios en el sistema. (Tácticas: privilege-escalation, defense-evasion).\n\n5. **Técnica T1090.003 - Multi-hop Proxy**: APT29 puede encadenar múltiples proxies para disfrazar el origen del tráfico malicioso, lo que complica la detección por parte de los defensores. (Táctica: command-and-control).\n\n6. **Técnica T1621 - Multi-Factor Authentication Request Generation**: Pueden intentar eludir mecanismos de autenticación multifactor (MFA) generando solicitudes de MFA enviadas a los usuarios. (Táctica: credential-access).\n\n7. **Técnica T1547.001 - Registry Run Keys / Startup Folder**: APT29 puede lograr persistencia añadiendo un programa a una carpeta de inicio o haciendo referencia a él mediante una clave de registro. (Tácticas: persistence, privilege-escalation).\n\n8. **Técnica T1059.001 - PowerShell**: Este grupo puede abusar de comandos y scripts de PowerShell para la ejecución de código. (Táctica: execution).\n\nEstas técnicas reflejan la sofisticación y la variedad de métodos que APT29 emplea para llevar a cabo sus ataques. Para más detalles sobre cada técnica, se puede consultar el sitio web de MITRE ATT&CK.",
+      "seed_nodes": [
+        "T1053.002",
+        "S0110",
+        "G0016"
+      ],
+      "subgraph_nodes": 40,
+      "subgraph_edges": 55,
+      "coverage": {
+        "sufficient": false,
+        "missing_entities": [
+          "APT29",
+          "Técnicas MITRE ATT&CK específicas utilizadas por APT29"
+        ],
+        "confidence": 0.3
+      },
+      "hallucination_risk": true,
+      "usage": {
+        "prompt_tokens": 2856,
+        "completion_tokens": 588,
+        "total_tokens": 3444,
+        "retrieval_latency_s": 0.005,
+        "coverage_latency_s": 1.221,
+        "synthesis_latency_s": 10.342
+      },
+      "architecture": "C_GraphRAG"
+    }
+  },
+  {
+    "question_id": "Q022",
+    "architecture": "C",
+    "result": {
+      "answer": "El subgrafo proporcionado no contiene información específica sobre los grupos APT que utilizan la técnica T1566 (Phishing) según MITRE ATT&CK. Por lo tanto, no puedo responder a la pregunta sobre qué grupos APT utilizan esta técnica.\n\nSi necesitas información adicional sobre T1566 o sobre otros grupos APT, te recomendaría consultar directamente el framework MITRE ATT&CK o proporcionar un subgrafo que incluya esa información.",
+      "seed_nodes": [
+        "T1566",
+        "T1053.002",
+        "S0110"
+      ],
+      "subgraph_nodes": 40,
+      "subgraph_edges": 35,
+      "coverage": {
+        "sufficient": false,
+        "missing_entities": [
+          "grupos APT"
+        ],
+        "confidence": 0.3
+      },
+      "hallucination_risk": true,
+      "usage": {
+        "prompt_tokens": 2689,
+        "completion_tokens": 124,
+        "total_tokens": 2813,
+        "retrieval_latency_s": 0.008,
+        "coverage_latency_s": 1.151,
+        "synthesis_latency_s": 2.114
+      },
+      "architecture": "C_GraphRAG"
+    }
+  },
+  {
+    "question_id": "Q023",
+    "architecture": "C",
+    "result": {
+      "answer": "Según MITRE ATT&CK, la táctica de **Lateral Movement** (TA0008) incluye varias técnicas que los adversarios utilizan para moverse a través de un entorno comprometido. En el subgrafo proporcionado, se identifican las siguientes técnicas relacionadas con esta táctica:\n\n1. **Lateral Tool Transfer (T1570)**: Esta técnica implica que los adversarios transfieren herramientas o archivos entre sistemas dentro de un entorno comprometido. Es una técnica clave para facilitar el movimiento lateral, ya que permite a los atacantes llevar sus herramientas a otros sistemas para ejecutar ataques adicionales. Esta técnica es aplicable en plataformas como ESXi, Linux, macOS y Windows.\n\n2. **Scheduled Task/Job (T1053)**: Aunque esta técnica se asocia principalmente con la ejecución y persistencia, también puede ser utilizada en el contexto de movimiento lateral. Los adversarios pueden abusar de la funcionalidad de programación de tareas para ejecutar código malicioso en sistemas remotos, facilitando así su movimiento a través de la red.\n\n3. **Uso de herramientas como PsExec (S0029)**: PsExec es una herramienta de Microsoft que permite ejecutar programas en otros equipos. Aunque no se menciona explícitamente como una técnica en el subgrafo, su uso es común en escenarios de movimiento lateral, ya que permite a los atacantes ejecutar comandos en sistemas remotos.\n\nEstas técnicas son fundamentales para que los adversarios logren sus objetivos de movimiento lateral, permitiéndoles acceder y controlar sistemas adicionales dentro de una red comprometida. \n\nPara más información sobre estas técnicas, puedes consultar los enlaces proporcionados en el subgrafo.",
+      "seed_nodes": [
+        "TA0008",
+        "T1053.002",
+        "S0110",
+        "T1570"
+      ],
+      "subgraph_nodes": 40,
+      "subgraph_edges": 59,
+      "coverage": {
+        "sufficient": true,
+        "missing_entities": [],
+        "confidence": 0.85
+      },
+      "hallucination_risk": false,
+      "usage": {
+        "prompt_tokens": 2924,
+        "completion_tokens": 363,
+        "total_tokens": 3287,
+        "retrieval_latency_s": 0.009,
+        "coverage_latency_s": 1.118,
+        "synthesis_latency_s": 7.061
+      },
+      "architecture": "C_GraphRAG"
+    }
+  },
+  {
+    "question_id": "Q024",
+    "architecture": "C",
+    "result": {
+      "answer": "Según MITRE ATT&CK, para defenderse contra la técnica T1486 (Data Encrypted for Impact), se recomiendan las siguientes mitigaciones:\n\n1. **M1018 - User Account Management**: Implementar y hacer cumplir políticas para la gestión del ciclo de vida de las cuentas de usuario, lo que incluye la creación, modificación y desactivación de cuentas. Una gestión adecuada de las cuentas de usuario puede reducir la posibilidad de que los atacantes obtengan acceso no autorizado a los sistemas.\n\n2. **M1028 - Operating System Configuration**: Ajustar la configuración del sistema operativo y endurecer las configuraciones predeterminadas para mitigar la explotación por parte de adversarios. Esto incluye deshabilitar servicios innecesarios y aplicar parches de seguridad de manera oportuna.\n\n3. **M1030 - Data Backup**: Realizar copias de seguridad de los datos de manera regular y asegurarse de que estas copias de seguridad estén almacenadas de forma segura y sean accesibles en caso de un ataque de ransomware. Esto puede ayudar a restaurar los datos sin tener que pagar el rescate.\n\n4. **M1042 - Application Layer Protocols**: Implementar medidas de seguridad en los protocolos de aplicación para detectar y prevenir el tráfico malicioso que podría estar relacionado con ransomware. Esto incluye la monitorización del tráfico de red y la implementación de sistemas de detección de intrusiones.\n\n5. **M1053 - Network Segmentation**: Segmentar la red para limitar el movimiento lateral de los atacantes y contener la propagación del ransomware. Esto puede ayudar a proteger los sistemas críticos y los datos sensibles.\n\nEstas mitigaciones son parte de un enfoque integral para protegerse contra el ransomware y otras amenazas cibernéticas. Implementar estas medidas puede ayudar a reducir la superficie de ataque y mejorar la resiliencia de la organización frente a incidentes de seguridad.\n\nEn resumen, la combinación de una gestión adecuada de cuentas, configuraciones de sistema seguras, copias de seguridad efectivas, medidas de seguridad en la red y segmentación puede ser clave para mitigar el riesgo asociado con T1486. \n\nFuente: \"Según MITRE ATT&CK…\".",
+      "seed_nodes": [
+        "T1486",
+        "T1053.002",
+        "S0110",
+        "S0066"
+      ],
+      "subgraph_nodes": 40,
+      "subgraph_edges": 63,
+      "coverage": {
+        "sufficient": false,
+        "missing_entities": [
+          "mitigaciones",
+          "recomendaciones",
+          "T1486"
+        ],
+        "confidence": 0.3
+      },
+      "hallucination_risk": true,
+      "usage": {
+        "prompt_tokens": 3049,
+        "completion_tokens": 488,
+        "total_tokens": 3537,
+        "retrieval_latency_s": 0.007,
+        "coverage_latency_s": 1.32,
+        "synthesis_latency_s": 6.848
+      },
+      "architecture": "C_GraphRAG"
+    }
+  },
+  {
+    "question_id": "Q025",
+    "architecture": "C",
+    "result": {
+      "answer": "Según MITRE ATT&CK, el grupo Lazarus Group utiliza las siguientes herramientas maliciosas (malware):\n\n1. **RATANKBA**: Este es un herramienta de control remoto utilizada por Lazarus Group. Se puede encontrar más información sobre RATANKBA en su página dedicada en MITRE ATT&CK (ID: S0241).\n\n2. **MagicRAT**: Este es otro herramienta de acceso remoto desarrollada en C++ y que es utilizada exclusivamente por Lazarus Group en sus operaciones. Más detalles sobre MagicRAT están disponibles en su página en MITRE ATT&CK (ID: S1182).\n\nAmbas herramientas son representativas de las capacidades del Lazarus Group para realizar operaciones de control remoto y espionaje. \n\nPara más información sobre Lazarus Group, puedes consultar su perfil en MITRE ATT&CK (ID: G0032).\n\nEsta información se basa en el subgrafo proporcionado.",
+      "seed_nodes": [
+        "G0032",
+        "T1588.001",
+        "T1587.001",
+        "T1053.002",
+        "S0110"
+      ],
+      "subgraph_nodes": 40,
+      "subgraph_edges": 105,
+      "coverage": {
+        "sufficient": true,
+        "missing_entities": [],
+        "confidence": 0.85
+      },
+      "hallucination_risk": false,
+      "usage": {
+        "prompt_tokens": 2844,
+        "completion_tokens": 213,
+        "total_tokens": 3057,
+        "retrieval_latency_s": 0.007,
+        "coverage_latency_s": 0.823,
+        "synthesis_latency_s": 2.968
+      },
+      "architecture": "C_GraphRAG"
+    }
+  },
+  {
+    "question_id": "Q026",
+    "architecture": "C",
+    "result": {
+      "answer": "No he encontrado información relevante en el grafo MITRE ATT&CK para responder a tu pregunta sobre el número de CVEs publicados en 2022 con un score CVSS v3 superior a 9.0. \n\nEl sistema MITRE ATT&CK se centra en técnicas de ataque, grupos APT, tácticas, mitigaciones y herramientas relacionadas con la ciberseguridad. Si tienes preguntas sobre alguna de estas áreas, estaré encantado de ayudarte.",
+      "seed_nodes": [],
+      "subgraph_nodes": 0,
+      "subgraph_edges": 0,
+      "coverage": {
+        "sufficient": false,
+        "missing_entities": [],
+        "confidence": 0.0
+      },
+      "hallucination_risk": true,
+      "usage": {
+        "prompt_tokens": 149,
+        "completion_tokens": 94,
+        "total_tokens": 243,
+        "retrieval_latency_s": 0.007,
+        "coverage_latency_s": 0,
+        "synthesis_latency_s": 1.527
+      },
+      "architecture": "C_GraphRAG"
+    }
+  },
+  {
+    "question_id": "Q027",
+    "architecture": "C",
+    "result": {
+      "answer": "El subgrafo proporcionado no contiene información sobre CVE-2021-44228 ni sobre los productos afectados por esta vulnerabilidad. Por lo tanto, no puedo responder a la pregunta sobre qué productos están afectados por CVE-2021-44228.\n\nSi necesitas información específica sobre esta vulnerabilidad, te recomendaría consultar bases de datos de vulnerabilidades como el NVD (National Vulnerability Database) o el sitio web de MITRE.",
+      "seed_nodes": [
+        "T1053.002",
+        "S0110",
+        "T1596.005",
+        "T1596",
+        "T1497.003"
+      ],
+      "subgraph_nodes": 40,
+      "subgraph_edges": 13,
+      "coverage": {
+        "sufficient": false,
+        "missing_entities": [
+          "CVE-2021-44228",
+          "productos afectados"
+        ],
+        "confidence": 0.3
+      },
+      "hallucination_risk": true,
+      "usage": {
+        "prompt_tokens": 3016,
+        "completion_tokens": 131,
+        "total_tokens": 3147,
+        "retrieval_latency_s": 0.007,
+        "coverage_latency_s": 1.635,
+        "synthesis_latency_s": 1.632
+      },
+      "architecture": "C_GraphRAG"
+    }
+  },
+  {
+    "question_id": "Q028",
+    "architecture": "C",
+    "result": {
+      "answer": "No tengo suficiente información en el subgrafo proporcionado para listar los 10 CVEs más recientes relacionados con vulnerabilidades de tipo SQL Injection publicados en 2024. El subgrafo se centra en tácticas, técnicas, grupos APT y herramientas de ataque, pero no incluye detalles sobre CVEs o vulnerabilidades específicas. \n\nSi necesitas información sobre tácticas o técnicas relacionadas con SQL Injection, puedo ayudarte con eso.",
+      "seed_nodes": [
+        "T1674",
+        "T1659",
+        "T1546.012",
+        "T1221",
+        "T1134.005"
+      ],
+      "subgraph_nodes": 40,
+      "subgraph_edges": 36,
+      "coverage": {
+        "sufficient": false,
+        "missing_entities": [
+          "CVE-2024-XXXX",
+          "CVE-2024-YYYY",
+          "CVE-2024-ZZZZ"
+        ],
+        "confidence": 0.2
+      },
+      "hallucination_risk": true,
+      "usage": {
+        "prompt_tokens": 2767,
+        "completion_tokens": 140,
+        "total_tokens": 2907,
+        "retrieval_latency_s": 0.008,
+        "coverage_latency_s": 1.218,
+        "synthesis_latency_s": 2.15
+      },
+      "architecture": "C_GraphRAG"
+    }
+  },
+  {
+    "question_id": "Q029",
+    "architecture": "C",
+    "result": {
+      "answer": "Según el subgrafo recuperado del framework MITRE ATT&CK, el grupo APT que utiliza técnicas de la táctica **Execution** es **Threat Group-3390** (G0027), que ha utilizado el malware **Clambling** (S0660) desde al menos 2017. \n\nLas técnicas de la táctica **Execution** mencionadas en el subgrafo son:\n\n1. **System Services** (T1569): Esta técnica permite a los adversarios abusar de los servicios del sistema para ejecutar comandos o programas. Las plataformas afectadas son **Windows, macOS y Linux**.\n\n2. **Service Execution** (T1569.002): Esta técnica específica se refiere al abuso del administrador de servicios de Windows para ejecutar comandos o cargas útiles maliciosas, afectando exclusivamente a **Windows**.\n\nAmbas técnicas permiten a los adversarios ejecutar código malicioso en los sistemas comprometidos, lo que es fundamental para llevar a cabo sus objetivos.\n\nPor lo tanto, el grupo APT **Threat Group-3390** utiliza técnicas de la táctica **Execution** en plataformas **Windows, macOS y Linux**. \n\nPara más información, se puede consultar el subgrafo de MITRE ATT&CK.",
+      "seed_nodes": [
+        "TA0002",
+        "T1053.002",
+        "S0110",
+        "T1678",
+        "T1677"
+      ],
+      "subgraph_nodes": 40,
+      "subgraph_edges": 22,
+      "coverage": {
+        "sufficient": false,
+        "missing_entities": [
+          "grupos APT",
+          "táctica Execution",
+          "plataformas atacadas"
+        ],
+        "confidence": 0.3
+      },
+      "hallucination_risk": true,
+      "usage": {
+        "prompt_tokens": 2630,
+        "completion_tokens": 300,
+        "total_tokens": 2930,
+        "retrieval_latency_s": 0.007,
+        "coverage_latency_s": 1.12,
+        "synthesis_latency_s": 3.693
+      },
+      "architecture": "C_GraphRAG"
+    }
+  },
+  {
+    "question_id": "Q030",
+    "architecture": "C",
+    "result": {
+      "answer": "No se encontraron nodos relevantes en el grafo MITRE ATT&CK para responder a tu pregunta sobre los CVEs de severidad CRITICAL relacionados con Apache publicados en 2023. \n\nEl sistema MITRE ATT&CK se centra en técnicas, tácticas, grupos APT, mitigaciones y herramientas relacionadas con ciberseguridad, pero no proporciona información específica sobre vulnerabilidades y exposiciones comunes (CVEs). \n\nSi tienes preguntas sobre técnicas ATT&CK, grupos APT, tácticas, mitigaciones o herramientas, estaré encantado de ayudarte.",
+      "seed_nodes": [],
+      "subgraph_nodes": 0,
+      "subgraph_edges": 0,
+      "coverage": {
+        "sufficient": false,
+        "missing_entities": [],
+        "confidence": 0.0
+      },
+      "hallucination_risk": true,
+      "usage": {
+        "prompt_tokens": 143,
+        "completion_tokens": 114,
+        "total_tokens": 257,
+        "retrieval_latency_s": 0.006,
+        "coverage_latency_s": 0,
+        "synthesis_latency_s": 2.614
+      },
+      "architecture": "C_GraphRAG"
+    }
+  },
+  {
+    "question_id": "Q031",
+    "architecture": "C",
+    "result": {
+      "answer": "Según MITRE ATT&CK, APT28 utiliza varias técnicas en sus operaciones. Algunas de las técnicas relevantes que emplea este grupo son:\n\n1. **Técnicas de ejecución**:\n   - **T1204.001 — Malicious Link**: APT28 puede utilizar enlaces maliciosos para ejecutar código en los sistemas de las víctimas.\n   - **T1204.002 — Malicious File**: También puede depender de archivos maliciosos que los usuarios abren para ejecutar su código.\n\n2. **Técnicas de acceso inicial**:\n   - **T1566.001 — Spearphishing Attachment**: Este grupo envía correos electrónicos de spearphishing con archivos adjuntos maliciosos para obtener acceso a los sistemas de las víctimas.\n   - **T1669 — Wi-Fi Networks**: APT28 puede obtener acceso inicial a sistemas conectándose a redes Wi-Fi vulnerables.\n\n3. **Técnicas de recolección**:\n   - **T1025 — Data from Removable Media**: APT28 puede buscar datos sensibles en medios extraíbles conectados a sistemas comprometidos.\n   - **T1213 — Data from Information Repositories**: Este grupo puede aprovechar repositorios de información, como SharePoint, para extraer datos valiosos.\n\n4. **Técnicas de evasión de defensa**:\n   - **T1036 — Masquerading**: APT28 puede manipular sus artefactos para que parezcan legítimos y evadir la detección.\n   - **T1564.001 — Hidden Files and Directories**: Puede ocultar archivos y directorios para evitar la detección.\n\nEn cuanto a las técnicas relacionadas específicamente con la **exfiltración de datos**, APT28 puede utilizar las siguientes:\n\n- **T1025 — Data from Removable Media**: Esta técnica permite a APT28 recolectar datos sensibles de medios extraíbles, lo que puede ser un método de exfiltración.\n- **T1213 — Data from Information Repositories**: Al extraer información de repositorios, APT28 puede exfiltrar datos valiosos de la organización objetivo.\n\nEn resumen, APT28 emplea una variedad de técnicas para ejecutar sus ataques y exfiltrar datos, utilizando métodos de acceso inicial, recolección y evasión de defensa. \n\nPara más detalles sobre estas técnicas y su uso por parte de APT28, puedes consultar el framework MITRE ATT&CK.",
+      "seed_nodes": [
+        "G0007",
+        "T1053.002",
+        "S0110"
+      ],
+      "subgraph_nodes": 40,
+      "subgraph_edges": 25,
+      "coverage": {
+        "sufficient": false,
+        "missing_entities": [
+          "APT28",
+          "exfiltración de datos",
+          "técnicas específicas"
+        ],
+        "confidence": 0.3
+      },
+      "hallucination_risk": true,
+      "usage": {
+        "prompt_tokens": 2792,
+        "completion_tokens": 556,
+        "total_tokens": 3348,
+        "retrieval_latency_s": 0.007,
+        "coverage_latency_s": 1.269,
+        "synthesis_latency_s": 7.606
+      },
+      "architecture": "C_GraphRAG"
+    }
+  },
+  {
+    "question_id": "Q032",
+    "architecture": "C",
+    "result": {
+      "answer": "Según el subgrafo proporcionado, la táctica 'Credential Access' incluye las siguientes técnicas:\n\n1. **T1556.008 — Network Provider DLL**: Adversarios pueden registrar bibliotecas de enlace dinámico (DLL) de proveedor de red maliciosas para capturar credenciales de usuario en texto claro durante el proceso de autenticación.\n2. **T1056.003 — Web Portal Capture**: Adversarios pueden instalar código en portales externos, como una página de inicio de sesión de VPN, para capturar y transmitir credenciales de usuarios que intentan iniciar sesión en el servicio.\n\nPor lo tanto, hay un total de **dos técnicas** asociadas a la táctica 'Credential Access' en el subgrafo proporcionado.\n\nFuente: \"Según MITRE ATT&CK…\".",
+      "seed_nodes": [
+        "TA0006",
+        "T1053.002",
+        "S0110"
+      ],
+      "subgraph_nodes": 40,
+      "subgraph_edges": 24,
+      "coverage": {
+        "sufficient": false,
+        "missing_entities": [
+          "Credential Access techniques"
+        ],
+        "confidence": 0.3
+      },
+      "hallucination_risk": true,
+      "usage": {
+        "prompt_tokens": 2633,
+        "completion_tokens": 198,
+        "total_tokens": 2831,
+        "retrieval_latency_s": 0.007,
+        "coverage_latency_s": 1.268,
+        "synthesis_latency_s": 3.073
+      },
+      "architecture": "C_GraphRAG"
+    }
+  },
+  {
+    "question_id": "Q033",
+    "architecture": "C",
+    "result": {
+      "answer": "El subgrafo proporcionado no contiene información sobre vulnerabilidades específicas, CVEs (Common Vulnerabilities and Exposures) o sus puntajes CVSS (Common Vulnerability Scoring System). Por lo tanto, no puedo identificar cuál es el CVE con el mayor puntaje CVSS publicado en 2024 en la base de datos local.\n\nSegún MITRE ATT&CK, el enfoque del subgrafo se centra en tácticas, técnicas, grupos APT y malware, pero no incluye detalles sobre vulnerabilidades o CVEs. Si necesitas información sobre un CVE específico o su puntaje, te recomendaría consultar una base de datos de vulnerabilidades como el NVD (National Vulnerability Database) o CVE Details.\n\nSi tienes otra pregunta relacionada con el subgrafo o el framework MITRE ATT&CK, estaré encantado de ayudarte.",
+      "seed_nodes": [
+        "T1053.002",
+        "S0110",
+        "T1596.005",
+        "T1596",
+        "T1497.003"
+      ],
+      "subgraph_nodes": 40,
+      "subgraph_edges": 13,
+      "coverage": {
+        "sufficient": false,
+        "missing_entities": [
+          "CVE",
+          "CVSS score",
+          "2024"
+        ],
+        "confidence": 0.2
+      },
+      "hallucination_risk": true,
+      "usage": {
+        "prompt_tokens": 3020,
+        "completion_tokens": 213,
+        "total_tokens": 3233,
+        "retrieval_latency_s": 0.009,
+        "coverage_latency_s": 1.523,
+        "synthesis_latency_s": 3.84
+      },
+      "architecture": "C_GraphRAG"
+    }
+  },
+  {
+    "question_id": "Q034",
+    "architecture": "C",
+    "result": {
+      "answer": "Según MITRE ATT&CK, las técnicas asociadas a ataques de ransomware no están explícitamente mencionadas en el subgrafo proporcionado. Sin embargo, se pueden inferir algunas técnicas que son comúnmente utilizadas en ataques de ransomware basándose en las tácticas y técnicas generales de intrusión.\n\n1. **Impair Defenses (T1562)**: Los atacantes pueden modificar componentes del entorno de la víctima para deshabilitar mecanismos de defensa, lo que puede facilitar la ejecución de ransomware.\n\n2. **Lateral Tool Transfer (T1570)**: Esta técnica permite a los atacantes transferir herramientas o archivos entre sistemas en un entorno comprometido, lo que podría incluir el ransomware mismo.\n\n3. **Service Execution (T1569.002)**: Los atacantes pueden abusar del administrador de servicios de Windows para ejecutar comandos o cargas útiles maliciosas, como el ransomware.\n\n4. **Account Discovery (T1087)**: Conocer las cuentas válidas en un sistema puede ayudar a los atacantes a identificar objetivos para la implementación de ransomware.\n\n5. **Account Manipulation (T1098)**: Manipular cuentas puede permitir a los atacantes mantener o elevar su acceso a los sistemas, lo que es crucial para la propagación del ransomware.\n\n6. **Upload Malware (T1608.001)**: Esta técnica implica subir malware a la infraestructura controlada por el adversario, lo que puede incluir ransomware.\n\nAunque estas técnicas no son exclusivas de los ataques de ransomware, son relevantes en el contexto de cómo los atacantes pueden llevar a cabo tales ataques. Para una lista más específica de técnicas de ransomware, se recomienda consultar la base de datos de MITRE ATT&CK directamente.\n\nEn resumen, el subgrafo no proporciona una lista directa de técnicas de ransomware, pero las técnicas mencionadas son relevantes en el contexto de ataques de ransomware.",
+      "seed_nodes": [
+        "T1053.002",
+        "S0110"
+      ],
+      "subgraph_nodes": 40,
+      "subgraph_edges": 24,
+      "coverage": {
+        "sufficient": false,
+        "missing_entities": [
+          "ransomware",
+          "Tactics",
+          "Techniques"
+        ],
+        "confidence": 0.4
+      },
+      "hallucination_risk": true,
+      "usage": {
+        "prompt_tokens": 2620,
+        "completion_tokens": 418,
+        "total_tokens": 3038,
+        "retrieval_latency_s": 0.006,
+        "coverage_latency_s": 1.364,
+        "synthesis_latency_s": 6.141
+      },
+      "architecture": "C_GraphRAG"
+    }
+  },
+  {
+    "question_id": "Q035",
+    "architecture": "C",
+    "result": {
+      "answer": "Según el subgrafo recuperado del framework MITRE ATT&CK, las herramientas asociadas a APT41 (ID G0096) incluyen:\n\n1. **MESSAGETAP** (ID S0443): Es una familia de malware de minería de datos que APT41 ha desplegado en redes de telecomunicaciones para monitorear y guardar mensajes SMS.\n\n2. **DUSTPAN** (ID S1158): Es un dropper en memoria escrito en C/C++ que APT41 ha utilizado desde 2021 para desencriptar y ejecutar un payload embebido.\n\n3. **DUSTTRAP** (ID S1159): Es un marco de plugins de múltiples etapas asociado con las operaciones de APT41, que incluye múltiples componentes.\n\n4. **KEYPLUG** (ID S1051): Es un backdoor modular escrito en C++, con variantes para Windows y Linux, que ha sido utilizado por APT41 desde al menos 2020.\n\n5. **PowerSploit** (ID S0194): Es un marco de seguridad ofensiva de código abierto que incluye módulos y scripts de PowerShell, utilizado por APT41 para diversas actividades de ataque.\n\n6. **Empire** (ID S0363): Es un marco de administración remota y post-explotación de código abierto y multiplataforma que APT41 ha utilizado en sus operaciones.\n\nEstas herramientas reflejan la diversidad de técnicas y enfoques que APT41 emplea en sus campañas de ataque, que abarcan desde la recolección de datos hasta la ejecución de comandos maliciosos.\n\nSegún MITRE ATT&CK, estas herramientas son parte de las capacidades de APT41 para llevar a cabo sus operaciones de espionaje y motivaciones financieras.",
+      "seed_nodes": [
+        "G0096",
+        "T1592.002",
+        "T1053.002",
+        "S0110"
+      ],
+      "subgraph_nodes": 40,
+      "subgraph_edges": 68,
+      "coverage": {
+        "sufficient": false,
+        "missing_entities": [
+          "herramientas asociadas a APT41"
+        ],
+        "confidence": 0.3
+      },
+      "hallucination_risk": true,
+      "usage": {
+        "prompt_tokens": 2738,
+        "completion_tokens": 396,
+        "total_tokens": 3134,
+        "retrieval_latency_s": 0.009,
+        "coverage_latency_s": 1.041,
+        "synthesis_latency_s": 6.023
+      },
+      "architecture": "C_GraphRAG"
+    }
+  },
+  {
+    "question_id": "Q036",
+    "architecture": "C",
+    "result": {
+      "answer": "El subgrafo proporcionado no contiene información específica sobre vulnerabilidades de tipo 'buffer overflow' (CWE-120 o CWE-121). No se mencionan técnicas, grupos APT, herramientas de ataque o mitigaciones relacionadas con estas vulnerabilidades en el contexto recuperado.\n\nPor lo tanto, no puedo determinar cuántas vulnerabilidades de este tipo existen en la base de datos local basándome en la información disponible. \n\nSegún MITRE ATT&CK, para obtener información sobre vulnerabilidades específicas, se necesitaría consultar una base de datos que incluya detalles sobre las vulnerabilidades y sus clasificaciones, lo cual no está presente en el subgrafo proporcionado.",
+      "seed_nodes": [
+        "T1053.002",
+        "S0110",
+        "T1596.005",
+        "T1596",
+        "T1497.003"
+      ],
+      "subgraph_nodes": 40,
+      "subgraph_edges": 13,
+      "coverage": {
+        "sufficient": false,
+        "missing_entities": [
+          "CWE-120",
+          "CWE-121",
+          "vulnerabilidades de tipo 'buffer overflow'"
+        ],
+        "confidence": 0.2
+      },
+      "hallucination_risk": true,
+      "usage": {
+        "prompt_tokens": 3034,
+        "completion_tokens": 186,
+        "total_tokens": 3220,
+        "retrieval_latency_s": 0.008,
+        "coverage_latency_s": 1.337,
+        "synthesis_latency_s": 2.442
+      },
+      "architecture": "C_GraphRAG"
+    }
+  },
+  {
+    "question_id": "Q037",
+    "architecture": "C",
+    "result": {
+      "answer": "Según MITRE ATT&CK, para la técnica T1059 (Command and Scripting Interpreter), se recomiendan las siguientes detecciones:\n\n1. **Monitoreo de la actividad de los intérpretes de comandos y scripts**: Implementar soluciones de monitoreo que registren y analicen las invocaciones de intérpretes de comandos y scripts, como PowerShell, Windows Command Shell, y otros. Esto incluye la detección de patrones inusuales o no autorizados en la ejecución de scripts.\n\n2. **Análisis de logs**: Revisar los registros de eventos del sistema para identificar ejecuciones de comandos o scripts que no sean típicos o que provengan de fuentes no confiables. Esto puede incluir la búsqueda de comandos que intenten acceder a recursos sensibles o que realicen cambios en la configuración del sistema.\n\n3. **Detección de cambios en la configuración del sistema**: Implementar herramientas que alerten sobre cambios en la configuración del sistema que puedan ser indicativos de un abuso de intérpretes de comandos, como la creación de nuevas tareas programadas o la modificación de scripts existentes.\n\n4. **Uso de listas de control de acceso (ACL)**: Asegurarse de que solo los usuarios autorizados tengan acceso a los intérpretes de comandos y scripts, y monitorear cualquier intento de acceso no autorizado.\n\n5. **Implementación de controles de ejecución**: Utilizar mecanismos de control de aplicaciones y políticas de ejecución que limiten la capacidad de ejecutar scripts o comandos no autorizados. Esto puede incluir la implementación de listas blancas de aplicaciones y la restricción de la ejecución de scripts en entornos críticos.\n\nEstas medidas pueden ayudar a detectar y mitigar el uso malicioso de intérpretes de comandos y scripts, que es una técnica común utilizada por adversarios para ejecutar código malicioso en sistemas comprometidos.\n\nPara más detalles sobre la técnica T1059, puedes consultar la página oficial de MITRE ATT&CK.",
+      "seed_nodes": [
+        "T1059",
+        "T1053.002",
+        "S0110",
+        "S0066"
+      ],
+      "subgraph_nodes": 40,
+      "subgraph_edges": 100,
+      "coverage": {
+        "sufficient": false,
+        "missing_entities": [
+          "detecciones recomendadas",
+          "técnicas específicas",
+          "ejemplos de detección"
+        ],
+        "confidence": 0.4
+      },
+      "hallucination_risk": true,
+      "usage": {
+        "prompt_tokens": 2841,
+        "completion_tokens": 446,
+        "total_tokens": 3287,
+        "retrieval_latency_s": 0.009,
+        "coverage_latency_s": 1.318,
+        "synthesis_latency_s": 6.879
+      },
+      "architecture": "C_GraphRAG"
+    }
+  },
+  {
+    "question_id": "Q038",
+    "architecture": "C",
+    "result": {
+      "answer": "El subgrafo proporcionado no contiene información sobre vulnerabilidades, su severidad, o estadísticas relacionadas con el porcentaje de vulnerabilidades de 2023 que tienen severidad HIGH o CRITICAL. \n\nSegún MITRE ATT&CK, el enfoque principal está en las tácticas, técnicas, grupos APT y malware, pero no se menciona nada sobre vulnerabilidades específicas o su clasificación de severidad. Por lo tanto, no puedo responder a la pregunta sobre el porcentaje de vulnerabilidades de 2023 en la base de datos local que tienen severidad HIGH o CRITICAL.",
+      "seed_nodes": [
+        "T1053.002",
+        "S0110",
+        "T1680",
+        "T1596.005",
+        "T1596"
+      ],
+      "subgraph_nodes": 40,
+      "subgraph_edges": 39,
+      "coverage": {
+        "sufficient": false,
+        "missing_entities": [
+          "porcentaje de vulnerabilidades",
+          "severidad HIGH",
+          "severidad CRITICAL",
+          "vulnerabilidades de 2023"
+        ],
+        "confidence": 0.2
+      },
+      "hallucination_risk": true,
+      "usage": {
+        "prompt_tokens": 3158,
+        "completion_tokens": 172,
+        "total_tokens": 3330,
+        "retrieval_latency_s": 0.009,
+        "coverage_latency_s": 1.069,
+        "synthesis_latency_s": 2.471
+      },
+      "architecture": "C_GraphRAG"
+    }
+  },
+  {
+    "question_id": "Q039",
+    "architecture": "C",
+    "result": {
+      "answer": "Según el subgrafo proporcionado, se menciona el grupo de amenazas conocido como **Threat Group-3390** (ID G0027), que ha estado activo desde al menos 2017 y ha utilizado el malware **Clambling** (ID S0660). Sin embargo, no se proporciona información adicional sobre otros grupos APT asociados específicamente a Corea del Norte.\n\nPor lo tanto, con la información disponible en el subgrafo, no se puede identificar otros grupos APT relacionados con Corea del Norte. Si necesitas información sobre otros grupos APT o detalles adicionales, sería necesario consultar otras fuentes o un subgrafo más completo.",
+      "seed_nodes": [
+        "T1053.002",
+        "S0110"
+      ],
+      "subgraph_nodes": 40,
+      "subgraph_edges": 24,
+      "coverage": {
+        "sufficient": false,
+        "missing_entities": [
+          "grupos APT",
+          "Corea del Norte"
+        ],
+        "confidence": 0.3
+      },
+      "hallucination_risk": true,
+      "usage": {
+        "prompt_tokens": 2624,
+        "completion_tokens": 167,
+        "total_tokens": 2791,
+        "retrieval_latency_s": 0.007,
+        "coverage_latency_s": 1.232,
+        "synthesis_latency_s": 2.409
+      },
+      "architecture": "C_GraphRAG"
+    }
+  },
+  {
+    "question_id": "Q040",
+    "architecture": "C",
+    "result": {
+      "answer": "El subgrafo proporcionado no contiene información sobre productos (CPE) ni sobre CVEs críticos registrados en la base de datos local. Por lo tanto, no puedo responder a la pregunta sobre cuáles son los 5 productos con más CVEs críticos.\n\nSegún MITRE ATT&CK, la información disponible se centra en malware, técnicas de ataque, grupos APT y patrones de ataque, pero no incluye detalles específicos sobre productos o vulnerabilidades. \n\nSi necesitas información sobre tácticas, técnicas o grupos APT, estaré encantado de ayudarte.",
+      "seed_nodes": [
+        "T1053.002",
+        "S0110",
+        "S0075",
+        "T1596.005",
+        "T1596"
+      ],
+      "subgraph_nodes": 40,
+      "subgraph_edges": 30,
+      "coverage": {
+        "sufficient": false,
+        "missing_entities": [
+          "productos",
+          "CVE",
+          "número de CVEs críticos"
+        ],
+        "confidence": 0.2
+      },
+      "hallucination_risk": true,
+      "usage": {
+        "prompt_tokens": 2793,
+        "completion_tokens": 152,
+        "total_tokens": 2945,
+        "retrieval_latency_s": 0.008,
+        "coverage_latency_s": 1.061,
+        "synthesis_latency_s": 2.969
+      },
+      "architecture": "C_GraphRAG"
+    }
+  },
+  {
+    "question_id": "Q041",
+    "architecture": "C",
+    "result": {
+      "answer": "Según MITRE ATT&CK, el grupo APT29, también conocido como \"Cozy Bear\", ha utilizado diversas técnicas que podrían estar relacionadas con la explotación de CVE-2023-23397. Algunas de las técnicas relevantes que podrían estar utilizando incluyen:\n\n1. **T1566.001 - Spearphishing Attachment**: APT29 ha sido conocido por enviar correos electrónicos de spearphishing con archivos adjuntos maliciosos para obtener acceso inicial a los sistemas de las víctimas. Esta técnica es común en sus operaciones de ataque. \n\n2. **T1204.001 - Malicious Link**: Similar a la técnica anterior, APT29 puede utilizar enlaces maliciosos en correos electrónicos para inducir a los usuarios a ejecutar código malicioso.\n\n3. **T1078.003 - Local Accounts**: Esta técnica implica el uso de credenciales de cuentas locales para obtener acceso a sistemas, lo que puede ser parte de su estrategia de persistencia y escalada de privilegios.\n\n4. **T1548.002 - Bypass User Account Control**: APT29 puede intentar eludir los mecanismos de Control de Cuentas de Usuario (UAC) para elevar privilegios en sistemas Windows.\n\n5. **T1059.001 - PowerShell**: El uso de PowerShell para ejecutar comandos y scripts es una técnica común entre los atacantes, y APT29 ha abusado de esta herramienta en sus operaciones.\n\nPara mitigar los riesgos asociados con estas técnicas, se pueden recomendar las siguientes acciones urgentes:\n\n- **Implementar políticas de seguridad de correo electrónico**: Asegurarse de que los filtros de spam y las soluciones de detección de malware estén actualizados para identificar y bloquear correos electrónicos de spearphishing.\n\n- **Capacitación de usuarios**: Educar a los empleados sobre los riesgos de abrir archivos adjuntos o hacer clic en enlaces de correos electrónicos sospechosos.\n\n- **Gestión de cuentas de usuario**: Implementar políticas de gestión de cuentas de usuario (M1018) para asegurar que las cuentas locales sean gestionadas adecuadamente, desactivando cuentas no utilizadas y aplicando principios de privilegio mínimo.\n\n- **Monitoreo de actividad de PowerShell**: Implementar soluciones de monitoreo que registren y analicen la actividad de PowerShell para detectar comportamientos anómalos.\n\n- **Reforzar el Control de Cuentas de Usuario (UAC)**: Asegurarse de que las configuraciones de UAC estén correctamente configuradas para prevenir la elevación no autorizada de privilegios.\n\nEstas medidas pueden ayudar a reducir la superficie de ataque y mitigar el impacto de una posible explotación de CVE-2023-23397 por parte de APT29.",
+      "seed_nodes": [
+        "G0016",
+        "T1053.002",
+        "S0110"
+      ],
+      "subgraph_nodes": 40,
+      "subgraph_edges": 55,
+      "coverage": {
+        "sufficient": false,
+        "missing_entities": [
+          "CVE-2023-23397",
+          "APT29",
+          "mitigaciones urgentes",
+          "técnicas MITRE ATT&CK relacionadas"
+        ],
+        "confidence": 0.3
+      },
+      "hallucination_risk": true,
+      "usage": {
+        "prompt_tokens": 2918,
+        "completion_tokens": 623,
+        "total_tokens": 3541,
+        "retrieval_latency_s": 0.011,
+        "coverage_latency_s": 1.523,
+        "synthesis_latency_s": 8.907
+      },
+      "architecture": "C_GraphRAG"
+    }
+  },
+  {
+    "question_id": "Q042",
+    "architecture": "C",
+    "result": {
+      "answer": "El subgrafo proporcionado no contiene información específica sobre la vulnerabilidad CVE-2021-44228 (Log4Shell) ni sobre los grupos APT que la han explotado. Por lo tanto, no puedo establecer una relación directa entre esta vulnerabilidad y las técnicas del framework MITRE ATT&CK, ni identificar grupos APT asociados a su explotación.\n\nSegún MITRE ATT&CK, para obtener información sobre vulnerabilidades específicas y su relación con técnicas de ataque, se debe consultar la base de datos de vulnerabilidades y exposiciones (CVE) y su integración con el framework ATT&CK, que no está presente en el subgrafo proporcionado. \n\nSi necesitas información adicional sobre CVE-2021-44228 o grupos APT que la han explotado, te recomendaría consultar fuentes externas o la base de datos de MITRE ATT&CK directamente.",
+      "seed_nodes": [
+        "T1053.002",
+        "S0110"
+      ],
+      "subgraph_nodes": 40,
+      "subgraph_edges": 24,
+      "coverage": {
+        "sufficient": false,
+        "missing_entities": [
+          "CVE-2021-44228",
+          "Log4Shell",
+          "grupos APT que han explotado CVE-2021-44228"
+        ],
+        "confidence": 0.3
+      },
+      "hallucination_risk": true,
+      "usage": {
+        "prompt_tokens": 2668,
+        "completion_tokens": 238,
+        "total_tokens": 2906,
+        "retrieval_latency_s": 0.009,
+        "coverage_latency_s": 1.442,
+        "synthesis_latency_s": 3.594
+      },
+      "architecture": "C_GraphRAG"
+    }
+  },
+  {
+    "question_id": "Q043",
+    "architecture": "C",
+    "result": {
+      "answer": "El ataque de ransomware que utiliza la técnica T1486, que se refiere a la \"Encriptación de Archivos\", puede tener un impacto significativo en la disponibilidad y la integridad de los datos de una organización. Esta técnica implica que los adversarios cifran los archivos de la víctima, lo que puede resultar en la pérdida de acceso a datos críticos y, en muchos casos, en la extorsión de la víctima para recuperar el acceso a sus archivos. Según MITRE ATT&CK, el impacto de esta técnica se clasifica bajo la táctica TA0040 — Impacto.\n\nEn cuanto a las vulnerabilidades que podrían facilitar el acceso inicial para un ataque de ransomware, el subgrafo proporcionado no incluye información específica sobre CVEs recientes que podrían ser explotadas para este propósito. Sin embargo, es común que los ataques de ransomware aprovechen vulnerabilidades en software, sistemas operativos o aplicaciones que no están actualizados o que tienen configuraciones inseguras.\n\nGeneralmente, los atacantes pueden utilizar técnicas como la explotación de vulnerabilidades en servicios expuestos a Internet, phishing para obtener credenciales, o el uso de malware como QakBot (asociado con el ransomware ProLock) para obtener acceso inicial. Sin embargo, el subgrafo no proporciona detalles sobre CVEs específicas o vulnerabilidades recientes que se relacionen directamente con T1486.\n\nPor lo tanto, aunque se puede inferir que las vulnerabilidades en software y sistemas son un vector común para el acceso inicial en ataques de ransomware, no se puede proporcionar una lista específica de CVEs recientes basándose únicamente en la información del subgrafo. Para un análisis más detallado, sería necesario consultar bases de datos de vulnerabilidades como el NVD (National Vulnerability Database) o fuentes de seguridad cibernética actualizadas.",
+      "seed_nodes": [
+        "T1486",
+        "TA0040",
+        "T1053.002",
+        "S0110",
+        "S1244"
+      ],
+      "subgraph_nodes": 40,
+      "subgraph_edges": 96,
+      "coverage": {
+        "sufficient": false,
+        "missing_entities": [
+          "CVE reciente",
+          "técnicas de acceso inicial",
+          "impacto del ransomware"
+        ],
+        "confidence": 0.3
+      },
+      "hallucination_risk": true,
+      "usage": {
+        "prompt_tokens": 3029,
+        "completion_tokens": 409,
+        "total_tokens": 3438,
+        "retrieval_latency_s": 0.016,
+        "coverage_latency_s": 2.273,
+        "synthesis_latency_s": 5.766
+      },
+      "architecture": "C_GraphRAG"
+    }
+  },
+  {
+    "question_id": "Q044",
+    "architecture": "C",
+    "result": {
+      "answer": "Según el subgrafo proporcionado del framework MITRE ATT&CK, no se especifican directamente las tres técnicas más utilizadas por grupos APT de estado-nación ni las vulnerabilidades críticas (CVE) asociadas a ellas. Sin embargo, se pueden identificar algunas técnicas relevantes y grupos APT mencionados.\n\n1. **Técnica T1562 - Impair Defenses**: Esta técnica se utiliza para modificar componentes del entorno de la víctima con el fin de obstaculizar o desactivar mecanismos defensivos. Es común en ataques de grupos APT que buscan evadir detección. \n\n2. **Técnica T1087 - Account Discovery**: Esta técnica permite a los adversarios obtener una lista de cuentas válidas en un sistema, lo que es crucial para la planificación de ataques posteriores. \n\n3. **Técnica T1098 - Account Manipulation**: Esta técnica se refiere a la manipulación de cuentas para mantener o elevar el acceso a sistemas comprometidos, lo que es fundamental para la persistencia en un entorno comprometido.\n\nEn cuanto a los grupos APT mencionados en el subgrafo, se destaca **Ember Bear (G1003)**, un grupo de ciberespionaje patrocinado por el estado ruso, que ha estado activo desde al menos 2020. También se menciona **Threat Group-3390 (G0027)**, que ha utilizado el malware Clambling (S0660) desde 2017.\n\nRespecto a las vulnerabilidades críticas (CVE), el subgrafo no proporciona información específica sobre CVEs asociadas a las técnicas mencionadas. Para obtener detalles sobre vulnerabilidades específicas, sería necesario consultar una base de datos de CVE o un recurso adicional que relacione estas técnicas con vulnerabilidades conocidas.\n\nEn resumen, aunque se pueden identificar algunas técnicas y grupos APT relevantes, el subgrafo no contiene suficiente información para proporcionar una lista de las tres técnicas más utilizadas ni las CVEs asociadas.",
+      "seed_nodes": [
+        "T1053.002",
+        "S0110"
+      ],
+      "subgraph_nodes": 40,
+      "subgraph_edges": 24,
+      "coverage": {
+        "sufficient": false,
+        "missing_entities": [
+          "técnicas MITRE ATT&CK",
+          "grupos APT de estado-nación",
+          "vulnerabilidades críticas (CVE)"
+        ],
+        "confidence": 0.3
+      },
+      "hallucination_risk": true,
+      "usage": {
+        "prompt_tokens": 2666,
+        "completion_tokens": 461,
+        "total_tokens": 3127,
+        "retrieval_latency_s": 0.012,
+        "coverage_latency_s": 1.725,
+        "synthesis_latency_s": 6.553
+      },
+      "architecture": "C_GraphRAG"
+    }
+  },
+  {
+    "question_id": "Q045",
+    "architecture": "C",
+    "result": {
+      "answer": "Según MITRE ATT&CK, el movimiento lateral puede ser facilitado por varias técnicas, incluyendo T1021, que abarca el uso de servicios remotos como WinRM, SMB, SSH, y otros. Sin embargo, el subgrafo proporcionado no incluye información específica sobre CVEs (Common Vulnerabilities and Exposures) que deban ser priorizados para mitigar el movimiento lateral asociado con T1021.\n\nPara abordar el movimiento lateral, es crucial identificar y parchear vulnerabilidades en los servicios que se utilizan para este propósito. Por ejemplo, las vulnerabilidades en el protocolo SMB (T1021.002) o en WinRM (T1021.006) son comunes en ataques de movimiento lateral. Sin embargo, sin información específica sobre CVEs en el subgrafo, no puedo proporcionar una lista concreta de vulnerabilidades a priorizar.\n\nPara una respuesta más precisa, se recomienda consultar bases de datos de vulnerabilidades como el NVD (National Vulnerability Database) o el CVE Details, donde se pueden encontrar CVEs relevantes para los servicios y protocolos mencionados en el contexto de T1021.\n\nEn resumen, el subgrafo no contiene información suficiente sobre CVEs específicos que deban ser priorizados para contener el movimiento lateral.",
+      "seed_nodes": [
+        "T1021",
+        "TA0008",
+        "T1053.002",
+        "S0110",
+        "T1570"
+      ],
+      "subgraph_nodes": 40,
+      "subgraph_edges": 74,
+      "coverage": {
+        "sufficient": false,
+        "missing_entities": [
+          "CVE",
+          "vulnerabilidades específicas relacionadas con T1021"
+        ],
+        "confidence": 0.6
+      },
+      "hallucination_risk": true,
+      "usage": {
+        "prompt_tokens": 2955,
+        "completion_tokens": 296,
+        "total_tokens": 3251,
+        "retrieval_latency_s": 0.01,
+        "coverage_latency_s": 1.011,
+        "synthesis_latency_s": 3.562
+      },
+      "architecture": "C_GraphRAG"
+    }
+  },
+  {
+    "question_id": "Q046",
+    "architecture": "C",
+    "result": {
+      "answer": "El subgrafo proporcionado no contiene información específica sobre vulnerabilidades con un CVSS score de 10.0 ni su relación directa con las tácticas de acceso inicial en el marco MITRE ATT&CK. Sin embargo, se pueden identificar algunas técnicas que podrían ser relevantes para el acceso inicial, aunque no se mencionan vulnerabilidades específicas.\n\nPor ejemplo, las técnicas de acceso inicial pueden incluir:\n\n1. **T1176.001 - Browser Extensions**: Los adversarios pueden abusar de extensiones de navegador para establecer acceso persistente a sistemas de las víctimas. Esto puede ser relevante si una vulnerabilidad permite la instalación de extensiones maliciosas.\n\n2. **T1569 - System Services**: Esta técnica implica el abuso de servicios del sistema para ejecutar comandos o programas, lo que podría ser facilitado por vulnerabilidades en la configuración de servicios.\n\n3. **T1553.004 - Install Root Certificate**: Instalar un certificado raíz en un sistema comprometido puede permitir a los adversarios evitar advertencias al conectarse a servidores controlados por ellos, lo que podría ser facilitado por vulnerabilidades en la gestión de certificados.\n\n4. **T1087 - Account Discovery**: Aunque no es una técnica de acceso inicial per se, conocer las cuentas válidas puede ser crucial para que un adversario acceda a un sistema, especialmente si hay vulnerabilidades que permiten la explotación de cuentas.\n\nEs importante destacar que, aunque estas técnicas pueden estar relacionadas con el acceso inicial, el subgrafo no proporciona detalles sobre vulnerabilidades específicas que tengan un CVSS score de 10.0. Para una evaluación más precisa, se necesitaría información adicional sobre vulnerabilidades específicas y su relación con las técnicas del marco MITRE ATT&CK.\n\nSegún MITRE ATT&CK, la relación entre vulnerabilidades y técnicas de acceso inicial puede ser compleja y depende del contexto específico de cada ataque. Sin embargo, el subgrafo no ofrece suficiente información para establecer una conexión directa entre vulnerabilidades con un CVSS score de 10.0 y tácticas de acceso inicial.",
+      "seed_nodes": [
+        "T1053.002",
+        "S0110"
+      ],
+      "subgraph_nodes": 40,
+      "subgraph_edges": 24,
+      "coverage": {
+        "sufficient": false,
+        "missing_entities": [
+          "CVSS score 10.0",
+          "vulnerabilidades específicas",
+          "tácticas de acceso inicial"
+        ],
+        "confidence": 0.4
+      },
+      "hallucination_risk": true,
+      "usage": {
+        "prompt_tokens": 2654,
+        "completion_tokens": 469,
+        "total_tokens": 3123,
+        "retrieval_latency_s": 0.012,
+        "coverage_latency_s": 0.983,
+        "synthesis_latency_s": 6.395
+      },
+      "architecture": "C_GraphRAG"
+    }
+  },
+  {
+    "question_id": "Q047",
+    "architecture": "C",
+    "result": {
+      "answer": "Según MITRE ATT&CK, el grupo APT28 ha utilizado diversas técnicas y herramientas en sus campañas, lo que sugiere que es crucial monitorizar ciertas vulnerabilidades críticas en Microsoft para detectar sus actividades. Aunque el subgrafo no proporciona una lista específica de vulnerabilidades críticas, se pueden inferir algunas áreas de interés basadas en las técnicas y malware asociados con APT28.\n\n1. **Explotación de Flash**: APT28 utiliza el marco de explotación DealersChoice, que se centra en vulnerabilidades de Flash. Esto indica que las vulnerabilidades críticas en Adobe Flash Player, aunque ya no se soporta, podrían haber sido un vector de ataque en el pasado.\n\n2. **Spearphishing y enlaces maliciosos**: Las técnicas T1566.001 (Spearphishing Attachment) y T1204.001 (Malicious Link) son utilizadas para obtener acceso inicial. Esto sugiere que las vulnerabilidades en Microsoft Outlook y otros productos de Microsoft que manejan correos electrónicos y archivos adjuntos deben ser monitorizadas.\n\n3. **Inyección de plantillas**: La técnica T1221 (Template Injection) se refiere a la manipulación de documentos de Microsoft Office para ocultar código malicioso. Las vulnerabilidades en Microsoft Office que permiten la ejecución de código a través de documentos maliciosos son críticas.\n\n4. **Persistencia y escalación de privilegios**: Las técnicas T1547.001 (Registry Run Keys / Startup Folder) y T1098.002 (Additional Email Delegate Permissions) indican que APT28 puede intentar mantener acceso persistente a través de configuraciones de Windows. Las vulnerabilidades en el manejo de permisos y configuraciones de inicio en Windows son relevantes.\n\n5. **Acceso a credenciales**: La técnica T1003 (OS Credential Dumping) sugiere que APT28 puede intentar obtener credenciales del sistema operativo. Las vulnerabilidades en la gestión de credenciales de Windows son críticas para prevenir este tipo de ataques.\n\nEn resumen, aunque el subgrafo no menciona vulnerabilidades específicas, se debe prestar atención a las vulnerabilidades en Adobe Flash, Microsoft Office, y en la gestión de correos y credenciales en Windows para detectar las campañas de APT28.",
+      "seed_nodes": [
+        "S0183",
+        "G0007",
+        "S0066"
+      ],
+      "subgraph_nodes": 40,
+      "subgraph_edges": 34,
+      "coverage": {
+        "sufficient": false,
+        "missing_entities": [
+          "vulnerabilidades críticas en Microsoft",
+          "campañas de APT28"
+        ],
+        "confidence": 0.4
+      },
+      "hallucination_risk": true,
+      "usage": {
+        "prompt_tokens": 2832,
+        "completion_tokens": 503,
+        "total_tokens": 3335,
+        "retrieval_latency_s": 0.011,
+        "coverage_latency_s": 2.547,
+        "synthesis_latency_s": 6.455
+      },
+      "architecture": "C_GraphRAG"
+    }
+  },
+  {
+    "question_id": "Q048",
+    "architecture": "C",
+    "result": {
+      "answer": "Según MITRE ATT&CK, para mitigar el uso de PowerShell (T1059) y abordar la situación de tener CVEs críticos sin parchear en sistemas Windows, se pueden considerar las siguientes recomendaciones:\n\n1. **Aplicar parches de seguridad**: La primera y más crítica acción es aplicar parches a los CVEs identificados. Esto es fundamental para cerrar las vulnerabilidades que pueden ser explotadas por atacantes. Mantener los sistemas actualizados es una de las mejores prácticas de seguridad.\n\n2. **Restricción de PowerShell**: Implementar políticas que restrinjan el uso de PowerShell. Esto puede incluir la desactivación de la ejecución de scripts de PowerShell o la implementación de políticas de ejecución más restrictivas. Por ejemplo, se puede establecer la política de ejecución en \"AllSigned\" o \"Restricted\" para limitar la ejecución de scripts no autorizados.\n\n3. **Monitoreo y detección**: Implementar soluciones de monitoreo que puedan detectar el uso inusual de PowerShell. Esto incluye la supervisión de los logs de eventos de Windows y el uso de herramientas de detección de intrusiones que puedan identificar patrones de comportamiento asociados con el uso malicioso de PowerShell.\n\n4. **Educación y concienciación**: Capacitar a los empleados sobre los riesgos asociados con el uso de PowerShell y otras herramientas de administración. La concienciación sobre la seguridad puede ayudar a prevenir la ejecución accidental de scripts maliciosos.\n\n5. **Restricción de acceso a la red**: Limitar el acceso a la red y a los recursos críticos para reducir la superficie de ataque. Esto incluye la segmentación de la red y la implementación de controles de acceso basados en roles.\n\n6. **Uso de herramientas de seguridad**: Implementar soluciones de seguridad que incluyan capacidades de detección y respuesta ante amenazas, como EDR (Endpoint Detection and Response), que pueden ayudar a identificar y responder a actividades sospechosas relacionadas con PowerShell.\n\nEstas medidas no solo ayudarán a mitigar el uso de PowerShell (T1059), sino que también fortalecerán la postura de seguridad general de la organización frente a otras amenazas.",
+      "seed_nodes": [
+        "T1059",
+        "T1059.001"
+      ],
+      "subgraph_nodes": 40,
+      "subgraph_edges": 18,
+      "coverage": {
+        "sufficient": false,
+        "missing_entities": [
+          "recomendaciones de mitigación",
+          "CVEs críticos",
+          "sistemas Windows"
+        ],
+        "confidence": 0.4
+      },
+      "hallucination_risk": true,
+      "usage": {
+        "prompt_tokens": 3110,
+        "completion_tokens": 489,
+        "total_tokens": 3599,
+        "retrieval_latency_s": 0.014,
+        "coverage_latency_s": 1.114,
+        "synthesis_latency_s": 5.929
+      },
+      "architecture": "C_GraphRAG"
+    }
+  },
+  {
+    "question_id": "Q049",
+    "architecture": "C",
+    "result": {
+      "answer": "Para comparar el nivel de riesgo entre CVE-2021-44228 (Log4Shell, CVSS 10.0) y CVE-2022-30190 (Follina, CVSS 7.8), es importante considerar las técnicas MITRE ATT&CK que cada vulnerabilidad habilita.\n\n**CVE-2021-44228 (Log4Shell)**: Esta vulnerabilidad permite la ejecución remota de código (RCE) en aplicaciones que utilizan la biblioteca Log4j. Dado su CVSS de 10.0, representa un riesgo crítico. Las técnicas asociadas a esta vulnerabilidad pueden incluir:\n\n- **T1569 — System Services**: Los atacantes pueden abusar de los servicios del sistema para ejecutar comandos maliciosos.\n- **T1562 — Impair Defenses**: Los atacantes pueden modificar componentes del entorno de la víctima para deshabilitar mecanismos de defensa.\n- **T1553.006 — Code Signing Policy Modification**: Modificar políticas de firma de código para ejecutar código no firmado.\n\n**CVE-2022-30190 (Follina)**: Esta vulnerabilidad permite la ejecución de código a través de documentos de Microsoft Office, lo que permite a los atacantes ejecutar comandos maliciosos al abrir un archivo. Con un CVSS de 7.8, es menos crítica que Log4Shell, pero aún representa un riesgo significativo. Las técnicas asociadas pueden incluir:\n\n- **T1569.002 — Service Execution**: Abuso del administrador de servicios de Windows para ejecutar comandos maliciosos.\n- **T1176.001 — Browser Extensions**: Posibilidad de abusar de extensiones del navegador para establecer acceso persistente.\n- **T1556.008 — Network Provider DLL**: Registro de DLLs maliciosas para capturar credenciales.\n\n**Comparación de Riesgo**: \n\n1. **Severidad**: Log4Shell tiene un CVSS de 10.0, lo que indica un riesgo crítico, mientras que Follina, con un CVSS de 7.8, es grave pero no crítico. Esto sugiere que Log4Shell puede ser explotada más fácilmente y con consecuencias más severas.\n\n2. **Técnicas de Ataque**: Ambas vulnerabilidades permiten la ejecución de código, pero Log4Shell tiene un potencial más amplio debido a su capacidad de afectar a cualquier aplicación que use Log4j, mientras que Follina está más restringida a documentos de Office.\n\n3. **Impacto en la Defensa**: Log4Shell puede comprometer sistemas de manera más directa y rápida, mientras que Follina puede requerir interacción del usuario (abrir un documento), lo que puede limitar su efectividad en algunos escenarios.\n\nEn conclusión, Log4Shell representa un riesgo más alto en comparación con Follina, tanto por su severidad como por su potencial de explotación. Según MITRE ATT&CK, las técnicas asociadas a Log4Shell permiten un mayor impacto en la infraestructura de la víctima.",
+      "seed_nodes": [
+        "T1053.002",
+        "S0110"
+      ],
+      "subgraph_nodes": 40,
+      "subgraph_edges": 24,
+      "coverage": {
+        "sufficient": false,
+        "missing_entities": [
+          "CVE-2021-44228",
+          "CVE-2022-30190",
+          "CVSS",
+          "MITRE ATT&CK techniques"
+        ],
+        "confidence": 0.3
+      },
+      "hallucination_risk": true,
+      "usage": {
+        "prompt_tokens": 2706,
+        "completion_tokens": 683,
+        "total_tokens": 3389,
+        "retrieval_latency_s": 0.01,
+        "coverage_latency_s": 1.726,
+        "synthesis_latency_s": 8.648
+      },
+      "architecture": "C_GraphRAG"
+    }
+  },
+  {
+    "question_id": "Q050",
+    "architecture": "C",
+    "result": {
+      "answer": "El subgrafo proporcionado no contiene información específica sobre vulnerabilidades publicadas en 2024, por lo que no puedo detallar una cadena de ataque (kill chain) que utilice esas vulnerabilidades. Sin embargo, puedo describir una posible cadena de ataque utilizando técnicas documentadas en MITRE ATT&CK y grupos APT mencionados en el subgrafo.\n\n1. **Reconocimiento**: Un grupo APT, como APT29 (G0016), podría comenzar con la técnica de **Account Discovery** (T1087) para identificar cuentas válidas en el sistema objetivo. Esto les permitiría conocer qué cuentas pueden ser de interés para un ataque posterior.\n\n2. **Explotación**: Si se identifican vulnerabilidades en el software de la organización, el grupo podría utilizar un malware como **Cardinal RAT** (S0348) para obtener acceso inicial. Este RAT permite a los atacantes controlar el sistema de forma remota.\n\n3. **Instalación de malware**: Una vez dentro, podrían usar técnicas como **Upload Malware** (T1608.001) para cargar herramientas adicionales o implantes, como **Mango** (S1169), que es un backdoor utilizado por OilRig (G0049).\n\n4. **Persistencia**: Para mantener el acceso, podrían implementar técnicas de **Account Manipulation** (T1098) para modificar cuentas y asegurar su acceso continuo a los sistemas comprometidos.\n\n5. **Evasión**: Para evitar la detección, podrían utilizar la técnica de **Deobfuscate/Decode Files or Information** (T1140) para ocultar sus actividades y el uso de malware como **Cheerscrypt** (S1096) para cifrar datos y dificultar el análisis forense.\n\n6. **Exfiltración**: Finalmente, podrían exfiltrar datos utilizando la técnica de **Exfiltration to Cloud Storage** (T1567.002), enviando información sensible a un servicio de almacenamiento en la nube para su posterior uso.\n\nEsta cadena de ataque es un ejemplo general basado en las técnicas y grupos APT documentados en el subgrafo. Sin embargo, para un análisis más específico y detallado, se necesitaría información sobre las vulnerabilidades publicadas en 2024. \n\nSegún MITRE ATT&CK, las técnicas y grupos mencionados son parte de un marco más amplio que ayuda a entender y mitigar las amenazas cibernéticas.",
+      "seed_nodes": [
+        "T1053.002",
+        "S0110",
+        "S0066"
+      ],
+      "subgraph_nodes": 40,
+      "subgraph_edges": 24,
+      "coverage": {
+        "sufficient": false,
+        "missing_entities": [
+          "grupo APT",
+          "vulnerabilidades publicadas en 2024",
+          "técnicas MITRE ATT&CK específicas"
+        ],
+        "confidence": 0.3
+      },
+      "hallucination_risk": true,
+      "usage": {
+        "prompt_tokens": 2910,
+        "completion_tokens": 554,
+        "total_tokens": 3464,
+        "retrieval_latency_s": 0.012,
+        "coverage_latency_s": 1.274,
+        "synthesis_latency_s": 7.675
+      },
+      "architecture": "C_GraphRAG"
+    }
+  }
+]

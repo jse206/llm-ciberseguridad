@@ -1,0 +1,37 @@
+{
+  "result": {
+    "answer": "La vulnerabilidad CVE-2021-44228, también conocida como la vulnerabilidad de ejecución remota de código en Apache Log4j2, tiene un score CVSS v3 de **10.0**, lo que la clasifica como **CRÍTICA**. \n\nEste score se desglosa de la siguiente manera:\n- **Vector de ataque (AV)**: NETWORK (red)\n- **Complejidad del ataque (AC)**: LOW (baja)\n- **Privilegios requeridos (PR)**: NONE (ninguno)\n- **Interacción del usuario (UI)**: NONE (ninguna)\n- **Alcance (S)**: CHANGED (cambiado)\n- **Impacto en la confidencialidad (C)**: HIGH (alto)\n- **Impacto en la integridad (I)**: HIGH (alto)\n- **Impacto en la disponibilidad (A)**: HIGH (alto)\n\nEstos datos provienen de la base de datos del NVD (National Vulnerability Database) y están disponibles en la API consultada (fuente: NVD/NIST). \n\nLa vulnerabilidad permite a un atacante ejecutar código arbitrario en sistemas afectados, lo que representa un riesgo significativo para la seguridad de las aplicaciones que utilizan versiones vulnerables de Log4j2 (versiones desde 2.0-beta9 hasta 2.15.0, excluyendo ciertas versiones de seguridad). \n\nPara más información, puedes consultar la fuente original en [NVD](https://services.nvd.nist.gov/rest/json/cves/2.0?cveId=CVE-2021-44228).",
+    "intent": "get_cve_by_id",
+    "api_source": "https://services.nvd.nist.gov/rest/json/cves/2.0?cveId=CVE-2021-44228",
+    "api_error": null,
+    "router_confidence": 0.9,
+    "usage": {
+      "prompt_tokens": 2916,
+      "completion_tokens": 379,
+      "total_tokens": 3295,
+      "router_latency_s": 1.524,
+      "api_latency_s": 1.126,
+      "synthesis_latency_s": 7.242
+    },
+    "hallucination_risk": false,
+    "architecture": "B_API"
+  },
+  "metrics": {
+    "question_id": "Q001",
+    "level": 1,
+    "domain": "NVD",
+    "architecture": "B_API",
+    "accuracy": 0.6667,
+    "hallucination_risk": 0.0,
+    "traceability": 1.0,
+    "error_handling": 1.0,
+    "latency_s": 9.892,
+    "total_tokens": 3295,
+    "accuracy_detail": "Score=0.667 | completas=['10.0', '10', 'crítica', 'log4j'] | parciales=[] | ausentes=['critical', 'log4shell']",
+    "hallucination_detail": "Sin señales de alucinación detectadas",
+    "traceability_detail": "Markers texto: ['nvd', 'nist', 'national vulnerability'] | Fuente estructurada: api_source=True, seed_nodes=False, sql=False",
+    "error_handling_detail": "Sin errores detectados en el pipeline",
+    "latency_detail": "router=1.52s api=1.13s synth=7.24s",
+    "answer_preview": "La vulnerabilidad CVE-2021-44228, también conocida como la vulnerabilidad de ejecución remota de código en Apache Log4j2, tiene un score CVSS v3 de **10.0**, lo que la clasifica como **CRÍTICA**. \n\nEste score se desglosa de la siguiente manera:\n- **Vector de ataque (AV)**: NETWORK (red)\n- **Compleji…"
+  }
+}

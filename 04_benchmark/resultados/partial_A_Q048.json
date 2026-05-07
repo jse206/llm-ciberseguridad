@@ -1,0 +1,39 @@
+{
+  "result": {
+    "answer": "Los resultados de la consulta SQL ejecutada contra la base de datos NVD/NIST no arrojaron ningún CVE crítico sin parchear en los sistemas Windows. Esto indica que, según la información disponible en la base de datos, no hay vulnerabilidades críticas identificadas en este momento para los sistemas Windows que estén relacionadas con el uso de PowerShell (T1059).\n\nSin embargo, dado que se ha identificado el uso de T1059 (PowerShell), es importante que la organización implemente las siguientes recomendaciones de mitigación:\n\n1. **Revisión de Políticas de Seguridad**: Asegúrese de que las políticas de seguridad de la organización incluyan el uso controlado de PowerShell, limitando su uso a usuarios y procesos autorizados.\n\n2. **Monitoreo y Registro**: Implemente soluciones de monitoreo y registro para detectar actividades inusuales o no autorizadas en PowerShell. Esto puede incluir la habilitación de la auditoría de PowerShell para registrar comandos ejecutados.\n\n3. **Restricción de Ejecución de Scripts**: Configure las políticas de ejecución de PowerShell para restringir la ejecución de scripts no firmados o no autorizados. Esto puede ayudar a prevenir la ejecución de scripts maliciosos.\n\n4. **Actualización y Parcheo**: Mantenga todos los sistemas Windows actualizados y aplique parches de seguridad de manera oportuna para mitigar cualquier vulnerabilidad que pueda ser explotada.\n\n5. **Capacitación de Usuarios**: Proporcione capacitación a los usuarios sobre las mejores prácticas de seguridad y la identificación de posibles amenazas relacionadas con el uso de PowerShell.\n\n6. **Implementación de Herramientas de Seguridad**: Considere el uso de herramientas de seguridad adicionales, como soluciones de detección y respuesta de endpoint (EDR), que pueden ayudar a identificar y responder a actividades maliciosas.\n\nEstas medidas ayudarán a fortalecer la postura de seguridad de la organización frente a posibles amenazas relacionadas con PowerShell.",
+    "sql": "SELECT cve.cve_id, cve.description, cve_reference.url\nFROM cve\nJOIN cve_cpe ON cve.cve_id = cve_cpe.cve_id\nJOIN cve_reference ON cve.cve_id = cve_reference.cve_id\nWHERE cve.cvss_v3_severity = 'CRITICAL'\nAND cve_cpe.vulnerable = 1\nAND cve_cpe.cpe_uri LIKE 'cpe:2.3:o:microsoft:windows:%'\nLIMIT 10;",
+    "sql_rows": 0,
+    "correction_attempts": 0,
+    "sql_error": null,
+    "api_fallback": null,
+    "hallucination_risk": false,
+    "usage": {
+      "prompt_tokens": 3144,
+      "completion_tokens": 669,
+      "total_tokens": 3813,
+      "schema_linking_latency_s": 3.71,
+      "sql_generation_latency_s": 2.545,
+      "self_correction_latency_s": 0,
+      "synthesis_latency_s": 10.242
+    },
+    "architecture": "A_Text2SQL"
+  },
+  "metrics": {
+    "question_id": "Q048",
+    "level": 3,
+    "domain": "BOTH",
+    "architecture": "A_Text2SQL",
+    "accuracy": 0.7143,
+    "hallucination_risk": 0.0,
+    "traceability": 1.0,
+    "error_handling": 1.0,
+    "latency_s": 16.497,
+    "total_tokens": 3813,
+    "accuracy_detail": "Score=0.714 | completas=['T1059', 'powershell', 'mitigación', 'windows', 'parche'] | parciales=[] | ausentes=['M1038', 'M1042']",
+    "hallucination_detail": "Sin señales de alucinación detectadas",
+    "traceability_detail": "Markers texto: ['nvd', 'nist', 'según'] | Fuente estructurada: api_source=False, seed_nodes=False, sql=True",
+    "error_handling_detail": "Sin errores detectados en el pipeline",
+    "latency_detail": "linking=3.71s sql=2.54s corr=0.00s synth=10.24s",
+    "answer_preview": "Los resultados de la consulta SQL ejecutada contra la base de datos NVD/NIST no arrojaron ningún CVE crítico sin parchear en los sistemas Windows. Esto indica que, según la información disponible en la base de datos, no hay vulnerabilidades críticas identificadas en este momento para los sistemas Wi…"
+  }
+}

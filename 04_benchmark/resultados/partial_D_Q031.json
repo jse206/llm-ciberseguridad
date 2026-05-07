@@ -1,0 +1,73 @@
+{
+  "result": {
+    "answer": "El grupo APT28 utiliza varias técnicas, entre las cuales se destaca la técnica T1567 — Exfiltration Over Web Service, que se relaciona directamente con la exfiltración de datos. Esta técnica permite a los adversarios utilizar servicios web para transferir datos fuera de un entorno comprometido. Además, otras técnicas como T1560.001 — Archive via Utility pueden ser utilizadas para preparar datos antes de su exfiltración. Sin embargo, la técnica más directamente asociada con la exfiltración es T1567.\n\n**Fuentes consultadas:** query_mitre_graph",
+    "steps": [
+      {
+        "thought": "",
+        "action": "query_mitre_graph",
+        "action_input": {
+          "question": "¿Qué técnicas usa el grupo APT28?"
+        },
+        "observation_preview": "{\n  \"context\": \"=== SUBGRAFO MITRE ATT&CK ===\\n\\n--- Entidades recuperadas ---\\n  [attack-pattern] T1560.001 — Archive via Utility\\n     Adversaries may use utilities to compress and/or encrypt collected data prior to exfiltration. Many utilities include functionalities to compress, encrypt, or othe…"
+      },
+      {
+        "thought": "",
+        "action": "query_mitre_graph",
+        "action_input": {
+          "question": "¿Cuáles técnicas están relacionadas con la exfiltración de datos?"
+        },
+        "observation_preview": "{\n  \"context\": \"=== SUBGRAFO MITRE ATT&CK ===\\n\\n--- Entidades recuperadas ---\\n  [attack-pattern] T1570 — Lateral Tool Transfer\\n     Adversaries may transfer tools or other files between systems in a compromised environment. Once brought into the victim environment (i.e., [Ingress Tool Transfer](h…"
+      },
+      {
+        "thought": "",
+        "action": "query_mitre_graph",
+        "action_input": {
+          "question": "Lista de técnicas de exfiltración de datos en MITRE ATT&CK"
+        },
+        "observation_preview": "{\n  \"context\": \"=== SUBGRAFO MITRE ATT&CK ===\\n\\n--- Entidades recuperadas ---\\n  [attack-pattern] T1570 — Lateral Tool Transfer\\n     Adversaries may transfer tools or other files between systems in a compromised environment. Once brought into the victim environment (i.e., [Ingress Tool Transfer](h…"
+      },
+      {
+        "thought": "",
+        "action": "query_mitre_graph",
+        "action_input": {
+          "question": "¿Qué técnicas de MITRE ATT&CK están relacionadas con la exfiltración de datos?"
+        },
+        "observation_preview": "{\n  \"context\": \"=== SUBGRAFO MITRE ATT&CK ===\\n\\n--- Entidades recuperadas ---\\n  [attack-pattern] T1570 — Lateral Tool Transfer\\n     Adversaries may transfer tools or other files between systems in a compromised environment. Once brought into the victim environment (i.e., [Ingress Tool Transfer](h…"
+      }
+    ],
+    "tools_used": [
+      "query_mitre_graph",
+      "query_mitre_graph",
+      "query_mitre_graph",
+      "query_mitre_graph"
+    ],
+    "iterations": 4,
+    "forced_final": false,
+    "hallucination_risk": false,
+    "usage": {
+      "prompt_tokens": 11896,
+      "completion_tokens": 529,
+      "total_tokens": 12425,
+      "total_latency_s": 15.458
+    },
+    "architecture": "D_Toolformer"
+  },
+  "metrics": {
+    "question_id": "Q031",
+    "level": 2,
+    "domain": "MITRE",
+    "architecture": "D_Toolformer",
+    "accuracy": 0.4,
+    "hallucination_risk": 0.0,
+    "traceability": 0.5,
+    "error_handling": 1.0,
+    "latency_s": 15.458,
+    "total_tokens": 12425,
+    "accuracy_detail": "Score=0.400 | completas=['APT28', 'exfiltration'] | parciales=[] | ausentes=['T1041', 'fancy bear', 'russia']",
+    "hallucination_detail": "Sin señales de alucinación detectadas",
+    "traceability_detail": "Markers texto: ['mitre', 'fuente', 'graph'] | Fuente estructurada: api_source=False, seed_nodes=False, sql=False",
+    "error_handling_detail": "Sin errores detectados en el pipeline",
+    "latency_detail": "total_react=15.46s iterations=4",
+    "answer_preview": "El grupo APT28 utiliza varias técnicas, entre las cuales se destaca la técnica T1567 — Exfiltration Over Web Service, que se relaciona directamente con la exfiltración de datos. Esta técnica permite a los adversarios utilizar servicios web para transferir datos fuera de un entorno comprometido. Adem…"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "result": {
+    "answer": "Los datos provienen de la base de datos NVD/NIST. \n\nEn la comparación entre CVE-2021-44228 (Log4Shell) y CVE-2022-30190 (Follina), se observa que:\n\n1. **CVE-2021-44228 (Log4Shell)**:\n   - **CVSS**: 10.0\n   - **Descripción**: Esta vulnerabilidad permite la ejecución remota de código a través de la biblioteca Log4j, lo que puede ser explotado por un atacante para tomar control total del sistema afectado. Dada su alta puntuación de CVSS, se considera extremadamente crítica y de alto riesgo.\n\n2. **CVE-2022-30190 (Follina)**:\n   - **CVSS**: 7.8\n   - **Descripción**: Esta vulnerabilidad también permite la ejecución remota de código, pero se produce cuando se llama a MSDT a través del protocolo URL desde aplicaciones como Word. Aunque permite a un atacante ejecutar código arbitrario, su impacto es menor en comparación con Log4Shell, dado que depende de la interacción del usuario con documentos maliciosos.\n\nEn cuanto a las técnicas MITRE ATT&CK que habilitan, aunque no se especifican en los resultados obtenidos, se puede inferir que ambas vulnerabilidades permiten la ejecución de código, lo que podría relacionarse con técnicas como \"Execution\" (T1203) y \"Remote Services\" (T1210) en el marco de MITRE ATT&CK.\n\nEn resumen, CVE-2021-44228 (Log4Shell) presenta un nivel de riesgo significativamente mayor que CVE-2022-30190 (Follina) debido a su puntuación CVSS máxima y su potencial de explotación más amplio.",
+    "sql": "SELECT c.cve_id, c.cvss_v3_score, c.description, cw.cwe_id\nFROM cve AS c\nLEFT JOIN cve_cwe AS cw ON c.cve_id = cw.cve_id\nWHERE c.cve_id IN ('CVE-2021-44228', 'CVE-2022-30190');",
+    "sql_rows": 1,
+    "correction_attempts": 0,
+    "sql_error": null,
+    "api_fallback": null,
+    "hallucination_risk": false,
+    "usage": {
+      "prompt_tokens": 3307,
+      "completion_tokens": 597,
+      "total_tokens": 3904,
+      "schema_linking_latency_s": 3.672,
+      "sql_generation_latency_s": 2.049,
+      "self_correction_latency_s": 0,
+      "synthesis_latency_s": 8.863
+    },
+    "architecture": "A_Text2SQL"
+  },
+  "metrics": {
+    "question_id": "Q049",
+    "level": 3,
+    "domain": "BOTH",
+    "architecture": "A_Text2SQL",
+    "accuracy": 0.8571,
+    "hallucination_risk": 0.0,
+    "traceability": 1.0,
+    "error_handling": 1.0,
+    "latency_s": 14.584,
+    "total_tokens": 3904,
+    "accuracy_detail": "Score=0.857 | completas=['log4shell', 'follina', 'CVSS', 'T1203', 'comparación', 'riesgo'] | parciales=[] | ausentes=['T1190']",
+    "hallucination_detail": "Sin señales de alucinación detectadas",
+    "traceability_detail": "Markers texto: ['nvd', 'nist', 'mitre'] | Fuente estructurada: api_source=False, seed_nodes=False, sql=True",
+    "error_handling_detail": "Sin errores detectados en el pipeline",
+    "latency_detail": "linking=3.67s sql=2.05s corr=0.00s synth=8.86s",
+    "answer_preview": "Los datos provienen de la base de datos NVD/NIST. \n\nEn la comparación entre CVE-2021-44228 (Log4Shell) y CVE-2022-30190 (Follina), se observa que:\n\n1. **CVE-2021-44228 (Log4Shell)**:\n   - **CVSS**: 10.0\n   - **Descripción**: Esta vulnerabilidad permite la ejecución remota de código a través de la bi…"
+  }
+}

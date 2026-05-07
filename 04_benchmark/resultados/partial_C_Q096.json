@@ -1,0 +1,51 @@
+{
+  "result": {
+    "answer": "Según MITRE ATT&CK, APT28 (G0007) y APT29 (G0016) tienen capacidades ofensivas distintas, reflejadas en sus TTPs (Tácticas, Técnicas y Procedimientos) documentados.\n\n**APT28** utiliza varias técnicas para acceder a sistemas y mantener su presencia. Por ejemplo, emplea el malware **Zebrocy** (S0251) y **DealersChoice** (S0243), que es un marco de explotación de Flash. APT28 también utiliza técnicas de **explotación de vulnerabilidades en aplicaciones cliente** (T1203) y **replicación a través de medios extraíbles** (T1091) para moverse lateralmente y obtener acceso inicial. Además, su uso de **Mimikatz** (S0002) para el volcado de credenciales es notable, lo que les permite acceder a información sensible.\n\nPor otro lado, **APT29** se enfoca en técnicas más sofisticadas de persistencia y evasión. Utiliza **OnionDuke** (S0052) y **VaporRage** (S0636) como herramientas de malware. APT29 también emplea técnicas como **pass the ticket** (T1550.003) y **pass the hash** (T1550.002) para el movimiento lateral, lo que les permite eludir controles de acceso normales. Además, su uso de **SUNBURST** (S0559), un DLL trojanizado, destaca su capacidad para infiltrarse en redes a través de actualizaciones de software.\n\nEn términos de **CVE** (Common Vulnerabilities and Exposures), APT28 ha sido conocido por explotar vulnerabilidades en software de Adobe Flash, mientras que APT29 ha utilizado técnicas más centradas en la explotación de software de infraestructura, como se evidenció en el ataque a SolarWinds.\n\nEn resumen, APT28 tiende a utilizar técnicas más directas y herramientas de explotación, mientras que APT29 se enfoca en la evasión y el uso de malware más sofisticado para mantener el acceso y la persistencia. Ambos grupos son altamente efectivos, pero sus enfoques reflejan diferentes estrategias en el ámbito del ciberespionaje.",
+    "seed_nodes": [
+      "G0016",
+      "G0007",
+      "T1053.002",
+      "S0110"
+    ],
+    "subgraph_nodes": 40,
+    "subgraph_edges": 37,
+    "coverage": {
+      "sufficient": false,
+      "missing_entities": [
+        "APT28",
+        "APT29",
+        "TTPs",
+        "CVEs"
+      ],
+      "confidence": 0.3
+    },
+    "hallucination_risk": true,
+    "usage": {
+      "prompt_tokens": 2826,
+      "completion_tokens": 509,
+      "total_tokens": 3335,
+      "retrieval_latency_s": 0.009,
+      "coverage_latency_s": 1.215,
+      "synthesis_latency_s": 8.055
+    },
+    "architecture": "C_GraphRAG"
+  },
+  "metrics": {
+    "question_id": "Q096",
+    "level": 3,
+    "domain": "BOTH",
+    "architecture": "C_GraphRAG",
+    "accuracy": 0.2857,
+    "hallucination_risk": 0.7,
+    "traceability": 1.0,
+    "error_handling": 1.0,
+    "latency_s": 9.279,
+    "total_tokens": 3335,
+    "accuracy_detail": "Score=0.286 | completas=['APT28', 'APT29'] | parciales=[] | ausentes=['Fancy Bear', 'Cozy Bear', 'T1566', 'T1078', 'CVE-2023-23397']",
+    "hallucination_detail": "Flag de riesgo activo (sin datos de fuente verificados)",
+    "traceability_detail": "Markers texto: ['mitre', 'att&ck', 'según'] | Fuente estructurada: api_source=False, seed_nodes=True, sql=False",
+    "error_handling_detail": "Sin errores detectados en el pipeline",
+    "latency_detail": "retrieval=0.01s coverage=1.22s synth=8.05s",
+    "answer_preview": "Según MITRE ATT&CK, APT28 (G0007) y APT29 (G0016) tienen capacidades ofensivas distintas, reflejadas en sus TTPs (Tácticas, Técnicas y Procedimientos) documentados.\n\n**APT28** utiliza varias técnicas para acceder a sistemas y mantener su presencia. Por ejemplo, emplea el malware **Zebrocy** (S0251) …"
+  }
+}

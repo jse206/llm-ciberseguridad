@@ -1,0 +1,47 @@
+{
+  "result": {
+    "answer": "Según el subgrafo proporcionado, la táctica 'Credential Access' incluye las siguientes técnicas:\n\n1. **T1556.005 — Reversible Encryption**: Adversarios pueden abusar de las propiedades de cifrado de autenticación de Active Directory para acceder a credenciales en sistemas Windows.\n2. **T1606.001 — Web Cookies**: Adversarios pueden forjar cookies web que pueden ser utilizadas para acceder a aplicaciones web o servicios de Internet.\n3. **T1649 — Steal or Forge Authentication Certificates**: Adversarios pueden robar o falsificar certificados utilizados para la autenticación para acceder a sistemas o recursos remotos.\n4. **T1552 — Unsecured Credentials**: Adversarios pueden buscar en sistemas comprometidos para encontrar y obtener credenciales almacenadas de manera insegura.\n5. **T1003.004 — LSA Secrets**: Adversarios con acceso a un host pueden intentar acceder a secretos de la Autoridad de Seguridad Local (LSA), que pueden contener diversos materiales de credenciales.\n6. **T1003.001 — LSASS Memory**: Adversarios pueden intentar acceder a materiales de credenciales almacenados en la memoria del proceso de la Autoridad de Seguridad Local (LSASS).\n7. **T1003.008 — /etc/passwd and /etc/shadow**: Adversarios pueden intentar volcar el contenido de /etc/passwd y /etc/shadow para habilitar el cracking de contraseñas fuera de línea.\n\nEn total, hay **siete técnicas** asociadas a la táctica 'Credential Access' en el subgrafo proporcionado. \n\nSegún MITRE ATT&CK, estas técnicas son utilizadas por adversarios para obtener acceso a credenciales y, por lo tanto, comprometer sistemas y redes.",
+    "seed_nodes": [
+      "TA0006",
+      "T1053.002",
+      "S0110"
+    ],
+    "subgraph_nodes": 40,
+    "subgraph_edges": 6,
+    "coverage": {
+      "sufficient": false,
+      "missing_entities": [
+        "Credential Access techniques"
+      ],
+      "confidence": 0.3
+    },
+    "hallucination_risk": true,
+    "usage": {
+      "prompt_tokens": 2676,
+      "completion_tokens": 403,
+      "total_tokens": 3079,
+      "retrieval_latency_s": 0.01,
+      "coverage_latency_s": 1.017,
+      "synthesis_latency_s": 8.596
+    },
+    "architecture": "C_GraphRAG"
+  },
+  "metrics": {
+    "question_id": "Q032",
+    "level": 2,
+    "domain": "MITRE",
+    "architecture": "C_GraphRAG",
+    "accuracy": 0.4,
+    "hallucination_risk": 0.7,
+    "traceability": 1.0,
+    "error_handling": 1.0,
+    "latency_s": 9.623,
+    "total_tokens": 3079,
+    "accuracy_detail": "Score=0.400 | completas=['credential access', 'técnicas'] | parciales=[] | ausentes=['TA0006', 'T1110', 'brute force']",
+    "hallucination_detail": "Flag de riesgo activo (sin datos de fuente verificados)",
+    "traceability_detail": "Markers texto: ['mitre', 'att&ck', 'según'] | Fuente estructurada: api_source=False, seed_nodes=True, sql=False",
+    "error_handling_detail": "Sin errores detectados en el pipeline",
+    "latency_detail": "retrieval=0.01s coverage=1.02s synth=8.60s",
+    "answer_preview": "Según el subgrafo proporcionado, la táctica 'Credential Access' incluye las siguientes técnicas:\n\n1. **T1556.005 — Reversible Encryption**: Adversarios pueden abusar de las propiedades de cifrado de autenticación de Active Directory para acceder a credenciales en sistemas Windows.\n2. **T1606.001 — W…"
+  }
+}

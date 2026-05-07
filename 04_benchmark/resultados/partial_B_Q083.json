@@ -1,0 +1,29 @@
+{
+  "result": {
+    "answer": "Error en la ejecución: RetryError[<Future at 0x21b5a8b0080 state=finished raised TypeError>]",
+    "hallucination_risk": true,
+    "api_error": "RetryError[<Future at 0x21b5a8b0080 state=finished raised TypeError>]",
+    "usage": {
+      "total_tokens": 0
+    },
+    "architecture": "B"
+  },
+  "metrics": {
+    "question_id": "Q083",
+    "level": 2,
+    "domain": "NVD",
+    "architecture": "B",
+    "accuracy": 0.0,
+    "hallucination_risk": 1.0,
+    "traceability": 0.0,
+    "error_handling": 0.8,
+    "latency_s": 0,
+    "total_tokens": 0,
+    "accuracy_detail": "Score=0.000 | completas=[] | parciales=[] | ausentes=['fortinet', 'fortios', '2022', '2023', 'VPN', 'CVE']",
+    "hallucination_detail": "Flag activo + error de fuente detectado",
+    "traceability_detail": "Markers texto: [] | Fuente estructurada: api_source=False, seed_nodes=False, sql=False",
+    "error_handling_detail": "Error presente pero reconocido honestamente en la respuesta",
+    "latency_detail": "total=0.00s",
+    "answer_preview": "Error en la ejecución: RetryError[<Future at 0x21b5a8b0080 state=finished raised TypeError>]"
+  }
+}

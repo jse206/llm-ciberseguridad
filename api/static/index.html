@@ -1,0 +1,888 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LLM Ciberseguridad</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@500;700;800&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.3/dist/chart.umd.min.js"></script>
+<style>
+/* ══════════════════════════════════════════════════
+   TOKENS
+══════════════════════════════════════════════════ */
+:root{
+  --navy:    #1e3a5f;
+  --navy-80: #2d4e76;
+  --navy-10: #eef3f9;
+  --blue:    #2563eb;
+  --blue-10: #dbeafe;
+  --surface: #f8fafc;
+  --white:   #ffffff;
+  --border:  #e2e8f0;
+  --muted:   #94a3b8;
+  --text:    #1e293b;
+  --text-2:  #64748b;
+
+  --green:   #059669;  --green-bg: #d1fae5;
+  --amber:   #d97706;  --amber-bg: #fef3c7;
+  --red:     #dc2626;  --red-bg:   #fee2e2;
+  --violet:  #7c3aed;
+
+  --r: 8px;
+  --sh: 0 1px 3px rgba(0,0,0,.07), 0 4px 12px rgba(0,0,0,.04);
+
+  --mono: 'JetBrains Mono', 'Fira Code', monospace;
+  --sans: 'DM Sans', system-ui, sans-serif;
+  --head: 'Syne', system-ui, sans-serif;
+}
+
+/* ══════════════════════════════════════════════════
+   RESET
+══════════════════════════════════════════════════ */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{font-size:15px;-webkit-font-smoothing:antialiased}
+body{font-family:var(--sans);background:var(--surface);color:var(--text);min-height:100vh;display:flex;flex-direction:column}
+
+/* ══════════════════════════════════════════════════
+   HEADER
+══════════════════════════════════════════════════ */
+header{
+  background:var(--navy);
+  color:#fff;
+  display:flex;
+  align-items:center;
+  gap:1.75rem;
+  padding:0 2rem;
+  border-bottom:1px solid rgba(255,255,255,.06);
+  flex-shrink:0;
+}
+.brand{padding:1.2rem 0;flex-shrink:0}
+.brand h1{font-family:var(--head);font-size:1.05rem;font-weight:800;letter-spacing:-.01em;color:#fff}
+.brand p{font-size:.68rem;color:rgba(255,255,255,.45);text-transform:uppercase;letter-spacing:.07em;margin-top:2px;font-weight:300}
+.hdiv{width:1px;height:36px;background:rgba(255,255,255,.12);flex-shrink:0}
+
+/* ══════════════════════════════════════════════════
+   TAB NAV
+══════════════════════════════════════════════════ */
+nav{display:flex}
+.tab-btn{
+  background:none;border:none;
+  color:rgba(255,255,255,.45);
+  font-family:var(--sans);font-size:.83rem;font-weight:500;
+  padding:1.45rem 1.4rem;cursor:pointer;
+  position:relative;transition:color .18s;
+  white-space:nowrap;letter-spacing:.01em;
+}
+.tab-btn::after{
+  content:'';position:absolute;bottom:0;left:.9rem;right:.9rem;
+  height:2px;background:var(--blue);
+  transform:scaleX(0);transition:transform .2s;border-radius:2px 2px 0 0;
+}
+.tab-btn:hover{color:rgba(255,255,255,.8)}
+.tab-btn.active{color:#fff}
+.tab-btn.active::after{transform:scaleX(1)}
+
+/* ══════════════════════════════════════════════════
+   LAYOUT
+══════════════════════════════════════════════════ */
+main{flex:1;display:flex;flex-direction:column}
+
+.panel{
+  display:none;
+  max-width:1380px;width:100%;margin:0 auto;
+  padding:1.75rem 2rem;gap:1.25rem;
+}
+.panel.active{display:flex;flex-direction:column}
+
+#p-chat.active{
+  display:grid;
+  grid-template-columns:270px 1fr;
+  align-items:start;
+}
+#p-informe.active{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  grid-auto-rows:auto;
+}
+
+/* ══════════════════════════════════════════════════
+   CARD
+══════════════════════════════════════════════════ */
+.card{background:var(--white);border:1px solid var(--border);border-radius:var(--r);box-shadow:var(--sh)}
+.card-hd{
+  padding:.85rem 1.35rem;
+  border-bottom:1px solid var(--border);
+  display:flex;align-items:center;justify-content:space-between;
+}
+.card-title{
+  font-family:var(--head);font-size:.72rem;font-weight:700;
+  text-transform:uppercase;letter-spacing:.07em;color:var(--navy);
+}
+.card-bd{padding:1.35rem}
+
+/* ══════════════════════════════════════════════════
+   ARCH SELECTOR
+══════════════════════════════════════════════════ */
+.arch-grid{display:grid;grid-template-columns:1fr 1fr;gap:.6rem}
+.arch-card{
+  border:2px solid var(--border);border-radius:var(--r);
+  padding:.8rem;cursor:pointer;transition:all .15s;background:var(--white);
+}
+.arch-card:hover{border-color:var(--blue);background:var(--blue-10)}
+.arch-card.sel{border-color:var(--blue);background:var(--blue-10);box-shadow:0 0 0 3px rgba(37,99,235,.12)}
+.arch-key{
+  display:inline-flex;align-items:center;justify-content:center;
+  width:26px;height:26px;background:var(--navy);color:#fff;
+  border-radius:5px;font-family:var(--mono);font-size:.8rem;margin-bottom:.45rem;
+}
+.arch-card.sel .arch-key{background:var(--blue)}
+.arch-nm{font-size:.78rem;font-weight:500;margin-bottom:.2rem}
+.arch-dsc{font-size:.69rem;color:var(--muted);line-height:1.4}
+
+/* ══════════════════════════════════════════════════
+   CHAT
+══════════════════════════════════════════════════ */
+.chat-sidebar{display:flex;flex-direction:column;gap:1rem;position:sticky;top:1.75rem}
+.chat-main{display:flex;flex-direction:column;gap:1rem}
+
+.chat-history{
+  min-height:380px;max-height:500px;overflow-y:auto;
+  padding:1.35rem;display:flex;flex-direction:column;gap:1.25rem;
+}
+.chat-history::-webkit-scrollbar{width:4px}
+.chat-history::-webkit-scrollbar-thumb{background:var(--border);border-radius:99px}
+
+.chat-empty{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.65rem;height:180px;color:var(--muted)}
+.chat-empty-icon{font-size:1.8rem;opacity:.35}
+.chat-empty p{font-size:.82rem;text-align:center}
+
+.msg{display:flex;flex-direction:column;gap:.3rem}
+.bubble-u{
+  align-self:flex-end;max-width:78%;
+  background:var(--navy);color:#fff;
+  padding:.7rem 1rem;border-radius:12px 12px 2px 12px;
+  font-size:.86rem;line-height:1.55;
+}
+.bubble-ai{
+  align-self:flex-start;max-width:92%;
+  background:var(--surface);border:1px solid var(--border);
+  padding:.9rem 1.1rem;border-radius:2px 12px 12px 12px;
+  font-size:.86rem;line-height:1.65;
+}
+
+.meta-row{display:flex;gap:.4rem;flex-wrap:wrap;align-self:flex-start;margin-top:.2rem}
+
+.badge{
+  display:inline-flex;align-items:center;gap:.25em;
+  padding:.18em .5em;border-radius:4px;
+  font-size:.68rem;font-weight:500;font-family:var(--mono);
+}
+.b-blue{background:var(--blue-10);color:var(--blue)}
+.b-green{background:var(--green-bg);color:var(--green)}
+.b-red{background:var(--red-bg);color:var(--red)}
+.b-gray{background:var(--border);color:var(--text-2)}
+.b-navy{background:var(--navy);color:#fff}
+.b-amber{background:var(--amber-bg);color:var(--amber)}
+
+.chat-inp-row{display:flex;gap:.65rem}
+.chat-inp-row textarea{
+  flex:1;font-family:var(--sans);font-size:.86rem;
+  padding:.7rem .95rem;border:1px solid var(--border);border-radius:var(--r);
+  resize:none;min-height:46px;max-height:110px;outline:none;transition:border-color .15s;line-height:1.5;
+}
+.chat-inp-row textarea:focus{border-color:var(--blue);box-shadow:0 0 0 3px rgba(37,99,235,.08)}
+
+/* meta panel rows */
+.mp-row{display:flex;justify-content:space-between;align-items:center;gap:.5rem}
+.mp-label{font-size:.69rem;color:var(--muted);text-transform:uppercase;letter-spacing:.05em;flex-shrink:0}
+
+/* ══════════════════════════════════════════════════
+   BUTTONS
+══════════════════════════════════════════════════ */
+.btn{
+  display:inline-flex;align-items:center;gap:.38em;
+  padding:.58rem 1.15rem;border-radius:var(--r);
+  font-family:var(--sans);font-size:.83rem;font-weight:500;
+  cursor:pointer;border:1px solid transparent;transition:all .15s;white-space:nowrap;
+}
+.btn-pri{background:var(--blue);color:#fff}
+.btn-pri:hover{background:#1d4ed8}
+.btn-sec{background:var(--white);color:var(--text);border-color:var(--border)}
+.btn-sec:hover{background:var(--surface);border-color:var(--navy-10)}
+.btn-nv{background:var(--navy);color:#fff}
+.btn-nv:hover{background:var(--navy-80)}
+.btn:disabled{opacity:.45;cursor:not-allowed;pointer-events:none}
+
+.spin{width:13px;height:13px;border:2px solid rgba(255,255,255,.3);border-top-color:#fff;border-radius:50%;animation:spin .55s linear infinite;flex-shrink:0}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+/* ══════════════════════════════════════════════════
+   BENCHMARK
+══════════════════════════════════════════════════ */
+.bench-ctrl{display:grid;grid-template-columns:1fr 1fr auto;gap:1rem;align-items:end}
+
+.field label{display:block;font-size:.72rem;font-weight:500;text-transform:uppercase;letter-spacing:.05em;color:var(--text-2);margin-bottom:.38rem}
+.cb-group{display:flex;gap:.7rem;flex-wrap:wrap}
+.cb-lbl{display:flex;align-items:center;gap:.38rem;font-size:.83rem;cursor:pointer}
+.cb-lbl input[type=checkbox]{accent-color:var(--blue);width:14px;height:14px;cursor:pointer}
+
+.sf{display:flex;gap:.5rem;align-items:flex-end}
+select,input[type=number]{
+  font-family:var(--sans);font-size:.83rem;
+  padding:.58rem .8rem;border:1px solid var(--border);border-radius:var(--r);
+  outline:none;background:var(--white);color:var(--text);transition:border-color .15s;
+}
+select:focus,input[type=number]:focus{border-color:var(--blue)}
+input[type=number]{width:96px}
+
+.bench-btns{display:flex;gap:.5rem}
+
+.prog-wrap{background:var(--border);border-radius:99px;height:5px;overflow:hidden}
+.prog-bar{height:100%;background:linear-gradient(90deg,var(--blue),#60a5fa);width:0%;transition:width .25s;border-radius:99px}
+.prog-info{display:flex;justify-content:space-between;font-size:.72rem;color:var(--muted);margin-top:.38rem;font-family:var(--mono)}
+
+/* ══════════════════════════════════════════════════
+   TABLE
+══════════════════════════════════════════════════ */
+.tbl-wrap{overflow-x:auto}
+table{width:100%;border-collapse:collapse;font-size:.82rem}
+thead th{
+  text-align:left;padding:.7rem 1rem;
+  font-family:var(--head);font-size:.68rem;font-weight:700;
+  text-transform:uppercase;letter-spacing:.06em;color:var(--text-2);
+  border-bottom:2px solid var(--border);white-space:nowrap;
+}
+tbody tr{border-bottom:1px solid var(--border);transition:background .1s}
+tbody tr:hover{background:var(--surface)}
+tbody tr:last-child{border-bottom:none}
+tbody td{padding:.8rem 1rem}
+.td-m{font-family:var(--mono);font-size:.78rem}
+
+.mc{display:flex;align-items:center;gap:.45rem}
+.mb{flex:1;height:4px;background:var(--border);border-radius:99px;overflow:hidden;max-width:56px}
+.mb div{height:100%;border-radius:99px}
+
+/* ══════════════════════════════════════════════════
+   INFORME
+══════════════════════════════════════════════════ */
+.full{grid-column:1/-1}
+.chart-box{position:relative;height:280px}
+.figs{display:grid;grid-template-columns:repeat(2,1fr);gap:.9rem}
+.fig-item{border:1px solid var(--border);border-radius:var(--r);overflow:hidden}
+.fig-item img{width:100%;height:auto;display:block}
+.fig-cap{padding:.4rem .7rem;font-size:.7rem;color:var(--text-2);font-family:var(--mono);background:var(--surface);border-top:1px solid var(--border)}
+
+/* ══════════════════════════════════════════════════
+   UTILITIES
+══════════════════════════════════════════════════ */
+.section-lbl{font-family:var(--head);font-size:.69rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--navy);margin-bottom:.65rem}
+.arch-tag{display:inline-block;padding:.14em .5em;border-radius:4px;font-family:var(--mono);font-size:.69rem;font-weight:500;color:#fff}
+.status-txt{font-size:.78rem;color:var(--text-2);font-family:var(--mono)}
+</style>
+</head>
+<body>
+
+<!-- ══════════════════════════════════════════════════
+     HEADER
+══════════════════════════════════════════════════ -->
+<header>
+  <div class="brand">
+    <h1>LLM · Ciberseguridad</h1>
+    <p>Evaluación de arquitecturas LLM en ciberseguridad</p>
+  </div>
+  <div class="hdiv"></div>
+  <nav>
+    <button class="tab-btn active" onclick="switchTab('chat',this)">💬&nbsp; Chat</button>
+    <button class="tab-btn" onclick="switchTab('benchmark',this)">📊&nbsp; Benchmark</button>
+    <button class="tab-btn" onclick="switchTab('informe',this)">📈&nbsp; Informe</button>
+  </nav>
+</header>
+
+<main>
+
+<!-- ══════════════════════════════════════════════════
+     PESTAÑA CHAT
+══════════════════════════════════════════════════ -->
+<div id="p-chat" class="panel active">
+
+  <!-- Sidebar -->
+  <div class="chat-sidebar">
+
+    <div class="card">
+      <div class="card-hd"><span class="card-title">Arquitectura</span></div>
+      <div class="card-bd" style="padding:.9rem">
+        <div class="arch-grid" id="arch-sel"></div>
+      </div>
+    </div>
+
+    <div class="card" id="meta-panel" style="display:none">
+      <div class="card-hd"><span class="card-title">Última respuesta</span></div>
+      <div class="card-bd" style="padding:.9rem;display:flex;flex-direction:column;gap:.55rem" id="meta-body"></div>
+    </div>
+
+  </div>
+
+  <!-- Chat main -->
+  <div class="chat-main">
+
+    <div class="card" style="flex:1">
+      <div class="card-hd">
+        <span class="card-title">Conversación</span>
+        <button class="btn btn-sec" style="font-size:.72rem;padding:.3rem .65rem" onclick="clearChat()">Limpiar</button>
+      </div>
+      <div class="chat-history" id="chat-hist">
+        <div class="chat-empty" id="chat-empty">
+          <div class="chat-empty-icon">🔍</div>
+          <p>Selecciona una arquitectura<br>y escribe tu pregunta</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-bd" style="padding:.9rem">
+        <div class="chat-inp-row">
+          <textarea id="chat-inp" placeholder="Ej: ¿Cuál es el score CVSS de CVE-2021-44228?" rows="2"
+            onkeydown="if(event.ctrlKey&&event.key==='Enter'){event.preventDefault();sendChat()}"></textarea>
+          <button class="btn btn-pri" id="send-btn" onclick="sendChat()" style="align-self:flex-end;height:44px;min-width:90px">
+            <span id="send-lbl">Enviar</span>
+          </button>
+        </div>
+        <p style="font-size:.69rem;color:var(--muted);margin-top:.4rem">Ctrl + Enter para enviar</p>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════════
+     PESTAÑA BENCHMARK
+══════════════════════════════════════════════════ -->
+<div id="p-benchmark" class="panel">
+
+  <!-- Controls -->
+  <div class="card">
+    <div class="card-hd"><span class="card-title">Configuración</span></div>
+    <div class="card-bd">
+      <div class="bench-ctrl">
+        <div class="field">
+          <label>Arquitecturas</label>
+          <div class="cb-group" id="arch-checks">
+            <label class="cb-lbl"><input type="checkbox" value="A" checked> A — Text2SQL</label>
+            <label class="cb-lbl"><input type="checkbox" value="B" checked> B — API Calls</label>
+            <label class="cb-lbl"><input type="checkbox" value="C" checked> C — GraphRAG</label>
+            <label class="cb-lbl"><input type="checkbox" value="D" checked> D — Toolformer</label>
+          </div>
+        </div>
+        <div class="field">
+          <label>Filtros</label>
+          <div class="sf">
+            <div>
+              <label style="display:block;font-size:.69rem;color:var(--muted);margin-bottom:.3rem">Nivel</label>
+              <select id="bench-lvl">
+                <option value="">Todos</option>
+                <option value="1">Nivel 1 — Simple</option>
+                <option value="2">Nivel 2 — Intermedio</option>
+                <option value="3">Nivel 3 — Complejo</option>
+              </select>
+            </div>
+            <div>
+              <label style="display:block;font-size:.69rem;color:var(--muted);margin-bottom:.3rem">N preguntas</label>
+              <input type="number" id="bench-n" placeholder="Todas" min="1" max="100">
+            </div>
+          </div>
+        </div>
+        <div class="bench-btns">
+          <button class="btn btn-sec" onclick="loadResults()">Ver resultados</button>
+          <button class="btn btn-nv" id="run-btn" onclick="runBenchmark()">▶&nbsp;Lanzar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Progress -->
+  <div class="card" id="prog-card" style="display:none">
+    <div class="card-bd" style="padding:.9rem">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:.55rem">
+        <span class="section-lbl" style="margin:0">Progreso</span>
+        <span class="status-txt" id="prog-status">Iniciando…</span>
+      </div>
+      <div class="prog-wrap"><div class="prog-bar" id="prog-bar"></div></div>
+      <div class="prog-info">
+        <span id="prog-txt">0 / 0</span>
+        <span id="prog-arch"></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Results table -->
+  <div class="card" id="res-card" style="display:none">
+    <div class="card-hd">
+      <span class="card-title">Resultados por arquitectura</span>
+      <span class="status-txt" id="res-sub"></span>
+    </div>
+    <div class="tbl-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Arquitectura</th><th>N</th>
+            <th>Exactitud</th><th>Trazabilidad</th>
+            <th>Err. handling</th><th>Alucinación</th>
+            <th>Latencia</th><th>Tokens</th>
+          </tr>
+        </thead>
+        <tbody id="res-body"></tbody>
+      </table>
+    </div>
+  </div>
+
+</div>
+
+<!-- ══════════════════════════════════════════════════
+     PESTAÑA INFORME
+══════════════════════════════════════════════════ -->
+<div id="p-informe" class="panel">
+
+  <div class="card full">
+    <div class="card-bd" style="padding:.85rem 1.35rem;display:flex;align-items:center;justify-content:space-between">
+      <span class="section-lbl" style="margin:0">Informe comparativo — 4 arquitecturas × 5 métricas</span>
+      <button class="btn btn-sec" id="regen-btn" onclick="regenFigs(this)">🔄&nbsp;Regenerar figuras</button>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-hd"><span class="card-title">Perfil de métricas — Radar</span></div>
+    <div class="card-bd"><div class="chart-box"><canvas id="c-radar"></canvas></div></div>
+  </div>
+
+  <div class="card">
+    <div class="card-hd"><span class="card-title">Exactitud por arquitectura</span></div>
+    <div class="card-bd"><div class="chart-box"><canvas id="c-acc"></canvas></div></div>
+  </div>
+
+  <div class="card">
+    <div class="card-hd"><span class="card-title">Latencia media (segundos)</span></div>
+    <div class="card-bd"><div class="chart-box"><canvas id="c-lat"></canvas></div></div>
+  </div>
+
+  <div class="card">
+    <div class="card-hd"><span class="card-title">Tasa de alucinación</span></div>
+    <div class="card-bd"><div class="chart-box"><canvas id="c-hall"></canvas></div></div>
+  </div>
+
+  <div class="card full" id="figs-card">
+    <div class="card-hd"><span class="card-title">Figuras generadas por report_generator</span></div>
+    <div class="card-bd">
+      <div class="figs" id="figs-grid">
+        <p style="color:var(--muted);font-size:.83rem">Cargando figuras…</p>
+      </div>
+    </div>
+  </div>
+
+</div>
+</main>
+
+<script>
+/* ══════════════════════════════════════════════════
+   STATE & CONFIG
+══════════════════════════════════════════════════ */
+let selArch = 'A';
+let chatBusy = false;
+const CHARTS = {};
+
+const A_COLORS = {A:'#2563eb', B:'#059669', C:'#d97706', D:'#7c3aed'};
+const A_LABELS = {A:'A — Text2SQL', B:'B — API Calls', C:'C — GraphRAG', D:'D — Toolformer'};
+const A_NAMES  = {A:'Text2SQL', B:'API Calls', C:'GraphRAG', D:'Toolformer'};
+const A_DESCS  = {
+  A:'NVD/CVE local · SQL generado por LLM',
+  B:'NVD API v2 · AbuseIPDB · tiempo real',
+  C:'Grafo MITRE ATT&CK · multi-hop',
+  D:'Agente ReAct · elige A, B o C',
+};
+
+/* ══════════════════════════════════════════════════
+   TABS
+══════════════════════════════════════════════════ */
+function switchTab(id, btn) {
+  document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  document.getElementById('p-' + id).classList.add('active');
+  btn.classList.add('active');
+  if (id === 'informe') initInforme();
+}
+
+/* ══════════════════════════════════════════════════
+   ARCH SELECTOR
+══════════════════════════════════════════════════ */
+function buildArchSel() {
+  const el = document.getElementById('arch-sel');
+  el.innerHTML = Object.keys(A_COLORS).map(k => `
+    <div class="arch-card${k===selArch?' sel':''}" onclick="pickArch('${k}')">
+      <div class="arch-key">${k}</div>
+      <div class="arch-nm">${A_NAMES[k]}</div>
+      <div class="arch-dsc">${A_DESCS[k]}</div>
+    </div>`).join('');
+}
+
+function pickArch(k) {
+  selArch = k;
+  document.querySelectorAll('.arch-card').forEach(c => {
+    c.classList.toggle('sel', c.querySelector('.arch-key').textContent === k);
+  });
+}
+
+/* ══════════════════════════════════════════════════
+   CHAT
+══════════════════════════════════════════════════ */
+async function sendChat() {
+  if (chatBusy) return;
+  const inp = document.getElementById('chat-inp');
+  const q = inp.value.trim();
+  if (!q) return;
+
+  chatBusy = true;
+  inp.value = '';
+
+  const hist = document.getElementById('chat-hist');
+  document.getElementById('chat-empty')?.remove();
+
+  // User bubble
+  hist.appendChild(mkEl('div', 'msg',
+    `<div class="bubble-u">${esc(q)}</div>`));
+
+  // Loading bubble
+  const load = mkEl('div', 'msg', `
+    <div class="bubble-ai" style="display:flex;align-items:center;gap:.5rem;color:var(--muted)">
+      <div class="spin" style="border-color:var(--border);border-top-color:var(--blue)"></div>
+      <span style="font-size:.79rem">Consultando arquitectura ${selArch}…</span>
+    </div>`);
+  load.id = 'chat-load';
+  hist.appendChild(load);
+  hist.scrollTop = 9999;
+
+  setBtnLoading(true);
+
+  try {
+    const r = await fetch('/api/chat', {
+      method:'POST',
+      headers:{'Content-Type':'application/json'},
+      body: JSON.stringify({question:q, architecture:selArch}),
+    });
+    if (!r.ok) throw new Error(`HTTP ${r.status}: ${await r.text()}`);
+    const d = await r.json();
+
+    document.getElementById('chat-load')?.remove();
+
+    const hallBadge = d.hallucination_risk
+      ? '<span class="badge b-red">⚠ Riesgo alucinación</span>'
+      : '<span class="badge b-green">✓ Sin alucinación</span>';
+
+    hist.appendChild(mkEl('div','msg',`
+      <div class="bubble-ai">${esc(d.answer)}</div>
+      <div class="meta-row">
+        <span class="badge b-navy">Arq. ${esc(d.architecture)}</span>
+        <span class="badge b-gray">⏱ ${d.usage.latency_s.toFixed(2)}s</span>
+        <span class="badge b-gray">🔢 ${d.usage.total_tokens} tok</span>
+        ${hallBadge}
+      </div>`));
+
+    showMeta(d);
+  } catch(e) {
+    document.getElementById('chat-load')?.remove();
+    hist.appendChild(mkEl('div','msg',
+      `<div class="bubble-ai" style="color:var(--red)">Error: ${esc(e.message)}</div>`));
+  }
+
+  hist.scrollTop = 9999;
+  chatBusy = false;
+  setBtnLoading(false);
+  inp.focus();
+}
+
+function setBtnLoading(on) {
+  const btn = document.getElementById('send-btn');
+  const lbl = document.getElementById('send-lbl');
+  btn.disabled = on;
+  lbl.innerHTML = on ? '<span class="spin"></span>' : 'Enviar';
+}
+
+function showMeta(d) {
+  const panel = document.getElementById('meta-panel');
+  const body  = document.getElementById('meta-body');
+  panel.style.display = '';
+
+  const rows = [
+    ['Arquitectura', `<span class="arch-tag" style="background:${A_COLORS[selArch]||'var(--navy)'}">${esc(d.architecture)}</span>`],
+    ['Latencia',     `<span class="badge b-blue">${d.usage.latency_s.toFixed(3)}s</span>`],
+    ['Tokens',       `<span class="badge b-gray">${d.usage.total_tokens}</span>`],
+    ['Alucinación',  d.hallucination_risk
+      ? '<span class="badge b-red">Riesgo</span>'
+      : '<span class="badge b-green">Sin riesgo</span>'],
+  ];
+
+  const m = d.metadata || {};
+  if (m.sql)            rows.push(['SQL',         `<span class="badge b-gray" title="${esc(m.sql)}">${esc(String(m.sql).slice(0,28))}…</span>`]);
+  if (m.intent)         rows.push(['Intent',       `<span class="badge b-blue">${esc(m.intent)}</span>`]);
+  if (m.subgraph_nodes) rows.push(['Nodos grafo',  `<span class="badge b-gray">${m.subgraph_nodes}</span>`]);
+  if (m.iterations)     rows.push(['Iteraciones',  `<span class="badge b-gray">${m.iterations}</span>`]);
+  if (m.tools_used?.length) rows.push(['Herramientas', `<span class="badge b-blue">${esc((m.tools_used).join(', '))}</span>`]);
+
+  body.innerHTML = rows.map(([l,v]) =>
+    `<div class="mp-row"><span class="mp-label">${l}</span>${v}</div>`).join('');
+}
+
+function clearChat() {
+  document.getElementById('chat-hist').innerHTML = `
+    <div class="chat-empty" id="chat-empty">
+      <div class="chat-empty-icon">🔍</div>
+      <p>Selecciona una arquitectura<br>y escribe tu pregunta</p>
+    </div>`;
+  document.getElementById('meta-panel').style.display = 'none';
+}
+
+/* ══════════════════════════════════════════════════
+   BENCHMARK
+══════════════════════════════════════════════════ */
+function getCheckedArchs() {
+  return [...document.querySelectorAll('#arch-checks input:checked')].map(c=>c.value);
+}
+
+async function loadResults() {
+  try {
+    const r = await fetch('/api/benchmark/results');
+    if (!r.ok) throw new Error(`HTTP ${r.status}`);
+    const d = await r.json();
+    renderTable(d.summary, 'Resultados del benchmark existente');
+  } catch(e) {
+    alert('Error: ' + e.message);
+  }
+}
+
+async function runBenchmark() {
+  const archs = getCheckedArchs();
+  if (!archs.length) { alert('Selecciona al menos una arquitectura'); return; }
+
+  const lvl = document.getElementById('bench-lvl').value;
+  const nq  = document.getElementById('bench-n').value;
+
+  showProg(true);
+  setEl('prog-bar','style.width','0%');
+  setEl('prog-status','textContent','Iniciando…');
+  document.getElementById('run-btn').disabled = true;
+
+  try {
+    const r = await fetch('/api/benchmark/run', {
+      method:'POST',
+      headers:{'Content-Type':'application/json'},
+      body: JSON.stringify({
+        architectures: archs,
+        level: lvl ? parseInt(lvl) : null,
+        n_questions: nq ? parseInt(nq) : null,
+      }),
+    });
+
+    const reader = r.body.getReader();
+    const dec = new TextDecoder();
+    let buf = '', evType = '';
+
+    while (true) {
+      const {done, value} = await reader.read();
+      if (done) break;
+      buf += dec.decode(value, {stream:true});
+      const lines = buf.split('\n');
+      buf = lines.pop();
+
+      for (const line of lines) {
+        if (line.startsWith('event: ')) { evType = line.slice(7).trim(); continue; }
+        if (!line.startsWith('data: ')) continue;
+        try {
+          const ev = JSON.parse(line.slice(6));
+          if (evType === 'done' || ev.summary) {
+            renderTable(ev.summary || {}, 'Benchmark completado');
+            showProg(false);
+          } else if (ev.total !== undefined) {
+            const pct = Math.round(ev.done / ev.total * 100);
+            document.getElementById('prog-bar').style.width = pct + '%';
+            setEl('prog-txt','textContent', `${ev.done} / ${ev.total}`);
+            setEl('prog-arch','textContent', `Arq. ${ev.architecture} · ${ev.question_id}`);
+            setEl('prog-status','textContent', `${pct}% completado`);
+          }
+        } catch(_) {}
+        evType = '';
+      }
+    }
+  } catch(e) {
+    setEl('prog-status','textContent','Error: ' + e.message);
+  }
+
+  document.getElementById('run-btn').disabled = false;
+}
+
+function showProg(on) {
+  document.getElementById('prog-card').style.display = on ? '' : 'none';
+  if (!on) document.getElementById('res-card').style.display = '';
+}
+
+function renderTable(summary, sub) {
+  document.getElementById('res-card').style.display = '';
+  document.getElementById('res-sub').textContent = sub || '';
+  const tbody = document.getElementById('res-body');
+  tbody.innerHTML = Object.keys(summary).map(arch => {
+    const d = summary[arch];
+    const c = A_COLORS[arch] || '#64748b';
+    return `<tr>
+      <td><span class="arch-tag" style="background:${c}">${A_LABELS[arch]||arch}</span></td>
+      <td class="td-m">${d.n||'—'}</td>
+      <td>${mCell(d.accuracy_mean,'#2563eb')}</td>
+      <td>${mCell(d.traceability_mean,'#2563eb')}</td>
+      <td>${mCell(d.error_handling_mean,'#059669')}</td>
+      <td>${mCell(d.hallucination_mean,'#dc2626')}</td>
+      <td class="td-m">${(d.latency_mean_s||0).toFixed(2)}s</td>
+      <td class="td-m">${Math.round(d.total_tokens_mean||0)}</td>
+    </tr>`;
+  }).join('');
+}
+
+function mCell(v, color) {
+  const p = Math.round((v||0)*100);
+  return `<div class="mc">
+    <span class="td-m" style="min-width:28px">${p}%</span>
+    <div class="mb"><div style="width:${p}%;height:100%;background:${color};border-radius:99px"></div></div>
+  </div>`;
+}
+
+/* ══════════════════════════════════════════════════
+   INFORME
+══════════════════════════════════════════════════ */
+async function initInforme() {
+  try {
+    const r = await fetch('/api/benchmark/results');
+    if (r.ok) { const d = await r.json(); buildCharts(d.summary); }
+  } catch(_) {}
+  loadFigs();
+}
+
+function buildCharts(summary) {
+  const archs   = Object.keys(summary);
+  const labels  = archs.map(a => A_LABELS[a]||a);
+  const colors  = archs.map(a => A_COLORS[a]||'#64748b');
+  const maxLat  = Math.max(...archs.map(a => summary[a].latency_mean_s||0));
+  const grd     = 'rgba(148,163,184,.18)';
+  const fontDef = {family:"'DM Sans',system-ui,sans-serif", size:11, color:'#64748b'};
+
+  // Radar
+  destroyChart('radar');
+  CHARTS.radar = new Chart(document.getElementById('c-radar'), {
+    type:'radar',
+    data:{
+      labels:['Exactitud','Trazabilidad','Err. handling','Sin alucinación','Velocidad'],
+      datasets: archs.map(a => ({
+        label: A_LABELS[a]||a,
+        data: [
+          summary[a].accuracy_mean,
+          summary[a].traceability_mean,
+          summary[a].error_handling_mean,
+          1 - summary[a].hallucination_mean,
+          maxLat>0 ? 1-(summary[a].latency_mean_s/maxLat) : 0,
+        ],
+        borderColor: A_COLORS[a], backgroundColor: A_COLORS[a]+'22',
+        borderWidth:2, pointBackgroundColor:A_COLORS[a], pointRadius:3,
+      })),
+    },
+    options:{
+      responsive:true, maintainAspectRatio:false,
+      scales:{r:{min:0,max:1,
+        ticks:{stepSize:.25,font:fontDef,backdropColor:'transparent'},
+        grid:{color:grd}, angleLines:{color:grd},
+        pointLabels:{font:{...fontDef,size:11}},
+      }},
+      plugins:{legend:{position:'bottom',labels:{font:fontDef,boxWidth:11,padding:14}}},
+    },
+  });
+
+  // Accuracy (horizontal bar)
+  destroyChart('acc');
+  CHARTS.acc = hBar('c-acc', labels, archs.map(a=>summary[a].accuracy_mean), colors, v=>(v*100).toFixed(0)+'%', grd, fontDef);
+
+  // Latency
+  destroyChart('lat');
+  CHARTS.lat = hBar('c-lat', labels, archs.map(a=>summary[a].latency_mean_s), colors, v=>v.toFixed(1)+'s', grd, fontDef, false);
+
+  // Hallucination
+  destroyChart('hall');
+  CHARTS.hall = hBar('c-hall', labels,
+    archs.map(a=>summary[a].hallucination_mean),
+    archs.map(a=>{ const v=summary[a].hallucination_mean; return v<.1?'#059669':v<.4?'#d97706':'#dc2626'; }),
+    v=>(v*100).toFixed(0)+'%', grd, fontDef);
+}
+
+function hBar(id, labels, data, colors, tickCb, grd, fontDef, pct=true) {
+  return new Chart(document.getElementById(id), {
+    type:'bar',
+    data:{labels, datasets:[{data, backgroundColor:colors, borderRadius:4, borderSkipped:false}]},
+    options:{
+      responsive:true, maintainAspectRatio:false, indexAxis:'y',
+      scales:{
+        x:{grid:{color:grd}, ticks:{font:fontDef, callback:tickCb}, ...(pct?{min:0,max:1}:{})},
+        y:{grid:{display:false}, ticks:{font:fontDef}},
+      },
+      plugins:{legend:{display:false}},
+    },
+  });
+}
+
+function destroyChart(key) {
+  if (CHARTS[key]) { CHARTS[key].destroy(); delete CHARTS[key]; }
+}
+
+async function loadFigs() {
+  try {
+    const r = await fetch('/api/report/figures');
+    const d = await r.json();
+    const pngs = (d.figures||[]).filter(f=>f.endsWith('.png'));
+    const grid = document.getElementById('figs-grid');
+    if (!pngs.length) {
+      grid.innerHTML = '<p style="color:var(--muted);font-size:.83rem">No hay figuras. Pulsa "Regenerar figuras".</p>';
+      return;
+    }
+    grid.innerHTML = pngs.map(f=>`
+      <div class="fig-item">
+        <img src="/api/report/figures/${encodeURIComponent(f)}" alt="${esc(f)}" loading="lazy">
+        <div class="fig-cap">${esc(f)}</div>
+      </div>`).join('');
+  } catch(_) {}
+}
+
+async function regenFigs(btn) {
+  btn.disabled = true;
+  btn.innerHTML = '⏳&nbsp;Generando…';
+  try {
+    const r = await fetch('/api/report/generate', {method:'POST'});
+    if (!r.ok) throw new Error(`HTTP ${r.status}`);
+    await loadFigs();
+    btn.innerHTML = '✓&nbsp;Actualizado';
+    setTimeout(()=>{ btn.innerHTML='🔄&nbsp;Regenerar figuras'; btn.disabled=false; }, 2200);
+  } catch(e) {
+    btn.innerHTML = '❌&nbsp;Error';
+    btn.disabled = false;
+  }
+}
+
+/* ══════════════════════════════════════════════════
+   UTILS
+══════════════════════════════════════════════════ */
+function esc(s){ return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;') }
+function mkEl(tag,cls,html){ const e=document.createElement(tag); e.className=cls; e.innerHTML=html; return e; }
+function setEl(id,prop,val){ const e=document.getElementById(id); if(!e)return; prop.split('.').reduce((o,k,i,a)=>i<a.length-1?o[k]:o[k]=val, e); }
+
+/* ══════════════════════════════════════════════════
+   INIT
+══════════════════════════════════════════════════ */
+document.addEventListener('DOMContentLoaded', () => {
+  buildArchSel();
+  loadResults();
+});
+</script>
+</body>
+</html>

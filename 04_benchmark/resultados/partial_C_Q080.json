@@ -1,0 +1,46 @@
+{
+  "result": {
+    "answer": "El subgrafo proporcionado no contiene información específica sobre grupos APT asociados a China. Por lo tanto, no puedo responder a la pregunta sobre qué grupos APT documentados en MITRE ATT&CK están asociados a China.\n\nSi necesitas información sobre grupos APT específicos, te recomendaría consultar directamente la base de datos de MITRE ATT&CK o fuentes adicionales que puedan proporcionar esa información.",
+    "seed_nodes": [
+      "T1053.002",
+      "S0110"
+    ],
+    "subgraph_nodes": 40,
+    "subgraph_edges": 6,
+    "coverage": {
+      "sufficient": false,
+      "missing_entities": [
+        "grupos APT asociados a China"
+      ],
+      "confidence": 0.3
+    },
+    "hallucination_risk": true,
+    "usage": {
+      "prompt_tokens": 2665,
+      "completion_tokens": 115,
+      "total_tokens": 2780,
+      "retrieval_latency_s": 0.008,
+      "coverage_latency_s": 1.423,
+      "synthesis_latency_s": 2.255
+    },
+    "architecture": "C_GraphRAG"
+  },
+  "metrics": {
+    "question_id": "Q080",
+    "level": 2,
+    "domain": "MITRE",
+    "architecture": "C_GraphRAG",
+    "accuracy": 0.1667,
+    "hallucination_risk": 0.7,
+    "traceability": 1.0,
+    "error_handling": 1.0,
+    "latency_s": 3.686,
+    "total_tokens": 2780,
+    "accuracy_detail": "Score=0.167 | completas=['china'] | parciales=[] | ausentes=['APT41', 'APT10', 'G0096', 'G0045', 'PRC']",
+    "hallucination_detail": "Flag de riesgo activo (sin datos de fuente verificados)",
+    "traceability_detail": "Markers texto: ['mitre', 'att&ck', 'fuente'] | Fuente estructurada: api_source=False, seed_nodes=True, sql=False",
+    "error_handling_detail": "Sin errores detectados en el pipeline",
+    "latency_detail": "retrieval=0.01s coverage=1.42s synth=2.25s",
+    "answer_preview": "El subgrafo proporcionado no contiene información específica sobre grupos APT asociados a China. Por lo tanto, no puedo responder a la pregunta sobre qué grupos APT documentados en MITRE ATT&CK están asociados a China.\n\nSi necesitas información sobre grupos APT específicos, te recomendaría consultar…"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "result": {
+    "answer": "CVE-2020-1472, conocido como la vulnerabilidad de elevación de privilegios \"Zerologon\", se relaciona con el framework MITRE ATT&CK a través de varias técnicas que permite a un atacante. Esta vulnerabilidad permite a un atacante no autenticado establecer una conexión de canal seguro Netlogon vulnerable hacia un controlador de dominio, lo que puede resultar en la obtención de acceso de administrador de dominio.\n\nSegún la base de datos NVD/NIST, la explotación de esta vulnerabilidad puede habilitar técnicas como:\n\n1. **T1075 - Pass the Hash**: Aunque no se menciona explícitamente en los resultados, la capacidad de obtener acceso de administrador de dominio puede facilitar ataques que utilizan hashes de contraseñas.\n2. **T1068 - Exploitation for Client Execution**: La vulnerabilidad permite a un atacante ejecutar aplicaciones maliciosas en dispositivos de la red.\n3. **T1210 - Exploitation of Remote Services**: La conexión a través de MS-NRPC para explotar la vulnerabilidad se alinea con esta técnica.\n\nLa descripción de la vulnerabilidad indica que un atacante podría ejecutar una aplicación especialmente diseñada en un dispositivo de la red, lo que podría llevar a un compromiso más amplio de la infraestructura de TI.\n\nPara más información sobre esta vulnerabilidad, se puede consultar la fuente de NVD API (CVE-2020-1472) y otros recursos proporcionados por Microsoft.",
+    "sql": "SELECT c.cve_id, c.description, r.url, r.source\nFROM cve AS c\nLEFT JOIN cve_reference AS r ON c.cve_id = r.cve_id\nWHERE c.cve_id = 'CVE-2020-1472';",
+    "sql_rows": 1,
+    "correction_attempts": 0,
+    "sql_error": null,
+    "api_fallback": "NVD API — CVE-2020-1472",
+    "hallucination_risk": false,
+    "usage": {
+      "prompt_tokens": 4619,
+      "completion_tokens": 473,
+      "total_tokens": 5092,
+      "schema_linking_latency_s": 2.792,
+      "sql_generation_latency_s": 1.739,
+      "self_correction_latency_s": 0,
+      "synthesis_latency_s": 6.875
+    },
+    "architecture": "A_Text2SQL"
+  },
+  "metrics": {
+    "question_id": "Q088",
+    "level": 3,
+    "domain": "BOTH",
+    "architecture": "A_Text2SQL",
+    "accuracy": 0.6667,
+    "hallucination_risk": 0.0,
+    "traceability": 1.0,
+    "error_handling": 1.0,
+    "latency_s": 11.406,
+    "total_tokens": 5092,
+    "accuracy_detail": "Score=0.667 | completas=['CVE-2020-1472', 'zerologon', 'T1210', 'netlogon'] | parciales=[] | ausentes=['privilege escalation', 'domain controller']",
+    "hallucination_detail": "Sin señales de alucinación detectadas",
+    "traceability_detail": "Markers texto: ['nvd', 'nist', 'mitre'] | Fuente estructurada: api_source=False, seed_nodes=False, sql=True",
+    "error_handling_detail": "Sin errores detectados en el pipeline",
+    "latency_detail": "linking=2.79s sql=1.74s corr=0.00s synth=6.88s",
+    "answer_preview": "CVE-2020-1472, conocido como la vulnerabilidad de elevación de privilegios \"Zerologon\", se relaciona con el framework MITRE ATT&CK a través de varias técnicas que permite a un atacante. Esta vulnerabilidad permite a un atacante no autenticado establecer una conexión de canal seguro Netlogon vulnerab…"
+  }
+}

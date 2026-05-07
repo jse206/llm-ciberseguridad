@@ -1,0 +1,37 @@
+{
+  "result": {
+    "answer": "Lamentablemente, no he podido obtener la información sobre las vulnerabilidades de acceso inicial (T1190) con un CVSS mayor de 9.5 que fueron publicadas en 2024. El error que se ha producido indica que la API consultada no ha encontrado la información solicitada.\n\nPara obtener esta información, te sugiero que consultes directamente la base de datos del NVD (National Vulnerability Database) en su sitio web oficial. También puedes revisar otras fuentes de información sobre vulnerabilidades, como el MITRE CVE o bases de datos de seguridad cibernética que recopilan y analizan vulnerabilidades.",
+    "intent": "search_cves",
+    "api_source": "https://services.nvd.nist.gov/rest/json/cves/2.0?resultsPerPage=10&keywordSearch=T1190&cvssV3Severity=CRITICAL&pubStartDate=2024-01-01T00:00:00.000&pubEndDate=2024-12-31T23:59:59.999",
+    "api_error": "404 Client Error: Not Found for url: https://services.nvd.nist.gov/rest/json/cves/2.0?resultsPerPage=10&keywordSearch=T1190&cvssV3Severity=CRITICAL&pubStartDate=2024-01-01T00:00:00.000&pubEndDate=2024-12-31T23:59:59.999",
+    "router_confidence": 0.8,
+    "usage": {
+      "prompt_tokens": 624,
+      "completion_tokens": 205,
+      "total_tokens": 829,
+      "router_latency_s": 2.149,
+      "api_latency_s": 0,
+      "synthesis_latency_s": 2.769
+    },
+    "hallucination_risk": true,
+    "architecture": "B_API"
+  },
+  "metrics": {
+    "question_id": "Q092",
+    "level": 3,
+    "domain": "BOTH",
+    "architecture": "B_API",
+    "accuracy": 0.5714,
+    "hallucination_risk": 1.0,
+    "traceability": 1.0,
+    "error_handling": 0.8,
+    "latency_s": 4.918,
+    "total_tokens": 829,
+    "accuracy_detail": "Score=0.571 | completas=['T1190', '2024', 'CVSS', '9.5'] | parciales=[] | ausentes=['initial access', 'crítica', 'CVE-2024']",
+    "hallucination_detail": "Flag activo + error de fuente detectado",
+    "traceability_detail": "Markers texto: ['nvd', 'national vulnerability', 'mitre'] | Fuente estructurada: api_source=True, seed_nodes=False, sql=False",
+    "error_handling_detail": "Error presente pero reconocido honestamente en la respuesta",
+    "latency_detail": "router=2.15s api=0.00s synth=2.77s",
+    "answer_preview": "Lamentablemente, no he podido obtener la información sobre las vulnerabilidades de acceso inicial (T1190) con un CVSS mayor de 9.5 que fueron publicadas en 2024. El error que se ha producido indica que la API consultada no ha encontrado la información solicitada.\n\nPara obtener esta información, te s…"
+  }
+}

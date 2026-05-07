@@ -1,0 +1,91 @@
+{
+  "result": {
+    "answer": "La información recopilada no incluye detalles específicos sobre los grupos APT que utilizan la técnica T1566 (Phishing) según MITRE ATT&CK. Por lo tanto, no puedo proporcionar una respuesta precisa sobre qué grupos APT emplean esta técnica. Para obtener esta información, sería necesario consultar fuentes adicionales o la base de datos de MITRE ATT&CK directamente.\n\n**Fuentes consultadas:** query_mitre_graph",
+    "steps": [
+      {
+        "thought": "",
+        "action": "query_mitre_graph",
+        "action_input": {
+          "question": "¿Qué grupos APT utilizan la técnica T1566 (Phishing)?"
+        },
+        "observation_preview": "{\n  \"context\": \"=== SUBGRAFO MITRE ATT&CK ===\\n\\n--- Entidades recuperadas ---\\n  [attack-pattern] T1587 — Develop Capabilities\\n     Adversaries may build capabilities that can be used during targeting. Rather than purchasing, freely downloading, or stealing capabilities, adversaries may develop th…"
+      },
+      {
+        "thought": "",
+        "action": "query_mitre_graph",
+        "action_input": {
+          "question": "¿Qué grupos APT están asociados con la técnica T1566 (Phishing)?"
+        },
+        "observation_preview": "{\n  \"context\": \"=== SUBGRAFO MITRE ATT&CK ===\\n\\n--- Entidades recuperadas ---\\n  [attack-pattern] T1587 — Develop Capabilities\\n     Adversaries may build capabilities that can be used during targeting. Rather than purchasing, freely downloading, or stealing capabilities, adversaries may develop th…"
+      },
+      {
+        "thought": "",
+        "action": "query_mitre_graph",
+        "action_input": {
+          "question": "Listar grupos APT que utilizan la técnica T1566 (Phishing)"
+        },
+        "observation_preview": "{\n  \"context\": \"=== SUBGRAFO MITRE ATT&CK ===\\n\\n--- Entidades recuperadas ---\\n  [attack-pattern] T1587 — Develop Capabilities\\n     Adversaries may build capabilities that can be used during targeting. Rather than purchasing, freely downloading, or stealing capabilities, adversaries may develop th…"
+      },
+      {
+        "thought": "",
+        "action": "query_mitre_graph",
+        "action_input": {
+          "question": "¿Qué grupos APT están asociados con la técnica T1566 (Phishing) en MITRE ATT&CK?"
+        },
+        "observation_preview": "{\n  \"context\": \"=== SUBGRAFO MITRE ATT&CK ===\\n\\n--- Entidades recuperadas ---\\n  [attack-pattern] T1547.012 — Print Processors\\n     Adversaries may abuse print processors to run malicious DLLs during system boot for persistence and/or privilege escalation. Print processors are DLLs that are loaded…"
+      },
+      {
+        "thought": "",
+        "action": "query_mitre_graph",
+        "action_input": {
+          "question": "¿Qué grupos APT están relacionados con la técnica T1566 (Phishing) en MITRE ATT&CK?"
+        },
+        "observation_preview": "{\n  \"context\": \"=== SUBGRAFO MITRE ATT&CK ===\\n\\n--- Entidades recuperadas ---\\n  [attack-pattern] T1547.012 — Print Processors\\n     Adversaries may abuse print processors to run malicious DLLs during system boot for persistence and/or privilege escalation. Print processors are DLLs that are loaded…"
+      },
+      {
+        "thought": "",
+        "action": "query_mitre_graph",
+        "action_input": {
+          "question": "¿Qué grupos APT están asociados con la técnica T1566 (Phishing) en MITRE ATT&CK?"
+        },
+        "observation_preview": "{\n  \"context\": \"=== SUBGRAFO MITRE ATT&CK ===\\n\\n--- Entidades recuperadas ---\\n  [attack-pattern] T1547.012 — Print Processors\\n     Adversaries may abuse print processors to run malicious DLLs during system boot for persistence and/or privilege escalation. Print processors are DLLs that are loaded…"
+      }
+    ],
+    "tools_used": [
+      "query_mitre_graph",
+      "query_mitre_graph",
+      "query_mitre_graph",
+      "query_mitre_graph",
+      "query_mitre_graph",
+      "query_mitre_graph"
+    ],
+    "iterations": 6,
+    "forced_final": true,
+    "hallucination_risk": false,
+    "usage": {
+      "prompt_tokens": 18261,
+      "completion_tokens": 578,
+      "total_tokens": 18839,
+      "total_latency_s": 12.711
+    },
+    "architecture": "D_Toolformer"
+  },
+  "metrics": {
+    "question_id": "Q022",
+    "level": 2,
+    "domain": "BOTH",
+    "architecture": "D_Toolformer",
+    "accuracy": 0.8,
+    "hallucination_risk": 0.0,
+    "traceability": 0.5,
+    "error_handling": 0.8,
+    "latency_s": 12.711,
+    "total_tokens": 18839,
+    "accuracy_detail": "Score=0.800 | completas=['APT', 'phishing', 'T1566', 'grupo'] | parciales=[] | ausentes=['group']",
+    "hallucination_detail": "Sin señales de alucinación detectadas",
+    "traceability_detail": "Markers texto: ['mitre', 'att&ck', 'según'] | Fuente estructurada: api_source=False, seed_nodes=False, sql=False",
+    "error_handling_detail": "Error presente pero reconocido honestamente en la respuesta",
+    "latency_detail": "total_react=12.71s iterations=6",
+    "answer_preview": "La información recopilada no incluye detalles específicos sobre los grupos APT que utilizan la técnica T1566 (Phishing) según MITRE ATT&CK. Por lo tanto, no puedo proporcionar una respuesta precisa sobre qué grupos APT emplean esta técnica. Para obtener esta información, sería necesario consultar fu…"
+  }
+}

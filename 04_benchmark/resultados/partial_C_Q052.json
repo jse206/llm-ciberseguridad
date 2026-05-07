@@ -1,0 +1,41 @@
+{
+  "result": {
+    "answer": "No se encontró información relevante en el grafo MITRE ATT&CK para responder a tu pregunta sobre la severidad de CVE-2020-1472 (Zerologon). \n\nEl sistema MITRE ATT&CK se centra en técnicas de ataque, grupos APT, tácticas, mitigaciones y herramientas relacionadas con la ciberseguridad. Si tienes preguntas sobre alguna de estas áreas, estaré encantado de ayudarte.",
+    "seed_nodes": [],
+    "subgraph_nodes": 0,
+    "subgraph_edges": 0,
+    "coverage": {
+      "sufficient": false,
+      "missing_entities": [],
+      "confidence": 0.0
+    },
+    "hallucination_risk": true,
+    "usage": {
+      "prompt_tokens": 143,
+      "completion_tokens": 88,
+      "total_tokens": 231,
+      "retrieval_latency_s": 0.017,
+      "coverage_latency_s": 0,
+      "synthesis_latency_s": 2.435
+    },
+    "architecture": "C_GraphRAG"
+  },
+  "metrics": {
+    "question_id": "Q052",
+    "level": 1,
+    "domain": "NVD",
+    "architecture": "C_GraphRAG",
+    "accuracy": 0.1667,
+    "hallucination_risk": 0.7,
+    "traceability": 0.5,
+    "error_handling": 1.0,
+    "latency_s": 2.452,
+    "total_tokens": 231,
+    "accuracy_detail": "Score=0.167 | completas=['zerologon'] | parciales=[] | ausentes=['10.0', 'critical', 'crítica', 'netlogon', 'active directory']",
+    "hallucination_detail": "Flag de riesgo activo (sin datos de fuente verificados)",
+    "traceability_detail": "Markers texto: ['mitre', 'att&ck', 'grafo'] | Fuente estructurada: api_source=False, seed_nodes=False, sql=False",
+    "error_handling_detail": "Sin errores detectados en el pipeline",
+    "latency_detail": "retrieval=0.02s coverage=0.00s synth=2.44s",
+    "answer_preview": "No se encontró información relevante en el grafo MITRE ATT&CK para responder a tu pregunta sobre la severidad de CVE-2020-1472 (Zerologon). \n\nEl sistema MITRE ATT&CK se centra en técnicas de ataque, grupos APT, tácticas, mitigaciones y herramientas relacionadas con la ciberseguridad. Si tienes pregu…"
+  }
+}

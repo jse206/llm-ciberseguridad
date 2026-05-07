@@ -1,0 +1,53 @@
+{
+  "result": {
+    "answer": "Para priorizar el parcheo de vulnerabilidades en una organización utilizando conjuntamente MITRE ATT&CK y la National Vulnerability Database (NVD), se pueden seguir varios pasos estratégicos basados en la información del subgrafo proporcionado.\n\n1. **Identificación de Técnicas y Grupos APT**: Utilizando MITRE ATT&CK, se pueden identificar las técnicas de ataque que son relevantes para la organización. Por ejemplo, técnicas como T1591 (Gather Victim Org Information) y T1592 (Gather Victim Host Information) son utilizadas por varios grupos APT, como APT28 (G0007) y FIN7 (G0046). Conocer qué grupos APT son más activos en su sector puede ayudar a priorizar las vulnerabilidades que son más susceptibles a ser explotadas.\n\n2. **Correlación con Vulnerabilidades**: Una vez identificadas las técnicas y los grupos, se puede consultar la NVD para encontrar vulnerabilidades específicas (CVE) asociadas con las técnicas identificadas. La NVD proporciona información sobre la severidad de las vulnerabilidades, lo que permite a las organizaciones priorizar el parcheo de acuerdo a la criticidad de cada vulnerabilidad.\n\n3. **Implementación de Mitigaciones**: Según MITRE ATT&CK, se pueden aplicar medidas de mitigación como M1026 (Privileged Account Management) y M1054 (Software Configuration) para reducir el riesgo de explotación de vulnerabilidades. Estas medidas pueden ser implementadas antes de que se apliquen los parches, proporcionando una capa adicional de seguridad.\n\n4. **Auditoría y Monitoreo**: La auditoría (M1047) es crucial para detectar anomalías y evaluar la efectividad de las medidas de mitigación y el parcheo. Esto permite a la organización ajustar su enfoque basado en la actividad real observada en su entorno.\n\n5. **Capacitación de Usuarios**: La capacitación de usuarios (M1017) es fundamental para prevenir ataques que exploten vulnerabilidades a través de técnicas de ingeniería social, como el phishing (T1598). Asegurarse de que los empleados estén informados sobre las amenazas puede reducir la probabilidad de que se exploten vulnerabilidades.\n\nEn resumen, al combinar la información de MITRE ATT&CK sobre técnicas y grupos APT con los datos de vulnerabilidades de la NVD, las organizaciones pueden establecer un enfoque más efectivo y basado en riesgos para el parcheo de vulnerabilidades. Esto no solo mejora la postura de seguridad, sino que también optimiza el uso de recursos en la gestión de parches.",
+    "seed_nodes": [
+      "T1053.002",
+      "S0110",
+      "T1598",
+      "T1592",
+      "T1591"
+    ],
+    "subgraph_nodes": 40,
+    "subgraph_edges": 70,
+    "coverage": {
+      "sufficient": false,
+      "missing_entities": [
+        "MITRE ATT&CK",
+        "NVD",
+        "prioritization strategies",
+        "vulnerability management",
+        "patching process"
+      ],
+      "confidence": 0.3
+    },
+    "hallucination_risk": true,
+    "usage": {
+      "prompt_tokens": 2658,
+      "completion_tokens": 584,
+      "total_tokens": 3242,
+      "retrieval_latency_s": 0.017,
+      "coverage_latency_s": 1.51,
+      "synthesis_latency_s": 9.523
+    },
+    "architecture": "C_GraphRAG"
+  },
+  "metrics": {
+    "question_id": "Q098",
+    "level": 3,
+    "domain": "BOTH",
+    "architecture": "C_GraphRAG",
+    "accuracy": 0.4286,
+    "hallucination_risk": 0.7,
+    "traceability": 1.0,
+    "error_handling": 1.0,
+    "latency_s": 11.05,
+    "total_tokens": 3242,
+    "accuracy_detail": "Score=0.429 | completas=['ATT&CK', 'parcheo', 'riesgo'] | parciales=[] | ausentes=['priorización', 'CVSS', 'T1190', 'EPSS']",
+    "hallucination_detail": "Flag de riesgo activo (sin datos de fuente verificados)",
+    "traceability_detail": "Markers texto: ['nvd', 'national vulnerability', 'mitre'] | Fuente estructurada: api_source=False, seed_nodes=True, sql=False",
+    "error_handling_detail": "Sin errores detectados en el pipeline",
+    "latency_detail": "retrieval=0.02s coverage=1.51s synth=9.52s",
+    "answer_preview": "Para priorizar el parcheo de vulnerabilidades en una organización utilizando conjuntamente MITRE ATT&CK y la National Vulnerability Database (NVD), se pueden seguir varios pasos estratégicos basados en la información del subgrafo proporcionado.\n\n1. **Identificación de Técnicas y Grupos APT**: Utiliz…"
+  }
+}

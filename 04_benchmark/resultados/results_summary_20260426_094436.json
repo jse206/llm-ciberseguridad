@@ -1,0 +1,16 @@
+{
+  "B": {
+    "n": 50,
+    "accuracy_mean": 0.4411,
+    "hallucination_mean": 0.74,
+    "traceability_mean": 0.675,
+    "error_handling_mean": 0.822,
+    "latency_mean_s": 4.9523,
+    "total_tokens_mean": 1330.26,
+    "accuracy_by_level": {
+      "1": 0.4658,
+      "2": 0.415,
+      "3": 0.4441
+    }
+  }
+}

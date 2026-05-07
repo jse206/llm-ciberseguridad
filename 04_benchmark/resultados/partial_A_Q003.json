@@ -1,0 +1,39 @@
+{
+  "result": {
+    "answer": "La descripción de CVE-2023-23397, según los datos de la base de datos NVD/NIST, es la siguiente: \"Microsoft Outlook Elevation of Privilege Vulnerability\".",
+    "sql": "SELECT description FROM cve WHERE cve_id = 'CVE-2023-23397';",
+    "sql_rows": 1,
+    "correction_attempts": 0,
+    "sql_error": null,
+    "api_fallback": null,
+    "hallucination_risk": false,
+    "usage": {
+      "prompt_tokens": 2907,
+      "completion_tokens": 132,
+      "total_tokens": 3039,
+      "schema_linking_latency_s": 2.251,
+      "sql_generation_latency_s": 1.086,
+      "self_correction_latency_s": 0,
+      "synthesis_latency_s": 1.146
+    },
+    "architecture": "A_Text2SQL"
+  },
+  "metrics": {
+    "question_id": "Q003",
+    "level": 1,
+    "domain": "NVD",
+    "architecture": "A_Text2SQL",
+    "accuracy": 0.6,
+    "hallucination_risk": 0.0,
+    "traceability": 1.0,
+    "error_handling": 1.0,
+    "latency_s": 4.483,
+    "total_tokens": 3039,
+    "accuracy_detail": "Score=0.600 | completas=['outlook', 'microsoft', 'privilege'] | parciales=[] | ausentes=['ntlm', 'hash']",
+    "hallucination_detail": "Sin señales de alucinación detectadas",
+    "traceability_detail": "Markers texto: ['nvd', 'nist', 'según'] | Fuente estructurada: api_source=False, seed_nodes=False, sql=True",
+    "error_handling_detail": "Sin errores detectados en el pipeline",
+    "latency_detail": "linking=2.25s sql=1.09s corr=0.00s synth=1.15s",
+    "answer_preview": "La descripción de CVE-2023-23397, según los datos de la base de datos NVD/NIST, es la siguiente: \"Microsoft Outlook Elevation of Privilege Vulnerability\"."
+  }
+}

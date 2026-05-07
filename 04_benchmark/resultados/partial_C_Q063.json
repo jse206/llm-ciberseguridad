@@ -1,0 +1,47 @@
+{
+  "result": {
+    "answer": "La técnica T1190 (Exploit Public-Facing Application) se clasifica dentro de la táctica de \"Initial Access\" según MITRE ATT&CK. Esta táctica se refiere a las acciones que los adversarios llevan a cabo para obtener acceso inicial a un sistema o red, y el uso de vulnerabilidades en aplicaciones expuestas al público es una de las formas en que pueden lograrlo.\n\nSegún MITRE ATT&CK, T1190 se utiliza para describir cómo los atacantes pueden explotar aplicaciones que están disponibles en Internet, lo que les permite infiltrarse en redes y sistemas de manera efectiva. Esta técnica es crítica para los adversarios que buscan establecer una presencia en el entorno objetivo.\n\nPor lo tanto, la respuesta a tu pregunta es que T1190 (Exploit Public-Facing Application) se clasifica en la táctica de \"Initial Access\".",
+    "seed_nodes": [
+      "T1190",
+      "T1053.002",
+      "S0110"
+    ],
+    "subgraph_nodes": 40,
+    "subgraph_edges": 11,
+    "coverage": {
+      "sufficient": false,
+      "missing_entities": [
+        "táctica MITRE ATT&CK"
+      ],
+      "confidence": 0.3
+    },
+    "hallucination_risk": true,
+    "usage": {
+      "prompt_tokens": 2911,
+      "completion_tokens": 213,
+      "total_tokens": 3124,
+      "retrieval_latency_s": 0.008,
+      "coverage_latency_s": 1.233,
+      "synthesis_latency_s": 3.796
+    },
+    "architecture": "C_GraphRAG"
+  },
+  "metrics": {
+    "question_id": "Q063",
+    "level": 1,
+    "domain": "MITRE",
+    "architecture": "C_GraphRAG",
+    "accuracy": 0.75,
+    "hallucination_risk": 0.7,
+    "traceability": 1.0,
+    "error_handling": 1.0,
+    "latency_s": 5.037,
+    "total_tokens": 3124,
+    "accuracy_detail": "Score=0.750 | completas=['initial access', 'acceso inicial', 'T1190'] | parciales=[] | ausentes=['TA0001']",
+    "hallucination_detail": "Flag de riesgo activo (sin datos de fuente verificados)",
+    "traceability_detail": "Markers texto: ['mitre', 'att&ck', 'según'] | Fuente estructurada: api_source=False, seed_nodes=True, sql=False",
+    "error_handling_detail": "Sin errores detectados en el pipeline",
+    "latency_detail": "retrieval=0.01s coverage=1.23s synth=3.80s",
+    "answer_preview": "La técnica T1190 (Exploit Public-Facing Application) se clasifica dentro de la táctica de \"Initial Access\" según MITRE ATT&CK. Esta táctica se refiere a las acciones que los adversarios llevan a cabo para obtener acceso inicial a un sistema o red, y el uso de vulnerabilidades en aplicaciones expuest…"
+  }
+}

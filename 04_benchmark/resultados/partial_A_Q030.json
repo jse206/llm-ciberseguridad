@@ -1,0 +1,39 @@
+{
+  "result": {
+    "answer": "Los datos proporcionados provienen de la base de datos NVD/NIST. A continuación, se presentan los CVEs de severidad CRITICAL publicados en 2023 que están relacionados con Apache:\n\n1. **CVE-2023-22884**\n   - Publicado el: 2023-01-21\n\n2. **CVE-2023-24997**\n   - Publicado el: 2023-02-01\n\n3. **CVE-2023-25613**\n   - Publicado el: 2023-02-20\n\n4. **CVE-2023-25691**\n   - Publicado el: 2023-02-24\n\n5. **CVE-2023-25693**\n   - Publicado el: 2023-02-24\n\n6. **CVE-2023-25696**\n   - Publicado el: 2023-02-24\n\n7. **CVE-2023-25690**\n   - Publicado el: 2023-03-07\n\n8. **CVE-2023-28326**\n   - Publicado el: 2023-03-28\n\n9. **CVE-2023-28706**\n   - Publicado el: 2023-04-07\n\n10. **CVE-2023-27602**\n    - Publicado el: 2023-04-10\n\n11. **CVE-2023-27603**\n    - Publicado el: 2023-04-10\n\n12. **CVE-2023-27987**\n    - Publicado el: 2023-04-10\n\n13. **CVE-2023-29215**\n    - Publicado el: 2023-04-10\n\nEstos CVEs son relevantes para la seguridad de los sistemas que utilizan Apache y deben ser considerados para la gestión de vulnerabilidades.",
+    "sql": "SELECT c.cve_id, c.cvss_v3_severity, c.published\nFROM cve AS c\nJOIN cve_cpe AS cp ON c.cve_id = cp.cve_id\nWHERE c.cvss_v3_severity = 'CRITICAL' \nAND c.published LIKE '2023%' \nAND cp.cpe_uri LIKE '%Apache%'",
+    "sql_rows": 20,
+    "correction_attempts": 0,
+    "sql_error": null,
+    "api_fallback": null,
+    "hallucination_risk": false,
+    "usage": {
+      "prompt_tokens": 4076,
+      "completion_tokens": 603,
+      "total_tokens": 4679,
+      "schema_linking_latency_s": 2.866,
+      "sql_generation_latency_s": 2.332,
+      "self_correction_latency_s": 0,
+      "synthesis_latency_s": 8.89
+    },
+    "architecture": "A_Text2SQL"
+  },
+  "metrics": {
+    "question_id": "Q030",
+    "level": 2,
+    "domain": "BOTH",
+    "architecture": "A_Text2SQL",
+    "accuracy": 1.0,
+    "hallucination_risk": 0.0,
+    "traceability": 1.0,
+    "error_handling": 1.0,
+    "latency_s": 14.088,
+    "total_tokens": 4679,
+    "accuracy_detail": "Score=1.000 | completas=['apache', 'critical', '2023', 'CVE'] | parciales=[] | ausentes=[]",
+    "hallucination_detail": "Sin señales de alucinación detectadas",
+    "traceability_detail": "Markers texto: ['nvd', 'nist', 'base de datos'] | Fuente estructurada: api_source=False, seed_nodes=False, sql=True",
+    "error_handling_detail": "Sin errores detectados en el pipeline",
+    "latency_detail": "linking=2.87s sql=2.33s corr=0.00s synth=8.89s",
+    "answer_preview": "Los datos proporcionados provienen de la base de datos NVD/NIST. A continuación, se presentan los CVEs de severidad CRITICAL publicados en 2023 que están relacionados con Apache:\n\n1. **CVE-2023-22884**\n   - Publicado el: 2023-01-21\n\n2. **CVE-2023-24997**\n   - Publicado el: 2023-02-01\n\n3. **CVE-2023-…"
+  }
+}

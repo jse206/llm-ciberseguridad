@@ -1,0 +1,51 @@
+{
+  "result": {
+    "answer": "El subgrafo proporcionado no contiene información sobre productos (CPE) ni sobre CVEs críticos registrados en la base de datos local. Por lo tanto, no puedo responder a la pregunta sobre cuáles son los 5 productos con más CVEs críticos.\n\nSegún MITRE ATT&CK, el enfoque del subgrafo se centra en tácticas, técnicas, malware y herramientas de ataque, pero no incluye detalles específicos sobre vulnerabilidades de productos o su clasificación en términos de CVEs. \n\nSi necesitas información sobre tácticas o técnicas específicas, estaré encantado de ayudarte.",
+    "seed_nodes": [
+      "T1053.002",
+      "S0110",
+      "S0075",
+      "T1596.005",
+      "T1596"
+    ],
+    "subgraph_nodes": 40,
+    "subgraph_edges": 11,
+    "coverage": {
+      "sufficient": false,
+      "missing_entities": [
+        "productos",
+        "CVE",
+        "críticos"
+      ],
+      "confidence": 0.2
+    },
+    "hallucination_risk": true,
+    "usage": {
+      "prompt_tokens": 2764,
+      "completion_tokens": 154,
+      "total_tokens": 2918,
+      "retrieval_latency_s": 0.008,
+      "coverage_latency_s": 1.104,
+      "synthesis_latency_s": 3.358
+    },
+    "architecture": "C_GraphRAG"
+  },
+  "metrics": {
+    "question_id": "Q040",
+    "level": 2,
+    "domain": "NVD",
+    "architecture": "C_GraphRAG",
+    "accuracy": 0.5,
+    "hallucination_risk": 0.7,
+    "traceability": 1.0,
+    "error_handling": 1.0,
+    "latency_s": 4.47,
+    "total_tokens": 2918,
+    "accuracy_detail": "Score=0.500 | completas=['cpe', 'más vulnerabilidades'] | parciales=[] | ausentes=['critical', 'top']",
+    "hallucination_detail": "Flag de riesgo activo (sin datos de fuente verificados)",
+    "traceability_detail": "Markers texto: ['mitre', 'att&ck', 'según'] | Fuente estructurada: api_source=False, seed_nodes=True, sql=False",
+    "error_handling_detail": "Sin errores detectados en el pipeline",
+    "latency_detail": "retrieval=0.01s coverage=1.10s synth=3.36s",
+    "answer_preview": "El subgrafo proporcionado no contiene información sobre productos (CPE) ni sobre CVEs críticos registrados en la base de datos local. Por lo tanto, no puedo responder a la pregunta sobre cuáles son los 5 productos con más CVEs críticos.\n\nSegún MITRE ATT&CK, el enfoque del subgrafo se centra en tácti…"
+  }
+}

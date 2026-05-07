@@ -1,0 +1,41 @@
+{
+  "result": {
+    "answer": "No he encontrado información relevante en el grafo MITRE ATT&CK para responder a tu pregunta sobre el score CVSS v3 de la vulnerabilidad CVE-2021-44228. \n\nEl sistema MITRE ATT&CK se centra en técnicas, tácticas, grupos APT, mitigaciones y herramientas relacionadas con ciberseguridad. Si tienes preguntas sobre alguna de estas áreas, estaré encantado de ayudarte.",
+    "seed_nodes": [],
+    "subgraph_nodes": 0,
+    "subgraph_edges": 0,
+    "coverage": {
+      "sufficient": false,
+      "missing_entities": [],
+      "confidence": 0.0
+    },
+    "hallucination_risk": true,
+    "usage": {
+      "prompt_tokens": 146,
+      "completion_tokens": 86,
+      "total_tokens": 232,
+      "retrieval_latency_s": 0.114,
+      "coverage_latency_s": 0,
+      "synthesis_latency_s": 2.756
+    },
+    "architecture": "C_GraphRAG"
+  },
+  "metrics": {
+    "question_id": "Q001",
+    "level": 1,
+    "domain": "NVD",
+    "architecture": "C_GraphRAG",
+    "accuracy": 0.0,
+    "hallucination_risk": 0.7,
+    "traceability": 0.5,
+    "error_handling": 1.0,
+    "latency_s": 2.87,
+    "total_tokens": 232,
+    "accuracy_detail": "Score=0.000 | completas=[] | parciales=[] | ausentes=['10.0', '10', 'crítica', 'critical', 'log4shell', 'log4j']",
+    "hallucination_detail": "Flag de riesgo activo (sin datos de fuente verificados)",
+    "traceability_detail": "Markers texto: ['mitre', 'att&ck', 'grafo'] | Fuente estructurada: api_source=False, seed_nodes=False, sql=False",
+    "error_handling_detail": "Sin errores detectados en el pipeline",
+    "latency_detail": "retrieval=0.11s coverage=0.00s synth=2.76s",
+    "answer_preview": "No he encontrado información relevante en el grafo MITRE ATT&CK para responder a tu pregunta sobre el score CVSS v3 de la vulnerabilidad CVE-2021-44228. \n\nEl sistema MITRE ATT&CK se centra en técnicas, tácticas, grupos APT, mitigaciones y herramientas relacionadas con ciberseguridad. Si tienes pregu…"
+  }
+}

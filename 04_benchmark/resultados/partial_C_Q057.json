@@ -1,0 +1,41 @@
+{
+  "result": {
+    "answer": "No he encontrado información relevante en el grafo MITRE ATT&CK para responder a tu pregunta sobre el score CVSS v3 de CVE-2022-1388 (F5 BIG-IP). \n\nEl sistema MITRE ATT&CK se centra en técnicas de ataque, grupos APT, tácticas, mitigaciones y herramientas relacionadas con la ciberseguridad. Si tienes preguntas sobre alguna de estas áreas, estaré encantado de ayudarte.",
+    "seed_nodes": [],
+    "subgraph_nodes": 0,
+    "subgraph_edges": 0,
+    "coverage": {
+      "sufficient": false,
+      "missing_entities": [],
+      "confidence": 0.0
+    },
+    "hallucination_risk": true,
+    "usage": {
+      "prompt_tokens": 148,
+      "completion_tokens": 91,
+      "total_tokens": 239,
+      "retrieval_latency_s": 0.023,
+      "coverage_latency_s": 0,
+      "synthesis_latency_s": 2.505
+    },
+    "architecture": "C_GraphRAG"
+  },
+  "metrics": {
+    "question_id": "Q057",
+    "level": 1,
+    "domain": "NVD",
+    "architecture": "C_GraphRAG",
+    "accuracy": 0.4,
+    "hallucination_risk": 0.7,
+    "traceability": 0.5,
+    "error_handling": 1.0,
+    "latency_s": 2.528,
+    "total_tokens": 239,
+    "accuracy_detail": "Score=0.400 | completas=['F5', 'BIG-IP'] | parciales=[] | ausentes=['9.8', 'critical', 'authentication bypass']",
+    "hallucination_detail": "Flag de riesgo activo (sin datos de fuente verificados)",
+    "traceability_detail": "Markers texto: ['mitre', 'att&ck', 'grafo'] | Fuente estructurada: api_source=False, seed_nodes=False, sql=False",
+    "error_handling_detail": "Sin errores detectados en el pipeline",
+    "latency_detail": "retrieval=0.02s coverage=0.00s synth=2.50s",
+    "answer_preview": "No he encontrado información relevante en el grafo MITRE ATT&CK para responder a tu pregunta sobre el score CVSS v3 de CVE-2022-1388 (F5 BIG-IP). \n\nEl sistema MITRE ATT&CK se centra en técnicas de ataque, grupos APT, tácticas, mitigaciones y herramientas relacionadas con la ciberseguridad. Si tienes…"
+  }
+}

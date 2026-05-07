@@ -1,0 +1,46 @@
+{
+  "result": {
+    "answer": "El subgrafo proporcionado no contiene información sobre la vulnerabilidad CVE-2023-44487 (HTTP/2 Rapid Reset) ni su score CVSS v3. Por lo tanto, no puedo responder a la pregunta sobre el score CVSS v3 de dicha vulnerabilidad.\n\nSi necesitas información sobre otras tácticas, técnicas, grupos APT, mitigaciones o herramientas de ataque que estén dentro del subgrafo, estaré encantado de ayudarte.",
+    "seed_nodes": [
+      "S1113"
+    ],
+    "subgraph_nodes": 40,
+    "subgraph_edges": 10,
+    "coverage": {
+      "sufficient": false,
+      "missing_entities": [
+        "CVE-2023-44487",
+        "CVSS v3 score"
+      ],
+      "confidence": 0.2
+    },
+    "hallucination_risk": true,
+    "usage": {
+      "prompt_tokens": 3156,
+      "completion_tokens": 137,
+      "total_tokens": 3293,
+      "retrieval_latency_s": 0.009,
+      "coverage_latency_s": 1.323,
+      "synthesis_latency_s": 2.658
+    },
+    "architecture": "C_GraphRAG"
+  },
+  "metrics": {
+    "question_id": "Q010",
+    "level": 1,
+    "domain": "NVD",
+    "architecture": "C_GraphRAG",
+    "accuracy": 0.1667,
+    "hallucination_risk": 0.7,
+    "traceability": 1.0,
+    "error_handling": 1.0,
+    "latency_s": 3.99,
+    "total_tokens": 3293,
+    "accuracy_detail": "Score=0.167 | completas=['http/2'] | parciales=[] | ausentes=['7.5', 'high', 'alto', 'dos', 'denial']",
+    "hallucination_detail": "Flag de riesgo activo (sin datos de fuente verificados)",
+    "traceability_detail": "Markers texto: ['api', 'grafo'] | Fuente estructurada: api_source=False, seed_nodes=True, sql=False",
+    "error_handling_detail": "Sin errores detectados en el pipeline",
+    "latency_detail": "retrieval=0.01s coverage=1.32s synth=2.66s",
+    "answer_preview": "El subgrafo proporcionado no contiene información sobre la vulnerabilidad CVE-2023-44487 (HTTP/2 Rapid Reset) ni su score CVSS v3. Por lo tanto, no puedo responder a la pregunta sobre el score CVSS v3 de dicha vulnerabilidad.\n\nSi necesitas información sobre otras tácticas, técnicas, grupos APT, miti…"
+  }
+}

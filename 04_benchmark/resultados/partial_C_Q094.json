@@ -1,0 +1,52 @@
+{
+  "result": {
+    "answer": "Para una organización que enfrenta campañas de phishing (T1566) con adjuntos que explotan CVEs en Microsoft Office, se pueden recomendar varias estrategias defensivas basadas en el subgrafo de MITRE ATT&CK.\n\n1. **Entrenamiento de Usuarios (M1017)**: Es fundamental educar a los empleados sobre cómo reconocer y reportar correos electrónicos de phishing. Esto incluye identificar señales de advertencia, como remitentes desconocidos, errores gramaticales y enlaces sospechosos. Un programa de capacitación regular puede ayudar a reducir la probabilidad de que los empleados caigan en estas trampas.\n\n2. **Restricción de Contenido Web (M1021)**: Implementar políticas que limiten el acceso a contenido web potencialmente malicioso. Esto puede incluir el uso de filtros de contenido que bloqueen sitios web conocidos por distribuir malware o que contengan enlaces a documentos maliciosos.\n\n3. **Gestión de Cuentas Privilegiadas (M1026)**: Asegurarse de que las cuentas con privilegios elevados estén gestionadas de manera segura. Esto incluye la implementación de políticas que restrinjan el acceso a estas cuentas y la utilización de autenticación multifactor para añadir una capa adicional de seguridad.\n\n4. **Auditoría (M1047)**: Realizar auditorías regulares de las actividades y configuraciones del sistema puede ayudar a detectar anomalías que podrían indicar un compromiso. Esto incluye revisar los registros de acceso y las configuraciones de seguridad de las aplicaciones.\n\n5. **Configuración de Software (M1054)**: Ajustar la configuración de las aplicaciones, especialmente Microsoft Office, para deshabilitar la ejecución automática de macros y otras características que podrían ser explotadas por documentos maliciosos. Esto puede ayudar a mitigar el riesgo de explotación de vulnerabilidades conocidas (CVE).\n\n6. **Prevención de Intrusiones en la Red (M1031)**: Utilizar sistemas de prevención de intrusiones para bloquear tráfico malicioso en los límites de la red. Esto puede ayudar a detectar y prevenir intentos de explotación antes de que lleguen a los sistemas internos.\n\nEstas estrategias, combinadas, pueden ayudar a fortalecer la postura de seguridad de la organización frente a las amenazas de phishing y explotación de vulnerabilidades en Microsoft Office. Según MITRE ATT&CK, la implementación de estas medidas puede ser crucial para mitigar el riesgo de acceso no autorizado a los sistemas.",
+    "seed_nodes": [
+      "T1566",
+      "T1053.002",
+      "S0110",
+      "T1598.004",
+      "T1598.003"
+    ],
+    "subgraph_nodes": 40,
+    "subgraph_edges": 65,
+    "coverage": {
+      "sufficient": false,
+      "missing_entities": [
+        "estrategia defensiva",
+        "Microsoft Office",
+        "CVE",
+        "campañas de phishing"
+      ],
+      "confidence": 0.4
+    },
+    "hallucination_risk": true,
+    "usage": {
+      "prompt_tokens": 2822,
+      "completion_tokens": 544,
+      "total_tokens": 3366,
+      "retrieval_latency_s": 0.01,
+      "coverage_latency_s": 1.42,
+      "synthesis_latency_s": 8.396
+    },
+    "architecture": "C_GraphRAG"
+  },
+  "metrics": {
+    "question_id": "Q094",
+    "level": 3,
+    "domain": "BOTH",
+    "architecture": "C_GraphRAG",
+    "accuracy": 0.5,
+    "hallucination_risk": 0.7,
+    "traceability": 1.0,
+    "error_handling": 1.0,
+    "latency_s": 9.826,
+    "total_tokens": 3366,
+    "accuracy_detail": "Score=0.500 | completas=['T1566', 'phishing', 'office', 'CVE'] | parciales=[] | ausentes=['M1049', 'email filtering', 'sandbox', 'parche']",
+    "hallucination_detail": "Flag de riesgo activo (sin datos de fuente verificados)",
+    "traceability_detail": "Markers texto: ['mitre', 'att&ck', 'según'] | Fuente estructurada: api_source=False, seed_nodes=True, sql=False",
+    "error_handling_detail": "Sin errores detectados en el pipeline",
+    "latency_detail": "retrieval=0.01s coverage=1.42s synth=8.40s",
+    "answer_preview": "Para una organización que enfrenta campañas de phishing (T1566) con adjuntos que explotan CVEs en Microsoft Office, se pueden recomendar varias estrategias defensivas basadas en el subgrafo de MITRE ATT&CK.\n\n1. **Entrenamiento de Usuarios (M1017)**: Es fundamental educar a los empleados sobre cómo r…"
+  }
+}

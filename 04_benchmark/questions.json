@@ -1,0 +1,1002 @@
+[
+  {
+    "id": "Q001",
+    "level": 1,
+    "domain": "NVD",
+    "question": "¿Cuál es el score CVSS v3 de la vulnerabilidad CVE-2021-44228?",
+    "expected_keywords": ["10.0", "10", "crítica", "critical", "log4shell", "log4j"],
+    "expected_source": "NVD",
+    "ground_truth": "CVE-2021-44228 tiene un score CVSS v3 de 10.0 (CRITICAL). Es la vulnerabilidad conocida como Log4Shell en Apache Log4j.",
+    "notes": "Log4Shell es la CVE más conocida de 2021; CVSS 10.0 es verificable en NVD."
+  },
+  {
+    "id": "Q002",
+    "level": 1,
+    "domain": "NVD",
+    "question": "¿Qué severidad CVSS v3 tiene CVE-2017-0144?",
+    "expected_keywords": ["critical", "crítica", "9.8", "eternalblue", "smb"],
+    "expected_source": "NVD",
+    "ground_truth": "CVE-2017-0144 tiene severidad CRITICAL con score CVSS v3 de 9.8. Es la vulnerabilidad EternalBlue en SMBv1 de Windows.",
+    "notes": "EternalBlue, usada en WannaCry. Score verificable en NVD."
+  },
+  {
+    "id": "Q003",
+    "level": 1,
+    "domain": "NVD",
+    "question": "¿Cuál es la descripción de CVE-2023-23397?",
+    "expected_keywords": ["outlook", "ntlm", "hash", "microsoft", "privilege"],
+    "expected_source": "NVD",
+    "ground_truth": "CVE-2023-23397 es una vulnerabilidad de elevación de privilegios en Microsoft Outlook que permite a un atacante obtener hashes NTLM mediante un correo especialmente diseñado.",
+    "notes": "Explotada por APT28. Descripción verificable en NVD."
+  },
+  {
+    "id": "Q004",
+    "level": 1,
+    "domain": "NVD",
+    "question": "¿Qué debilidades CWE están asociadas a CVE-2021-44228?",
+    "expected_keywords": ["CWE-917", "CWE-400", "injection", "log4j"],
+    "expected_source": "NVD",
+    "ground_truth": "CVE-2021-44228 está asociada principalmente a CWE-917 (Improper Neutralization of Special Elements used in an Expression Language Statement) y CWE-400.",
+    "notes": "CWEs verificables en NVD para Log4Shell."
+  },
+  {
+    "id": "Q005",
+    "level": 1,
+    "domain": "NVD",
+    "question": "¿En qué fecha fue publicada la vulnerabilidad CVE-2022-30190?",
+    "expected_keywords": ["2022", "mayo", "may", "follina", "msdt"],
+    "expected_source": "NVD",
+    "ground_truth": "CVE-2022-30190 (Follina) fue publicada en mayo de 2022. Afecta a Microsoft Support Diagnostic Tool (MSDT).",
+    "notes": "Follina, explotación mediante documentos Word. Fecha verificable en NVD."
+  },
+  {
+    "id": "Q006",
+    "level": 1,
+    "domain": "NVD",
+    "question": "¿Cuál es el vector CVSS v3 de CVE-2021-26084?",
+    "expected_keywords": ["confluence", "atlassian", "AV:N", "network"],
+    "expected_source": "NVD",
+    "ground_truth": "CVE-2021-26084 (Confluence OGNL injection) tiene vector CVSS v3 con AV:N (acceso por red). Afecta a Atlassian Confluence.",
+    "notes": "Score 9.8 CRITICAL. Vector verificable en NVD."
+  },
+  {
+    "id": "Q007",
+    "level": 1,
+    "domain": "NVD",
+    "question": "¿Cuántas vulnerabilidades con severidad CRITICAL existen en la base de datos local del año 2024?",
+    "expected_keywords": ["critical", "crítica", "2024", "vulnerabilidades"],
+    "expected_source": "NVD_LOCAL",
+    "ground_truth": "El número exacto depende de los datos descargados, pero en 2024 se publicaron miles de vulnerabilidades CRITICAL en NVD.",
+    "notes": "Pregunta de agregación. Solo Arquitectura A puede responderla directamente con COUNT."
+  },
+  {
+    "id": "Q008",
+    "level": 1,
+    "domain": "NVD",
+    "question": "Lista las 5 vulnerabilidades con mayor CVSS v3 score publicadas en 2023.",
+    "expected_keywords": ["10.0", "9.9", "critical", "2023"],
+    "expected_source": "NVD_LOCAL",
+    "ground_truth": "Las vulnerabilidades con CVSS 10.0 de 2023 incluyen diversas CVEs en productos de red, servidores y sistemas operativos.",
+    "notes": "Pregunta de ordenación con LIMIT. Diseñada para Text2SQL."
+  },
+  {
+    "id": "Q009",
+    "level": 1,
+    "domain": "NVD",
+    "question": "¿Cuántas vulnerabilidades están asociadas a la debilidad CWE-79 en la base de datos local?",
+    "expected_keywords": ["CWE-79", "cross-site scripting", "xss"],
+    "expected_source": "NVD_LOCAL",
+    "ground_truth": "CWE-79 (Cross-Site Scripting) es una de las debilidades más comunes. El conteo exacto depende de los datos descargados.",
+    "notes": "JOIN entre cve y cve_cwe. Diseñada específicamente para Arquitectura A."
+  },
+  {
+    "id": "Q010",
+    "level": 1,
+    "domain": "NVD",
+    "question": "¿Qué score CVSS v3 tiene CVE-2023-44487 (HTTP/2 Rapid Reset)?",
+    "expected_keywords": ["7.5", "high", "alto", "http/2", "dos", "denial"],
+    "expected_source": "NVD",
+    "ground_truth": "CVE-2023-44487 (HTTP/2 Rapid Reset Attack) tiene un score CVSS v3 de 7.5 (HIGH). Es un ataque de denegación de servicio.",
+    "notes": "Ataque DDoS masivo de 2023. Score verificable en NVD."
+  },
+  {
+    "id": "Q011",
+    "level": 1,
+    "domain": "MITRE",
+    "question": "¿En qué táctica MITRE ATT&CK se clasifica la técnica T1059?",
+    "expected_keywords": ["execution", "ejecución", "T1059", "command", "scripting"],
+    "expected_source": "MITRE",
+    "ground_truth": "T1059 (Command and Scripting Interpreter) pertenece a la táctica Execution (Ejecución) en MITRE ATT&CK.",
+    "notes": "Técnica muy común. Verificable en attack.mitre.org."
+  },
+  {
+    "id": "Q012",
+    "level": 1,
+    "domain": "MITRE",
+    "question": "¿Qué descripción tiene la técnica MITRE ATT&CK T1566?",
+    "expected_keywords": ["phishing", "spearphishing", "correo", "email", "T1566"],
+    "expected_source": "MITRE",
+    "ground_truth": "T1566 (Phishing) describe el uso de mensajes de phishing para conseguir acceso a sistemas víctima. Incluye spearphishing como sub-técnica.",
+    "notes": "Verificable en MITRE ATT&CK."
+  },
+  {
+    "id": "Q013",
+    "level": 1,
+    "domain": "MITRE",
+    "question": "¿Cuál es el nombre de la técnica MITRE ATT&CK con ID T1078?",
+    "expected_keywords": ["valid accounts", "cuentas válidas", "T1078"],
+    "expected_source": "MITRE",
+    "ground_truth": "T1078 se denomina 'Valid Accounts' (Cuentas Válidas). Implica el uso de credenciales legítimas para acceder a sistemas.",
+    "notes": "Técnica muy usada por grupos APT. Verificable en MITRE."
+  },
+  {
+    "id": "Q014",
+    "level": 1,
+    "domain": "MITRE",
+    "question": "¿Qué plataformas afecta la técnica T1059.001 (PowerShell)?",
+    "expected_keywords": ["windows", "T1059.001", "powershell"],
+    "expected_source": "MITRE",
+    "ground_truth": "T1059.001 (PowerShell) afecta principalmente a la plataforma Windows.",
+    "notes": "Sub-técnica de Command and Scripting Interpreter. Verificable en MITRE."
+  },
+  {
+    "id": "Q015",
+    "level": 1,
+    "domain": "MITRE",
+    "question": "¿En qué táctica se encuentra la técnica T1486 (Data Encrypted for Impact)?",
+    "expected_keywords": ["impact", "impacto", "T1486", "ransomware", "encrypted"],
+    "expected_source": "MITRE",
+    "ground_truth": "T1486 (Data Encrypted for Impact) pertenece a la táctica Impact. Es característica de ataques de ransomware.",
+    "notes": "Técnica clave en ransomware. Verificable en MITRE ATT&CK."
+  },
+  {
+    "id": "Q016",
+    "level": 1,
+    "domain": "MITRE",
+    "question": "¿Qué mitigaciones existen para la técnica T1078 (Valid Accounts)?",
+    "expected_keywords": ["multi-factor", "MFA", "privileged", "password", "M1032", "M1027"],
+    "expected_source": "MITRE",
+    "ground_truth": "Las mitigaciones para T1078 incluyen M1032 (Multi-factor Authentication), M1027 (Password Policies) y revisión de cuentas privilegiadas.",
+    "notes": "Verificable en MITRE ATT&CK. IDs de mitigación comprobables."
+  },
+  {
+    "id": "Q017",
+    "level": 1,
+    "domain": "MITRE",
+    "question": "¿Cuántas sub-técnicas tiene T1059 (Command and Scripting Interpreter)?",
+    "expected_keywords": ["sub-técnica", "subtechnique", "T1059", "scripting"],
+    "expected_source": "MITRE",
+    "ground_truth": "T1059 tiene múltiples sub-técnicas incluyendo PowerShell (T1059.001), Windows Command Shell (T1059.003), Python (T1059.006), entre otras.",
+    "notes": "El número exacto varía con la versión de ATT&CK. Verificable en el grafo."
+  },
+  {
+    "id": "Q018",
+    "level": 1,
+    "domain": "MITRE",
+    "question": "¿Qué táctica corresponde a la fase inicial de un ataque donde el adversario trata de entrar en la red?",
+    "expected_keywords": ["initial access", "acceso inicial", "TA0001"],
+    "expected_source": "MITRE",
+    "ground_truth": "La táctica 'Initial Access' (TA0001) corresponde a las técnicas usadas por el adversario para obtener su punto de entrada inicial a la red.",
+    "notes": "Pregunta conceptual sobre tácticas ATT&CK."
+  },
+  {
+    "id": "Q019",
+    "level": 1,
+    "domain": "NVD",
+    "question": "¿Cuál es el estado de la vulnerabilidad CVE-2024-3400 en NVD?",
+    "expected_keywords": ["palo alto", "pan-os", "firewall", "critical", "10.0"],
+    "expected_source": "NVD",
+    "ground_truth": "CVE-2024-3400 es una vulnerabilidad crítica (CVSS 10.0) en Palo Alto Networks PAN-OS. Permite ejecución de código remoto sin autenticación.",
+    "notes": "Explotada activamente en 2024. Score verificable en NVD API."
+  },
+  {
+    "id": "Q020",
+    "level": 1,
+    "domain": "NVD",
+    "question": "¿Cuál es el score CVSS v3 de CVE-2022-26134 (Atlassian Confluence)?",
+    "expected_keywords": ["9.8", "critical", "confluencia", "confluence", "ognl"],
+    "expected_source": "NVD",
+    "ground_truth": "CVE-2022-26134 tiene un score CVSS v3 de 9.8 (CRITICAL). Es una vulnerabilidad de inyección OGNL en Atlassian Confluence.",
+    "notes": "Explotada masivamente en 2022. Verificable en NVD."
+  },
+  {
+    "id": "Q021",
+    "level": 2,
+    "domain": "BOTH",
+    "question": "¿Qué técnicas MITRE ATT&CK utiliza el grupo APT29?",
+    "expected_keywords": ["APT29", "cozy bear", "T1566", "phishing", "T1078", "russia"],
+    "expected_source": "MITRE",
+    "ground_truth": "APT29 (Cozy Bear) utiliza técnicas como T1566 (Phishing), T1078 (Valid Accounts), T1059 (Command and Scripting Interpreter), entre otras. Es un grupo de amenaza ruso.",
+    "notes": "APT29 es uno de los grupos más documentados en MITRE ATT&CK."
+  },
+  {
+    "id": "Q022",
+    "level": 2,
+    "domain": "BOTH",
+    "question": "¿Qué grupos APT utilizan la técnica T1566 (Phishing) según MITRE ATT&CK?",
+    "expected_keywords": ["APT", "phishing", "T1566", "grupo", "group"],
+    "expected_source": "MITRE",
+    "ground_truth": "Múltiples grupos APT utilizan T1566, incluyendo APT28, APT29, Lazarus Group, y otros grupos de amenaza persistente avanzada.",
+    "notes": "La respuesta debe listar al menos 3 grupos documentados en ATT&CK."
+  },
+  {
+    "id": "Q023",
+    "level": 2,
+    "domain": "BOTH",
+    "question": "¿Qué técnicas MITRE ATT&CK están relacionadas con la táctica Lateral Movement?",
+    "expected_keywords": ["lateral movement", "T1021", "T1570", "remote services", "TA0008"],
+    "expected_source": "MITRE",
+    "ground_truth": "La táctica Lateral Movement (TA0008) incluye técnicas como T1021 (Remote Services), T1570 (Lateral Tool Transfer), T1534 (Internal Spearphishing), entre otras.",
+    "notes": "Verificable en MITRE ATT&CK Enterprise."
+  },
+  {
+    "id": "Q024",
+    "level": 2,
+    "domain": "BOTH",
+    "question": "¿Qué mitigaciones recomienda MITRE ATT&CK para defenderse contra T1486 (ransomware)?",
+    "expected_keywords": ["backup", "M1053", "M1040", "data protection", "ransomware"],
+    "expected_source": "MITRE",
+    "ground_truth": "Para T1486, MITRE recomienda M1053 (Data Backup), M1040 (Behavior Prevention on Endpoint) y segmentación de red para limitar el impacto del ransomware.",
+    "notes": "IDs de mitigación verificables en MITRE ATT&CK."
+  },
+  {
+    "id": "Q025",
+    "level": 2,
+    "domain": "BOTH",
+    "question": "¿Qué herramientas maliciosas (malware) usa el grupo Lazarus Group según MITRE ATT&CK?",
+    "expected_keywords": ["lazarus", "WannaCry", "malware", "DPRK", "korea", "S0"],
+    "expected_source": "MITRE",
+    "ground_truth": "Lazarus Group (vinculado a Corea del Norte) usa herramientas como WannaCry (S0366), HOPLIGHT, y otros implantes personalizados documentados en MITRE ATT&CK.",
+    "notes": "Verificable en el perfil G0032 de MITRE ATT&CK."
+  },
+  {
+    "id": "Q026",
+    "level": 2,
+    "domain": "NVD",
+    "question": "¿Cuántos CVEs publicados en 2022 tienen un score CVSS v3 superior a 9.0?",
+    "expected_keywords": ["2022", "9.0", "critical", "high"],
+    "expected_source": "NVD_LOCAL",
+    "ground_truth": "En 2022 se publicaron cientos de CVEs con CVSS v3 > 9.0. El número exacto depende de los datos descargados de NVD.",
+    "notes": "Consulta de agregación con filtro numérico. Diseñada para Arquitectura A (Text2SQL)."
+  },
+  {
+    "id": "Q027",
+    "level": 2,
+    "domain": "NVD",
+    "question": "¿Qué productos están afectados por CVE-2021-44228 según la base de datos local?",
+    "expected_keywords": ["log4j", "apache", "log4shell", "java", "cpe"],
+    "expected_source": "NVD_LOCAL",
+    "ground_truth": "CVE-2021-44228 afecta a Apache Log4j versiones 2.0-beta9 a 2.14.1 y múltiples productos que lo incluyen como dependencia.",
+    "notes": "JOIN entre cve y cve_cpe. Diseñada para Arquitectura A."
+  },
+  {
+    "id": "Q028",
+    "level": 2,
+    "domain": "NVD",
+    "question": "Lista los 10 CVEs más recientes relacionados con vulnerabilidades de tipo SQL Injection publicados en 2024.",
+    "expected_keywords": ["sql injection", "CWE-89", "2024"],
+    "expected_source": "NVD",
+    "ground_truth": "Múltiples CVEs de SQL Injection (CWE-89) fueron publicados en 2024. La lista exacta depende de los datos disponibles.",
+    "notes": "Búsqueda combinada por debilidad y año. Útil para comparar A vs B."
+  },
+  {
+    "id": "Q029",
+    "level": 2,
+    "domain": "BOTH",
+    "question": "¿Qué grupos APT utilizan técnicas de la táctica Execution y qué plataformas atacan?",
+    "expected_keywords": ["execution", "APT", "windows", "linux", "T1059"],
+    "expected_source": "MITRE",
+    "ground_truth": "Múltiples grupos APT usan técnicas de Execution. APT28, APT29 y Lazarus Group usan T1059 principalmente contra plataformas Windows y Linux.",
+    "notes": "Pregunta de cruce multi-salto en el grafo: grupo → técnica → táctica → plataforma."
+  },
+  {
+    "id": "Q030",
+    "level": 2,
+    "domain": "BOTH",
+    "question": "¿Qué CVEs de severidad CRITICAL publicados en 2023 están relacionados con Apache?",
+    "expected_keywords": ["apache", "critical", "2023", "CVE"],
+    "expected_source": "NVD",
+    "ground_truth": "En 2023 se publicaron varios CVEs críticos relacionados con productos Apache incluyendo Apache HTTP Server, Struts, y otros componentes.",
+    "notes": "Búsqueda por keyword y severidad. Útil para comparar A vs B."
+  },
+  {
+    "id": "Q031",
+    "level": 2,
+    "domain": "MITRE",
+    "question": "¿Qué técnicas usa APT28 y cuáles están relacionadas con exfiltración de datos?",
+    "expected_keywords": ["APT28", "exfiltration", "T1041", "fancy bear", "russia"],
+    "expected_source": "MITRE",
+    "ground_truth": "APT28 (Fancy Bear) usa técnicas de exfiltración como T1041 (Exfiltration Over C2 Channel). Es un grupo de inteligencia militar ruso (GRU).",
+    "notes": "Verificable en perfil G0007 de MITRE ATT&CK."
+  },
+  {
+    "id": "Q032",
+    "level": 2,
+    "domain": "MITRE",
+    "question": "¿Cuántas técnicas tiene la táctica 'Credential Access' en MITRE ATT&CK Enterprise?",
+    "expected_keywords": ["credential access", "TA0006", "técnicas", "T1110", "brute force"],
+    "expected_source": "MITRE",
+    "ground_truth": "La táctica Credential Access (TA0006) contiene más de 15 técnicas incluyendo T1110 (Brute Force), T1552 (Unsecured Credentials), T1555 (Credentials from Password Stores), entre otras.",
+    "notes": "Requiere consulta de agregación sobre el grafo."
+  },
+  {
+    "id": "Q033",
+    "level": 2,
+    "domain": "NVD",
+    "question": "¿Cuál es el CVE con mayor CVSS score publicado en 2024 en la base de datos local?",
+    "expected_keywords": ["10.0", "2024", "critical", "máximo"],
+    "expected_source": "NVD_LOCAL",
+    "ground_truth": "En 2024 hubo múltiples CVEs con CVSS 10.0. El más notable incluye CVE-2024-3400 de Palo Alto y otros con score máximo.",
+    "notes": "ORDER BY + LIMIT 1. Diseñada para Arquitectura A."
+  },
+  {
+    "id": "Q034",
+    "level": 2,
+    "domain": "MITRE",
+    "question": "¿Qué técnicas de MITRE ATT&CK están asociadas a ataques de ransomware?",
+    "expected_keywords": ["T1486", "T1489", "T1490", "ransomware", "impact", "encryption"],
+    "expected_source": "MITRE",
+    "ground_truth": "Los ataques de ransomware usan técnicas de Impact como T1486 (Data Encrypted for Impact), T1489 (Service Stop) y T1490 (Inhibit System Recovery).",
+    "notes": "Pregunta temática que requiere razonamiento sobre el grafo ATT&CK."
+  },
+  {
+    "id": "Q035",
+    "level": 2,
+    "domain": "BOTH",
+    "question": "¿Qué herramientas (software) están asociadas a APT41 según MITRE ATT&CK?",
+    "expected_keywords": ["APT41", "G0096", "software", "malware", "china"],
+    "expected_source": "MITRE",
+    "ground_truth": "APT41 (G0096) está asociado a múltiples herramientas maliciosas documentadas en MITRE ATT&CK. Es un grupo chino con motivaciones tanto de espionaje como financieras.",
+    "notes": "Verificable en perfil G0096 de MITRE ATT&CK."
+  },
+  {
+    "id": "Q036",
+    "level": 2,
+    "domain": "NVD",
+    "question": "¿Cuántas vulnerabilidades de tipo 'buffer overflow' (CWE-120 o CWE-121) existen en la base de datos local?",
+    "expected_keywords": ["buffer overflow", "CWE-120", "CWE-121"],
+    "expected_source": "NVD_LOCAL",
+    "ground_truth": "Los buffer overflows son una categoría muy común. CWE-120 y CWE-121 están presentes en miles de CVEs en la BD de NVD.",
+    "notes": "JOIN + OR condition. Diseñada para Arquitectura A."
+  },
+  {
+    "id": "Q037",
+    "level": 2,
+    "domain": "MITRE",
+    "question": "¿Qué detecciones recomienda MITRE ATT&CK para la técnica T1059 (Command and Scripting Interpreter)?",
+    "expected_keywords": ["T1059", "detection", "log", "monitor", "command line", "script"],
+    "expected_source": "MITRE",
+    "ground_truth": "MITRE recomienda monitorizar la ejecución de línea de comandos, registros de PowerShell y procesos inusuales para detectar T1059.",
+    "notes": "Campo x_mitre_detection en el grafo."
+  },
+  {
+    "id": "Q038",
+    "level": 2,
+    "domain": "NVD",
+    "question": "¿Qué porcentaje de vulnerabilidades de 2023 en la base de datos local tienen severidad HIGH o CRITICAL?",
+    "expected_keywords": ["porcentaje", "percent", "high", "critical", "2023"],
+    "expected_source": "NVD_LOCAL",
+    "ground_truth": "Aproximadamente el 30-40% de los CVEs publicados en 2023 tienen severidad HIGH o CRITICAL. El porcentaje exacto depende de los datos.",
+    "notes": "Pregunta de agregación con cálculo porcentual. Solo Arquitectura A puede calcularla directamente."
+  },
+  {
+    "id": "Q039",
+    "level": 2,
+    "domain": "MITRE",
+    "question": "¿Qué grupos APT han sido asociados a Corea del Norte en MITRE ATT&CK?",
+    "expected_keywords": ["Lazarus", "APT38", "G0032", "DPRK", "korea", "kimsuky"],
+    "expected_source": "MITRE",
+    "ground_truth": "Los grupos norcoreanos documentados en MITRE incluyen Lazarus Group (G0032), APT38 (G0082), Kimsuky (G0094), entre otros.",
+    "notes": "Búsqueda por atribución geográfica en el grafo."
+  },
+  {
+    "id": "Q040",
+    "level": 2,
+    "domain": "NVD",
+    "question": "¿Cuáles son los 5 productos (CPE) con más CVEs críticos registrados en la base de datos local?",
+    "expected_keywords": ["cpe", "critical", "top", "más vulnerabilidades"],
+    "expected_source": "NVD_LOCAL",
+    "ground_truth": "Los productos con más CVEs críticos suelen ser sistemas operativos Windows, Linux, y productos de red como Cisco y Fortinet.",
+    "notes": "JOIN complejo con GROUP BY y ORDER BY. Diseñada específicamente para Arquitectura A."
+  },
+  {
+    "id": "Q041",
+    "level": 3,
+    "domain": "BOTH",
+    "question": "Un analista detecta que el grupo APT29 ha explotado CVE-2023-23397 en su organización. ¿Qué técnicas MITRE ATT&CK podría estar usando y qué mitigaciones urgentes recomendarías?",
+    "expected_keywords": ["APT29", "CVE-2023-23397", "outlook", "NTLM", "T1566", "mitigación", "MFA", "patch"],
+    "expected_source": "BOTH",
+    "ground_truth": "CVE-2023-23397 permite robo de hashes NTLM. APT29 la ha usado en operaciones de spearphishing (T1566) y acceso inicial (T1078). Mitigaciones: aplicar parche MS (KB5023779), bloquear NTLM externamente, activar MFA y revisar cuentas privilegiadas.",
+    "notes": "Pregunta de razonamiento multi-fuente. Requiere combinar datos NVD + MITRE."
+  },
+  {
+    "id": "Q042",
+    "level": 3,
+    "domain": "BOTH",
+    "question": "¿Qué relación existe entre la vulnerabilidad CVE-2021-44228 (Log4Shell) y las técnicas de MITRE ATT&CK? ¿Qué grupos APT la han explotado?",
+    "expected_keywords": ["log4shell", "T1190", "initial access", "RCE", "APT", "exploitation"],
+    "expected_source": "BOTH",
+    "ground_truth": "Log4Shell (CVE-2021-44228) permite ejecución remota de código, correspondiente a T1190 (Exploit Public-Facing Application) en la táctica Initial Access. Fue explotada por múltiples grupos APT incluyendo Hafnium y grupos iraníes.",
+    "notes": "Pregunta de cruce CVE ↔ ATT&CK ↔ grupo APT. Nivel máximo de dificultad."
+  },
+  {
+    "id": "Q043",
+    "level": 3,
+    "domain": "BOTH",
+    "question": "Analiza el impacto potencial de un ataque de ransomware que use T1486. ¿Qué CVEs recientes podrían facilitar el acceso inicial para este tipo de ataque?",
+    "expected_keywords": ["T1486", "ransomware", "initial access", "CVE", "critical", "impacto"],
+    "expected_source": "BOTH",
+    "ground_truth": "T1486 (Data Encrypted for Impact) es la técnica core del ransomware. El acceso inicial suele realizarse via vulnerabilidades críticas en VPNs y RDP. CVEs relevantes incluyen CVE-2023-20198 (Cisco), CVE-2024-3400 (Palo Alto).",
+    "notes": "Pregunta de análisis de cadena de ataque. Nivel máximo."
+  },
+  {
+    "id": "Q044",
+    "level": 3,
+    "domain": "BOTH",
+    "question": "¿Cuáles son las 3 técnicas MITRE ATT&CK más usadas por grupos APT de estado-nación y qué vulnerabilidades críticas (CVE) están comúnmente asociadas a ellas?",
+    "expected_keywords": ["APT", "técnicas", "T1566", "T1078", "T1059", "CVE", "estado-nación"],
+    "expected_source": "BOTH",
+    "ground_truth": "Las técnicas más usadas por APTs incluyen T1566 (Phishing), T1078 (Valid Accounts) y T1059 (Scripting). Se asocian a CVEs en clientes de correo (Outlook, Exchange) y sistemas de autenticación.",
+    "notes": "Requiere razonamiento sobre múltiples grupos y correlación con CVEs."
+  },
+  {
+    "id": "Q045",
+    "level": 3,
+    "domain": "BOTH",
+    "question": "Un equipo SOC encuentra tráfico anómalo que sugiere Lateral Movement usando T1021. ¿Qué CVEs deberían priorizar parchear para contener el movimiento lateral?",
+    "expected_keywords": ["T1021", "lateral movement", "remote services", "SMB", "RDP", "CVE", "parche"],
+    "expected_source": "BOTH",
+    "ground_truth": "T1021 (Remote Services) cubre SMB, RDP y otros protocolos. CVEs prioritarios incluyen CVE-2017-0144 (EternalBlue/SMB), CVE-2019-0708 (BlueKeep/RDP) y vulnerabilidades recientes en servicios de red.",
+    "notes": "Respuesta operacional que cruza ATT&CK con NVD. Nivel 3."
+  },
+  {
+    "id": "Q046",
+    "level": 3,
+    "domain": "BOTH",
+    "question": "¿Cómo se relacionan las vulnerabilidades con CVSS score de 10.0 con el marco MITRE ATT&CK en términos de tácticas de acceso inicial?",
+    "expected_keywords": ["CVSS 10.0", "initial access", "T1190", "exploit", "critical"],
+    "expected_source": "BOTH",
+    "ground_truth": "Las CVEs con CVSS 10.0 suelen corresponder a la técnica T1190 (Exploit Public-Facing Application) en la táctica Initial Access de MITRE ATT&CK, ya que permiten compromiso total sin autenticación.",
+    "notes": "Pregunta conceptual de alto nivel que requiere razonamiento."
+  },
+  {
+    "id": "Q047",
+    "level": 3,
+    "domain": "BOTH",
+    "question": "Dados los TTPs del grupo APT28, ¿qué vulnerabilidades críticas en Microsoft deberían monitorizarse para detectar sus campañas?",
+    "expected_keywords": ["APT28", "microsoft", "outlook", "CVE-2023-23397", "T1566", "fancy bear"],
+    "expected_source": "BOTH",
+    "ground_truth": "APT28 (Fancy Bear) explota vulnerabilidades en productos Microsoft, especialmente CVE-2023-23397 (Outlook NTLM) y otras CVEs en Exchange y Office. Sus TTPs incluyen T1566 y T1078.",
+    "notes": "Correlación APT28 TTPs ↔ CVEs Microsoft. Nivel máximo."
+  },
+  {
+    "id": "Q048",
+    "level": 3,
+    "domain": "BOTH",
+    "question": "¿Qué recomendaciones de mitigación darías a una organización que ha identificado el uso de T1059 (PowerShell) y tiene CVEs críticos sin parchear en sus sistemas Windows?",
+    "expected_keywords": ["T1059", "powershell", "mitigación", "windows", "parche", "M1038", "M1042"],
+    "expected_source": "BOTH",
+    "ground_truth": "Recomendaciones: 1) Aplicar parches críticos pendientes inmediatamente. 2) Activar AMSI y logging de PowerShell. 3) Implementar M1038 (Execution Prevention) y M1042 (Disable or Remove Feature). 4) Revisar AppLocker/WDAC.",
+    "notes": "Respuesta de remediación multi-paso. Nivel 3."
+  },
+  {
+    "id": "Q049",
+    "level": 3,
+    "domain": "BOTH",
+    "question": "Compara el nivel de riesgo entre CVE-2021-44228 (Log4Shell, CVSS 10.0) y CVE-2022-30190 (Follina, CVSS 7.8) considerando las técnicas MITRE ATT&CK que habilitan.",
+    "expected_keywords": ["log4shell", "follina", "CVSS", "T1190", "T1203", "comparación", "riesgo"],
+    "expected_source": "BOTH",
+    "ground_truth": "Log4Shell (CVSS 10.0) habilita T1190 (Exploit Public-Facing Application) con acceso remoto sin autenticación. Follina (CVSS 7.8) habilita T1203 (Exploitation for Client Execution) requiriendo interacción del usuario. Log4Shell tiene mayor impacto potencial.",
+    "notes": "Pregunta comparativa que requiere datos de ambas fuentes y razonamiento. Nivel 3."
+  },
+  {
+    "id": "Q050",
+    "level": 3,
+    "domain": "BOTH",
+    "question": "¿Qué cadena de ataque (kill chain) podría usar un grupo APT para comprometer una organización usando vulnerabilidades publicadas en 2024 y técnicas documentadas en MITRE ATT&CK?",
+    "expected_keywords": ["kill chain", "initial access", "lateral movement", "exfiltration", "CVE-2024", "APT", "técnica"],
+    "expected_source": "BOTH",
+    "ground_truth": "Una kill chain típica: Initial Access via T1190 explotando CVE-2024-3400 (Palo Alto) → Execution T1059 → Persistence T1078 → Lateral Movement T1021 → Collection T1005 → Exfiltration T1041.",
+    "notes": "Pregunta de síntesis máxima. Requiere razonamiento multi-salto y multi-fuente. Nivel 3."
+  },
+  {
+    "id": "Q051",
+    "level": 1,
+    "domain": "NVD",
+    "question": "¿Cuál es el score CVSS v3 de CVE-2019-0708 (BlueKeep)?",
+    "expected_keywords": ["9.8", "critical", "crítica", "BlueKeep", "RDP", "windows"],
+    "expected_source": "NVD",
+    "ground_truth": "CVE-2019-0708 (BlueKeep) tiene CVSS v3 de 9.8 (CRITICAL). Es una vulnerabilidad de ejecución remota de código en Remote Desktop Services de Windows.",
+    "notes": "Vulnerabilidad pre-autenticación en RDP. Score verificable en NVD."
+  },
+  {
+    "id": "Q052",
+    "level": 1,
+    "domain": "NVD",
+    "question": "¿Qué severidad tiene CVE-2020-1472 (Zerologon)?",
+    "expected_keywords": ["10.0", "critical", "crítica", "zerologon", "netlogon", "active directory"],
+    "expected_source": "NVD",
+    "ground_truth": "CVE-2020-1472 (Zerologon) tiene CVSS v3 de 10.0 (CRITICAL). Permite a un atacante comprometer el controlador de dominio de Active Directory.",
+    "notes": "Vulnerabilidad crítica en Netlogon. Score 10.0 verificable en NVD."
+  },
+  {
+    "id": "Q053",
+    "level": 1,
+    "domain": "NVD",
+    "question": "¿Cuál es la descripción de CVE-2018-13379 (FortiOS)?",
+    "expected_keywords": ["fortinet", "fortios", "ssl", "vpn", "path traversal", "credentials"],
+    "expected_source": "NVD",
+    "ground_truth": "CVE-2018-13379 es una vulnerabilidad de path traversal en el portal web SSL VPN de Fortinet FortiOS que permite a atacantes leer archivos del sistema, incluyendo credenciales.",
+    "notes": "Muy explotada por APTs. Descripción verificable en NVD."
+  },
+  {
+    "id": "Q054",
+    "level": 1,
+    "domain": "NVD",
+    "question": "¿Qué score CVSS v3 tiene CVE-2022-22965 (Spring4Shell)?",
+    "expected_keywords": ["9.8", "critical", "spring", "java", "RCE", "remote code execution"],
+    "expected_source": "NVD",
+    "ground_truth": "CVE-2022-22965 (Spring4Shell) tiene CVSS v3 de 9.8 (CRITICAL). Es una vulnerabilidad de ejecución remota de código en Spring Framework para Java.",
+    "notes": "Spring4Shell es la CVE de Spring Framework de 2022. Score verificable en NVD."
+  },
+  {
+    "id": "Q055",
+    "level": 1,
+    "domain": "NVD",
+    "question": "¿Cuál es el score CVSS v3 de CVE-2023-20198 (Cisco IOS XE)?",
+    "expected_keywords": ["10.0", "critical", "cisco", "ios xe", "web ui", "privilege"],
+    "expected_source": "NVD",
+    "ground_truth": "CVE-2023-20198 tiene CVSS v3 de 10.0 (CRITICAL). Afecta a la Web UI de Cisco IOS XE y permite la creación de cuentas con privilegios máximos sin autenticación.",
+    "notes": "Explotada activamente en octubre 2023. Score verificable en NVD."
+  },
+  {
+    "id": "Q056",
+    "level": 1,
+    "domain": "NVD",
+    "question": "¿Qué score CVSS v3 tiene CVE-2021-26855 (ProxyLogon, Microsoft Exchange)?",
+    "expected_keywords": ["9.8", "critical", "exchange", "microsoft", "proxylogon", "SSRF"],
+    "expected_source": "NVD",
+    "ground_truth": "CVE-2021-26855 (ProxyLogon) tiene CVSS v3 de 9.8 (CRITICAL). Es una vulnerabilidad SSRF en Microsoft Exchange Server que permite ejecución remota de código.",
+    "notes": "Explotada por Hafnium y otros grupos APT. Score verificable en NVD."
+  },
+  {
+    "id": "Q057",
+    "level": 1,
+    "domain": "NVD",
+    "question": "¿Cuál es el score CVSS v3 de CVE-2022-1388 (F5 BIG-IP)?",
+    "expected_keywords": ["9.8", "critical", "F5", "BIG-IP", "authentication bypass"],
+    "expected_source": "NVD",
+    "ground_truth": "CVE-2022-1388 tiene CVSS v3 de 9.8 (CRITICAL). Es un bypass de autenticación en F5 BIG-IP que permite ejecución de comandos sin autenticación.",
+    "notes": "Explotada días después de la divulgación. Score verificable en NVD."
+  },
+  {
+    "id": "Q058",
+    "level": 1,
+    "domain": "NVD",
+    "question": "¿Cuántas vulnerabilidades con severidad CRITICAL existen en la base de datos local del año 2022?",
+    "expected_keywords": ["critical", "crítica", "2022", "vulnerabilidades"],
+    "expected_source": "NVD_LOCAL",
+    "ground_truth": "En 2022 se publicaron miles de CVEs con severidad CRITICAL en NVD. El conteo exacto depende de los datos descargados.",
+    "notes": "Pregunta de agregación COUNT. Solo Arquitectura A puede responderla directamente."
+  },
+  {
+    "id": "Q059",
+    "level": 1,
+    "domain": "NVD",
+    "question": "¿Cuántas vulnerabilidades están asociadas a CWE-200 (Information Exposure) en la base de datos local?",
+    "expected_keywords": ["CWE-200", "information exposure", "divulgación"],
+    "expected_source": "NVD_LOCAL",
+    "ground_truth": "CWE-200 (Information Exposure/Divulgación de Información) es una debilidad muy común. El conteo exacto depende de los datos descargados de NVD.",
+    "notes": "JOIN entre cve y cve_cwe. Diseñada para Arquitectura A."
+  },
+  {
+    "id": "Q060",
+    "level": 1,
+    "domain": "NVD",
+    "question": "¿Cuál es el CVE con mayor CVSS score publicado en 2022 en la base de datos local?",
+    "expected_keywords": ["10.0", "2022", "critical", "máximo"],
+    "expected_source": "NVD_LOCAL",
+    "ground_truth": "En 2022 hubo múltiples CVEs con CVSS 10.0. Entre los más notables están CVE-2022-22965 (Spring4Shell) y CVE-2022-1388 (F5 BIG-IP).",
+    "notes": "ORDER BY cvss_score DESC LIMIT 1. Para Arquitectura A."
+  },
+  {
+    "id": "Q061",
+    "level": 1,
+    "domain": "NVD",
+    "question": "¿Qué score CVSS v3 tiene CVE-2024-21762 (Fortinet FortiOS)?",
+    "expected_keywords": ["9.6", "critical", "fortinet", "fortios", "out-of-bounds"],
+    "expected_source": "NVD",
+    "ground_truth": "CVE-2024-21762 tiene CVSS v3 de 9.6 (CRITICAL). Es una vulnerabilidad out-of-bounds write en Fortinet FortiOS SSL VPN que permite ejecución de código remoto.",
+    "notes": "Explotada activamente en 2024. Score verificable en NVD."
+  },
+  {
+    "id": "Q062",
+    "level": 1,
+    "domain": "NVD",
+    "question": "¿Cuántos CVEs publicados en 2023 tienen debilidad CWE-416 (Use After Free)?",
+    "expected_keywords": ["CWE-416", "use after free", "2023"],
+    "expected_source": "NVD_LOCAL",
+    "ground_truth": "CWE-416 (Use After Free) es muy común en software de bajo nivel. El conteo exacto en 2023 depende de los datos disponibles.",
+    "notes": "Filtro por año + CWE. Diseñada para Arquitectura A."
+  },
+  {
+    "id": "Q063",
+    "level": 1,
+    "domain": "MITRE",
+    "question": "¿En qué táctica MITRE ATT&CK se clasifica T1190 (Exploit Public-Facing Application)?",
+    "expected_keywords": ["initial access", "acceso inicial", "T1190", "TA0001"],
+    "expected_source": "MITRE",
+    "ground_truth": "T1190 (Exploit Public-Facing Application) pertenece a la táctica Initial Access (TA0001). Cubre la explotación de vulnerabilidades en aplicaciones expuestas a internet.",
+    "notes": "Técnica central para CVEs con CVSS alto. Verificable en MITRE ATT&CK."
+  },
+  {
+    "id": "Q064",
+    "level": 1,
+    "domain": "MITRE",
+    "question": "¿Cuál es la descripción de la técnica MITRE ATT&CK T1055 (Process Injection)?",
+    "expected_keywords": ["T1055", "process injection", "inyección", "proceso", "memory"],
+    "expected_source": "MITRE",
+    "ground_truth": "T1055 (Process Injection) describe técnicas para inyectar código en el espacio de memoria de un proceso legítimo para evadir detección y elevar privilegios.",
+    "notes": "Técnica de evasión muy común. Verificable en MITRE ATT&CK."
+  },
+  {
+    "id": "Q065",
+    "level": 1,
+    "domain": "MITRE",
+    "question": "¿Cuál es el nombre de la técnica MITRE ATT&CK con ID T1003?",
+    "expected_keywords": ["OS Credential Dumping", "T1003", "credentials", "credenciales", "dumping"],
+    "expected_source": "MITRE",
+    "ground_truth": "T1003 se denomina 'OS Credential Dumping'. Abarca técnicas para extraer credenciales del sistema operativo como LSASS, SAM, o NTDS.",
+    "notes": "Técnica clave en post-explotación. Verificable en MITRE."
+  },
+  {
+    "id": "Q066",
+    "level": 1,
+    "domain": "MITRE",
+    "question": "¿Qué plataformas afecta la técnica T1027 (Obfuscated Files or Information)?",
+    "expected_keywords": ["windows", "linux", "macos", "T1027", "obfuscation"],
+    "expected_source": "MITRE",
+    "ground_truth": "T1027 (Obfuscated Files or Information) afecta a Windows, Linux y macOS. Cubre técnicas de ofuscación de código, archivos y comunicaciones.",
+    "notes": "Técnica multi-plataforma. Verificable en MITRE ATT&CK."
+  },
+  {
+    "id": "Q067",
+    "level": 1,
+    "domain": "MITRE",
+    "question": "¿En qué táctica MITRE ATT&CK se clasifica T1005 (Data from Local System)?",
+    "expected_keywords": ["collection", "T1005", "datos", "local system", "TA0009"],
+    "expected_source": "MITRE",
+    "ground_truth": "T1005 (Data from Local System) pertenece a la táctica Collection (TA0009). Describe la recolección de información de ficheros y directorios locales.",
+    "notes": "Técnica de recolección. Verificable en MITRE ATT&CK."
+  },
+  {
+    "id": "Q068",
+    "level": 1,
+    "domain": "MITRE",
+    "question": "¿Qué mitigaciones existen para T1003 (OS Credential Dumping)?",
+    "expected_keywords": ["M1043", "M1025", "credential access protection", "lsass", "password"],
+    "expected_source": "MITRE",
+    "ground_truth": "Las mitigaciones para T1003 incluyen M1043 (Credential Access Protection) para proteger LSASS, M1025 (Privileged Process Integrity) y el uso de Windows Credential Guard.",
+    "notes": "IDs de mitigación verificables en MITRE ATT&CK."
+  },
+  {
+    "id": "Q069",
+    "level": 1,
+    "domain": "MITRE",
+    "question": "¿Cuántas sub-técnicas tiene T1055 (Process Injection)?",
+    "expected_keywords": ["T1055", "sub-técnica", "DLL injection", "T1055.001", "process hollowing"],
+    "expected_source": "MITRE",
+    "ground_truth": "T1055 tiene múltiples sub-técnicas incluyendo T1055.001 (DLL Injection), T1055.002 (Portable Executable Injection), T1055.012 (Process Hollowing), entre otras.",
+    "notes": "El número varía con la versión ATT&CK. Verificable en el grafo."
+  },
+  {
+    "id": "Q070",
+    "level": 1,
+    "domain": "MITRE",
+    "question": "¿En qué táctica MITRE ATT&CK se clasifica T1041 (Exfiltration Over C2 Channel)?",
+    "expected_keywords": ["exfiltration", "T1041", "C2", "command and control", "TA0010"],
+    "expected_source": "MITRE",
+    "ground_truth": "T1041 (Exfiltration Over C2 Channel) pertenece a la táctica Exfiltration (TA0010). Describe la exfiltración de datos a través del mismo canal de comando y control.",
+    "notes": "Técnica de exfiltración. Verificable en MITRE ATT&CK."
+  },
+  {
+    "id": "Q071",
+    "level": 1,
+    "domain": "MITRE",
+    "question": "¿Qué descripción tiene la táctica MITRE ATT&CK 'Persistence' (TA0003)?",
+    "expected_keywords": ["persistence", "persistencia", "TA0003", "reinicio", "reboot", "acceso"],
+    "expected_source": "MITRE",
+    "ground_truth": "La táctica Persistence (TA0003) cubre técnicas usadas por los adversarios para mantener su presencia en los sistemas a través de reinicios, cambios de credenciales y otras interrupciones.",
+    "notes": "Táctica de persistencia. Verificable en MITRE ATT&CK."
+  },
+  {
+    "id": "Q072",
+    "level": 1,
+    "domain": "MITRE",
+    "question": "¿Qué técnica MITRE ATT&CK describe el uso de cuentas de servicio para persistencia?",
+    "expected_keywords": ["T1078", "valid accounts", "service accounts", "cuentas de servicio", "persistence"],
+    "expected_source": "MITRE",
+    "ground_truth": "T1078 (Valid Accounts) cubre el uso de credenciales legítimas, incluyendo cuentas de servicio, para mantener acceso y persistencia en sistemas comprometidos.",
+    "notes": "T1078 es multi-táctica (Initial Access, Persistence, Privilege Escalation). Verificable en MITRE."
+  },
+  {
+    "id": "Q073",
+    "level": 1,
+    "domain": "MITRE",
+    "question": "¿Cuál es el nombre de la técnica MITRE ATT&CK T1562?",
+    "expected_keywords": ["T1562", "Impair Defenses", "defenses", "antivirus", "desactivar"],
+    "expected_source": "MITRE",
+    "ground_truth": "T1562 se denomina 'Impair Defenses'. Abarca técnicas para deshabilitar o modificar herramientas de seguridad como antivirus, firewalls y registros de eventos.",
+    "notes": "Técnica de evasión. Verificable en MITRE ATT&CK."
+  },
+  {
+    "id": "Q074",
+    "level": 2,
+    "domain": "MITRE",
+    "question": "¿Qué grupos APT utilizan la técnica T1021 (Remote Services) según MITRE ATT&CK?",
+    "expected_keywords": ["APT", "T1021", "remote services", "SMB", "RDP", "grupo"],
+    "expected_source": "MITRE",
+    "ground_truth": "Múltiples grupos APT usan T1021, incluyendo APT29, APT41, Lazarus Group y grupos de ransomware para desplazamiento lateral mediante RDP, SMB y otros servicios remotos.",
+    "notes": "Consulta de relación grupo↔técnica en el grafo MITRE."
+  },
+  {
+    "id": "Q075",
+    "level": 2,
+    "domain": "NVD",
+    "question": "¿Qué CVEs críticos relacionados con Cisco publicados en 2023 están en la base de datos local?",
+    "expected_keywords": ["cisco", "critical", "2023", "CVE", "ios"],
+    "expected_source": "NVD_LOCAL",
+    "ground_truth": "En 2023 se publicaron CVEs críticos de Cisco incluyendo CVE-2023-20198 (IOS XE Web UI). El listado exacto depende de los datos descargados.",
+    "notes": "Búsqueda por vendor + año + severidad. Para Arquitecturas A y B."
+  },
+  {
+    "id": "Q076",
+    "level": 2,
+    "domain": "MITRE",
+    "question": "¿Qué técnicas de MITRE ATT&CK están en la táctica Defense Evasion?",
+    "expected_keywords": ["defense evasion", "TA0005", "T1055", "T1027", "T1562", "evasión"],
+    "expected_source": "MITRE",
+    "ground_truth": "Defense Evasion (TA0005) incluye técnicas como T1055 (Process Injection), T1027 (Obfuscated Files), T1562 (Impair Defenses), T1036 (Masquerading), entre más de 40 técnicas.",
+    "notes": "Táctica con más técnicas en ATT&CK Enterprise. Verificable en el grafo."
+  },
+  {
+    "id": "Q077",
+    "level": 2,
+    "domain": "MITRE",
+    "question": "¿Qué herramientas maliciosas (software) usa APT32 (OceanLotus) según MITRE ATT&CK?",
+    "expected_keywords": ["APT32", "OceanLotus", "G0050", "vietnam", "malware", "software"],
+    "expected_source": "MITRE",
+    "ground_truth": "APT32 (OceanLotus, G0050) es un grupo vietnamita que usa herramientas como SOUNDBITE, WINDSHIELD y otros implantes personalizados documentados en MITRE ATT&CK.",
+    "notes": "Verificable en perfil G0050 de MITRE ATT&CK."
+  },
+  {
+    "id": "Q078",
+    "level": 2,
+    "domain": "NVD",
+    "question": "¿Cuántos CVEs con score CVSS superior a 9.0 se publicaron en 2024 en la base de datos local?",
+    "expected_keywords": ["9.0", "critical", "2024", "vulnerabilidades", "conteo"],
+    "expected_source": "NVD_LOCAL",
+    "ground_truth": "En 2024 se publicaron cientos de CVEs con CVSS > 9.0. El conteo exacto depende de los datos disponibles en la BD local.",
+    "notes": "Consulta COUNT + filtro numérico. Para Arquitectura A."
+  },
+  {
+    "id": "Q079",
+    "level": 2,
+    "domain": "MITRE",
+    "question": "¿Qué técnicas de MITRE ATT&CK están asociadas a la táctica Persistence?",
+    "expected_keywords": ["persistence", "TA0003", "T1078", "T1547", "T1053", "scheduled task"],
+    "expected_source": "MITRE",
+    "ground_truth": "La táctica Persistence (TA0003) incluye técnicas como T1053 (Scheduled Task/Job), T1547 (Boot or Logon Autostart Execution), T1078 (Valid Accounts), T1136 (Create Account), entre otras.",
+    "notes": "Consulta de técnicas por táctica. Verificable en el grafo MITRE."
+  },
+  {
+    "id": "Q080",
+    "level": 2,
+    "domain": "MITRE",
+    "question": "¿Qué grupos APT documentados en MITRE ATT&CK están asociados a China?",
+    "expected_keywords": ["APT41", "APT10", "china", "G0096", "G0045", "PRC"],
+    "expected_source": "MITRE",
+    "ground_truth": "Los grupos APT chinos documentados en MITRE incluyen APT41 (G0096), APT10 (G0045), Axiom (G0001), Ke3chang (G0004), Bronze Butler, entre otros.",
+    "notes": "Búsqueda por atribución geográfica en el grafo MITRE."
+  },
+  {
+    "id": "Q081",
+    "level": 2,
+    "domain": "NVD",
+    "question": "¿Cuáles son los CVEs con mayor CVSS score relacionados con productos Microsoft publicados en 2021?",
+    "expected_keywords": ["microsoft", "2021", "critical", "10.0", "CVE"],
+    "expected_source": "NVD",
+    "ground_truth": "En 2021, los CVEs críticos de Microsoft incluyeron ProxyLogon (CVE-2021-26855, CVSS 9.8), PrintNightmare (CVE-2021-34527) y otros con scores altos.",
+    "notes": "Búsqueda por vendor + año + severidad. Útil para comparar A vs B."
+  },
+  {
+    "id": "Q082",
+    "level": 2,
+    "domain": "MITRE",
+    "question": "¿Qué técnicas usa Sandworm Team según MITRE ATT&CK?",
+    "expected_keywords": ["Sandworm", "G0034", "ukraine", "russia", "T1486", "NotPetya"],
+    "expected_source": "MITRE",
+    "ground_truth": "Sandworm Team (G0034) es un grupo ruso vinculado a ataques destructivos. Usa T1486 (Data Encrypted for Impact), T1561 (Disk Wipe) y técnicas contra infraestructuras críticas. Responsable de NotPetya.",
+    "notes": "Verificable en perfil G0034 de MITRE ATT&CK."
+  },
+  {
+    "id": "Q083",
+    "level": 2,
+    "domain": "NVD",
+    "question": "¿Qué CVEs afectando a Fortinet FortiOS existen en la base de datos local entre 2022 y 2023?",
+    "expected_keywords": ["fortinet", "fortios", "2022", "2023", "VPN", "CVE"],
+    "expected_source": "NVD_LOCAL",
+    "ground_truth": "Fortinet FortiOS tuvo múltiples CVEs críticos en 2022-2023 incluyendo CVE-2022-40684 (authentication bypass) y CVE-2023-27997 (heap overflow en SSL VPN).",
+    "notes": "Búsqueda por vendor + rango de años. Para Arquitectura A con BETWEEN."
+  },
+  {
+    "id": "Q084",
+    "level": 2,
+    "domain": "MITRE",
+    "question": "¿Qué herramientas (software S0) usa APT28 según MITRE ATT&CK?",
+    "expected_keywords": ["APT28", "G0007", "Sofacy", "X-Agent", "Mimikatz", "software"],
+    "expected_source": "MITRE",
+    "ground_truth": "APT28 (Fancy Bear, G0007) usa herramientas como X-Agent (CHOPSTICK), Mimikatz, LOJAX y otros implantes personalizados documentados en MITRE ATT&CK.",
+    "notes": "Verificable en perfil G0007 de MITRE ATT&CK."
+  },
+  {
+    "id": "Q085",
+    "level": 2,
+    "domain": "MITRE",
+    "question": "¿Qué técnicas de MITRE ATT&CK están asociadas a la táctica Collection?",
+    "expected_keywords": ["collection", "TA0009", "T1005", "T1056", "T1113", "keylogging"],
+    "expected_source": "MITRE",
+    "ground_truth": "Collection (TA0009) incluye técnicas como T1005 (Data from Local System), T1056 (Input Capture/Keylogging), T1113 (Screen Capture), T1530 (Data from Cloud Storage), entre otras.",
+    "notes": "Consulta de técnicas por táctica. Verificable en el grafo MITRE."
+  },
+  {
+    "id": "Q086",
+    "level": 2,
+    "domain": "NVD",
+    "question": "¿Cuántas vulnerabilidades con CVSS v3 de 10.0 existen en la base de datos local para el año 2023?",
+    "expected_keywords": ["10.0", "critical", "2023", "máximo", "score"],
+    "expected_source": "NVD_LOCAL",
+    "ground_truth": "En 2023 se publicaron varios CVEs con CVSS 10.0. El conteo exacto depende de los datos disponibles. CVE-2023-20198 (Cisco) y otros destacados son ejemplos.",
+    "notes": "COUNT con filtro exacto. Para Arquitectura A."
+  },
+  {
+    "id": "Q087",
+    "level": 3,
+    "domain": "BOTH",
+    "question": "Un equipo de respuesta a incidentes detecta indicadores de T1078 (Valid Accounts) en su red. ¿Qué CVEs deberían priorizar para parchear y qué medidas urgentes tomar?",
+    "expected_keywords": ["T1078", "valid accounts", "MFA", "parche", "CVE", "credenciales", "acceso"],
+    "expected_source": "BOTH",
+    "ground_truth": "Ante T1078, priorizar: 1) CVEs en sistemas de autenticación (Exchange, VPN, AD). 2) Activar MFA inmediatamente. 3) Auditar cuentas con privilegios. 4) Revisar logs de inicio de sesión. CVEs relevantes: CVE-2021-26855 (Exchange) y CVEs en sistemas de IdP.",
+    "notes": "Respuesta de incidente con correlación MITRE+NVD. Nivel 3."
+  },
+  {
+    "id": "Q088",
+    "level": 3,
+    "domain": "BOTH",
+    "question": "¿Qué relación existe entre CVE-2020-1472 (Zerologon) y el framework MITRE ATT&CK? ¿Qué técnicas habilita?",
+    "expected_keywords": ["CVE-2020-1472", "zerologon", "T1210", "privilege escalation", "netlogon", "domain controller"],
+    "expected_source": "BOTH",
+    "ground_truth": "CVE-2020-1472 (Zerologon) habilita T1210 (Exploitation of Remote Services) para elevar privilegios hasta Domain Admin sin autenticación. Corresponde también a Privilege Escalation. Permite comprometer el DC completamente.",
+    "notes": "Correlación CVE↔ATT&CK específica. Nivel 3."
+  },
+  {
+    "id": "Q089",
+    "level": 3,
+    "domain": "BOTH",
+    "question": "¿Qué cadena de ataque podría usar un APT para comprometer una infraestructura industrial (ICS/OT) usando técnicas MITRE ATT&CK y CVEs recientes?",
+    "expected_keywords": ["ICS", "OT", "T1190", "lateral movement", "T1486", "initial access", "CVE"],
+    "expected_source": "BOTH",
+    "ground_truth": "Una kill chain ICS: Initial Access via T1190 (CVE en VPN/firewall) → Lateral Movement T1021 → Discovery de red OT T1046 → Impacto T1489 (Service Stop) o T1485 (Data Destruction).",
+    "notes": "Escenario de ataque a infraestructura crítica. Nivel máximo."
+  },
+  {
+    "id": "Q090",
+    "level": 3,
+    "domain": "BOTH",
+    "question": "¿Cómo se relacionan las técnicas del grupo Lazarus Group con vulnerabilidades críticas documentadas en NVD?",
+    "expected_keywords": ["lazarus", "G0032", "CVE", "korea", "T1190", "WannaCry", "vulnerabilidad"],
+    "expected_source": "BOTH",
+    "ground_truth": "Lazarus Group explota CVEs críticos en fase de acceso inicial (T1190) incluyendo vulnerabilidades en servidores web y aplicaciones. WannaCry explotó CVE-2017-0144 (EternalBlue). También usa spearphishing (T1566).",
+    "notes": "Correlación grupo APT ↔ CVEs específicos. Nivel 3."
+  },
+  {
+    "id": "Q091",
+    "level": 3,
+    "domain": "BOTH",
+    "question": "¿Qué recomendarías a una organización con servidores Microsoft Exchange vulnerables ante los TTPs de APT28?",
+    "expected_keywords": ["APT28", "exchange", "CVE-2021-26855", "CVE-2023-23397", "T1566", "parche", "MFA"],
+    "expected_source": "BOTH",
+    "ground_truth": "Para defender Exchange de APT28: 1) Parchear CVE-2021-26855 (ProxyLogon) y CVE-2023-23397 (Outlook NTLM). 2) Activar MFA. 3) Monitorizar T1566 (Phishing) y T1078 (Valid Accounts). 4) Implementar EDR con reglas para Mimikatz.",
+    "notes": "Recomendación defensiva multi-fuente. Nivel 3."
+  },
+  {
+    "id": "Q092",
+    "level": 3,
+    "domain": "BOTH",
+    "question": "¿Qué vulnerabilidades de acceso inicial (T1190) con CVSS mayor de 9.5 fueron publicadas en 2024 y qué sistemas afectan?",
+    "expected_keywords": ["T1190", "initial access", "2024", "CVSS", "9.5", "crítica", "CVE-2024"],
+    "expected_source": "BOTH",
+    "ground_truth": "En 2024, CVEs con CVSS ≥ 9.5 correspondientes a T1190 incluyen CVE-2024-3400 (Palo Alto PAN-OS, CVSS 10.0) y CVE-2024-21762 (Fortinet FortiOS, CVSS 9.6), entre otros en dispositivos perimetrales.",
+    "notes": "Correlación NVD filtrado + técnica MITRE. Nivel 3."
+  },
+  {
+    "id": "Q093",
+    "level": 3,
+    "domain": "BOTH",
+    "question": "¿Qué técnicas de MITRE ATT&CK habilita CVE-2022-30190 (Follina) y cuál es su cadena de explotación típica?",
+    "expected_keywords": ["Follina", "CVE-2022-30190", "T1203", "client execution", "msdt", "initial access", "macro"],
+    "expected_source": "BOTH",
+    "ground_truth": "Follina (CVE-2022-30190) habilita T1203 (Exploitation for Client Execution) mediante documentos Word maliciosos que invocan MSDT sin abrir macros. Cadena: T1566.001 (Spearphishing Attachment) → T1203 → T1059 (Execution).",
+    "notes": "Correlación CVE específico ↔ ATT&CK detallado. Nivel 3."
+  },
+  {
+    "id": "Q094",
+    "level": 3,
+    "domain": "BOTH",
+    "question": "¿Qué estrategia defensiva recomendarías para una organización que recibe campañas de phishing (T1566) con adjuntos que explotan CVEs en Microsoft Office?",
+    "expected_keywords": ["T1566", "phishing", "office", "CVE", "M1049", "email filtering", "sandbox", "parche"],
+    "expected_source": "BOTH",
+    "ground_truth": "Estrategia: 1) Sandboxing de adjuntos (M1049). 2) Parchear CVEs en Office (CVE-2022-30190 Follina, CVE-2023-23397 Outlook). 3) Bloquear macros por defecto. 4) Formación anti-phishing. 5) Reglas YARA/Sigma para detección.",
+    "notes": "Defensa en profundidad con correlación CVE+MITRE. Nivel 3."
+  },
+  {
+    "id": "Q095",
+    "level": 3,
+    "domain": "BOTH",
+    "question": "¿Cómo puede un analista correlacionar la técnica T1059.001 (PowerShell) con CVEs recientes que abusen de esta técnica de ejecución?",
+    "expected_keywords": ["T1059.001", "PowerShell", "CVE", "execution", "correlación", "AMSI", "logging"],
+    "expected_source": "BOTH",
+    "ground_truth": "T1059.001 se correlaciona con CVEs que permiten ejecución remota (T1190) que luego invocan PowerShell. La correlación práctica: detectar T1059.001 en logs → buscar CVEs recientes sin parchear en el host → priorizar remediación.",
+    "notes": "Correlación técnica de ejecución ↔ contexto de vulnerabilidad. Nivel 3."
+  },
+  {
+    "id": "Q096",
+    "level": 3,
+    "domain": "BOTH",
+    "question": "Compara las capacidades ofensivas de APT28 y APT29 en términos de TTPs documentados en MITRE ATT&CK y CVEs que explotan habitualmente.",
+    "expected_keywords": ["APT28", "APT29", "Fancy Bear", "Cozy Bear", "T1566", "T1078", "CVE-2023-23397"],
+    "expected_source": "BOTH",
+    "ground_truth": "APT28 (GRU, Fancy Bear) destaca en ataques destructivos y acceso a infraestructura crítica; APT29 (SVR, Cozy Bear) en espionaje silencioso y persistencia. Ambos usan T1566 y T1078. APT28 explota CVE-2023-23397; APT29 prefiere 0-days y supply chain.",
+    "notes": "Comparativa entre dos grandes APTs rusos. Nivel máximo."
+  },
+  {
+    "id": "Q097",
+    "level": 3,
+    "domain": "BOTH",
+    "question": "¿Qué prioridades debe establecer un SOC tras detectar actividad de T1486 (ransomware) en su red?",
+    "expected_keywords": ["T1486", "ransomware", "backup", "contención", "M1053", "aislamiento", "incident response"],
+    "expected_source": "BOTH",
+    "ground_truth": "Prioridades ante T1486: 1) Aislar sistemas afectados inmediatamente. 2) Verificar integridad de backups (M1053). 3) Identificar punto de entrada (T1190, T1566). 4) Determinar qué CVEs fueron explotados para el acceso inicial. 5) No pagar rescate.",
+    "notes": "Respuesta a incidente de ransomware con marco ATT&CK. Nivel 3."
+  },
+  {
+    "id": "Q098",
+    "level": 3,
+    "domain": "BOTH",
+    "question": "¿Cómo se puede usar MITRE ATT&CK y NVD de forma conjunta para priorizar el parcheo de vulnerabilidades en una organización?",
+    "expected_keywords": ["priorización", "CVSS", "ATT&CK", "T1190", "parcheo", "riesgo", "EPSS"],
+    "expected_source": "BOTH",
+    "ground_truth": "Metodología: 1) Identificar CVEs con CVSS alto (>9.0) en activos expuestos. 2) Correlacionar con técnicas ATT&CK explotadas por APTs relevantes (T1190, T1566). 3) Priorizar CVEs asociados a técnicas usadas por grupos que atacan el sector. 4) Considerar EPSS para probabilidad de explotación activa.",
+    "notes": "Metodología de gestión de vulnerabilidades basada en riesgo. Nivel 3."
+  },
+  {
+    "id": "Q099",
+    "level": 3,
+    "domain": "BOTH",
+    "question": "¿Qué técnicas de MITRE ATT&CK permiten a un atacante evadir detección tras comprometer un sistema con CVE-2019-0708 (BlueKeep)?",
+    "expected_keywords": ["BlueKeep", "CVE-2019-0708", "defense evasion", "T1055", "T1027", "lateral movement", "T1021"],
+    "expected_source": "BOTH",
+    "ground_truth": "Tras explotar BlueKeep (CVE-2019-0708) para acceso inicial, un atacante usaría técnicas de Defense Evasion como T1055 (Process Injection) y T1027 (Obfuscation), seguidas de Lateral Movement via T1021 para expandirse por la red.",
+    "notes": "Cadena de técnicas post-explotación. Nivel 3."
+  },
+  {
+    "id": "Q100",
+    "level": 3,
+    "domain": "BOTH",
+    "question": "¿Qué factores hacen que una CVE sea más probable de ser explotada por grupos APT y cómo puede una organización anticiparlo?",
+    "expected_keywords": ["CVSS", "explotación", "APT", "KEV", "EPSS", "patch management", "T1190", "supply chain"],
+    "expected_source": "BOTH",
+    "ground_truth": "Factores que aumentan probabilidad de explotación APT: CVSS ≥ 9.0, uso de T1190 (Exploit Public-Facing), disponibilidad de exploit público, productos ampliamente desplegados (VPNs, email). Las organizaciones deben monitorizar CISA KEV, EPSS scores y técnicas ATT&CK usadas por APTs relevantes a su sector.",
+    "notes": "Pregunta de síntesis sobre gestión de riesgo y threat intelligence. Nivel máximo."
+  }
+]

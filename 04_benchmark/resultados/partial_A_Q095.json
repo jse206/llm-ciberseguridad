@@ -1,0 +1,39 @@
+{
+  "result": {
+    "answer": "Los resultados de la consulta SQL ejecutada contra la base de datos NVD/NIST no están vacíos y proporcionan información sobre varias vulnerabilidades recientes que podrían estar relacionadas con la técnica T1059.001 (PowerShell). A continuación, se presentan algunos de los CVEs relevantes:\n\n1. **CVE-2025-66863**: Descripción de una vulnerabilidad en BinUtils 2.26 que permite a los atacantes causar una denegación de servicio mediante un archivo PE manipulado. CVSS v3: 7.5 (ALTA).\n   \n2. **CVE-2025-66861**: Otra vulnerabilidad en BinUtils 2.26 que permite a los atacantes causar una denegación de servicio a través de un archivo PE manipulado. CVSS v3: 2.5 (BAJA).\n\n3. **CVE-2025-60458**: UxPlay 1.72 presenta una vulnerabilidad de doble liberación en el manejo de solicitudes RTSP, lo que puede causar una denegación de servicio. CVSS v3: 6.5 (MEDIA).\n\n4. **CVE-2025-25341**: Vulnerabilidad en libxmljs 1.0.11 que puede causar un fallo de segmentación al procesar un documento XML especialmente manipulado. CVSS v3: 7.5 (ALTA).\n\n5. **CVE-2025-59529**: Problema en Avahi que permite a usuarios locales no privilegiados agotar la memoria y descriptores de archivos del daemon, causando una denegación de servicio. CVSS v3: 5.5 (MEDIA).\n\n6. **CVE-2025-8872**: Vulnerabilidad en Arista EOS que puede causar alta utilización de CPU en el proceso OSPFv3, lo que podría resultar en reinicios del proceso. CVSS v3: 6.5 (MEDIA).\n\n7. **CVE-2023-53873**: Vulnerabilidad en SyncBreeze que permite a los atacantes causar una denegación de servicio mediante un parámetro de contraseña sobredimensionado. CVSS v3: No disponible.\n\n8. **CVE-2025-65781**: Vulnerabilidad en Wekan que permite un DoS trivial y suplantación de identidad. CVSS v3: 8.2 (ALTA).\n\n9. **CVE-2025-67731**: Problema en Servify Express que puede permitir a los atacantes enviar cuerpos de solicitud extremadamente grandes, causando un DoS. CVSS v3: 7.5 (ALTA).\n\n10. **CVE-2025-67726**: Vulnerabilidad en Tornado que puede causar un DoS al procesar parámetros HTTP. \n\nEstos CVEs son ejemplos de vulnerabilidades que podrían ser explotadas utilizando PowerShell, lo que permite a un analista correlacionar la técnica T1059.001 con amenazas recientes.",
+    "sql": "SELECT cve.cve_id, cve.description, cve.cvss_v3_score, cve.cvss_v3_severity\nFROM cve\nJOIN cve_cwe ON cve.cve_id = cve_cwe.cve_id\nWHERE cve_cwe.cwe_id = 'CWE-400' -- Asumiendo que CWE-400 está relacionado con T1059.001 (PowerShell)\nAND cve.published >= '2023-01-01' -- Filtrando por CVEs recientes\nORDER BY cve.published DESC\nLIMIT 10;",
+    "sql_rows": 10,
+    "correction_attempts": 0,
+    "sql_error": null,
+    "api_fallback": null,
+    "hallucination_risk": false,
+    "usage": {
+      "prompt_tokens": 4607,
+      "completion_tokens": 885,
+      "total_tokens": 5492,
+      "schema_linking_latency_s": 2.967,
+      "sql_generation_latency_s": 2.986,
+      "self_correction_latency_s": 0,
+      "synthesis_latency_s": 11.344
+    },
+    "architecture": "A_Text2SQL"
+  },
+  "metrics": {
+    "question_id": "Q095",
+    "level": 3,
+    "domain": "BOTH",
+    "architecture": "A_Text2SQL",
+    "accuracy": 0.4286,
+    "hallucination_risk": 0.0,
+    "traceability": 1.0,
+    "error_handling": 1.0,
+    "latency_s": 17.297,
+    "total_tokens": 5492,
+    "accuracy_detail": "Score=0.429 | completas=['T1059.001', 'PowerShell', 'CVE'] | parciales=[] | ausentes=['execution', 'correlación', 'AMSI', 'logging']",
+    "hallucination_detail": "Sin señales de alucinación detectadas",
+    "traceability_detail": "Markers texto: ['nvd', 'nist', 'base de datos'] | Fuente estructurada: api_source=False, seed_nodes=False, sql=True",
+    "error_handling_detail": "Sin errores detectados en el pipeline",
+    "latency_detail": "linking=2.97s sql=2.99s corr=0.00s synth=11.34s",
+    "answer_preview": "Los resultados de la consulta SQL ejecutada contra la base de datos NVD/NIST no están vacíos y proporcionan información sobre varias vulnerabilidades recientes que podrían estar relacionadas con la técnica T1059.001 (PowerShell). A continuación, se presentan algunos de los CVEs relevantes:\n\n1. **CVE…"
+  }
+}

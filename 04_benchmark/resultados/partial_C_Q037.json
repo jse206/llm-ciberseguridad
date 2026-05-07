@@ -1,0 +1,49 @@
+{
+  "result": {
+    "answer": "Según MITRE ATT&CK, para la técnica T1059 (Command and Scripting Interpreter), se recomiendan varias medidas de detección y mitigación. Aunque el subgrafo proporcionado no incluye específicamente las recomendaciones de detección para esta técnica, se pueden inferir algunas prácticas generales basadas en las tácticas y técnicas relacionadas.\n\n1. **Auditoría (M1047)**: Implementar un proceso de auditoría que registre y revise sistemáticamente la actividad y las configuraciones del sistema. Esto puede ayudar a detectar el uso no autorizado de intérpretes de comandos y scripts.\n\n2. **Prevención de Ejecución (M1038)**: Implementar controles de ejecución que prevengan la ejecución de código no autorizado o malicioso. Esto incluye el uso de mecanismos de control de aplicaciones y bloqueo de scripts, asegurando que solo se ejecute código de fuentes confiables.\n\n3. **Gestión de Cuentas Privilegiadas (M1026)**: Asegurarse de que las cuentas privilegiadas estén gestionadas de manera segura puede ayudar a prevenir el abuso de intérpretes de comandos y scripts por parte de adversarios.\n\n4. **Configuración del Sistema Operativo (M1028)**: Ajustar la configuración del sistema operativo y endurecer las configuraciones predeterminadas puede mitigar la explotación de intérpretes de comandos y scripts.\n\n5. **Antivirus/Antimalware (M1049)**: Utilizar soluciones de antivirus y antimalware que empleen análisis de comportamiento y heurísticas para detectar y bloquear software malicioso, incluyendo scripts y comandos maliciosos.\n\n6. **Prevención de Comportamiento en el Endpoint (M1040)**: Implementar tecnologías y estrategias en los endpoints para detectar y bloquear comportamientos potencialmente maliciosos relacionados con la ejecución de scripts y comandos.\n\nEstas medidas pueden ayudar a detectar y mitigar el uso malicioso de intérpretes de comandos y scripts, aunque el subgrafo no proporciona detalles específicos sobre las detecciones. Para una implementación efectiva, es recomendable combinar estas estrategias con un monitoreo continuo y análisis de comportamiento en la red y los sistemas.",
+    "seed_nodes": [
+      "T1059",
+      "T1053.002",
+      "S0110",
+      "S0066"
+    ],
+    "subgraph_nodes": 40,
+    "subgraph_edges": 88,
+    "coverage": {
+      "sufficient": false,
+      "missing_entities": [
+        "detecciones recomendadas",
+        "T1059"
+      ],
+      "confidence": 0.3
+    },
+    "hallucination_risk": true,
+    "usage": {
+      "prompt_tokens": 2738,
+      "completion_tokens": 476,
+      "total_tokens": 3214,
+      "retrieval_latency_s": 0.01,
+      "coverage_latency_s": 1.33,
+      "synthesis_latency_s": 8.166
+    },
+    "architecture": "C_GraphRAG"
+  },
+  "metrics": {
+    "question_id": "Q037",
+    "level": 2,
+    "domain": "MITRE",
+    "architecture": "C_GraphRAG",
+    "accuracy": 0.75,
+    "hallucination_risk": 0.7,
+    "traceability": 1.0,
+    "error_handling": 1.0,
+    "latency_s": 9.506,
+    "total_tokens": 3214,
+    "accuracy_detail": "Score=0.750 | completas=['T1059', 'log', 'monitor', 'script'] | parciales=['command line(50%)'] | ausentes=['detection']",
+    "hallucination_detail": "Flag de riesgo activo (sin datos de fuente verificados)",
+    "traceability_detail": "Markers texto: ['mitre', 'att&ck', 'según'] | Fuente estructurada: api_source=False, seed_nodes=True, sql=False",
+    "error_handling_detail": "Sin errores detectados en el pipeline",
+    "latency_detail": "retrieval=0.01s coverage=1.33s synth=8.17s",
+    "answer_preview": "Según MITRE ATT&CK, para la técnica T1059 (Command and Scripting Interpreter), se recomiendan varias medidas de detección y mitigación. Aunque el subgrafo proporcionado no incluye específicamente las recomendaciones de detección para esta técnica, se pueden inferir algunas prácticas generales basada…"
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "result": {
+    "answer": "El grupo Sandworm Team utiliza varias técnicas según MITRE ATT&CK, incluyendo:\n\n1. **T1570 - Lateral Tool Transfer**: Transferencia de herramientas o archivos entre sistemas en un entorno comprometido.\n2. **T1489 - Service Stop**: Detener o deshabilitar servicios en un sistema para hacerlos inaccesibles a usuarios legítimos.\n3. **T1087.002 - Domain Account**: Listar cuentas de dominio para determinar cuáles existen y facilitar comportamientos posteriores.\n4. **T1071.001 - Web Protocols**: Comunicación utilizando protocolos de aplicación asociados con tráfico web para evitar detección.\n5. **T1049 - System Network Connections Discovery**: Listar conexiones de red hacia o desde el sistema comprometido.\n6. **T1585.002 - Email Accounts**: Crear cuentas de correo electrónico que pueden ser utilizadas durante las operaciones de ataque.\n\nAdemás, utilizan malware como **VPNFilter** y **Cyclops Blink** en sus operaciones. Estas técnicas abarcan tácticas de movimiento lateral, impacto, descubrimiento y control de comandos.\n\n**Fuentes consultadas:** query_mitre_graph",
+    "steps": [
+      {
+        "thought": "",
+        "action": "query_mitre_graph",
+        "action_input": {
+          "question": "¿Qué técnicas usa Sandworm Team?"
+        },
+        "observation_preview": "{\n  \"context\": \"=== SUBGRAFO MITRE ATT&CK ===\\n\\n--- Entidades recuperadas ---\\n  [attack-pattern] T1570 — Lateral Tool Transfer\\n     Adversaries may transfer tools or other files between systems in a compromised environment. Once brought into the victim environment (i.e., [Ingress Tool Transfer](h…"
+      }
+    ],
+    "tools_used": [
+      "query_mitre_graph"
+    ],
+    "iterations": 1,
+    "forced_final": false,
+    "hallucination_risk": false,
+    "usage": {
+      "prompt_tokens": 2419,
+      "completion_tokens": 345,
+      "total_tokens": 2764,
+      "total_latency_s": 6.123
+    },
+    "architecture": "D_Toolformer"
+  },
+  "metrics": {
+    "question_id": "Q082",
+    "level": 2,
+    "domain": "MITRE",
+    "architecture": "D_Toolformer",
+    "accuracy": 0.1667,
+    "hallucination_risk": 0.0,
+    "traceability": 0.5,
+    "error_handling": 1.0,
+    "latency_s": 6.123,
+    "total_tokens": 2764,
+    "accuracy_detail": "Score=0.167 | completas=['Sandworm'] | parciales=[] | ausentes=['G0034', 'ukraine', 'russia', 'T1486', 'NotPetya']",
+    "hallucination_detail": "Sin señales de alucinación detectadas",
+    "traceability_detail": "Markers texto: ['mitre', 'att&ck', 'según'] | Fuente estructurada: api_source=False, seed_nodes=False, sql=False",
+    "error_handling_detail": "Sin errores detectados en el pipeline",
+    "latency_detail": "total_react=6.12s iterations=1",
+    "answer_preview": "El grupo Sandworm Team utiliza varias técnicas según MITRE ATT&CK, incluyendo:\n\n1. **T1570 - Lateral Tool Transfer**: Transferencia de herramientas o archivos entre sistemas en un entorno comprometido.\n2. **T1489 - Service Stop**: Detener o deshabilitar servicios en un sistema para hacerlos inaccesi…"
+  }
+}

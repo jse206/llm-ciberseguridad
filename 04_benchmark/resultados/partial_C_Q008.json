@@ -1,0 +1,41 @@
+{
+  "result": {
+    "answer": "No se encontraron nodos relevantes en el grafo MITRE ATT&CK para responder a tu pregunta sobre las vulnerabilidades con mayor CVSS v3 score publicadas en 2023. \n\nEl sistema MITRE ATT&CK se centra en técnicas de ataque, grupos APT, tácticas, mitigaciones y herramientas utilizadas en ciberseguridad. Si tienes preguntas relacionadas con estos temas, estaré encantado de ayudarte.",
+    "seed_nodes": [],
+    "subgraph_nodes": 0,
+    "subgraph_edges": 0,
+    "coverage": {
+      "sufficient": false,
+      "missing_entities": [],
+      "confidence": 0.0
+    },
+    "hallucination_risk": true,
+    "usage": {
+      "prompt_tokens": 144,
+      "completion_tokens": 86,
+      "total_tokens": 230,
+      "retrieval_latency_s": 0.018,
+      "coverage_latency_s": 0,
+      "synthesis_latency_s": 1.609
+    },
+    "architecture": "C_GraphRAG"
+  },
+  "metrics": {
+    "question_id": "Q008",
+    "level": 1,
+    "domain": "NVD",
+    "architecture": "C_GraphRAG",
+    "accuracy": 0.25,
+    "hallucination_risk": 0.7,
+    "traceability": 0.5,
+    "error_handling": 1.0,
+    "latency_s": 1.627,
+    "total_tokens": 230,
+    "accuracy_detail": "Score=0.250 | completas=['2023'] | parciales=[] | ausentes=['10.0', '9.9', 'critical']",
+    "hallucination_detail": "Flag de riesgo activo (sin datos de fuente verificados)",
+    "traceability_detail": "Markers texto: ['mitre', 'att&ck', 'grafo'] | Fuente estructurada: api_source=False, seed_nodes=False, sql=False",
+    "error_handling_detail": "Sin errores detectados en el pipeline",
+    "latency_detail": "retrieval=0.02s coverage=0.00s synth=1.61s",
+    "answer_preview": "No se encontraron nodos relevantes en el grafo MITRE ATT&CK para responder a tu pregunta sobre las vulnerabilidades con mayor CVSS v3 score publicadas en 2023. \n\nEl sistema MITRE ATT&CK se centra en técnicas de ataque, grupos APT, tácticas, mitigaciones y herramientas utilizadas en ciberseguridad. S…"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "result": {
+    "answer": "La severidad CVSS v3 de la vulnerabilidad identificada como CVE-2017-0144, según los datos de la base de datos NVD/NIST, es \"HIGH\" con un puntaje base de 8.8. \n\nEsta vulnerabilidad afecta al servidor SMBv1 en varias versiones de Microsoft Windows, permitiendo a atacantes remotos ejecutar código arbitrario a través de paquetes manipulados. El vector de ataque es a través de la red, con una complejidad de ataque baja y sin requerir interacción del usuario. Además, se requiere un nivel bajo de privilegios para explotar esta vulnerabilidad, y tiene un impacto alto en la confidencialidad, integridad y disponibilidad.\n\nSi necesitas más información sobre esta vulnerabilidad o su mitigación, no dudes en preguntar.",
+    "sql": "SELECT cvss_v3_severity FROM cve WHERE cve_id = 'CVE-2017-0144';",
+    "sql_rows": 1,
+    "correction_attempts": 0,
+    "sql_error": null,
+    "api_fallback": "NVD API — CVE-2017-0144",
+    "hallucination_risk": false,
+    "usage": {
+      "prompt_tokens": 4696,
+      "completion_tokens": 276,
+      "total_tokens": 4972,
+      "schema_linking_latency_s": 2.379,
+      "sql_generation_latency_s": 2.016,
+      "self_correction_latency_s": 0,
+      "synthesis_latency_s": 4.193
+    },
+    "architecture": "A_Text2SQL"
+  },
+  "metrics": {
+    "question_id": "Q002",
+    "level": 1,
+    "domain": "NVD",
+    "architecture": "A_Text2SQL",
+    "accuracy": 0.2,
+    "hallucination_risk": 0.0,
+    "traceability": 1.0,
+    "error_handling": 1.0,
+    "latency_s": 8.588,
+    "total_tokens": 4972,
+    "accuracy_detail": "Score=0.200 | completas=['smb'] | parciales=[] | ausentes=['critical', 'crítica', '9.8', 'eternalblue']",
+    "hallucination_detail": "Sin señales de alucinación detectadas",
+    "traceability_detail": "Markers texto: ['nvd', 'nist', 'según'] | Fuente estructurada: api_source=False, seed_nodes=False, sql=True",
+    "error_handling_detail": "Sin errores detectados en el pipeline",
+    "latency_detail": "linking=2.38s sql=2.02s corr=0.00s synth=4.19s",
+    "answer_preview": "La severidad CVSS v3 de la vulnerabilidad identificada como CVE-2017-0144, según los datos de la base de datos NVD/NIST, es \"HIGH\" con un puntaje base de 8.8. \n\nEsta vulnerabilidad afecta al servidor SMBv1 en varias versiones de Microsoft Windows, permitiendo a atacantes remotos ejecutar código arbi…"
+  }
+}

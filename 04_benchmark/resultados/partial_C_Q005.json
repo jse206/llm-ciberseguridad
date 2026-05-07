@@ -1,0 +1,41 @@
+{
+  "result": {
+    "answer": "No se encontró información relevante en el grafo MITRE ATT&CK para responder a tu pregunta sobre la fecha de publicación de la vulnerabilidad CVE-2022-30190. \n\nEl sistema MITRE ATT&CK se centra en técnicas de ataque, grupos APT, tácticas, mitigaciones y herramientas relacionadas con la ciberseguridad. Si tienes preguntas sobre alguno de estos temas, estaré encantado de ayudarte.",
+    "seed_nodes": [],
+    "subgraph_nodes": 0,
+    "subgraph_edges": 0,
+    "coverage": {
+      "sufficient": false,
+      "missing_entities": [],
+      "confidence": 0.0
+    },
+    "hallucination_risk": true,
+    "usage": {
+      "prompt_tokens": 142,
+      "completion_tokens": 87,
+      "total_tokens": 229,
+      "retrieval_latency_s": 0.016,
+      "coverage_latency_s": 0,
+      "synthesis_latency_s": 1.92
+    },
+    "architecture": "C_GraphRAG"
+  },
+  "metrics": {
+    "question_id": "Q005",
+    "level": 1,
+    "domain": "NVD",
+    "architecture": "C_GraphRAG",
+    "accuracy": 0.2,
+    "hallucination_risk": 0.7,
+    "traceability": 0.5,
+    "error_handling": 1.0,
+    "latency_s": 1.936,
+    "total_tokens": 229,
+    "accuracy_detail": "Score=0.200 | completas=['2022'] | parciales=[] | ausentes=['mayo', 'may', 'follina', 'msdt']",
+    "hallucination_detail": "Flag de riesgo activo (sin datos de fuente verificados)",
+    "traceability_detail": "Markers texto: ['mitre', 'att&ck', 'grafo'] | Fuente estructurada: api_source=False, seed_nodes=False, sql=False",
+    "error_handling_detail": "Sin errores detectados en el pipeline",
+    "latency_detail": "retrieval=0.02s coverage=0.00s synth=1.92s",
+    "answer_preview": "No se encontró información relevante en el grafo MITRE ATT&CK para responder a tu pregunta sobre la fecha de publicación de la vulnerabilidad CVE-2022-30190. \n\nEl sistema MITRE ATT&CK se centra en técnicas de ataque, grupos APT, tácticas, mitigaciones y herramientas relacionadas con la cibersegurida…"
+  }
+}

@@ -1,0 +1,130 @@
+[
+  {
+    "question_id": "Q001",
+    "architecture": "A",
+    "result": {
+      "answer": "[DRY-RUN] Respuesta simulada de Arquitectura A.",
+      "hallucination_risk": false,
+      "api_source": "N/A",
+      "sql": null,
+      "seed_nodes": [],
+      "usage": {
+        "total_tokens": 0,
+        "latency_s": 0.01
+      },
+      "architecture": "A_TEST"
+    }
+  },
+  {
+    "question_id": "Q002",
+    "architecture": "A",
+    "result": {
+      "answer": "[DRY-RUN] Respuesta simulada de Arquitectura A.",
+      "hallucination_risk": false,
+      "api_source": "N/A",
+      "sql": null,
+      "seed_nodes": [],
+      "usage": {
+        "total_tokens": 0,
+        "latency_s": 0.01
+      },
+      "architecture": "A_TEST"
+    }
+  },
+  {
+    "question_id": "Q001",
+    "architecture": "B",
+    "result": {
+      "answer": "[DRY-RUN] Respuesta simulada de Arquitectura B.",
+      "hallucination_risk": false,
+      "api_source": "N/A",
+      "sql": null,
+      "seed_nodes": [],
+      "usage": {
+        "total_tokens": 0,
+        "latency_s": 0.01
+      },
+      "architecture": "B_TEST"
+    }
+  },
+  {
+    "question_id": "Q002",
+    "architecture": "B",
+    "result": {
+      "answer": "[DRY-RUN] Respuesta simulada de Arquitectura B.",
+      "hallucination_risk": false,
+      "api_source": "N/A",
+      "sql": null,
+      "seed_nodes": [],
+      "usage": {
+        "total_tokens": 0,
+        "latency_s": 0.01
+      },
+      "architecture": "B_TEST"
+    }
+  },
+  {
+    "question_id": "Q001",
+    "architecture": "C",
+    "result": {
+      "answer": "[DRY-RUN] Respuesta simulada de Arquitectura C.",
+      "hallucination_risk": false,
+      "api_source": "N/A",
+      "sql": null,
+      "seed_nodes": [],
+      "usage": {
+        "total_tokens": 0,
+        "latency_s": 0.01
+      },
+      "architecture": "C_TEST"
+    }
+  },
+  {
+    "question_id": "Q002",
+    "architecture": "C",
+    "result": {
+      "answer": "[DRY-RUN] Respuesta simulada de Arquitectura C.",
+      "hallucination_risk": false,
+      "api_source": "N/A",
+      "sql": null,
+      "seed_nodes": [],
+      "usage": {
+        "total_tokens": 0,
+        "latency_s": 0.01
+      },
+      "architecture": "C_TEST"
+    }
+  },
+  {
+    "question_id": "Q001",
+    "architecture": "D",
+    "result": {
+      "answer": "[DRY-RUN] Respuesta simulada de Arquitectura D.",
+      "hallucination_risk": false,
+      "api_source": "N/A",
+      "sql": null,
+      "seed_nodes": [],
+      "usage": {
+        "total_tokens": 0,
+        "latency_s": 0.01
+      },
+      "architecture": "D_TEST"
+    }
+  },
+  {
+    "question_id": "Q002",
+    "architecture": "D",
+    "result": {
+      "answer": "[DRY-RUN] Respuesta simulada de Arquitectura D.",
+      "hallucination_risk": false,
+      "api_source": "N/A",
+      "sql": null,
+      "seed_nodes": [],
+      "usage": {
+        "total_tokens": 0,
+        "latency_s": 0.01
+      },
+      "architecture": "D_TEST"
+    }
+  }
+]

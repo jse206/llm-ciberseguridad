@@ -1,0 +1,39 @@
+{
+  "result": {
+    "answer": "Los resultados de la consulta SQL ejecutada contra la base de datos NVD/CVE no arrojan información sobre herramientas maliciosas (software) utilizadas por APT32 (OceanLotus). Esto indica que no se encontraron referencias específicas en la base de datos NVD/NIST relacionadas con este grupo de amenazas en el contexto de la consulta realizada.\n\nEs importante tener en cuenta que la base de datos NVD/NIST puede no contener información exhaustiva sobre todas las herramientas utilizadas por grupos de amenazas específicos, y es posible que se requiera consultar otras fuentes o bases de datos especializadas en ciberseguridad para obtener detalles más completos sobre APT32 y sus herramientas.",
+    "sql": "SELECT DISTINCT cr.url \nFROM cve_reference AS cr \nWHERE cr.tags LIKE '%APT32%' OR cr.tags LIKE '%OceanLotus%' \nLIMIT 10;",
+    "sql_rows": 0,
+    "correction_attempts": 0,
+    "sql_error": null,
+    "api_fallback": null,
+    "hallucination_risk": false,
+    "usage": {
+      "prompt_tokens": 2981,
+      "completion_tokens": 285,
+      "total_tokens": 3266,
+      "schema_linking_latency_s": 2.522,
+      "sql_generation_latency_s": 1.52,
+      "self_correction_latency_s": 0,
+      "synthesis_latency_s": 3.452
+    },
+    "architecture": "A_Text2SQL"
+  },
+  "metrics": {
+    "question_id": "Q077",
+    "level": 2,
+    "domain": "MITRE",
+    "architecture": "A_Text2SQL",
+    "accuracy": 0.5,
+    "hallucination_risk": 0.0,
+    "traceability": 1.0,
+    "error_handling": 1.0,
+    "latency_s": 7.494,
+    "total_tokens": 3266,
+    "accuracy_detail": "Score=0.500 | completas=['APT32', 'OceanLotus', 'software'] | parciales=[] | ausentes=['G0050', 'vietnam', 'malware']",
+    "hallucination_detail": "Sin señales de alucinación detectadas",
+    "traceability_detail": "Markers texto: ['nvd', 'nist', 'fuente'] | Fuente estructurada: api_source=False, seed_nodes=False, sql=True",
+    "error_handling_detail": "Sin errores detectados en el pipeline",
+    "latency_detail": "linking=2.52s sql=1.52s corr=0.00s synth=3.45s",
+    "answer_preview": "Los resultados de la consulta SQL ejecutada contra la base de datos NVD/CVE no arrojan información sobre herramientas maliciosas (software) utilizadas por APT32 (OceanLotus). Esto indica que no se encontraron referencias específicas en la base de datos NVD/NIST relacionadas con este grupo de amenaza…"
+  }
+}

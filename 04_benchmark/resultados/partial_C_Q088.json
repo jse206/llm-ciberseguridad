@@ -1,0 +1,49 @@
+{
+  "result": {
+    "answer": "El CVE-2020-1472, conocido como Zerologon, es una vulnerabilidad crítica en el protocolo Netlogon de Microsoft que permite a un atacante no autenticado tomar el control de un controlador de dominio de Windows. Esta vulnerabilidad se relaciona con varias técnicas del framework MITRE ATT&CK, aunque el subgrafo proporcionado no menciona explícitamente esta vulnerabilidad ni sus técnicas asociadas.\n\nSin embargo, se puede inferir que Zerologon podría habilitar técnicas relacionadas con el movimiento lateral y la escalada de privilegios, dado que permite a un atacante obtener acceso a un controlador de dominio. En el contexto del framework MITRE ATT&CK, las siguientes técnicas podrían estar relacionadas:\n\n1. **T1075 - Pass the Hash**: Aunque no se menciona directamente en el subgrafo, la explotación de Zerologon podría facilitar el uso de técnicas como \"Pass the Hash\" para moverse lateralmente dentro de la red.\n   \n2. **T1550.003 - Pass the Ticket**: Similarmente, una vez que un atacante tiene acceso a un controlador de dominio, podría utilizar tickets Kerberos robados para autenticarse en otros sistemas.\n\n3. **T1566 - Phishing**: Aunque no es una técnica directa de Zerologon, un atacante podría usar técnicas de phishing para obtener credenciales que complementen su acceso tras explotar la vulnerabilidad.\n\n4. **T1547.012 - Print Processors**: Si un atacante logra acceso a un sistema a través de Zerologon, podría abusar de los procesadores de impresión para mantener persistencia.\n\n5. **T1556.005 - Reversible Encryption**: La vulnerabilidad podría permitir el acceso a configuraciones de Active Directory que faciliten la obtención de credenciales.\n\nEs importante destacar que el subgrafo no proporciona información específica sobre Zerologon ni las técnicas que habilita directamente. Por lo tanto, la relación entre CVE-2020-1472 y el framework MITRE ATT&CK se basa en inferencias sobre cómo una vulnerabilidad de este tipo podría ser utilizada en un ataque.\n\nSegún MITRE ATT&CK, la explotación de vulnerabilidades como Zerologon puede facilitar el acceso a sistemas críticos y permitir a los atacantes ejecutar diversas técnicas para comprometer aún más la red.",
+    "seed_nodes": [
+      "T1053.002",
+      "S0110",
+      "S0503"
+    ],
+    "subgraph_nodes": 40,
+    "subgraph_edges": 14,
+    "coverage": {
+      "sufficient": false,
+      "missing_entities": [
+        "CVE-2020-1472",
+        "MITRE ATT&CK",
+        "técnicas habilitadas"
+      ],
+      "confidence": 0.3
+    },
+    "hallucination_risk": true,
+    "usage": {
+      "prompt_tokens": 2858,
+      "completion_tokens": 527,
+      "total_tokens": 3385,
+      "retrieval_latency_s": 0.025,
+      "coverage_latency_s": 1.535,
+      "synthesis_latency_s": 10.003
+    },
+    "architecture": "C_GraphRAG"
+  },
+  "metrics": {
+    "question_id": "Q088",
+    "level": 3,
+    "domain": "BOTH",
+    "architecture": "C_GraphRAG",
+    "accuracy": 0.5,
+    "hallucination_risk": 0.7,
+    "traceability": 1.0,
+    "error_handling": 1.0,
+    "latency_s": 11.563,
+    "total_tokens": 3385,
+    "accuracy_detail": "Score=0.500 | completas=['CVE-2020-1472', 'zerologon', 'netlogon'] | parciales=[] | ausentes=['T1210', 'privilege escalation', 'domain controller']",
+    "hallucination_detail": "Flag de riesgo activo (sin datos de fuente verificados)",
+    "traceability_detail": "Markers texto: ['mitre', 'att&ck', 'según'] | Fuente estructurada: api_source=False, seed_nodes=True, sql=False",
+    "error_handling_detail": "Sin errores detectados en el pipeline",
+    "latency_detail": "retrieval=0.03s coverage=1.53s synth=10.00s",
+    "answer_preview": "El CVE-2020-1472, conocido como Zerologon, es una vulnerabilidad crítica en el protocolo Netlogon de Microsoft que permite a un atacante no autenticado tomar el control de un controlador de dominio de Windows. Esta vulnerabilidad se relaciona con varias técnicas del framework MITRE ATT&CK, aunque el…"
+  }
+}

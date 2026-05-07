@@ -1,0 +1,39 @@
+{
+  "result": {
+    "answer": "Para priorizar el parcheo de vulnerabilidades en una organización utilizando MITRE ATT&CK y la base de datos NVD/NIST, se pueden seguir los siguientes pasos:\n\n1. **Identificación de Vulnerabilidades Críticas**: Utilizando la consulta SQL proporcionada, se obtuvieron varias vulnerabilidades críticas (CVSS v3 score de 10.0) de la base de datos NVD/NIST. Estas vulnerabilidades son las más urgentes de abordar debido a su severidad.\n\n2. **Análisis de Tácticas y Técnicas**: Con la información de MITRE ATT&CK, se puede correlacionar cada CVE con las tácticas y técnicas que los atacantes podrían utilizar para explotarlas. Esto permite entender el contexto de la vulnerabilidad y cómo podría ser utilizada en un ataque real.\n\n3. **Evaluación del Entorno**: Es fundamental evaluar el entorno de la organización para identificar si las vulnerabilidades listadas afectan a los sistemas en uso. Esto incluye revisar la infraestructura, aplicaciones y servicios que se están ejecutando.\n\n4. **Planificación del Parcheo**: Basándose en la severidad y el impacto potencial de cada vulnerabilidad, se debe crear un plan de parcheo que priorice las vulnerabilidades críticas. Por ejemplo, las vulnerabilidades como CVE-2021-46250 y CVE-2021-46433, que permiten la autenticación no autorizada y la ejecución remota de código, deben ser parcheadas de inmediato.\n\n5. **Monitoreo y Revisión Continua**: Después de aplicar los parches, es importante monitorear el entorno y revisar periódicamente las bases de datos de vulnerabilidades y las actualizaciones de MITRE ATT&CK para mantenerse al día con nuevas amenazas.\n\nLos resultados de la consulta SQL muestran varias vulnerabilidades críticas, todas provenientes de la base de datos NVD/NIST, que deben ser priorizadas para el parcheo.",
+    "sql": "SELECT cv.cve_id, cv.description, cv.cvss_v3_score, cv.cvss_v3_severity, cr.url, cr.source\nFROM cve AS cv\nJOIN cve_reference AS cr ON cv.cve_id = cr.cve_id\nWHERE cr.source LIKE '%mitre%'\nORDER BY cv.cvss_v3_score DESC\nLIMIT 10;",
+    "sql_rows": 10,
+    "correction_attempts": 0,
+    "sql_error": null,
+    "api_fallback": null,
+    "hallucination_risk": false,
+    "usage": {
+      "prompt_tokens": 4458,
+      "completion_tokens": 608,
+      "total_tokens": 5066,
+      "schema_linking_latency_s": 2.975,
+      "sql_generation_latency_s": 2.039,
+      "self_correction_latency_s": 0,
+      "synthesis_latency_s": 10.715
+    },
+    "architecture": "A_Text2SQL"
+  },
+  "metrics": {
+    "question_id": "Q098",
+    "level": 3,
+    "domain": "BOTH",
+    "architecture": "A_Text2SQL",
+    "accuracy": 0.4286,
+    "hallucination_risk": 0.0,
+    "traceability": 1.0,
+    "error_handling": 1.0,
+    "latency_s": 15.729,
+    "total_tokens": 5066,
+    "accuracy_detail": "Score=0.429 | completas=['CVSS', 'ATT&CK', 'parcheo'] | parciales=[] | ausentes=['priorización', 'T1190', 'riesgo', 'EPSS']",
+    "hallucination_detail": "Sin señales de alucinación detectadas",
+    "traceability_detail": "Markers texto: ['nvd', 'nist', 'mitre'] | Fuente estructurada: api_source=False, seed_nodes=False, sql=True",
+    "error_handling_detail": "Sin errores detectados en el pipeline",
+    "latency_detail": "linking=2.98s sql=2.04s corr=0.00s synth=10.71s",
+    "answer_preview": "Para priorizar el parcheo de vulnerabilidades en una organización utilizando MITRE ATT&CK y la base de datos NVD/NIST, se pueden seguir los siguientes pasos:\n\n1. **Identificación de Vulnerabilidades Críticas**: Utilizando la consulta SQL proporcionada, se obtuvieron varias vulnerabilidades críticas …"
+  }
+}

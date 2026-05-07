@@ -1,0 +1,48 @@
+{
+  "result": {
+    "answer": "Según el subgrafo proporcionado del framework MITRE ATT&CK, el grupo APT28 utiliza diversas técnicas que podrían estar relacionadas con vulnerabilidades críticas en Microsoft. Algunas de las técnicas relevantes son:\n\n1. **T1110 — Brute Force** (Táctica: credential-access): APT28 puede intentar acceder a cuentas mediante técnicas de fuerza bruta, lo que sugiere que las vulnerabilidades relacionadas con la gestión de contraseñas y la autenticación en Microsoft deberían ser monitorizadas.\n\n2. **T1203 — Exploitation for Client Execution** (Táctica: execution): Esta técnica implica la explotación de vulnerabilidades en aplicaciones cliente, lo que podría incluir software de Microsoft. Es crucial estar al tanto de las vulnerabilidades críticas en productos como Microsoft Office o navegadores que puedan ser explotados.\n\n3. **T1003.001 — LSASS Memory** (Táctica: credential-access): APT28 puede acceder a credenciales almacenadas en la memoria del proceso LSASS en sistemas Windows. Esto indica que las vulnerabilidades que permiten el acceso a la memoria de procesos críticos deben ser vigiladas.\n\n4. **T1550.002 — Pass the Hash** (Táctica: defense-evasion, lateral-movement): Esta técnica permite a los atacantes moverse lateralmente utilizando hashes de contraseñas robadas. Las vulnerabilidades en la implementación de la autenticación de Windows son relevantes aquí.\n\n5. **T1542.003 — Bootkit** (Táctica: persistence, defense-evasion): APT28 puede utilizar bootkits para persistir en sistemas. Las vulnerabilidades en el proceso de arranque de Windows son críticas para la detección de estas técnicas.\n\n6. **T1071.001 — Web Protocols** (Táctica: command-and-control): La comunicación a través de protocolos web puede ser utilizada para evadir detección. Las vulnerabilidades en la configuración de red y en los servicios web de Microsoft deben ser monitorizadas.\n\n7. **T1595.002 — Vulnerability Scanning** (Táctica: reconnaissance): APT28 puede escanear en busca de vulnerabilidades. Esto implica que las vulnerabilidades críticas en Microsoft deben ser identificadas y corregidas proactivamente.\n\nEn resumen, las vulnerabilidades críticas en Microsoft que deberían ser monitorizadas incluyen aquellas relacionadas con la autenticación, la ejecución de código en aplicaciones cliente, la gestión de contraseñas y la seguridad del proceso de arranque. Estas áreas son clave para detectar y mitigar las campañas del grupo APT28.",
+    "seed_nodes": [
+      "S0183",
+      "G0007",
+      "S0066"
+    ],
+    "subgraph_nodes": 40,
+    "subgraph_edges": 38,
+    "coverage": {
+      "sufficient": false,
+      "missing_entities": [
+        "vulnerabilidades críticas en Microsoft",
+        "campañas de APT28"
+      ],
+      "confidence": 0.4
+    },
+    "hallucination_risk": true,
+    "usage": {
+      "prompt_tokens": 2774,
+      "completion_tokens": 567,
+      "total_tokens": 3341,
+      "retrieval_latency_s": 0.011,
+      "coverage_latency_s": 1.307,
+      "synthesis_latency_s": 11.364
+    },
+    "architecture": "C_GraphRAG"
+  },
+  "metrics": {
+    "question_id": "Q047",
+    "level": 3,
+    "domain": "BOTH",
+    "architecture": "C_GraphRAG",
+    "accuracy": 0.3333,
+    "hallucination_risk": 0.7,
+    "traceability": 1.0,
+    "error_handling": 1.0,
+    "latency_s": 12.682,
+    "total_tokens": 3341,
+    "accuracy_detail": "Score=0.333 | completas=['APT28', 'microsoft'] | parciales=[] | ausentes=['outlook', 'CVE-2023-23397', 'T1566', 'fancy bear']",
+    "hallucination_detail": "Flag de riesgo activo (sin datos de fuente verificados)",
+    "traceability_detail": "Markers texto: ['mitre', 'att&ck', 'según'] | Fuente estructurada: api_source=False, seed_nodes=True, sql=False",
+    "error_handling_detail": "Sin errores detectados en el pipeline",
+    "latency_detail": "retrieval=0.01s coverage=1.31s synth=11.36s",
+    "answer_preview": "Según el subgrafo proporcionado del framework MITRE ATT&CK, el grupo APT28 utiliza diversas técnicas que podrían estar relacionadas con vulnerabilidades críticas en Microsoft. Algunas de las técnicas relevantes son:\n\n1. **T1110 — Brute Force** (Táctica: credential-access): APT28 puede intentar acced…"
+  }
+}

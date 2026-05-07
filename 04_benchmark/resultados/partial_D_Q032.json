@@ -1,0 +1,91 @@
+{
+  "result": {
+    "answer": "La información recopilada hasta ahora no proporciona el número exacto de técnicas bajo la táctica 'Credential Access' (TA0006) en MITRE ATT&CK Enterprise. Solo se menciona que esta táctica se centra en el robo de nombres de cuenta y contraseñas, pero no se detallan las técnicas específicas asociadas a ella.\n\nPara obtener el número exacto de técnicas, sería necesario consultar la base de datos de MITRE ATT&CK directamente o acceder a una fuente que liste las técnicas específicas bajo la táctica 'Credential Access'.\n\n**Fuentes consultadas:** query_mitre_graph",
+    "steps": [
+      {
+        "thought": "",
+        "action": "query_mitre_graph",
+        "action_input": {
+          "question": "¿Cuántas técnicas tiene la táctica 'Credential Access'?"
+        },
+        "observation_preview": "{\n  \"context\": \"=== SUBGRAFO MITRE ATT&CK ===\\n\\n--- Entidades recuperadas ---\\n★ [x-mitre-tactic] TA0006 — Credential Access\\n     The adversary is trying to steal account names and passwords.\\n\\nCredential Access consists of techniques for stealing credentials like account names and passwords. Tec…"
+      },
+      {
+        "thought": "",
+        "action": "query_mitre_graph",
+        "action_input": {
+          "question": "¿Cuáles son las técnicas asociadas a la táctica 'Credential Access'?"
+        },
+        "observation_preview": "{\n  \"context\": \"=== SUBGRAFO MITRE ATT&CK ===\\n\\n--- Entidades recuperadas ---\\n★ [x-mitre-tactic] TA0006 — Credential Access\\n     The adversary is trying to steal account names and passwords.\\n\\nCredential Access consists of techniques for stealing credentials like account names and passwords. Tec…"
+      },
+      {
+        "thought": "",
+        "action": "query_mitre_graph",
+        "action_input": {
+          "question": "Lista las técnicas de la táctica 'Credential Access' en MITRE ATT&CK."
+        },
+        "observation_preview": "{\n  \"context\": \"=== SUBGRAFO MITRE ATT&CK ===\\n\\n--- Entidades recuperadas ---\\n  [attack-pattern] T1570 — Lateral Tool Transfer\\n     Adversaries may transfer tools or other files between systems in a compromised environment. Once brought into the victim environment (i.e., [Ingress Tool Transfer](h…"
+      },
+      {
+        "thought": "",
+        "action": "query_mitre_graph",
+        "action_input": {
+          "question": "¿Cuáles son las técnicas de Credential Access en MITRE ATT&CK?"
+        },
+        "observation_preview": "{\n  \"context\": \"=== SUBGRAFO MITRE ATT&CK ===\\n\\n--- Entidades recuperadas ---\\n  [attack-pattern] T1547.012 — Print Processors\\n     Adversaries may abuse print processors to run malicious DLLs during system boot for persistence and/or privilege escalation. Print processors are DLLs that are loaded…"
+      },
+      {
+        "thought": "",
+        "action": "query_mitre_graph",
+        "action_input": {
+          "question": "Contar las técnicas de Credential Access en MITRE ATT&CK."
+        },
+        "observation_preview": "{\n  \"context\": \"=== SUBGRAFO MITRE ATT&CK ===\\n\\n--- Entidades recuperadas ---\\n  [attack-pattern] T1547.012 — Print Processors\\n     Adversaries may abuse print processors to run malicious DLLs during system boot for persistence and/or privilege escalation. Print processors are DLLs that are loaded…"
+      },
+      {
+        "thought": "",
+        "action": "query_mitre_graph",
+        "action_input": {
+          "question": "¿Cuántas técnicas están clasificadas bajo 'Credential Access' en MITRE ATT&CK?"
+        },
+        "observation_preview": "{\n  \"context\": \"=== SUBGRAFO MITRE ATT&CK ===\\n\\n--- Entidades recuperadas ---\\n  [attack-pattern] T1570 — Lateral Tool Transfer\\n     Adversaries may transfer tools or other files between systems in a compromised environment. Once brought into the victim environment (i.e., [Ingress Tool Transfer](h…"
+      }
+    ],
+    "tools_used": [
+      "query_mitre_graph",
+      "query_mitre_graph",
+      "query_mitre_graph",
+      "query_mitre_graph",
+      "query_mitre_graph",
+      "query_mitre_graph"
+    ],
+    "iterations": 6,
+    "forced_final": true,
+    "hallucination_risk": false,
+    "usage": {
+      "prompt_tokens": 12415,
+      "completion_tokens": 586,
+      "total_tokens": 13001,
+      "total_latency_s": 15.159
+    },
+    "architecture": "D_Toolformer"
+  },
+  "metrics": {
+    "question_id": "Q032",
+    "level": 2,
+    "domain": "MITRE",
+    "architecture": "D_Toolformer",
+    "accuracy": 0.6,
+    "hallucination_risk": 0.0,
+    "traceability": 0.5,
+    "error_handling": 0.3,
+    "latency_s": 15.159,
+    "total_tokens": 13001,
+    "accuracy_detail": "Score=0.600 | completas=['credential access', 'TA0006', 'técnicas'] | parciales=[] | ausentes=['T1110', 'brute force']",
+    "hallucination_detail": "Sin señales de alucinación detectadas",
+    "traceability_detail": "Markers texto: ['mitre', 'att&ck', 'fuente'] | Fuente estructurada: api_source=False, seed_nodes=False, sql=False",
+    "error_handling_detail": "Error presente — la respuesta no lo reconoce explícitamente",
+    "latency_detail": "total_react=15.16s iterations=6",
+    "answer_preview": "La información recopilada hasta ahora no proporciona el número exacto de técnicas bajo la táctica 'Credential Access' (TA0006) en MITRE ATT&CK Enterprise. Solo se menciona que esta táctica se centra en el robo de nombres de cuenta y contraseñas, pero no se detallan las técnicas específicas asociadas…"
+  }
+}

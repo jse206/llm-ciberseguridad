@@ -1,0 +1,50 @@
+{
+  "result": {
+    "answer": "Para comprometer una infraestructura industrial (ICS/OT), un grupo APT podría utilizar una cadena de ataque que combine varias técnicas del framework MITRE ATT&CK. A continuación, se presenta un posible escenario:\n\n1. **Acceso Inicial (Initial Access)**: El ataque podría comenzar con un **phishing** (T1566), donde los adversarios envían correos electrónicos engañosos a empleados de la infraestructura industrial para obtener credenciales o ejecutar un malware. Este método es común y efectivo para obtener acceso inicial a sistemas.\n\n2. **Descubrimiento (Discovery)**: Una vez dentro, el adversario podría realizar **System Service Discovery** (T1007) para identificar los servicios en ejecución y obtener información sobre la infraestructura. Esto les permitiría entender mejor el entorno y planificar movimientos posteriores.\n\n3. **Movimiento Lateral (Lateral Movement)**: Utilizando técnicas como **Pass the Ticket** (T1550.003), el adversario podría moverse lateralmente dentro de la red, utilizando tickets de Kerberos robados para acceder a otros sistemas críticos sin necesidad de volver a autenticar.\n\n4. **Persistencia (Persistence)**: Para mantener el acceso, el adversario podría implementar técnicas como **Print Processors** (T1547.012) o **Systemd Service** (T1543.002) en sistemas Linux, creando procesos que se inicien automáticamente y que les permitan ejecutar código malicioso de forma continua.\n\n5. **Acceso a Credenciales (Credential Access)**: Durante el movimiento lateral, el adversario podría buscar **Unsecured Credentials** (T1552) en sistemas comprometidos, buscando credenciales almacenadas de manera insegura que les permitan acceder a otros sistemas o aplicaciones.\n\n6. **Ejecución de Código Malicioso (Execution)**: Finalmente, el adversario podría utilizar herramientas como **SILENTTRINITY** (S0692) para ejecutar comandos y scripts maliciosos en los sistemas comprometidos, permitiendo la ejecución de acciones maliciosas como la exfiltración de datos o la manipulación de procesos industriales.\n\nEste enfoque combina técnicas de acceso inicial, descubrimiento, movimiento lateral, persistencia y acceso a credenciales, lo que permite a un grupo APT comprometer de manera efectiva una infraestructura industrial. \n\nSegún MITRE ATT&CK, estas técnicas son ampliamente documentadas y utilizadas en ataques reales, lo que resalta la importancia de implementar medidas de mitigación adecuadas para proteger las infraestructuras críticas.",
+    "seed_nodes": [
+      "T1053.002",
+      "S0110",
+      "S0066"
+    ],
+    "subgraph_nodes": 40,
+    "subgraph_edges": 12,
+    "coverage": {
+      "sufficient": false,
+      "missing_entities": [
+        "APT grupo específico",
+        "CVE recientes relacionados",
+        "técnicas MITRE ATT&CK adicionales",
+        "ejemplos de ataques en ICS/OT"
+      ],
+      "confidence": 0.4
+    },
+    "hallucination_risk": true,
+    "usage": {
+      "prompt_tokens": 2841,
+      "completion_tokens": 568,
+      "total_tokens": 3409,
+      "retrieval_latency_s": 0.015,
+      "coverage_latency_s": 1.418,
+      "synthesis_latency_s": 10.752
+    },
+    "architecture": "C_GraphRAG"
+  },
+  "metrics": {
+    "question_id": "Q089",
+    "level": 3,
+    "domain": "BOTH",
+    "architecture": "C_GraphRAG",
+    "accuracy": 0.5714,
+    "hallucination_risk": 0.7,
+    "traceability": 1.0,
+    "error_handling": 1.0,
+    "latency_s": 12.185,
+    "total_tokens": 3409,
+    "accuracy_detail": "Score=0.571 | completas=['ICS', 'OT', 'lateral movement', 'initial access'] | parciales=[] | ausentes=['T1190', 'T1486', 'CVE']",
+    "hallucination_detail": "Flag de riesgo activo (sin datos de fuente verificados)",
+    "traceability_detail": "Markers texto: ['mitre', 'att&ck', 'según'] | Fuente estructurada: api_source=False, seed_nodes=True, sql=False",
+    "error_handling_detail": "Sin errores detectados en el pipeline",
+    "latency_detail": "retrieval=0.01s coverage=1.42s synth=10.75s",
+    "answer_preview": "Para comprometer una infraestructura industrial (ICS/OT), un grupo APT podría utilizar una cadena de ataque que combine varias técnicas del framework MITRE ATT&CK. A continuación, se presenta un posible escenario:\n\n1. **Acceso Inicial (Initial Access)**: El ataque podría comenzar con un **phishing**…"
+  }
+}

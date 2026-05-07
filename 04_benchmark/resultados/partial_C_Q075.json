@@ -1,0 +1,51 @@
+{
+  "result": {
+    "answer": "El subgrafo proporcionado no contiene información sobre CVEs (Common Vulnerabilities and Exposures) críticos relacionados con Cisco publicados en 2023. No se mencionan vulnerabilidades específicas, ni se hace referencia a CVEs en general. \n\nPor lo tanto, no puedo responder a la pregunta sobre los CVEs críticos de Cisco en 2023 basándome en la información disponible en el subgrafo. \n\nSi necesitas información adicional o específica sobre CVEs, te recomendaría consultar bases de datos de vulnerabilidades como el NVD (National Vulnerability Database) o el sitio oficial de Cisco.",
+    "seed_nodes": [
+      "T1053.002",
+      "S0110",
+      "T1596.005",
+      "T1596",
+      "T1497.003"
+    ],
+    "subgraph_nodes": 40,
+    "subgraph_edges": 11,
+    "coverage": {
+      "sufficient": false,
+      "missing_entities": [
+        "CVEs críticos",
+        "Cisco",
+        "2023"
+      ],
+      "confidence": 0.2
+    },
+    "hallucination_risk": true,
+    "usage": {
+      "prompt_tokens": 2977,
+      "completion_tokens": 161,
+      "total_tokens": 3138,
+      "retrieval_latency_s": 0.008,
+      "coverage_latency_s": 1.32,
+      "synthesis_latency_s": 2.457
+    },
+    "architecture": "C_GraphRAG"
+  },
+  "metrics": {
+    "question_id": "Q075",
+    "level": 2,
+    "domain": "NVD",
+    "architecture": "C_GraphRAG",
+    "accuracy": 0.6,
+    "hallucination_risk": 0.7,
+    "traceability": 1.0,
+    "error_handling": 1.0,
+    "latency_s": 3.785,
+    "total_tokens": 3138,
+    "accuracy_detail": "Score=0.600 | completas=['cisco', '2023', 'CVE'] | parciales=[] | ausentes=['critical', 'ios']",
+    "hallucination_detail": "Flag de riesgo activo (sin datos de fuente verificados)",
+    "traceability_detail": "Markers texto: ['nvd', 'national vulnerability', 'database'] | Fuente estructurada: api_source=False, seed_nodes=True, sql=False",
+    "error_handling_detail": "Sin errores detectados en el pipeline",
+    "latency_detail": "retrieval=0.01s coverage=1.32s synth=2.46s",
+    "answer_preview": "El subgrafo proporcionado no contiene información sobre CVEs (Common Vulnerabilities and Exposures) críticos relacionados con Cisco publicados en 2023. No se mencionan vulnerabilidades específicas, ni se hace referencia a CVEs en general. \n\nPor lo tanto, no puedo responder a la pregunta sobre los CV…"
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "result": {
+    "answer": "Según el subgrafo proporcionado, no se menciona explícitamente ninguna herramienta maliciosa (software) utilizada por APT32 (OceanLotus). El subgrafo incluye información sobre varias técnicas, herramientas y grupos APT, pero no hay referencias directas a las herramientas específicas que utiliza APT32.\n\nPor lo tanto, no puedo proporcionar una respuesta sobre las herramientas maliciosas que usa APT32 basándome únicamente en la información del subgrafo.",
+    "seed_nodes": [
+      "G0050",
+      "T1592.002",
+      "T1053.002",
+      "S0110",
+      "G0022"
+    ],
+    "subgraph_nodes": 40,
+    "subgraph_edges": 25,
+    "coverage": {
+      "sufficient": false,
+      "missing_entities": [
+        "APT32",
+        "OceanLotus",
+        "herramientas maliciosas",
+        "MITRE ATT&CK"
+      ],
+      "confidence": 0.3
+    },
+    "hallucination_risk": true,
+    "usage": {
+      "prompt_tokens": 2788,
+      "completion_tokens": 147,
+      "total_tokens": 2935,
+      "retrieval_latency_s": 0.007,
+      "coverage_latency_s": 1.515,
+      "synthesis_latency_s": 2.326
+    },
+    "architecture": "C_GraphRAG"
+  },
+  "metrics": {
+    "question_id": "Q077",
+    "level": 2,
+    "domain": "MITRE",
+    "architecture": "C_GraphRAG",
+    "accuracy": 0.5,
+    "hallucination_risk": 0.7,
+    "traceability": 1.0,
+    "error_handling": 1.0,
+    "latency_s": 3.848,
+    "total_tokens": 2935,
+    "accuracy_detail": "Score=0.500 | completas=['APT32', 'OceanLotus', 'software'] | parciales=[] | ausentes=['G0050', 'vietnam', 'malware']",
+    "hallucination_detail": "Flag de riesgo activo (sin datos de fuente verificados)",
+    "traceability_detail": "Markers texto: ['según', 'grafo'] | Fuente estructurada: api_source=False, seed_nodes=True, sql=False",
+    "error_handling_detail": "Sin errores detectados en el pipeline",
+    "latency_detail": "retrieval=0.01s coverage=1.51s synth=2.33s",
+    "answer_preview": "Según el subgrafo proporcionado, no se menciona explícitamente ninguna herramienta maliciosa (software) utilizada por APT32 (OceanLotus). El subgrafo incluye información sobre varias técnicas, herramientas y grupos APT, pero no hay referencias directas a las herramientas específicas que utiliza APT3…"
+  }
+}

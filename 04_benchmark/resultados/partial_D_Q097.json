@@ -1,0 +1,82 @@
+{
+  "result": {
+    "answer": "Tras detectar actividad de T1486 (ransomware) en su red, un SOC debe establecer las siguientes prioridades:\n\n1. **Contención Inmediata**: Aislar los sistemas afectados para evitar la propagación del ransomware a otras partes de la red. Esto incluye detener servicios críticos que puedan estar comprometidos.\n\n2. **Análisis de Impacto**: Evaluar qué sistemas y datos han sido afectados. Esto implica realizar un descubrimiento de servicios y sistemas para entender la magnitud del ataque.\n\n3. **Recuperación de Sistemas**: Implementar un plan de recuperación que incluya restaurar sistemas desde copias de seguridad limpias y asegurarse de que no haya persistencia del malware.\n\n4. **Revisión de Cuentas y Accesos**: Gestionar cuentas privilegiadas y revisar accesos para evitar que los atacantes utilicen credenciales válidas para moverse lateralmente en la red.\n\n5. **Mitigaciones a Largo Plazo**: Implementar medidas de seguridad adicionales, como la segmentación de la red, la capacitación de los empleados sobre phishing y la mejora de las políticas de gestión de cuentas.\n\nEstas prioridades se basan en las tácticas y técnicas observadas en el contexto de ataques de ransomware, como la detención de servicios (T1489) y el movimiento lateral (T1570).\n\n**Fuentes consultadas:** query_mitre_graph",
+    "steps": [
+      {
+        "thought": "",
+        "action": "query_mitre_graph",
+        "action_input": {
+          "question": "¿Qué mitigaciones cubre T1486 (ransomware)?"
+        },
+        "observation_preview": "{\n  \"context\": \"=== SUBGRAFO MITRE ATT&CK ===\\n\\n--- Entidades recuperadas ---\\n  [intrusion-set] G1015 — Scattered Spider\\n     [Scattered Spider](https://attack.mitre.org/groups/G1015) is a native English-speaking cybercriminal group active since at least 2022. (Citation: CrowdStrike Scattered Spi…"
+      },
+      {
+        "thought": "",
+        "action": "query_mitre_graph",
+        "action_input": {
+          "question": "¿Cuáles son las mitigaciones recomendadas para T1486 (ransomware)?"
+        },
+        "observation_preview": "{\n  \"context\": \"=== SUBGRAFO MITRE ATT&CK ===\\n\\n--- Entidades recuperadas ---\\n  [attack-pattern] T1071.001 — Web Protocols\\n     Adversaries may communicate using application layer protocols associated with web traffic to avoid detection/network filtering by blending in with existing traffic. Comm…"
+      },
+      {
+        "thought": "",
+        "action": "query_mitre_graph",
+        "action_input": {
+          "question": "¿Cuáles son las mitigaciones generales para ransomware?"
+        },
+        "observation_preview": "{\n  \"context\": \"=== SUBGRAFO MITRE ATT&CK ===\\n\\n--- Entidades recuperadas ---\\n  [malware] S0050 — CosmicDuke\\n     [CosmicDuke](https://attack.mitre.org/software/S0050) is malware that was used by [APT29](https://attack.mitre.org/groups/G0016) from 2010 to 2015. (Citation: F-Secure The Dukes)\\n  […"
+      },
+      {
+        "thought": "",
+        "action": "query_mitre_graph",
+        "action_input": {
+          "question": "¿Cuáles son las tácticas y técnicas asociadas a ransomware en MITRE ATT&CK?"
+        },
+        "observation_preview": "{\n  \"context\": \"=== SUBGRAFO MITRE ATT&CK ===\\n\\n--- Entidades recuperadas ---\\n  [attack-pattern] T1489 — Service Stop\\n     Adversaries may stop or disable services on a system to render those services unavailable to legitimate users. Stopping critical services or processes can inhibit or stop res…"
+      },
+      {
+        "thought": "",
+        "action": "query_mitre_graph",
+        "action_input": {
+          "question": "¿Cuáles son las prioridades de respuesta ante ransomware según MITRE ATT&CK?"
+        },
+        "observation_preview": "{\n  \"context\": \"=== SUBGRAFO MITRE ATT&CK ===\\n\\n--- Entidades recuperadas ---\\n  [attack-pattern] T1489 — Service Stop\\n     Adversaries may stop or disable services on a system to render those services unavailable to legitimate users. Stopping critical services or processes can inhibit or stop res…"
+      }
+    ],
+    "tools_used": [
+      "query_mitre_graph",
+      "query_mitre_graph",
+      "query_mitre_graph",
+      "query_mitre_graph",
+      "query_mitre_graph"
+    ],
+    "iterations": 5,
+    "forced_final": false,
+    "hallucination_risk": false,
+    "usage": {
+      "prompt_tokens": 18710,
+      "completion_tokens": 791,
+      "total_tokens": 19501,
+      "total_latency_s": 15.458
+    },
+    "architecture": "D_Toolformer"
+  },
+  "metrics": {
+    "question_id": "Q097",
+    "level": 3,
+    "domain": "BOTH",
+    "architecture": "D_Toolformer",
+    "accuracy": 0.4286,
+    "hallucination_risk": 0.0,
+    "traceability": 0.5,
+    "error_handling": 1.0,
+    "latency_s": 15.458,
+    "total_tokens": 19501,
+    "accuracy_detail": "Score=0.429 | completas=['T1486', 'ransomware', 'contención'] | parciales=[] | ausentes=['backup', 'M1053', 'aislamiento', 'incident response']",
+    "hallucination_detail": "Sin señales de alucinación detectadas",
+    "traceability_detail": "Markers texto: ['mitre', 'fuente', 'graph'] | Fuente estructurada: api_source=False, seed_nodes=False, sql=False",
+    "error_handling_detail": "Sin errores detectados en el pipeline",
+    "latency_detail": "total_react=15.46s iterations=5",
+    "answer_preview": "Tras detectar actividad de T1486 (ransomware) en su red, un SOC debe establecer las siguientes prioridades:\n\n1. **Contención Inmediata**: Aislar los sistemas afectados para evitar la propagación del ransomware a otras partes de la red. Esto incluye detener servicios críticos que puedan estar comprom…"
+  }
+}

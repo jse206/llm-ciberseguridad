@@ -1,0 +1,73 @@
+{
+  "result": {
+    "answer": "La técnica MITRE ATT&CK que describe el uso de cuentas de servicio para persistencia no se menciona explícitamente, pero las técnicas T1053 (Scheduled Task/Job) y T1053.002 (At) son relevantes, ya que implican el uso de programación de tareas que puede involucrar cuentas de servicio para ejecutar código malicioso de manera persistente.\n\n**Fuentes consultadas:** query_mitre_graph",
+    "steps": [
+      {
+        "thought": "",
+        "action": "query_mitre_graph",
+        "action_input": {
+          "question": "¿Qué técnica MITRE ATT&CK describe el uso de cuentas de servicio para persistencia?"
+        },
+        "observation_preview": "{\n  \"context\": \"=== SUBGRAFO MITRE ATT&CK ===\\n\\n--- Entidades recuperadas ---\\n  [course-of-action] M1026 — Privileged Account Management\\n     Privileged Account Management focuses on implementing policies, controls, and tools to securely manage privileged accounts (e.g., SYSTEM, root, or administ…"
+      },
+      {
+        "thought": "",
+        "action": "query_mitre_graph",
+        "action_input": {
+          "question": "¿Qué técnica MITRE ATT&CK se relaciona con el uso de cuentas de servicio para persistencia?"
+        },
+        "observation_preview": "{\n  \"context\": \"=== SUBGRAFO MITRE ATT&CK ===\\n\\n--- Entidades recuperadas ---\\n  [course-of-action] M1026 — Privileged Account Management\\n     Privileged Account Management focuses on implementing policies, controls, and tools to securely manage privileged accounts (e.g., SYSTEM, root, or administ…"
+      },
+      {
+        "thought": "",
+        "action": "query_mitre_graph",
+        "action_input": {
+          "question": "¿Qué técnica MITRE ATT&CK se relaciona específicamente con el uso de cuentas de servicio para persistencia?"
+        },
+        "observation_preview": "{\n  \"context\": \"=== SUBGRAFO MITRE ATT&CK ===\\n\\n--- Entidades recuperadas ---\\n  [course-of-action] M1026 — Privileged Account Management\\n     Privileged Account Management focuses on implementing policies, controls, and tools to securely manage privileged accounts (e.g., SYSTEM, root, or administ…"
+      },
+      {
+        "thought": "",
+        "action": "query_mitre_graph",
+        "action_input": {
+          "question": "¿Qué técnica MITRE ATT&CK se relaciona con el uso de cuentas de servicio para mantener la persistencia?"
+        },
+        "observation_preview": "{\n  \"context\": \"=== SUBGRAFO MITRE ATT&CK ===\\n\\n--- Entidades recuperadas ---\\n  [course-of-action] M1026 — Privileged Account Management\\n     Privileged Account Management focuses on implementing policies, controls, and tools to securely manage privileged accounts (e.g., SYSTEM, root, or administ…"
+      }
+    ],
+    "tools_used": [
+      "query_mitre_graph",
+      "query_mitre_graph",
+      "query_mitre_graph",
+      "query_mitre_graph"
+    ],
+    "iterations": 4,
+    "forced_final": false,
+    "hallucination_risk": false,
+    "usage": {
+      "prompt_tokens": 12670,
+      "completion_tokens": 589,
+      "total_tokens": 13259,
+      "total_latency_s": 13.209
+    },
+    "architecture": "D_Toolformer"
+  },
+  "metrics": {
+    "question_id": "Q072",
+    "level": 1,
+    "domain": "MITRE",
+    "architecture": "D_Toolformer",
+    "accuracy": 0.2,
+    "hallucination_risk": 0.0,
+    "traceability": 0.5,
+    "error_handling": 1.0,
+    "latency_s": 13.209,
+    "total_tokens": 13259,
+    "accuracy_detail": "Score=0.200 | completas=['cuentas de servicio'] | parciales=[] | ausentes=['T1078', 'valid accounts', 'service accounts', 'persistence']",
+    "hallucination_detail": "Sin señales de alucinación detectadas",
+    "traceability_detail": "Markers texto: ['mitre', 'att&ck', 'fuente'] | Fuente estructurada: api_source=False, seed_nodes=False, sql=False",
+    "error_handling_detail": "Sin errores detectados en el pipeline",
+    "latency_detail": "total_react=13.21s iterations=4",
+    "answer_preview": "La técnica MITRE ATT&CK que describe el uso de cuentas de servicio para persistencia no se menciona explícitamente, pero las técnicas T1053 (Scheduled Task/Job) y T1053.002 (At) son relevantes, ya que implican el uso de programación de tareas que puede involucrar cuentas de servicio para ejecutar có…"
+  }
+}

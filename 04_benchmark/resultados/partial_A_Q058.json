@@ -1,0 +1,39 @@
+{
+  "result": {
+    "answer": "Según los datos obtenidos de la base de datos NVD/NIST, existen un total de 3759 vulnerabilidades clasificadas con severidad CRITICAL que fueron publicadas en el año 2022.",
+    "sql": "SELECT COUNT(*) AS critical_vulnerabilities_count\nFROM cve AS c\nWHERE c.cvss_v3_severity = 'CRITICAL' AND c.published LIKE '2022-%';",
+    "sql_rows": 1,
+    "correction_attempts": 0,
+    "sql_error": null,
+    "api_fallback": null,
+    "hallucination_risk": false,
+    "usage": {
+      "prompt_tokens": 2969,
+      "completion_tokens": 170,
+      "total_tokens": 3139,
+      "schema_linking_latency_s": 2.041,
+      "sql_generation_latency_s": 1.16,
+      "self_correction_latency_s": 0,
+      "synthesis_latency_s": 1.72
+    },
+    "architecture": "A_Text2SQL"
+  },
+  "metrics": {
+    "question_id": "Q058",
+    "level": 1,
+    "domain": "NVD",
+    "architecture": "A_Text2SQL",
+    "accuracy": 0.75,
+    "hallucination_risk": 0.0,
+    "traceability": 1.0,
+    "error_handling": 1.0,
+    "latency_s": 4.921,
+    "total_tokens": 3139,
+    "accuracy_detail": "Score=0.750 | completas=['critical', '2022', 'vulnerabilidades'] | parciales=[] | ausentes=['crítica']",
+    "hallucination_detail": "Sin señales de alucinación detectadas",
+    "traceability_detail": "Markers texto: ['nvd', 'nist', 'según'] | Fuente estructurada: api_source=False, seed_nodes=False, sql=True",
+    "error_handling_detail": "Sin errores detectados en el pipeline",
+    "latency_detail": "linking=2.04s sql=1.16s corr=0.00s synth=1.72s",
+    "answer_preview": "Según los datos obtenidos de la base de datos NVD/NIST, existen un total de 3759 vulnerabilidades clasificadas con severidad CRITICAL que fueron publicadas en el año 2022."
+  }
+}

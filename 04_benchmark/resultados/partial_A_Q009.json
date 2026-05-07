@@ -1,0 +1,39 @@
+{
+  "result": {
+    "answer": "Según los resultados obtenidos de la base de datos NVD/NIST, hay un total de 23,624 vulnerabilidades asociadas a la debilidad CWE-79. Esto indica una cantidad significativa de vulnerabilidades que podrían estar relacionadas con esta debilidad específica en el contexto de la ciberseguridad.",
+    "sql": "SELECT COUNT(DISTINCT cve.cve_id) AS vulnerabilidades_count\nFROM cve\nJOIN cve_cwe ON cve.cve_id = cve_cwe.cve_id\nWHERE cve_cwe.cwe_id = 'CWE-79';",
+    "sql_rows": 1,
+    "correction_attempts": 0,
+    "sql_error": null,
+    "api_fallback": null,
+    "hallucination_risk": false,
+    "usage": {
+      "prompt_tokens": 3004,
+      "completion_tokens": 226,
+      "total_tokens": 3230,
+      "schema_linking_latency_s": 2.872,
+      "sql_generation_latency_s": 1.843,
+      "self_correction_latency_s": 0,
+      "synthesis_latency_s": 2.0
+    },
+    "architecture": "A_Text2SQL"
+  },
+  "metrics": {
+    "question_id": "Q009",
+    "level": 1,
+    "domain": "NVD",
+    "architecture": "A_Text2SQL",
+    "accuracy": 0.3333,
+    "hallucination_risk": 0.0,
+    "traceability": 1.0,
+    "error_handling": 1.0,
+    "latency_s": 6.715,
+    "total_tokens": 3230,
+    "accuracy_detail": "Score=0.333 | completas=['CWE-79'] | parciales=[] | ausentes=['cross-site scripting', 'xss']",
+    "hallucination_detail": "Sin señales de alucinación detectadas",
+    "traceability_detail": "Markers texto: ['nvd', 'nist', 'según'] | Fuente estructurada: api_source=False, seed_nodes=False, sql=True",
+    "error_handling_detail": "Sin errores detectados en el pipeline",
+    "latency_detail": "linking=2.87s sql=1.84s corr=0.00s synth=2.00s",
+    "answer_preview": "Según los resultados obtenidos de la base de datos NVD/NIST, hay un total de 23,624 vulnerabilidades asociadas a la debilidad CWE-79. Esto indica una cantidad significativa de vulnerabilidades que podrían estar relacionadas con esta debilidad específica en el contexto de la ciberseguridad."
+  }
+}

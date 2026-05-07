@@ -1,0 +1,48 @@
+{
+  "result": {
+    "answer": "El subgrafo proporcionado no contiene información específica sobre vulnerabilidades con un CVSS score de 10.0 ni su relación directa con las tácticas de acceso inicial en el marco MITRE ATT&CK. Sin embargo, se pueden identificar algunas técnicas de acceso inicial que podrían ser relevantes en un contexto donde se exploten vulnerabilidades críticas.\n\nSegún MITRE ATT&CK, las técnicas relacionadas con el acceso inicial incluyen:\n\n1. **Phishing (T1566)**: Los adversarios pueden enviar mensajes de phishing para obtener acceso a los sistemas de las víctimas. Esta técnica es comúnmente utilizada para explotar vulnerabilidades en la interacción del usuario con el software.\n\n2. **Trusted Relationship (T1199)**: Los adversarios pueden aprovechar relaciones de confianza entre organizaciones para acceder a los sistemas de las víctimas. Esto puede incluir la explotación de vulnerabilidades en sistemas de terceros.\n\nAmbas técnicas pueden ser facilitadas por vulnerabilidades críticas, como aquellas con un CVSS score de 10.0, que podrían permitir a un atacante ejecutar código arbitrario o acceder a sistemas sin autenticación adecuada.\n\nSin embargo, el subgrafo no proporciona detalles sobre vulnerabilidades específicas ni su puntuación CVSS, por lo que no se puede establecer una relación directa entre estas vulnerabilidades y las tácticas de acceso inicial mencionadas. Para un análisis más profundo, sería necesario contar con información adicional sobre las vulnerabilidades específicas y su explotación en el contexto de las técnicas del marco MITRE ATT&CK.\n\nEn resumen, aunque hay técnicas de acceso inicial que podrían ser relevantes, el subgrafo no ofrece suficiente información para establecer una conexión clara entre las vulnerabilidades con un CVSS score de 10.0 y las tácticas de acceso inicial en el marco MITRE ATT&CK.",
+    "seed_nodes": [
+      "T1053.002",
+      "S0110"
+    ],
+    "subgraph_nodes": 40,
+    "subgraph_edges": 6,
+    "coverage": {
+      "sufficient": false,
+      "missing_entities": [
+        "CVSS score 10.0",
+        "vulnerabilidades específicas",
+        "tácticas de acceso inicial"
+      ],
+      "confidence": 0.4
+    },
+    "hallucination_risk": true,
+    "usage": {
+      "prompt_tokens": 2697,
+      "completion_tokens": 407,
+      "total_tokens": 3104,
+      "retrieval_latency_s": 0.012,
+      "coverage_latency_s": 1.598,
+      "synthesis_latency_s": 7.07
+    },
+    "architecture": "C_GraphRAG"
+  },
+  "metrics": {
+    "question_id": "Q046",
+    "level": 3,
+    "domain": "BOTH",
+    "architecture": "C_GraphRAG",
+    "accuracy": 0.2,
+    "hallucination_risk": 0.7,
+    "traceability": 1.0,
+    "error_handling": 1.0,
+    "latency_s": 8.68,
+    "total_tokens": 3104,
+    "accuracy_detail": "Score=0.200 | completas=['CVSS 10.0'] | parciales=[] | ausentes=['initial access', 'T1190', 'exploit', 'critical']",
+    "hallucination_detail": "Flag de riesgo activo (sin datos de fuente verificados)",
+    "traceability_detail": "Markers texto: ['mitre', 'att&ck', 'según'] | Fuente estructurada: api_source=False, seed_nodes=True, sql=False",
+    "error_handling_detail": "Sin errores detectados en el pipeline",
+    "latency_detail": "retrieval=0.01s coverage=1.60s synth=7.07s",
+    "answer_preview": "El subgrafo proporcionado no contiene información específica sobre vulnerabilidades con un CVSS score de 10.0 ni su relación directa con las tácticas de acceso inicial en el marco MITRE ATT&CK. Sin embargo, se pueden identificar algunas técnicas de acceso inicial que podrían ser relevantes en un con…"
+  }
+}

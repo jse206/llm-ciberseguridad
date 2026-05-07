@@ -1,0 +1,47 @@
+{
+  "result": {
+    "answer": "El subgrafo proporcionado no contiene información específica sobre grupos APT asociados a Corea del Norte. Por lo tanto, no puedo responder a la pregunta sobre qué grupos APT han sido asociados a Corea del Norte en MITRE ATT&CK.\n\nSi necesitas información sobre grupos APT específicos, como Lazarus Group (G0032) o otros, te recomendaría consultar directamente la base de datos de MITRE ATT&CK o fuentes adicionales que puedan contener esa información.",
+    "seed_nodes": [
+      "T1053.002",
+      "S0110"
+    ],
+    "subgraph_nodes": 40,
+    "subgraph_edges": 6,
+    "coverage": {
+      "sufficient": false,
+      "missing_entities": [
+        "grupos APT",
+        "Corea del Norte"
+      ],
+      "confidence": 0.3
+    },
+    "hallucination_risk": true,
+    "usage": {
+      "prompt_tokens": 2667,
+      "completion_tokens": 133,
+      "total_tokens": 2800,
+      "retrieval_latency_s": 0.008,
+      "coverage_latency_s": 0.977,
+      "synthesis_latency_s": 2.861
+    },
+    "architecture": "C_GraphRAG"
+  },
+  "metrics": {
+    "question_id": "Q039",
+    "level": 2,
+    "domain": "MITRE",
+    "architecture": "C_GraphRAG",
+    "accuracy": 0.3333,
+    "hallucination_risk": 0.7,
+    "traceability": 1.0,
+    "error_handling": 1.0,
+    "latency_s": 3.846,
+    "total_tokens": 2800,
+    "accuracy_detail": "Score=0.333 | completas=['Lazarus', 'G0032'] | parciales=[] | ausentes=['APT38', 'DPRK', 'korea', 'kimsuky']",
+    "hallucination_detail": "Flag de riesgo activo (sin datos de fuente verificados)",
+    "traceability_detail": "Markers texto: ['mitre', 'att&ck', 'fuente'] | Fuente estructurada: api_source=False, seed_nodes=True, sql=False",
+    "error_handling_detail": "Sin errores detectados en el pipeline",
+    "latency_detail": "retrieval=0.01s coverage=0.98s synth=2.86s",
+    "answer_preview": "El subgrafo proporcionado no contiene información específica sobre grupos APT asociados a Corea del Norte. Por lo tanto, no puedo responder a la pregunta sobre qué grupos APT han sido asociados a Corea del Norte en MITRE ATT&CK.\n\nSi necesitas información sobre grupos APT específicos, como Lazarus Gr…"
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "result": {
+    "answer": "Para una organización con servidores Microsoft Exchange vulnerables ante los TTPs de APT28, se recomienda implementar las siguientes medidas de mitigación basadas en las técnicas asociadas a este grupo:\n\n1. **Fortalecimiento de Credenciales**: APT28 utiliza técnicas de adivinanza de contraseñas (T1110.001) y fuerza bruta (T1110) para acceder a cuentas. Es crucial implementar políticas de contraseñas robustas, que incluyan requisitos de complejidad y cambios regulares. Además, se debe considerar la autenticación multifactor (MFA) para añadir una capa adicional de seguridad.\n\n2. **Actualización y Parches**: Mantener todos los sistemas, especialmente Microsoft Exchange, actualizados con los últimos parches de seguridad es fundamental. Esto ayuda a mitigar vulnerabilidades que podrían ser explotadas por APT28, como se observa en su uso de malware y técnicas de explotación (T1203).\n\n3. **Monitoreo de Actividades**: Implementar soluciones de monitoreo y detección de intrusiones para identificar comportamientos anómalos en la red. Esto incluye la vigilancia de tráfico de red que pueda indicar el uso de protocolos web para el comando y control (T1071.001) o la exfiltración de datos (T1041).\n\n4. **Segmentación de Red**: Aislar los servidores de Exchange de otras partes de la red puede limitar el movimiento lateral en caso de que un atacante logre comprometer un sistema. Esto es especialmente relevante dado que APT28 puede utilizar técnicas de movimiento lateral como \"Pass the Hash\" (T1550.002).\n\n5. **Educación y Concienciación**: Capacitar a los empleados sobre las amenazas de phishing y la importancia de la seguridad de las contraseñas puede ayudar a prevenir el acceso no autorizado. APT28 ha sido conocido por utilizar técnicas de ingeniería social para obtener acceso inicial (T1199).\n\n6. **Revisión de Relaciones de Confianza**: Evaluar y reforzar las relaciones de confianza con terceros, ya que APT28 puede aprovechar estas conexiones para obtener acceso (T1199).\n\n7. **Respuestas a Incidentes**: Tener un plan de respuesta a incidentes bien definido que incluya procedimientos para manejar compromisos de seguridad y la recuperación de sistemas afectados.\n\nEstas recomendaciones están alineadas con las tácticas y técnicas observadas en las actividades de APT28, y su implementación puede ayudar a mitigar el riesgo de compromisos en servidores Microsoft Exchange. \n\nSegún MITRE ATT&CK, la prevención y detección proactiva son claves para protegerse contra las amenazas avanzadas.",
+    "seed_nodes": [
+      "G0007",
+      "T1559.002",
+      "S1173"
+    ],
+    "subgraph_nodes": 40,
+    "subgraph_edges": 61,
+    "coverage": {
+      "sufficient": false,
+      "missing_entities": [
+        "recomendaciones específicas",
+        "medidas de mitigación",
+        "TTPs de APT28"
+      ],
+      "confidence": 0.4
+    },
+    "hallucination_risk": true,
+    "usage": {
+      "prompt_tokens": 2777,
+      "completion_tokens": 598,
+      "total_tokens": 3375,
+      "retrieval_latency_s": 0.008,
+      "coverage_latency_s": 1.502,
+      "synthesis_latency_s": 10.793
+    },
+    "architecture": "C_GraphRAG"
+  },
+  "metrics": {
+    "question_id": "Q091",
+    "level": 3,
+    "domain": "BOTH",
+    "architecture": "C_GraphRAG",
+    "accuracy": 0.5714,
+    "hallucination_risk": 0.7,
+    "traceability": 1.0,
+    "error_handling": 1.0,
+    "latency_s": 12.303,
+    "total_tokens": 3375,
+    "accuracy_detail": "Score=0.571 | completas=['APT28', 'exchange', 'parche', 'MFA'] | parciales=[] | ausentes=['CVE-2021-26855', 'CVE-2023-23397', 'T1566']",
+    "hallucination_detail": "Flag de riesgo activo (sin datos de fuente verificados)",
+    "traceability_detail": "Markers texto: ['mitre', 'att&ck', 'según'] | Fuente estructurada: api_source=False, seed_nodes=True, sql=False",
+    "error_handling_detail": "Sin errores detectados en el pipeline",
+    "latency_detail": "retrieval=0.01s coverage=1.50s synth=10.79s",
+    "answer_preview": "Para una organización con servidores Microsoft Exchange vulnerables ante los TTPs de APT28, se recomienda implementar las siguientes medidas de mitigación basadas en las técnicas asociadas a este grupo:\n\n1. **Fortalecimiento de Credenciales**: APT28 utiliza técnicas de adivinanza de contraseñas (T11…"
+  }
+}

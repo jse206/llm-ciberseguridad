@@ -1,0 +1,39 @@
+{
+  "result": {
+    "answer": "Los resultados de la consulta SQL ejecutada contra la base de datos NVD/NIST no arrojan ningún CVE relacionado con el indicador T1078 (Valid Accounts) que tenga una severidad clasificada como 'HIGH' o 'CRITICAL'. Esto significa que, en este momento, no hay vulnerabilidades específicas que priorizar para parchear en relación con este indicador.\n\nDado que no se encontraron CVEs relevantes, es recomendable que el equipo de respuesta a incidentes tome las siguientes medidas urgentes:\n\n1. **Revisión de cuentas de usuario**: Realizar una auditoría exhaustiva de todas las cuentas de usuario en la red para identificar cuentas no autorizadas o inactivas.\n\n2. **Implementación de autenticación multifactor (MFA)**: Asegurarse de que todas las cuentas críticas utilicen MFA para añadir una capa adicional de seguridad.\n\n3. **Monitoreo de actividad sospechosa**: Establecer un sistema de monitoreo para detectar accesos inusuales o no autorizados a las cuentas.\n\n4. **Políticas de contraseñas**: Reforzar las políticas de contraseñas, asegurando que sean complejas y se cambien regularmente.\n\n5. **Capacitación de usuarios**: Educar a los usuarios sobre la importancia de la seguridad de las cuentas y las mejores prácticas para evitar compromisos.\n\n6. **Revisión de logs**: Analizar los registros de acceso para identificar patrones que puedan indicar un compromiso.\n\nAunque no se encontraron CVEs específicos, estas medidas ayudarán a mitigar el riesgo asociado con el uso de cuentas válidas en la red.",
+    "sql": "SELECT cve.cve_id, cve.description, cve.cvss_v3_score, cve.cvss_v3_severity\nFROM cve\nJOIN cve_cwe ON cve.cve_id = cve_cwe.cve_id\nWHERE cve_cwe.cwe_id = 'CWE-1078' AND cve.cvss_v3_severity IN ('HIGH', 'CRITICAL')\nORDER BY cve.cvss_v3_score DESC\nLIMIT 10;",
+    "sql_rows": 0,
+    "correction_attempts": 0,
+    "sql_error": null,
+    "api_fallback": null,
+    "hallucination_risk": false,
+    "usage": {
+      "prompt_tokens": 3119,
+      "completion_tokens": 572,
+      "total_tokens": 3691,
+      "schema_linking_latency_s": 3.685,
+      "sql_generation_latency_s": 3.071,
+      "self_correction_latency_s": 0,
+      "synthesis_latency_s": 7.128
+    },
+    "architecture": "A_Text2SQL"
+  },
+  "metrics": {
+    "question_id": "Q087",
+    "level": 3,
+    "domain": "BOTH",
+    "architecture": "A_Text2SQL",
+    "accuracy": 0.8571,
+    "hallucination_risk": 0.0,
+    "traceability": 1.0,
+    "error_handling": 1.0,
+    "latency_s": 13.884,
+    "total_tokens": 3691,
+    "accuracy_detail": "Score=0.857 | completas=['T1078', 'valid accounts', 'MFA', 'parche', 'CVE', 'acceso'] | parciales=[] | ausentes=['credenciales']",
+    "hallucination_detail": "Sin señales de alucinación detectadas",
+    "traceability_detail": "Markers texto: ['nvd', 'nist', 'base de datos'] | Fuente estructurada: api_source=False, seed_nodes=False, sql=True",
+    "error_handling_detail": "Sin errores detectados en el pipeline",
+    "latency_detail": "linking=3.69s sql=3.07s corr=0.00s synth=7.13s",
+    "answer_preview": "Los resultados de la consulta SQL ejecutada contra la base de datos NVD/NIST no arrojan ningún CVE relacionado con el indicador T1078 (Valid Accounts) que tenga una severidad clasificada como 'HIGH' o 'CRITICAL'. Esto significa que, en este momento, no hay vulnerabilidades específicas que priorizar …"
+  }
+}

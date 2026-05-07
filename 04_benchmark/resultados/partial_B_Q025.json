@@ -1,0 +1,37 @@
+{
+  "result": {
+    "answer": "No fue posible determinar con suficiente confianza qué fuente de datos consultar para esta pregunta (confianza de routing: 0%). La pregunta podría requerir información no disponible en las APIs del sistema (NVD, AbuseIPDB). Reformule la pregunta especificando un CVE concreto, una dirección IP o un producto afectado.",
+    "intent": "unknown",
+    "api_source": null,
+    "api_error": "Confianza insuficiente (0.00 < 0.65)",
+    "router_confidence": 0.0,
+    "usage": {
+      "prompt_tokens": 335,
+      "completion_tokens": 23,
+      "total_tokens": 358,
+      "router_latency_s": 1.238,
+      "api_latency_s": 0,
+      "synthesis_latency_s": 0
+    },
+    "hallucination_risk": false,
+    "architecture": "B_API"
+  },
+  "metrics": {
+    "question_id": "Q025",
+    "level": 2,
+    "domain": "BOTH",
+    "architecture": "B_API",
+    "accuracy": 0.0,
+    "hallucination_risk": 0.5,
+    "traceability": 0.5,
+    "error_handling": 0.8,
+    "latency_s": 1.238,
+    "total_tokens": 358,
+    "accuracy_detail": "Score=0.000 | completas=[] | parciales=[] | ausentes=['lazarus', 'WannaCry', 'malware', 'DPRK', 'korea', 'S0']",
+    "hallucination_detail": "Error de API/SQL — respuesta puede basarse en conocimiento parametrizado",
+    "traceability_detail": "Markers texto: ['nvd', 'abuseipdb', 'fuente'] | Fuente estructurada: api_source=False, seed_nodes=False, sql=False",
+    "error_handling_detail": "Error presente pero reconocido honestamente en la respuesta",
+    "latency_detail": "router=1.24s api=0.00s synth=0.00s",
+    "answer_preview": "No fue posible determinar con suficiente confianza qué fuente de datos consultar para esta pregunta (confianza de routing: 0%). La pregunta podría requerir información no disponible en las APIs del sistema (NVD, AbuseIPDB). Reformule la pregunta especificando un CVE concreto, una dirección IP o un p…"
+  }
+}

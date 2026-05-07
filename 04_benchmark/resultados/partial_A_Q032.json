@@ -1,0 +1,39 @@
+{
+  "result": {
+    "answer": "Los datos provienen de la base de datos NVD/NIST. Según los resultados de la consulta SQL ejecutada, la táctica 'Credential Access' en MITRE ATT&CK Enterprise tiene un total de 4 técnicas.",
+    "sql": "SELECT COUNT(*) AS technique_count FROM cve WHERE description LIKE '%Credential Access%';",
+    "sql_rows": 1,
+    "correction_attempts": 0,
+    "sql_error": null,
+    "api_fallback": null,
+    "hallucination_risk": false,
+    "usage": {
+      "prompt_tokens": 2926,
+      "completion_tokens": 153,
+      "total_tokens": 3079,
+      "schema_linking_latency_s": 2.131,
+      "sql_generation_latency_s": 0.938,
+      "self_correction_latency_s": 0,
+      "synthesis_latency_s": 1.454
+    },
+    "architecture": "A_Text2SQL"
+  },
+  "metrics": {
+    "question_id": "Q032",
+    "level": 2,
+    "domain": "MITRE",
+    "architecture": "A_Text2SQL",
+    "accuracy": 0.4,
+    "hallucination_risk": 0.0,
+    "traceability": 1.0,
+    "error_handling": 1.0,
+    "latency_s": 4.523,
+    "total_tokens": 3079,
+    "accuracy_detail": "Score=0.400 | completas=['credential access', 'técnicas'] | parciales=[] | ausentes=['TA0006', 'T1110', 'brute force']",
+    "hallucination_detail": "Sin señales de alucinación detectadas",
+    "traceability_detail": "Markers texto: ['nvd', 'nist', 'mitre'] | Fuente estructurada: api_source=False, seed_nodes=False, sql=True",
+    "error_handling_detail": "Sin errores detectados en el pipeline",
+    "latency_detail": "linking=2.13s sql=0.94s corr=0.00s synth=1.45s",
+    "answer_preview": "Los datos provienen de la base de datos NVD/NIST. Según los resultados de la consulta SQL ejecutada, la táctica 'Credential Access' en MITRE ATT&CK Enterprise tiene un total de 4 técnicas."
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "result": {
+    "answer": "El subgrafo proporcionado no contiene información sobre CVE-2021-44228 ni sobre los productos afectados por esta vulnerabilidad. Por lo tanto, no puedo responder a la pregunta sobre qué productos están afectados por CVE-2021-44228.\n\nSi necesitas información específica sobre esta vulnerabilidad, te recomendaría consultar fuentes adicionales, como la base de datos de vulnerabilidades CVE o la documentación de seguridad de los productos afectados.",
+    "seed_nodes": [
+      "T1053.002",
+      "S0110",
+      "T1596.005",
+      "T1596",
+      "T1497.003"
+    ],
+    "subgraph_nodes": 40,
+    "subgraph_edges": 11,
+    "coverage": {
+      "sufficient": false,
+      "missing_entities": [
+        "CVE-2021-44228",
+        "productos afectados"
+      ],
+      "confidence": 0.2
+    },
+    "hallucination_risk": true,
+    "usage": {
+      "prompt_tokens": 2977,
+      "completion_tokens": 130,
+      "total_tokens": 3107,
+      "retrieval_latency_s": 0.009,
+      "coverage_latency_s": 1.022,
+      "synthesis_latency_s": 2.245
+    },
+    "architecture": "C_GraphRAG"
+  },
+  "metrics": {
+    "question_id": "Q027",
+    "level": 2,
+    "domain": "NVD",
+    "architecture": "C_GraphRAG",
+    "accuracy": 0.0,
+    "hallucination_risk": 0.7,
+    "traceability": 1.0,
+    "error_handling": 1.0,
+    "latency_s": 3.276,
+    "total_tokens": 3107,
+    "accuracy_detail": "Score=0.000 | completas=[] | parciales=[] | ausentes=['log4j', 'apache', 'log4shell', 'java', 'cpe']",
+    "hallucination_detail": "Flag de riesgo activo (sin datos de fuente verificados)",
+    "traceability_detail": "Markers texto: ['fuente', 'base de datos', 'grafo'] | Fuente estructurada: api_source=False, seed_nodes=True, sql=False",
+    "error_handling_detail": "Sin errores detectados en el pipeline",
+    "latency_detail": "retrieval=0.01s coverage=1.02s synth=2.25s",
+    "answer_preview": "El subgrafo proporcionado no contiene información sobre CVE-2021-44228 ni sobre los productos afectados por esta vulnerabilidad. Por lo tanto, no puedo responder a la pregunta sobre qué productos están afectados por CVE-2021-44228.\n\nSi necesitas información específica sobre esta vulnerabilidad, te r…"
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "result": {
+    "answer": "El subgrafo proporcionado no contiene información sobre CVEs (Common Vulnerabilities and Exposures) ni sobre su puntuación CVSS (Common Vulnerability Scoring System). Por lo tanto, no es posible determinar cuántos CVEs con un score CVSS superior a 9.0 se publicaron en 2024 en la base de datos local.\n\nSegún MITRE ATT&CK, la información disponible se centra en tácticas, técnicas, grupos APT y herramientas de ataque, pero no incluye datos específicos sobre vulnerabilidades o exposiciones. \n\nSi necesitas información adicional o específica sobre otro tema relacionado con el framework MITRE ATT&CK, estaré encantado de ayudarte.",
+    "seed_nodes": [
+      "T1053.002",
+      "S0110",
+      "T1596.005",
+      "T1596",
+      "T1497.003"
+    ],
+    "subgraph_nodes": 40,
+    "subgraph_edges": 11,
+    "coverage": {
+      "sufficient": false,
+      "missing_entities": [
+        "CVE",
+        "CVSS",
+        "2024",
+        "base de datos local"
+      ],
+      "confidence": 0.2
+    },
+    "hallucination_risk": true,
+    "usage": {
+      "prompt_tokens": 2995,
+      "completion_tokens": 184,
+      "total_tokens": 3179,
+      "retrieval_latency_s": 0.011,
+      "coverage_latency_s": 1.345,
+      "synthesis_latency_s": 2.765
+    },
+    "architecture": "C_GraphRAG"
+  },
+  "metrics": {
+    "question_id": "Q078",
+    "level": 2,
+    "domain": "NVD",
+    "architecture": "C_GraphRAG",
+    "accuracy": 0.6,
+    "hallucination_risk": 0.7,
+    "traceability": 1.0,
+    "error_handling": 1.0,
+    "latency_s": 4.121,
+    "total_tokens": 3179,
+    "accuracy_detail": "Score=0.600 | completas=['9.0', '2024', 'vulnerabilidades'] | parciales=[] | ausentes=['critical', 'conteo']",
+    "hallucination_detail": "Flag de riesgo activo (sin datos de fuente verificados)",
+    "traceability_detail": "Markers texto: ['mitre', 'att&ck', 'según'] | Fuente estructurada: api_source=False, seed_nodes=True, sql=False",
+    "error_handling_detail": "Sin errores detectados en el pipeline",
+    "latency_detail": "retrieval=0.01s coverage=1.34s synth=2.77s",
+    "answer_preview": "El subgrafo proporcionado no contiene información sobre CVEs (Common Vulnerabilities and Exposures) ni sobre su puntuación CVSS (Common Vulnerability Scoring System). Por lo tanto, no es posible determinar cuántos CVEs con un score CVSS superior a 9.0 se publicaron en 2024 en la base de datos local.…"
+  }
+}

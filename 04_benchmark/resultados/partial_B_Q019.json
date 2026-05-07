@@ -1,0 +1,37 @@
+{
+  "result": {
+    "answer": "La vulnerabilidad CVE-2024-3400 se refiere a una vulnerabilidad de inyección de comandos en la función GlobalProtect del software PAN-OS de Palo Alto Networks. Esta vulnerabilidad permite a un atacante no autenticado ejecutar código arbitrario con privilegios de root en el firewall, afectando a versiones específicas de PAN-OS. Sin embargo, los servicios Cloud NGFW, Panorama y Prisma Access no están afectados por esta vulnerabilidad (fuente: NVD).\n\nEl estado de la vulnerabilidad es \"Analizada\" y fue publicada el 12 de abril de 2024. La última modificación de la información fue el 4 de noviembre de 2025 (fuente: NVD).\n\nEn términos de severidad, la vulnerabilidad tiene un puntaje CVSS de 10.0, lo que la clasifica como \"Crítica\". Esto se debe a que el vector de ataque es a través de la red, la complejidad del ataque es baja, no se requieren privilegios previos ni interacción del usuario, y tiene un impacto alto en la confidencialidad, integridad y disponibilidad (fuente: NVD).\n\nLa CISA ha indicado que se deben aplicar mitigaciones según las instrucciones del proveedor y que los usuarios con versiones vulnerables deben habilitar los IDs de prevención de amenazas disponibles del proveedor. La acción requerida tiene como fecha límite el 19 de abril de 2024 (fuente: NVD).\n\nPara más detalles, se puede consultar la fuente oficial en NVD: [NVD CVE-2024-3400](https://services.nvd.nist.gov/rest/json/cves/2.0?cveId=CVE-2024-3400).",
+    "intent": "get_cve_by_id",
+    "api_source": "https://services.nvd.nist.gov/rest/json/cves/2.0?cveId=CVE-2024-3400",
+    "api_error": null,
+    "router_confidence": 0.9,
+    "usage": {
+      "prompt_tokens": 3083,
+      "completion_tokens": 394,
+      "total_tokens": 3477,
+      "router_latency_s": 1.511,
+      "api_latency_s": 1.125,
+      "synthesis_latency_s": 6.345
+    },
+    "hallucination_risk": false,
+    "architecture": "B_API"
+  },
+  "metrics": {
+    "question_id": "Q019",
+    "level": 1,
+    "domain": "NVD",
+    "architecture": "B_API",
+    "accuracy": 0.8,
+    "hallucination_risk": 0.0,
+    "traceability": 1.0,
+    "error_handling": 1.0,
+    "latency_s": 8.981,
+    "total_tokens": 3477,
+    "accuracy_detail": "Score=0.800 | completas=['palo alto', 'pan-os', 'firewall', '10.0'] | parciales=[] | ausentes=['critical']",
+    "hallucination_detail": "Sin señales de alucinación detectadas",
+    "traceability_detail": "Markers texto: ['nvd', 'nist', 'según'] | Fuente estructurada: api_source=True, seed_nodes=False, sql=False",
+    "error_handling_detail": "Sin errores detectados en el pipeline",
+    "latency_detail": "router=1.51s api=1.12s synth=6.34s",
+    "answer_preview": "La vulnerabilidad CVE-2024-3400 se refiere a una vulnerabilidad de inyección de comandos en la función GlobalProtect del software PAN-OS de Palo Alto Networks. Esta vulnerabilidad permite a un atacante no autenticado ejecutar código arbitrario con privilegios de root en el firewall, afectando a vers…"
+  }
+}

@@ -1,0 +1,91 @@
+{
+  "result": {
+    "answer": "Con la información recopilada, se ha identificado al menos una técnica de la táctica Defense Evasion en el marco MITRE ATT&CK:\n\n- **T1562.010 — Downgrade Attack**: Los adversarios pueden realizar ataques de degradación o utilizar una versión de características del sistema que puede estar desactualizada, vulnerable y/o que no soporte controles de seguridad actualizados. Este tipo de ataque generalmente aprovecha una vulnerabilidad en el sistema.\n\nNo se han encontrado más técnicas específicas de la táctica Defense Evasion en la información proporcionada. Si necesitas más detalles o información sobre otras tácticas, por favor házmelo saber.\n\n**Fuentes consultadas:** query_mitre_graph",
+    "steps": [
+      {
+        "thought": "",
+        "action": "query_mitre_graph",
+        "action_input": {
+          "question": "¿Qué técnicas están en la táctica Defense Evasion?"
+        },
+        "observation_preview": "{\n  \"context\": \"=== SUBGRAFO MITRE ATT&CK ===\\n\\n--- Entidades recuperadas ---\\n  [attack-pattern] T1547.012 — Print Processors\\n     Adversaries may abuse print processors to run malicious DLLs during system boot for persistence and/or privilege escalation. Print processors are DLLs that are loaded…"
+      },
+      {
+        "thought": "",
+        "action": "query_mitre_graph",
+        "action_input": {
+          "question": "Lista todas las técnicas en la táctica Defense Evasion"
+        },
+        "observation_preview": "{\n  \"context\": \"=== SUBGRAFO MITRE ATT&CK ===\\n\\n--- Entidades recuperadas ---\\n  [attack-pattern] T1562.010 — Downgrade Attack\\n     Adversaries may downgrade or use a version of system features that may be outdated, vulnerable, and/or does not support updated security controls. Downgrade attacks t…"
+      },
+      {
+        "thought": "",
+        "action": "query_mitre_graph",
+        "action_input": {
+          "question": "¿Cuáles son todas las técnicas de la táctica Defense Evasion?"
+        },
+        "observation_preview": "{\n  \"context\": \"=== SUBGRAFO MITRE ATT&CK ===\\n\\n--- Entidades recuperadas ---\\n  [attack-pattern] T1547.012 — Print Processors\\n     Adversaries may abuse print processors to run malicious DLLs during system boot for persistence and/or privilege escalation. Print processors are DLLs that are loaded…"
+      },
+      {
+        "thought": "",
+        "action": "query_mitre_graph",
+        "action_input": {
+          "question": "¿Cuáles son las técnicas de la táctica Defense Evasion? (sin truncar)"
+        },
+        "observation_preview": "{\n  \"context\": \"=== SUBGRAFO MITRE ATT&CK ===\\n\\n--- Entidades recuperadas ---\\n  [attack-pattern] T1547.012 — Print Processors\\n     Adversaries may abuse print processors to run malicious DLLs during system boot for persistence and/or privilege escalation. Print processors are DLLs that are loaded…"
+      },
+      {
+        "thought": "",
+        "action": "query_mitre_graph",
+        "action_input": {
+          "question": "¿Cuáles son las técnicas de la táctica Defense Evasion? (sin truncar)"
+        },
+        "observation_preview": "{\n  \"context\": \"=== SUBGRAFO MITRE ATT&CK ===\\n\\n--- Entidades recuperadas ---\\n  [attack-pattern] T1547.012 — Print Processors\\n     Adversaries may abuse print processors to run malicious DLLs during system boot for persistence and/or privilege escalation. Print processors are DLLs that are loaded…"
+      },
+      {
+        "thought": "",
+        "action": "query_mitre_graph",
+        "action_input": {
+          "question": "¿Cuáles son las técnicas de la táctica Defense Evasion? (sin truncar)"
+        },
+        "observation_preview": "{\n  \"context\": \"=== SUBGRAFO MITRE ATT&CK ===\\n\\n--- Entidades recuperadas ---\\n  [attack-pattern] T1547.012 — Print Processors\\n     Adversaries may abuse print processors to run malicious DLLs during system boot for persistence and/or privilege escalation. Print processors are DLLs that are loaded…"
+      }
+    ],
+    "tools_used": [
+      "query_mitre_graph",
+      "query_mitre_graph",
+      "query_mitre_graph",
+      "query_mitre_graph",
+      "query_mitre_graph",
+      "query_mitre_graph"
+    ],
+    "iterations": 6,
+    "forced_final": true,
+    "hallucination_risk": false,
+    "usage": {
+      "prompt_tokens": 18177,
+      "completion_tokens": 601,
+      "total_tokens": 18778,
+      "total_latency_s": 10.757
+    },
+    "architecture": "D_Toolformer"
+  },
+  "metrics": {
+    "question_id": "Q076",
+    "level": 2,
+    "domain": "MITRE",
+    "architecture": "D_Toolformer",
+    "accuracy": 0.3333,
+    "hallucination_risk": 0.0,
+    "traceability": 0.5,
+    "error_handling": 0.3,
+    "latency_s": 10.757,
+    "total_tokens": 18778,
+    "accuracy_detail": "Score=0.333 | completas=['defense evasion', 'T1562'] | parciales=[] | ausentes=['TA0005', 'T1055', 'T1027', 'evasión']",
+    "hallucination_detail": "Sin señales de alucinación detectadas",
+    "traceability_detail": "Markers texto: ['mitre', 'att&ck', 'fuente'] | Fuente estructurada: api_source=False, seed_nodes=False, sql=False",
+    "error_handling_detail": "Error presente — la respuesta no lo reconoce explícitamente",
+    "latency_detail": "total_react=10.76s iterations=6",
+    "answer_preview": "Con la información recopilada, se ha identificado al menos una técnica de la táctica Defense Evasion en el marco MITRE ATT&CK:\n\n- **T1562.010 — Downgrade Attack**: Los adversarios pueden realizar ataques de degradación o utilizar una versión de características del sistema que puede estar desactualiz…"
+  }
+}

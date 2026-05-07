@@ -1,0 +1,58 @@
+{
+  "A": {
+    "n": 2,
+    "accuracy_mean": 0.0,
+    "hallucination_mean": 0.0,
+    "traceability_mean": 0.0,
+    "error_handling_mean": 1.0,
+    "latency_mean_s": 0.0,
+    "total_tokens_mean": 0.0,
+    "accuracy_by_level": {
+      "1": 0.0,
+      "2": 0.0,
+      "3": 0.0
+    }
+  },
+  "B": {
+    "n": 2,
+    "accuracy_mean": 0.0,
+    "hallucination_mean": 0.0,
+    "traceability_mean": 0.0,
+    "error_handling_mean": 1.0,
+    "latency_mean_s": 0.0,
+    "total_tokens_mean": 0.0,
+    "accuracy_by_level": {
+      "1": 0.0,
+      "2": 0.0,
+      "3": 0.0
+    }
+  },
+  "C": {
+    "n": 2,
+    "accuracy_mean": 0.0,
+    "hallucination_mean": 0.0,
+    "traceability_mean": 0.0,
+    "error_handling_mean": 1.0,
+    "latency_mean_s": 0.0,
+    "total_tokens_mean": 0.0,
+    "accuracy_by_level": {
+      "1": 0.0,
+      "2": 0.0,
+      "3": 0.0
+    }
+  },
+  "D": {
+    "n": 2,
+    "accuracy_mean": 0.0,
+    "hallucination_mean": 0.0,
+    "traceability_mean": 0.0,
+    "error_handling_mean": 1.0,
+    "latency_mean_s": 0.0,
+    "total_tokens_mean": 0.0,
+    "accuracy_by_level": {
+      "1": 0.0,
+      "2": 0.0,
+      "3": 0.0
+    }
+  }
+}

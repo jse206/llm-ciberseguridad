@@ -1,0 +1,37 @@
+{
+  "result": {
+    "answer": "El score CVSS v3 de la vulnerabilidad CVE-2023-20198, relacionada con Cisco IOS XE, es de **10.0**, lo que indica una severidad crítica. Este puntaje se basa en varios factores, incluyendo un vector de ataque de red (AV:N), complejidad de ataque baja (AC:L), sin privilegios requeridos (PR:N), y sin necesidad de interacción del usuario (UI:N). Además, la vulnerabilidad tiene un impacto alto en la confidencialidad, integridad y disponibilidad (C:H, I:H, A:H) y cambia el alcance (S:C) (Según NVD).\n\nLa vulnerabilidad permite a un atacante remoto no autenticado crear una cuenta en un sistema afectado con acceso de nivel de privilegio 15, lo que puede llevar al control total del sistema (Según la descripción de Cisco).\n\nPara más detalles, puedes consultar el aviso de seguridad de Cisco [aquí](https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-iosxe-webui-privesc-j22SaA4z) (fuente: psirt@cisco.com).",
+    "intent": "get_cve_by_id",
+    "api_source": "https://services.nvd.nist.gov/rest/json/cves/2.0?cveId=CVE-2023-20198",
+    "api_error": null,
+    "router_confidence": 0.9,
+    "usage": {
+      "prompt_tokens": 2816,
+      "completion_tokens": 284,
+      "total_tokens": 3100,
+      "router_latency_s": 1.41,
+      "api_latency_s": 1.063,
+      "synthesis_latency_s": 4.335
+    },
+    "hallucination_risk": false,
+    "architecture": "B_API"
+  },
+  "metrics": {
+    "question_id": "Q055",
+    "level": 1,
+    "domain": "NVD",
+    "architecture": "B_API",
+    "accuracy": 0.6667,
+    "hallucination_risk": 0.0,
+    "traceability": 1.0,
+    "error_handling": 1.0,
+    "latency_s": 6.808,
+    "total_tokens": 3100,
+    "accuracy_detail": "Score=0.667 | completas=['10.0', 'cisco', 'ios xe', 'web ui'] | parciales=[] | ausentes=['critical', 'privilege']",
+    "hallucination_detail": "Sin señales de alucinación detectadas",
+    "traceability_detail": "Markers texto: ['nvd', 'según', 'fuente'] | Fuente estructurada: api_source=True, seed_nodes=False, sql=False",
+    "error_handling_detail": "Sin errores detectados en el pipeline",
+    "latency_detail": "router=1.41s api=1.06s synth=4.33s",
+    "answer_preview": "El score CVSS v3 de la vulnerabilidad CVE-2023-20198, relacionada con Cisco IOS XE, es de **10.0**, lo que indica una severidad crítica. Este puntaje se basa en varios factores, incluyendo un vector de ataque de red (AV:N), complejidad de ataque baja (AC:L), sin privilegios requeridos (PR:N), y sin …"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "result": {
+    "answer": "La severidad de la vulnerabilidad CVE-2020-1472, también conocida como \"Zerologon\", se clasifica de la siguiente manera según los datos de la base de datos NVD/NIST:\n\n1. **CVSS v3.1**:\n   - **Base Score**: 10.0\n   - **Severidad**: CRÍTICA\n   - **Vector de ataque**: Red (Network)\n   - **Impacto en la confidencialidad**: Alto\n   - **Impacto en la integridad**: Alto\n   - **Impacto en la disponibilidad**: Alto\n\n2. **CVSS v2.0**:\n   - **Base Score**: 9.3\n   - **Severidad**: ALTA\n   - **Vector de ataque**: Red (Network)\n   - **Impacto en la confidencialidad**: Completo\n   - **Impacto en la integridad**: Completo\n   - **Impacto en la disponibilidad**: Completo\n\nEn resumen, la vulnerabilidad CVE-2020-1472 tiene una severidad crítica según la métrica CVSS v3.1 y alta según la métrica CVSS v2.0. Esto indica que es una vulnerabilidad grave que puede ser explotada por atacantes para obtener acceso no autorizado a sistemas críticos.",
+    "sql": "SELECT cvss_v3_severity FROM cve WHERE cve_id = 'CVE-2020-1472';",
+    "sql_rows": 1,
+    "correction_attempts": 0,
+    "sql_error": null,
+    "api_fallback": "NVD API — CVE-2020-1472",
+    "hallucination_risk": false,
+    "usage": {
+      "prompt_tokens": 4505,
+      "completion_tokens": 400,
+      "total_tokens": 4905,
+      "schema_linking_latency_s": 2.663,
+      "sql_generation_latency_s": 1.104,
+      "self_correction_latency_s": 0,
+      "synthesis_latency_s": 6.737
+    },
+    "architecture": "A_Text2SQL"
+  },
+  "metrics": {
+    "question_id": "Q052",
+    "level": 1,
+    "domain": "NVD",
+    "architecture": "A_Text2SQL",
+    "accuracy": 0.5,
+    "hallucination_risk": 0.0,
+    "traceability": 1.0,
+    "error_handling": 1.0,
+    "latency_s": 10.504,
+    "total_tokens": 4905,
+    "accuracy_detail": "Score=0.500 | completas=['10.0', 'crítica', 'zerologon'] | parciales=[] | ausentes=['critical', 'netlogon', 'active directory']",
+    "hallucination_detail": "Sin señales de alucinación detectadas",
+    "traceability_detail": "Markers texto: ['nvd', 'nist', 'según'] | Fuente estructurada: api_source=False, seed_nodes=False, sql=True",
+    "error_handling_detail": "Sin errores detectados en el pipeline",
+    "latency_detail": "linking=2.66s sql=1.10s corr=0.00s synth=6.74s",
+    "answer_preview": "La severidad de la vulnerabilidad CVE-2020-1472, también conocida como \"Zerologon\", se clasifica de la siguiente manera según los datos de la base de datos NVD/NIST:\n\n1. **CVSS v3.1**:\n   - **Base Score**: 10.0\n   - **Severidad**: CRÍTICA\n   - **Vector de ataque**: Red (Network)\n   - **Impacto en la…"
+  }
+}

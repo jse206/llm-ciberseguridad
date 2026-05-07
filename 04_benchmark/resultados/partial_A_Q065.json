@@ -1,0 +1,39 @@
+{
+  "result": {
+    "answer": "Los resultados de la consulta SQL ejecutada contra la base de datos NVD/CVE indican que no hay información disponible sobre técnicas MITRE ATT&CK en el esquema proporcionado. Específicamente, el mensaje obtenido es: \"No hay información sobre técnicas MITRE ATT&CK en el esquema proporcionado.\"\n\nPor lo tanto, no se puede proporcionar el nombre de la técnica MITRE ATT&CK con ID T1003, ya que no se encontró información relevante en la base de datos NVD/NIST.",
+    "sql": "SELECT 'No hay información sobre técnicas MITRE ATT&CK en el esquema proporcionado.' AS mensaje;",
+    "sql_rows": 1,
+    "correction_attempts": 0,
+    "sql_error": null,
+    "api_fallback": null,
+    "hallucination_risk": false,
+    "usage": {
+      "prompt_tokens": 2920,
+      "completion_tokens": 199,
+      "total_tokens": 3119,
+      "schema_linking_latency_s": 1.542,
+      "sql_generation_latency_s": 1.01,
+      "self_correction_latency_s": 0,
+      "synthesis_latency_s": 2.167
+    },
+    "architecture": "A_Text2SQL"
+  },
+  "metrics": {
+    "question_id": "Q065",
+    "level": 1,
+    "domain": "MITRE",
+    "architecture": "A_Text2SQL",
+    "accuracy": 0.266,
+    "hallucination_risk": 0.0,
+    "traceability": 1.0,
+    "error_handling": 1.0,
+    "latency_s": 4.719,
+    "total_tokens": 3119,
+    "accuracy_detail": "Score=0.266 | completas=['T1003'] | parciales=['OS Credential Dumping(33%)'] | ausentes=['credentials', 'credenciales', 'dumping']",
+    "hallucination_detail": "Sin señales de alucinación detectadas",
+    "traceability_detail": "Markers texto: ['nvd', 'nist', 'mitre'] | Fuente estructurada: api_source=False, seed_nodes=False, sql=True",
+    "error_handling_detail": "Sin errores detectados en el pipeline",
+    "latency_detail": "linking=1.54s sql=1.01s corr=0.00s synth=2.17s",
+    "answer_preview": "Los resultados de la consulta SQL ejecutada contra la base de datos NVD/CVE indican que no hay información disponible sobre técnicas MITRE ATT&CK en el esquema proporcionado. Específicamente, el mensaje obtenido es: \"No hay información sobre técnicas MITRE ATT&CK en el esquema proporcionado.\"\n\nPor l…"
+  }
+}

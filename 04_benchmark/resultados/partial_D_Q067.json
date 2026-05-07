@@ -1,0 +1,91 @@
+{
+  "result": {
+    "answer": "La táctica MITRE ATT&CK en la que se clasifica T1005 (Data from Local System) es \"Exfiltration\" (Exfiltración). Esta técnica se refiere a la recopilación de datos desde el sistema local de la víctima, lo que puede incluir archivos, credenciales y otra información sensible. Si necesitas más detalles sobre esta técnica o su aplicación, no dudes en preguntar.\n\n**Fuentes consultadas:** query_mitre_graph",
+    "steps": [
+      {
+        "thought": "",
+        "action": "query_mitre_graph",
+        "action_input": {
+          "question": "¿En qué táctica está T1005?"
+        },
+        "observation_preview": "{\n  \"context\": \"=== SUBGRAFO MITRE ATT&CK ===\\n\\n--- Entidades recuperadas ---\\n  [malware] S0452 — USBferry\\n     [USBferry](https://attack.mitre.org/software/S0452) is an information stealing malware and has been used by [Tropic Trooper](https://attack.mitre.org/groups/G0081) in targeted attacks a…"
+      },
+      {
+        "thought": "",
+        "action": "query_mitre_graph",
+        "action_input": {
+          "question": "¿Cuál es la táctica de T1005 Data from Local System?"
+        },
+        "observation_preview": "{\n  \"context\": \"=== SUBGRAFO MITRE ATT&CK ===\\n\\n--- Entidades recuperadas ---\\n  [malware] S0452 — USBferry\\n     [USBferry](https://attack.mitre.org/software/S0452) is an information stealing malware and has been used by [Tropic Trooper](https://attack.mitre.org/groups/G0081) in targeted attacks a…"
+      },
+      {
+        "thought": "",
+        "action": "query_mitre_graph",
+        "action_input": {
+          "question": "¿Qué táctica corresponde a la técnica T1005 en MITRE ATT&CK?"
+        },
+        "observation_preview": "{\n  \"context\": \"=== SUBGRAFO MITRE ATT&CK ===\\n\\n--- Entidades recuperadas ---\\n  [malware] S0452 — USBferry\\n     [USBferry](https://attack.mitre.org/software/S0452) is an information stealing malware and has been used by [Tropic Trooper](https://attack.mitre.org/groups/G0081) in targeted attacks a…"
+      },
+      {
+        "thought": "",
+        "action": "query_mitre_graph",
+        "action_input": {
+          "question": "¿Qué táctica se asocia con la técnica T1005 en MITRE ATT&CK?"
+        },
+        "observation_preview": "{\n  \"context\": \"=== SUBGRAFO MITRE ATT&CK ===\\n\\n--- Entidades recuperadas ---\\n  [malware] S0452 — USBferry\\n     [USBferry](https://attack.mitre.org/software/S0452) is an information stealing malware and has been used by [Tropic Trooper](https://attack.mitre.org/groups/G0081) in targeted attacks a…"
+      },
+      {
+        "thought": "",
+        "action": "query_mitre_graph",
+        "action_input": {
+          "question": "Información sobre la técnica T1005 Data from Local System en MITRE ATT&CK"
+        },
+        "observation_preview": "{\n  \"context\": \"=== SUBGRAFO MITRE ATT&CK ===\\n\\n--- Entidades recuperadas ---\\n  [malware] S0452 — USBferry\\n     [USBferry](https://attack.mitre.org/software/S0452) is an information stealing malware and has been used by [Tropic Trooper](https://attack.mitre.org/groups/G0081) in targeted attacks a…"
+      },
+      {
+        "thought": "",
+        "action": "query_mitre_graph",
+        "action_input": {
+          "question": "¿Qué información se tiene sobre la técnica T1005 Data from Local System en MITRE ATT&CK?"
+        },
+        "observation_preview": "{\n  \"context\": \"=== SUBGRAFO MITRE ATT&CK ===\\n\\n--- Entidades recuperadas ---\\n  [malware] S0452 — USBferry\\n     [USBferry](https://attack.mitre.org/software/S0452) is an information stealing malware and has been used by [Tropic Trooper](https://attack.mitre.org/groups/G0081) in targeted attacks a…"
+      }
+    ],
+    "tools_used": [
+      "query_mitre_graph",
+      "query_mitre_graph",
+      "query_mitre_graph",
+      "query_mitre_graph",
+      "query_mitre_graph",
+      "query_mitre_graph"
+    ],
+    "iterations": 6,
+    "forced_final": true,
+    "hallucination_risk": false,
+    "usage": {
+      "prompt_tokens": 20089,
+      "completion_tokens": 594,
+      "total_tokens": 20683,
+      "total_latency_s": 13.111
+    },
+    "architecture": "D_Toolformer"
+  },
+  "metrics": {
+    "question_id": "Q067",
+    "level": 1,
+    "domain": "MITRE",
+    "architecture": "D_Toolformer",
+    "accuracy": 0.6,
+    "hallucination_risk": 0.0,
+    "traceability": 0.5,
+    "error_handling": 0.3,
+    "latency_s": 13.111,
+    "total_tokens": 20683,
+    "accuracy_detail": "Score=0.600 | completas=['T1005', 'datos', 'local system'] | parciales=[] | ausentes=['collection', 'TA0009']",
+    "hallucination_detail": "Sin señales de alucinación detectadas",
+    "traceability_detail": "Markers texto: ['mitre', 'att&ck', 'fuente'] | Fuente estructurada: api_source=False, seed_nodes=False, sql=False",
+    "error_handling_detail": "Error presente — la respuesta no lo reconoce explícitamente",
+    "latency_detail": "total_react=13.11s iterations=6",
+    "answer_preview": "La táctica MITRE ATT&CK en la que se clasifica T1005 (Data from Local System) es \"Exfiltration\" (Exfiltración). Esta técnica se refiere a la recopilación de datos desde el sistema local de la víctima, lo que puede incluir archivos, credenciales y otra información sensible. Si necesitas más detalles …"
+  }
+}

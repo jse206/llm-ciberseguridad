@@ -1,0 +1,49 @@
+{
+  "result": {
+    "answer": "Para comparar el nivel de riesgo entre CVE-2021-44228 (Log4Shell, CVSS 10.0) y CVE-2022-30190 (Follina, CVSS 7.8), es importante considerar las técnicas MITRE ATT&CK que cada vulnerabilidad habilita.\n\n**CVE-2021-44228 (Log4Shell)**: Esta vulnerabilidad permite la ejecución remota de código (RCE) en aplicaciones que utilizan la biblioteca Log4j. Dado su CVSS de 10.0, se considera extremadamente crítica. La técnica asociada a esta vulnerabilidad podría incluir T1204.003 — Malicious Image, donde un adversario puede aprovechar la ejecución de código malicioso a través de la manipulación de entradas. Esto permite a los atacantes ejecutar comandos arbitrarios en el sistema afectado, facilitando el movimiento lateral (T1570 — Lateral Tool Transfer) y el control de la red.\n\n**CVE-2022-30190 (Follina)**: Esta vulnerabilidad permite la ejecución de código a través de documentos de Microsoft Office, específicamente mediante la manipulación de plantillas de documentos. Con un CVSS de 7.8, es menos crítica que Log4Shell, pero aún representa un riesgo significativo. Las técnicas asociadas incluyen T1566 — Phishing, donde los atacantes pueden enviar documentos maliciosos a las víctimas, y T1204.003 — Malicious Image, similar a Log4Shell, ya que también permite la ejecución de código malicioso.\n\n**Comparación de Riesgo**:\n1. **Severidad**: Log4Shell tiene un CVSS de 10.0, lo que indica un riesgo máximo, mientras que Follina, con un CVSS de 7.8, es grave pero no tan crítico.\n2. **Impacto Potencial**: Log4Shell permite la ejecución remota de código en una amplia gama de sistemas, lo que puede llevar a compromisos completos de la infraestructura. Follina, aunque también permite la ejecución de código, generalmente requiere que el usuario abra un documento, lo que puede limitar su efectividad en comparación con Log4Shell.\n3. **Técnicas MITRE**: Ambas vulnerabilidades habilitan técnicas similares, pero Log4Shell tiene un potencial de explotación más amplio y directo, lo que aumenta su nivel de riesgo.\n\nEn conclusión, aunque ambas vulnerabilidades son serias, Log4Shell (CVE-2021-44228) representa un riesgo más alto debido a su severidad crítica y su capacidad para comprometer sistemas de manera más efectiva. Según MITRE ATT&CK, las técnicas asociadas a ambas vulnerabilidades reflejan su potencial de explotación, pero la magnitud del impacto de Log4Shell es significativamente mayor.",
+    "seed_nodes": [
+      "T1053.002",
+      "S0110"
+    ],
+    "subgraph_nodes": 40,
+    "subgraph_edges": 6,
+    "coverage": {
+      "sufficient": false,
+      "missing_entities": [
+        "CVE-2021-44228",
+        "CVE-2022-30190",
+        "CVSS",
+        "MITRE ATT&CK techniques"
+      ],
+      "confidence": 0.3
+    },
+    "hallucination_risk": true,
+    "usage": {
+      "prompt_tokens": 2749,
+      "completion_tokens": 634,
+      "total_tokens": 3383,
+      "retrieval_latency_s": 0.011,
+      "coverage_latency_s": 1.999,
+      "synthesis_latency_s": 9.524
+    },
+    "architecture": "C_GraphRAG"
+  },
+  "metrics": {
+    "question_id": "Q049",
+    "level": 3,
+    "domain": "BOTH",
+    "architecture": "C_GraphRAG",
+    "accuracy": 0.7143,
+    "hallucination_risk": 0.7,
+    "traceability": 1.0,
+    "error_handling": 1.0,
+    "latency_s": 11.534,
+    "total_tokens": 3383,
+    "accuracy_detail": "Score=0.714 | completas=['log4shell', 'follina', 'CVSS', 'comparación', 'riesgo'] | parciales=[] | ausentes=['T1190', 'T1203']",
+    "hallucination_detail": "Flag de riesgo activo (sin datos de fuente verificados)",
+    "traceability_detail": "Markers texto: ['mitre', 'att&ck', 'según'] | Fuente estructurada: api_source=False, seed_nodes=True, sql=False",
+    "error_handling_detail": "Sin errores detectados en el pipeline",
+    "latency_detail": "retrieval=0.01s coverage=2.00s synth=9.52s",
+    "answer_preview": "Para comparar el nivel de riesgo entre CVE-2021-44228 (Log4Shell, CVSS 10.0) y CVE-2022-30190 (Follina, CVSS 7.8), es importante considerar las técnicas MITRE ATT&CK que cada vulnerabilidad habilita.\n\n**CVE-2021-44228 (Log4Shell)**: Esta vulnerabilidad permite la ejecución remota de código (RCE) en …"
+  }
+}

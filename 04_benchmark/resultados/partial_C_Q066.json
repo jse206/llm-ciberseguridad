@@ -1,0 +1,49 @@
+{
+  "result": {
+    "answer": "La técnica T1027, conocida como \"Obfuscated Files or Information\", afecta a las siguientes plataformas: **Linux, Windows y macOS**. Esta técnica se utiliza principalmente para evadir la detección mediante la ofuscación de archivos o información, lo que puede incluir métodos como la compresión de archivos o el uso de cifrado.\n\nSegún MITRE ATT&CK, dentro de esta técnica, se especifica que la sub-técnica T1027.015, que se refiere a la compresión, permite a los adversarios utilizar formatos de archivo comprimido como ZIP, gzip, 7z y RAR para ocultar sus cargas útiles o archivos. Esto facilita la entrega y ejecución de malware al hacer que los archivos sean menos detectables por las soluciones de seguridad.\n\nPor lo tanto, la técnica T1027 es relevante para múltiples sistemas operativos, lo que la convierte en una táctica versátil utilizada por diversos actores de amenazas en sus campañas de ataque.",
+    "seed_nodes": [
+      "T1027",
+      "T1053.002",
+      "S0110",
+      "T1564.001",
+      "T1558.005"
+    ],
+    "subgraph_nodes": 40,
+    "subgraph_edges": 10,
+    "coverage": {
+      "sufficient": false,
+      "missing_entities": [
+        "plataformas afectadas"
+      ],
+      "confidence": 0.4
+    },
+    "hallucination_risk": true,
+    "usage": {
+      "prompt_tokens": 3118,
+      "completion_tokens": 231,
+      "total_tokens": 3349,
+      "retrieval_latency_s": 0.008,
+      "coverage_latency_s": 1.73,
+      "synthesis_latency_s": 5.426
+    },
+    "architecture": "C_GraphRAG"
+  },
+  "metrics": {
+    "question_id": "Q066",
+    "level": 1,
+    "domain": "MITRE",
+    "architecture": "C_GraphRAG",
+    "accuracy": 0.8,
+    "hallucination_risk": 0.7,
+    "traceability": 1.0,
+    "error_handling": 1.0,
+    "latency_s": 7.164,
+    "total_tokens": 3349,
+    "accuracy_detail": "Score=0.800 | completas=['windows', 'linux', 'macos', 'T1027'] | parciales=[] | ausentes=['obfuscation']",
+    "hallucination_detail": "Flag de riesgo activo (sin datos de fuente verificados)",
+    "traceability_detail": "Markers texto: ['mitre', 'att&ck', 'según'] | Fuente estructurada: api_source=False, seed_nodes=True, sql=False",
+    "error_handling_detail": "Sin errores detectados en el pipeline",
+    "latency_detail": "retrieval=0.01s coverage=1.73s synth=5.43s",
+    "answer_preview": "La técnica T1027, conocida como \"Obfuscated Files or Information\", afecta a las siguientes plataformas: **Linux, Windows y macOS**. Esta técnica se utiliza principalmente para evadir la detección mediante la ofuscación de archivos o información, lo que puede incluir métodos como la compresión de arc…"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "result": {
+    "answer": "Los resultados de la consulta SQL ejecutada contra la base de datos NVD/CVE para la vulnerabilidad CVE-2019-0708 (BlueKeep) indican que se trata de una vulnerabilidad de ejecución remota de código en los Servicios de Escritorio Remoto de Microsoft. Esta vulnerabilidad permite a un atacante no autenticado conectarse a un sistema objetivo a través de RDP y enviar solicitudes especialmente diseñadas.\n\nSin embargo, la consulta no proporciona información específica sobre las técnicas de MITRE ATT&CK que podrían ser utilizadas para evadir la detección tras comprometer un sistema con esta vulnerabilidad. Por lo tanto, no se pueden identificar técnicas concretas basadas en los resultados obtenidos.\n\nPara obtener información sobre las técnicas de evasión de detección relacionadas con CVE-2019-0708, se recomienda consultar la base de datos MITRE ATT&CK directamente, donde se pueden encontrar técnicas como \"T1070 - Indicator Removal on Host\" o \"T1027 - Obfuscated Files or Information\", que son comúnmente utilizadas por atacantes para ocultar su actividad.\n\nEn resumen, los resultados de la base de datos NVD/NIST no incluyen información sobre técnicas específicas de MITRE ATT&CK para la evasión de detección en el contexto de CVE-2019-0708.",
+    "sql": "SELECT c.cve_id, c.description, cw.cwe_id\nFROM cve AS c\nJOIN cve_cwe AS cw ON c.cve_id = cw.cve_id\nWHERE c.cve_id = 'CVE-2019-0708';",
+    "sql_rows": 1,
+    "correction_attempts": 0,
+    "sql_error": null,
+    "api_fallback": "NVD API — CVE-2019-0708",
+    "hallucination_risk": false,
+    "usage": {
+      "prompt_tokens": 4711,
+      "completion_tokens": 466,
+      "total_tokens": 5177,
+      "schema_linking_latency_s": 3.684,
+      "sql_generation_latency_s": 1.585,
+      "self_correction_latency_s": 0,
+      "synthesis_latency_s": 6.227
+    },
+    "architecture": "A_Text2SQL"
+  },
+  "metrics": {
+    "question_id": "Q099",
+    "level": 3,
+    "domain": "BOTH",
+    "architecture": "A_Text2SQL",
+    "accuracy": 0.4286,
+    "hallucination_risk": 0.0,
+    "traceability": 1.0,
+    "error_handling": 1.0,
+    "latency_s": 11.496,
+    "total_tokens": 5177,
+    "accuracy_detail": "Score=0.429 | completas=['BlueKeep', 'CVE-2019-0708', 'T1027'] | parciales=[] | ausentes=['defense evasion', 'T1055', 'lateral movement', 'T1021']",
+    "hallucination_detail": "Sin señales de alucinación detectadas",
+    "traceability_detail": "Markers texto: ['nvd', 'nist', 'mitre'] | Fuente estructurada: api_source=False, seed_nodes=False, sql=True",
+    "error_handling_detail": "Sin errores detectados en el pipeline",
+    "latency_detail": "linking=3.68s sql=1.58s corr=0.00s synth=6.23s",
+    "answer_preview": "Los resultados de la consulta SQL ejecutada contra la base de datos NVD/CVE para la vulnerabilidad CVE-2019-0708 (BlueKeep) indican que se trata de una vulnerabilidad de ejecución remota de código en los Servicios de Escritorio Remoto de Microsoft. Esta vulnerabilidad permite a un atacante no autent…"
+  }
+}

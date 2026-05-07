@@ -1,0 +1,50 @@
+{
+  "result": {
+    "answer": "No se proporciona información sobre CVEs (Common Vulnerabilities and Exposures) en el subgrafo recuperado del framework MITRE ATT&CK. Por lo tanto, no puedo listar los 10 CVEs más recientes relacionados con vulnerabilidades de tipo SQL Injection publicados en 2024.\n\nSegún MITRE ATT&CK, el enfoque está más centrado en tácticas, técnicas, grupos APT, mitigaciones y herramientas de ataque, pero no incluye detalles específicos sobre CVEs. Si necesitas información sobre tácticas o técnicas relacionadas con SQL Injection, estaré encantado de ayudarte.",
+    "seed_nodes": [
+      "T1674",
+      "T1659",
+      "T1546.012",
+      "T1221",
+      "T1134.005"
+    ],
+    "subgraph_nodes": 40,
+    "subgraph_edges": 13,
+    "coverage": {
+      "sufficient": false,
+      "missing_entities": [
+        "CVEs de 2024",
+        "vulnerabilidades de tipo SQL Injection"
+      ],
+      "confidence": 0.2
+    },
+    "hallucination_risk": true,
+    "usage": {
+      "prompt_tokens": 2714,
+      "completion_tokens": 162,
+      "total_tokens": 2876,
+      "retrieval_latency_s": 0.011,
+      "coverage_latency_s": 1.228,
+      "synthesis_latency_s": 2.849
+    },
+    "architecture": "C_GraphRAG"
+  },
+  "metrics": {
+    "question_id": "Q028",
+    "level": 2,
+    "domain": "NVD",
+    "architecture": "C_GraphRAG",
+    "accuracy": 0.6667,
+    "hallucination_risk": 0.7,
+    "traceability": 1.0,
+    "error_handling": 1.0,
+    "latency_s": 4.088,
+    "total_tokens": 2876,
+    "accuracy_detail": "Score=0.667 | completas=['sql injection', '2024'] | parciales=[] | ausentes=['CWE-89']",
+    "hallucination_detail": "Flag de riesgo activo (sin datos de fuente verificados)",
+    "traceability_detail": "Markers texto: ['mitre', 'att&ck', 'según'] | Fuente estructurada: api_source=False, seed_nodes=True, sql=False",
+    "error_handling_detail": "Sin errores detectados en el pipeline",
+    "latency_detail": "retrieval=0.01s coverage=1.23s synth=2.85s",
+    "answer_preview": "No se proporciona información sobre CVEs (Common Vulnerabilities and Exposures) en el subgrafo recuperado del framework MITRE ATT&CK. Por lo tanto, no puedo listar los 10 CVEs más recientes relacionados con vulnerabilidades de tipo SQL Injection publicados en 2024.\n\nSegún MITRE ATT&CK, el enfoque es…"
+  }
+}

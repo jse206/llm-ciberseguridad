@@ -1,0 +1,39 @@
+{
+  "result": {
+    "answer": "Los resultados de la consulta SQL ejecutada contra la base de datos NVD/CVE no arrojaron ningún resultado relacionado con la descripción \"T1486\". Esto indica que no se encontraron vulnerabilidades específicas en la base de datos NVD/NIST que contengan esta referencia en su descripción.\n\nEl T1486 se refiere a una técnica de ataque de ransomware que implica la encriptación de archivos en un sistema comprometido. Para que un ataque de este tipo sea exitoso, generalmente se requiere un acceso inicial a la red o al sistema objetivo, lo que puede ser facilitado por diversas vulnerabilidades.\n\nDado que no se encontraron CVEs recientes que mencionen T1486, sería recomendable investigar otras vulnerabilidades que puedan ser utilizadas para obtener acceso inicial, como aquellas relacionadas con la ejecución remota de código, la escalada de privilegios o la explotación de configuraciones incorrectas. Estas vulnerabilidades pueden ser consultadas en la base de datos NVD/NIST utilizando términos más amplios o específicos que se relacionen con el acceso inicial a sistemas.\n\nSi necesitas información adicional sobre vulnerabilidades específicas o técnicas de ataque, no dudes en preguntar.",
+    "sql": "SELECT cve.cve_id, cve.description, cve.published, cve.cvss_v3_score, cve.cvss_v3_severity, cve_reference.url\nFROM cve\nJOIN cve_reference ON cve.cve_id = cve_reference.cve_id\nWHERE cve.description LIKE '%T1486%'\nORDER BY cve.published DESC\nLIMIT 10;",
+    "sql_rows": 0,
+    "correction_attempts": 0,
+    "sql_error": null,
+    "api_fallback": null,
+    "hallucination_risk": false,
+    "usage": {
+      "prompt_tokens": 3083,
+      "completion_tokens": 455,
+      "total_tokens": 3538,
+      "schema_linking_latency_s": 3.378,
+      "sql_generation_latency_s": 2.454,
+      "self_correction_latency_s": 0,
+      "synthesis_latency_s": 6.194
+    },
+    "architecture": "A_Text2SQL"
+  },
+  "metrics": {
+    "question_id": "Q043",
+    "level": 3,
+    "domain": "BOTH",
+    "architecture": "A_Text2SQL",
+    "accuracy": 0.5,
+    "hallucination_risk": 0.0,
+    "traceability": 1.0,
+    "error_handling": 1.0,
+    "latency_s": 12.026,
+    "total_tokens": 3538,
+    "accuracy_detail": "Score=0.500 | completas=['T1486', 'ransomware', 'CVE'] | parciales=[] | ausentes=['initial access', 'critical', 'impacto']",
+    "hallucination_detail": "Sin señales de alucinación detectadas",
+    "traceability_detail": "Markers texto: ['nvd', 'nist', 'base de datos'] | Fuente estructurada: api_source=False, seed_nodes=False, sql=True",
+    "error_handling_detail": "Sin errores detectados en el pipeline",
+    "latency_detail": "linking=3.38s sql=2.45s corr=0.00s synth=6.19s",
+    "answer_preview": "Los resultados de la consulta SQL ejecutada contra la base de datos NVD/CVE no arrojaron ningún resultado relacionado con la descripción \"T1486\". Esto indica que no se encontraron vulnerabilidades específicas en la base de datos NVD/NIST que contengan esta referencia en su descripción.\n\nEl T1486 se …"
+  }
+}

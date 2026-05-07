@@ -1,0 +1,73 @@
+{
+  "result": {
+    "answer": "Tras analizar las técnicas de MITRE ATT&CK que permiten a un atacante evadir detección tras comprometer un sistema con CVE-2019-0708 (BlueKeep), se destacan las siguientes:\n\n1. **T1071.001 - Web Protocols**: Los atacantes pueden comunicarse utilizando protocolos de capa de aplicación asociados con el tráfico web para evitar la detección y el filtrado de red, mezclándose con el tráfico existente.\n\n2. **T1556.005 - Reversible Encryption**: Esta técnica permite a un adversario abusar de las propiedades de cifrado de autenticación de Active Directory para acceder a credenciales en sistemas Windows, lo que puede facilitar la evasión de detección.\n\n3. **T1563 - Remote Service Session Hijacking**: Los atacantes pueden tomar control de sesiones preexistentes con servicios remotos, lo que les permite moverse lateralmente en un entorno sin ser detectados.\n\n4. **T1547.012 - Print Processors**: Abusar de los procesadores de impresión para ejecutar DLLs maliciosas durante el arranque del sistema, lo que puede ayudar a mantener la persistencia y evadir la detección.\n\nEstas técnicas son relevantes para un atacante que busca mantener el acceso y evadir la detección después de explotar la vulnerabilidad BlueKeep.\n\n**Fuentes consultadas:** query_mitre_graph",
+    "steps": [
+      {
+        "thought": "",
+        "action": "query_mitre_graph",
+        "action_input": {
+          "question": "¿Qué técnicas de MITRE ATT&CK permiten a un atacante evadir detección tras comprometer un sistema con CVE-2019-0708?"
+        },
+        "observation_preview": "{\n  \"context\": \"=== SUBGRAFO MITRE ATT&CK ===\\n\\n--- Entidades recuperadas ---\\n  [attack-pattern] T1570 — Lateral Tool Transfer\\n     Adversaries may transfer tools or other files between systems in a compromised environment. Once brought into the victim environment (i.e., [Ingress Tool Transfer](h…"
+      },
+      {
+        "thought": "",
+        "action": "query_mitre_graph",
+        "action_input": {
+          "question": "¿Cuáles son las técnicas de evasión de detección en MITRE ATT&CK?"
+        },
+        "observation_preview": "{\n  \"context\": \"=== SUBGRAFO MITRE ATT&CK ===\\n\\n--- Entidades recuperadas ---\\n  [attack-pattern] T1570 — Lateral Tool Transfer\\n     Adversaries may transfer tools or other files between systems in a compromised environment. Once brought into the victim environment (i.e., [Ingress Tool Transfer](h…"
+      },
+      {
+        "thought": "",
+        "action": "query_mitre_graph",
+        "action_input": {
+          "question": "Resume las técnicas de evasión de detección en MITRE ATT&CK relacionadas con la explotación de vulnerabilidades."
+        },
+        "observation_preview": "{\n  \"context\": \"=== SUBGRAFO MITRE ATT&CK ===\\n\\n--- Entidades recuperadas ---\\n  [attack-pattern] T1570 — Lateral Tool Transfer\\n     Adversaries may transfer tools or other files between systems in a compromised environment. Once brought into the victim environment (i.e., [Ingress Tool Transfer](h…"
+      },
+      {
+        "thought": "",
+        "action": "query_mitre_graph",
+        "action_input": {
+          "question": "¿Cuáles son las técnicas de evasión de detección más relevantes en MITRE ATT&CK?"
+        },
+        "observation_preview": "{\n  \"context\": \"=== SUBGRAFO MITRE ATT&CK ===\\n\\n--- Entidades recuperadas ---\\n  [attack-pattern] T1570 — Lateral Tool Transfer\\n     Adversaries may transfer tools or other files between systems in a compromised environment. Once brought into the victim environment (i.e., [Ingress Tool Transfer](h…"
+      }
+    ],
+    "tools_used": [
+      "query_mitre_graph",
+      "query_mitre_graph",
+      "query_mitre_graph",
+      "query_mitre_graph"
+    ],
+    "iterations": 4,
+    "forced_final": false,
+    "hallucination_risk": false,
+    "usage": {
+      "prompt_tokens": 12331,
+      "completion_tokens": 693,
+      "total_tokens": 13024,
+      "total_latency_s": 14.836
+    },
+    "architecture": "D_Toolformer"
+  },
+  "metrics": {
+    "question_id": "Q099",
+    "level": 3,
+    "domain": "BOTH",
+    "architecture": "D_Toolformer",
+    "accuracy": 0.3571,
+    "hallucination_risk": 0.0,
+    "traceability": 0.5,
+    "error_handling": 1.0,
+    "latency_s": 14.836,
+    "total_tokens": 13024,
+    "accuracy_detail": "Score=0.357 | completas=['BlueKeep', 'CVE-2019-0708'] | parciales=['lateral movement(50%)'] | ausentes=['defense evasion', 'T1055', 'T1027', 'T1021']",
+    "hallucination_detail": "Sin señales de alucinación detectadas",
+    "traceability_detail": "Markers texto: ['mitre', 'att&ck', 'fuente'] | Fuente estructurada: api_source=False, seed_nodes=False, sql=False",
+    "error_handling_detail": "Sin errores detectados en el pipeline",
+    "latency_detail": "total_react=14.84s iterations=4",
+    "answer_preview": "Tras analizar las técnicas de MITRE ATT&CK que permiten a un atacante evadir detección tras comprometer un sistema con CVE-2019-0708 (BlueKeep), se destacan las siguientes:\n\n1. **T1071.001 - Web Protocols**: Los atacantes pueden comunicarse utilizando protocolos de capa de aplicación asociados con e…"
+  }
+}

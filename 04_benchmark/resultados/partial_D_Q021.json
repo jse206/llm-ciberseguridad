@@ -1,0 +1,46 @@
+{
+  "result": {
+    "answer": "El grupo APT29 utiliza varias técnicas en el marco de MITRE ATT&CK, incluyendo:\n\n1. **T1110.001 - Password Guessing**: Intentos de adivinar contraseñas para acceder a cuentas sin conocimiento previo de credenciales legítimas.\n2. **T1059.006 - Python**: Abuso de comandos y scripts de Python para la ejecución de código.\n3. **T1568 - Dynamic Resolution**: Establecimiento dinámico de conexiones a infraestructura de comando y control para evadir detecciones.\n4. **T1199 - Trusted Relationship**: Aprovechamiento de relaciones de confianza con organizaciones para acceder a víctimas.\n5. **T1053.005 - Scheduled Task**: Abuso del Programador de tareas de Windows para ejecutar código malicioso de forma programada.\n\nAdemás, APT29 ha utilizado malware como **PowerDuke**, **OnionDuke**, y **GoldFinder** en sus operaciones. Estas técnicas y herramientas reflejan su enfoque en el acceso a credenciales, ejecución de código y evasión de detecciones.\n\n**Fuentes consultadas:** query_mitre_graph",
+    "steps": [
+      {
+        "thought": "",
+        "action": "query_mitre_graph",
+        "action_input": {
+          "question": "¿Qué técnicas usa el grupo APT29?"
+        },
+        "observation_preview": "{\n  \"context\": \"=== SUBGRAFO MITRE ATT&CK ===\\n\\n--- Entidades recuperadas ---\\n  [attack-pattern] T1110.001 — Password Guessing\\n     Adversaries with no prior knowledge of legitimate credentials within the system or environment may guess passwords to attempt access to accounts. Without knowledge o…"
+      }
+    ],
+    "tools_used": [
+      "query_mitre_graph"
+    ],
+    "iterations": 1,
+    "forced_final": false,
+    "hallucination_risk": false,
+    "usage": {
+      "prompt_tokens": 2447,
+      "completion_tokens": 356,
+      "total_tokens": 2803,
+      "total_latency_s": 6.557
+    },
+    "architecture": "D_Toolformer"
+  },
+  "metrics": {
+    "question_id": "Q021",
+    "level": 2,
+    "domain": "BOTH",
+    "architecture": "D_Toolformer",
+    "accuracy": 0.1667,
+    "hallucination_risk": 0.0,
+    "traceability": 0.5,
+    "error_handling": 1.0,
+    "latency_s": 6.557,
+    "total_tokens": 2803,
+    "accuracy_detail": "Score=0.167 | completas=['APT29'] | parciales=[] | ausentes=['cozy bear', 'T1566', 'phishing', 'T1078', 'russia']",
+    "hallucination_detail": "Sin señales de alucinación detectadas",
+    "traceability_detail": "Markers texto: ['mitre', 'att&ck', 'fuente'] | Fuente estructurada: api_source=False, seed_nodes=False, sql=False",
+    "error_handling_detail": "Sin errores detectados en el pipeline",
+    "latency_detail": "total_react=6.56s iterations=1",
+    "answer_preview": "El grupo APT29 utiliza varias técnicas en el marco de MITRE ATT&CK, incluyendo:\n\n1. **T1110.001 - Password Guessing**: Intentos de adivinar contraseñas para acceder a cuentas sin conocimiento previo de credenciales legítimas.\n2. **T1059.006 - Python**: Abuso de comandos y scripts de Python para la e…"
+  }
+}

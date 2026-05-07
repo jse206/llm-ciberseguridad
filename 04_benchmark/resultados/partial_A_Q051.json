@@ -1,0 +1,39 @@
+{
+  "result": {
+    "answer": "El score CVSS v3 de la vulnerabilidad CVE-2019-0708, también conocida como BlueKeep, es de **9.8**. Este puntaje se clasifica como **CRÍTICO**. \n\nLos detalles del vector CVSS son los siguientes:\n- **Vector String**: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H\n- **Attack Vector**: NETWORK\n- **Attack Complexity**: LOW\n- **Privileges Required**: NONE\n- **User Interaction**: NONE\n- **Scope**: UNCHANGED\n- **Confidentiality Impact**: HIGH\n- **Integrity Impact**: HIGH\n- **Availability Impact**: HIGH\n\nEstos datos provienen de la base de datos NVD/NIST, que proporciona información detallada sobre vulnerabilidades de seguridad. La vulnerabilidad permite la ejecución remota de código cuando un atacante no autenticado se conecta a un sistema objetivo a través de Remote Desktop Protocol (RDP) y envía solicitudes especialmente diseñadas. \n\nSi necesitas más información sobre esta vulnerabilidad o su mitigación, no dudes en preguntar.",
+    "sql": "SELECT cvss_v3_score FROM cve WHERE cve_id = 'CVE-2019-0708';",
+    "sql_rows": 1,
+    "correction_attempts": 0,
+    "sql_error": null,
+    "api_fallback": "NVD API — CVE-2019-0708",
+    "hallucination_risk": false,
+    "usage": {
+      "prompt_tokens": 4584,
+      "completion_tokens": 356,
+      "total_tokens": 4940,
+      "schema_linking_latency_s": 2.369,
+      "sql_generation_latency_s": 1.104,
+      "self_correction_latency_s": 0,
+      "synthesis_latency_s": 12.146
+    },
+    "architecture": "A_Text2SQL"
+  },
+  "metrics": {
+    "question_id": "Q051",
+    "level": 1,
+    "domain": "NVD",
+    "architecture": "A_Text2SQL",
+    "accuracy": 0.5,
+    "hallucination_risk": 0.0,
+    "traceability": 1.0,
+    "error_handling": 1.0,
+    "latency_s": 15.619,
+    "total_tokens": 4940,
+    "accuracy_detail": "Score=0.500 | completas=['9.8', 'BlueKeep', 'RDP'] | parciales=[] | ausentes=['critical', 'crítica', 'windows']",
+    "hallucination_detail": "Sin señales de alucinación detectadas",
+    "traceability_detail": "Markers texto: ['nvd', 'nist', 'base de datos'] | Fuente estructurada: api_source=False, seed_nodes=False, sql=True",
+    "error_handling_detail": "Sin errores detectados en el pipeline",
+    "latency_detail": "linking=2.37s sql=1.10s corr=0.00s synth=12.15s",
+    "answer_preview": "El score CVSS v3 de la vulnerabilidad CVE-2019-0708, también conocida como BlueKeep, es de **9.8**. Este puntaje se clasifica como **CRÍTICO**. \n\nLos detalles del vector CVSS son los siguientes:\n- **Vector String**: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H\n- **Attack Vector**: NETWORK\n- **Attack…"
+  }
+}

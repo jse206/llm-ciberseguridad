@@ -1,0 +1,39 @@
+{
+  "result": {
+    "answer": "Según la consulta SQL ejecutada y los resultados obtenidos de la base de datos NVD/NIST, no hay datos disponibles sobre las técnicas utilizadas por el Sandworm Team en el esquema proporcionado. Esto indica que no se encontraron registros específicos relacionados con este grupo en la base de datos consultada.",
+    "sql": "SELECT 'No hay datos disponibles sobre técnicas del Sandworm Team en el esquema proporcionado.' AS mensaje;",
+    "sql_rows": 1,
+    "correction_attempts": 0,
+    "sql_error": null,
+    "api_fallback": null,
+    "hallucination_risk": false,
+    "usage": {
+      "prompt_tokens": 2931,
+      "completion_tokens": 181,
+      "total_tokens": 3112,
+      "schema_linking_latency_s": 2.66,
+      "sql_generation_latency_s": 1.023,
+      "self_correction_latency_s": 0,
+      "synthesis_latency_s": 2.246
+    },
+    "architecture": "A_Text2SQL"
+  },
+  "metrics": {
+    "question_id": "Q082",
+    "level": 2,
+    "domain": "MITRE",
+    "architecture": "A_Text2SQL",
+    "accuracy": 0.1667,
+    "hallucination_risk": 0.0,
+    "traceability": 1.0,
+    "error_handling": 1.0,
+    "latency_s": 5.929,
+    "total_tokens": 3112,
+    "accuracy_detail": "Score=0.167 | completas=['Sandworm'] | parciales=[] | ausentes=['G0034', 'ukraine', 'russia', 'T1486', 'NotPetya']",
+    "hallucination_detail": "Sin señales de alucinación detectadas",
+    "traceability_detail": "Markers texto: ['nvd', 'nist', 'según'] | Fuente estructurada: api_source=False, seed_nodes=False, sql=True",
+    "error_handling_detail": "Sin errores detectados en el pipeline",
+    "latency_detail": "linking=2.66s sql=1.02s corr=0.00s synth=2.25s",
+    "answer_preview": "Según la consulta SQL ejecutada y los resultados obtenidos de la base de datos NVD/NIST, no hay datos disponibles sobre las técnicas utilizadas por el Sandworm Team en el esquema proporcionado. Esto indica que no se encontraron registros específicos relacionados con este grupo en la base de datos co…"
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "result": {
+    "answer": "La técnica MITRE ATT&CK T1566 se refiere al \"Phishing\". Los adversarios pueden enviar mensajes de phishing para obtener acceso a los sistemas de las víctimas. Todas las formas de phishing son una ingeniería social entregada electrónicamente. El phishing puede ser dirigido, conocido como spearphishing. Esta técnica se utiliza en la táctica de \"initial-access\" y es aplicable a diversas plataformas, incluyendo Identity Provider, Linux, macOS, Office Suite, SaaS y Windows.\n\n**Fuentes consultadas:** query_mitre_graph",
+    "steps": [
+      {
+        "thought": "",
+        "action": "query_mitre_graph",
+        "action_input": {
+          "question": "¿Qué descripción tiene la técnica T1566?"
+        },
+        "observation_preview": "{\n  \"context\": \"=== SUBGRAFO MITRE ATT&CK ===\\n\\n--- Entidades recuperadas ---\\n  [attack-pattern] T1566.002 — Spearphishing Link\\n     Adversaries may send spearphishing emails with a malicious link in an attempt to gain access to victim systems. Spearphishing with a link is a specific variant of s…"
+      }
+    ],
+    "tools_used": [
+      "query_mitre_graph"
+    ],
+    "iterations": 1,
+    "forced_final": false,
+    "hallucination_risk": false,
+    "usage": {
+      "prompt_tokens": 2447,
+      "completion_tokens": 180,
+      "total_tokens": 2627,
+      "total_latency_s": 4.914
+    },
+    "architecture": "D_Toolformer"
+  },
+  "metrics": {
+    "question_id": "Q012",
+    "level": 1,
+    "domain": "MITRE",
+    "architecture": "D_Toolformer",
+    "accuracy": 0.6,
+    "hallucination_risk": 0.0,
+    "traceability": 0.5,
+    "error_handling": 1.0,
+    "latency_s": 4.914,
+    "total_tokens": 2627,
+    "accuracy_detail": "Score=0.600 | completas=['phishing', 'spearphishing', 'T1566'] | parciales=[] | ausentes=['correo', 'email']",
+    "hallucination_detail": "Sin señales de alucinación detectadas",
+    "traceability_detail": "Markers texto: ['mitre', 'att&ck', 'fuente'] | Fuente estructurada: api_source=False, seed_nodes=False, sql=False",
+    "error_handling_detail": "Sin errores detectados en el pipeline",
+    "latency_detail": "total_react=4.91s iterations=1",
+    "answer_preview": "La técnica MITRE ATT&CK T1566 se refiere al \"Phishing\". Los adversarios pueden enviar mensajes de phishing para obtener acceso a los sistemas de las víctimas. Todas las formas de phishing son una ingeniería social entregada electrónicamente. El phishing puede ser dirigido, conocido como spearphishin…"
+  }
+}

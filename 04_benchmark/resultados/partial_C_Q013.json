@@ -1,0 +1,47 @@
+{
+  "result": {
+    "answer": "La técnica MITRE ATT&CK con ID T1078 se denomina \"Valid Accounts\". Según MITRE ATT&CK, los adversarios pueden obtener y abusar de las credenciales de cuentas existentes como un medio para ganar acceso inicial, persistencia, escalada de privilegios o evasión de defensa. Las credenciales comprometidas pueden ser utilizadas por los atacantes para realizar diversas acciones maliciosas en los sistemas afectados. Esta técnica se aplica a múltiples plataformas, incluyendo contenedores, IaaS, proveedores de identidad, Linux, macOS, dispositivos de red, suites de oficina y Windows. \n\nLas tácticas asociadas a esta técnica son la evasión de defensa, la persistencia, la escalada de privilegios y el acceso inicial. \n\nSegún MITRE ATT&CK, esta técnica es fundamental para entender cómo los atacantes pueden infiltrarse en sistemas y mantener su acceso a largo plazo.",
+    "seed_nodes": [
+      "T1078",
+      "T1053.002",
+      "S0110"
+    ],
+    "subgraph_nodes": 40,
+    "subgraph_edges": 55,
+    "coverage": {
+      "sufficient": false,
+      "missing_entities": [
+        "nombre de la técnica T1078"
+      ],
+      "confidence": 0.3
+    },
+    "hallucination_risk": true,
+    "usage": {
+      "prompt_tokens": 2781,
+      "completion_tokens": 221,
+      "total_tokens": 3002,
+      "retrieval_latency_s": 0.007,
+      "coverage_latency_s": 1.321,
+      "synthesis_latency_s": 4.492
+    },
+    "architecture": "C_GraphRAG"
+  },
+  "metrics": {
+    "question_id": "Q013",
+    "level": 1,
+    "domain": "MITRE",
+    "architecture": "C_GraphRAG",
+    "accuracy": 0.8333,
+    "hallucination_risk": 0.7,
+    "traceability": 1.0,
+    "error_handling": 1.0,
+    "latency_s": 5.82,
+    "total_tokens": 3002,
+    "accuracy_detail": "Score=0.833 | completas=['valid accounts', 'T1078'] | parciales=['cuentas válidas(50%)'] | ausentes=[]",
+    "hallucination_detail": "Flag de riesgo activo (sin datos de fuente verificados)",
+    "traceability_detail": "Markers texto: ['mitre', 'att&ck', 'según'] | Fuente estructurada: api_source=False, seed_nodes=True, sql=False",
+    "error_handling_detail": "Sin errores detectados en el pipeline",
+    "latency_detail": "retrieval=0.01s coverage=1.32s synth=4.49s",
+    "answer_preview": "La técnica MITRE ATT&CK con ID T1078 se denomina \"Valid Accounts\". Según MITRE ATT&CK, los adversarios pueden obtener y abusar de las credenciales de cuentas existentes como un medio para ganar acceso inicial, persistencia, escalada de privilegios o evasión de defensa. Las credenciales comprometidas…"
+  }
+}

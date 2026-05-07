@@ -1,0 +1,37 @@
+{
+  "result": {
+    "answer": "El score CVSS v3 de la vulnerabilidad CVE-2019-0708, también conocida como BlueKeep, es de **9.8**, lo que la clasifica como **CRÍTICA**. \n\nSegún los datos recuperados de la API, el vector CVSS es el siguiente: \n\n- **Vector String**: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H\n- **Impacto en la confidencialidad**: Alto (C:H)\n- **Impacto en la integridad**: Alto (I:H)\n- **Impacto en la disponibilidad**: Alto (A:H)\n- **Vector de ataque**: Red (AV:N)\n- **Complejidad del ataque**: Baja (AC:L)\n- **Privilegios requeridos**: Ninguno (PR:N)\n- **Interacción del usuario**: Ninguna (UI:N)\n- **Alcance**: Sin cambios (S:U)\n\nEsta vulnerabilidad permite a un atacante no autenticado ejecutar código de forma remota al conectarse a un sistema objetivo mediante el Protocolo de Escritorio Remoto (RDP) y enviar solicitudes especialmente diseñadas (fuente: NVD/NIST).\n\nPara más información, puedes consultar la fuente oficial en [NVD](https://services.nvd.nist.gov/rest/json/cves/2.0?cveId=CVE-2019-0708).",
+    "intent": "get_cve_by_id",
+    "api_source": "https://services.nvd.nist.gov/rest/json/cves/2.0?cveId=CVE-2019-0708",
+    "api_error": null,
+    "router_confidence": 0.9,
+    "usage": {
+      "prompt_tokens": 2892,
+      "completion_tokens": 350,
+      "total_tokens": 3242,
+      "router_latency_s": 1.531,
+      "api_latency_s": 1.333,
+      "synthesis_latency_s": 5.625
+    },
+    "hallucination_risk": false,
+    "architecture": "B_API"
+  },
+  "metrics": {
+    "question_id": "Q051",
+    "level": 1,
+    "domain": "NVD",
+    "architecture": "B_API",
+    "accuracy": 0.6667,
+    "hallucination_risk": 0.0,
+    "traceability": 1.0,
+    "error_handling": 1.0,
+    "latency_s": 8.489,
+    "total_tokens": 3242,
+    "accuracy_detail": "Score=0.667 | completas=['9.8', 'crítica', 'BlueKeep', 'RDP'] | parciales=[] | ausentes=['critical', 'windows']",
+    "hallucination_detail": "Sin señales de alucinación detectadas",
+    "traceability_detail": "Markers texto: ['nvd', 'nist', 'según'] | Fuente estructurada: api_source=True, seed_nodes=False, sql=False",
+    "error_handling_detail": "Sin errores detectados en el pipeline",
+    "latency_detail": "router=1.53s api=1.33s synth=5.62s",
+    "answer_preview": "El score CVSS v3 de la vulnerabilidad CVE-2019-0708, también conocida como BlueKeep, es de **9.8**, lo que la clasifica como **CRÍTICA**. \n\nSegún los datos recuperados de la API, el vector CVSS es el siguiente: \n\n- **Vector String**: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H\n- **Impacto en la con…"
+  }
+}

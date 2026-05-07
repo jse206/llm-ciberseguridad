@@ -1,0 +1,39 @@
+{
+  "result": {
+    "answer": "La técnica T1059 se clasifica en la táctica \"Execution\" según los datos obtenidos de la base de datos NVD/NIST. Esto indica que la técnica está relacionada con la ejecución de código en el sistema objetivo.",
+    "sql": "SELECT 'Execution' AS mitre_tactic",
+    "sql_rows": 1,
+    "correction_attempts": 0,
+    "sql_error": null,
+    "api_fallback": null,
+    "hallucination_risk": false,
+    "usage": {
+      "prompt_tokens": 2919,
+      "completion_tokens": 152,
+      "total_tokens": 3071,
+      "schema_linking_latency_s": 2.04,
+      "sql_generation_latency_s": 0.741,
+      "self_correction_latency_s": 0,
+      "synthesis_latency_s": 1.708
+    },
+    "architecture": "A_Text2SQL"
+  },
+  "metrics": {
+    "question_id": "Q011",
+    "level": 1,
+    "domain": "MITRE",
+    "architecture": "A_Text2SQL",
+    "accuracy": 0.6,
+    "hallucination_risk": 0.0,
+    "traceability": 1.0,
+    "error_handling": 1.0,
+    "latency_s": 4.489,
+    "total_tokens": 3071,
+    "accuracy_detail": "Score=0.600 | completas=['execution', 'ejecución', 'T1059'] | parciales=[] | ausentes=['command', 'scripting']",
+    "hallucination_detail": "Sin señales de alucinación detectadas",
+    "traceability_detail": "Markers texto: ['nvd', 'nist', 'según'] | Fuente estructurada: api_source=False, seed_nodes=False, sql=True",
+    "error_handling_detail": "Sin errores detectados en el pipeline",
+    "latency_detail": "linking=2.04s sql=0.74s corr=0.00s synth=1.71s",
+    "answer_preview": "La técnica T1059 se clasifica en la táctica \"Execution\" según los datos obtenidos de la base de datos NVD/NIST. Esto indica que la técnica está relacionada con la ejecución de código en el sistema objetivo."
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "result": {
+    "answer": "La vulnerabilidad CVE-2022-30190 fue publicada el 1 de junio de 2022 a las 20:15:07 UTC, según la información recuperada de la API (fuente: NVD/NIST). Esta vulnerabilidad se relaciona con una ejecución remota de código en Microsoft Windows Support Diagnostic Tool (MSDT) cuando se invoca utilizando el protocolo URL desde aplicaciones como Word. Un atacante que explote esta vulnerabilidad puede ejecutar código arbitrario con los privilegios de la aplicación que la llama (fuente: NVD/NIST).",
+    "intent": "get_cve_by_id",
+    "api_source": "https://services.nvd.nist.gov/rest/json/cves/2.0?cveId=CVE-2022-30190",
+    "api_error": null,
+    "router_confidence": 0.9,
+    "usage": {
+      "prompt_tokens": 2988,
+      "completion_tokens": 162,
+      "total_tokens": 3150,
+      "router_latency_s": 1.518,
+      "api_latency_s": 1.125,
+      "synthesis_latency_s": 2.765
+    },
+    "hallucination_risk": false,
+    "architecture": "B_API"
+  },
+  "metrics": {
+    "question_id": "Q005",
+    "level": 1,
+    "domain": "NVD",
+    "architecture": "B_API",
+    "accuracy": 0.4,
+    "hallucination_risk": 0.0,
+    "traceability": 1.0,
+    "error_handling": 1.0,
+    "latency_s": 5.408,
+    "total_tokens": 3150,
+    "accuracy_detail": "Score=0.400 | completas=['2022', 'msdt'] | parciales=[] | ausentes=['mayo', 'may', 'follina']",
+    "hallucination_detail": "Sin señales de alucinación detectadas",
+    "traceability_detail": "Markers texto: ['nvd', 'nist', 'según'] | Fuente estructurada: api_source=True, seed_nodes=False, sql=False",
+    "error_handling_detail": "Sin errores detectados en el pipeline",
+    "latency_detail": "router=1.52s api=1.12s synth=2.77s",
+    "answer_preview": "La vulnerabilidad CVE-2022-30190 fue publicada el 1 de junio de 2022 a las 20:15:07 UTC, según la información recuperada de la API (fuente: NVD/NIST). Esta vulnerabilidad se relaciona con una ejecución remota de código en Microsoft Windows Support Diagnostic Tool (MSDT) cuando se invoca utilizando e…"
+  }
+}

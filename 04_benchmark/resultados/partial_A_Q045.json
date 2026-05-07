@@ -1,0 +1,39 @@
+{
+  "result": {
+    "answer": "Los resultados de la consulta SQL ejecutada contra la base de datos NVD/NIST han identificado varias vulnerabilidades críticas (CVEs) que podrían ser relevantes para contener el movimiento lateral (T1021). A continuación, se presentan las CVEs que deberían priorizarse para su parcheo:\n\n1. **CVE-2023-28100**: Vulnerabilidad en Flatpak que permite a una aplicación copiar texto de la consola virtual y ejecutarlo, con un CVSS v3 de 10.0 (CRÍTICO).\n   \n2. **CVE-2022-47190**: En Generex UPS CS141, un atacante remoto puede cargar un firmware malicioso que permite la ejecución de código arbitrario como root, con un CVSS v3 de 10.0 (CRÍTICO).\n\n3. **CVE-2023-45128**: Vulnerabilidad de CSRF en el framework Fiber que permite inyecciones de valores arbitrarios, con un CVSS v3 de 10.0 (CRÍTICO).\n\n4. **CVE-2023-42802**: En GLPI, una instanciación de objeto no verificada permite la carga de archivos PHP maliciosos, con un CVSS v3 de 10.0 (CRÍTICO).\n\n5. **CVE-2023-7163**: Problema de seguridad en D-Link D-View que podría permitir la manipulación de inventarios de sondas, con un CVSS v3 de 10.0 (CRÍTICO).\n\n6. **CVE-2023-51438**: Vulnerabilidad en SIMATIC IPC que permite acceso no autorizado en configuraciones predeterminadas, con un CVSS v3 de 10.0 (CRÍTICO).\n\n7. **CVE-2024-3400**: Inyección de comandos en la función GlobalProtect de Palo Alto Networks, con un CVSS v3 de 10.0 (CRÍTICO).\n\n8. **CVE-2024-22476**: Validación de entrada inadecuada en Intel Neural Compressor que puede permitir escalación de privilegios, con un CVSS v3 de 10.0 (CRÍTICO).\n\n9. **CVE-2023-41917**: Validación de entrada inadecuada que expone a la ejecución remota de código, con un CVSS v3 de 10.0 (CRÍTICO).\n\n10. **CVE-2025-20393**: Vulnerabilidad en Cisco AsyncOS que permite la ejecución de comandos arbitrarios con privilegios de root, con un CVSS v3 de 10.0 (CRÍTICO).\n\nEs fundamental abordar estas vulnerabilidades de manera prioritaria para mitigar el riesgo de movimiento lateral en la red.",
+    "sql": "SELECT cve.cve_id, cve.description, cve.cvss_v3_score, cve.cvss_v3_severity\nFROM cve\nJOIN cve_cwe ON cve.cve_id = cve_cwe.cve_id\nWHERE cve_cwe.cwe_id = 'CWE-20'\nORDER BY cve.cvss_v3_score DESC\nLIMIT 10;",
+    "sql_rows": 10,
+    "correction_attempts": 0,
+    "sql_error": null,
+    "api_fallback": null,
+    "hallucination_risk": false,
+    "usage": {
+      "prompt_tokens": 4585,
+      "completion_tokens": 785,
+      "total_tokens": 5370,
+      "schema_linking_latency_s": 3.91,
+      "sql_generation_latency_s": 2.282,
+      "self_correction_latency_s": 0,
+      "synthesis_latency_s": 15.287
+    },
+    "architecture": "A_Text2SQL"
+  },
+  "metrics": {
+    "question_id": "Q045",
+    "level": 3,
+    "domain": "BOTH",
+    "architecture": "A_Text2SQL",
+    "accuracy": 0.5,
+    "hallucination_risk": 0.0,
+    "traceability": 1.0,
+    "error_handling": 1.0,
+    "latency_s": 21.479,
+    "total_tokens": 5370,
+    "accuracy_detail": "Score=0.500 | completas=['T1021', 'CVE', 'parche'] | parciales=['lateral movement(50%)'] | ausentes=['remote services', 'SMB', 'RDP']",
+    "hallucination_detail": "Sin señales de alucinación detectadas",
+    "traceability_detail": "Markers texto: ['nvd', 'nist', 'base de datos'] | Fuente estructurada: api_source=False, seed_nodes=False, sql=True",
+    "error_handling_detail": "Sin errores detectados en el pipeline",
+    "latency_detail": "linking=3.91s sql=2.28s corr=0.00s synth=15.29s",
+    "answer_preview": "Los resultados de la consulta SQL ejecutada contra la base de datos NVD/NIST han identificado varias vulnerabilidades críticas (CVEs) que podrían ser relevantes para contener el movimiento lateral (T1021). A continuación, se presentan las CVEs que deberían priorizarse para su parcheo:\n\n1. **CVE-2023…"
+  }
+}

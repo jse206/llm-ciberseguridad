@@ -1,0 +1,37 @@
+{
+  "result": {
+    "answer": "Según los datos recuperados, hay al menos una vulnerabilidad asociada a CWE-200 (Information Exposure) en la base de datos local. Esta vulnerabilidad es identificada como CVE-1999-0524, la cual fue publicada el 1 de agosto de 1997 y tiene un estado de \"Modificado\". \n\nLa descripción de esta vulnerabilidad indica que permite la exposición de información ICMP, como la máscara de red y la marca de tiempo, desde hosts arbitrarios. Según el NVD, esta vulnerabilidad tiene un impacto parcial en la confidencialidad, lo que la clasifica con una puntuación CVSS base de 2.1, considerada de baja severidad (LOW) (fuente: NVD).\n\nNo se han encontrado más vulnerabilidades asociadas a CWE-200 en los datos proporcionados. Por lo tanto, se puede concluir que actualmente hay una vulnerabilidad documentada en la base de datos local relacionada con esta categoría de exposición de información.\n\nSi necesitas más información o detalles sobre otras vulnerabilidades, no dudes en preguntar.",
+    "intent": "search_cves",
+    "api_source": "https://services.nvd.nist.gov/rest/json/cves/2.0?resultsPerPage=10&cweId=CWE-200",
+    "api_error": null,
+    "router_confidence": 0.8,
+    "usage": {
+      "prompt_tokens": 2988,
+      "completion_tokens": 255,
+      "total_tokens": 3243,
+      "router_latency_s": 1.326,
+      "api_latency_s": 1.275,
+      "synthesis_latency_s": 4.967
+    },
+    "hallucination_risk": false,
+    "architecture": "B_API"
+  },
+  "metrics": {
+    "question_id": "Q059",
+    "level": 1,
+    "domain": "NVD",
+    "architecture": "B_API",
+    "accuracy": 0.6667,
+    "hallucination_risk": 0.0,
+    "traceability": 1.0,
+    "error_handling": 1.0,
+    "latency_s": 7.568,
+    "total_tokens": 3243,
+    "accuracy_detail": "Score=0.667 | completas=['CWE-200', 'information exposure'] | parciales=[] | ausentes=['divulgación']",
+    "hallucination_detail": "Sin señales de alucinación detectadas",
+    "traceability_detail": "Markers texto: ['nvd', 'según', 'fuente'] | Fuente estructurada: api_source=True, seed_nodes=False, sql=False",
+    "error_handling_detail": "Sin errores detectados en el pipeline",
+    "latency_detail": "router=1.33s api=1.27s synth=4.97s",
+    "answer_preview": "Según los datos recuperados, hay al menos una vulnerabilidad asociada a CWE-200 (Information Exposure) en la base de datos local. Esta vulnerabilidad es identificada como CVE-1999-0524, la cual fue publicada el 1 de agosto de 1997 y tiene un estado de \"Modificado\". \n\nLa descripción de esta vulnerabi…"
+  }
+}

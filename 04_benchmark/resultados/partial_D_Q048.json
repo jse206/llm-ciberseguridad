@@ -1,0 +1,73 @@
+{
+  "result": {
+    "answer": "Para una organización que ha identificado el uso de T1059 (PowerShell) y tiene 6,186 CVEs críticos sin parchear en sus sistemas Windows, se recomiendan las siguientes mitigaciones:\n\n1. **Prevención de Ejecución (M1038)**: Implementar controles de aplicación y mecanismos de bloqueo de scripts para prevenir la ejecución de código no autorizado. Esto asegurará que solo se ejecute código de fuentes confiables.\n\n2. **Gestión de Cuentas Privilegiadas (M1026)**: Establecer políticas y controles para gestionar de manera segura las cuentas privilegiadas. Esto incluye restringir el acceso a cuentas administrativas y monitorear su uso.\n\n3. **Parcheo de Vulnerabilidades**: Es crucial abordar los 6,186 CVEs críticos identificados en 2024. La organización debe priorizar el parcheo de estos CVEs para reducir el riesgo de explotación.\n\n4. **Monitoreo y Respuesta**: Implementar un sistema de monitoreo para detectar actividades inusuales relacionadas con el uso de PowerShell y otras herramientas de scripting, así como establecer un plan de respuesta a incidentes.\n\nEstas medidas ayudarán a mitigar el riesgo asociado con el uso de PowerShell y la presencia de vulnerabilidades críticas en el entorno de la organización.\n\n**Fuentes consultadas:** query_mitre_graph, query_nvd_local",
+    "steps": [
+      {
+        "thought": "",
+        "action": "query_mitre_graph",
+        "action_input": {
+          "question": "¿Qué mitigaciones cubre T1059 PowerShell?"
+        },
+        "observation_preview": "{\n  \"context\": \"=== SUBGRAFO MITRE ATT&CK ===\\n\\n--- Entidades recuperadas ---\\n  [attack-pattern] T1059.006 — Python\\n     Adversaries may abuse Python commands and scripts for execution. Python is a very popular scripting/programming language, with capabilities to perform many functions. Python ca…"
+      },
+      {
+        "thought": "",
+        "action": "query_mitre_graph",
+        "action_input": {
+          "question": "¿Qué mitigaciones se recomiendan para T1059 PowerShell?"
+        },
+        "observation_preview": "{\n  \"context\": \"=== SUBGRAFO MITRE ATT&CK ===\\n\\n--- Entidades recuperadas ---\\n  [attack-pattern] T1071.001 — Web Protocols\\n     Adversaries may communicate using application layer protocols associated with web traffic to avoid detection/network filtering by blending in with existing traffic. Comm…"
+      },
+      {
+        "thought": "",
+        "action": "query_mitre_graph",
+        "action_input": {
+          "question": "¿Cuáles son las mitigaciones recomendadas para la técnica T1059 en MITRE ATT&CK?"
+        },
+        "observation_preview": "{\n  \"context\": \"=== SUBGRAFO MITRE ATT&CK ===\\n\\n--- Entidades recuperadas ---\\n  [course-of-action] M1026 — Privileged Account Management\\n     Privileged Account Management focuses on implementing policies, controls, and tools to securely manage privileged accounts (e.g., SYSTEM, root, or administ…"
+      },
+      {
+        "thought": "",
+        "action": "query_nvd_local",
+        "action_input": {
+          "question": "¿Cuántos CVEs críticos hay en 2024?"
+        },
+        "observation_preview": "{\n  \"answer\": \"Según los datos obtenidos de la base de datos NVD/NIST, en el año 2024 hay un total de 6,186 CVEs clasificados como críticos.\",\n  \"sql\": \"SELECT COUNT(*) AS critical_cve_count\\nFROM cve AS c\\nWHERE c.cvss_v3_severity = 'CRITICAL' AND c.last_modified >= '2024-01-01' AND c.last_modified…"
+      }
+    ],
+    "tools_used": [
+      "query_mitre_graph",
+      "query_mitre_graph",
+      "query_mitre_graph",
+      "query_nvd_local"
+    ],
+    "iterations": 4,
+    "forced_final": false,
+    "hallucination_risk": false,
+    "usage": {
+      "prompt_tokens": 12462,
+      "completion_tokens": 824,
+      "total_tokens": 13286,
+      "total_latency_s": 28.153
+    },
+    "architecture": "D_Toolformer"
+  },
+  "metrics": {
+    "question_id": "Q048",
+    "level": 3,
+    "domain": "BOTH",
+    "architecture": "D_Toolformer",
+    "accuracy": 0.7143,
+    "hallucination_risk": 0.0,
+    "traceability": 0.5,
+    "error_handling": 1.0,
+    "latency_s": 28.153,
+    "total_tokens": 13286,
+    "accuracy_detail": "Score=0.714 | completas=['T1059', 'powershell', 'windows', 'parche', 'M1038'] | parciales=[] | ausentes=['mitigación', 'M1042']",
+    "hallucination_detail": "Sin señales de alucinación detectadas",
+    "traceability_detail": "Markers texto: ['nvd', 'nist', 'mitre'] | Fuente estructurada: api_source=False, seed_nodes=False, sql=False",
+    "error_handling_detail": "Sin errores detectados en el pipeline",
+    "latency_detail": "total_react=28.15s iterations=4",
+    "answer_preview": "Para una organización que ha identificado el uso de T1059 (PowerShell) y tiene 6,186 CVEs críticos sin parchear en sus sistemas Windows, se recomiendan las siguientes mitigaciones:\n\n1. **Prevención de Ejecución (M1038)**: Implementar controles de aplicación y mecanismos de bloqueo de scripts para pr…"
+  }
+}

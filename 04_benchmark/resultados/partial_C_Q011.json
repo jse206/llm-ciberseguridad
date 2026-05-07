@@ -1,0 +1,47 @@
+{
+  "result": {
+    "answer": "La técnica T1059 se clasifica en la táctica de \"Execution\" (Ejecución). Según MITRE ATT&CK, esta técnica se refiere al abuso de intérpretes de comandos y scripts para ejecutar comandos, scripts o binarios. Estos intérpretes son interfaces comunes que permiten interactuar con los sistemas informáticos y son utilizados frecuentemente por adversarios para llevar a cabo sus actividades maliciosas.\n\nAdemás, la técnica T1059 tiene varias sub-técnicas, como T1059.006 (Python), T1059.007 (JavaScript), T1059.003 (Windows Command Shell), entre otras, que también se agrupan bajo la misma táctica de ejecución. Esto resalta la importancia de los intérpretes de comandos en las operaciones de ataque.\n\nPor lo tanto, la respuesta a tu pregunta es que la técnica T1059 se clasifica en la táctica de \"Execution\".",
+    "seed_nodes": [
+      "T1059",
+      "T1053.002",
+      "S0110"
+    ],
+    "subgraph_nodes": 40,
+    "subgraph_edges": 87,
+    "coverage": {
+      "sufficient": false,
+      "missing_entities": [
+        "táctica MITRE ATT&CK"
+      ],
+      "confidence": 0.4
+    },
+    "hallucination_risk": true,
+    "usage": {
+      "prompt_tokens": 2742,
+      "completion_tokens": 225,
+      "total_tokens": 2967,
+      "retrieval_latency_s": 0.007,
+      "coverage_latency_s": 1.014,
+      "synthesis_latency_s": 5.48
+    },
+    "architecture": "C_GraphRAG"
+  },
+  "metrics": {
+    "question_id": "Q011",
+    "level": 1,
+    "domain": "MITRE",
+    "architecture": "C_GraphRAG",
+    "accuracy": 0.8,
+    "hallucination_risk": 0.7,
+    "traceability": 1.0,
+    "error_handling": 1.0,
+    "latency_s": 6.501,
+    "total_tokens": 2967,
+    "accuracy_detail": "Score=0.800 | completas=['execution', 'ejecución', 'T1059', 'command'] | parciales=[] | ausentes=['scripting']",
+    "hallucination_detail": "Flag de riesgo activo (sin datos de fuente verificados)",
+    "traceability_detail": "Markers texto: ['mitre', 'att&ck', 'según'] | Fuente estructurada: api_source=False, seed_nodes=True, sql=False",
+    "error_handling_detail": "Sin errores detectados en el pipeline",
+    "latency_detail": "retrieval=0.01s coverage=1.01s synth=5.48s",
+    "answer_preview": "La técnica T1059 se clasifica en la táctica de \"Execution\" (Ejecución). Según MITRE ATT&CK, esta técnica se refiere al abuso de intérpretes de comandos y scripts para ejecutar comandos, scripts o binarios. Estos intérpretes son interfaces comunes que permiten interactuar con los sistemas informático…"
+  }
+}

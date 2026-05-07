@@ -1,0 +1,47 @@
+{
+  "result": {
+    "answer": "El subgrafo proporcionado no contiene información específica sobre CVEs (Common Vulnerabilities and Exposures) recientes que abusen de la técnica T1059.001 (PowerShell). La técnica T1059.001 se refiere a la ejecución de comandos de PowerShell, que es una técnica comúnmente utilizada por actores de amenazas para ejecutar scripts y comandos en sistemas comprometidos.\n\nPara correlacionar esta técnica con CVEs recientes, un analista debería buscar en bases de datos de vulnerabilidades, como el NVD (National Vulnerability Database) o CVE Details, utilizando términos de búsqueda relacionados con PowerShell y las vulnerabilidades que permiten la ejecución remota de código o la ejecución de scripts maliciosos. Sin embargo, esta información no está disponible en el subgrafo.\n\nAdemás, el subgrafo menciona varios grupos de amenazas y malware que utilizan PowerShell, como el grupo Poseidon (G0033) y el malware CharmPower (S0674), pero no proporciona detalles sobre vulnerabilidades específicas que se relacionen con la técnica T1059.001.\n\nPor lo tanto, para responder a la pregunta sobre cómo correlacionar la técnica T1059.001 con CVEs recientes, se requeriría información adicional que no está presente en el subgrafo. \n\nEn resumen, el subgrafo no contiene suficiente información para realizar la correlación solicitada.",
+    "seed_nodes": [
+      "T1059.001",
+      "T1585"
+    ],
+    "subgraph_nodes": 40,
+    "subgraph_edges": 5,
+    "coverage": {
+      "sufficient": false,
+      "missing_entities": [
+        "CVEs recientes",
+        "ejemplos de abuso de T1059.001"
+      ],
+      "confidence": 0.4
+    },
+    "hallucination_risk": true,
+    "usage": {
+      "prompt_tokens": 3013,
+      "completion_tokens": 326,
+      "total_tokens": 3339,
+      "retrieval_latency_s": 0.009,
+      "coverage_latency_s": 1.432,
+      "synthesis_latency_s": 6.85
+    },
+    "architecture": "C_GraphRAG"
+  },
+  "metrics": {
+    "question_id": "Q095",
+    "level": 3,
+    "domain": "BOTH",
+    "architecture": "C_GraphRAG",
+    "accuracy": 0.5714,
+    "hallucination_risk": 0.7,
+    "traceability": 1.0,
+    "error_handling": 1.0,
+    "latency_s": 8.291,
+    "total_tokens": 3339,
+    "accuracy_detail": "Score=0.571 | completas=['T1059.001', 'PowerShell', 'CVE', 'correlación'] | parciales=[] | ausentes=['execution', 'AMSI', 'logging']",
+    "hallucination_detail": "Flag de riesgo activo (sin datos de fuente verificados)",
+    "traceability_detail": "Markers texto: ['nvd', 'national vulnerability', 'database'] | Fuente estructurada: api_source=False, seed_nodes=True, sql=False",
+    "error_handling_detail": "Sin errores detectados en el pipeline",
+    "latency_detail": "retrieval=0.01s coverage=1.43s synth=6.85s",
+    "answer_preview": "El subgrafo proporcionado no contiene información específica sobre CVEs (Common Vulnerabilities and Exposures) recientes que abusen de la técnica T1059.001 (PowerShell). La técnica T1059.001 se refiere a la ejecución de comandos de PowerShell, que es una técnica comúnmente utilizada por actores de a…"
+  }
+}

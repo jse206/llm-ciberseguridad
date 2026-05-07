@@ -1,0 +1,39 @@
+{
+  "result": {
+    "answer": "Los resultados de la consulta SQL ejecutada contra la base de datos NVD/CVE indican que existen vulnerabilidades críticas en Microsoft Exchange, específicamente las siguientes:\n\n1. **CVE-2022-21846**: Vulnerabilidad de ejecución remota de código en Microsoft Exchange Server (severidad: CRÍTICA).\n2. **CVE-2022-21855**: Otra vulnerabilidad de ejecución remota de código en Microsoft Exchange Server (severidad: CRÍTICA).\n\nAmbas vulnerabilidades son críticas y pueden ser explotadas por actores de amenazas como APT28, que utilizan técnicas de explotación avanzadas para comprometer sistemas.\n\nRecomendaciones para una organización con servidores Microsoft Exchange vulnerables:\n\n1. **Aplicar Parches Inmediatamente**: Asegúrese de que todos los parches de seguridad relevantes para Microsoft Exchange estén aplicados. Microsoft publica regularmente actualizaciones que abordan estas vulnerabilidades.\n\n2. **Revisar Configuraciones de Seguridad**: Verifique las configuraciones de seguridad de sus servidores Exchange para asegurarse de que estén alineadas con las mejores prácticas recomendadas por Microsoft.\n\n3. **Monitoreo y Detección**: Implemente soluciones de monitoreo y detección de intrusiones para identificar actividades sospechosas en sus servidores Exchange.\n\n4. **Segmentación de Red**: Aísle los servidores Exchange de otras partes de la red para limitar el impacto en caso de un compromiso.\n\n5. **Capacitación de Personal**: Eduque a su personal sobre las amenazas cibernéticas y las mejores prácticas de seguridad para reducir el riesgo de ataques exitosos.\n\n6. **Plan de Respuesta a Incidentes**: Desarrolle y mantenga un plan de respuesta a incidentes que incluya procedimientos específicos para manejar compromisos relacionados con Microsoft Exchange.\n\nEstas acciones son esenciales para mitigar el riesgo asociado con las vulnerabilidades críticas identificadas en la base de datos NVD/NIST.",
+    "sql": "SELECT cve.cve_id, cve.description, cve.cvss_v3_severity\nFROM cve\nJOIN cve_cpe ON cve.cve_id = cve_cpe.cve_id\nWHERE cve_cpe.cpe_uri LIKE '%microsoft%exchange%' AND cve_cpe.vulnerable = 1\nLIMIT 10;",
+    "sql_rows": 10,
+    "correction_attempts": 0,
+    "sql_error": null,
+    "api_fallback": null,
+    "hallucination_risk": false,
+    "usage": {
+      "prompt_tokens": 3522,
+      "completion_tokens": 623,
+      "total_tokens": 4145,
+      "schema_linking_latency_s": 3.402,
+      "sql_generation_latency_s": 2.457,
+      "self_correction_latency_s": 0,
+      "synthesis_latency_s": 8.319
+    },
+    "architecture": "A_Text2SQL"
+  },
+  "metrics": {
+    "question_id": "Q091",
+    "level": 3,
+    "domain": "BOTH",
+    "architecture": "A_Text2SQL",
+    "accuracy": 0.4286,
+    "hallucination_risk": 0.0,
+    "traceability": 1.0,
+    "error_handling": 1.0,
+    "latency_s": 14.178,
+    "total_tokens": 4145,
+    "accuracy_detail": "Score=0.429 | completas=['APT28', 'exchange', 'parche'] | parciales=[] | ausentes=['CVE-2021-26855', 'CVE-2023-23397', 'T1566', 'MFA']",
+    "hallucination_detail": "Sin señales de alucinación detectadas",
+    "traceability_detail": "Markers texto: ['nvd', 'nist', 'base de datos'] | Fuente estructurada: api_source=False, seed_nodes=False, sql=True",
+    "error_handling_detail": "Sin errores detectados en el pipeline",
+    "latency_detail": "linking=3.40s sql=2.46s corr=0.00s synth=8.32s",
+    "answer_preview": "Los resultados de la consulta SQL ejecutada contra la base de datos NVD/CVE indican que existen vulnerabilidades críticas en Microsoft Exchange, específicamente las siguientes:\n\n1. **CVE-2022-21846**: Vulnerabilidad de ejecución remota de código en Microsoft Exchange Server (severidad: CRÍTICA).\n2. …"
+  }
+}

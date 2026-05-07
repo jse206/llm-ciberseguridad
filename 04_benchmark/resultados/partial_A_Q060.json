@@ -1,0 +1,39 @@
+{
+  "result": {
+    "answer": "Los datos provienen de la base de datos NVD/NIST. Según los resultados de la consulta SQL ejecutada, el CVE con el mayor CVSS score publicado en 2022 es el siguiente:\n\n- **CVE-2021-4140** con un CVSS v3 score de **10.0**.\n\nEs importante señalar que, aunque el CVE se publicó en 2021, fue incluido en los resultados de la consulta debido a que su fecha de publicación coincide con el rango de fechas especificado. No se encontraron otros CVEs publicados en 2022 con un score más alto.",
+    "sql": "SELECT cve_id, cvss_v3_score \nFROM cve \nWHERE published LIKE '2022-%' \nORDER BY cvss_v3_score DESC \nLIMIT 1;",
+    "sql_rows": 1,
+    "correction_attempts": 0,
+    "sql_error": null,
+    "api_fallback": null,
+    "hallucination_risk": false,
+    "usage": {
+      "prompt_tokens": 2980,
+      "completion_tokens": 249,
+      "total_tokens": 3229,
+      "schema_linking_latency_s": 1.939,
+      "sql_generation_latency_s": 1.829,
+      "self_correction_latency_s": 0,
+      "synthesis_latency_s": 2.97
+    },
+    "architecture": "A_Text2SQL"
+  },
+  "metrics": {
+    "question_id": "Q060",
+    "level": 1,
+    "domain": "NVD",
+    "architecture": "A_Text2SQL",
+    "accuracy": 0.5,
+    "hallucination_risk": 0.0,
+    "traceability": 1.0,
+    "error_handling": 1.0,
+    "latency_s": 6.738,
+    "total_tokens": 3229,
+    "accuracy_detail": "Score=0.500 | completas=['10.0', '2022'] | parciales=[] | ausentes=['critical', 'máximo']",
+    "hallucination_detail": "Sin señales de alucinación detectadas",
+    "traceability_detail": "Markers texto: ['nvd', 'nist', 'según'] | Fuente estructurada: api_source=False, seed_nodes=False, sql=True",
+    "error_handling_detail": "Sin errores detectados en el pipeline",
+    "latency_detail": "linking=1.94s sql=1.83s corr=0.00s synth=2.97s",
+    "answer_preview": "Los datos provienen de la base de datos NVD/NIST. Según los resultados de la consulta SQL ejecutada, el CVE con el mayor CVSS score publicado en 2022 es el siguiente:\n\n- **CVE-2021-4140** con un CVSS v3 score de **10.0**.\n\nEs importante señalar que, aunque el CVE se publicó en 2021, fue incluido en …"
+  }
+}

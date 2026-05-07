@@ -1,0 +1,39 @@
+{
+  "result": {
+    "answer": "Los datos provienen de la base de datos NVD/NIST. Según los resultados de la consulta SQL ejecutada, se han encontrado los siguientes CVEs críticos relacionados con Cisco publicados en 2023:\n\n1. **CVE-2023-20025**\n   - Severidad: CRITICAL\n   - Fecha de publicación: 20 de enero de 2023\n\n2. **CVE-2023-20032**\n   - Severidad: CRITICAL\n   - Fecha de publicación: 1 de marzo de 2023\n\n3. **CVE-2023-20078**\n   - Severidad: CRITICAL\n   - Fecha de publicación: 3 de marzo de 2023\n\nEs importante mencionar que el CVE-2023-20025 y el CVE-2023-20032 aparecen múltiples veces en los resultados, pero se refieren a la misma vulnerabilidad. En total, se han identificado tres CVEs críticos relacionados con Cisco en el año 2023.",
+    "sql": "SELECT c.cve_id, c.cvss_v3_severity, c.published\nFROM cve AS c\nJOIN cve_cpe AS cc ON c.cve_id = cc.cve_id\nWHERE c.cvss_v3_severity = 'CRITICAL' \nAND cc.cpe_uri LIKE '%cisco%' \nAND c.published >= '2023-01-01' \nAND c.published < '2024-01-01';",
+    "sql_rows": 20,
+    "correction_attempts": 1,
+    "sql_error": null,
+    "api_fallback": null,
+    "hallucination_risk": false,
+    "usage": {
+      "prompt_tokens": 5454,
+      "completion_tokens": 516,
+      "total_tokens": 5970,
+      "schema_linking_latency_s": 2.272,
+      "sql_generation_latency_s": 2.255,
+      "self_correction_latency_s": 3.675,
+      "synthesis_latency_s": 4.472
+    },
+    "architecture": "A_Text2SQL"
+  },
+  "metrics": {
+    "question_id": "Q075",
+    "level": 2,
+    "domain": "NVD",
+    "architecture": "A_Text2SQL",
+    "accuracy": 0.8,
+    "hallucination_risk": 0.0,
+    "traceability": 1.0,
+    "error_handling": 1.0,
+    "latency_s": 12.674,
+    "total_tokens": 5970,
+    "accuracy_detail": "Score=0.800 | completas=['cisco', 'critical', '2023', 'CVE'] | parciales=[] | ausentes=['ios']",
+    "hallucination_detail": "Sin señales de alucinación detectadas",
+    "traceability_detail": "Markers texto: ['nvd', 'nist', 'según'] | Fuente estructurada: api_source=False, seed_nodes=False, sql=True",
+    "error_handling_detail": "Sin errores detectados en el pipeline",
+    "latency_detail": "linking=2.27s sql=2.25s corr=3.67s synth=4.47s",
+    "answer_preview": "Los datos provienen de la base de datos NVD/NIST. Según los resultados de la consulta SQL ejecutada, se han encontrado los siguientes CVEs críticos relacionados con Cisco publicados en 2023:\n\n1. **CVE-2023-20025**\n   - Severidad: CRITICAL\n   - Fecha de publicación: 20 de enero de 2023\n\n2. **CVE-2023…"
+  }
+}

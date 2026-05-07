@@ -1,0 +1,39 @@
+{
+  "result": {
+    "answer": "El score CVSS v3 de la vulnerabilidad CVE-2021-44228, según los datos de la base de datos NVD/NIST, es de **10.0**. Esta puntuación se clasifica como **CRÍTICA**. \n\nEl vector CVSS correspondiente es: \n```\nCVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H\n```\nEsto indica que la vulnerabilidad tiene un **Vector de Ataque** a través de la red, una **Complejidad de Ataque** baja, no requiere **Privilegios** previos ni **Interacción del Usuario**, y afecta la **Confidencialidad**, **Integridad** y **Disponibilidad** de manera alta.\n\nSi necesitas más información sobre esta vulnerabilidad o su impacto, no dudes en preguntar.",
+    "sql": "SELECT cvss_v3_score FROM cve WHERE cve_id = 'CVE-2021-44228';",
+    "sql_rows": 1,
+    "correction_attempts": 0,
+    "sql_error": null,
+    "api_fallback": "NVD API — CVE-2021-44228",
+    "hallucination_risk": false,
+    "usage": {
+      "prompt_tokens": 4565,
+      "completion_tokens": 291,
+      "total_tokens": 4856,
+      "schema_linking_latency_s": 5.346,
+      "sql_generation_latency_s": 1.229,
+      "self_correction_latency_s": 0,
+      "synthesis_latency_s": 5.381
+    },
+    "architecture": "A_Text2SQL"
+  },
+  "metrics": {
+    "question_id": "Q001",
+    "level": 1,
+    "domain": "NVD",
+    "architecture": "A_Text2SQL",
+    "accuracy": 0.5,
+    "hallucination_risk": 0.0,
+    "traceability": 1.0,
+    "error_handling": 1.0,
+    "latency_s": 11.956,
+    "total_tokens": 4856,
+    "accuracy_detail": "Score=0.500 | completas=['10.0', '10', 'crítica'] | parciales=[] | ausentes=['critical', 'log4shell', 'log4j']",
+    "hallucination_detail": "Sin señales de alucinación detectadas",
+    "traceability_detail": "Markers texto: ['nvd', 'nist', 'según'] | Fuente estructurada: api_source=False, seed_nodes=False, sql=True",
+    "error_handling_detail": "Sin errores detectados en el pipeline",
+    "latency_detail": "linking=5.35s sql=1.23s corr=0.00s synth=5.38s",
+    "answer_preview": "El score CVSS v3 de la vulnerabilidad CVE-2021-44228, según los datos de la base de datos NVD/NIST, es de **10.0**. Esta puntuación se clasifica como **CRÍTICA**. \n\nEl vector CVSS correspondiente es: \n```\nCVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H\n```\nEsto indica que la vulnerabilidad tiene un **V…"
+  }
+}

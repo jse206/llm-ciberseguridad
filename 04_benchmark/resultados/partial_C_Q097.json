@@ -1,0 +1,49 @@
+{
+  "result": {
+    "answer": "Tras detectar actividad de T1486 (Data Encrypted for Impact) en su red, un Centro de Operaciones de Seguridad (SOC) debe establecer varias prioridades críticas para mitigar el impacto del ransomware y restaurar la seguridad de la infraestructura. Según MITRE ATT&CK, T1486 implica que los adversarios pueden cifrar datos en sistemas objetivo para interrumpir la disponibilidad de recursos de sistema y red.\n\n1. **Contención Inmediata**: La primera prioridad debe ser contener la amenaza. Esto implica aislar los sistemas afectados para evitar que el ransomware se propague a otros dispositivos en la red. Se deben desactivar las conexiones de red de los sistemas comprometidos y, si es posible, desconectar físicamente los dispositivos afectados.\n\n2. **Análisis Forense**: Realizar un análisis forense para entender cómo se produjo la intrusión. Esto incluye identificar el vector de ataque, las vulnerabilidades explotadas y el alcance del daño. La información obtenida puede ser crucial para prevenir futuros incidentes.\n\n3. **Restauración de Sistemas**: Evaluar la posibilidad de restaurar los sistemas afectados desde copias de seguridad. Es fundamental asegurarse de que las copias de seguridad no estén comprometidas y que se puedan restaurar sin introducir nuevamente el ransomware en la red.\n\n4. **Comunicación**: Informar a las partes interesadas, incluyendo la alta dirección y, si es necesario, a las autoridades pertinentes. La transparencia es clave, especialmente si se manejan datos sensibles o regulados.\n\n5. **Revisión de Seguridad**: Implementar medidas de mitigación para prevenir futuros ataques. Esto puede incluir la actualización de software, la aplicación de parches de seguridad, y la mejora de las políticas de seguridad y controles de acceso.\n\n6. **Educación y Concienciación**: Capacitar a los empleados sobre las mejores prácticas de seguridad cibernética, incluyendo la identificación de correos electrónicos de phishing y la importancia de no abrir archivos adjuntos sospechosos.\n\n7. **Monitoreo Continuo**: Establecer un monitoreo continuo de la red para detectar actividad inusual que pueda indicar un nuevo ataque o una reinfección.\n\nEstas prioridades son esenciales para minimizar el impacto de un ataque de ransomware y restaurar la operatividad de la organización. Según MITRE ATT&CK, la respuesta efectiva a T1486 puede ayudar a mitigar el daño y fortalecer la postura de seguridad general de la organización.",
+    "seed_nodes": [
+      "T1486",
+      "S0114"
+    ],
+    "subgraph_nodes": 40,
+    "subgraph_edges": 44,
+    "coverage": {
+      "sufficient": false,
+      "missing_entities": [
+        "prioridades del SOC",
+        "acciones específicas a tomar",
+        "protocolos de respuesta",
+        "medidas preventivas"
+      ],
+      "confidence": 0.6
+    },
+    "hallucination_risk": true,
+    "usage": {
+      "prompt_tokens": 3146,
+      "completion_tokens": 552,
+      "total_tokens": 3698,
+      "retrieval_latency_s": 0.011,
+      "coverage_latency_s": 1.372,
+      "synthesis_latency_s": 8.276
+    },
+    "architecture": "C_GraphRAG"
+  },
+  "metrics": {
+    "question_id": "Q097",
+    "level": 3,
+    "domain": "BOTH",
+    "architecture": "C_GraphRAG",
+    "accuracy": 0.5,
+    "hallucination_risk": 0.7,
+    "traceability": 1.0,
+    "error_handling": 1.0,
+    "latency_s": 9.659,
+    "total_tokens": 3698,
+    "accuracy_detail": "Score=0.500 | completas=['T1486', 'ransomware', 'contención'] | parciales=['incident response(50%)'] | ausentes=['backup', 'M1053', 'aislamiento']",
+    "hallucination_detail": "Flag de riesgo activo (sin datos de fuente verificados)",
+    "traceability_detail": "Markers texto: ['mitre', 'att&ck', 'según'] | Fuente estructurada: api_source=False, seed_nodes=True, sql=False",
+    "error_handling_detail": "Sin errores detectados en el pipeline",
+    "latency_detail": "retrieval=0.01s coverage=1.37s synth=8.28s",
+    "answer_preview": "Tras detectar actividad de T1486 (Data Encrypted for Impact) en su red, un Centro de Operaciones de Seguridad (SOC) debe establecer varias prioridades críticas para mitigar el impacto del ransomware y restaurar la seguridad de la infraestructura. Según MITRE ATT&CK, T1486 implica que los adversarios…"
+  }
+}

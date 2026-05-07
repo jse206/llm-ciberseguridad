@@ -1,0 +1,73 @@
+{
+  "result": {
+    "answer": "Según la información disponible en el grafo de conocimiento de MITRE ATT&CK, el grupo APT conocido como Wizard Spider está asociado con la técnica T1021 (Remote Services). Este grupo es conocido por su actividad en el ámbito del cibercrimen y utiliza diversas sub-técnicas de T1021, como SMB/Windows Admin Shares y SSH, para realizar movimientos laterales en redes comprometidas.\n\n**Fuentes consultadas:** query_mitre_graph",
+    "steps": [
+      {
+        "thought": "",
+        "action": "query_mitre_graph",
+        "action_input": {
+          "question": "¿Qué grupos APT utilizan la técnica T1021 (Remote Services)?"
+        },
+        "observation_preview": "{\n  \"context\": \"=== SUBGRAFO MITRE ATT&CK ===\\n\\n--- Entidades recuperadas ---\\n  [attack-pattern] T1547.012 — Print Processors\\n     Adversaries may abuse print processors to run malicious DLLs during system boot for persistence and/or privilege escalation. Print processors are DLLs that are loaded…"
+      },
+      {
+        "thought": "",
+        "action": "query_mitre_graph",
+        "action_input": {
+          "question": "¿Qué grupos APT están asociados con la técnica T1021?"
+        },
+        "observation_preview": "{\n  \"context\": \"=== SUBGRAFO MITRE ATT&CK ===\\n\\n--- Entidades recuperadas ---\\n  [attack-pattern] T1547.012 — Print Processors\\n     Adversaries may abuse print processors to run malicious DLLs during system boot for persistence and/or privilege escalation. Print processors are DLLs that are loaded…"
+      },
+      {
+        "thought": "",
+        "action": "query_mitre_graph",
+        "action_input": {
+          "question": "¿Qué información hay sobre la técnica T1021 (Remote Services)?"
+        },
+        "observation_preview": "{\n  \"context\": \"=== SUBGRAFO MITRE ATT&CK ===\\n\\n--- Entidades recuperadas ---\\n  [attack-pattern] T1021.002 — SMB/Windows Admin Shares\\n     Adversaries may use [Valid Accounts](https://attack.mitre.org/techniques/T1078) to interact with a remote network share using Server Message Block (SMB). The …"
+      },
+      {
+        "thought": "",
+        "action": "query_mitre_graph",
+        "action_input": {
+          "question": "¿Qué grupos APT están asociados con la técnica T1021 y sus sub-técnicas?"
+        },
+        "observation_preview": "{\n  \"context\": \"=== SUBGRAFO MITRE ATT&CK ===\\n\\n--- Entidades recuperadas ---\\n  [attack-pattern] T1547.012 — Print Processors\\n     Adversaries may abuse print processors to run malicious DLLs during system boot for persistence and/or privilege escalation. Print processors are DLLs that are loaded…"
+      }
+    ],
+    "tools_used": [
+      "query_mitre_graph",
+      "query_mitre_graph",
+      "query_mitre_graph",
+      "query_mitre_graph"
+    ],
+    "iterations": 4,
+    "forced_final": false,
+    "hallucination_risk": false,
+    "usage": {
+      "prompt_tokens": 12226,
+      "completion_tokens": 477,
+      "total_tokens": 12703,
+      "total_latency_s": 11.469
+    },
+    "architecture": "D_Toolformer"
+  },
+  "metrics": {
+    "question_id": "Q074",
+    "level": 2,
+    "domain": "MITRE",
+    "architecture": "D_Toolformer",
+    "accuracy": 0.8333,
+    "hallucination_risk": 0.0,
+    "traceability": 0.5,
+    "error_handling": 1.0,
+    "latency_s": 11.469,
+    "total_tokens": 12703,
+    "accuracy_detail": "Score=0.833 | completas=['APT', 'T1021', 'remote services', 'SMB', 'grupo'] | parciales=[] | ausentes=['RDP']",
+    "hallucination_detail": "Sin señales de alucinación detectadas",
+    "traceability_detail": "Markers texto: ['mitre', 'att&ck', 'según'] | Fuente estructurada: api_source=False, seed_nodes=False, sql=False",
+    "error_handling_detail": "Sin errores detectados en el pipeline",
+    "latency_detail": "total_react=11.47s iterations=4",
+    "answer_preview": "Según la información disponible en el grafo de conocimiento de MITRE ATT&CK, el grupo APT conocido como Wizard Spider está asociado con la técnica T1021 (Remote Services). Este grupo es conocido por su actividad en el ámbito del cibercrimen y utiliza diversas sub-técnicas de T1021, como SMB/Windows …"
+  }
+}

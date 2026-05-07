@@ -1,0 +1,47 @@
+{
+  "result": {
+    "answer": "Según el subgrafo proporcionado del framework MITRE ATT&CK, las siguientes técnicas están clasificadas bajo la táctica de **Defense Evasion** (Evasión de Defensa):\n\n1. **T1562 — Impair Defenses**: Los adversarios pueden modificar maliciosamente componentes del entorno de la víctima para obstaculizar o deshabilitar mecanismos defensivos. Esta técnica incluye la alteración de defensas preventivas como firewalls y antivirus.\n\n2. **T1562.003 — Impair Command History Logging**: Los adversarios pueden afectar el registro del historial de comandos para ocultar los comandos que ejecutan en un sistema comprometido.\n\n3. **T1562.004 — Disable or Modify System Firewall**: Los adversarios pueden deshabilitar o modificar firewalls del sistema para eludir controles que limitan el uso de la red.\n\n4. **T1562.006 — Indicator Blocking**: Un adversario puede intentar bloquear indicadores o eventos que normalmente son capturados por sensores, evitando así su análisis.\n\n5. **T1562.007 — Disable or Modify Cloud Firewall**: Esta técnica implica deshabilitar o modificar un firewall dentro de un entorno en la nube para eludir controles que limitan el acceso a recursos en la nube.\n\n6. **T1562.008 — Disable or Modify Cloud Logs**: Los adversarios pueden deshabilitar o modificar las capacidades de registro en la nube para limitar la recopilación de datos sobre sus actividades.\n\n7. **T1562.009 — Safe Mode Boot**: Los adversarios pueden abusar del modo seguro de Windows para deshabilitar defensas de punto final.\n\n8. **T1562.010 — Downgrade Attack**: Esta técnica implica el uso de versiones de características del sistema que pueden estar desactualizadas o vulnerables, lo que permite eludir controles de seguridad actualizados.\n\n9. **T1562.011 — Spoof Security Alerting**: Los adversarios pueden falsificar alertas de seguridad para presentar evidencia falsa y disminuir la conciencia de los defensores sobre actividades maliciosas.\n\n10. **T1562.013 — Disable or Modify Network Device Firewall**: Implica deshabilitar mecanismos de firewall en dispositivos de red o modificar reglas específicas para eludir controles de red.\n\n11. **T1211 — Exploitation for Defense Evasion**: Los adversarios pueden explotar vulnerabilidades en sistemas o aplicaciones para eludir características de seguridad.\n\nEstas técnicas son utilizadas por los adversarios para evitar ser detectados y mantener el acceso a los sistemas comprometidos. \n\nFuente: \"Según MITRE ATT&CK…\".",
+    "seed_nodes": [
+      "TA0005",
+      "T1053.002",
+      "S0110",
+      "T1562",
+      "T1211"
+    ],
+    "subgraph_nodes": 40,
+    "subgraph_edges": 69,
+    "coverage": {
+      "sufficient": true,
+      "missing_entities": [],
+      "confidence": 0.85
+    },
+    "hallucination_risk": false,
+    "usage": {
+      "prompt_tokens": 2653,
+      "completion_tokens": 567,
+      "total_tokens": 3220,
+      "retrieval_latency_s": 0.007,
+      "coverage_latency_s": 0.905,
+      "synthesis_latency_s": 10.351
+    },
+    "architecture": "C_GraphRAG"
+  },
+  "metrics": {
+    "question_id": "Q076",
+    "level": 2,
+    "domain": "MITRE",
+    "architecture": "C_GraphRAG",
+    "accuracy": 0.5,
+    "hallucination_risk": 0.0,
+    "traceability": 1.0,
+    "error_handling": 1.0,
+    "latency_s": 11.263,
+    "total_tokens": 3220,
+    "accuracy_detail": "Score=0.500 | completas=['defense evasion', 'T1562', 'evasión'] | parciales=[] | ausentes=['TA0005', 'T1055', 'T1027']",
+    "hallucination_detail": "Sin señales de alucinación detectadas",
+    "traceability_detail": "Markers texto: ['mitre', 'att&ck', 'según'] | Fuente estructurada: api_source=False, seed_nodes=True, sql=False",
+    "error_handling_detail": "Sin errores detectados en el pipeline",
+    "latency_detail": "retrieval=0.01s coverage=0.91s synth=10.35s",
+    "answer_preview": "Según el subgrafo proporcionado del framework MITRE ATT&CK, las siguientes técnicas están clasificadas bajo la táctica de **Defense Evasion** (Evasión de Defensa):\n\n1. **T1562 — Impair Defenses**: Los adversarios pueden modificar maliciosamente componentes del entorno de la víctima para obstaculizar…"
+  }
+}

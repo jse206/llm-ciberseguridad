@@ -1,0 +1,39 @@
+{
+  "result": {
+    "answer": "Los resultados de la consulta SQL ejecutada contra la base de datos NVD/CVE indican que no hay datos disponibles sobre técnicas MITRE ATT&CK relacionadas con la táctica de Lateral Movement en el esquema proporcionado. Esto significa que no se encontraron registros específicos que vinculen técnicas de MITRE ATT&CK con esta táctica en la base de datos NVD/NIST.\n\nSi necesitas información adicional sobre técnicas específicas de Lateral Movement, te recomendaría consultar directamente la matriz de MITRE ATT&CK, donde se pueden encontrar detalles sobre las técnicas asociadas a esta táctica.",
+    "sql": "SELECT 'No hay datos disponibles sobre técnicas MITRE ATT&CK en el esquema proporcionado.' AS mensaje;",
+    "sql_rows": 1,
+    "correction_attempts": 0,
+    "sql_error": null,
+    "api_fallback": null,
+    "hallucination_risk": false,
+    "usage": {
+      "prompt_tokens": 2914,
+      "completion_tokens": 209,
+      "total_tokens": 3123,
+      "schema_linking_latency_s": 1.737,
+      "sql_generation_latency_s": 1.128,
+      "self_correction_latency_s": 0,
+      "synthesis_latency_s": 2.749
+    },
+    "architecture": "A_Text2SQL"
+  },
+  "metrics": {
+    "question_id": "Q023",
+    "level": 2,
+    "domain": "BOTH",
+    "architecture": "A_Text2SQL",
+    "accuracy": 0.2,
+    "hallucination_risk": 0.0,
+    "traceability": 1.0,
+    "error_handling": 1.0,
+    "latency_s": 5.614,
+    "total_tokens": 3123,
+    "accuracy_detail": "Score=0.200 | completas=['lateral movement'] | parciales=[] | ausentes=['T1021', 'T1570', 'remote services', 'TA0008']",
+    "hallucination_detail": "Sin señales de alucinación detectadas",
+    "traceability_detail": "Markers texto: ['nvd', 'nist', 'mitre'] | Fuente estructurada: api_source=False, seed_nodes=False, sql=True",
+    "error_handling_detail": "Sin errores detectados en el pipeline",
+    "latency_detail": "linking=1.74s sql=1.13s corr=0.00s synth=2.75s",
+    "answer_preview": "Los resultados de la consulta SQL ejecutada contra la base de datos NVD/CVE indican que no hay datos disponibles sobre técnicas MITRE ATT&CK relacionadas con la táctica de Lateral Movement en el esquema proporcionado. Esto significa que no se encontraron registros específicos que vinculen técnicas d…"
+  }
+}

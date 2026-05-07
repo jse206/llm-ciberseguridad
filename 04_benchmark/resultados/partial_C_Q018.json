@@ -1,0 +1,49 @@
+{
+  "result": {
+    "answer": "La táctica que corresponde a la fase inicial de un ataque, donde el adversario intenta entrar en la red, es \"initial-access\". Según MITRE ATT&CK, esta táctica incluye técnicas como T1566 — Phishing, donde los adversarios envían mensajes de phishing para obtener acceso a los sistemas de las víctimas, y T1199 — Trusted Relationship, que implica aprovechar relaciones de confianza para acceder a los sistemas de los objetivos.\n\nAmbas técnicas son ejemplos de cómo los atacantes pueden obtener acceso inicial a un entorno comprometido. Por lo tanto, la táctica \"initial-access\" es fundamental en la fase inicial de un ataque cibernético.",
+    "seed_nodes": [
+      "T1053.002",
+      "S0110"
+    ],
+    "subgraph_nodes": 40,
+    "subgraph_edges": 6,
+    "coverage": {
+      "sufficient": false,
+      "missing_entities": [
+        "táctica de ataque",
+        "fase inicial",
+        "adversario",
+        "red"
+      ],
+      "confidence": 0.3
+    },
+    "hallucination_risk": true,
+    "usage": {
+      "prompt_tokens": 2675,
+      "completion_tokens": 180,
+      "total_tokens": 2855,
+      "retrieval_latency_s": 0.01,
+      "coverage_latency_s": 1.522,
+      "synthesis_latency_s": 2.913
+    },
+    "architecture": "C_GraphRAG"
+  },
+  "metrics": {
+    "question_id": "Q018",
+    "level": 1,
+    "domain": "MITRE",
+    "architecture": "C_GraphRAG",
+    "accuracy": 0.6667,
+    "hallucination_risk": 0.7,
+    "traceability": 1.0,
+    "error_handling": 1.0,
+    "latency_s": 4.445,
+    "total_tokens": 2855,
+    "accuracy_detail": "Score=0.667 | completas=['initial access', 'acceso inicial'] | parciales=[] | ausentes=['TA0001']",
+    "hallucination_detail": "Flag de riesgo activo (sin datos de fuente verificados)",
+    "traceability_detail": "Markers texto: ['mitre', 'att&ck', 'según'] | Fuente estructurada: api_source=False, seed_nodes=True, sql=False",
+    "error_handling_detail": "Sin errores detectados en el pipeline",
+    "latency_detail": "retrieval=0.01s coverage=1.52s synth=2.91s",
+    "answer_preview": "La táctica que corresponde a la fase inicial de un ataque, donde el adversario intenta entrar en la red, es \"initial-access\". Según MITRE ATT&CK, esta táctica incluye técnicas como T1566 — Phishing, donde los adversarios envían mensajes de phishing para obtener acceso a los sistemas de las víctimas,…"
+  }
+}

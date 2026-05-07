@@ -1,0 +1,39 @@
+{
+  "result": {
+    "answer": "Según los datos obtenidos de la base de datos NVD/NIST, se han publicado un total de 645 CVEs en 2023 que están asociados con la debilidad CWE-416 (Use After Free).",
+    "sql": "SELECT COUNT(DISTINCT c.cve_id) AS cve_count\nFROM cve AS c\nJOIN cve_cwe AS cw ON c.cve_id = cw.cve_id\nWHERE cw.cwe_id = 'CWE-416' AND c.published LIKE '2023%'",
+    "sql_rows": 1,
+    "correction_attempts": 0,
+    "sql_error": null,
+    "api_fallback": null,
+    "hallucination_risk": false,
+    "usage": {
+      "prompt_tokens": 3008,
+      "completion_tokens": 215,
+      "total_tokens": 3223,
+      "schema_linking_latency_s": 2.559,
+      "sql_generation_latency_s": 1.839,
+      "self_correction_latency_s": 0,
+      "synthesis_latency_s": 1.639
+    },
+    "architecture": "A_Text2SQL"
+  },
+  "metrics": {
+    "question_id": "Q062",
+    "level": 1,
+    "domain": "NVD",
+    "architecture": "A_Text2SQL",
+    "accuracy": 1.0,
+    "hallucination_risk": 0.0,
+    "traceability": 1.0,
+    "error_handling": 1.0,
+    "latency_s": 6.037,
+    "total_tokens": 3223,
+    "accuracy_detail": "Score=1.000 | completas=['CWE-416', 'use after free', '2023'] | parciales=[] | ausentes=[]",
+    "hallucination_detail": "Sin señales de alucinación detectadas",
+    "traceability_detail": "Markers texto: ['nvd', 'nist', 'según'] | Fuente estructurada: api_source=False, seed_nodes=False, sql=True",
+    "error_handling_detail": "Sin errores detectados en el pipeline",
+    "latency_detail": "linking=2.56s sql=1.84s corr=0.00s synth=1.64s",
+    "answer_preview": "Según los datos obtenidos de la base de datos NVD/NIST, se han publicado un total de 645 CVEs en 2023 que están asociados con la debilidad CWE-416 (Use After Free)."
+  }
+}

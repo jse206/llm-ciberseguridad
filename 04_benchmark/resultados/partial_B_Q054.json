@@ -1,0 +1,37 @@
+{
+  "result": {
+    "answer": "El score CVSS v3.1 para la vulnerabilidad CVE-2022-22965, también conocida como Spring4Shell, es de **9.8**, lo que la clasifica como **CRÍTICA**. \n\nLos detalles del vector CVSS son los siguientes:\n- **Vector String**: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H\n- **Attack Vector**: NETWORK\n- **Attack Complexity**: LOW\n- **Privileges Required**: NONE\n- **User Interaction**: NONE\n- **Scope**: UNCHANGED\n- **Confidentiality Impact**: HIGH\n- **Integrity Impact**: HIGH\n- **Availability Impact**: HIGH\n\nEsta información se obtiene de la base de datos del NVD (National Vulnerability Database) según los datos recuperados (fuente: NVD/NIST). \n\nLa vulnerabilidad permite la ejecución remota de código (RCE) en aplicaciones Spring MVC o Spring WebFlux que se ejecutan en JDK 9+ y que están desplegadas en Tomcat como un archivo WAR. Si se despliegan como un jar ejecutable de Spring Boot, no son vulnerables a esta explotación, aunque la naturaleza de la vulnerabilidad puede permitir otros métodos de explotación (fuente: NVD/NIST).",
+    "intent": "get_cve_by_id",
+    "api_source": "https://services.nvd.nist.gov/rest/json/cves/2.0?cveId=CVE-2022-22965",
+    "api_error": null,
+    "router_confidence": 0.9,
+    "usage": {
+      "prompt_tokens": 2881,
+      "completion_tokens": 325,
+      "total_tokens": 3206,
+      "router_latency_s": 1.358,
+      "api_latency_s": 1.327,
+      "synthesis_latency_s": 7.16
+    },
+    "hallucination_risk": false,
+    "architecture": "B_API"
+  },
+  "metrics": {
+    "question_id": "Q054",
+    "level": 1,
+    "domain": "NVD",
+    "architecture": "B_API",
+    "accuracy": 0.5,
+    "hallucination_risk": 0.0,
+    "traceability": 1.0,
+    "error_handling": 1.0,
+    "latency_s": 9.845,
+    "total_tokens": 3206,
+    "accuracy_detail": "Score=0.500 | completas=['9.8', 'spring', 'RCE'] | parciales=[] | ausentes=['critical', 'java', 'remote code execution']",
+    "hallucination_detail": "Sin señales de alucinación detectadas",
+    "traceability_detail": "Markers texto: ['nvd', 'nist', 'national vulnerability'] | Fuente estructurada: api_source=True, seed_nodes=False, sql=False",
+    "error_handling_detail": "Sin errores detectados en el pipeline",
+    "latency_detail": "router=1.36s api=1.33s synth=7.16s",
+    "answer_preview": "El score CVSS v3.1 para la vulnerabilidad CVE-2022-22965, también conocida como Spring4Shell, es de **9.8**, lo que la clasifica como **CRÍTICA**. \n\nLos detalles del vector CVSS son los siguientes:\n- **Vector String**: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H\n- **Attack Vector**: NETWORK\n- **Att…"
+  }
+}

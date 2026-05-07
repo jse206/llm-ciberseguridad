@@ -1,0 +1,39 @@
+{
+  "result": {
+    "answer": "Los datos proporcionados provienen de la base de datos NVD/NIST y muestran una lista de vulnerabilidades con un puntaje CVSS de 10.0. A continuación, se presentan las vulnerabilidades identificadas y sus respectivas identificaciones CWE:\n\n1. **CVE-2021-43832** - CWE-306\n2. **CVE-2022-21643** - CWE-89\n3. **CVE-2021-21960** - CWE-121, CWE-1284\n4. **CVE-2021-21961** - CWE-121, CWE-787\n5. **CVE-2022-22536** - CWE-444\n6. **CVE-2022-20699** - CWE-121, CWE-1284\n7. **CVE-2022-20700** - CWE-121, CWE-787\n8. **CVE-2022-20701** - CWE-121, CWE-787\n9. **CVE-2022-20702** - CWE-121, CWE-787\n10. **CVE-2022-20703** - CWE-121, CWE-295\n11. **CVE-2022-20704** - CWE-121, CWE-787\n12. **CVE-2022-20705** - CWE-121\n\nEn términos de tácticas de acceso inicial del marco MITRE ATT&CK, las vulnerabilidades con un CVSS de 10.0 pueden estar relacionadas con técnicas que permiten a un atacante obtener acceso no autorizado a un sistema. Por ejemplo, las vulnerabilidades asociadas a CWE-89 (Inyección SQL) y CWE-306 (Intento de acceso no autorizado) son críticas para la explotación inicial, ya que pueden permitir a un atacante ejecutar código malicioso o acceder a datos sensibles.\n\nLas vulnerabilidades relacionadas con CWE-121 (Desbordamiento de búfer) y CWE-787 (Acceso a memoria fuera de límites) también pueden ser utilizadas para ejecutar código arbitrario, lo que facilita el acceso inicial a un sistema comprometido.\n\nEn resumen, las vulnerabilidades con un puntaje CVSS de 10.0 son altamente críticas y pueden ser explotadas para lograr acceso inicial en un entorno de ataque, lo que resalta la importancia de aplicar parches y mitigaciones adecuadas.",
+    "sql": "SELECT c.cve_id, c.cvss_v3_score, cw.cwe_id\nFROM cve AS c\nJOIN cve_cwe AS cw ON c.cve_id = cw.cve_id\nWHERE c.cvss_v3_score = 10.0",
+    "sql_rows": 20,
+    "correction_attempts": 0,
+    "sql_error": null,
+    "api_fallback": null,
+    "hallucination_risk": false,
+    "usage": {
+      "prompt_tokens": 3962,
+      "completion_tokens": 691,
+      "total_tokens": 4653,
+      "schema_linking_latency_s": 3.569,
+      "sql_generation_latency_s": 1.98,
+      "self_correction_latency_s": 0,
+      "synthesis_latency_s": 17.681
+    },
+    "architecture": "A_Text2SQL"
+  },
+  "metrics": {
+    "question_id": "Q046",
+    "level": 3,
+    "domain": "BOTH",
+    "architecture": "A_Text2SQL",
+    "accuracy": 0.2,
+    "hallucination_risk": 0.0,
+    "traceability": 1.0,
+    "error_handling": 1.0,
+    "latency_s": 23.23,
+    "total_tokens": 4653,
+    "accuracy_detail": "Score=0.200 | completas=['CVSS 10.0'] | parciales=[] | ausentes=['initial access', 'T1190', 'exploit', 'critical']",
+    "hallucination_detail": "Sin señales de alucinación detectadas",
+    "traceability_detail": "Markers texto: ['nvd', 'nist', 'mitre'] | Fuente estructurada: api_source=False, seed_nodes=False, sql=True",
+    "error_handling_detail": "Sin errores detectados en el pipeline",
+    "latency_detail": "linking=3.57s sql=1.98s corr=0.00s synth=17.68s",
+    "answer_preview": "Los datos proporcionados provienen de la base de datos NVD/NIST y muestran una lista de vulnerabilidades con un puntaje CVSS de 10.0. A continuación, se presentan las vulnerabilidades identificadas y sus respectivas identificaciones CWE:\n\n1. **CVE-2021-43832** - CWE-306\n2. **CVE-2022-21643** - CWE-8…"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "result": {
+    "answer": "Según la consulta SQL ejecutada y los resultados obtenidos de la base de datos NVD/NIST, no hay información disponible sobre herramientas maliciosas asociadas al grupo Lazarus Group en el esquema proporcionado. Esto indica que, en la base de datos consultada, no se registran datos específicos sobre las herramientas utilizadas por este grupo.",
+    "sql": "SELECT 'No hay información disponible sobre herramientas maliciosas asociadas al grupo Lazarus Group en el esquema proporcionado.'",
+    "sql_rows": 1,
+    "correction_attempts": 0,
+    "sql_error": null,
+    "api_fallback": null,
+    "hallucination_risk": false,
+    "usage": {
+      "prompt_tokens": 2998,
+      "completion_tokens": 203,
+      "total_tokens": 3201,
+      "schema_linking_latency_s": 2.351,
+      "sql_generation_latency_s": 1.191,
+      "self_correction_latency_s": 0,
+      "synthesis_latency_s": 2.489
+    },
+    "architecture": "A_Text2SQL"
+  },
+  "metrics": {
+    "question_id": "Q025",
+    "level": 2,
+    "domain": "BOTH",
+    "architecture": "A_Text2SQL",
+    "accuracy": 0.1667,
+    "hallucination_risk": 0.0,
+    "traceability": 1.0,
+    "error_handling": 1.0,
+    "latency_s": 6.031,
+    "total_tokens": 3201,
+    "accuracy_detail": "Score=0.167 | completas=['lazarus'] | parciales=[] | ausentes=['WannaCry', 'malware', 'DPRK', 'korea', 'S0']",
+    "hallucination_detail": "Sin señales de alucinación detectadas",
+    "traceability_detail": "Markers texto: ['nvd', 'nist', 'según'] | Fuente estructurada: api_source=False, seed_nodes=False, sql=True",
+    "error_handling_detail": "Sin errores detectados en el pipeline",
+    "latency_detail": "linking=2.35s sql=1.19s corr=0.00s synth=2.49s",
+    "answer_preview": "Según la consulta SQL ejecutada y los resultados obtenidos de la base de datos NVD/NIST, no hay información disponible sobre herramientas maliciosas asociadas al grupo Lazarus Group en el esquema proporcionado. Esto indica que, en la base de datos consultada, no se registran datos específicos sobre …"
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "result": {
+    "answer": "Según MITRE ATT&CK, las técnicas asociadas a la táctica **Collection** son:\n\n1. **T1530 — Data from Cloud Storage**: Los adversarios pueden acceder a datos almacenados en servicios de almacenamiento en la nube. Esta técnica se aplica a plataformas como IaaS, Office Suite y SaaS.\n\n2. **T1213.006 — Databases**: Los adversarios pueden aprovechar bases de datos para extraer información valiosa. Esta técnica es aplicable a plataformas como Linux, Windows, macOS, IaaS y SaaS.\n\nEstas técnicas son utilizadas por los adversarios para recolectar información de interés que puede ser utilizada en etapas posteriores de un ataque.",
+    "seed_nodes": [
+      "TA0009",
+      "T1053.002",
+      "S0110"
+    ],
+    "subgraph_nodes": 40,
+    "subgraph_edges": 6,
+    "coverage": {
+      "sufficient": true,
+      "missing_entities": [],
+      "confidence": 0.85
+    },
+    "hallucination_risk": false,
+    "usage": {
+      "prompt_tokens": 2670,
+      "completion_tokens": 171,
+      "total_tokens": 2841,
+      "retrieval_latency_s": 0.007,
+      "coverage_latency_s": 1.047,
+      "synthesis_latency_s": 3.014
+    },
+    "architecture": "C_GraphRAG"
+  },
+  "metrics": {
+    "question_id": "Q085",
+    "level": 2,
+    "domain": "MITRE",
+    "architecture": "C_GraphRAG",
+    "accuracy": 0.1667,
+    "hallucination_risk": 0.0,
+    "traceability": 1.0,
+    "error_handling": 1.0,
+    "latency_s": 4.068,
+    "total_tokens": 2841,
+    "accuracy_detail": "Score=0.167 | completas=['collection'] | parciales=[] | ausentes=['TA0009', 'T1005', 'T1056', 'T1113', 'keylogging']",
+    "hallucination_detail": "Sin señales de alucinación detectadas",
+    "traceability_detail": "Markers texto: ['mitre', 'att&ck', 'según'] | Fuente estructurada: api_source=False, seed_nodes=True, sql=False",
+    "error_handling_detail": "Sin errores detectados en el pipeline",
+    "latency_detail": "retrieval=0.01s coverage=1.05s synth=3.01s",
+    "answer_preview": "Según MITRE ATT&CK, las técnicas asociadas a la táctica **Collection** son:\n\n1. **T1530 — Data from Cloud Storage**: Los adversarios pueden acceder a datos almacenados en servicios de almacenamiento en la nube. Esta técnica se aplica a plataformas como IaaS, Office Suite y SaaS.\n\n2. **T1213.006 — Da…"
+  }
+}

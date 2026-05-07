@@ -1,0 +1,48 @@
+{
+  "result": {
+    "answer": "El subgrafo proporcionado no contiene información sobre las debilidades CWE (Common Weakness Enumeration) ni sobre los CVEs (Common Vulnerabilities and Exposures) publicados en 2023. Por lo tanto, no puedo responder a la pregunta sobre cuántos CVEs publicados en 2023 tienen la debilidad CWE-416 (Use After Free).\n\nSegún MITRE ATT&CK, la información disponible se centra en tácticas, técnicas, grupos APT, mitigaciones y herramientas de ataque, pero no incluye detalles específicos sobre CVEs o debilidades CWE. \n\nSi necesitas información adicional o específica sobre otro tema relacionado con el framework MITRE ATT&CK, estaré encantado de ayudar.",
+    "seed_nodes": [
+      "T1036.006",
+      "T1027.004"
+    ],
+    "subgraph_nodes": 40,
+    "subgraph_edges": 43,
+    "coverage": {
+      "sufficient": false,
+      "missing_entities": [
+        "CVE",
+        "CWE-416",
+        "2023"
+      ],
+      "confidence": 0.2
+    },
+    "hallucination_risk": true,
+    "usage": {
+      "prompt_tokens": 2803,
+      "completion_tokens": 185,
+      "total_tokens": 2988,
+      "retrieval_latency_s": 0.009,
+      "coverage_latency_s": 1.194,
+      "synthesis_latency_s": 3.156
+    },
+    "architecture": "C_GraphRAG"
+  },
+  "metrics": {
+    "question_id": "Q062",
+    "level": 1,
+    "domain": "NVD",
+    "architecture": "C_GraphRAG",
+    "accuracy": 1.0,
+    "hallucination_risk": 0.7,
+    "traceability": 1.0,
+    "error_handling": 1.0,
+    "latency_s": 4.359,
+    "total_tokens": 2988,
+    "accuracy_detail": "Score=1.000 | completas=['CWE-416', 'use after free', '2023'] | parciales=[] | ausentes=[]",
+    "hallucination_detail": "Flag de riesgo activo (sin datos de fuente verificados)",
+    "traceability_detail": "Markers texto: ['mitre', 'att&ck', 'según'] | Fuente estructurada: api_source=False, seed_nodes=True, sql=False",
+    "error_handling_detail": "Sin errores detectados en el pipeline",
+    "latency_detail": "retrieval=0.01s coverage=1.19s synth=3.16s",
+    "answer_preview": "El subgrafo proporcionado no contiene información sobre las debilidades CWE (Common Weakness Enumeration) ni sobre los CVEs (Common Vulnerabilities and Exposures) publicados en 2023. Por lo tanto, no puedo responder a la pregunta sobre cuántos CVEs publicados en 2023 tienen la debilidad CWE-416 (Use…"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "result": {
+    "answer": "Los datos provienen de la base de datos NVD/NIST. Según los resultados obtenidos, la táctica MITRE ATT&CK T1041, denominada \"Exfiltration Over C2 Channel\", se clasifica dentro de la categoría de táctica \"Exfiltration\". Esto indica que esta técnica se utiliza para la extracción de datos a través de un canal de comando y control (C2).",
+    "sql": "SELECT 'T1041' AS tactic_id, 'Exfiltration Over C2 Channel' AS tactic_name, 'Exfiltration' AS tactic_category;",
+    "sql_rows": 1,
+    "correction_attempts": 0,
+    "sql_error": null,
+    "api_fallback": null,
+    "hallucination_risk": false,
+    "usage": {
+      "prompt_tokens": 2971,
+      "completion_tokens": 194,
+      "total_tokens": 3165,
+      "schema_linking_latency_s": 1.756,
+      "sql_generation_latency_s": 1.131,
+      "self_correction_latency_s": 0,
+      "synthesis_latency_s": 2.445
+    },
+    "architecture": "A_Text2SQL"
+  },
+  "metrics": {
+    "question_id": "Q070",
+    "level": 1,
+    "domain": "MITRE",
+    "architecture": "A_Text2SQL",
+    "accuracy": 0.734,
+    "hallucination_risk": 0.0,
+    "traceability": 1.0,
+    "error_handling": 1.0,
+    "latency_s": 5.332,
+    "total_tokens": 3165,
+    "accuracy_detail": "Score=0.734 | completas=['exfiltration', 'T1041', 'C2'] | parciales=['command and control(67%)'] | ausentes=['TA0010']",
+    "hallucination_detail": "Sin señales de alucinación detectadas",
+    "traceability_detail": "Markers texto: ['nvd', 'nist', 'mitre'] | Fuente estructurada: api_source=False, seed_nodes=False, sql=True",
+    "error_handling_detail": "Sin errores detectados en el pipeline",
+    "latency_detail": "linking=1.76s sql=1.13s corr=0.00s synth=2.44s",
+    "answer_preview": "Los datos provienen de la base de datos NVD/NIST. Según los resultados obtenidos, la táctica MITRE ATT&CK T1041, denominada \"Exfiltration Over C2 Channel\", se clasifica dentro de la categoría de táctica \"Exfiltration\". Esto indica que esta técnica se utiliza para la extracción de datos a través de u…"
+  }
+}

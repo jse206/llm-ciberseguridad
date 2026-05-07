@@ -1,0 +1,48 @@
+{
+  "result": {
+    "answer": "Según MITRE ATT&CK, existen varias mitigaciones para la técnica T1078 (Valid Accounts) que pueden ayudar a prevenir el abuso de credenciales de cuentas existentes. Estas mitigaciones incluyen:\n\n1. **Gestión de Cuentas Privilegiadas (M1026)**: Esta mitigación se centra en implementar políticas, controles y herramientas para gestionar de manera segura las cuentas privilegiadas, como las cuentas de administrador. Esto incluye restringir el acceso a estas cuentas y monitorear su uso para detectar actividades sospechosas.\n\n2. **Políticas de Uso de Cuentas (M1036)**: Estas políticas ayudan a mitigar el acceso no autorizado configurando y haciendo cumplir reglas sobre cómo y cuándo se pueden utilizar las cuentas. Esto puede incluir mecanismos de bloqueo de cuentas y la revisión regular de los accesos.\n\n3. **Autenticación Multifactor (M1032)**: La implementación de MFA mejora la seguridad al requerir que los usuarios proporcionen al menos dos formas de verificación para probar su identidad antes de otorgar acceso. Esto dificulta que un atacante que haya obtenido credenciales pueda acceder a las cuentas.\n\n4. **Políticas de Contraseñas (M1027)**: Establecer y hacer cumplir políticas de contraseñas seguras reduce la probabilidad de acceso no autorizado. Las políticas de contraseñas fuertes incluyen la complejidad de las contraseñas y la obligación de cambiarlas regularmente.\n\n5. **Gestión de Cuentas de Usuario (M1018)**: Esta mitigación implica implementar y hacer cumplir políticas para el ciclo de vida de las cuentas de usuario, incluyendo su creación, modificación y desactivación. Una gestión adecuada de cuentas puede reducir la superficie de ataque.\n\nEstas mitigaciones son esenciales para proteger las cuentas de usuario y minimizar el riesgo de que sean comprometidas y utilizadas por adversarios. Implementar una combinación de estas estrategias puede fortalecer significativamente la postura de seguridad de una organización frente a la técnica T1078.\n\nEn resumen, las mitigaciones para la técnica T1078 incluyen la gestión de cuentas privilegiadas, políticas de uso de cuentas, autenticación multifactor, políticas de contraseñas y gestión de cuentas de usuario.",
+    "seed_nodes": [
+      "T1078",
+      "S0066"
+    ],
+    "subgraph_nodes": 40,
+    "subgraph_edges": 76,
+    "coverage": {
+      "sufficient": false,
+      "missing_entities": [
+        "mitigaciones",
+        "técnica T1078",
+        "S0066"
+      ],
+      "confidence": 0.4
+    },
+    "hallucination_risk": true,
+    "usage": {
+      "prompt_tokens": 2744,
+      "completion_tokens": 488,
+      "total_tokens": 3232,
+      "retrieval_latency_s": 0.007,
+      "coverage_latency_s": 1.622,
+      "synthesis_latency_s": 12.083
+    },
+    "architecture": "C_GraphRAG"
+  },
+  "metrics": {
+    "question_id": "Q016",
+    "level": 1,
+    "domain": "MITRE",
+    "architecture": "C_GraphRAG",
+    "accuracy": 0.5,
+    "hallucination_risk": 0.7,
+    "traceability": 1.0,
+    "error_handling": 1.0,
+    "latency_s": 13.712,
+    "total_tokens": 3232,
+    "accuracy_detail": "Score=0.500 | completas=['MFA', 'M1032', 'M1027'] | parciales=[] | ausentes=['multi-factor', 'privileged', 'password']",
+    "hallucination_detail": "Flag de riesgo activo (sin datos de fuente verificados)",
+    "traceability_detail": "Markers texto: ['nist', 'mitre', 'att&ck'] | Fuente estructurada: api_source=False, seed_nodes=True, sql=False",
+    "error_handling_detail": "Sin errores detectados en el pipeline",
+    "latency_detail": "retrieval=0.01s coverage=1.62s synth=12.08s",
+    "answer_preview": "Según MITRE ATT&CK, existen varias mitigaciones para la técnica T1078 (Valid Accounts) que pueden ayudar a prevenir el abuso de credenciales de cuentas existentes. Estas mitigaciones incluyen:\n\n1. **Gestión de Cuentas Privilegiadas (M1026)**: Esta mitigación se centra en implementar políticas, contr…"
+  }
+}

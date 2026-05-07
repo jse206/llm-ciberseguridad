@@ -1,0 +1,39 @@
+{
+  "result": {
+    "answer": "Los resultados de la consulta SQL ejecutada contra la base de datos NVD/CVE no arrojaron ningún resultado relacionado con la técnica T1486 (Data Encrypted for Impact). Esto indica que no se encontraron entradas en la base de datos NVD/NIST que contengan información específica sobre esta técnica.\n\nEs importante mencionar que la técnica T1486 se refiere a la táctica de \"Impacto\" dentro del marco de MITRE ATT&CK, donde se describe cómo los atacantes pueden cifrar datos para causar daño o interrupción a las operaciones de una organización. Sin embargo, esta información no se encuentra reflejada en los resultados de la consulta.\n\nSi necesitas más información sobre la técnica T1486 o su contexto dentro de la ciberseguridad, te recomendaría consultar directamente la base de datos de MITRE ATT&CK o fuentes adicionales especializadas en ciberseguridad.",
+    "sql": "SELECT cve.cve_id, cve.description \nFROM cve \nWHERE cve.description LIKE '%T1486%'",
+    "sql_rows": 0,
+    "correction_attempts": 0,
+    "sql_error": null,
+    "api_fallback": null,
+    "hallucination_risk": false,
+    "usage": {
+      "prompt_tokens": 2956,
+      "completion_tokens": 319,
+      "total_tokens": 3275,
+      "schema_linking_latency_s": 2.556,
+      "sql_generation_latency_s": 0.927,
+      "self_correction_latency_s": 0,
+      "synthesis_latency_s": 5.897
+    },
+    "architecture": "A_Text2SQL"
+  },
+  "metrics": {
+    "question_id": "Q015",
+    "level": 1,
+    "domain": "MITRE",
+    "architecture": "A_Text2SQL",
+    "accuracy": 0.8,
+    "hallucination_risk": 0.0,
+    "traceability": 1.0,
+    "error_handling": 1.0,
+    "latency_s": 9.38,
+    "total_tokens": 3275,
+    "accuracy_detail": "Score=0.800 | completas=['impact', 'impacto', 'T1486', 'encrypted'] | parciales=[] | ausentes=['ransomware']",
+    "hallucination_detail": "Sin señales de alucinación detectadas",
+    "traceability_detail": "Markers texto: ['nvd', 'nist', 'mitre'] | Fuente estructurada: api_source=False, seed_nodes=False, sql=True",
+    "error_handling_detail": "Sin errores detectados en el pipeline",
+    "latency_detail": "linking=2.56s sql=0.93s corr=0.00s synth=5.90s",
+    "answer_preview": "Los resultados de la consulta SQL ejecutada contra la base de datos NVD/CVE no arrojaron ningún resultado relacionado con la técnica T1486 (Data Encrypted for Impact). Esto indica que no se encontraron entradas en la base de datos NVD/NIST que contengan información específica sobre esta técnica.\n\nEs…"
+  }
+}

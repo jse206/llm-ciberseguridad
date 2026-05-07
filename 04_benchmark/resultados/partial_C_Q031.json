@@ -1,0 +1,49 @@
+{
+  "result": {
+    "answer": "Según MITRE ATT&CK, APT28, también conocido como Sofacy, utiliza varias técnicas en sus operaciones. Algunas de las técnicas relevantes que emplea incluyen:\n\n1. **T1110 - Brute Force**: APT28 puede utilizar técnicas de fuerza bruta para acceder a cuentas cuando no tiene conocimiento previo de las credenciales (Táctica: credential-access).\n2. **T1039 - Data from Network Shared Drive**: Esta técnica permite a APT28 buscar en unidades compartidas de red para encontrar archivos de interés, lo que puede incluir datos sensibles (Táctica: collection).\n3. **T1071.001 - Web Protocols**: Utiliza protocolos de aplicación asociados con el tráfico web para comunicarse y evitar la detección (Táctica: command-and-control).\n4. **T1102.002 - Bidirectional Communication**: APT28 puede usar servicios web legítimos para enviar comandos y recibir datos de sistemas comprometidos (Táctica: command-and-control).\n5. **T1595.002 - Vulnerability Scanning**: Realiza escaneos de vulnerabilidades para identificar posibles objetivos (Táctica: reconnaissance).\n6. **T1074.001 - Local Data Staging**: APT28 puede recopilar datos y almacenarlos en una ubicación central en el sistema local antes de la exfiltración (Táctica: collection).\n\nEn cuanto a las técnicas relacionadas específicamente con la exfiltración de datos, se destacan:\n\n- **T1039 - Data from Network Shared Drive**: Esta técnica es crucial para la recopilación de datos antes de su exfiltración.\n- **T1074.001 - Local Data Staging**: Permite a APT28 preparar los datos recopilados para su posterior exfiltración.\n\nAdemás, APT28 utiliza herramientas como **JHUHUGIT** (S0044) y **USBStealer** (S0136) para facilitar la recolección y exfiltración de información. USBStealer, en particular, se ha utilizado para extraer información de redes aisladas.\n\nEn resumen, APT28 emplea diversas técnicas para acceder, recopilar y exfiltrar datos, destacándose en el uso de técnicas de recopilación y preparación de datos para la exfiltración.",
+    "seed_nodes": [
+      "G0007",
+      "T1053.002",
+      "S0110"
+    ],
+    "subgraph_nodes": 40,
+    "subgraph_edges": 34,
+    "coverage": {
+      "sufficient": false,
+      "missing_entities": [
+        "APT28",
+        "exfiltración de datos",
+        "técnicas específicas"
+      ],
+      "confidence": 0.4
+    },
+    "hallucination_risk": true,
+    "usage": {
+      "prompt_tokens": 2763,
+      "completion_tokens": 522,
+      "total_tokens": 3285,
+      "retrieval_latency_s": 0.01,
+      "coverage_latency_s": 1.421,
+      "synthesis_latency_s": 8.703
+    },
+    "architecture": "C_GraphRAG"
+  },
+  "metrics": {
+    "question_id": "Q031",
+    "level": 2,
+    "domain": "MITRE",
+    "architecture": "C_GraphRAG",
+    "accuracy": 0.2,
+    "hallucination_risk": 0.7,
+    "traceability": 1.0,
+    "error_handling": 1.0,
+    "latency_s": 10.134,
+    "total_tokens": 3285,
+    "accuracy_detail": "Score=0.200 | completas=['APT28'] | parciales=[] | ausentes=['exfiltration', 'T1041', 'fancy bear', 'russia']",
+    "hallucination_detail": "Flag de riesgo activo (sin datos de fuente verificados)",
+    "traceability_detail": "Markers texto: ['mitre', 'att&ck', 'según'] | Fuente estructurada: api_source=False, seed_nodes=True, sql=False",
+    "error_handling_detail": "Sin errores detectados en el pipeline",
+    "latency_detail": "retrieval=0.01s coverage=1.42s synth=8.70s",
+    "answer_preview": "Según MITRE ATT&CK, APT28, también conocido como Sofacy, utiliza varias técnicas en sus operaciones. Algunas de las técnicas relevantes que emplea incluyen:\n\n1. **T1110 - Brute Force**: APT28 puede utilizar técnicas de fuerza bruta para acceder a cuentas cuando no tiene conocimiento previo de las cr…"
+  }
+}

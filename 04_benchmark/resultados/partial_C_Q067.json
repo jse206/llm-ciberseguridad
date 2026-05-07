@@ -1,0 +1,49 @@
+{
+  "result": {
+    "answer": "La técnica T1005 (Data from Local System) se clasifica dentro de la táctica de **Exfiltración** en el framework MITRE ATT&CK. Esta técnica se refiere a la recopilación de datos desde el sistema local de la víctima, lo que puede incluir archivos, credenciales y otra información sensible que los atacantes buscan extraer para sus fines maliciosos.\n\nSegún MITRE ATT&CK, la exfiltración es una etapa crítica en el ciclo de vida de un ataque, donde los adversarios intentan obtener y transferir datos valiosos fuera de la red comprometida. La técnica T1005 es un método común utilizado por diversos grupos de amenazas para llevar a cabo esta actividad.\n\nSi necesitas más información sobre esta técnica o su aplicación en contextos específicos, no dudes en preguntar.",
+    "seed_nodes": [
+      "T1005",
+      "T1053.002",
+      "S0110",
+      "T1680",
+      "T1602"
+    ],
+    "subgraph_nodes": 40,
+    "subgraph_edges": 1,
+    "coverage": {
+      "sufficient": false,
+      "missing_entities": [
+        "táctica MITRE ATT&CK"
+      ],
+      "confidence": 0.3
+    },
+    "hallucination_risk": true,
+    "usage": {
+      "prompt_tokens": 3030,
+      "completion_tokens": 203,
+      "total_tokens": 3233,
+      "retrieval_latency_s": 0.008,
+      "coverage_latency_s": 1.118,
+      "synthesis_latency_s": 3.296
+    },
+    "architecture": "C_GraphRAG"
+  },
+  "metrics": {
+    "question_id": "Q067",
+    "level": 1,
+    "domain": "MITRE",
+    "architecture": "C_GraphRAG",
+    "accuracy": 0.6,
+    "hallucination_risk": 0.7,
+    "traceability": 1.0,
+    "error_handling": 1.0,
+    "latency_s": 4.422,
+    "total_tokens": 3233,
+    "accuracy_detail": "Score=0.600 | completas=['T1005', 'datos', 'local system'] | parciales=[] | ausentes=['collection', 'TA0009']",
+    "hallucination_detail": "Flag de riesgo activo (sin datos de fuente verificados)",
+    "traceability_detail": "Markers texto: ['mitre', 'att&ck', 'según'] | Fuente estructurada: api_source=False, seed_nodes=True, sql=False",
+    "error_handling_detail": "Sin errores detectados en el pipeline",
+    "latency_detail": "retrieval=0.01s coverage=1.12s synth=3.30s",
+    "answer_preview": "La técnica T1005 (Data from Local System) se clasifica dentro de la táctica de **Exfiltración** en el framework MITRE ATT&CK. Esta técnica se refiere a la recopilación de datos desde el sistema local de la víctima, lo que puede incluir archivos, credenciales y otra información sensible que los ataca…"
+  }
+}

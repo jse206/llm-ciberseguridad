@@ -1,0 +1,49 @@
+{
+  "result": {
+    "answer": "La técnica T1486, conocida como \"Data Encrypted for Impact\", se encuentra en la táctica de \"Impact\" según el framework MITRE ATT&CK. Esta técnica implica que los adversarios pueden cifrar datos en sistemas objetivo o en un gran número de sistemas dentro de una red para interrumpir la disponibilidad de los recursos del sistema y la red, intentando hacer que los datos almacenados sean inaccesibles.\n\nSegún MITRE ATT&CK, la táctica de \"Impact\" se refiere a acciones que buscan afectar la disponibilidad de los sistemas y datos, lo que se alinea con el propósito de la técnica T1486. \n\nPara más información, puedes consultar la técnica T1486 en el sitio oficial de MITRE ATT&CK.",
+    "seed_nodes": [
+      "T1486",
+      "TA0040",
+      "T1053.002",
+      "S0110",
+      "T1573"
+    ],
+    "subgraph_nodes": 40,
+    "subgraph_edges": 38,
+    "coverage": {
+      "sufficient": false,
+      "missing_entities": [
+        "táctica correspondiente a T1486"
+      ],
+      "confidence": 0.6
+    },
+    "hallucination_risk": true,
+    "usage": {
+      "prompt_tokens": 3053,
+      "completion_tokens": 190,
+      "total_tokens": 3243,
+      "retrieval_latency_s": 0.011,
+      "coverage_latency_s": 1.191,
+      "synthesis_latency_s": 3.585
+    },
+    "architecture": "C_GraphRAG"
+  },
+  "metrics": {
+    "question_id": "Q015",
+    "level": 1,
+    "domain": "MITRE",
+    "architecture": "C_GraphRAG",
+    "accuracy": 0.6,
+    "hallucination_risk": 0.7,
+    "traceability": 1.0,
+    "error_handling": 1.0,
+    "latency_s": 4.787,
+    "total_tokens": 3243,
+    "accuracy_detail": "Score=0.600 | completas=['impact', 'T1486', 'encrypted'] | parciales=[] | ausentes=['impacto', 'ransomware']",
+    "hallucination_detail": "Flag de riesgo activo (sin datos de fuente verificados)",
+    "traceability_detail": "Markers texto: ['mitre', 'att&ck', 'según'] | Fuente estructurada: api_source=False, seed_nodes=True, sql=False",
+    "error_handling_detail": "Sin errores detectados en el pipeline",
+    "latency_detail": "retrieval=0.01s coverage=1.19s synth=3.58s",
+    "answer_preview": "La técnica T1486, conocida como \"Data Encrypted for Impact\", se encuentra en la táctica de \"Impact\" según el framework MITRE ATT&CK. Esta técnica implica que los adversarios pueden cifrar datos en sistemas objetivo o en un gran número de sistemas dentro de una red para interrumpir la disponibilidad …"
+  }
+}

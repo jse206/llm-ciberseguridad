@@ -1,0 +1,39 @@
+{
+  "result": {
+    "answer": "El score CVSS v3 para CVE-2022-22965 (conocido como Spring4Shell) es 9.8. Esta información proviene de la base de datos NVD/NIST.",
+    "sql": "SELECT cvss_v3_score FROM cve WHERE cve_id = 'CVE-2022-22965';",
+    "sql_rows": 1,
+    "correction_attempts": 0,
+    "sql_error": null,
+    "api_fallback": null,
+    "hallucination_risk": false,
+    "usage": {
+      "prompt_tokens": 2941,
+      "completion_tokens": 153,
+      "total_tokens": 3094,
+      "schema_linking_latency_s": 2.437,
+      "sql_generation_latency_s": 1.235,
+      "self_correction_latency_s": 0,
+      "synthesis_latency_s": 1.625
+    },
+    "architecture": "A_Text2SQL"
+  },
+  "metrics": {
+    "question_id": "Q054",
+    "level": 1,
+    "domain": "NVD",
+    "architecture": "A_Text2SQL",
+    "accuracy": 0.3333,
+    "hallucination_risk": 0.0,
+    "traceability": 1.0,
+    "error_handling": 1.0,
+    "latency_s": 5.297,
+    "total_tokens": 3094,
+    "accuracy_detail": "Score=0.333 | completas=['9.8', 'spring'] | parciales=[] | ausentes=['critical', 'java', 'RCE', 'remote code execution']",
+    "hallucination_detail": "Sin señales de alucinación detectadas",
+    "traceability_detail": "Markers texto: ['nvd', 'nist', 'base de datos'] | Fuente estructurada: api_source=False, seed_nodes=False, sql=True",
+    "error_handling_detail": "Sin errores detectados en el pipeline",
+    "latency_detail": "linking=2.44s sql=1.24s corr=0.00s synth=1.62s",
+    "answer_preview": "El score CVSS v3 para CVE-2022-22965 (conocido como Spring4Shell) es 9.8. Esta información proviene de la base de datos NVD/NIST."
+  }
+}

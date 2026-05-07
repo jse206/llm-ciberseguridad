@@ -1,0 +1,41 @@
+{
+  "result": {
+    "answer": "No se encontró información relevante en el grafo MITRE ATT&CK para responder a tu pregunta sobre el score CVSS v3 de CVE-2023-20198 (Cisco IOS XE). \n\nEl sistema MITRE ATT&CK se centra en técnicas de ataque, grupos APT, tácticas, mitigaciones y herramientas relacionadas con la ciberseguridad. Si tienes preguntas sobre alguna de estas áreas, estaré encantado de ayudarte.",
+    "seed_nodes": [],
+    "subgraph_nodes": 0,
+    "subgraph_edges": 0,
+    "coverage": {
+      "sufficient": false,
+      "missing_entities": [],
+      "confidence": 0.0
+    },
+    "hallucination_risk": true,
+    "usage": {
+      "prompt_tokens": 147,
+      "completion_tokens": 90,
+      "total_tokens": 237,
+      "retrieval_latency_s": 0.015,
+      "coverage_latency_s": 0,
+      "synthesis_latency_s": 2.19
+    },
+    "architecture": "C_GraphRAG"
+  },
+  "metrics": {
+    "question_id": "Q055",
+    "level": 1,
+    "domain": "NVD",
+    "architecture": "C_GraphRAG",
+    "accuracy": 0.3333,
+    "hallucination_risk": 0.7,
+    "traceability": 0.5,
+    "error_handling": 1.0,
+    "latency_s": 2.205,
+    "total_tokens": 237,
+    "accuracy_detail": "Score=0.333 | completas=['cisco', 'ios xe'] | parciales=[] | ausentes=['10.0', 'critical', 'web ui', 'privilege']",
+    "hallucination_detail": "Flag de riesgo activo (sin datos de fuente verificados)",
+    "traceability_detail": "Markers texto: ['mitre', 'att&ck', 'grafo'] | Fuente estructurada: api_source=False, seed_nodes=False, sql=False",
+    "error_handling_detail": "Sin errores detectados en el pipeline",
+    "latency_detail": "retrieval=0.01s coverage=0.00s synth=2.19s",
+    "answer_preview": "No se encontró información relevante en el grafo MITRE ATT&CK para responder a tu pregunta sobre el score CVSS v3 de CVE-2023-20198 (Cisco IOS XE). \n\nEl sistema MITRE ATT&CK se centra en técnicas de ataque, grupos APT, tácticas, mitigaciones y herramientas relacionadas con la ciberseguridad. Si tien…"
+  }
+}

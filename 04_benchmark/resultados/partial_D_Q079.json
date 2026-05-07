@@ -1,0 +1,73 @@
+{
+  "result": {
+    "answer": "Las técnicas de MITRE ATT&CK asociadas a la táctica de Persistence incluyen:\n\n1. **T1547.012 - Print Processors**: Los adversarios pueden abusar de los procesadores de impresión para ejecutar DLLs maliciosas durante el arranque del sistema, lo que permite la persistencia y/o escalada de privilegios. (Plataformas: Windows)\n\n2. **T1525 - Implant Internal Image**: Los adversarios pueden implantar imágenes de nube o contenedores con código malicioso para establecer persistencia después de haber accedido a un entorno. (Plataformas: IaaS, Contenedores)\n\n3. **T1556.005 - Reversible Encryption**: Un adversario puede abusar de las propiedades de cifrado de autenticación de Active Directory para acceder a credenciales en sistemas Windows. (Plataformas: Windows)\n\n4. **T1546.013 - PowerShell Profile**: Los adversarios pueden obtener persistencia y elevar privilegios ejecutando contenido malicioso activado por perfiles de PowerShell. (Plataformas: Windows)\n\nEstas técnicas son utilizadas por los adversarios para mantener su acceso a los sistemas a través de reinicios, cambios de credenciales y otras interrupciones.\n\n**Fuentes consultadas:** query_mitre_graph",
+    "steps": [
+      {
+        "thought": "",
+        "action": "query_mitre_graph",
+        "action_input": {
+          "question": "¿Qué técnicas están asociadas a la táctica Persistence?"
+        },
+        "observation_preview": "{\n  \"context\": \"=== SUBGRAFO MITRE ATT&CK ===\\n\\n--- Entidades recuperadas ---\\n★ [x-mitre-tactic] TA0003 — Persistence\\n     The adversary is trying to maintain their foothold.\\n\\nPersistence consists of techniques that adversaries use to keep access to systems across restarts, changed credentials,…"
+      },
+      {
+        "thought": "",
+        "action": "query_mitre_graph",
+        "action_input": {
+          "question": "Lista las técnicas asociadas a la táctica de Persistence (TA0003) en MITRE ATT&CK."
+        },
+        "observation_preview": "{\n  \"context\": \"=== SUBGRAFO MITRE ATT&CK ===\\n\\n--- Entidades recuperadas ---\\n  [attack-pattern] T1547.012 — Print Processors\\n     Adversaries may abuse print processors to run malicious DLLs during system boot for persistence and/or privilege escalation. Print processors are DLLs that are loaded…"
+      },
+      {
+        "thought": "",
+        "action": "query_mitre_graph",
+        "action_input": {
+          "question": "¿Cuáles son todas las técnicas de MITRE ATT&CK asociadas a la táctica de Persistence?"
+        },
+        "observation_preview": "{\n  \"context\": \"=== SUBGRAFO MITRE ATT&CK ===\\n\\n--- Entidades recuperadas ---\\n  [attack-pattern] T1570 — Lateral Tool Transfer\\n     Adversaries may transfer tools or other files between systems in a compromised environment. Once brought into the victim environment (i.e., [Ingress Tool Transfer](h…"
+      },
+      {
+        "thought": "",
+        "action": "query_mitre_graph",
+        "action_input": {
+          "question": "¿Cuáles son todas las técnicas de MITRE ATT&CK asociadas a la táctica de Persistence?"
+        },
+        "observation_preview": "{\n  \"context\": \"=== SUBGRAFO MITRE ATT&CK ===\\n\\n--- Entidades recuperadas ---\\n  [attack-pattern] T1570 — Lateral Tool Transfer\\n     Adversaries may transfer tools or other files between systems in a compromised environment. Once brought into the victim environment (i.e., [Ingress Tool Transfer](h…"
+      }
+    ],
+    "tools_used": [
+      "query_mitre_graph",
+      "query_mitre_graph",
+      "query_mitre_graph",
+      "query_mitre_graph"
+    ],
+    "iterations": 4,
+    "forced_final": false,
+    "hallucination_risk": false,
+    "usage": {
+      "prompt_tokens": 9767,
+      "completion_tokens": 656,
+      "total_tokens": 10423,
+      "total_latency_s": 12.283
+    },
+    "architecture": "D_Toolformer"
+  },
+  "metrics": {
+    "question_id": "Q079",
+    "level": 2,
+    "domain": "MITRE",
+    "architecture": "D_Toolformer",
+    "accuracy": 0.3333,
+    "hallucination_risk": 0.0,
+    "traceability": 0.5,
+    "error_handling": 1.0,
+    "latency_s": 12.283,
+    "total_tokens": 10423,
+    "accuracy_detail": "Score=0.333 | completas=['persistence', 'T1547'] | parciales=[] | ausentes=['TA0003', 'T1078', 'T1053', 'scheduled task']",
+    "hallucination_detail": "Sin señales de alucinación detectadas",
+    "traceability_detail": "Markers texto: ['mitre', 'att&ck', 'fuente'] | Fuente estructurada: api_source=False, seed_nodes=False, sql=False",
+    "error_handling_detail": "Sin errores detectados en el pipeline",
+    "latency_detail": "total_react=12.28s iterations=4",
+    "answer_preview": "Las técnicas de MITRE ATT&CK asociadas a la táctica de Persistence incluyen:\n\n1. **T1547.012 - Print Processors**: Los adversarios pueden abusar de los procesadores de impresión para ejecutar DLLs maliciosas durante el arranque del sistema, lo que permite la persistencia y/o escalada de privilegios.…"
+  }
+}

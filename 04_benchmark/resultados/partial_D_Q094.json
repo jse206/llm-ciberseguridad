@@ -1,0 +1,82 @@
+{
+  "result": {
+    "answer": "Para una organización que enfrenta campañas de phishing (T1566) que explotan vulnerabilidades en Microsoft Office, se recomiendan las siguientes estrategias defensivas:\n\n1. **Gestión de Cuentas Privilegiadas (M1026)**: Implementar políticas y controles para gestionar de manera segura las cuentas privilegiadas. Esto incluye restringir el acceso a cuentas administrativas y asegurar que solo el personal autorizado tenga acceso a sistemas críticos.\n\n2. **Restricción de Contenido Web (M1021)**: Establecer políticas que limiten el acceso a sitios web potencialmente maliciosos. Esto puede incluir el uso de filtros de contenido y tecnologías de seguridad que bloqueen descargas no autorizadas y comportamientos de navegador inseguros.\n\n3. **Capacitación y Concienciación del Usuario**: Educar a los empleados sobre los riesgos del phishing y cómo identificar correos electrónicos sospechosos. Esto incluye no abrir adjuntos de fuentes desconocidas y verificar la autenticidad de los mensajes antes de actuar.\n\n4. **Implementación de Soluciones de Seguridad**: Utilizar software de seguridad que incluya protección contra malware y análisis de comportamiento para detectar y bloquear intentos de phishing antes de que puedan causar daño.\n\nEstas medidas, combinadas con un enfoque proactivo en la ciberseguridad, pueden ayudar a mitigar el riesgo de ataques de phishing y proteger la infraestructura de la organización.\n\n**Fuentes consultadas:** query_mitre_graph",
+    "steps": [
+      {
+        "thought": "",
+        "action": "query_mitre_graph",
+        "action_input": {
+          "question": "¿Qué mitigaciones cubre T1566 Phishing?"
+        },
+        "observation_preview": "{\n  \"context\": \"=== SUBGRAFO MITRE ATT&CK ===\\n\\n--- Entidades recuperadas ---\\n  [attack-pattern] T1587 — Develop Capabilities\\n     Adversaries may build capabilities that can be used during targeting. Rather than purchasing, freely downloading, or stealing capabilities, adversaries may develop th…"
+      },
+      {
+        "thought": "",
+        "action": "query_mitre_graph",
+        "action_input": {
+          "question": "¿Qué mitigaciones se recomiendan para la técnica T1566 Phishing?"
+        },
+        "observation_preview": "{\n  \"context\": \"=== SUBGRAFO MITRE ATT&CK ===\\n\\n--- Entidades recuperadas ---\\n  [attack-pattern] T1525 — Implant Internal Image\\n     Adversaries may implant cloud or container images with malicious code to establish persistence after gaining access to an environment. Amazon Web Services (AWS) Ama…"
+      },
+      {
+        "thought": "",
+        "action": "query_mitre_graph",
+        "action_input": {
+          "question": "¿Cuáles son las mitigaciones generales para ataques de phishing?"
+        },
+        "observation_preview": "{\n  \"context\": \"=== SUBGRAFO MITRE ATT&CK ===\\n\\n--- Entidades recuperadas ---\\n  [attack-pattern] T1547.012 — Print Processors\\n     Adversaries may abuse print processors to run malicious DLLs during system boot for persistence and/or privilege escalation. Print processors are DLLs that are loaded…"
+      },
+      {
+        "thought": "",
+        "action": "query_mitre_graph",
+        "action_input": {
+          "question": "¿Cuáles son las mitigaciones recomendadas para ataques de phishing en general?"
+        },
+        "observation_preview": "{\n  \"context\": \"=== SUBGRAFO MITRE ATT&CK ===\\n\\n--- Entidades recuperadas ---\\n  [attack-pattern] T1566.002 — Spearphishing Link\\n     Adversaries may send spearphishing emails with a malicious link in an attempt to gain access to victim systems. Spearphishing with a link is a specific variant of s…"
+      },
+      {
+        "thought": "",
+        "action": "query_mitre_graph",
+        "action_input": {
+          "question": "¿Cuáles son las mitigaciones específicas para T1566 Phishing?"
+        },
+        "observation_preview": "{\n  \"context\": \"=== SUBGRAFO MITRE ATT&CK ===\\n\\n--- Entidades recuperadas ---\\n  [attack-pattern] T1525 — Implant Internal Image\\n     Adversaries may implant cloud or container images with malicious code to establish persistence after gaining access to an environment. Amazon Web Services (AWS) Ama…"
+      }
+    ],
+    "tools_used": [
+      "query_mitre_graph",
+      "query_mitre_graph",
+      "query_mitre_graph",
+      "query_mitre_graph",
+      "query_mitre_graph"
+    ],
+    "iterations": 5,
+    "forced_final": false,
+    "hallucination_risk": false,
+    "usage": {
+      "prompt_tokens": 17811,
+      "completion_tokens": 825,
+      "total_tokens": 18636,
+      "total_latency_s": 20.171
+    },
+    "architecture": "D_Toolformer"
+  },
+  "metrics": {
+    "question_id": "Q094",
+    "level": 3,
+    "domain": "BOTH",
+    "architecture": "D_Toolformer",
+    "accuracy": 0.375,
+    "hallucination_risk": 0.0,
+    "traceability": 0.5,
+    "error_handling": 1.0,
+    "latency_s": 20.171,
+    "total_tokens": 18636,
+    "accuracy_detail": "Score=0.375 | completas=['T1566', 'phishing', 'office'] | parciales=[] | ausentes=['CVE', 'M1049', 'email filtering', 'sandbox', 'parche']",
+    "hallucination_detail": "Sin señales de alucinación detectadas",
+    "traceability_detail": "Markers texto: ['nist', 'mitre', 'fuente'] | Fuente estructurada: api_source=False, seed_nodes=False, sql=False",
+    "error_handling_detail": "Sin errores detectados en el pipeline",
+    "latency_detail": "total_react=20.17s iterations=5",
+    "answer_preview": "Para una organización que enfrenta campañas de phishing (T1566) que explotan vulnerabilidades en Microsoft Office, se recomiendan las siguientes estrategias defensivas:\n\n1. **Gestión de Cuentas Privilegiadas (M1026)**: Implementar políticas y controles para gestionar de manera segura las cuentas pri…"
+  }
+}

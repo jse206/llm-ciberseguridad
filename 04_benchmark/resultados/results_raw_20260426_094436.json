@@ -1,0 +1,1052 @@
+[
+  {
+    "question_id": "Q001",
+    "architecture": "B",
+    "result": {
+      "answer": "La vulnerabilidad CVE-2021-44228, también conocida como la vulnerabilidad de ejecución remota de código en Apache Log4j2, tiene un score CVSS v3 de **10.0**, lo que la clasifica como **CRÍTICA**. \n\nEste score se desglosa de la siguiente manera:\n- **Vector de ataque (AV)**: NETWORK (red)\n- **Complejidad del ataque (AC)**: LOW (baja)\n- **Privilegios requeridos (PR)**: NONE (ninguno)\n- **Interacción del usuario (UI)**: NONE (ninguna)\n- **Alcance (S)**: CHANGED (cambiado)\n- **Impacto en la confidencialidad (C)**: HIGH (alto)\n- **Impacto en la integridad (I)**: HIGH (alto)\n- **Impacto en la disponibilidad (A)**: HIGH (alto)\n\nEstos datos provienen de la base de datos del NVD (National Vulnerability Database) y están disponibles en su registro para esta vulnerabilidad (fuente: NVD/NIST). \n\nLa vulnerabilidad permite a un atacante ejecutar código arbitrario en sistemas afectados, lo que representa un riesgo significativo para la seguridad de las aplicaciones que utilizan versiones vulnerables de Log4j2.",
+      "intent": "get_cve_by_id",
+      "api_source": "https://services.nvd.nist.gov/rest/json/cves/2.0?cveId=CVE-2021-44228",
+      "api_error": null,
+      "router_confidence": 0.9,
+      "usage": {
+        "prompt_tokens": 2916,
+        "completion_tokens": 313,
+        "total_tokens": 3229,
+        "router_latency_s": 3.396,
+        "api_latency_s": 1.214,
+        "synthesis_latency_s": 4.392
+      },
+      "hallucination_risk": false,
+      "architecture": "B_API"
+    }
+  },
+  {
+    "question_id": "Q002",
+    "architecture": "B",
+    "result": {
+      "answer": "La severidad CVSS v3 de la vulnerabilidad CVE-2017-0144 es **8.8**, lo que se clasifica como **ALTA**. Esta puntuación se basa en el siguiente vector de ataque: `CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H`, donde:\n\n- **AV (Attack Vector)**: NETWORK (Ataque a través de la red)\n- **AC (Attack Complexity)**: LOW (Baja complejidad de ataque)\n- **PR (Privileges Required)**: LOW (Se requieren pocos privilegios)\n- **UI (User Interaction)**: NONE (No se requiere interacción del usuario)\n- **S (Scope)**: UNCHANGED (El alcance no cambia)\n- **C (Confidentiality Impact)**: HIGH (Alto impacto en la confidencialidad)\n- **I (Integrity Impact)**: HIGH (Alto impacto en la integridad)\n- **A (Availability Impact)**: HIGH (Alto impacto en la disponibilidad)\n\nEstos datos provienen de la base de datos del NVD (National Vulnerability Database) y están disponibles en la fuente consultada: [NVD](https://services.nvd.nist.gov/rest/json/cves/2.0?cveId=CVE-2017-0144).",
+      "intent": "get_cve_by_id",
+      "api_source": "https://services.nvd.nist.gov/rest/json/cves/2.0?cveId=CVE-2017-0144",
+      "api_error": null,
+      "router_confidence": 0.9,
+      "usage": {
+        "prompt_tokens": 3086,
+        "completion_tokens": 324,
+        "total_tokens": 3410,
+        "router_latency_s": 1.224,
+        "api_latency_s": 1.329,
+        "synthesis_latency_s": 4.333
+      },
+      "hallucination_risk": false,
+      "architecture": "B_API"
+    }
+  },
+  {
+    "question_id": "Q003",
+    "architecture": "B",
+    "result": {
+      "answer": "La vulnerabilidad CVE-2023-23397 se describe como una \"Vulnerabilidad de Elevación de Privilegios en Microsoft Outlook\" (Microsoft Outlook Elevation of Privilege Vulnerability) según la información recuperada. Esta vulnerabilidad permite a un atacante elevar sus privilegios en el sistema afectado.\n\nDesde el punto de vista técnico, la vulnerabilidad tiene un puntaje CVSS de 9.8, lo que la clasifica como \"CRÍTICA\". Los detalles del vector CVSS 3.1 indican que el ataque puede realizarse a través de la red (AV:N), con una complejidad baja (AC:L), sin requerir privilegios (PR:N) ni interacción del usuario (UI:N). Además, tiene un impacto alto en la confidencialidad (C:H), integridad (I:H) y disponibilidad (A:H) del sistema afectado (NVD).\n\nLa vulnerabilidad afecta a varias versiones de Microsoft Outlook y Microsoft 365 Apps, incluyendo:\n- Microsoft 365 Apps para empresas\n- Microsoft Office 2019\n- Microsoft Office Long Term Servicing Channel 2021\n- Microsoft Outlook 2013 (SP1)\n- Microsoft Outlook 2016\n\nSe recomienda aplicar las actualizaciones según las instrucciones del proveedor para mitigar esta vulnerabilidad (CISA).\n\nPara más información, puedes consultar los siguientes enlaces:\n- [Microsoft Security Response Center](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-23397)\n- [CISA](https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2023-23397)\n\nFuente: Según NVD/NIST y Microsoft.",
+      "intent": "get_cve_by_id",
+      "api_source": "https://services.nvd.nist.gov/rest/json/cves/2.0?cveId=CVE-2023-23397",
+      "api_error": null,
+      "router_confidence": 1.0,
+      "usage": {
+        "prompt_tokens": 1911,
+        "completion_tokens": 393,
+        "total_tokens": 2304,
+        "router_latency_s": 1.296,
+        "api_latency_s": 1.095,
+        "synthesis_latency_s": 8.932
+      },
+      "hallucination_risk": false,
+      "architecture": "B_API"
+    }
+  },
+  {
+    "question_id": "Q004",
+    "architecture": "B",
+    "result": {
+      "answer": "CVE-2021-44228, también conocido como la vulnerabilidad de ejecución remota de código en Apache Log4j2, está asociada a varias debilidades del tipo CWE (Common Weakness Enumeration). Según los datos recuperados, las debilidades específicas son:\n\n1. **CWE-20**: Validación de entrada inadecuada. Esta debilidad se relaciona con la falta de protección contra entradas controladas por un atacante, lo que permite la ejecución de código malicioso.\n   \n2. **CWE-400**: Recursos de sistema insuficientes. Esto puede referirse a la forma en que la vulnerabilidad permite a un atacante consumir recursos del sistema de manera no controlada.\n\n3. **CWE-502**: Deserialización de datos no confiables. Esta debilidad se relaciona con la capacidad de un atacante para manipular datos que son deserializados por la aplicación, lo que puede llevar a la ejecución de código arbitrario.\n\n4. **CWE-917**: Uso de un recurso de sistema no confiable. Esto se refiere a la utilización de recursos que pueden ser manipulados por un atacante, lo que puede comprometer la seguridad de la aplicación.\n\nEstos CWE reflejan las fallas en la validación y manejo de entradas que permiten que un atacante ejecute código arbitrario a través de la manipulación de mensajes de registro en Log4j2 (fuente: datos recuperados de la API). \n\nEs importante que las organizaciones que utilizan versiones vulnerables de Log4j2 apliquen las actualizaciones recomendadas para mitigar estos riesgos.",
+      "intent": "get_cve_by_id",
+      "api_source": "https://services.nvd.nist.gov/rest/json/cves/2.0?cveId=CVE-2021-44228",
+      "api_error": null,
+      "router_confidence": 0.9,
+      "usage": {
+        "prompt_tokens": 2910,
+        "completion_tokens": 376,
+        "total_tokens": 3286,
+        "router_latency_s": 1.126,
+        "api_latency_s": 1.023,
+        "synthesis_latency_s": 5.622
+      },
+      "hallucination_risk": false,
+      "architecture": "B_API"
+    }
+  },
+  {
+    "question_id": "Q005",
+    "architecture": "B",
+    "result": {
+      "answer": "La vulnerabilidad CVE-2022-30190 fue publicada el 1 de junio de 2022 a las 20:15:07 UTC, según la información recuperada de la API (fuente: NVD/NIST). Esta vulnerabilidad se relaciona con una ejecución remota de código en Microsoft Windows Support Diagnostic Tool (MSDT) cuando se invoca utilizando el protocolo URL desde aplicaciones como Word. Un atacante que explote esta vulnerabilidad puede ejecutar código arbitrario con los privilegios de la aplicación que la llama (fuente: NVD/NIST).",
+      "intent": "get_cve_by_id",
+      "api_source": "https://services.nvd.nist.gov/rest/json/cves/2.0?cveId=CVE-2022-30190",
+      "api_error": null,
+      "router_confidence": 0.9,
+      "usage": {
+        "prompt_tokens": 2988,
+        "completion_tokens": 162,
+        "total_tokens": 3150,
+        "router_latency_s": 1.431,
+        "api_latency_s": 1.021,
+        "synthesis_latency_s": 2.868
+      },
+      "hallucination_risk": false,
+      "architecture": "B_API"
+    }
+  },
+  {
+    "question_id": "Q006",
+    "architecture": "B",
+    "result": {
+      "answer": "El vector CVSS v3 de la vulnerabilidad CVE-2021-26084 es el siguiente:\n\n**Vector String:** `CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H`\n\n**Detalles del vector:**\n- **Attack Vector (AV):** NETWORK (N) - La vulnerabilidad puede ser explotada a través de la red.\n- **Attack Complexity (AC):** LOW (L) - La complejidad del ataque es baja.\n- **Privileges Required (PR):** NONE (N) - No se requieren privilegios para llevar a cabo el ataque.\n- **User Interaction (UI):** NONE (N) - No se requiere interacción del usuario.\n- **Scope (S):** UNCHANGED (U) - El alcance de la vulnerabilidad no cambia.\n- **Confidentiality Impact (C):** HIGH (H) - El impacto en la confidencialidad es alto.\n- **Integrity Impact (I):** HIGH (H) - El impacto en la integridad es alto.\n- **Availability Impact (A):** HIGH (H) - El impacto en la disponibilidad es alto.\n\n**Puntuación Base:** 9.8 (CRITICAL)\n\nEstos datos indican que la vulnerabilidad permite a un atacante no autenticado ejecutar código arbitrario en instancias afectadas de Confluence Server y Data Center, lo que representa un riesgo crítico para la seguridad de los sistemas afectados (Según NVD). \n\nPara más información, puedes consultar la fuente oficial: [NVD](https://services.nvd.nist.gov/rest/json/cves/2.0?cveId=CVE-2021-26084).",
+      "intent": "get_cve_by_id",
+      "api_source": "https://services.nvd.nist.gov/rest/json/cves/2.0?cveId=CVE-2021-26084",
+      "api_error": null,
+      "router_confidence": 0.9,
+      "usage": {
+        "prompt_tokens": 2896,
+        "completion_tokens": 396,
+        "total_tokens": 3292,
+        "router_latency_s": 1.363,
+        "api_latency_s": 0.984,
+        "synthesis_latency_s": 6.143
+      },
+      "hallucination_risk": false,
+      "architecture": "B_API"
+    }
+  },
+  {
+    "question_id": "Q007",
+    "architecture": "B",
+    "result": {
+      "answer": "Lamentablemente, no he podido obtener la información sobre el número de vulnerabilidades con severidad CRITICAL en la base de datos local para el año 2024 debido a un error de la API (404 Client Error: Not Found). Esto puede deberse a que la API no tiene datos disponibles para el año 2024, ya que mi entrenamiento se basa en datos hasta octubre de 2023.\n\nPara obtener esta información, te sugiero que:\n\n1. **Revises la documentación de la API**: Asegúrate de que la URL y los parámetros que estás utilizando son correctos y que la API efectivamente soporta consultas para el año 2024.\n\n2. **Consulta otras fuentes**: Puedes visitar el sitio web del NVD (National Vulnerability Database) directamente y buscar manualmente las vulnerabilidades publicadas en 2024.\n\n3. **Utiliza otras herramientas de ciberseguridad**: Existen otras bases de datos y herramientas que pueden ofrecer información sobre vulnerabilidades, como CVE Details o SecurityFocus.\n\nSi necesitas más ayuda, no dudes en preguntar.",
+      "intent": "search_cves",
+      "api_source": "https://services.nvd.nist.gov/rest/json/cves/2.0?resultsPerPage=10&cvssV3Severity=CRITICAL&pubStartDate=2024-01-01T00:00:00.000&pubEndDate=2024-12-31T23:59:59.999",
+      "api_error": "404 Client Error: Not Found for url: https://services.nvd.nist.gov/rest/json/cves/2.0?resultsPerPage=10&cvssV3Severity=CRITICAL&pubStartDate=2024-01-01T00:00:00.000&pubEndDate=2024-12-31T23:59:59.999",
+      "router_confidence": 0.8,
+      "usage": {
+        "prompt_tokens": 594,
+        "completion_tokens": 292,
+        "total_tokens": 886,
+        "router_latency_s": 2.116,
+        "api_latency_s": 0,
+        "synthesis_latency_s": 4.607
+      },
+      "hallucination_risk": true,
+      "architecture": "B_API"
+    }
+  },
+  {
+    "question_id": "Q008",
+    "architecture": "B",
+    "result": {
+      "answer": "Lamentablemente, no he podido obtener la lista de las 5 vulnerabilidades con mayor CVSS v3 score publicadas en 2023 debido a un error de la API que indica que se han realizado demasiadas solicitudes en un corto período de tiempo (Error 429). Esto significa que el servicio está temporalmente limitado en cuanto a la cantidad de peticiones que puede manejar.\n\nPara obtener esta información, te sugiero las siguientes alternativas:\n\n1. **Visitar el sitio web del NVD (National Vulnerability Database)**: Puedes acceder directamente a su página y buscar las vulnerabilidades publicadas en 2023. Ellos suelen tener listados y filtros que te permitirán encontrar la información que necesitas.\n\n2. **Utilizar otras fuentes de información sobre vulnerabilidades**: Existen otras bases de datos y servicios que recopilan información sobre vulnerabilidades, como CVE Details, Mitre, o incluso plataformas de ciberseguridad que ofrecen reportes y análisis.\n\n3. **Esperar un tiempo y volver a intentar la consulta**: Si prefieres seguir utilizando la API, puedes esperar un tiempo y luego intentar nuevamente la consulta.\n\nSi necesitas más ayuda o información sobre cómo navegar en alguna de estas fuentes, no dudes en preguntar.",
+      "intent": "search_cves",
+      "api_source": "https://services.nvd.nist.gov/rest/json/cves/2.0?resultsPerPage=5&pubStartDate=2023-01-01T00:00:00.000&pubEndDate=2023-12-31T23:59:59.999",
+      "api_error": "429 Client Error: Too Many Requests for url: https://services.nvd.nist.gov/rest/json/cves/2.0?resultsPerPage=5&pubStartDate=2023-01-01T00:00:00.000&pubEndDate=2023-12-31T23:59:59.999",
+      "router_confidence": 0.8,
+      "usage": {
+        "prompt_tokens": 569,
+        "completion_tokens": 311,
+        "total_tokens": 880,
+        "router_latency_s": 1.529,
+        "api_latency_s": 0,
+        "synthesis_latency_s": 3.79
+      },
+      "hallucination_risk": true,
+      "architecture": "B_API"
+    }
+  },
+  {
+    "question_id": "Q009",
+    "architecture": "B",
+    "result": {
+      "answer": "Lamentablemente, no he podido obtener la información sobre cuántas vulnerabilidades están asociadas a la debilidad CWE-79 debido a un error de la API que indica que se han realizado demasiadas solicitudes en un corto período de tiempo (Error 429). Esto significa que el servicio está limitando el acceso temporalmente.\n\nPara obtener esta información, te sugiero las siguientes alternativas:\n\n1. **Esperar un tiempo**: Puedes intentar realizar la consulta nuevamente después de un período de espera, ya que el límite de solicitudes se restablecerá.\n\n2. **Consultar directamente la base de datos NVD**: Puedes visitar el sitio web de la National Vulnerability Database (NVD) y buscar manualmente las vulnerabilidades asociadas a CWE-79.\n\n3. **Utilizar otras fuentes**: Existen otras bases de datos de vulnerabilidades, como CVE Details o el MITRE CVE, donde también podrías buscar información sobre CWE-79.\n\nSi necesitas más ayuda o información sobre cómo realizar estas búsquedas, no dudes en preguntar.",
+      "intent": "search_cves",
+      "api_source": "https://services.nvd.nist.gov/rest/json/cves/2.0?resultsPerPage=10&cweId=CWE-79",
+      "api_error": "429 Client Error: Too Many Requests for url: https://services.nvd.nist.gov/rest/json/cves/2.0?resultsPerPage=10&cweId=CWE-79",
+      "router_confidence": 0.8,
+      "usage": {
+        "prompt_tokens": 515,
+        "completion_tokens": 252,
+        "total_tokens": 767,
+        "router_latency_s": 1.121,
+        "api_latency_s": 0,
+        "synthesis_latency_s": 4.045
+      },
+      "hallucination_risk": true,
+      "architecture": "B_API"
+    }
+  },
+  {
+    "question_id": "Q010",
+    "architecture": "B",
+    "result": {
+      "answer": "El score CVSS v3 para la vulnerabilidad CVE-2023-44487 (HTTP/2 Rapid Reset) es de **7.5**, lo que indica una severidad **alta**. \n\nSegún los datos recuperados, el vector CVSS es el siguiente: `CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H`. Esto significa que:\n\n- **Attack Vector (AV)**: Red (N)\n- **Attack Complexity (AC)**: Bajo (L)\n- **Privileges Required (PR)**: Ninguno (N)\n- **User Interaction (UI)**: Ninguna (N)\n- **Scope (S)**: Sin cambios (U)\n- **Confidentiality Impact (C)**: Ninguno (N)\n- **Integrity Impact (I)**: Ninguno (N)\n- **Availability Impact (A)**: Alto (H)\n\nLa vulnerabilidad permite una denegación de servicio debido al consumo de recursos del servidor, ya que la cancelación de solicitudes puede restablecer rápidamente múltiples flujos, lo que ha sido explotado en la naturaleza entre agosto y octubre de 2023 (fuente: NVD).\n\nPara más detalles, puedes consultar la fuente oficial en [NVD](https://services.nvd.nist.gov/rest/json/cves/2.0?cveId=CVE-2023-44487).",
+      "intent": "get_cve_by_id",
+      "api_source": "https://services.nvd.nist.gov/rest/json/cves/2.0?cveId=CVE-2023-44487",
+      "api_error": null,
+      "router_confidence": 0.9,
+      "usage": {
+        "prompt_tokens": 3039,
+        "completion_tokens": 337,
+        "total_tokens": 3376,
+        "router_latency_s": 1.123,
+        "api_latency_s": 1.027,
+        "synthesis_latency_s": 4.32
+      },
+      "hallucination_risk": false,
+      "architecture": "B_API"
+    }
+  },
+  {
+    "question_id": "Q011",
+    "architecture": "B",
+    "result": {
+      "answer": "Lamentablemente, no he podido obtener información sobre la técnica T1059 de la base de datos de MITRE ATT&CK debido a un error en la consulta. Esto significa que no puedo proporcionarte detalles sobre en qué táctica se clasifica esa técnica específica.\n\nSin embargo, puedes obtener esta información directamente en el sitio web de MITRE ATT&CK. Te recomiendo que busques \"T1059\" en su base de datos, donde encontrarás información detallada sobre la técnica, incluyendo su clasificación y tácticas asociadas.",
+      "intent": "unknown",
+      "api_source": "N/A",
+      "api_error": "Intent no reconocido: 'unknown'",
+      "router_confidence": 0.0,
+      "usage": {
+        "prompt_tokens": 444,
+        "completion_tokens": 130,
+        "total_tokens": 574,
+        "router_latency_s": 0.988,
+        "api_latency_s": 0,
+        "synthesis_latency_s": 2.157
+      },
+      "hallucination_risk": true,
+      "architecture": "B_API"
+    }
+  },
+  {
+    "question_id": "Q012",
+    "architecture": "B",
+    "result": {
+      "answer": "Lamentablemente, no he podido obtener la descripción de la técnica MITRE ATT&CK T1566 debido a un error en la consulta a la API. Esto significa que no tengo acceso a la información específica sobre esta técnica en este momento.\n\nSin embargo, puedes obtener información sobre la técnica T1566 directamente desde el sitio web oficial de MITRE ATT&CK. Allí encontrarás descripciones detalladas, ejemplos y contexto sobre las técnicas de ataque. Te recomiendo visitar [MITRE ATT&CK](https://attack.mitre.org/) y buscar la técnica T1566 para obtener la información que necesitas.",
+      "intent": "unknown",
+      "api_source": "N/A",
+      "api_error": "Intent no reconocido: 'unknown'",
+      "router_confidence": 0.0,
+      "usage": {
+        "prompt_tokens": 436,
+        "completion_tokens": 144,
+        "total_tokens": 580,
+        "router_latency_s": 0.911,
+        "api_latency_s": 0,
+        "synthesis_latency_s": 1.785
+      },
+      "hallucination_risk": true,
+      "architecture": "B_API"
+    }
+  },
+  {
+    "question_id": "Q013",
+    "architecture": "B",
+    "result": {
+      "answer": "Lamentablemente, no he podido obtener información sobre la técnica MITRE ATT&CK con ID T1078 debido a un error en la consulta a la API. Esto significa que no puedo proporcionarte el nombre o detalles específicos de esa técnica en este momento.\n\nSin embargo, puedes obtener esta información directamente desde el sitio web oficial de MITRE ATT&CK. Allí podrás buscar el ID T1078 y encontrar detalles sobre la técnica, su descripción y ejemplos de uso. Si necesitas más ayuda, no dudes en preguntar.",
+      "intent": "unknown",
+      "api_source": "N/A",
+      "api_error": "Intent no reconocido: 'unknown'",
+      "router_confidence": 0.0,
+      "usage": {
+        "prompt_tokens": 444,
+        "completion_tokens": 127,
+        "total_tokens": 571,
+        "router_latency_s": 0.879,
+        "api_latency_s": 0,
+        "synthesis_latency_s": 1.938
+      },
+      "hallucination_risk": true,
+      "architecture": "B_API"
+    }
+  },
+  {
+    "question_id": "Q014",
+    "architecture": "B",
+    "result": {
+      "answer": "Lamentablemente, no he podido obtener información sobre las plataformas que afecta la técnica T1059.001 (PowerShell) debido a un error en la consulta a la API. \n\nSin embargo, puedes encontrar información sobre esta técnica en la base de datos de MITRE ATT&CK, que es una fuente confiable para este tipo de información. Te sugiero que visites su sitio web y busques la técnica T1059.001 para obtener detalles sobre las plataformas afectadas y otros aspectos relevantes.",
+      "intent": "unknown",
+      "api_source": "N/A",
+      "api_error": "Intent no reconocido: 'unknown'",
+      "router_confidence": 0.0,
+      "usage": {
+        "prompt_tokens": 436,
+        "completion_tokens": 124,
+        "total_tokens": 560,
+        "router_latency_s": 0.815,
+        "api_latency_s": 0,
+        "synthesis_latency_s": 2.458
+      },
+      "hallucination_risk": true,
+      "architecture": "B_API"
+    }
+  },
+  {
+    "question_id": "Q015",
+    "architecture": "B",
+    "result": {
+      "answer": "Lamentablemente, no he podido obtener información sobre la táctica asociada a la técnica T1486 (Data Encrypted for Impact) debido a un error en la consulta a la API. \n\nSin embargo, puedes encontrar esta información en la base de datos de MITRE ATT&CK, que es una fuente confiable para este tipo de datos sobre tácticas y técnicas de ciberseguridad. Te sugiero que visites su sitio web y busques la técnica T1486 directamente allí para obtener la información más precisa y actualizada.",
+      "intent": "unknown",
+      "api_source": "N/A",
+      "api_error": "Intent no reconocido: 'unknown'",
+      "router_confidence": 0.0,
+      "usage": {
+        "prompt_tokens": 444,
+        "completion_tokens": 132,
+        "total_tokens": 576,
+        "router_latency_s": 1.149,
+        "api_latency_s": 0,
+        "synthesis_latency_s": 2.024
+      },
+      "hallucination_risk": true,
+      "architecture": "B_API"
+    }
+  },
+  {
+    "question_id": "Q016",
+    "architecture": "B",
+    "result": {
+      "answer": "Lamentablemente, no he podido obtener información sobre las mitigaciones para la técnica T1078 (Valid Accounts) debido a un error en la consulta a la API. Esto significa que no tengo acceso a los detalles específicos que estabas buscando.\n\nSin embargo, puedes obtener información sobre las mitigaciones para T1078 consultando directamente la base de datos del MITRE ATT&CK, donde se documentan técnicas de ataque y sus respectivas mitigaciones. También puedes buscar en fuentes de ciberseguridad confiables, como blogs de expertos en seguridad, informes de amenazas o publicaciones de organizaciones de ciberseguridad.\n\nSi necesitas más ayuda o información sobre otro tema, no dudes en preguntar.",
+      "intent": "unknown",
+      "api_source": "N/A",
+      "api_error": "Intent no reconocido: 'unknown'",
+      "router_confidence": 0.0,
+      "usage": {
+        "prompt_tokens": 436,
+        "completion_tokens": 161,
+        "total_tokens": 597,
+        "router_latency_s": 0.917,
+        "api_latency_s": 0,
+        "synthesis_latency_s": 2.666
+      },
+      "hallucination_risk": true,
+      "architecture": "B_API"
+    }
+  },
+  {
+    "question_id": "Q017",
+    "architecture": "B",
+    "result": {
+      "answer": "Lamentablemente, no he podido obtener la información sobre cuántas sub-técnicas tiene T1059 (Command and Scripting Interpreter) debido a un error en la consulta a la API. \n\nPara obtener esta información, te sugiero que consultes directamente la base de datos de MITRE ATT&CK, donde puedes encontrar detalles sobre las técnicas y sub-técnicas de ciberseguridad. También puedes buscar en documentación relacionada o foros de ciberseguridad que discutan sobre el marco ATT&CK.",
+      "intent": "unknown",
+      "api_source": "N/A",
+      "api_error": "Intent no reconocido: 'unknown'",
+      "router_confidence": 0.0,
+      "usage": {
+        "prompt_tokens": 444,
+        "completion_tokens": 129,
+        "total_tokens": 573,
+        "router_latency_s": 0.843,
+        "api_latency_s": 0,
+        "synthesis_latency_s": 2.225
+      },
+      "hallucination_risk": true,
+      "architecture": "B_API"
+    }
+  },
+  {
+    "question_id": "Q018",
+    "architecture": "B",
+    "result": {
+      "answer": "Lamentablemente, no he podido obtener información sobre la táctica que corresponde a la fase inicial de un ataque en la que un adversario intenta entrar en la red. \n\nSin embargo, puedo sugerirte que busques información sobre \"reconocimiento\" o \"reconocimiento activo\" en el contexto de ciberseguridad, ya que estas son fases iniciales comunes en muchos ataques. También puedes consultar recursos en línea, como artículos de ciberseguridad, libros sobre tácticas de ataque o incluso cursos en plataformas educativas que aborden este tema.",
+      "intent": "unknown",
+      "api_source": "N/A",
+      "api_error": "Intent no reconocido: 'unknown'",
+      "router_confidence": 0.0,
+      "usage": {
+        "prompt_tokens": 452,
+        "completion_tokens": 135,
+        "total_tokens": 587,
+        "router_latency_s": 1.017,
+        "api_latency_s": 0,
+        "synthesis_latency_s": 2.644
+      },
+      "hallucination_risk": true,
+      "architecture": "B_API"
+    }
+  },
+  {
+    "question_id": "Q019",
+    "architecture": "B",
+    "result": {
+      "answer": "La vulnerabilidad CVE-2024-3400 se refiere a una inyección de comandos en la función GlobalProtect del software PAN-OS de Palo Alto Networks. Esta vulnerabilidad permite a un atacante no autenticado ejecutar código arbitrario con privilegios de root en el firewall, afectando a versiones específicas de PAN-OS. Sin embargo, los servicios Cloud NGFW, Panorama y Prisma Access no están afectados por esta vulnerabilidad (fuente: NVD).\n\nEl estado de la vulnerabilidad es \"Analizada\" y fue publicada el 12 de abril de 2024. La última modificación de la información se realizó el 4 de noviembre de 2025 (fuente: NVD).\n\nEn términos de severidad, la vulnerabilidad tiene un puntaje CVSS de 10.0, lo que la clasifica como \"Crítica\". Esto se debe a que el vector de ataque es a través de la red, la complejidad del ataque es baja, no se requieren privilegios previos ni interacción del usuario, y el impacto en la confidencialidad, integridad y disponibilidad es alto (fuente: NVD).\n\nLa CISA ha indicado que se deben aplicar mitigaciones según las instrucciones del proveedor y que los usuarios con versiones vulnerables deben habilitar los IDs de prevención de amenazas disponibles del proveedor. La acción requerida tiene como fecha límite el 19 de abril de 2024 (fuente: NVD).\n\nPara más detalles sobre las versiones específicas de PAN-OS afectadas, se puede consultar la lista de configuraciones vulnerables en la base de datos de NVD.",
+      "intent": "get_cve_by_id",
+      "api_source": "https://services.nvd.nist.gov/rest/json/cves/2.0?cveId=CVE-2024-3400",
+      "api_error": null,
+      "router_confidence": 0.9,
+      "usage": {
+        "prompt_tokens": 3083,
+        "completion_tokens": 370,
+        "total_tokens": 3453,
+        "router_latency_s": 1.141,
+        "api_latency_s": 1.022,
+        "synthesis_latency_s": 5.017
+      },
+      "hallucination_risk": false,
+      "architecture": "B_API"
+    }
+  },
+  {
+    "question_id": "Q020",
+    "architecture": "B",
+    "result": {
+      "answer": "El score CVSS v3 de la vulnerabilidad CVE-2022-26134, que afecta a Atlassian Confluence, es de **9.8**, lo que la clasifica como **CRÍTICA**. \n\nEste score se basa en el siguiente vector de ataque: **CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H**. Esto indica que la vulnerabilidad permite a un atacante no autenticado ejecutar código arbitrario en el servidor de Confluence a través de la red, con una complejidad de ataque baja y sin requerir interacción del usuario. Además, tiene un impacto alto en la confidencialidad, integridad y disponibilidad del sistema afectado (confidentialityImpact: HIGH, integrityImpact: HIGH, availabilityImpact: HIGH) (Según NVD).\n\nLa vulnerabilidad se relaciona con una inyección OGNL que afecta a varias versiones de Confluence Server y Data Center, permitiendo a un atacante ejecutar código arbitrario sin necesidad de autenticación (Según la descripción de la vulnerabilidad).\n\nPara más información, puedes consultar la fuente oficial en NVD: [NVD - CVE-2022-26134](https://services.nvd.nist.gov/rest/json/cves/2.0?cveId=CVE-2022-26134).",
+      "intent": "get_cve_by_id",
+      "api_source": "https://services.nvd.nist.gov/rest/json/cves/2.0?cveId=CVE-2022-26134",
+      "api_error": null,
+      "router_confidence": 0.9,
+      "usage": {
+        "prompt_tokens": 3031,
+        "completion_tokens": 324,
+        "total_tokens": 3355,
+        "router_latency_s": 1.33,
+        "api_latency_s": 0.92,
+        "synthesis_latency_s": 3.734
+      },
+      "hallucination_risk": false,
+      "architecture": "B_API"
+    }
+  },
+  {
+    "question_id": "Q021",
+    "architecture": "B",
+    "result": {
+      "answer": "Lamentablemente, no he podido obtener información sobre las técnicas MITRE ATT&CK utilizadas por el grupo APT29 debido a un error en la consulta a la API. Esto significa que no puedo proporcionarte detalles específicos sobre las tácticas y técnicas que emplea este grupo.\n\nSin embargo, puedes obtener esta información consultando directamente la matriz MITRE ATT&CK en su sitio web oficial, donde encontrarás un desglose de las técnicas asociadas a diferentes grupos de amenazas, incluido APT29. También puedes buscar informes de ciberseguridad de empresas especializadas que analicen las actividades de este grupo.",
+      "intent": "unknown",
+      "api_source": "N/A",
+      "api_error": "Intent no reconocido: 'unknown'",
+      "router_confidence": 0.0,
+      "usage": {
+        "prompt_tokens": 436,
+        "completion_tokens": 145,
+        "total_tokens": 581,
+        "router_latency_s": 0.968,
+        "api_latency_s": 0,
+        "synthesis_latency_s": 2.191
+      },
+      "hallucination_risk": true,
+      "architecture": "B_API"
+    }
+  },
+  {
+    "question_id": "Q022",
+    "architecture": "B",
+    "result": {
+      "answer": "Lamentablemente, no he podido obtener información sobre los grupos APT que utilizan la técnica T1566 (Phishing) según el marco MITRE ATT&CK debido a un error en la consulta a la API. \n\nPara obtener esta información, te sugiero que consultes directamente el sitio web de MITRE ATT&CK, donde puedes buscar la técnica T1566 y ver los grupos APT asociados. También puedes revisar informes de ciberseguridad de empresas especializadas que a menudo analizan y documentan las tácticas y técnicas utilizadas por grupos APT.",
+      "intent": "unknown",
+      "api_source": "N/A",
+      "api_error": "Intent no reconocido: 'unknown'",
+      "router_confidence": 0.0,
+      "usage": {
+        "prompt_tokens": 450,
+        "completion_tokens": 138,
+        "total_tokens": 588,
+        "router_latency_s": 0.901,
+        "api_latency_s": 0,
+        "synthesis_latency_s": 1.923
+      },
+      "hallucination_risk": true,
+      "architecture": "B_API"
+    }
+  },
+  {
+    "question_id": "Q023",
+    "architecture": "B",
+    "result": {
+      "answer": "Lamentablemente, no he podido obtener información sobre las técnicas de MITRE ATT&CK relacionadas con la táctica de Lateral Movement debido a un error en la consulta a la API. \n\nSin embargo, puedes encontrar esta información directamente en el sitio web oficial de MITRE ATT&CK. Allí, puedes explorar las tácticas y técnicas, incluyendo Lateral Movement, y ver una lista detallada de las técnicas asociadas. \n\nSi necesitas más ayuda o información específica, no dudes en preguntar.",
+      "intent": "unknown",
+      "api_source": "N/A",
+      "api_error": "Intent no reconocido: 'unknown'",
+      "router_confidence": 0.0,
+      "usage": {
+        "prompt_tokens": 442,
+        "completion_tokens": 123,
+        "total_tokens": 565,
+        "router_latency_s": 0.918,
+        "api_latency_s": 0,
+        "synthesis_latency_s": 1.739
+      },
+      "hallucination_risk": true,
+      "architecture": "B_API"
+    }
+  },
+  {
+    "question_id": "Q024",
+    "architecture": "B",
+    "result": {
+      "answer": "Lamentablemente, no he podido obtener información específica sobre las mitigaciones recomendadas por MITRE ATT&CK para defenderse contra T1486 (ransomware) debido a un error en la consulta a la API. \n\nSin embargo, puedes acceder a la información directamente en el sitio web de MITRE ATT&CK. Allí encontrarás detalles sobre las tácticas, técnicas y mitigaciones relacionadas con el ransomware y otras amenazas cibernéticas. \n\nTe sugiero que busques \"T1486\" en la sección de técnicas del sitio de MITRE ATT&CK para obtener la información más actualizada y relevante.",
+      "intent": "unknown",
+      "api_source": "N/A",
+      "api_error": "Intent no reconocido: 'unknown'",
+      "router_confidence": 0.0,
+      "usage": {
+        "prompt_tokens": 450,
+        "completion_tokens": 147,
+        "total_tokens": 597,
+        "router_latency_s": 0.88,
+        "api_latency_s": 0,
+        "synthesis_latency_s": 2.6
+      },
+      "hallucination_risk": true,
+      "architecture": "B_API"
+    }
+  },
+  {
+    "question_id": "Q025",
+    "architecture": "B",
+    "result": {
+      "answer": "Lamentablemente, no he podido obtener información específica sobre las herramientas maliciosas que utiliza el grupo Lazarus Group según el marco MITRE ATT&CK debido a un error en la consulta. \n\nPara obtener esta información, te sugiero que consultes directamente el sitio web de MITRE ATT&CK, donde puedes buscar el perfil del Lazarus Group y revisar las técnicas y herramientas asociadas. También puedes buscar en informes de ciberseguridad de empresas especializadas que analicen las actividades de este grupo.",
+      "intent": "unknown",
+      "api_source": "N/A",
+      "api_error": "Intent no reconocido: 'unknown'",
+      "router_confidence": 0.0,
+      "usage": {
+        "prompt_tokens": 452,
+        "completion_tokens": 126,
+        "total_tokens": 578,
+        "router_latency_s": 0.824,
+        "api_latency_s": 0,
+        "synthesis_latency_s": 1.737
+      },
+      "hallucination_risk": true,
+      "architecture": "B_API"
+    }
+  },
+  {
+    "question_id": "Q026",
+    "architecture": "B",
+    "result": {
+      "answer": "Lamentablemente, no he podido obtener la información sobre cuántos CVEs publicados en 2022 tienen un score CVSS v3 superior a 9.0 debido a un error en la consulta a la API. El error específico es un \"404 Client Error: Not Found\", lo que indica que la URL consultada no está disponible o no es válida.\n\nPara obtener esta información, te sugiero las siguientes alternativas:\n\n1. **Visitar el sitio web del NVD (National Vulnerability Database)**: Puedes buscar manualmente en su base de datos utilizando filtros para el año 2022 y el score CVSS v3.\n\n2. **Utilizar otras APIs**: Existen otras fuentes y APIs que pueden ofrecer datos sobre vulnerabilidades, como la API de CVE Details o la de MITRE.\n\n3. **Consultar informes de seguridad**: Muchas empresas de ciberseguridad publican informes anuales que resumen las vulnerabilidades más críticas, incluyendo estadísticas sobre CVEs.\n\nSi necesitas más ayuda o información sobre cómo realizar alguna de estas acciones, no dudes en preguntar.",
+      "intent": "search_cves",
+      "api_source": "https://services.nvd.nist.gov/rest/json/cves/2.0?resultsPerPage=100&cvssV3Severity=CRITICAL&pubStartDate=2022-01-01T00:00:00.000&pubEndDate=2022-12-31T23:59:59.999",
+      "api_error": "404 Client Error: Not Found for url: https://services.nvd.nist.gov/rest/json/cves/2.0?resultsPerPage=100&cvssV3Severity=CRITICAL&pubStartDate=2022-01-01T00:00:00.000&pubEndDate=2022-12-31T23:59:59.999",
+      "router_confidence": 0.8,
+      "usage": {
+        "prompt_tokens": 596,
+        "completion_tokens": 288,
+        "total_tokens": 884,
+        "router_latency_s": 1.436,
+        "api_latency_s": 0,
+        "synthesis_latency_s": 3.795
+      },
+      "hallucination_risk": true,
+      "architecture": "B_API"
+    }
+  },
+  {
+    "question_id": "Q027",
+    "architecture": "B",
+    "result": {
+      "answer": "La vulnerabilidad CVE-2021-44228, también conocida como la vulnerabilidad de ejecución remota de código en Apache Log4j2, afecta a las versiones de Apache Log4j2 desde la 2.0-beta9 hasta la 2.15.0, excluyendo las versiones de seguridad 2.12.2, 2.12.3 y 2.3.1. Esta vulnerabilidad permite a un atacante ejecutar código arbitrario si puede controlar los mensajes de registro o los parámetros de los mismos (según la descripción proporcionada por Apache) (fuente: NVD).\n\nEn cuanto a los productos específicos afectados, se identifican varios firmwares de Siemens que son vulnerables. Estos incluyen:\n\n1. **Siemens 6BK1602-0AA12-0TP0 Firmware** (vulnerable hasta la versión 2.7.0).\n2. **Siemens 6BK1602-0AA22-0TP0 Firmware** (vulnerable hasta la versión 2.7.0).\n3. **Siemens 6BK1602-0AA32-0TP0 Firmware** (vulnerable hasta la versión 2.7.0).\n4. **Siemens 6BK1602-0AA42-0TP0 Firmware** (vulnerable hasta la versión 2.7.0).\n\nEs importante mencionar que la vulnerabilidad es específica de log4j-core y no afecta a otros proyectos de Apache Logging Services como log4net o log4cxx (fuente: NVD).\n\nPara mitigar esta vulnerabilidad, se recomienda aplicar actualizaciones a las versiones no vulnerables o eliminar los activos afectados de las redes (fuente: NVD).",
+      "intent": "get_cve_by_id",
+      "api_source": "https://services.nvd.nist.gov/rest/json/cves/2.0?cveId=CVE-2021-44228",
+      "api_error": null,
+      "router_confidence": 0.9,
+      "usage": {
+        "prompt_tokens": 2914,
+        "completion_tokens": 404,
+        "total_tokens": 3318,
+        "router_latency_s": 1.219,
+        "api_latency_s": 1.028,
+        "synthesis_latency_s": 6.438
+      },
+      "hallucination_risk": false,
+      "architecture": "B_API"
+    }
+  },
+  {
+    "question_id": "Q028",
+    "architecture": "B",
+    "result": {
+      "answer": "Lamentablemente, no he podido obtener la lista de los 10 CVEs más recientes relacionados con vulnerabilidades de tipo SQL Injection publicados en 2024 debido a un error en la API consultada. El error específico es un \"404 Client Error: Not Found\", lo que indica que la URL solicitada no está disponible o no se puede encontrar.\n\nPara obtener esta información, te sugiero las siguientes alternativas:\n\n1. **Visitar el sitio web del NVD (National Vulnerability Database)**: Puedes acceder directamente a su página en [nvd.nist.gov](https://nvd.nist.gov/) y utilizar su función de búsqueda para filtrar por tipo de vulnerabilidad y fecha de publicación.\n\n2. **Consultar otras bases de datos de vulnerabilidades**: Existen otras fuentes como CVE Details ([cvedetails.com](https://www.cvedetails.com/)) o el sitio de MITRE ([cve.mitre.org](https://cve.mitre.org/)) donde también puedes buscar información sobre vulnerabilidades específicas.\n\n3. **Utilizar herramientas de ciberseguridad**: Algunas herramientas de gestión de vulnerabilidades pueden ofrecer información actualizada sobre CVEs y permitirte filtrar por tipo de vulnerabilidad.\n\nSi necesitas más ayuda o información específica, no dudes en preguntar.",
+      "intent": "search_cves",
+      "api_source": "https://services.nvd.nist.gov/rest/json/cves/2.0?resultsPerPage=10&keywordSearch=SQL Injection&pubStartDate=2024-01-01T00:00:00.000&pubEndDate=2024-12-31T23:59:59.999",
+      "api_error": "404 Client Error: Not Found for url: https://services.nvd.nist.gov/rest/json/cves/2.0?resultsPerPage=10&keywordSearch=SQL%20Injection&pubStartDate=2024-01-01T00:00:00.000&pubEndDate=2024-12-31T23:59:59.999",
+      "router_confidence": 0.9,
+      "usage": {
+        "prompt_tokens": 586,
+        "completion_tokens": 331,
+        "total_tokens": 917,
+        "router_latency_s": 1.327,
+        "api_latency_s": 0,
+        "synthesis_latency_s": 4.301
+      },
+      "hallucination_risk": true,
+      "architecture": "B_API"
+    }
+  },
+  {
+    "question_id": "Q029",
+    "architecture": "B",
+    "result": {
+      "answer": "Lamentablemente, no he podido obtener información específica sobre los grupos APT (Advanced Persistent Threat) que utilizan técnicas de la táctica Execution y las plataformas que atacan. El error en la consulta indica que no se pudo procesar la solicitud correctamente.\n\nPara obtener esta información, te sugiero que consultes fuentes confiables de ciberseguridad, como informes de empresas de seguridad (por ejemplo, FireEye, CrowdStrike, o Mandiant), bases de datos de amenazas, o publicaciones académicas sobre ciberseguridad. También puedes revisar blogs especializados en ciberseguridad que a menudo analizan las tácticas y técnicas de grupos APT.",
+      "intent": "unknown",
+      "api_source": "N/A",
+      "api_error": "Intent no reconocido: 'unknown'",
+      "router_confidence": 0.0,
+      "usage": {
+        "prompt_tokens": 442,
+        "completion_tokens": 156,
+        "total_tokens": 598,
+        "router_latency_s": 1.12,
+        "api_latency_s": 0,
+        "synthesis_latency_s": 2.516
+      },
+      "hallucination_risk": true,
+      "architecture": "B_API"
+    }
+  },
+  {
+    "question_id": "Q030",
+    "architecture": "B",
+    "result": {
+      "answer": "Lamentablemente, no he podido obtener la información sobre los CVEs de severidad CRITICAL relacionados con Apache publicados en 2023 debido a un error en la consulta a la API. El error específico es un \"404 Client Error: Not Found\", lo que indica que la URL solicitada no está disponible o no se puede encontrar.\n\nPara obtener esta información, te sugiero que intentes lo siguiente:\n\n1. **Visitar el sitio web del NVD (National Vulnerability Database)**: Puedes buscar manualmente en su base de datos en [nvd.nist.gov](https://nvd.nist.gov/) utilizando los filtros disponibles para CVEs, como la severidad y el año de publicación.\n\n2. **Consultar otras bases de datos de vulnerabilidades**: Existen otras fuentes como CVE Details, Mitre o SecurityFocus que también pueden tener listados de vulnerabilidades.\n\n3. **Utilizar herramientas de ciberseguridad**: Algunas herramientas de gestión de vulnerabilidades pueden ofrecer información sobre CVEs y permitirte filtrar por severidad y otros criterios.\n\nSi necesitas más ayuda o información específica, no dudes en preguntar.",
+      "intent": "search_cves",
+      "api_source": "https://services.nvd.nist.gov/rest/json/cves/2.0?resultsPerPage=10&keywordSearch=Apache&cvssV3Severity=CRITICAL&pubStartDate=2023-01-01T00:00:00.000&pubEndDate=2023-12-31T23:59:59.999",
+      "api_error": "404 Client Error: Not Found for url: https://services.nvd.nist.gov/rest/json/cves/2.0?resultsPerPage=10&keywordSearch=Apache&cvssV3Severity=CRITICAL&pubStartDate=2023-01-01T00:00:00.000&pubEndDate=2023-12-31T23:59:59.999",
+      "router_confidence": 0.9,
+      "usage": {
+        "prompt_tokens": 594,
+        "completion_tokens": 299,
+        "total_tokens": 893,
+        "router_latency_s": 1.58,
+        "api_latency_s": 0,
+        "synthesis_latency_s": 5.528
+      },
+      "hallucination_risk": true,
+      "architecture": "B_API"
+    }
+  },
+  {
+    "question_id": "Q031",
+    "architecture": "B",
+    "result": {
+      "answer": "Lamentablemente, no he podido obtener información específica sobre las técnicas que utiliza APT28 y las relacionadas con la exfiltración de datos debido a un error en la consulta a la API. \n\nSin embargo, puedo sugerirte que busques información en fuentes confiables sobre ciberseguridad, como informes de empresas de seguridad (por ejemplo, FireEye, CrowdStrike o Mandiant) o bases de datos de amenazas como MITRE ATT&CK, donde se documentan las tácticas y técnicas utilizadas por grupos de amenazas avanzadas como APT28. También puedes consultar publicaciones académicas o blogs especializados en ciberseguridad para obtener información más detallada.",
+      "intent": "unknown",
+      "api_source": "N/A",
+      "api_error": "Intent no reconocido: 'unknown'",
+      "router_confidence": 0.0,
+      "usage": {
+        "prompt_tokens": 444,
+        "completion_tokens": 159,
+        "total_tokens": 603,
+        "router_latency_s": 1.021,
+        "api_latency_s": 0,
+        "synthesis_latency_s": 3.07
+      },
+      "hallucination_risk": true,
+      "architecture": "B_API"
+    }
+  },
+  {
+    "question_id": "Q032",
+    "architecture": "B",
+    "result": {
+      "answer": "Lamentablemente, no he podido obtener la información sobre cuántas técnicas tiene la táctica 'Credential Access' en MITRE ATT&CK Enterprise debido a un error en la consulta a la API. \n\nPara obtener esta información, te sugiero que consultes directamente el sitio web oficial de MITRE ATT&CK, donde podrás encontrar un desglose completo de las tácticas y técnicas disponibles. También puedes revisar la documentación o los recursos de ciberseguridad que analicen el marco ATT&CK.",
+      "intent": "unknown",
+      "api_source": "N/A",
+      "api_error": "Intent no reconocido: 'unknown'",
+      "router_confidence": 0.0,
+      "usage": {
+        "prompt_tokens": 448,
+        "completion_tokens": 125,
+        "total_tokens": 573,
+        "router_latency_s": 0.998,
+        "api_latency_s": 0,
+        "synthesis_latency_s": 2.07
+      },
+      "hallucination_risk": true,
+      "architecture": "B_API"
+    }
+  },
+  {
+    "question_id": "Q033",
+    "architecture": "B",
+    "result": {
+      "answer": "Lamentablemente, no he podido obtener información sobre el CVE con el mayor CVSS score publicado en 2024 debido a un error en la consulta a la API. Esto significa que no tengo acceso a los datos específicos que buscabas.\n\nPara obtener esta información, te sugiero que consultes directamente la base de datos del NIST (National Institute of Standards and Technology) o el sitio web de MITRE, donde se publican los CVEs y sus respectivas puntuaciones CVSS. También puedes utilizar herramientas de gestión de vulnerabilidades que integren esta información.",
+      "intent": "unknown",
+      "api_source": "N/A",
+      "api_error": "Intent no reconocido: 'unknown'",
+      "router_confidence": 0.0,
+      "usage": {
+        "prompt_tokens": 452,
+        "completion_tokens": 137,
+        "total_tokens": 589,
+        "router_latency_s": 0.919,
+        "api_latency_s": 0,
+        "synthesis_latency_s": 2.209
+      },
+      "hallucination_risk": true,
+      "architecture": "B_API"
+    }
+  },
+  {
+    "question_id": "Q034",
+    "architecture": "B",
+    "result": {
+      "answer": "Lamentablemente, no he podido obtener información sobre las técnicas de MITRE ATT&CK asociadas a ataques de ransomware debido a un error en la consulta a la API. Esto significa que no puedo proporcionarte una lista específica de técnicas en este momento.\n\nSin embargo, puedes obtener esta información consultando directamente el sitio web oficial de MITRE ATT&CK, donde encontrarás un listado completo de las técnicas y tácticas relacionadas con el ransomware. También puedes buscar en artículos de ciberseguridad o informes de amenazas que analicen ataques de ransomware, ya que a menudo incluyen detalles sobre las técnicas utilizadas.\n\nSi necesitas más ayuda o información específica, no dudes en preguntar.",
+      "intent": "unknown",
+      "api_source": "N/A",
+      "api_error": "Intent no reconocido: 'unknown'",
+      "router_confidence": 0.0,
+      "usage": {
+        "prompt_tokens": 440,
+        "completion_tokens": 156,
+        "total_tokens": 596,
+        "router_latency_s": 1.166,
+        "api_latency_s": 0,
+        "synthesis_latency_s": 2.15
+      },
+      "hallucination_risk": true,
+      "architecture": "B_API"
+    }
+  },
+  {
+    "question_id": "Q035",
+    "architecture": "B",
+    "result": {
+      "answer": "Lamentablemente, no he podido obtener información sobre las herramientas (software) asociadas a APT41 según MITRE ATT&CK debido a un error en la consulta. \n\nPara obtener esta información, te sugiero que visites directamente el sitio web de MITRE ATT&CK, donde puedes buscar el grupo APT41 y revisar la sección de herramientas asociadas. También puedes consultar informes de ciberseguridad de empresas especializadas que analicen las tácticas y herramientas utilizadas por grupos de amenazas avanzadas.",
+      "intent": "unknown",
+      "api_source": "N/A",
+      "api_error": "Intent no reconocido: 'unknown'",
+      "router_confidence": 0.0,
+      "usage": {
+        "prompt_tokens": 446,
+        "completion_tokens": 126,
+        "total_tokens": 572,
+        "router_latency_s": 1.021,
+        "api_latency_s": 0,
+        "synthesis_latency_s": 2.355
+      },
+      "hallucination_risk": true,
+      "architecture": "B_API"
+    }
+  },
+  {
+    "question_id": "Q036",
+    "architecture": "B",
+    "result": {
+      "answer": "En la base de datos local, se ha identificado una vulnerabilidad de tipo 'buffer overflow' correspondiente a CWE-120. Esta vulnerabilidad está documentada en el CVE-1999-0046, que se refiere a un desbordamiento de búfer en el programa rlogin al utilizar la variable ambiental TERM. \n\nSegún la información recuperada, el CVE-1999-0046 tiene un puntaje CVSS v2 de 10.0, lo que indica una severidad alta, con impactos completos en la confidencialidad, integridad y disponibilidad (NVD). Esta vulnerabilidad afecta a múltiples versiones de sistemas operativos, incluyendo varias versiones de BSDI, Debian, FreeBSD, HP-UX, AIX, y NetBSD, entre otros.\n\nNo se ha encontrado información sobre vulnerabilidades adicionales de tipo 'buffer overflow' (CWE-121) en los datos proporcionados. Por lo tanto, en resumen, actualmente hay una vulnerabilidad de tipo 'buffer overflow' (CWE-120) en la base de datos local.\n\nFuente consultada: NVD/NIST.",
+      "intent": "search_cves",
+      "api_source": "https://services.nvd.nist.gov/rest/json/cves/2.0?resultsPerPage=100&cweId=CWE-120",
+      "api_error": null,
+      "router_confidence": 0.8,
+      "usage": {
+        "prompt_tokens": 3213,
+        "completion_tokens": 272,
+        "total_tokens": 3485,
+        "router_latency_s": 1.947,
+        "api_latency_s": 1.138,
+        "synthesis_latency_s": 3.915
+      },
+      "hallucination_risk": false,
+      "architecture": "B_API"
+    }
+  },
+  {
+    "question_id": "Q037",
+    "architecture": "B",
+    "result": {
+      "answer": "Lamentablemente, no he podido obtener información sobre las detecciones recomendadas por MITRE ATT&CK para la técnica T1059 (Command and Scripting Interpreter) debido a un error en la consulta. \n\nPara obtener esta información, te sugiero que visites directamente el sitio web de MITRE ATT&CK, donde puedes buscar la técnica T1059 y revisar las recomendaciones de detección que ofrecen. También puedes consultar documentación relacionada con ciberseguridad o foros especializados donde se discutan estas técnicas y sus detecciones.",
+      "intent": "unknown",
+      "api_source": "N/A",
+      "api_error": "Intent no reconocido: 'unknown'",
+      "router_confidence": 0.0,
+      "usage": {
+        "prompt_tokens": 452,
+        "completion_tokens": 130,
+        "total_tokens": 582,
+        "router_latency_s": 0.919,
+        "api_latency_s": 0,
+        "synthesis_latency_s": 2.148
+      },
+      "hallucination_risk": true,
+      "architecture": "B_API"
+    }
+  },
+  {
+    "question_id": "Q038",
+    "architecture": "B",
+    "result": {
+      "answer": "Lamentablemente, no he podido obtener la información sobre el porcentaje de vulnerabilidades de 2023 en la base de datos local que tienen severidad HIGH o CRITICAL debido a un error en la consulta a la API. \n\nPara obtener esta información, te sugiero que consultes directamente la base de datos de vulnerabilidades que estés utilizando, como el NVD (National Vulnerability Database) o cualquier otra fuente de datos de ciberseguridad que maneje información sobre vulnerabilidades. También podrías revisar informes de seguridad de empresas especializadas en ciberseguridad que suelen publicar análisis sobre vulnerabilidades y su severidad.",
+      "intent": "unknown",
+      "api_source": "N/A",
+      "api_error": "Intent no reconocido: 'unknown'",
+      "router_confidence": 0.0,
+      "usage": {
+        "prompt_tokens": 454,
+        "completion_tokens": 149,
+        "total_tokens": 603,
+        "router_latency_s": 1.019,
+        "api_latency_s": 0,
+        "synthesis_latency_s": 2.253
+      },
+      "hallucination_risk": true,
+      "architecture": "B_API"
+    }
+  },
+  {
+    "question_id": "Q039",
+    "architecture": "B",
+    "result": {
+      "answer": "Lamentablemente, no he podido obtener información sobre los grupos APT asociados a Corea del Norte en el marco de MITRE ATT&CK debido a un error en la consulta. Esto significa que no puedo proporcionarte una lista específica de esos grupos en este momento.\n\nSin embargo, puedes obtener esta información consultando directamente el sitio web de MITRE ATT&CK, donde tienen un apartado dedicado a los grupos de amenazas y sus respectivas técnicas. También puedes buscar en informes de ciberseguridad de empresas especializadas que analicen las actividades de grupos APT relacionados con Corea del Norte.",
+      "intent": "unknown",
+      "api_source": "N/A",
+      "api_error": "Intent no reconocido: 'unknown'",
+      "router_confidence": 0.0,
+      "usage": {
+        "prompt_tokens": 444,
+        "completion_tokens": 140,
+        "total_tokens": 584,
+        "router_latency_s": 0.814,
+        "api_latency_s": 0,
+        "synthesis_latency_s": 1.844
+      },
+      "hallucination_risk": true,
+      "architecture": "B_API"
+    }
+  },
+  {
+    "question_id": "Q040",
+    "architecture": "B",
+    "result": {
+      "answer": "Lamentablemente, no he podido obtener la información sobre los 5 productos (CPE) con más CVEs críticos registrados en la base de datos local debido a un error en la consulta a la API. El error indica que el intento no fue reconocido, lo que significa que no se pudo procesar la solicitud.\n\nPara obtener esta información, te sugiero que consultes directamente la base de datos de CVE (Common Vulnerabilities and Exposures) en su sitio web oficial o utilices herramientas de análisis de vulnerabilidades que puedan proporcionarte un informe sobre los productos y sus CVEs críticos. También puedes revisar informes de seguridad de empresas especializadas en ciberseguridad que suelen publicar análisis sobre vulnerabilidades en productos específicos.",
+      "intent": "unknown",
+      "api_source": "N/A",
+      "api_error": "Intent no reconocido: 'unknown'",
+      "router_confidence": 0.0,
+      "usage": {
+        "prompt_tokens": 456,
+        "completion_tokens": 170,
+        "total_tokens": 626,
+        "router_latency_s": 1.055,
+        "api_latency_s": 0,
+        "synthesis_latency_s": 2.945
+      },
+      "hallucination_risk": true,
+      "architecture": "B_API"
+    }
+  },
+  {
+    "question_id": "Q041",
+    "architecture": "B",
+    "result": {
+      "answer": "Lamentablemente, no he podido obtener información específica sobre las técnicas MITRE ATT&CK que podría estar utilizando el grupo APT29 en relación con la explotación de CVE-2023-23397. Esto puede deberse a un error en la consulta a la API.\n\nSin embargo, puedo ofrecerte algunas recomendaciones generales basadas en el comportamiento conocido de APT29 y la explotación de vulnerabilidades similares:\n\n### Técnicas MITRE ATT&CK que podrían estar relacionadas:\n1. **T1071.001 - Application Layer Protocol: Web Protocols**: APT29 a menudo utiliza protocolos de aplicación para comunicarse con sus servidores de comando y control.\n2. **T1083 - File and Directory Discovery**: Podrían estar explorando el sistema para identificar archivos y directorios de interés.\n3. **T1210 - Exploitation of Remote Services**: Si han explotado una vulnerabilidad, es probable que estén utilizando técnicas para acceder a servicios remotos.\n\n### Mitigaciones urgentes recomendadas:\n1. **Aplicar parches**: Asegúrate de que todos los sistemas estén actualizados con los últimos parches de seguridad, especialmente aquellos relacionados con CVE-2023-23397.\n2. **Monitoreo de red**: Implementa un monitoreo de red para detectar actividades inusuales que puedan indicar la presencia de un atacante.\n3. **Revisión de logs**: Realiza una revisión exhaustiva de los registros de acceso y eventos para identificar cualquier actividad sospechosa.\n4. **Segmentación de red**: Asegúrate de que la red esté segmentada para limitar el movimiento lateral de un posible atacante.\n5. **Capacitación de empleados**: Proporciona capacitación sobre ciberseguridad para ayudar a los empleados a reconocer intentos de phishing y otras tácticas de ingeniería social.\n\nSi necesitas información más específica sobre técnicas MITRE ATT&CK o detalles sobre CVE-2023-23397, te recomendaría consultar directamente la base de datos de MITRE ATT&CK o fuentes de ciberseguridad confiables.",
+      "intent": "unknown",
+      "api_source": "N/A",
+      "api_error": "Intent no reconocido: 'unknown'",
+      "router_confidence": 0.0,
+      "usage": {
+        "prompt_tokens": 498,
+        "completion_tokens": 452,
+        "total_tokens": 950,
+        "router_latency_s": 1.226,
+        "api_latency_s": 0,
+        "synthesis_latency_s": 6.543
+      },
+      "hallucination_risk": true,
+      "architecture": "B_API"
+    }
+  },
+  {
+    "question_id": "Q042",
+    "architecture": "B",
+    "result": {
+      "answer": "Lamentablemente, no he podido obtener información específica sobre la relación entre la vulnerabilidad CVE-2021-44228 (Log4Shell) y las técnicas de MITRE ATT&CK, así como sobre los grupos APT que la han explotado. \n\nSin embargo, puedo ofrecerte algunas sugerencias sobre cómo podrías obtener esta información por otros medios:\n\n1. **Documentación de MITRE ATT&CK**: Puedes visitar el sitio web de MITRE ATT&CK, donde encontrarás un catálogo de técnicas y tácticas que podrían estar relacionadas con Log4Shell.\n\n2. **Bases de datos de vulnerabilidades**: Consulta bases de datos como NVD (National Vulnerability Database) o CVE Details, donde puedes encontrar información sobre la vulnerabilidad y su explotación.\n\n3. **Informes de ciberseguridad**: Busca informes de empresas de ciberseguridad que analicen la vulnerabilidad Log4Shell. A menudo, estos informes incluyen detalles sobre grupos APT que han utilizado la vulnerabilidad.\n\n4. **Foros y comunidades de ciberseguridad**: Participar en foros como Reddit o comunidades de ciberseguridad puede proporcionarte información actualizada y experiencias de otros profesionales en el campo.\n\nSi necesitas más ayuda o información específica, no dudes en preguntar.",
+      "intent": "unknown",
+      "api_source": "N/A",
+      "api_error": "Intent no reconocido: 'unknown'",
+      "router_confidence": 0.0,
+      "usage": {
+        "prompt_tokens": 488,
+        "completion_tokens": 286,
+        "total_tokens": 774,
+        "router_latency_s": 0.937,
+        "api_latency_s": 0,
+        "synthesis_latency_s": 4.281
+      },
+      "hallucination_risk": true,
+      "architecture": "B_API"
+    }
+  },
+  {
+    "question_id": "Q043",
+    "architecture": "B",
+    "result": {
+      "answer": "El ataque de ransomware que utiliza la técnica T1486, que implica la encriptación de archivos para extorsionar a las víctimas, puede tener un impacto devastador en las organizaciones. Este tipo de ataque puede resultar en la pérdida de datos críticos, interrupciones operativas y costos significativos relacionados con la recuperación y la mitigación de daños. Además, la reputación de la empresa puede verse gravemente afectada, lo que puede llevar a la pérdida de confianza por parte de clientes y socios.\n\nRecientemente, se han identificado varias vulnerabilidades (CVEs) que podrían facilitar el acceso inicial para un ataque de ransomware:\n\n1. **CVE-2018-6318**: Esta vulnerabilidad en Sophos Tester Tool permite la carga de DLL maliciosas debido a la falta de validación. La explotación de esta vulnerabilidad puede permitir a un atacante ejecutar código arbitrario en el contexto de la aplicación, lo que podría facilitar la entrega de un payload de ransomware. Tiene un puntaje CVSS de 7.8 (alto) y se considera que tiene un impacto alto en la confidencialidad, integridad y disponibilidad (NVD).\n\n2. **CVE-2017-18362**: Esta vulnerabilidad en Kaseya VSA permite la ejecución de comandos remotos no autenticados, lo que da acceso completo a la base de datos de Kaseya. Los atacantes han explotado esta vulnerabilidad para descargar y ejecutar cargas útiles de ransomware. Tiene un puntaje CVSS de 9.8 (crítico), lo que indica un alto riesgo de explotación (NVD).\n\nAmbas vulnerabilidades destacan la importancia de mantener actualizados los sistemas y aplicar parches de seguridad para mitigar el riesgo de ataques de ransomware.",
+      "intent": "search_cves",
+      "api_source": "https://services.nvd.nist.gov/rest/json/cves/2.0?resultsPerPage=10&keywordSearch=ransomware",
+      "api_error": null,
+      "router_confidence": 0.8,
+      "usage": {
+        "prompt_tokens": 2739,
+        "completion_tokens": 399,
+        "total_tokens": 3138,
+        "router_latency_s": 1.328,
+        "api_latency_s": 1.025,
+        "synthesis_latency_s": 5.323
+      },
+      "hallucination_risk": false,
+      "architecture": "B_API"
+    }
+  },
+  {
+    "question_id": "Q044",
+    "architecture": "B",
+    "result": {
+      "answer": "Lamentablemente, no he podido obtener la información sobre las tres técnicas MITRE ATT&CK más utilizadas por grupos APT de estado-nación, ni las vulnerabilidades críticas (CVE) asociadas a ellas, debido a un error en la consulta a la API.\n\nPara obtener esta información, te sugiero que consultes directamente la base de datos de MITRE ATT&CK en su sitio web oficial, donde puedes explorar las técnicas y su uso por diferentes grupos. También puedes revisar informes de ciberseguridad de empresas especializadas que analizan las actividades de grupos APT, ya que suelen proporcionar detalles sobre técnicas y vulnerabilidades asociadas.",
+      "intent": "unknown",
+      "api_source": "N/A",
+      "api_error": "Intent no reconocido: 'unknown'",
+      "router_confidence": 0.0,
+      "usage": {
+        "prompt_tokens": 486,
+        "completion_tokens": 154,
+        "total_tokens": 640,
+        "router_latency_s": 1.219,
+        "api_latency_s": 0,
+        "synthesis_latency_s": 2.393
+      },
+      "hallucination_risk": true,
+      "architecture": "B_API"
+    }
+  },
+  {
+    "question_id": "Q045",
+    "architecture": "B",
+    "result": {
+      "answer": "Para contener el movimiento lateral identificado en el tráfico anómalo (T1021), se deben priorizar los siguientes CVEs:\n\n1. **CVE-2018-20735**: Este CVE afecta al BMC PATROL Agent hasta la versión 11.3.01. Se ha descubierto que la aplicación PatrolCli permite el movimiento lateral y el escalado de privilegios en un entorno de Active Directory de Windows. Un usuario con privilegios bajos puede autenticarse y ejecutar comandos como SYSTEM en un controlador de dominio, lo que permite escalar a \"domain admin\". Este CVE tiene un puntaje CVSS 3.0 de 7.8, clasificado como alto, lo que indica un riesgo significativo. (Fuente: NVD/NIST)\n\n2. **CVE-2019-19895**: Este CVE afecta a IXP EasyInstall versión 6.2.13723. Permite el movimiento lateral utilizando el Agent Service contra otros usuarios en un sistema cliente. Un atacante autenticado puede modificar un archivo específico para ejecutar código en el contexto de otros usuarios. Este CVE también tiene un puntaje CVSS 3.1 de 7.8, lo que lo clasifica como alto. (Fuente: NVD/NIST)\n\nAmbos CVEs presentan un alto riesgo de explotación y deben ser parcheados con urgencia para mitigar el movimiento lateral en la red. Es recomendable revisar las configuraciones y aplicar las actualizaciones necesarias para prevenir posibles escaladas de privilegios.",
+      "intent": "search_cves",
+      "api_source": "https://services.nvd.nist.gov/rest/json/cves/2.0?resultsPerPage=10&keywordSearch=Lateral Movement",
+      "api_error": null,
+      "router_confidence": 0.8,
+      "usage": {
+        "prompt_tokens": 2669,
+        "completion_tokens": 352,
+        "total_tokens": 3021,
+        "router_latency_s": 1.309,
+        "api_latency_s": 1.019,
+        "synthesis_latency_s": 4.734
+      },
+      "hallucination_risk": false,
+      "architecture": "B_API"
+    }
+  },
+  {
+    "question_id": "Q046",
+    "architecture": "B",
+    "result": {
+      "answer": "Lamentablemente, no he podido obtener información específica sobre la relación entre las vulnerabilidades con un CVSS score de 10.0 y el marco MITRE ATT&CK en términos de tácticas de acceso inicial. El error que se ha producido indica que la consulta no fue reconocida por la API.\n\nPara obtener esta información, te sugiero que consultes directamente la base de datos del CVE (Common Vulnerabilities and Exposures) para identificar vulnerabilidades críticas y luego revises el marco MITRE ATT&CK para ver cómo se relacionan esas vulnerabilidades con las tácticas de acceso inicial. También puedes buscar artículos académicos o informes de ciberseguridad que analicen estas relaciones.",
+      "intent": "unknown",
+      "api_source": "N/A",
+      "api_error": "Intent no reconocido: 'unknown'",
+      "router_confidence": 0.0,
+      "usage": {
+        "prompt_tokens": 474,
+        "completion_tokens": 165,
+        "total_tokens": 639,
+        "router_latency_s": 0.887,
+        "api_latency_s": 0,
+        "synthesis_latency_s": 2.242
+      },
+      "hallucination_risk": true,
+      "architecture": "B_API"
+    }
+  },
+  {
+    "question_id": "Q047",
+    "architecture": "B",
+    "result": {
+      "answer": "Lamentablemente, no he podido obtener información específica sobre las vulnerabilidades críticas en Microsoft que deberían monitorizarse para detectar las campañas del grupo APT28. El error en la consulta impide acceder a los datos necesarios.\n\nPara obtener esta información, te sugiero que consultes fuentes de ciberseguridad reconocidas, como el sitio web del MITRE ATT&CK, donde puedes encontrar detalles sobre las tácticas, técnicas y procedimientos (TTPs) de APT28. También puedes revisar informes de seguridad de empresas como FireEye, CrowdStrike o Microsoft, que a menudo publican análisis sobre grupos de amenazas y sus métodos de ataque.",
+      "intent": "unknown",
+      "api_source": "N/A",
+      "api_error": "Intent no reconocido: 'unknown'",
+      "router_confidence": 0.0,
+      "usage": {
+        "prompt_tokens": 460,
+        "completion_tokens": 154,
+        "total_tokens": 614,
+        "router_latency_s": 0.815,
+        "api_latency_s": 0,
+        "synthesis_latency_s": 2.367
+      },
+      "hallucination_risk": true,
+      "architecture": "B_API"
+    }
+  },
+  {
+    "question_id": "Q048",
+    "architecture": "B",
+    "result": {
+      "answer": "Lamentablemente, no he podido obtener información específica sobre las recomendaciones de mitigación para el uso de T1059 (PowerShell) y la gestión de CVEs críticos sin parchear en sistemas Windows debido a un error en la consulta a la API.\n\nSin embargo, puedo ofrecerte algunas recomendaciones generales que podrías considerar:\n\n1. **Parcheo de Vulnerabilidades**: Prioriza la aplicación de parches para las CVEs críticas identificadas en tus sistemas. Esto es fundamental para reducir la superficie de ataque.\n\n2. **Restricción de PowerShell**: Implementa políticas de restricción de ejecución de PowerShell. Puedes utilizar políticas de ejecución para limitar el uso de scripts y comandos.\n\n3. **Auditoría y Monitoreo**: Habilita la auditoría de PowerShell para registrar la actividad y detectar comportamientos sospechosos. Utiliza herramientas de monitoreo para identificar el uso no autorizado de PowerShell.\n\n4. **Segmentación de Red**: Asegúrate de que los sistemas críticos estén segmentados y que el acceso a ellos esté restringido solo a usuarios y dispositivos autorizados.\n\n5. **Educación y Concienciación**: Capacita a los empleados sobre las mejores prácticas de seguridad y los riesgos asociados con el uso de PowerShell y otros scripts.\n\n6. **Uso de Herramientas de Seguridad**: Considera implementar soluciones de seguridad que puedan detectar y prevenir el uso malicioso de PowerShell, como EDR (Endpoint Detection and Response).\n\nSi necesitas información más detallada o específica, te recomendaría consultar fuentes confiables de ciberseguridad, como el sitio web del NIST, MITRE ATT&CK o la documentación de Microsoft sobre seguridad en PowerShell.",
+      "intent": "unknown",
+      "api_source": "N/A",
+      "api_error": "Intent no reconocido: 'unknown'",
+      "router_confidence": 0.0,
+      "usage": {
+        "prompt_tokens": 480,
+        "completion_tokens": 373,
+        "total_tokens": 853,
+        "router_latency_s": 0.655,
+        "api_latency_s": 0,
+        "synthesis_latency_s": 5.432
+      },
+      "hallucination_risk": true,
+      "architecture": "B_API"
+    }
+  },
+  {
+    "question_id": "Q049",
+    "architecture": "B",
+    "result": {
+      "answer": "Lamentablemente, no he podido obtener la información específica que solicitaste sobre la comparación de los niveles de riesgo entre CVE-2021-44228 (Log4Shell) y CVE-2022-30190 (Follina), así como las técnicas MITRE ATT&CK asociadas. \n\nSin embargo, puedo ofrecerte un resumen general:\n\n1. **CVE-2021-44228 (Log4Shell)**: Esta vulnerabilidad en la biblioteca Log4j permite la ejecución remota de código (RCE) y tiene un CVSS de 10.0, lo que indica un riesgo crítico. Las técnicas MITRE ATT&CK que podrían estar relacionadas incluyen \"Execution\" (Ejecución) y \"Remote File Copy\" (Copia de archivo remoto).\n\n2. **CVE-2022-30190 (Follina)**: Esta vulnerabilidad afecta a Microsoft Office y permite la ejecución de código a través de documentos maliciosos. Con un CVSS de 7.8, se considera de alto riesgo, pero no tan crítico como Log4Shell. Las técnicas MITRE ATT&CK asociadas podrían incluir \"Spear Phishing\" (Phishing dirigido) y \"Execution\" (Ejecución).\n\nPara obtener información más detallada, te sugiero que consultes las bases de datos de vulnerabilidades como el NVD (National Vulnerability Database) o el sitio web de MITRE ATT&CK, donde puedes encontrar descripciones completas y análisis de cada vulnerabilidad y sus técnicas asociadas.",
+      "intent": "unknown",
+      "api_source": "N/A",
+      "api_error": "Intent no reconocido: 'unknown'",
+      "router_confidence": 0.0,
+      "usage": {
+        "prompt_tokens": 526,
+        "completion_tokens": 337,
+        "total_tokens": 863,
+        "router_latency_s": 0.753,
+        "api_latency_s": 0,
+        "synthesis_latency_s": 4.509
+      },
+      "hallucination_risk": true,
+      "architecture": "B_API"
+    }
+  },
+  {
+    "question_id": "Q050",
+    "architecture": "B",
+    "result": {
+      "answer": "Lamentablemente, no he podido obtener información específica sobre la cadena de ataque (kill chain) que podría usar un grupo APT para comprometer una organización utilizando vulnerabilidades publicadas en 2024 y técnicas documentadas en MITRE ATT&CK. Esto se debe a que la API consultada ha devuelto un error y no ha reconocido la solicitud.\n\nPara obtener esta información, te sugiero que consultes directamente las bases de datos de vulnerabilidades, como el NVD (National Vulnerability Database) o el CVE (Common Vulnerabilities and Exposures), donde podrás encontrar detalles sobre las vulnerabilidades publicadas en 2024. Además, puedes visitar el sitio web de MITRE ATT&CK para revisar las técnicas y tácticas que podrían ser relevantes para tu consulta.\n\nSi necesitas más ayuda o información sobre un tema específico, no dudes en preguntar.",
+      "intent": "unknown",
+      "api_source": "N/A",
+      "api_error": "Intent no reconocido: 'unknown'",
+      "router_confidence": 0.0,
+      "usage": {
+        "prompt_tokens": 486,
+        "completion_tokens": 197,
+        "total_tokens": 683,
+        "router_latency_s": 1.428,
+        "api_latency_s": 0,
+        "synthesis_latency_s": 4.197
+      },
+      "hallucination_risk": true,
+      "architecture": "B_API"
+    }
+  }
+]

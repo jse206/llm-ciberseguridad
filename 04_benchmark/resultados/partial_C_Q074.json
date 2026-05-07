@@ -1,0 +1,47 @@
+{
+  "result": {
+    "answer": "Según el subgrafo proporcionado, no se menciona explícitamente ningún grupo APT que utilice la técnica T1021 (Remote Services) en el contexto de MITRE ATT&CK. La técnica T1021 se refiere a la utilización de servicios remotos para realizar movimientos laterales o acceder a sistemas de forma remota, pero el subgrafo no incluye información sobre grupos APT específicos asociados con esta técnica.\n\nPor lo tanto, no puedo proporcionar una respuesta sobre qué grupos APT utilizan la técnica T1021 basándome únicamente en la información del subgrafo.",
+    "seed_nodes": [
+      "T1021",
+      "T1053.002",
+      "S0110"
+    ],
+    "subgraph_nodes": 40,
+    "subgraph_edges": 15,
+    "coverage": {
+      "sufficient": false,
+      "missing_entities": [
+        "grupos APT"
+      ],
+      "confidence": 0.3
+    },
+    "hallucination_risk": true,
+    "usage": {
+      "prompt_tokens": 2708,
+      "completion_tokens": 151,
+      "total_tokens": 2859,
+      "retrieval_latency_s": 0.012,
+      "coverage_latency_s": 2.018,
+      "synthesis_latency_s": 2.97
+    },
+    "architecture": "C_GraphRAG"
+  },
+  "metrics": {
+    "question_id": "Q074",
+    "level": 2,
+    "domain": "MITRE",
+    "architecture": "C_GraphRAG",
+    "accuracy": 0.6667,
+    "hallucination_risk": 0.7,
+    "traceability": 1.0,
+    "error_handling": 1.0,
+    "latency_s": 5.0,
+    "total_tokens": 2859,
+    "accuracy_detail": "Score=0.667 | completas=['APT', 'T1021', 'remote services', 'grupo'] | parciales=[] | ausentes=['SMB', 'RDP']",
+    "hallucination_detail": "Flag de riesgo activo (sin datos de fuente verificados)",
+    "traceability_detail": "Markers texto: ['mitre', 'att&ck', 'según'] | Fuente estructurada: api_source=False, seed_nodes=True, sql=False",
+    "error_handling_detail": "Sin errores detectados en el pipeline",
+    "latency_detail": "retrieval=0.01s coverage=2.02s synth=2.97s",
+    "answer_preview": "Según el subgrafo proporcionado, no se menciona explícitamente ningún grupo APT que utilice la técnica T1021 (Remote Services) en el contexto de MITRE ATT&CK. La técnica T1021 se refiere a la utilización de servicios remotos para realizar movimientos laterales o acceder a sistemas de forma remota, p…"
+  }
+}

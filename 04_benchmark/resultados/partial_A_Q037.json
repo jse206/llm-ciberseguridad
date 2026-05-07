@@ -1,0 +1,39 @@
+{
+  "result": {
+    "answer": "Los resultados de la consulta SQL ejecutada contra la base de datos NVD/CVE no arrojan ningún resultado relacionado con la técnica T1059 (Command and Scripting Interpreter) en la referencia de CVEs. Esto indica que no hay información disponible en la base de datos NVD/NIST que vincule esta técnica con alguna vulnerabilidad específica en este momento.\n\nPara obtener recomendaciones sobre detecciones para la técnica T1059, se sugiere consultar directamente el marco de MITRE ATT&CK, donde se pueden encontrar estrategias y tácticas específicas para detectar el uso de intérpretes de comandos y scripts en entornos de ciberseguridad.",
+    "sql": "SELECT url, source, tags \nFROM cve_reference \nWHERE tags LIKE '%T1059%'",
+    "sql_rows": 0,
+    "correction_attempts": 0,
+    "sql_error": null,
+    "api_fallback": null,
+    "hallucination_risk": false,
+    "usage": {
+      "prompt_tokens": 2971,
+      "completion_tokens": 276,
+      "total_tokens": 3247,
+      "schema_linking_latency_s": 2.868,
+      "sql_generation_latency_s": 1.02,
+      "self_correction_latency_s": 0,
+      "synthesis_latency_s": 2.964
+    },
+    "architecture": "A_Text2SQL"
+  },
+  "metrics": {
+    "question_id": "Q037",
+    "level": 2,
+    "domain": "MITRE",
+    "architecture": "A_Text2SQL",
+    "accuracy": 0.4167,
+    "hallucination_risk": 0.0,
+    "traceability": 1.0,
+    "error_handling": 1.0,
+    "latency_s": 6.852,
+    "total_tokens": 3247,
+    "accuracy_detail": "Score=0.417 | completas=['T1059', 'script'] | parciales=['command line(50%)'] | ausentes=['detection', 'log', 'monitor']",
+    "hallucination_detail": "Sin señales de alucinación detectadas",
+    "traceability_detail": "Markers texto: ['nvd', 'nist', 'mitre'] | Fuente estructurada: api_source=False, seed_nodes=False, sql=True",
+    "error_handling_detail": "Sin errores detectados en el pipeline",
+    "latency_detail": "linking=2.87s sql=1.02s corr=0.00s synth=2.96s",
+    "answer_preview": "Los resultados de la consulta SQL ejecutada contra la base de datos NVD/CVE no arrojan ningún resultado relacionado con la técnica T1059 (Command and Scripting Interpreter) en la referencia de CVEs. Esto indica que no hay información disponible en la base de datos NVD/NIST que vincule esta técnica c…"
+  }
+}

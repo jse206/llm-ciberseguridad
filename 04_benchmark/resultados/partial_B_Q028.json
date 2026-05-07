@@ -1,0 +1,37 @@
+{
+  "result": {
+    "answer": "Lamentablemente, no he podido obtener la lista de los 10 CVEs más recientes relacionados con vulnerabilidades de tipo SQL Injection publicados en 2024 debido a un error en la API consultada. El error específico es un \"404 Client Error: Not Found\", lo que indica que la URL solicitada no está disponible o no se puede encontrar.\n\nPara obtener esta información, te sugiero las siguientes alternativas:\n\n1. **Visitar el sitio web del NVD (National Vulnerability Database)**: Puedes acceder directamente a su página en [nvd.nist.gov](https://nvd.nist.gov/) y utilizar su función de búsqueda para filtrar por tipo de vulnerabilidad y fecha de publicación.\n\n2. **Consultar otras bases de datos de vulnerabilidades**: Existen otras fuentes como CVE Details, SecurityFocus o el MITRE CVE que pueden tener información similar.\n\n3. **Utilizar herramientas de ciberseguridad**: Algunas herramientas de gestión de vulnerabilidades pueden ofrecer información actualizada sobre CVEs y permitirte filtrar por tipo de vulnerabilidad.\n\nSi necesitas más ayuda o información específica, no dudes en preguntar.",
+    "intent": "search_cves",
+    "api_source": "https://services.nvd.nist.gov/rest/json/cves/2.0?resultsPerPage=10&keywordSearch=SQL Injection&pubStartDate=2024-01-01T00:00:00.000&pubEndDate=2024-12-31T23:59:59.999",
+    "api_error": "404 Client Error: Not Found for url: https://services.nvd.nist.gov/rest/json/cves/2.0?resultsPerPage=10&keywordSearch=SQL%20Injection&pubStartDate=2024-01-01T00:00:00.000&pubEndDate=2024-12-31T23:59:59.999",
+    "router_confidence": 0.9,
+    "usage": {
+      "prompt_tokens": 586,
+      "completion_tokens": 299,
+      "total_tokens": 885,
+      "router_latency_s": 1.654,
+      "api_latency_s": 0,
+      "synthesis_latency_s": 4.358
+    },
+    "hallucination_risk": true,
+    "architecture": "B_API"
+  },
+  "metrics": {
+    "question_id": "Q028",
+    "level": 2,
+    "domain": "NVD",
+    "architecture": "B_API",
+    "accuracy": 0.6667,
+    "hallucination_risk": 1.0,
+    "traceability": 1.0,
+    "error_handling": 0.8,
+    "latency_s": 6.012,
+    "total_tokens": 885,
+    "accuracy_detail": "Score=0.667 | completas=['sql injection', '2024'] | parciales=[] | ausentes=['CWE-89']",
+    "hallucination_detail": "Flag activo + error de fuente detectado",
+    "traceability_detail": "Markers texto: ['nvd', 'nist', 'national vulnerability'] | Fuente estructurada: api_source=True, seed_nodes=False, sql=False",
+    "error_handling_detail": "Error presente pero reconocido honestamente en la respuesta",
+    "latency_detail": "router=1.65s api=0.00s synth=4.36s",
+    "answer_preview": "Lamentablemente, no he podido obtener la lista de los 10 CVEs más recientes relacionados con vulnerabilidades de tipo SQL Injection publicados en 2024 debido a un error en la API consultada. El error específico es un \"404 Client Error: Not Found\", lo que indica que la URL solicitada no está disponib…"
+  }
+}

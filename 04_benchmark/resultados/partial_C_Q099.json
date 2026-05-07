@@ -1,0 +1,49 @@
+{
+  "result": {
+    "answer": "Según MITRE ATT&CK, las técnicas que podrían permitir a un atacante evadir la detección tras comprometer un sistema utilizando CVE-2019-0708 (BlueKeep) incluyen:\n\n1. **T1071.001 — Web Protocols**: Los atacantes pueden comunicarse utilizando protocolos de aplicación asociados con el tráfico web para evitar la detección y el filtrado de red, mezclándose con el tráfico existente. Esto puede ayudar a ocultar las actividades maliciosas de los sistemas de monitoreo de red.\n\n2. **T1550.003 — Pass the Ticket**: Esta técnica permite a los atacantes utilizar tickets Kerberos robados para moverse lateralmente dentro de un entorno, eludiendo los controles de acceso normales del sistema. Esto puede ser útil para mantener el acceso a otros sistemas sin ser detectado.\n\n3. **T1556.005 — Reversible Encryption**: Los atacantes pueden abusar de las propiedades de cifrado de autenticación de Active Directory para acceder a credenciales en sistemas Windows. Esto puede facilitar el acceso a otros sistemas sin necesidad de ser detectados.\n\n4. **T1574.012 — COR_PROFILER**: Esta técnica permite a los atacantes aprovechar la variable de entorno COR_PROFILER para secuestrar el flujo de ejecución de programas que cargan el CLR de .NET, lo que puede ser utilizado para persistencia y evasión de defensa.\n\n5. **T1197 — BITS Jobs**: Los atacantes pueden abusar de los trabajos de BITS (Background Intelligent Transfer Service) para ejecutar código de manera persistente y realizar diversas tareas en segundo plano, lo que puede ayudar a evadir la detección.\n\n6. **T1578.002 — Create Cloud Instance**: Crear una nueva instancia o máquina virtual dentro de un servicio de computación en la nube puede permitir a un atacante eludir las defensas existentes, como las reglas de firewall.\n\nEstas técnicas son ejemplos de cómo un atacante podría intentar evadir la detección después de haber explotado una vulnerabilidad como BlueKeep. La combinación de estas técnicas puede proporcionar a los atacantes múltiples vías para mantener el acceso y operar sin ser detectados en un entorno comprometido.",
+    "seed_nodes": [
+      "T1053.002",
+      "S0110",
+      "S0114"
+    ],
+    "subgraph_nodes": 40,
+    "subgraph_edges": 7,
+    "coverage": {
+      "sufficient": false,
+      "missing_entities": [
+        "CVE-2019-0708",
+        "evading detection techniques",
+        "MITRE ATT&CK techniques"
+      ],
+      "confidence": 0.3
+    },
+    "hallucination_risk": true,
+    "usage": {
+      "prompt_tokens": 2724,
+      "completion_tokens": 504,
+      "total_tokens": 3228,
+      "retrieval_latency_s": 0.013,
+      "coverage_latency_s": 1.417,
+      "synthesis_latency_s": 7.066
+    },
+    "architecture": "C_GraphRAG"
+  },
+  "metrics": {
+    "question_id": "Q099",
+    "level": 3,
+    "domain": "BOTH",
+    "architecture": "C_GraphRAG",
+    "accuracy": 0.3571,
+    "hallucination_risk": 0.7,
+    "traceability": 1.0,
+    "error_handling": 1.0,
+    "latency_s": 8.496,
+    "total_tokens": 3228,
+    "accuracy_detail": "Score=0.357 | completas=['BlueKeep', 'CVE-2019-0708'] | parciales=['lateral movement(50%)'] | ausentes=['defense evasion', 'T1055', 'T1027', 'T1021']",
+    "hallucination_detail": "Flag de riesgo activo (sin datos de fuente verificados)",
+    "traceability_detail": "Markers texto: ['mitre', 'att&ck', 'según'] | Fuente estructurada: api_source=False, seed_nodes=True, sql=False",
+    "error_handling_detail": "Sin errores detectados en el pipeline",
+    "latency_detail": "retrieval=0.01s coverage=1.42s synth=7.07s",
+    "answer_preview": "Según MITRE ATT&CK, las técnicas que podrían permitir a un atacante evadir la detección tras comprometer un sistema utilizando CVE-2019-0708 (BlueKeep) incluyen:\n\n1. **T1071.001 — Web Protocols**: Los atacantes pueden comunicarse utilizando protocolos de aplicación asociados con el tráfico web para …"
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "result": {
+    "answer": "No he encontrado información relevante en el grafo MITRE ATT&CK sobre la descripción de CVE-2023-23397. MITRE ATT&CK se centra en técnicas de ataque, grupos APT, tácticas, mitigaciones y herramientas, pero no proporciona detalles sobre vulnerabilidades específicas como las CVE.\n\nSi necesitas información sobre técnicas de ataque, grupos APT, tácticas, mitigaciones o herramientas relacionadas con la ciberseguridad, estaré encantado de ayudarte con eso.",
+    "seed_nodes": [],
+    "subgraph_nodes": 0,
+    "subgraph_edges": 0,
+    "coverage": {
+      "sufficient": false,
+      "missing_entities": [],
+      "confidence": 0.0
+    },
+    "hallucination_risk": true,
+    "usage": {
+      "prompt_tokens": 139,
+      "completion_tokens": 100,
+      "total_tokens": 239,
+      "retrieval_latency_s": 0.015,
+      "coverage_latency_s": 0,
+      "synthesis_latency_s": 2.176
+    },
+    "architecture": "C_GraphRAG"
+  },
+  "metrics": {
+    "question_id": "Q003",
+    "level": 1,
+    "domain": "NVD",
+    "architecture": "C_GraphRAG",
+    "accuracy": 0.0,
+    "hallucination_risk": 0.7,
+    "traceability": 0.5,
+    "error_handling": 1.0,
+    "latency_s": 2.191,
+    "total_tokens": 239,
+    "accuracy_detail": "Score=0.000 | completas=[] | parciales=[] | ausentes=['outlook', 'ntlm', 'hash', 'microsoft', 'privilege']",
+    "hallucination_detail": "Flag de riesgo activo (sin datos de fuente verificados)",
+    "traceability_detail": "Markers texto: ['mitre', 'att&ck', 'grafo'] | Fuente estructurada: api_source=False, seed_nodes=False, sql=False",
+    "error_handling_detail": "Sin errores detectados en el pipeline",
+    "latency_detail": "retrieval=0.01s coverage=0.00s synth=2.18s",
+    "answer_preview": "No he encontrado información relevante en el grafo MITRE ATT&CK sobre la descripción de CVE-2023-23397. MITRE ATT&CK se centra en técnicas de ataque, grupos APT, tácticas, mitigaciones y herramientas, pero no proporciona detalles sobre vulnerabilidades específicas como las CVE.\n\nSi necesitas informa…"
+  }
+}

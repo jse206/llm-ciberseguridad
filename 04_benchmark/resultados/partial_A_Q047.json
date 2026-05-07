@@ -1,0 +1,39 @@
+{
+  "result": {
+    "answer": "Los datos proporcionados provienen de la base de datos NVD/NIST. Según la consulta SQL ejecutada, se han identificado las siguientes vulnerabilidades críticas en productos de Microsoft que deberían ser monitorizadas para detectar posibles campañas del grupo APT28:\n\n1. **CVE-2022-21846**: Vulnerabilidad de ejecución remota de código en Microsoft Exchange Server. Esta vulnerabilidad permite a un atacante ejecutar código arbitrario en el servidor afectado, lo que puede comprometer la seguridad del sistema.\n\n2. **CVE-2022-21855**: También se trata de una vulnerabilidad de ejecución remota de código en Microsoft Exchange Server, que presenta un riesgo similar al anterior, permitiendo a un atacante ejecutar código no autorizado.\n\nEs importante destacar que la vulnerabilidad CVE-2022-21846 se repite en los resultados, lo que indica que es un punto crítico a tener en cuenta. Ambas vulnerabilidades son relevantes para la seguridad de los sistemas que utilizan Microsoft Exchange Server y deben ser objeto de atención especial para prevenir posibles ataques por parte del grupo APT28.",
+    "sql": "SELECT c.cve_id, c.description\nFROM cve AS c\nJOIN cve_cpe AS cc ON c.cve_id = cc.cve_id\nWHERE c.cvss_v3_severity = 'CRITICAL' AND cc.cpe_uri LIKE 'cpe:2.3:a:microsoft:%'\nLIMIT 10;",
+    "sql_rows": 10,
+    "correction_attempts": 1,
+    "sql_error": null,
+    "api_fallback": null,
+    "hallucination_risk": false,
+    "usage": {
+      "prompt_tokens": 4713,
+      "completion_tokens": 487,
+      "total_tokens": 5200,
+      "schema_linking_latency_s": 3.225,
+      "sql_generation_latency_s": 1.926,
+      "self_correction_latency_s": 2.871,
+      "synthesis_latency_s": 5.349
+    },
+    "architecture": "A_Text2SQL"
+  },
+  "metrics": {
+    "question_id": "Q047",
+    "level": 3,
+    "domain": "BOTH",
+    "architecture": "A_Text2SQL",
+    "accuracy": 0.3333,
+    "hallucination_risk": 0.0,
+    "traceability": 1.0,
+    "error_handling": 1.0,
+    "latency_s": 13.371,
+    "total_tokens": 5200,
+    "accuracy_detail": "Score=0.333 | completas=['APT28', 'microsoft'] | parciales=[] | ausentes=['outlook', 'CVE-2023-23397', 'T1566', 'fancy bear']",
+    "hallucination_detail": "Sin señales de alucinación detectadas",
+    "traceability_detail": "Markers texto: ['nvd', 'nist', 'según'] | Fuente estructurada: api_source=False, seed_nodes=False, sql=True",
+    "error_handling_detail": "Sin errores detectados en el pipeline",
+    "latency_detail": "linking=3.23s sql=1.93s corr=2.87s synth=5.35s",
+    "answer_preview": "Los datos proporcionados provienen de la base de datos NVD/NIST. Según la consulta SQL ejecutada, se han identificado las siguientes vulnerabilidades críticas en productos de Microsoft que deberían ser monitorizadas para detectar posibles campañas del grupo APT28:\n\n1. **CVE-2022-21846**: Vulnerabili…"
+  }
+}

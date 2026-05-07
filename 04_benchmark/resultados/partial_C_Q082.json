@@ -1,0 +1,50 @@
+{
+  "result": {
+    "answer": "Según el subgrafo recuperado del framework MITRE ATT&CK, el grupo Sandworm Team (G0034) utiliza las siguientes técnicas:\n\n1. **Técnica T1003.001 — LSASS Memory**: Esta técnica permite a los adversarios acceder a material de credenciales almacenado en la memoria del proceso de LSASS (Local Security Authority Subsystem Service) en sistemas Windows. Esto se utiliza para obtener credenciales de usuario.\n\n2. **Técnica T1071.001 — Web Protocols**: Los adversarios pueden comunicarse utilizando protocolos de aplicación asociados con el tráfico web para evitar la detección y el filtrado de red, lo que les permite enviar comandos a sistemas remotos.\n\n3. **Técnica T1041 — Exfiltration Over C2 Channel**: Esta técnica implica el robo de datos mediante la exfiltración a través de un canal de comando y control existente, utilizando el mismo protocolo que se usa para la comunicación de comando y control.\n\n4. **Técnica T1204.003 — Malicious Image**: Los adversarios pueden depender de que un usuario ejecute una imagen maliciosa para facilitar la ejecución de código malicioso.\n\n5. **Técnica T1543.002 — Systemd Service**: Esta técnica permite a los adversarios crear o modificar servicios de systemd para ejecutar repetidamente cargas útiles maliciosas como parte de la persistencia en sistemas Linux.\n\n6. **Técnica T1585.002 — Email Accounts**: Los adversarios pueden crear cuentas de correo electrónico que se utilizan durante las operaciones de targeting, como el phishing.\n\n7. **Técnica T1203 — Exploitation for Client Execution**: Esta técnica se refiere a la explotación de vulnerabilidades en aplicaciones cliente para ejecutar código malicioso.\n\n8. **Técnica T1070.003 — Clear Command History**: Los adversarios pueden limpiar el historial de comandos de una cuenta comprometida para ocultar las acciones realizadas durante una intrusión.\n\n9. **Técnica T1213.006 — Databases**: Los adversarios pueden aprovechar bases de datos para extraer información valiosa.\n\n10. **Técnica T1547.001 — Registry Run Keys / Startup Folder**: Esta técnica permite a los adversarios lograr persistencia al agregar un programa a una carpeta de inicio o referenciarlo con una clave de ejecución en el registro de Windows.\n\nEstas técnicas reflejan las capacidades y métodos de ataque del grupo Sandworm Team, que ha estado activo en diversas campañas cibernéticas. \n\nSegún MITRE ATT&CK, estas técnicas son parte de las tácticas de ejecución, movimiento lateral, descubrimiento, comando y control, y persistencia, entre otras.",
+    "seed_nodes": [
+      "G0034",
+      "T1053.002",
+      "S0110",
+      "S0047",
+      "G0139"
+    ],
+    "subgraph_nodes": 40,
+    "subgraph_edges": 22,
+    "coverage": {
+      "sufficient": false,
+      "missing_entities": [
+        "Sandworm Team",
+        "Técnicas específicas de MITRE ATT&CK"
+      ],
+      "confidence": 0.3
+    },
+    "hallucination_risk": true,
+    "usage": {
+      "prompt_tokens": 2711,
+      "completion_tokens": 606,
+      "total_tokens": 3317,
+      "retrieval_latency_s": 0.008,
+      "coverage_latency_s": 1.254,
+      "synthesis_latency_s": 9.924
+    },
+    "architecture": "C_GraphRAG"
+  },
+  "metrics": {
+    "question_id": "Q082",
+    "level": 2,
+    "domain": "MITRE",
+    "architecture": "C_GraphRAG",
+    "accuracy": 0.3333,
+    "hallucination_risk": 0.7,
+    "traceability": 1.0,
+    "error_handling": 1.0,
+    "latency_s": 11.186,
+    "total_tokens": 3317,
+    "accuracy_detail": "Score=0.333 | completas=['Sandworm', 'G0034'] | parciales=[] | ausentes=['ukraine', 'russia', 'T1486', 'NotPetya']",
+    "hallucination_detail": "Flag de riesgo activo (sin datos de fuente verificados)",
+    "traceability_detail": "Markers texto: ['mitre', 'att&ck', 'según'] | Fuente estructurada: api_source=False, seed_nodes=True, sql=False",
+    "error_handling_detail": "Sin errores detectados en el pipeline",
+    "latency_detail": "retrieval=0.01s coverage=1.25s synth=9.92s",
+    "answer_preview": "Según el subgrafo recuperado del framework MITRE ATT&CK, el grupo Sandworm Team (G0034) utiliza las siguientes técnicas:\n\n1. **Técnica T1003.001 — LSASS Memory**: Esta técnica permite a los adversarios acceder a material de credenciales almacenado en la memoria del proceso de LSASS (Local Security A…"
+  }
+}

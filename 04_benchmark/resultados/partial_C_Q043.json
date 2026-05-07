@@ -1,0 +1,52 @@
+{
+  "result": {
+    "answer": "El ataque de ransomware que utiliza la técnica T1486, \"Data Encrypted for Impact\", tiene un impacto potencial significativo, ya que puede interrumpir la disponibilidad de datos críticos en sistemas y redes. Este tipo de ataque puede resultar en la pérdida de acceso a información vital, lo que puede afectar gravemente las operaciones de una organización, provocar pérdidas financieras y dañar la reputación de la misma. Según MITRE ATT&CK, esta técnica se aplica a diversas plataformas, incluyendo ESXi, IaaS, Linux, macOS y Windows.\n\nPara facilitar el acceso inicial a un ataque de ransomware que emplee T1486, es crucial considerar las vulnerabilidades que podrían ser explotadas. Sin embargo, el subgrafo proporcionado no incluye información específica sobre CVEs (Common Vulnerabilities and Exposures) recientes que podrían ser utilizadas para este propósito. Por lo tanto, no puedo identificar CVEs concretos que faciliten el acceso inicial para un ataque de ransomware basado en la información disponible.\n\nEn general, los atacantes suelen buscar vulnerabilidades en software ampliamente utilizado, sistemas operativos y aplicaciones que puedan permitir la ejecución de código malicioso o la escalada de privilegios. Las vulnerabilidades en servicios de red, aplicaciones web y software de gestión de sistemas son a menudo objetivos comunes.\n\nPara mitigar el impacto de un ataque de ransomware, se recomienda implementar medidas de seguridad como la gestión de cuentas privilegiadas (M1026), la auditoría de sistemas (M1047) y la gestión de cuentas de usuario (M1018). Estas prácticas ayudan a reducir la superficie de ataque y a detectar actividades sospechosas antes de que se produzcan incidentes graves.\n\nEn resumen, aunque el impacto de un ataque de ransomware utilizando T1486 puede ser devastador, el subgrafo no proporciona información sobre CVEs recientes que faciliten el acceso inicial. Se sugiere que las organizaciones mantengan sus sistemas actualizados y apliquen buenas prácticas de seguridad para protegerse contra tales amenazas.",
+    "seed_nodes": [
+      "T1486",
+      "TA0040",
+      "T1053.002",
+      "S0110",
+      "S1244"
+    ],
+    "subgraph_nodes": 40,
+    "subgraph_edges": 80,
+    "coverage": {
+      "sufficient": false,
+      "missing_entities": [
+        "CVE",
+        "ransomware",
+        "impact analysis",
+        "initial access vectors"
+      ],
+      "confidence": 0.4
+    },
+    "hallucination_risk": true,
+    "usage": {
+      "prompt_tokens": 3028,
+      "completion_tokens": 449,
+      "total_tokens": 3477,
+      "retrieval_latency_s": 0.016,
+      "coverage_latency_s": 1.748,
+      "synthesis_latency_s": 7.681
+    },
+    "architecture": "C_GraphRAG"
+  },
+  "metrics": {
+    "question_id": "Q043",
+    "level": 3,
+    "domain": "BOTH",
+    "architecture": "C_GraphRAG",
+    "accuracy": 0.6667,
+    "hallucination_risk": 0.7,
+    "traceability": 1.0,
+    "error_handling": 1.0,
+    "latency_s": 9.445,
+    "total_tokens": 3477,
+    "accuracy_detail": "Score=0.667 | completas=['T1486', 'ransomware', 'CVE', 'impacto'] | parciales=[] | ausentes=['initial access', 'critical']",
+    "hallucination_detail": "Flag de riesgo activo (sin datos de fuente verificados)",
+    "traceability_detail": "Markers texto: ['mitre', 'att&ck', 'según'] | Fuente estructurada: api_source=False, seed_nodes=True, sql=False",
+    "error_handling_detail": "Sin errores detectados en el pipeline",
+    "latency_detail": "retrieval=0.02s coverage=1.75s synth=7.68s",
+    "answer_preview": "El ataque de ransomware que utiliza la técnica T1486, \"Data Encrypted for Impact\", tiene un impacto potencial significativo, ya que puede interrumpir la disponibilidad de datos críticos en sistemas y redes. Este tipo de ataque puede resultar en la pérdida de acceso a información vital, lo que puede …"
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "result": {
+    "answer": "Para proteger los servidores Microsoft Exchange de una organización contra los TTPs del grupo APT28, se recomiendan las siguientes mitigaciones:\n\n1. **Implementar Políticas de Uso de Cuentas (M1036)**: Establecer y hacer cumplir reglas que regulen cómo y cuándo se pueden usar las cuentas. Esto incluye mecanismos de bloqueo de cuentas tras varios intentos fallidos de inicio de sesión, lo que puede ayudar a prevenir ataques de \"Password Guessing\" y \"Brute Force\".\n\n2. **Gestión de Cuentas Privilegiadas (M1026)**: Asegurarse de que las cuentas con privilegios elevados (como las cuentas de administrador) estén gestionadas de manera segura. Esto incluye restringir el acceso y aplicar controles adicionales para estas cuentas.\n\n3. **Autenticación Multifactor (MFA)**: Implementar MFA para todas las cuentas, especialmente aquellas con acceso administrativo. Esto añade una capa adicional de seguridad que puede prevenir el acceso no autorizado incluso si las credenciales son comprometidas.\n\n4. **Monitoreo y Respuesta a Incidentes**: Establecer un sistema de monitoreo para detectar intentos de acceso no autorizados y responder rápidamente a cualquier actividad sospechosa.\n\n5. **Educación y Concienciación**: Capacitar a los empleados sobre la importancia de crear contraseñas fuertes y únicas, así como sobre los riesgos asociados con el phishing y otros métodos de ingeniería social.\n\nEstas medidas ayudarán a mitigar el riesgo de ataques dirigidos por APT28 y protegerán la infraestructura de Microsoft Exchange de la organización.\n\n**Fuentes consultadas:** query_mitre_graph",
+    "steps": [
+      {
+        "thought": "",
+        "action": "query_mitre_graph",
+        "action_input": {
+          "question": "¿Qué técnicas usa el grupo APT28?"
+        },
+        "observation_preview": "{\n  \"context\": \"=== SUBGRAFO MITRE ATT&CK ===\\n\\n--- Entidades recuperadas ---\\n  [attack-pattern] T1560.001 — Archive via Utility\\n     Adversaries may use utilities to compress and/or encrypt collected data prior to exfiltration. Many utilities include functionalities to compress, encrypt, or othe…"
+      },
+      {
+        "thought": "",
+        "action": "query_mitre_graph",
+        "action_input": {
+          "question": "¿Qué mitigaciones cubre T1560.001 Archive via Utility, T1589.001 Credentials, T1110.001 Password Guessing, T1110 Brute Force?"
+        },
+        "observation_preview": "{\n  \"context\": \"=== SUBGRAFO MITRE ATT&CK ===\\n\\n--- Entidades recuperadas ---\\n★ [attack-pattern] T1110.001 — Password Guessing\\n     Adversaries with no prior knowledge of legitimate credentials within the system or environment may guess passwords to attempt access to accounts. Without knowledge o…"
+      },
+      {
+        "thought": "",
+        "action": "query_mitre_graph",
+        "action_input": {
+          "question": "¿Qué mitigaciones cubre T1110.001 Password Guessing y T1110 Brute Force?"
+        },
+        "observation_preview": "{\n  \"context\": \"=== SUBGRAFO MITRE ATT&CK ===\\n\\n--- Entidades recuperadas ---\\n★ [attack-pattern] T1110.001 — Password Guessing\\n     Adversaries with no prior knowledge of legitimate credentials within the system or environment may guess passwords to attempt access to accounts. Without knowledge o…"
+      }
+    ],
+    "tools_used": [
+      "query_mitre_graph",
+      "query_mitre_graph",
+      "query_mitre_graph"
+    ],
+    "iterations": 3,
+    "forced_final": false,
+    "hallucination_risk": false,
+    "usage": {
+      "prompt_tokens": 8212,
+      "completion_tokens": 657,
+      "total_tokens": 8869,
+      "total_latency_s": 18.357
+    },
+    "architecture": "D_Toolformer"
+  },
+  "metrics": {
+    "question_id": "Q091",
+    "level": 3,
+    "domain": "BOTH",
+    "architecture": "D_Toolformer",
+    "accuracy": 0.4286,
+    "hallucination_risk": 0.0,
+    "traceability": 0.5,
+    "error_handling": 1.0,
+    "latency_s": 18.357,
+    "total_tokens": 8869,
+    "accuracy_detail": "Score=0.429 | completas=['APT28', 'exchange', 'MFA'] | parciales=[] | ausentes=['CVE-2021-26855', 'CVE-2023-23397', 'T1566', 'parche']",
+    "hallucination_detail": "Sin señales de alucinación detectadas",
+    "traceability_detail": "Markers texto: ['nist', 'mitre', 'fuente'] | Fuente estructurada: api_source=False, seed_nodes=False, sql=False",
+    "error_handling_detail": "Sin errores detectados en el pipeline",
+    "latency_detail": "total_react=18.36s iterations=3",
+    "answer_preview": "Para proteger los servidores Microsoft Exchange de una organización contra los TTPs del grupo APT28, se recomiendan las siguientes mitigaciones:\n\n1. **Implementar Políticas de Uso de Cuentas (M1036)**: Establecer y hacer cumplir reglas que regulen cómo y cuándo se pueden usar las cuentas. Esto inclu…"
+  }
+}

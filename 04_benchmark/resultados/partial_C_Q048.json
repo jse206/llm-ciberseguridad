@@ -1,0 +1,48 @@
+{
+  "result": {
+    "answer": "Para una organización que ha identificado el uso de T1059 (PowerShell) y tiene CVEs críticos sin parchear en sus sistemas Windows, se pueden considerar las siguientes recomendaciones de mitigación:\n\n1. **Parcheo de Vulnerabilidades**: La primera y más crítica acción es aplicar parches a las vulnerabilidades identificadas (CVEs). Esto es fundamental para reducir la superficie de ataque y prevenir que los adversarios exploten estas vulnerabilidades. Según MITRE ATT&CK, la falta de parches puede permitir que los atacantes utilicen técnicas como T1059 (PowerShell) para ejecutar comandos maliciosos.\n\n2. **Restricción del Uso de PowerShell**: Implementar políticas que restrinjan el uso de PowerShell a usuarios y procesos autorizados. Esto puede incluir la desactivación de la ejecución de scripts de PowerShell o la implementación de políticas de ejecución más restrictivas. Esto ayudará a prevenir el uso no autorizado de PowerShell por parte de actores maliciosos.\n\n3. **Auditoría y Monitoreo**: Realizar auditorías regulares de los sistemas y monitorear la actividad de PowerShell. Según MITRE ATT&CK, la auditoría (M1047) es esencial para detectar anomalías y actividades sospechosas. Implementar soluciones de monitoreo que alerten sobre la ejecución de comandos de PowerShell inusuales o no autorizados.\n\n4. **Educación y Concienciación**: Capacitar a los empleados sobre las mejores prácticas de seguridad, incluyendo la identificación de correos electrónicos de phishing y la importancia de no ejecutar scripts o comandos de fuentes no confiables. La concienciación del usuario puede ser una línea de defensa efectiva contra ataques que utilizan PowerShell.\n\n5. **Implementación de Herramientas de Seguridad**: Utilizar herramientas de seguridad que puedan detectar y bloquear actividades maliciosas relacionadas con PowerShell. Esto incluye soluciones de detección y respuesta de endpoints (EDR) que pueden identificar comportamientos anómalos asociados con el uso de PowerShell.\n\n6. **Segmentación de Redes**: Implementar segmentación de redes para limitar el acceso a sistemas críticos. Esto puede ayudar a contener un posible ataque y evitar que un atacante se mueva lateralmente a través de la red utilizando PowerShell.\n\nEstas recomendaciones, si se implementan de manera efectiva, pueden ayudar a mitigar el riesgo asociado con el uso de PowerShell y la explotación de vulnerabilidades críticas en los sistemas Windows. Según MITRE ATT&CK, la combinación de parches, restricciones de uso, auditoría y educación es clave para fortalecer la postura de seguridad de la organización.",
+    "seed_nodes": [
+      "T1059",
+      "T1059.001"
+    ],
+    "subgraph_nodes": 40,
+    "subgraph_edges": 12,
+    "coverage": {
+      "sufficient": false,
+      "missing_entities": [
+        "recomendaciones de mitigación",
+        "CVEs críticos",
+        "sistemas Windows"
+      ],
+      "confidence": 0.4
+    },
+    "hallucination_risk": true,
+    "usage": {
+      "prompt_tokens": 3018,
+      "completion_tokens": 582,
+      "total_tokens": 3600,
+      "retrieval_latency_s": 0.017,
+      "coverage_latency_s": 1.313,
+      "synthesis_latency_s": 9.342
+    },
+    "architecture": "C_GraphRAG"
+  },
+  "metrics": {
+    "question_id": "Q048",
+    "level": 3,
+    "domain": "BOTH",
+    "architecture": "C_GraphRAG",
+    "accuracy": 0.7143,
+    "hallucination_risk": 0.7,
+    "traceability": 1.0,
+    "error_handling": 1.0,
+    "latency_s": 10.672,
+    "total_tokens": 3600,
+    "accuracy_detail": "Score=0.714 | completas=['T1059', 'powershell', 'mitigación', 'windows', 'parche'] | parciales=[] | ausentes=['M1038', 'M1042']",
+    "hallucination_detail": "Flag de riesgo activo (sin datos de fuente verificados)",
+    "traceability_detail": "Markers texto: ['mitre', 'att&ck', 'según'] | Fuente estructurada: api_source=False, seed_nodes=True, sql=False",
+    "error_handling_detail": "Sin errores detectados en el pipeline",
+    "latency_detail": "retrieval=0.02s coverage=1.31s synth=9.34s",
+    "answer_preview": "Para una organización que ha identificado el uso de T1059 (PowerShell) y tiene CVEs críticos sin parchear en sus sistemas Windows, se pueden considerar las siguientes recomendaciones de mitigación:\n\n1. **Parcheo de Vulnerabilidades**: La primera y más crítica acción es aplicar parches a las vulnerab…"
+  }
+}

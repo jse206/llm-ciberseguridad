@@ -1,0 +1,39 @@
+{
+  "result": {
+    "answer": "Los resultados de la consulta SQL ejecutada contra la base de datos NVD/NIST no arrojaron ningún resultado relacionado con las técnicas utilizadas por APT28 ni con aquellas que están específicamente relacionadas con la exfiltración de datos. Esto indica que no se encontraron entradas en la base de datos que contengan información sobre APT28 o sobre técnicas de exfiltración de datos en el contexto de las vulnerabilidades registradas. \n\nSi necesitas información adicional o un análisis más detallado sobre APT28 o técnicas de exfiltración de datos, te recomendaría consultar otras fuentes de inteligencia sobre amenazas o bases de datos especializadas en ciberseguridad.",
+    "sql": "SELECT cve.cve_id, cve.description, cve_reference.url, cve_reference.tags\nFROM cve\nJOIN cve_reference ON cve.cve_id = cve_reference.cve_id\nWHERE cve_reference.tags LIKE '%APT28%' OR cve_reference.tags LIKE '%exfiltration%'\nLIMIT 10;",
+    "sql_rows": 0,
+    "correction_attempts": 0,
+    "sql_error": null,
+    "api_fallback": null,
+    "hallucination_risk": false,
+    "usage": {
+      "prompt_tokens": 3012,
+      "completion_tokens": 329,
+      "total_tokens": 3341,
+      "schema_linking_latency_s": 2.793,
+      "sql_generation_latency_s": 1.84,
+      "self_correction_latency_s": 0,
+      "synthesis_latency_s": 3.257
+    },
+    "architecture": "A_Text2SQL"
+  },
+  "metrics": {
+    "question_id": "Q031",
+    "level": 2,
+    "domain": "MITRE",
+    "architecture": "A_Text2SQL",
+    "accuracy": 0.2,
+    "hallucination_risk": 0.0,
+    "traceability": 1.0,
+    "error_handling": 1.0,
+    "latency_s": 7.89,
+    "total_tokens": 3341,
+    "accuracy_detail": "Score=0.200 | completas=['APT28'] | parciales=[] | ausentes=['exfiltration', 'T1041', 'fancy bear', 'russia']",
+    "hallucination_detail": "Sin señales de alucinación detectadas",
+    "traceability_detail": "Markers texto: ['nvd', 'nist', 'fuente'] | Fuente estructurada: api_source=False, seed_nodes=False, sql=True",
+    "error_handling_detail": "Sin errores detectados en el pipeline",
+    "latency_detail": "linking=2.79s sql=1.84s corr=0.00s synth=3.26s",
+    "answer_preview": "Los resultados de la consulta SQL ejecutada contra la base de datos NVD/NIST no arrojaron ningún resultado relacionado con las técnicas utilizadas por APT28 ni con aquellas que están específicamente relacionadas con la exfiltración de datos. Esto indica que no se encontraron entradas en la base de d…"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "result": {
+    "answer": "El vector CVSS v3 de la vulnerabilidad CVE-2021-26084 es el siguiente:\n\n**Vector String**: `CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H`\n\nEste vector indica las siguientes características de la vulnerabilidad:\n\n- **AV (Attack Vector)**: NETWORK (Ataque a través de la red)\n- **AC (Attack Complexity)**: LOW (Complejidad baja para el ataque)\n- **PR (Privileges Required)**: NONE (No se requieren privilegios)\n- **UI (User Interaction)**: NONE (No se requiere interacción del usuario)\n- **S (Scope)**: UNCHANGED (El alcance no cambia)\n- **C (Confidentiality Impact)**: HIGH (Impacto alto en la confidencialidad)\n- **I (Integrity Impact)**: HIGH (Impacto alto en la integridad)\n- **A (Availability Impact)**: HIGH (Impacto alto en la disponibilidad)\n\nLa puntuación base de esta vulnerabilidad es **9.8**, lo que la clasifica como **CRITICAL** (Crítica) según la severidad. \n\nEstos datos provienen de la base de datos del NVD (National Vulnerability Database) y están disponibles en la consulta realizada a su API (fuente: NVD/NIST).",
+    "intent": "get_cve_by_id",
+    "api_source": "https://services.nvd.nist.gov/rest/json/cves/2.0?cveId=CVE-2021-26084",
+    "api_error": null,
+    "router_confidence": 0.9,
+    "usage": {
+      "prompt_tokens": 2896,
+      "completion_tokens": 323,
+      "total_tokens": 3219,
+      "router_latency_s": 1.705,
+      "api_latency_s": 1.083,
+      "synthesis_latency_s": 5.6
+    },
+    "hallucination_risk": false,
+    "architecture": "B_API"
+  },
+  "metrics": {
+    "question_id": "Q006",
+    "level": 1,
+    "domain": "NVD",
+    "architecture": "B_API",
+    "accuracy": 0.5,
+    "hallucination_risk": 0.0,
+    "traceability": 1.0,
+    "error_handling": 1.0,
+    "latency_s": 8.388,
+    "total_tokens": 3219,
+    "accuracy_detail": "Score=0.500 | completas=['AV:N', 'network'] | parciales=[] | ausentes=['confluence', 'atlassian']",
+    "hallucination_detail": "Sin señales de alucinación detectadas",
+    "traceability_detail": "Markers texto: ['nvd', 'nist', 'national vulnerability'] | Fuente estructurada: api_source=True, seed_nodes=False, sql=False",
+    "error_handling_detail": "Sin errores detectados en el pipeline",
+    "latency_detail": "router=1.71s api=1.08s synth=5.60s",
+    "answer_preview": "El vector CVSS v3 de la vulnerabilidad CVE-2021-26084 es el siguiente:\n\n**Vector String**: `CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H`\n\nEste vector indica las siguientes características de la vulnerabilidad:\n\n- **AV (Attack Vector)**: NETWORK (Ataque a través de la red)\n- **AC (Attack Complexity)…"
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "result": {
+    "answer": "Para comprometer una organización utilizando vulnerabilidades publicadas en 2024 y técnicas documentadas en MITRE ATT&CK, un grupo APT podría seguir una cadena de ataque (kill chain) que incluya las siguientes etapas:\n\n1. **Acceso Inicial (Initial Access)**: El grupo APT podría utilizar técnicas de phishing (T1566) para engañar a los empleados y obtener acceso a las credenciales de la organización. Esta técnica es común y efectiva para iniciar un ataque.\n\n2. **Ejecución (Execution)**: Una vez dentro, podrían utilizar malware como USBferry (S0452) para robar información o implantar otros tipos de malware en el sistema. Alternativamente, podrían usar técnicas como Print Processors (T1547.012) para ejecutar código malicioso durante el arranque del sistema, asegurando así persistencia.\n\n3. **Persistencia (Persistence)**: Para mantener el acceso, el grupo podría implantar imágenes internas (T1525) en la infraestructura de la organización, asegurando que el malware se ejecute cada vez que se inicie el sistema.\n\n4. **Escalamiento de Privilegios (Privilege Escalation)**: Utilizando técnicas como COR_PROFILER (T1574.012), podrían manipular el flujo de ejecución de programas en entornos .NET para obtener mayores privilegios en el sistema.\n\n5. **Descubrimiento (Discovery)**: Para entender mejor el entorno, podrían realizar descubrimiento de servicios del sistema (T1007) y descubrir usuarios del sistema (T1033) para identificar objetivos de alto valor.\n\n6. **Movimiento Lateral (Lateral Movement)**: Una vez que tengan acceso a un sistema, podrían usar técnicas como Pass the Ticket (T1550.003) para moverse lateralmente dentro de la red, utilizando credenciales robadas.\n\n7. **Acceso a Credenciales (Credential Access)**: Podrían buscar credenciales inseguras (T1552) almacenadas en el sistema o utilizar técnicas de robo de certificados de autenticación (T1649) para acceder a otros sistemas.\n\n8. **Recolección (Collection)**: Finalmente, podrían recolectar datos valiosos utilizando técnicas como acceso a datos de almacenamiento en la nube (T1530) o aprovechando bases de datos (T1213.006) para extraer información sensible.\n\n9. **Exfiltración (Exfiltration)**: Para exfiltrar datos, podrían utilizar técnicas de comunicación encubierta o protocolos de red para enviar la información robada a un servidor controlado por el atacante.\n\n10. **Acciones en el Objetivo (Impact)**: Como último paso, podrían implementar ransomware como Cuba (S0625) para cifrar datos críticos y exigir un rescate, o simplemente destruir datos para causar daño.\n\nEsta cadena de ataque es un ejemplo de cómo un grupo APT podría utilizar técnicas documentadas en MITRE ATT&CK para comprometer una organización. Según MITRE ATT&CK, estas técnicas son ampliamente reconocidas y utilizadas en ataques reales.",
+    "seed_nodes": [
+      "T1053.002",
+      "S0110",
+      "S0066"
+    ],
+    "subgraph_nodes": 40,
+    "subgraph_edges": 12,
+    "coverage": {
+      "sufficient": false,
+      "missing_entities": [
+        "grupo APT",
+        "vulnerabilidades publicadas en 2024",
+        "técnicas MITRE ATT&CK específicas"
+      ],
+      "confidence": 0.3
+    },
+    "hallucination_risk": true,
+    "usage": {
+      "prompt_tokens": 2855,
+      "completion_tokens": 677,
+      "total_tokens": 3532,
+      "retrieval_latency_s": 0.018,
+      "coverage_latency_s": 1.513,
+      "synthesis_latency_s": 15.155
+    },
+    "architecture": "C_GraphRAG"
+  },
+  "metrics": {
+    "question_id": "Q050",
+    "level": 3,
+    "domain": "BOTH",
+    "architecture": "C_GraphRAG",
+    "accuracy": 0.8571,
+    "hallucination_risk": 0.7,
+    "traceability": 1.0,
+    "error_handling": 1.0,
+    "latency_s": 16.686,
+    "total_tokens": 3532,
+    "accuracy_detail": "Score=0.857 | completas=['kill chain', 'initial access', 'lateral movement', 'exfiltration', 'APT', 'técnica'] | parciales=[] | ausentes=['CVE-2024']",
+    "hallucination_detail": "Flag de riesgo activo (sin datos de fuente verificados)",
+    "traceability_detail": "Markers texto: ['mitre', 'att&ck', 'según'] | Fuente estructurada: api_source=False, seed_nodes=True, sql=False",
+    "error_handling_detail": "Sin errores detectados en el pipeline",
+    "latency_detail": "retrieval=0.02s coverage=1.51s synth=15.15s",
+    "answer_preview": "Para comprometer una organización utilizando vulnerabilidades publicadas en 2024 y técnicas documentadas en MITRE ATT&CK, un grupo APT podría seguir una cadena de ataque (kill chain) que incluya las siguientes etapas:\n\n1. **Acceso Inicial (Initial Access)**: El grupo APT podría utilizar técnicas de …"
+  }
+}

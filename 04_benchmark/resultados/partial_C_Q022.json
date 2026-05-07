@@ -1,0 +1,47 @@
+{
+  "result": {
+    "answer": "Según el subgrafo proporcionado, no se menciona explícitamente ningún grupo APT que utilice la técnica T1566 (Phishing). La técnica T1566 se describe como un método mediante el cual los adversarios envían mensajes de phishing para obtener acceso a los sistemas de las víctimas, pero no se proporciona información sobre grupos específicos que la implementen.\n\nPor lo tanto, no puedo responder a la pregunta sobre qué grupos APT utilizan la técnica T1566 basándome en la información disponible en el subgrafo.",
+    "seed_nodes": [
+      "T1566",
+      "T1053.002",
+      "S0110"
+    ],
+    "subgraph_nodes": 40,
+    "subgraph_edges": 12,
+    "coverage": {
+      "sufficient": false,
+      "missing_entities": [
+        "grupos APT"
+      ],
+      "confidence": 0.3
+    },
+    "hallucination_risk": true,
+    "usage": {
+      "prompt_tokens": 2717,
+      "completion_tokens": 141,
+      "total_tokens": 2858,
+      "retrieval_latency_s": 0.01,
+      "coverage_latency_s": 0.894,
+      "synthesis_latency_s": 2.513
+    },
+    "architecture": "C_GraphRAG"
+  },
+  "metrics": {
+    "question_id": "Q022",
+    "level": 2,
+    "domain": "BOTH",
+    "architecture": "C_GraphRAG",
+    "accuracy": 0.8,
+    "hallucination_risk": 0.7,
+    "traceability": 1.0,
+    "error_handling": 1.0,
+    "latency_s": 3.417,
+    "total_tokens": 2858,
+    "accuracy_detail": "Score=0.800 | completas=['APT', 'phishing', 'T1566', 'grupo'] | parciales=[] | ausentes=['group']",
+    "hallucination_detail": "Flag de riesgo activo (sin datos de fuente verificados)",
+    "traceability_detail": "Markers texto: ['según', 'grafo'] | Fuente estructurada: api_source=False, seed_nodes=True, sql=False",
+    "error_handling_detail": "Sin errores detectados en el pipeline",
+    "latency_detail": "retrieval=0.01s coverage=0.89s synth=2.51s",
+    "answer_preview": "Según el subgrafo proporcionado, no se menciona explícitamente ningún grupo APT que utilice la técnica T1566 (Phishing). La técnica T1566 se describe como un método mediante el cual los adversarios envían mensajes de phishing para obtener acceso a los sistemas de las víctimas, pero no se proporciona…"
+  }
+}

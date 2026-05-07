@@ -1,0 +1,37 @@
+{
+  "result": {
+    "answer": "El score CVSS v3 de la vulnerabilidad CVE-2022-26134, que afecta a Atlassian Confluence, es de **9.8**, lo que indica una severidad **CRÍTICA**. \n\nSegún los datos recuperados, el vector CVSS es el siguiente: **CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H**. Esto significa que la vulnerabilidad tiene un **vector de ataque** a través de la red (AV:N), una **complejidad de ataque** baja (AC:L), no requiere privilegios (PR:N) ni interacción del usuario (UI:N), y afecta la **confidencialidad** (C:H), **integridad** (I:H) y **disponibilidad** (A:H) de manera alta.\n\nEsta vulnerabilidad permite a un atacante no autenticado ejecutar código arbitrario en instancias de Confluence Server o Data Center, lo que representa un riesgo significativo para la seguridad de los sistemas afectados (fuente: NVD/NIST).\n\nPara más información, puedes consultar la fuente oficial en [NVD](https://services.nvd.nist.gov/rest/json/cves/2.0?cveId=CVE-2022-26134).",
+    "intent": "get_cve_by_id",
+    "api_source": "https://services.nvd.nist.gov/rest/json/cves/2.0?cveId=CVE-2022-26134",
+    "api_error": null,
+    "router_confidence": 0.9,
+    "usage": {
+      "prompt_tokens": 3031,
+      "completion_tokens": 313,
+      "total_tokens": 3344,
+      "router_latency_s": 1.23,
+      "api_latency_s": 1.092,
+      "synthesis_latency_s": 5.04
+    },
+    "hallucination_risk": false,
+    "architecture": "B_API"
+  },
+  "metrics": {
+    "question_id": "Q020",
+    "level": 1,
+    "domain": "NVD",
+    "architecture": "B_API",
+    "accuracy": 0.4,
+    "hallucination_risk": 0.0,
+    "traceability": 1.0,
+    "error_handling": 1.0,
+    "latency_s": 7.362,
+    "total_tokens": 3344,
+    "accuracy_detail": "Score=0.400 | completas=['9.8', 'confluence'] | parciales=[] | ausentes=['critical', 'confluencia', 'ognl']",
+    "hallucination_detail": "Sin señales de alucinación detectadas",
+    "traceability_detail": "Markers texto: ['nvd', 'nist', 'según'] | Fuente estructurada: api_source=True, seed_nodes=False, sql=False",
+    "error_handling_detail": "Sin errores detectados en el pipeline",
+    "latency_detail": "router=1.23s api=1.09s synth=5.04s",
+    "answer_preview": "El score CVSS v3 de la vulnerabilidad CVE-2022-26134, que afecta a Atlassian Confluence, es de **9.8**, lo que indica una severidad **CRÍTICA**. \n\nSegún los datos recuperados, el vector CVSS es el siguiente: **CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H**. Esto significa que la vulnerabilidad tiene…"
+  }
+}

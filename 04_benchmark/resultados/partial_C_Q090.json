@@ -1,0 +1,52 @@
+{
+  "result": {
+    "answer": "El subgrafo proporcionado no contiene información específica sobre las vulnerabilidades críticas documentadas en la National Vulnerability Database (NVD) ni su relación directa con las técnicas utilizadas por Lazarus Group (G0032). Sin embargo, se pueden identificar algunas técnicas que este grupo ha utilizado en sus operaciones.\n\nPor ejemplo, Lazarus Group ha empleado técnicas como:\n\n1. **T1552.006 - Group Policy Preferences**: Esta técnica se utiliza para acceder a credenciales no seguras almacenadas en las preferencias de políticas de grupo, lo que puede facilitar el acceso no autorizado a sistemas (Según MITRE ATT&CK).\n\n2. **T1542.003 - Bootkit**: Utilizan bootkits para persistir en los sistemas, modificando los sectores de arranque de un disco duro (Según MITRE ATT&CK).\n\n3. **T1203 - Exploitation for Client Execution**: Esta técnica implica la explotación de vulnerabilidades en aplicaciones cliente para ejecutar código, lo que puede estar relacionado con vulnerabilidades críticas en software (Según MITRE ATT&CK).\n\n4. **S0347 - AuditCred**: Este es un DLL malicioso utilizado por Lazarus Group en ataques, lo que indica su enfoque en el uso de malware para comprometer sistemas (Según MITRE ATT&CK).\n\n5. **S0382 - ServHelper**: Otro backdoor utilizado por el grupo, que también refleja su capacidad para mantener el acceso a sistemas comprometidos (Según MITRE ATT&CK).\n\nAunque se pueden identificar estas técnicas y herramientas, el subgrafo no proporciona detalles sobre vulnerabilidades específicas de la NVD que se hayan explotado por Lazarus Group. Para establecer una relación directa entre las técnicas del grupo y vulnerabilidades críticas, sería necesario consultar la NVD o fuentes adicionales que documenten tales vulnerabilidades y su explotación por parte de Lazarus Group.\n\nEn resumen, el subgrafo no contiene suficiente información para responder a la pregunta sobre la relación entre las técnicas del Lazarus Group y las vulnerabilidades críticas documentadas en la NVD.",
+    "seed_nodes": [
+      "G0032",
+      "T1615",
+      "T1552.006",
+      "T1484.001",
+      "T1098.007"
+    ],
+    "subgraph_nodes": 40,
+    "subgraph_edges": 47,
+    "coverage": {
+      "sufficient": false,
+      "missing_entities": [
+        "Lazarus Group",
+        "NVD",
+        "vulnerabilidades críticas",
+        "técnicas específicas"
+      ],
+      "confidence": 0.4
+    },
+    "hallucination_risk": true,
+    "usage": {
+      "prompt_tokens": 2762,
+      "completion_tokens": 465,
+      "total_tokens": 3227,
+      "retrieval_latency_s": 0.008,
+      "coverage_latency_s": 1.164,
+      "synthesis_latency_s": 7.221
+    },
+    "architecture": "C_GraphRAG"
+  },
+  "metrics": {
+    "question_id": "Q090",
+    "level": 3,
+    "domain": "BOTH",
+    "architecture": "C_GraphRAG",
+    "accuracy": 0.4286,
+    "hallucination_risk": 0.7,
+    "traceability": 1.0,
+    "error_handling": 1.0,
+    "latency_s": 8.393,
+    "total_tokens": 3227,
+    "accuracy_detail": "Score=0.429 | completas=['lazarus', 'G0032', 'vulnerabilidad'] | parciales=[] | ausentes=['CVE', 'korea', 'T1190', 'WannaCry']",
+    "hallucination_detail": "Flag de riesgo activo (sin datos de fuente verificados)",
+    "traceability_detail": "Markers texto: ['nvd', 'national vulnerability', 'mitre'] | Fuente estructurada: api_source=False, seed_nodes=True, sql=False",
+    "error_handling_detail": "Sin errores detectados en el pipeline",
+    "latency_detail": "retrieval=0.01s coverage=1.16s synth=7.22s",
+    "answer_preview": "El subgrafo proporcionado no contiene información específica sobre las vulnerabilidades críticas documentadas en la National Vulnerability Database (NVD) ni su relación directa con las técnicas utilizadas por Lazarus Group (G0032). Sin embargo, se pueden identificar algunas técnicas que este grupo h…"
+  }
+}

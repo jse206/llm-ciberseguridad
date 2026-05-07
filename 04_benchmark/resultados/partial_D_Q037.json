@@ -1,0 +1,64 @@
+{
+  "result": {
+    "answer": "Para la técnica T1059 (Command and Scripting Interpreter) de MITRE ATT&CK, se recomienda implementar medidas de mitigación como \"Execution Prevention\", que consiste en prevenir la ejecución de código no autorizado o malicioso mediante el control de aplicaciones, bloqueo de scripts y otros mecanismos de prevención de ejecución. Sin embargo, no se han encontrado recomendaciones específicas de detección en el subgrafo consultado.\n\n**Fuentes consultadas:** query_mitre_graph",
+    "steps": [
+      {
+        "thought": "",
+        "action": "query_mitre_graph",
+        "action_input": {
+          "question": "¿Qué detecciones recomienda MITRE ATT&CK para la técnica T1059?"
+        },
+        "observation_preview": "{\n  \"context\": \"=== SUBGRAFO MITRE ATT&CK ===\\n\\n--- Entidades recuperadas ---\\n  [course-of-action] M1026 — Privileged Account Management\\n     Privileged Account Management focuses on implementing policies, controls, and tools to securely manage privileged accounts (e.g., SYSTEM, root, or administ…"
+      },
+      {
+        "thought": "",
+        "action": "query_mitre_graph",
+        "action_input": {
+          "question": "¿Cuáles son las detecciones específicas para la técnica T1059?"
+        },
+        "observation_preview": "{\n  \"context\": \"=== SUBGRAFO MITRE ATT&CK ===\\n\\n--- Entidades recuperadas ---\\n  [malware] S1192 — NICECURL\\n     [NICECURL](https://attack.mitre.org/software/S1192) is a VBScript-based backdoor used by [APT42](https://attack.mitre.org/groups/G1044) to download additional modules.(Citation: Mandian…"
+      },
+      {
+        "thought": "",
+        "action": "query_mitre_graph",
+        "action_input": {
+          "question": "¿Qué medidas de detección específicas se recomiendan para la técnica T1059?"
+        },
+        "observation_preview": "{\n  \"context\": \"=== SUBGRAFO MITRE ATT&CK ===\\n\\n--- Entidades recuperadas ---\\n  [malware] S1192 — NICECURL\\n     [NICECURL](https://attack.mitre.org/software/S1192) is a VBScript-based backdoor used by [APT42](https://attack.mitre.org/groups/G1044) to download additional modules.(Citation: Mandian…"
+      }
+    ],
+    "tools_used": [
+      "query_mitre_graph",
+      "query_mitre_graph",
+      "query_mitre_graph"
+    ],
+    "iterations": 3,
+    "forced_final": false,
+    "hallucination_risk": false,
+    "usage": {
+      "prompt_tokens": 8223,
+      "completion_tokens": 426,
+      "total_tokens": 8649,
+      "total_latency_s": 10.332
+    },
+    "architecture": "D_Toolformer"
+  },
+  "metrics": {
+    "question_id": "Q037",
+    "level": 2,
+    "domain": "MITRE",
+    "architecture": "D_Toolformer",
+    "accuracy": 0.4167,
+    "hallucination_risk": 0.0,
+    "traceability": 0.5,
+    "error_handling": 1.0,
+    "latency_s": 10.332,
+    "total_tokens": 8649,
+    "accuracy_detail": "Score=0.417 | completas=['T1059', 'script'] | parciales=['command line(50%)'] | ausentes=['detection', 'log', 'monitor']",
+    "hallucination_detail": "Sin señales de alucinación detectadas",
+    "traceability_detail": "Markers texto: ['mitre', 'att&ck', 'fuente'] | Fuente estructurada: api_source=False, seed_nodes=False, sql=False",
+    "error_handling_detail": "Sin errores detectados en el pipeline",
+    "latency_detail": "total_react=10.33s iterations=3",
+    "answer_preview": "Para la técnica T1059 (Command and Scripting Interpreter) de MITRE ATT&CK, se recomienda implementar medidas de mitigación como \"Execution Prevention\", que consiste en prevenir la ejecución de código no autorizado o malicioso mediante el control de aplicaciones, bloqueo de scripts y otros mecanismos…"
+  }
+}

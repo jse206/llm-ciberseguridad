@@ -1,0 +1,39 @@
+{
+  "result": {
+    "answer": "El CVE con el mayor CVSS score publicado en 2024 en la base de datos NVD/NIST es el siguiente:\n\n- **CVE-2024-56064** con un CVSS v3 score de **10.0**.\n\nEste resultado indica que se trata de una vulnerabilidad crítica, dado que el puntaje máximo en la escala CVSS es 10.0.",
+    "sql": "SELECT cve_id, cvss_v3_score \nFROM cve \nWHERE published LIKE '2024%' \nORDER BY cvss_v3_score DESC \nLIMIT 1;",
+    "sql_rows": 1,
+    "correction_attempts": 0,
+    "sql_error": null,
+    "api_fallback": null,
+    "hallucination_risk": false,
+    "usage": {
+      "prompt_tokens": 2979,
+      "completion_tokens": 205,
+      "total_tokens": 3184,
+      "schema_linking_latency_s": 2.172,
+      "sql_generation_latency_s": 1.611,
+      "self_correction_latency_s": 0,
+      "synthesis_latency_s": 2.242
+    },
+    "architecture": "A_Text2SQL"
+  },
+  "metrics": {
+    "question_id": "Q033",
+    "level": 2,
+    "domain": "NVD",
+    "architecture": "A_Text2SQL",
+    "accuracy": 0.75,
+    "hallucination_risk": 0.0,
+    "traceability": 1.0,
+    "error_handling": 1.0,
+    "latency_s": 6.025,
+    "total_tokens": 3184,
+    "accuracy_detail": "Score=0.750 | completas=['10.0', '2024', 'máximo'] | parciales=[] | ausentes=['critical']",
+    "hallucination_detail": "Sin señales de alucinación detectadas",
+    "traceability_detail": "Markers texto: ['nvd', 'nist', 'base de datos'] | Fuente estructurada: api_source=False, seed_nodes=False, sql=True",
+    "error_handling_detail": "Sin errores detectados en el pipeline",
+    "latency_detail": "linking=2.17s sql=1.61s corr=0.00s synth=2.24s",
+    "answer_preview": "El CVE con el mayor CVSS score publicado en 2024 en la base de datos NVD/NIST es el siguiente:\n\n- **CVE-2024-56064** con un CVSS v3 score de **10.0**.\n\nEste resultado indica que se trata de una vulnerabilidad crítica, dado que el puntaje máximo en la escala CVSS es 10.0."
+  }
+}

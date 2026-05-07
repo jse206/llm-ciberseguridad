@@ -1,0 +1,39 @@
+{
+  "result": {
+    "answer": "CVE-2022-30190, conocido como \"Follina\", es una vulnerabilidad de ejecución remota de código en Microsoft Windows Support Diagnostic Tool (MSDT). Esta vulnerabilidad permite a un atacante ejecutar código arbitrario con los privilegios de la aplicación que la invoca, como Microsoft Word. Los atacantes pueden instalar programas, ver, cambiar o eliminar datos, o crear nuevas cuentas según los derechos del usuario afectado.\n\nEn cuanto a las técnicas de MITRE ATT&CK que habilita esta vulnerabilidad, los detalles específicos no se encuentran en los resultados de la base de datos NVD/NIST consultada. Sin embargo, se puede inferir que la explotación de esta vulnerabilidad podría involucrar técnicas relacionadas con la ejecución de código y la interacción del usuario, dado que se requiere la interacción del usuario para activar la vulnerabilidad.\n\nLa cadena de explotación típica para CVE-2022-30190 generalmente implica que un atacante envía un documento malicioso que, al ser abierto por la víctima, invoca el MSDT a través de un enlace URL. Esto permite que el atacante ejecute código malicioso en el sistema de la víctima.\n\nEs importante mencionar que los datos provienen de la base de datos NVD/NIST, y aunque se ha proporcionado información sobre la vulnerabilidad, no se han encontrado detalles específicos sobre las técnicas de MITRE ATT&CK en los resultados obtenidos.",
+    "sql": "SELECT c.cve_id, c.description, cc.cwe_id \nFROM cve AS c \nJOIN cve_cwe AS cc ON c.cve_id = cc.cve_id \nWHERE c.cve_id = 'CVE-2022-30190';",
+    "sql_rows": 1,
+    "correction_attempts": 0,
+    "sql_error": null,
+    "api_fallback": "NVD API — CVE-2022-30190",
+    "hallucination_risk": false,
+    "usage": {
+      "prompt_tokens": 4728,
+      "completion_tokens": 476,
+      "total_tokens": 5204,
+      "schema_linking_latency_s": 3.012,
+      "sql_generation_latency_s": 1.387,
+      "self_correction_latency_s": 0,
+      "synthesis_latency_s": 6.449
+    },
+    "architecture": "A_Text2SQL"
+  },
+  "metrics": {
+    "question_id": "Q093",
+    "level": 3,
+    "domain": "BOTH",
+    "architecture": "A_Text2SQL",
+    "accuracy": 0.4286,
+    "hallucination_risk": 0.0,
+    "traceability": 1.0,
+    "error_handling": 1.0,
+    "latency_s": 10.848,
+    "total_tokens": 5204,
+    "accuracy_detail": "Score=0.429 | completas=['Follina', 'CVE-2022-30190', 'msdt'] | parciales=[] | ausentes=['T1203', 'client execution', 'initial access', 'macro']",
+    "hallucination_detail": "Sin señales de alucinación detectadas",
+    "traceability_detail": "Markers texto: ['nvd', 'nist', 'mitre'] | Fuente estructurada: api_source=False, seed_nodes=False, sql=True",
+    "error_handling_detail": "Sin errores detectados en el pipeline",
+    "latency_detail": "linking=3.01s sql=1.39s corr=0.00s synth=6.45s",
+    "answer_preview": "CVE-2022-30190, conocido como \"Follina\", es una vulnerabilidad de ejecución remota de código en Microsoft Windows Support Diagnostic Tool (MSDT). Esta vulnerabilidad permite a un atacante ejecutar código arbitrario con los privilegios de la aplicación que la invoca, como Microsoft Word. Los atacante…"
+  }
+}

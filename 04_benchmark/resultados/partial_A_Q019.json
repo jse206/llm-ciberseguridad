@@ -1,0 +1,39 @@
+{
+  "result": {
+    "answer": "La vulnerabilidad CVE-2024-3400 tiene el estado \"Analyzed\" en la base de datos NVD/NIST. Esto indica que la vulnerabilidad ha sido analizada y se han evaluado sus características y posibles impactos.",
+    "sql": "SELECT vuln_status FROM cve WHERE cve_id = 'CVE-2024-3400';",
+    "sql_rows": 1,
+    "correction_attempts": 0,
+    "sql_error": null,
+    "api_fallback": null,
+    "hallucination_risk": false,
+    "usage": {
+      "prompt_tokens": 2934,
+      "completion_tokens": 154,
+      "total_tokens": 3088,
+      "schema_linking_latency_s": 2.019,
+      "sql_generation_latency_s": 0.929,
+      "self_correction_latency_s": 0,
+      "synthesis_latency_s": 1.726
+    },
+    "architecture": "A_Text2SQL"
+  },
+  "metrics": {
+    "question_id": "Q019",
+    "level": 1,
+    "domain": "NVD",
+    "architecture": "A_Text2SQL",
+    "accuracy": 0.0,
+    "hallucination_risk": 0.0,
+    "traceability": 1.0,
+    "error_handling": 1.0,
+    "latency_s": 4.674,
+    "total_tokens": 3088,
+    "accuracy_detail": "Score=0.000 | completas=[] | parciales=[] | ausentes=['palo alto', 'pan-os', 'firewall', 'critical', '10.0']",
+    "hallucination_detail": "Sin señales de alucinación detectadas",
+    "traceability_detail": "Markers texto: ['nvd', 'nist', 'base de datos'] | Fuente estructurada: api_source=False, seed_nodes=False, sql=True",
+    "error_handling_detail": "Sin errores detectados en el pipeline",
+    "latency_detail": "linking=2.02s sql=0.93s corr=0.00s synth=1.73s",
+    "answer_preview": "La vulnerabilidad CVE-2024-3400 tiene el estado \"Analyzed\" en la base de datos NVD/NIST. Esto indica que la vulnerabilidad ha sido analizada y se han evaluado sus características y posibles impactos."
+  }
+}

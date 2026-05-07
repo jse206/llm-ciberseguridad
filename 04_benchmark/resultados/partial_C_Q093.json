@@ -1,0 +1,48 @@
+{
+  "result": {
+    "answer": "Según MITRE ATT&CK, la vulnerabilidad CVE-2022-30190, conocida como \"Follina\", puede habilitar varias técnicas de ataque. Aunque el subgrafo proporcionado no menciona explícitamente esta vulnerabilidad, se puede inferir su relación con las siguientes técnicas:\n\n1. **T1566 — Phishing**: Esta técnica se refiere al uso de mensajes de phishing para obtener acceso a sistemas de las víctimas. Follina puede ser utilizada en ataques de phishing donde un documento malicioso se envía a la víctima, y al abrirlo, se ejecuta código malicioso. Esto se alinea con la táctica de acceso inicial (initial-access).\n\n2. **T1204.003 — Malicious Image**: Aunque esta técnica se refiere a imágenes maliciosas, el concepto se puede extender a documentos que contienen código malicioso, como los archivos de Microsoft Office que pueden ser utilizados en ataques de Follina. Esto también se relaciona con la táctica de ejecución (execution).\n\n3. **T1547.012 — Print Processors**: Follina puede abusar de los procesadores de impresión para ejecutar código malicioso, lo que se relaciona con las tácticas de persistencia y escalación de privilegios (persistence, privilege-escalation).\n\nLa cadena de explotación típica de Follina generalmente sigue estos pasos:\n\n1. **Entrega del Documento Malicioso**: Un atacante envía un documento de Microsoft Office (como un archivo .docx) que contiene un enlace a un recurso externo malicioso.\n   \n2. **Interacción del Usuario**: La víctima abre el documento, lo que activa el código malicioso. Esto puede ocurrir sin que el usuario se dé cuenta, especialmente si el documento se abre en un entorno vulnerable.\n\n3. **Ejecución del Código Malicioso**: El documento utiliza la vulnerabilidad para ejecutar código malicioso, que puede llevar a la ejecución de comandos en el sistema de la víctima.\n\n4. **Establecimiento de Persistencia**: Dependiendo de la intención del atacante, el código malicioso puede intentar establecer persistencia en el sistema comprometido, utilizando técnicas como las mencionadas anteriormente.\n\nEn resumen, aunque el subgrafo no menciona directamente CVE-2022-30190, se puede asociar con técnicas de phishing, ejecución de código malicioso y abuso de procesadores de impresión.",
+    "seed_nodes": [
+      "T1053.002",
+      "S0110"
+    ],
+    "subgraph_nodes": 40,
+    "subgraph_edges": 6,
+    "coverage": {
+      "sufficient": false,
+      "missing_entities": [
+        "CVE-2022-30190",
+        "técnicas de MITRE ATT&CK relacionadas",
+        "cadena de explotación típica"
+      ],
+      "confidence": 0.3
+    },
+    "hallucination_risk": true,
+    "usage": {
+      "prompt_tokens": 2695,
+      "completion_tokens": 546,
+      "total_tokens": 3241,
+      "retrieval_latency_s": 0.008,
+      "coverage_latency_s": 1.933,
+      "synthesis_latency_s": 8.397
+    },
+    "architecture": "C_GraphRAG"
+  },
+  "metrics": {
+    "question_id": "Q093",
+    "level": 3,
+    "domain": "BOTH",
+    "architecture": "C_GraphRAG",
+    "accuracy": 0.5,
+    "hallucination_risk": 0.7,
+    "traceability": 1.0,
+    "error_handling": 1.0,
+    "latency_s": 10.338,
+    "total_tokens": 3241,
+    "accuracy_detail": "Score=0.500 | completas=['Follina', 'CVE-2022-30190', 'initial access'] | parciales=['client execution(50%)'] | ausentes=['T1203', 'msdt', 'macro']",
+    "hallucination_detail": "Flag de riesgo activo (sin datos de fuente verificados)",
+    "traceability_detail": "Markers texto: ['mitre', 'att&ck', 'según'] | Fuente estructurada: api_source=False, seed_nodes=True, sql=False",
+    "error_handling_detail": "Sin errores detectados en el pipeline",
+    "latency_detail": "retrieval=0.01s coverage=1.93s synth=8.40s",
+    "answer_preview": "Según MITRE ATT&CK, la vulnerabilidad CVE-2022-30190, conocida como \"Follina\", puede habilitar varias técnicas de ataque. Aunque el subgrafo proporcionado no menciona explícitamente esta vulnerabilidad, se puede inferir su relación con las siguientes técnicas:\n\n1. **T1566 — Phishing**: Esta técnica …"
+  }
+}

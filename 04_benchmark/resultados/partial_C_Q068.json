@@ -1,0 +1,50 @@
+{
+  "result": {
+    "answer": "Según MITRE ATT&CK, para la técnica T1003 (OS Credential Dumping), se pueden implementar varias mitigaciones que ayudan a reducir el riesgo de que los adversarios accedan a credenciales del sistema operativo. Algunas de estas mitigaciones son:\n\n1. **M1026 — Privileged Account Management**: Esta mitigación se centra en implementar políticas y controles para gestionar de manera segura las cuentas privilegiadas. Esto incluye restringir el acceso a cuentas con privilegios elevados y asegurar que solo los usuarios autorizados tengan acceso a estas cuentas.\n\n2. **M1027 — Password Policies**: Establecer y hacer cumplir políticas de contraseñas seguras es crucial. Esto incluye la complejidad de las contraseñas, la necesidad de cambios regulares y la prohibición de contraseñas comunes o fácilmente adivinables, lo que puede ayudar a prevenir el acceso no autorizado.\n\n3. **M1018 — User Account Management**: La gestión de cuentas de usuario implica implementar políticas para el ciclo de vida de las cuentas, incluyendo su creación, modificación y desactivación. Una gestión adecuada de las cuentas puede reducir la posibilidad de que las cuentas comprometidas sean utilizadas para el dumping de credenciales.\n\n4. **M1040 — Behavior Prevention on Endpoint**: Esta mitigación se refiere al uso de tecnologías y estrategias para detectar y bloquear actividades potencialmente maliciosas en los endpoints. Esto puede incluir la monitorización de procesos que intentan acceder a la memoria de otros procesos, como LSASS, donde se almacenan credenciales.\n\n5. **M1028 — Operating System Configuration**: Ajustar la configuración del sistema operativo y endurecer las configuraciones predeterminadas puede ayudar a mitigar la explotación de vulnerabilidades que permiten el dumping de credenciales.\n\nEstas mitigaciones, cuando se implementan de manera efectiva, pueden ayudar a proteger los sistemas contra el dumping de credenciales y reducir la superficie de ataque disponible para los adversarios. \n\nEs importante tener en cuenta que la combinación de múltiples mitigaciones es más efectiva que depender de una sola estrategia.",
+    "seed_nodes": [
+      "T1003",
+      "S0097",
+      "TA0006",
+      "T1606",
+      "T1589.001"
+    ],
+    "subgraph_nodes": 40,
+    "subgraph_edges": 54,
+    "coverage": {
+      "sufficient": false,
+      "missing_entities": [
+        "mitigaciones",
+        "T1003"
+      ],
+      "confidence": 0.4
+    },
+    "hallucination_risk": true,
+    "usage": {
+      "prompt_tokens": 2795,
+      "completion_tokens": 457,
+      "total_tokens": 3252,
+      "retrieval_latency_s": 0.012,
+      "coverage_latency_s": 1.191,
+      "synthesis_latency_s": 8.398
+    },
+    "architecture": "C_GraphRAG"
+  },
+  "metrics": {
+    "question_id": "Q068",
+    "level": 1,
+    "domain": "MITRE",
+    "architecture": "C_GraphRAG",
+    "accuracy": 0.466,
+    "hallucination_risk": 0.7,
+    "traceability": 1.0,
+    "error_handling": 1.0,
+    "latency_s": 9.601,
+    "total_tokens": 3252,
+    "accuracy_detail": "Score=0.466 | completas=['lsass', 'password'] | parciales=['credential access protection(33%)'] | ausentes=['M1043', 'M1025']",
+    "hallucination_detail": "Flag de riesgo activo (sin datos de fuente verificados)",
+    "traceability_detail": "Markers texto: ['mitre', 'att&ck', 'según'] | Fuente estructurada: api_source=False, seed_nodes=True, sql=False",
+    "error_handling_detail": "Sin errores detectados en el pipeline",
+    "latency_detail": "retrieval=0.01s coverage=1.19s synth=8.40s",
+    "answer_preview": "Según MITRE ATT&CK, para la técnica T1003 (OS Credential Dumping), se pueden implementar varias mitigaciones que ayudan a reducir el riesgo de que los adversarios accedan a credenciales del sistema operativo. Algunas de estas mitigaciones son:\n\n1. **M1026 — Privileged Account Management**: Esta miti…"
+  }
+}

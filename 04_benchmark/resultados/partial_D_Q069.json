@@ -1,0 +1,91 @@
+{
+  "result": {
+    "answer": "La información recopilada no incluye detalles específicos sobre el número de sub-técnicas asociadas con T1055 (Process Injection) en el marco MITRE ATT&CK. Para obtener esta información, se recomienda consultar directamente la base de datos de MITRE ATT&CK en su sitio web oficial, donde se puede encontrar información actualizada sobre las técnicas y sus sub-técnicas.\n\n**Fuentes consultadas:** query_mitre_graph",
+    "steps": [
+      {
+        "thought": "",
+        "action": "query_mitre_graph",
+        "action_input": {
+          "question": "¿Cuántas sub-técnicas tiene T1055 (Process Injection)?"
+        },
+        "observation_preview": "{\n  \"context\": \"=== SUBGRAFO MITRE ATT&CK ===\\n\\n--- Entidades recuperadas ---\\n  [course-of-action] M1026 — Privileged Account Management\\n     Privileged Account Management focuses on implementing policies, controls, and tools to securely manage privileged accounts (e.g., SYSTEM, root, or administ…"
+      },
+      {
+        "thought": "",
+        "action": "query_mitre_graph",
+        "action_input": {
+          "question": "¿Cuáles son las sub-técnicas de T1055 (Process Injection)?"
+        },
+        "observation_preview": "{\n  \"context\": \"=== SUBGRAFO MITRE ATT&CK ===\\n\\n--- Entidades recuperadas ---\\n  [course-of-action] M1026 — Privileged Account Management\\n     Privileged Account Management focuses on implementing policies, controls, and tools to securely manage privileged accounts (e.g., SYSTEM, root, or administ…"
+      },
+      {
+        "thought": "",
+        "action": "query_mitre_graph",
+        "action_input": {
+          "question": "¿Cuántas sub-técnicas tiene la técnica T1055?"
+        },
+        "observation_preview": "{\n  \"context\": \"=== SUBGRAFO MITRE ATT&CK ===\\n\\n--- Entidades recuperadas ---\\n  [course-of-action] M1026 — Privileged Account Management\\n     Privileged Account Management focuses on implementing policies, controls, and tools to securely manage privileged accounts (e.g., SYSTEM, root, or administ…"
+      },
+      {
+        "thought": "",
+        "action": "query_mitre_graph",
+        "action_input": {
+          "question": "¿Qué sub-técnicas están asociadas con T1055 (Process Injection)?"
+        },
+        "observation_preview": "{\n  \"context\": \"=== SUBGRAFO MITRE ATT&CK ===\\n\\n--- Entidades recuperadas ---\\n  [course-of-action] M1026 — Privileged Account Management\\n     Privileged Account Management focuses on implementing policies, controls, and tools to securely manage privileged accounts (e.g., SYSTEM, root, or administ…"
+      },
+      {
+        "thought": "",
+        "action": "query_mitre_graph",
+        "action_input": {
+          "question": "¿Qué información hay sobre la técnica T1055 (Process Injection) y sus sub-técnicas?"
+        },
+        "observation_preview": "{\n  \"context\": \"=== SUBGRAFO MITRE ATT&CK ===\\n\\n--- Entidades recuperadas ---\\n  [course-of-action] M1026 — Privileged Account Management\\n     Privileged Account Management focuses on implementing policies, controls, and tools to securely manage privileged accounts (e.g., SYSTEM, root, or administ…"
+      },
+      {
+        "thought": "",
+        "action": "query_mitre_graph",
+        "action_input": {
+          "question": "¿T1055 (Process Injection) tiene sub-técnicas documentadas?"
+        },
+        "observation_preview": "{\n  \"context\": \"=== SUBGRAFO MITRE ATT&CK ===\\n\\n--- Entidades recuperadas ---\\n  [course-of-action] M1026 — Privileged Account Management\\n     Privileged Account Management focuses on implementing policies, controls, and tools to securely manage privileged accounts (e.g., SYSTEM, root, or administ…"
+      }
+    ],
+    "tools_used": [
+      "query_mitre_graph",
+      "query_mitre_graph",
+      "query_mitre_graph",
+      "query_mitre_graph",
+      "query_mitre_graph",
+      "query_mitre_graph"
+    ],
+    "iterations": 6,
+    "forced_final": true,
+    "hallucination_risk": false,
+    "usage": {
+      "prompt_tokens": 19328,
+      "completion_tokens": 572,
+      "total_tokens": 19900,
+      "total_latency_s": 16.784
+    },
+    "architecture": "D_Toolformer"
+  },
+  "metrics": {
+    "question_id": "Q069",
+    "level": 1,
+    "domain": "MITRE",
+    "architecture": "D_Toolformer",
+    "accuracy": 0.6,
+    "hallucination_risk": 0.0,
+    "traceability": 0.5,
+    "error_handling": 0.3,
+    "latency_s": 16.784,
+    "total_tokens": 19900,
+    "accuracy_detail": "Score=0.600 | completas=['T1055', 'sub-técnica'] | parciales=['DLL injection(50%)', 'process hollowing(50%)'] | ausentes=['T1055.001']",
+    "hallucination_detail": "Sin señales de alucinación detectadas",
+    "traceability_detail": "Markers texto: ['mitre', 'att&ck', 'fuente'] | Fuente estructurada: api_source=False, seed_nodes=False, sql=False",
+    "error_handling_detail": "Error presente — la respuesta no lo reconoce explícitamente",
+    "latency_detail": "total_react=16.78s iterations=6",
+    "answer_preview": "La información recopilada no incluye detalles específicos sobre el número de sub-técnicas asociadas con T1055 (Process Injection) en el marco MITRE ATT&CK. Para obtener esta información, se recomienda consultar directamente la base de datos de MITRE ATT&CK en su sitio web oficial, donde se puede enc…"
+  }
+}

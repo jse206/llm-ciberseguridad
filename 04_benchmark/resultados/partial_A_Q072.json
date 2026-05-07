@@ -1,0 +1,39 @@
+{
+  "result": {
+    "answer": "Los resultados de la consulta SQL ejecutada contra la base de datos NVD/CVE indican que no hay información disponible sobre técnicas MITRE ATT&CK en el esquema proporcionado. Esto significa que no se pudo identificar ninguna técnica específica relacionada con el uso de cuentas de servicio para persistencia en la base de datos NVD/NIST.\n\nEn resumen, no se encontró información relevante sobre la técnica MITRE ATT&CK que describe el uso de cuentas de servicio para persistencia.",
+    "sql": "SELECT 'No hay información sobre técnicas MITRE ATT&CK en el esquema proporcionado.'",
+    "sql_rows": 1,
+    "correction_attempts": 0,
+    "sql_error": null,
+    "api_fallback": null,
+    "hallucination_risk": false,
+    "usage": {
+      "prompt_tokens": 2944,
+      "completion_tokens": 199,
+      "total_tokens": 3143,
+      "schema_linking_latency_s": 2.32,
+      "sql_generation_latency_s": 0.846,
+      "self_correction_latency_s": 0,
+      "synthesis_latency_s": 2.751
+    },
+    "architecture": "A_Text2SQL"
+  },
+  "metrics": {
+    "question_id": "Q072",
+    "level": 1,
+    "domain": "MITRE",
+    "architecture": "A_Text2SQL",
+    "accuracy": 0.2,
+    "hallucination_risk": 0.0,
+    "traceability": 1.0,
+    "error_handling": 1.0,
+    "latency_s": 5.917,
+    "total_tokens": 3143,
+    "accuracy_detail": "Score=0.200 | completas=['cuentas de servicio'] | parciales=[] | ausentes=['T1078', 'valid accounts', 'service accounts', 'persistence']",
+    "hallucination_detail": "Sin señales de alucinación detectadas",
+    "traceability_detail": "Markers texto: ['nvd', 'nist', 'mitre'] | Fuente estructurada: api_source=False, seed_nodes=False, sql=True",
+    "error_handling_detail": "Sin errores detectados en el pipeline",
+    "latency_detail": "linking=2.32s sql=0.85s corr=0.00s synth=2.75s",
+    "answer_preview": "Los resultados de la consulta SQL ejecutada contra la base de datos NVD/CVE indican que no hay información disponible sobre técnicas MITRE ATT&CK en el esquema proporcionado. Esto significa que no se pudo identificar ninguna técnica específica relacionada con el uso de cuentas de servicio para persi…"
+  }
+}

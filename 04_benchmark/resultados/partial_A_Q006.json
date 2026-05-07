@@ -1,0 +1,39 @@
+{
+  "result": {
+    "answer": "El vector CVSS v3 para la vulnerabilidad CVE-2021-26084, según los datos de la base de datos NVD/NIST, es el siguiente:\n\n**Vector CVSS v3:** `CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H`\n\nEste vector indica que la vulnerabilidad tiene un **puntaje base de 9.8**, clasificada como **CRÍTICA**. Los detalles del vector son:\n\n- **Attack Vector (AV):** NETWORK (N)\n- **Attack Complexity (AC):** LOW (L)\n- **Privileges Required (PR):** NONE (N)\n- **User Interaction (UI):** NONE (N)\n- **Scope (S):** UNCHANGED (U)\n- **Confidentiality Impact (C):** HIGH (H)\n- **Integrity Impact (I):** HIGH (H)\n- **Availability Impact (A):** HIGH (H)\n\nEsta información es crucial para entender la gravedad de la vulnerabilidad y las implicaciones de seguridad asociadas.",
+    "sql": "SELECT cvss_v3_vector FROM cve WHERE cve_id = 'CVE-2021-26084';",
+    "sql_rows": 1,
+    "correction_attempts": 0,
+    "sql_error": null,
+    "api_fallback": "NVD API — CVE-2021-26084",
+    "hallucination_risk": false,
+    "usage": {
+      "prompt_tokens": 4633,
+      "completion_tokens": 335,
+      "total_tokens": 4968,
+      "schema_linking_latency_s": 2.044,
+      "sql_generation_latency_s": 1.102,
+      "self_correction_latency_s": 0,
+      "synthesis_latency_s": 4.494
+    },
+    "architecture": "A_Text2SQL"
+  },
+  "metrics": {
+    "question_id": "Q006",
+    "level": 1,
+    "domain": "NVD",
+    "architecture": "A_Text2SQL",
+    "accuracy": 0.5,
+    "hallucination_risk": 0.0,
+    "traceability": 1.0,
+    "error_handling": 1.0,
+    "latency_s": 7.64,
+    "total_tokens": 4968,
+    "accuracy_detail": "Score=0.500 | completas=['AV:N', 'network'] | parciales=[] | ausentes=['confluence', 'atlassian']",
+    "hallucination_detail": "Sin señales de alucinación detectadas",
+    "traceability_detail": "Markers texto: ['nvd', 'nist', 'según'] | Fuente estructurada: api_source=False, seed_nodes=False, sql=True",
+    "error_handling_detail": "Sin errores detectados en el pipeline",
+    "latency_detail": "linking=2.04s sql=1.10s corr=0.00s synth=4.49s",
+    "answer_preview": "El vector CVSS v3 para la vulnerabilidad CVE-2021-26084, según los datos de la base de datos NVD/NIST, es el siguiente:\n\n**Vector CVSS v3:** `CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H`\n\nEste vector indica que la vulnerabilidad tiene un **puntaje base de 9.8**, clasificada como **CRÍTICA**. Los de…"
+  }
+}

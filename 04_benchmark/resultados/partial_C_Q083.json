@@ -1,0 +1,52 @@
+{
+  "result": {
+    "answer": "El subgrafo proporcionado no contiene información específica sobre las vulnerabilidades CVE que afectan a Fortinet FortiOS entre 2022 y 2023. No se mencionan CVEs, ni se hace referencia a Fortinet o FortiOS en el contenido recuperado.\n\nPor lo tanto, no puedo responder a la pregunta sobre las CVEs que afectan a Fortinet FortiOS en el periodo mencionado. \n\nSi necesitas información adicional o específica sobre CVEs, te recomendaría consultar bases de datos de vulnerabilidades como el NVD (National Vulnerability Database) o el sitio web de Fortinet.",
+    "seed_nodes": [
+      "T1053.002",
+      "S0110",
+      "S0039",
+      "T1680",
+      "T1596.005"
+    ],
+    "subgraph_nodes": 40,
+    "subgraph_edges": 16,
+    "coverage": {
+      "sufficient": false,
+      "missing_entities": [
+        "Fortinet FortiOS",
+        "CVE",
+        "2022",
+        "2023"
+      ],
+      "confidence": 0.3
+    },
+    "hallucination_risk": true,
+    "usage": {
+      "prompt_tokens": 3069,
+      "completion_tokens": 169,
+      "total_tokens": 3238,
+      "retrieval_latency_s": 0.009,
+      "coverage_latency_s": 1.218,
+      "synthesis_latency_s": 3.519
+    },
+    "architecture": "C_GraphRAG"
+  },
+  "metrics": {
+    "question_id": "Q083",
+    "level": 2,
+    "domain": "NVD",
+    "architecture": "C_GraphRAG",
+    "accuracy": 0.8333,
+    "hallucination_risk": 0.7,
+    "traceability": 1.0,
+    "error_handling": 1.0,
+    "latency_s": 4.746,
+    "total_tokens": 3238,
+    "accuracy_detail": "Score=0.833 | completas=['fortinet', 'fortios', '2022', '2023', 'CVE'] | parciales=[] | ausentes=['VPN']",
+    "hallucination_detail": "Flag de riesgo activo (sin datos de fuente verificados)",
+    "traceability_detail": "Markers texto: ['nvd', 'national vulnerability', 'database'] | Fuente estructurada: api_source=False, seed_nodes=True, sql=False",
+    "error_handling_detail": "Sin errores detectados en el pipeline",
+    "latency_detail": "retrieval=0.01s coverage=1.22s synth=3.52s",
+    "answer_preview": "El subgrafo proporcionado no contiene información específica sobre las vulnerabilidades CVE que afectan a Fortinet FortiOS entre 2022 y 2023. No se mencionan CVEs, ni se hace referencia a Fortinet o FortiOS en el contenido recuperado.\n\nPor lo tanto, no puedo responder a la pregunta sobre las CVEs qu…"
+  }
+}

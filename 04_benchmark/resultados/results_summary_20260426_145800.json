@@ -1,0 +1,122 @@
+{
+  "A": {
+    "n": 100,
+    "accuracy_mean": 0.4723,
+    "accuracy_ci_95": [
+      0.4261,
+      0.5207
+    ],
+    "hallucination_mean": 0.0,
+    "hallucination_ci_95": [
+      0.0,
+      0.0
+    ],
+    "traceability_mean": 1.0,
+    "traceability_ci_95": [
+      1.0,
+      1.0
+    ],
+    "error_handling_mean": 1.0,
+    "error_handling_ci_95": [
+      1.0,
+      1.0
+    ],
+    "latency_mean_s": 8.9078,
+    "total_tokens_mean": 3755.0,
+    "accuracy_by_level": {
+      "1": 0.4794,
+      "2": 0.4434,
+      "3": 0.4992
+    }
+  },
+  "B": {
+    "n": 100,
+    "accuracy_mean": 0.2275,
+    "accuracy_ci_95": [
+      0.1663,
+      0.2897
+    ],
+    "hallucination_mean": 0.435,
+    "hallucination_ci_95": [
+      0.375,
+      0.49
+    ],
+    "traceability_mean": 0.665,
+    "traceability_ci_95": [
+      0.615,
+      0.71
+    ],
+    "error_handling_mean": 0.848,
+    "error_handling_ci_95": [
+      0.832,
+      0.866
+    ],
+    "latency_mean_s": 3.5062,
+    "total_tokens_mean": 1074.62,
+    "accuracy_by_level": {
+      "1": 0.3449,
+      "2": 0.1444,
+      "3": 0.1312
+    }
+  },
+  "C": {
+    "n": 100,
+    "accuracy_mean": 0.49,
+    "accuracy_ci_95": [
+      0.4407,
+      0.5418
+    ],
+    "hallucination_mean": 0.665,
+    "hallucination_ci_95": [
+      0.63,
+      0.693
+    ],
+    "traceability_mean": 0.925,
+    "traceability_ci_95": [
+      0.89,
+      0.955
+    ],
+    "error_handling_mean": 1.0,
+    "error_handling_ci_95": [
+      1.0,
+      1.0
+    ],
+    "latency_mean_s": 6.4358,
+    "total_tokens_mean": 2725.03,
+    "accuracy_by_level": {
+      "1": 0.4612,
+      "2": 0.497,
+      "3": 0.5321
+    }
+  },
+  "D": {
+    "n": 100,
+    "accuracy_mean": 0.5101,
+    "accuracy_ci_95": [
+      0.4678,
+      0.5563
+    ],
+    "hallucination_mean": 0.0,
+    "hallucination_ci_95": [
+      0.0,
+      0.0
+    ],
+    "traceability_mean": 0.5,
+    "traceability_ci_95": [
+      0.5,
+      0.5
+    ],
+    "error_handling_mean": 0.891,
+    "error_handling_ci_95": [
+      0.847,
+      0.94
+    ],
+    "latency_mean_s": 14.3635,
+    "total_tokens_mean": 9153.33,
+    "accuracy_by_level": {
+      "1": 0.562,
+      "2": 0.4788,
+      "3": 0.4602
+    }
+  }
+}

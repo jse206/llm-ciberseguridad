@@ -1,0 +1,55 @@
+{
+  "result": {
+    "answer": "CVE-2022-30190, conocido como Follina, es una vulnerabilidad de ejecución remota de código que se produce cuando la herramienta de diagnóstico de soporte de Microsoft (MSDT) es llamada utilizando el protocolo URL desde aplicaciones como Microsoft Word. Un atacante que explota esta vulnerabilidad puede ejecutar código arbitrario con los privilegios de la aplicación que llama, lo que le permite instalar programas, ver, cambiar o eliminar datos, o crear nuevas cuentas según los derechos del usuario.\n\nLas técnicas de MITRE ATT&CK asociadas con esta vulnerabilidad incluyen:\n\n1. **T1570 - Lateral Tool Transfer**: Transferencia de herramientas o archivos entre sistemas en un entorno comprometido.\n2. **T1547.012 - Print Processors**: Abuso de procesadores de impresión para ejecutar DLLs maliciosas durante el arranque del sistema.\n3. **T1204.003 - Malicious Image**: Ejecución de imágenes maliciosas por parte del usuario.\n4. **T1071.001 - Web Protocols**: Comunicación utilizando protocolos de aplicación asociados con tráfico web para evitar detección.\n5. **T1566 - Phishing**: Envío de mensajes de phishing para acceder a sistemas de las víctimas.\n\nLa cadena de explotación típica para Follina implica que un atacante envía un documento malicioso (por ejemplo, un archivo de Word) que, al ser abierto por la víctima, activa el protocolo URL que llama a MSDT. Esto permite al atacante ejecutar código malicioso en el sistema de la víctima, aprovechando la interacción del usuario para llevar a cabo la explotación.\n\n**Fuentes consultadas:** query_mitre_graph, query_nvd_api",
+    "steps": [
+      {
+        "thought": "",
+        "action": "query_mitre_graph",
+        "action_input": {
+          "question": "¿Qué técnicas de MITRE ATT&CK están asociadas con CVE-2022-30190 (Follina)?"
+        },
+        "observation_preview": "{\n  \"context\": \"=== SUBGRAFO MITRE ATT&CK ===\\n\\n--- Entidades recuperadas ---\\n  [attack-pattern] T1570 — Lateral Tool Transfer\\n     Adversaries may transfer tools or other files between systems in a compromised environment. Once brought into the victim environment (i.e., [Ingress Tool Transfer](h…"
+      },
+      {
+        "thought": "",
+        "action": "query_nvd_api",
+        "action_input": {
+          "cve_id": "CVE-2022-30190"
+        },
+        "observation_preview": "{\n  \"data\": {\n    \"id\": \"CVE-2022-30190\",\n    \"sourceIdentifier\": \"secure@microsoft.com\",\n    \"published\": \"2022-06-01T20:15:07.983\",\n    \"lastModified\": \"2025-10-30T19:19:41.540\",\n    \"vulnStatus\": \"Analyzed\",\n    \"cveTags\": [],\n    \"descriptions\": [\n      {\n        \"lang\": \"en\",\n        \"value\": \"…"
+      }
+    ],
+    "tools_used": [
+      "query_mitre_graph",
+      "query_nvd_api"
+    ],
+    "iterations": 2,
+    "forced_final": false,
+    "hallucination_risk": false,
+    "usage": {
+      "prompt_tokens": 4970,
+      "completion_tokens": 599,
+      "total_tokens": 5569,
+      "total_latency_s": 12.469
+    },
+    "architecture": "D_Toolformer"
+  },
+  "metrics": {
+    "question_id": "Q093",
+    "level": 3,
+    "domain": "BOTH",
+    "architecture": "D_Toolformer",
+    "accuracy": 0.4286,
+    "hallucination_risk": 0.0,
+    "traceability": 0.5,
+    "error_handling": 1.0,
+    "latency_s": 12.469,
+    "total_tokens": 5569,
+    "accuracy_detail": "Score=0.429 | completas=['Follina', 'CVE-2022-30190', 'msdt'] | parciales=[] | ausentes=['T1203', 'client execution', 'initial access', 'macro']",
+    "hallucination_detail": "Sin señales de alucinación detectadas",
+    "traceability_detail": "Markers texto: ['nvd', 'mitre', 'att&ck'] | Fuente estructurada: api_source=False, seed_nodes=False, sql=False",
+    "error_handling_detail": "Sin errores detectados en el pipeline",
+    "latency_detail": "total_react=12.47s iterations=2",
+    "answer_preview": "CVE-2022-30190, conocido como Follina, es una vulnerabilidad de ejecución remota de código que se produce cuando la herramienta de diagnóstico de soporte de Microsoft (MSDT) es llamada utilizando el protocolo URL desde aplicaciones como Microsoft Word. Un atacante que explota esta vulnerabilidad pue…"
+  }
+}

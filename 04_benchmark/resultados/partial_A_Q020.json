@@ -1,0 +1,39 @@
+{
+  "result": {
+    "answer": "El score CVSS v3 de CVE-2022-26134, correspondiente a Atlassian Confluence, es 9.8. Esta información proviene de la base de datos NVD/NIST.",
+    "sql": "SELECT cvss_v3_score FROM cve WHERE cve_id = 'CVE-2022-26134';",
+    "sql_rows": 1,
+    "correction_attempts": 0,
+    "sql_error": null,
+    "api_fallback": null,
+    "hallucination_risk": false,
+    "usage": {
+      "prompt_tokens": 2959,
+      "completion_tokens": 159,
+      "total_tokens": 3118,
+      "schema_linking_latency_s": 2.356,
+      "sql_generation_latency_s": 1.201,
+      "self_correction_latency_s": 0,
+      "synthesis_latency_s": 1.498
+    },
+    "architecture": "A_Text2SQL"
+  },
+  "metrics": {
+    "question_id": "Q020",
+    "level": 1,
+    "domain": "NVD",
+    "architecture": "A_Text2SQL",
+    "accuracy": 0.4,
+    "hallucination_risk": 0.0,
+    "traceability": 1.0,
+    "error_handling": 1.0,
+    "latency_s": 5.055,
+    "total_tokens": 3118,
+    "accuracy_detail": "Score=0.400 | completas=['9.8', 'confluence'] | parciales=[] | ausentes=['critical', 'confluencia', 'ognl']",
+    "hallucination_detail": "Sin señales de alucinación detectadas",
+    "traceability_detail": "Markers texto: ['nvd', 'nist', 'base de datos'] | Fuente estructurada: api_source=False, seed_nodes=False, sql=True",
+    "error_handling_detail": "Sin errores detectados en el pipeline",
+    "latency_detail": "linking=2.36s sql=1.20s corr=0.00s synth=1.50s",
+    "answer_preview": "El score CVSS v3 de CVE-2022-26134, correspondiente a Atlassian Confluence, es 9.8. Esta información proviene de la base de datos NVD/NIST."
+  }
+}

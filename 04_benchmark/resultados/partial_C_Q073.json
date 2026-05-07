@@ -1,0 +1,47 @@
+{
+  "result": {
+    "answer": "El nombre de la técnica MITRE ATT&CK T1562 es \"Impair Defenses\". Según MITRE ATT&CK, esta técnica se refiere a las acciones que los adversarios pueden llevar a cabo para deshabilitar o eludir las defensas de seguridad de un sistema o red, lo que les permite operar con mayor libertad y eficacia. \n\nSi necesitas más información sobre esta técnica o su aplicación, no dudes en preguntar.",
+    "seed_nodes": [
+      "T1562",
+      "T1053.002",
+      "S0110"
+    ],
+    "subgraph_nodes": 40,
+    "subgraph_edges": 11,
+    "coverage": {
+      "sufficient": false,
+      "missing_entities": [
+        "nombre de la técnica T1562"
+      ],
+      "confidence": 0.3
+    },
+    "hallucination_risk": true,
+    "usage": {
+      "prompt_tokens": 2716,
+      "completion_tokens": 124,
+      "total_tokens": 2840,
+      "retrieval_latency_s": 0.007,
+      "coverage_latency_s": 1.217,
+      "synthesis_latency_s": 2.056
+    },
+    "architecture": "C_GraphRAG"
+  },
+  "metrics": {
+    "question_id": "Q073",
+    "level": 1,
+    "domain": "MITRE",
+    "architecture": "C_GraphRAG",
+    "accuracy": 0.6,
+    "hallucination_risk": 0.7,
+    "traceability": 1.0,
+    "error_handling": 1.0,
+    "latency_s": 3.28,
+    "total_tokens": 2840,
+    "accuracy_detail": "Score=0.600 | completas=['T1562', 'Impair Defenses', 'defenses'] | parciales=[] | ausentes=['antivirus', 'desactivar']",
+    "hallucination_detail": "Flag de riesgo activo (sin datos de fuente verificados)",
+    "traceability_detail": "Markers texto: ['mitre', 'att&ck', 'según'] | Fuente estructurada: api_source=False, seed_nodes=True, sql=False",
+    "error_handling_detail": "Sin errores detectados en el pipeline",
+    "latency_detail": "retrieval=0.01s coverage=1.22s synth=2.06s",
+    "answer_preview": "El nombre de la técnica MITRE ATT&CK T1562 es \"Impair Defenses\". Según MITRE ATT&CK, esta técnica se refiere a las acciones que los adversarios pueden llevar a cabo para deshabilitar o eludir las defensas de seguridad de un sistema o red, lo que les permite operar con mayor libertad y eficacia. \n\nSi…"
+  }
+}

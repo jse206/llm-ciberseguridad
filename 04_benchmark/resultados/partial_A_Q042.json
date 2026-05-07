@@ -1,0 +1,39 @@
+{
+  "result": {
+    "answer": "La vulnerabilidad CVE-2021-44228, conocida como Log4Shell, afecta a Apache Log4j2 y permite la ejecución remota de código a través de características JNDI. Esta vulnerabilidad ha sido catalogada como crítica, con un puntaje CVSS de 10.0, lo que indica un alto riesgo para la confidencialidad, integridad y disponibilidad de los sistemas afectados. \n\nEn cuanto a su relación con las técnicas de MITRE ATT&CK, Log4Shell se puede asociar con varias técnicas de ataque, especialmente aquellas relacionadas con la ejecución de código y la explotación de vulnerabilidades en aplicaciones. Sin embargo, los detalles específicos sobre las técnicas de MITRE ATT&CK que se utilizan para explotar esta vulnerabilidad no se encuentran en los resultados de la base de datos NVD/NIST.\n\nRespecto a los grupos APT que han explotado esta vulnerabilidad, los resultados de la consulta SQL no proporcionan información específica sobre grupos de amenazas o APTs que hayan utilizado Log4Shell en sus ataques. Por lo tanto, no se puede determinar qué grupos han estado involucrados en la explotación de esta vulnerabilidad basándose únicamente en los datos obtenidos.\n\nEn resumen, la información proviene de la base de datos NVD/NIST y, aunque se detalla la naturaleza crítica de la vulnerabilidad, no se han encontrado datos sobre su relación con técnicas específicas de MITRE ATT&CK ni sobre grupos APT que la hayan explotado.",
+    "sql": "SELECT cve.cve_id, cve.description, cve_reference.url, cve_reference.source\nFROM cve\nLEFT JOIN cve_reference ON cve.cve_id = cve_reference.cve_id\nWHERE cve.cve_id = 'CVE-2021-44228'\nLIMIT 10;",
+    "sql_rows": 1,
+    "correction_attempts": 0,
+    "sql_error": null,
+    "api_fallback": "NVD API — CVE-2021-44228",
+    "hallucination_risk": false,
+    "usage": {
+      "prompt_tokens": 4731,
+      "completion_tokens": 517,
+      "total_tokens": 5248,
+      "schema_linking_latency_s": 3.985,
+      "sql_generation_latency_s": 1.884,
+      "self_correction_latency_s": 0,
+      "synthesis_latency_s": 15.959
+    },
+    "architecture": "A_Text2SQL"
+  },
+  "metrics": {
+    "question_id": "Q042",
+    "level": 3,
+    "domain": "BOTH",
+    "architecture": "A_Text2SQL",
+    "accuracy": 0.3333,
+    "hallucination_risk": 0.0,
+    "traceability": 1.0,
+    "error_handling": 1.0,
+    "latency_s": 21.828,
+    "total_tokens": 5248,
+    "accuracy_detail": "Score=0.333 | completas=['log4shell', 'APT'] | parciales=[] | ausentes=['T1190', 'initial access', 'RCE', 'exploitation']",
+    "hallucination_detail": "Sin señales de alucinación detectadas",
+    "traceability_detail": "Markers texto: ['nvd', 'nist', 'mitre'] | Fuente estructurada: api_source=False, seed_nodes=False, sql=True",
+    "error_handling_detail": "Sin errores detectados en el pipeline",
+    "latency_detail": "linking=3.98s sql=1.88s corr=0.00s synth=15.96s",
+    "answer_preview": "La vulnerabilidad CVE-2021-44228, conocida como Log4Shell, afecta a Apache Log4j2 y permite la ejecución remota de código a través de características JNDI. Esta vulnerabilidad ha sido catalogada como crítica, con un puntaje CVSS de 10.0, lo que indica un alto riesgo para la confidencialidad, integri…"
+  }
+}

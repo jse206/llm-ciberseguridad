@@ -1,0 +1,39 @@
+{
+  "result": {
+    "answer": "De acuerdo con los resultados obtenidos de la base de datos NVD/NIST, hay un total de 2745 vulnerabilidades asociadas a CWE-200 (Information Exposure).",
+    "sql": "SELECT COUNT(c.cve_id) AS total_vulnerabilities\nFROM cve AS c\nJOIN cve_cwe AS cw ON c.cve_id = cw.cve_id\nWHERE cw.cwe_id = 'CWE-200';",
+    "sql_rows": 1,
+    "correction_attempts": 0,
+    "sql_error": null,
+    "api_fallback": null,
+    "hallucination_risk": false,
+    "usage": {
+      "prompt_tokens": 2989,
+      "completion_tokens": 182,
+      "total_tokens": 3171,
+      "schema_linking_latency_s": 2.045,
+      "sql_generation_latency_s": 1.576,
+      "self_correction_latency_s": 0,
+      "synthesis_latency_s": 1.426
+    },
+    "architecture": "A_Text2SQL"
+  },
+  "metrics": {
+    "question_id": "Q059",
+    "level": 1,
+    "domain": "NVD",
+    "architecture": "A_Text2SQL",
+    "accuracy": 0.6667,
+    "hallucination_risk": 0.0,
+    "traceability": 1.0,
+    "error_handling": 1.0,
+    "latency_s": 5.047,
+    "total_tokens": 3171,
+    "accuracy_detail": "Score=0.667 | completas=['CWE-200', 'information exposure'] | parciales=[] | ausentes=['divulgación']",
+    "hallucination_detail": "Sin señales de alucinación detectadas",
+    "traceability_detail": "Markers texto: ['nvd', 'nist', 'base de datos'] | Fuente estructurada: api_source=False, seed_nodes=False, sql=True",
+    "error_handling_detail": "Sin errores detectados en el pipeline",
+    "latency_detail": "linking=2.04s sql=1.58s corr=0.00s synth=1.43s",
+    "answer_preview": "De acuerdo con los resultados obtenidos de la base de datos NVD/NIST, hay un total de 2745 vulnerabilidades asociadas a CWE-200 (Information Exposure)."
+  }
+}

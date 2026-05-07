@@ -1,0 +1,53 @@
+{
+  "result": {
+    "answer": "El subgrafo proporcionado no contiene información sobre vulnerabilidades, su severidad, ni estadísticas relacionadas con el porcentaje de vulnerabilidades de 2023 en la base de datos local que tengan severidad HIGH o CRITICAL. \n\nPor lo tanto, no puedo responder a la pregunta sobre el porcentaje de vulnerabilidades de 2023 en la base de datos local que tienen severidad HIGH o CRITICAL. \n\nSi necesitas información sobre tácticas, técnicas, grupos APT, mitigaciones o herramientas de ataque, estaré encantado de ayudarte con eso.",
+    "seed_nodes": [
+      "T1053.002",
+      "S0110",
+      "T1680",
+      "T1596.005",
+      "T1596"
+    ],
+    "subgraph_nodes": 40,
+    "subgraph_edges": 7,
+    "coverage": {
+      "sufficient": false,
+      "missing_entities": [
+        "vulnerabilidades",
+        "porcentaje",
+        "severidad",
+        "HIGH",
+        "CRITICAL"
+      ],
+      "confidence": 0.2
+    },
+    "hallucination_risk": true,
+    "usage": {
+      "prompt_tokens": 3114,
+      "completion_tokens": 159,
+      "total_tokens": 3273,
+      "retrieval_latency_s": 0.009,
+      "coverage_latency_s": 1.536,
+      "synthesis_latency_s": 2.916
+    },
+    "architecture": "C_GraphRAG"
+  },
+  "metrics": {
+    "question_id": "Q038",
+    "level": 2,
+    "domain": "NVD",
+    "architecture": "C_GraphRAG",
+    "accuracy": 0.8,
+    "hallucination_risk": 0.7,
+    "traceability": 1.0,
+    "error_handling": 1.0,
+    "latency_s": 4.461,
+    "total_tokens": 3273,
+    "accuracy_detail": "Score=0.800 | completas=['porcentaje', 'high', 'critical', '2023'] | parciales=[] | ausentes=['percent']",
+    "hallucination_detail": "Flag de riesgo activo (sin datos de fuente verificados)",
+    "traceability_detail": "Markers texto: ['base de datos', 'grafo'] | Fuente estructurada: api_source=False, seed_nodes=True, sql=False",
+    "error_handling_detail": "Sin errores detectados en el pipeline",
+    "latency_detail": "retrieval=0.01s coverage=1.54s synth=2.92s",
+    "answer_preview": "El subgrafo proporcionado no contiene información sobre vulnerabilidades, su severidad, ni estadísticas relacionadas con el porcentaje de vulnerabilidades de 2023 en la base de datos local que tengan severidad HIGH o CRITICAL. \n\nPor lo tanto, no puedo responder a la pregunta sobre el porcentaje de v…"
+  }
+}

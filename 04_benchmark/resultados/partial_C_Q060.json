@@ -1,0 +1,51 @@
+{
+  "result": {
+    "answer": "El subgrafo proporcionado no contiene información sobre CVEs (Common Vulnerabilities and Exposures) ni sobre sus puntajes CVSS (Common Vulnerability Scoring System). Por lo tanto, no puedo identificar cuál es el CVE con el mayor puntaje CVSS publicado en 2022 en la base de datos local.\n\nSegún MITRE ATT&CK, la información disponible se centra en tácticas, técnicas, grupos APT y malware, pero no incluye detalles sobre vulnerabilidades específicas o sus evaluaciones de seguridad. \n\nSi necesitas información sobre tácticas o técnicas específicas dentro del framework MITRE ATT&CK, estaré encantado de ayudarte.",
+    "seed_nodes": [
+      "T1053.002",
+      "S0110",
+      "T1596.005",
+      "T1596",
+      "T1497.003"
+    ],
+    "subgraph_nodes": 40,
+    "subgraph_edges": 11,
+    "coverage": {
+      "sufficient": false,
+      "missing_entities": [
+        "CVE",
+        "CVSS score",
+        "año 2022"
+      ],
+      "confidence": 0.2
+    },
+    "hallucination_risk": true,
+    "usage": {
+      "prompt_tokens": 2981,
+      "completion_tokens": 175,
+      "total_tokens": 3156,
+      "retrieval_latency_s": 0.009,
+      "coverage_latency_s": 1.321,
+      "synthesis_latency_s": 2.968
+    },
+    "architecture": "C_GraphRAG"
+  },
+  "metrics": {
+    "question_id": "Q060",
+    "level": 1,
+    "domain": "NVD",
+    "architecture": "C_GraphRAG",
+    "accuracy": 0.25,
+    "hallucination_risk": 0.7,
+    "traceability": 1.0,
+    "error_handling": 1.0,
+    "latency_s": 4.298,
+    "total_tokens": 3156,
+    "accuracy_detail": "Score=0.250 | completas=['2022'] | parciales=[] | ausentes=['10.0', 'critical', 'máximo']",
+    "hallucination_detail": "Flag de riesgo activo (sin datos de fuente verificados)",
+    "traceability_detail": "Markers texto: ['mitre', 'att&ck', 'según'] | Fuente estructurada: api_source=False, seed_nodes=True, sql=False",
+    "error_handling_detail": "Sin errores detectados en el pipeline",
+    "latency_detail": "retrieval=0.01s coverage=1.32s synth=2.97s",
+    "answer_preview": "El subgrafo proporcionado no contiene información sobre CVEs (Common Vulnerabilities and Exposures) ni sobre sus puntajes CVSS (Common Vulnerability Scoring System). Por lo tanto, no puedo identificar cuál es el CVE con el mayor puntaje CVSS publicado en 2022 en la base de datos local.\n\nSegún MITRE …"
+  }
+}

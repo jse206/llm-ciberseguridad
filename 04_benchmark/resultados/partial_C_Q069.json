@@ -1,0 +1,45 @@
+{
+  "result": {
+    "answer": "Según el subgrafo recuperado del framework MITRE ATT&CK, la técnica T1055 (Process Injection) tiene tres sub-técnicas documentadas:\n\n1. **T1055.005 — Thread Local Storage**: Esta sub-técnica implica la inyección de código malicioso en procesos a través de callbacks de almacenamiento local de hilos (TLS) para evadir defensas basadas en procesos y posiblemente elevar privilegios.\n\n2. **T1055.008 — Ptrace System Calls**: Esta sub-técnica se refiere a la inyección de código malicioso en procesos mediante llamadas al sistema ptrace, lo que también permite evadir defensas basadas en procesos y puede facilitar la elevación de privilegios.\n\n3. **T1055.009 — Proc Memory**: Esta sub-técnica utiliza el sistema de archivos /proc para inyectar código malicioso en procesos, con el mismo objetivo de evadir defensas y elevar privilegios.\n\nPor lo tanto, T1055 tiene un total de tres sub-técnicas. \n\nSegún MITRE ATT&CK, estas sub-técnicas son relevantes para las tácticas de evasión de defensa y elevación de privilegios.",
+    "seed_nodes": [
+      "T1055"
+    ],
+    "subgraph_nodes": 40,
+    "subgraph_edges": 6,
+    "coverage": {
+      "sufficient": false,
+      "missing_entities": [
+        "sub-técnicas de T1055"
+      ],
+      "confidence": 0.3
+    },
+    "hallucination_risk": true,
+    "usage": {
+      "prompt_tokens": 3026,
+      "completion_tokens": 285,
+      "total_tokens": 3311,
+      "retrieval_latency_s": 0.007,
+      "coverage_latency_s": 1.432,
+      "synthesis_latency_s": 9.318
+    },
+    "architecture": "C_GraphRAG"
+  },
+  "metrics": {
+    "question_id": "Q069",
+    "level": 1,
+    "domain": "MITRE",
+    "architecture": "C_GraphRAG",
+    "accuracy": 0.6,
+    "hallucination_risk": 0.7,
+    "traceability": 1.0,
+    "error_handling": 1.0,
+    "latency_s": 10.757,
+    "total_tokens": 3311,
+    "accuracy_detail": "Score=0.600 | completas=['T1055', 'sub-técnica'] | parciales=['DLL injection(50%)', 'process hollowing(50%)'] | ausentes=['T1055.001']",
+    "hallucination_detail": "Flag de riesgo activo (sin datos de fuente verificados)",
+    "traceability_detail": "Markers texto: ['mitre', 'att&ck', 'según'] | Fuente estructurada: api_source=False, seed_nodes=True, sql=False",
+    "error_handling_detail": "Sin errores detectados en el pipeline",
+    "latency_detail": "retrieval=0.01s coverage=1.43s synth=9.32s",
+    "answer_preview": "Según el subgrafo recuperado del framework MITRE ATT&CK, la técnica T1055 (Process Injection) tiene tres sub-técnicas documentadas:\n\n1. **T1055.005 — Thread Local Storage**: Esta sub-técnica implica la inyección de código malicioso en procesos a través de callbacks de almacenamiento local de hilos (…"
+  }
+}

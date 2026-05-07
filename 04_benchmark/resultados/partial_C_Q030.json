@@ -1,0 +1,41 @@
+{
+  "result": {
+    "answer": "Lamentablemente, el sistema no encontró nodos relevantes en el grafo MITRE ATT&CK para responder a tu pregunta sobre los CVEs de severidad CRITICAL relacionados con Apache publicados en 2023. \n\nEl grafo MITRE ATT&CK se centra en técnicas de ataque, grupos APT, tácticas, mitigaciones y herramientas, pero no proporciona información específica sobre vulnerabilidades y exposiciones comunes (CVEs). \n\nSi tienes preguntas sobre técnicas ATT&CK, grupos APT, tácticas, mitigaciones o herramientas, estaré encantado de ayudarte con eso.",
+    "seed_nodes": [],
+    "subgraph_nodes": 0,
+    "subgraph_edges": 0,
+    "coverage": {
+      "sufficient": false,
+      "missing_entities": [],
+      "confidence": 0.0
+    },
+    "hallucination_risk": true,
+    "usage": {
+      "prompt_tokens": 143,
+      "completion_tokens": 118,
+      "total_tokens": 261,
+      "retrieval_latency_s": 0.019,
+      "coverage_latency_s": 0,
+      "synthesis_latency_s": 2.945
+    },
+    "architecture": "C_GraphRAG"
+  },
+  "metrics": {
+    "question_id": "Q030",
+    "level": 2,
+    "domain": "BOTH",
+    "architecture": "C_GraphRAG",
+    "accuracy": 1.0,
+    "hallucination_risk": 0.7,
+    "traceability": 0.5,
+    "error_handling": 1.0,
+    "latency_s": 2.964,
+    "total_tokens": 261,
+    "accuracy_detail": "Score=1.000 | completas=['apache', 'critical', '2023', 'CVE'] | parciales=[] | ausentes=[]",
+    "hallucination_detail": "Flag de riesgo activo (sin datos de fuente verificados)",
+    "traceability_detail": "Markers texto: ['mitre', 'att&ck', 'grafo'] | Fuente estructurada: api_source=False, seed_nodes=False, sql=False",
+    "error_handling_detail": "Sin errores detectados en el pipeline",
+    "latency_detail": "retrieval=0.02s coverage=0.00s synth=2.94s",
+    "answer_preview": "Lamentablemente, el sistema no encontró nodos relevantes en el grafo MITRE ATT&CK para responder a tu pregunta sobre los CVEs de severidad CRITICAL relacionados con Apache publicados en 2023. \n\nEl grafo MITRE ATT&CK se centra en técnicas de ataque, grupos APT, tácticas, mitigaciones y herramientas, …"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "result": {
+    "answer": "Los datos proporcionados provienen de la base de datos NVD/NIST y reflejan vulnerabilidades publicadas en 2024. A continuación, se presentan algunas de las vulnerabilidades que un grupo APT podría utilizar para comprometer una organización:\n\n1. **CVE-2024-21732**: Esta vulnerabilidad en FlyCms permite ataques de Cross-Site Scripting (XSS) a través de la gestión de permisos. Un atacante podría explotar esta vulnerabilidad para inyectar scripts maliciosos en el navegador de un usuario.\n\n2. **CVE-2024-0181**: En el portal en línea RRJ Nueva Ecija, se ha identificado una vulnerabilidad que permite la manipulación de argumentos en el panel de administración, lo que también puede resultar en ataques XSS. Esto podría ser utilizado para robar credenciales o realizar acciones no autorizadas.\n\n3. **CVE-2023-5877**: Esta vulnerabilidad en el plugin affiliate-toolkit de WordPress permite a visitantes no autenticados realizar solicitudes a URLs arbitrarias, lo que podría llevar a un ataque de Server Side Request Forgery (SSRF).\n\n4. **CVE-2023-6000**: El plugin Popup Builder permite a visitantes no autenticados inyectar JavaScript en popups, lo que podría resultar en ataques de XSS almacenados.\n\n5. **CVE-2023-6037**: En el plugin WP TripAdvisor Review Slider, la falta de sanitización de configuraciones permite a usuarios con privilegios altos realizar ataques XSS almacenados.\n\nEstas vulnerabilidades pueden ser parte de una cadena de ataque (kill chain) donde un grupo APT podría utilizar técnicas documentadas en MITRE ATT&CK, como la explotación de vulnerabilidades (T1203) y la ejecución de scripts maliciosos (T1059), para comprometer la seguridad de una organización.",
+    "sql": "SELECT cve.cve_id, cve.description, cve.published \nFROM cve \nWHERE cve.published >= '2024-01-01' \nLIMIT 10;",
+    "sql_rows": 10,
+    "correction_attempts": 0,
+    "sql_error": null,
+    "api_fallback": null,
+    "hallucination_risk": false,
+    "usage": {
+      "prompt_tokens": 3997,
+      "completion_tokens": 550,
+      "total_tokens": 4547,
+      "schema_linking_latency_s": 4.771,
+      "sql_generation_latency_s": 2.088,
+      "self_correction_latency_s": 0,
+      "synthesis_latency_s": 9.516
+    },
+    "architecture": "A_Text2SQL"
+  },
+  "metrics": {
+    "question_id": "Q050",
+    "level": 3,
+    "domain": "BOTH",
+    "architecture": "A_Text2SQL",
+    "accuracy": 0.5714,
+    "hallucination_risk": 0.0,
+    "traceability": 1.0,
+    "error_handling": 1.0,
+    "latency_s": 16.375,
+    "total_tokens": 4547,
+    "accuracy_detail": "Score=0.571 | completas=['kill chain', 'CVE-2024', 'APT', 'técnica'] | parciales=[] | ausentes=['initial access', 'lateral movement', 'exfiltration']",
+    "hallucination_detail": "Sin señales de alucinación detectadas",
+    "traceability_detail": "Markers texto: ['nvd', 'nist', 'mitre'] | Fuente estructurada: api_source=False, seed_nodes=False, sql=True",
+    "error_handling_detail": "Sin errores detectados en el pipeline",
+    "latency_detail": "linking=4.77s sql=2.09s corr=0.00s synth=9.52s",
+    "answer_preview": "Los datos proporcionados provienen de la base de datos NVD/NIST y reflejan vulnerabilidades publicadas en 2024. A continuación, se presentan algunas de las vulnerabilidades que un grupo APT podría utilizar para comprometer una organización:\n\n1. **CVE-2024-21732**: Esta vulnerabilidad en FlyCms permi…"
+  }
+}

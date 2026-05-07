@@ -1,0 +1,51 @@
+{
+  "result": {
+    "answer": "El subgrafo proporcionado no contiene información sobre vulnerabilidades, su severidad, ni datos específicos del año 2024. Por lo tanto, no puedo responder a la pregunta sobre cuántas vulnerabilidades con severidad CRITICAL existen en la base de datos local del año 2024.\n\nSegún MITRE ATT&CK, la información disponible se centra en tácticas, técnicas, grupos APT, mitigaciones y herramientas de ataque, pero no incluye detalles sobre vulnerabilidades específicas o su clasificación por severidad.",
+    "seed_nodes": [
+      "T1053.002",
+      "S0110",
+      "T1680",
+      "T1596.005",
+      "T1596"
+    ],
+    "subgraph_nodes": 40,
+    "subgraph_edges": 7,
+    "coverage": {
+      "sufficient": false,
+      "missing_entities": [
+        "vulnerabilidades",
+        "severidad CRITICAL",
+        "año 2024"
+      ],
+      "confidence": 0.2
+    },
+    "hallucination_risk": true,
+    "usage": {
+      "prompt_tokens": 3114,
+      "completion_tokens": 150,
+      "total_tokens": 3264,
+      "retrieval_latency_s": 0.007,
+      "coverage_latency_s": 1.32,
+      "synthesis_latency_s": 2.765
+    },
+    "architecture": "C_GraphRAG"
+  },
+  "metrics": {
+    "question_id": "Q007",
+    "level": 1,
+    "domain": "NVD",
+    "architecture": "C_GraphRAG",
+    "accuracy": 0.75,
+    "hallucination_risk": 0.7,
+    "traceability": 1.0,
+    "error_handling": 1.0,
+    "latency_s": 4.092,
+    "total_tokens": 3264,
+    "accuracy_detail": "Score=0.750 | completas=['critical', '2024', 'vulnerabilidades'] | parciales=[] | ausentes=['crítica']",
+    "hallucination_detail": "Flag de riesgo activo (sin datos de fuente verificados)",
+    "traceability_detail": "Markers texto: ['mitre', 'att&ck', 'según'] | Fuente estructurada: api_source=False, seed_nodes=True, sql=False",
+    "error_handling_detail": "Sin errores detectados en el pipeline",
+    "latency_detail": "retrieval=0.01s coverage=1.32s synth=2.77s",
+    "answer_preview": "El subgrafo proporcionado no contiene información sobre vulnerabilidades, su severidad, ni datos específicos del año 2024. Por lo tanto, no puedo responder a la pregunta sobre cuántas vulnerabilidades con severidad CRITICAL existen en la base de datos local del año 2024.\n\nSegún MITRE ATT&CK, la info…"
+  }
+}

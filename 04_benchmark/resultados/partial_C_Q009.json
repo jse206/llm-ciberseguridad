@@ -1,0 +1,50 @@
+{
+  "result": {
+    "answer": "El subgrafo proporcionado no contiene información específica sobre vulnerabilidades asociadas a la debilidad CWE-79. Por lo tanto, no puedo determinar cuántas vulnerabilidades están relacionadas con esta debilidad en la base de datos local.\n\nSegún MITRE ATT&CK, la debilidad CWE-79 se refiere a \"Cross-site Scripting (XSS)\", pero no se menciona ninguna vulnerabilidad específica ni se proporciona un número de vulnerabilidades asociadas en el contexto del subgrafo. \n\nSi necesitas información adicional o específica sobre CWE-79, te recomendaría consultar directamente la base de datos de CWE o fuentes relacionadas que puedan ofrecer detalles sobre vulnerabilidades específicas.",
+    "seed_nodes": [
+      "T1053.002",
+      "S0110",
+      "T1596.005",
+      "T1596",
+      "T1497.003"
+    ],
+    "subgraph_nodes": 40,
+    "subgraph_edges": 11,
+    "coverage": {
+      "sufficient": false,
+      "missing_entities": [
+        "CWE-79",
+        "vulnerabilidades asociadas"
+      ],
+      "confidence": 0.3
+    },
+    "hallucination_risk": true,
+    "usage": {
+      "prompt_tokens": 2981,
+      "completion_tokens": 175,
+      "total_tokens": 3156,
+      "retrieval_latency_s": 0.013,
+      "coverage_latency_s": 1.165,
+      "synthesis_latency_s": 3.328
+    },
+    "architecture": "C_GraphRAG"
+  },
+  "metrics": {
+    "question_id": "Q009",
+    "level": 1,
+    "domain": "NVD",
+    "architecture": "C_GraphRAG",
+    "accuracy": 1.0,
+    "hallucination_risk": 0.7,
+    "traceability": 1.0,
+    "error_handling": 1.0,
+    "latency_s": 4.506,
+    "total_tokens": 3156,
+    "accuracy_detail": "Score=1.000 | completas=['CWE-79', 'cross-site scripting', 'xss'] | parciales=[] | ausentes=[]",
+    "hallucination_detail": "Flag de riesgo activo (sin datos de fuente verificados)",
+    "traceability_detail": "Markers texto: ['mitre', 'att&ck', 'según'] | Fuente estructurada: api_source=False, seed_nodes=True, sql=False",
+    "error_handling_detail": "Sin errores detectados en el pipeline",
+    "latency_detail": "retrieval=0.01s coverage=1.17s synth=3.33s",
+    "answer_preview": "El subgrafo proporcionado no contiene información específica sobre vulnerabilidades asociadas a la debilidad CWE-79. Por lo tanto, no puedo determinar cuántas vulnerabilidades están relacionadas con esta debilidad en la base de datos local.\n\nSegún MITRE ATT&CK, la debilidad CWE-79 se refiere a \"Cros…"
+  }
+}

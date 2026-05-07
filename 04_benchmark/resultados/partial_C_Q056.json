@@ -1,0 +1,46 @@
+{
+  "result": {
+    "answer": "El subgrafo proporcionado no contiene información sobre el score CVSS v3 de CVE-2021-26855 (ProxyLogon, Microsoft Exchange). Por lo tanto, no puedo responder a la pregunta sobre el score CVSS v3 de esta vulnerabilidad específica.\n\nSi necesitas información adicional sobre CVE-2021-26855, te recomendaría consultar fuentes especializadas en seguridad cibernética o bases de datos de vulnerabilidades.",
+    "seed_nodes": [
+      "T1090"
+    ],
+    "subgraph_nodes": 40,
+    "subgraph_edges": 40,
+    "coverage": {
+      "sufficient": false,
+      "missing_entities": [
+        "CVE-2021-26855",
+        "CVSS v3 score"
+      ],
+      "confidence": 0.2
+    },
+    "hallucination_risk": true,
+    "usage": {
+      "prompt_tokens": 3130,
+      "completion_tokens": 134,
+      "total_tokens": 3264,
+      "retrieval_latency_s": 0.009,
+      "coverage_latency_s": 1.317,
+      "synthesis_latency_s": 2.014
+    },
+    "architecture": "C_GraphRAG"
+  },
+  "metrics": {
+    "question_id": "Q056",
+    "level": 1,
+    "domain": "NVD",
+    "architecture": "C_GraphRAG",
+    "accuracy": 0.5,
+    "hallucination_risk": 0.7,
+    "traceability": 1.0,
+    "error_handling": 1.0,
+    "latency_s": 3.34,
+    "total_tokens": 3264,
+    "accuracy_detail": "Score=0.500 | completas=['exchange', 'microsoft', 'proxylogon'] | parciales=[] | ausentes=['9.8', 'critical', 'SSRF']",
+    "hallucination_detail": "Flag de riesgo activo (sin datos de fuente verificados)",
+    "traceability_detail": "Markers texto: ['fuente', 'grafo'] | Fuente estructurada: api_source=False, seed_nodes=True, sql=False",
+    "error_handling_detail": "Sin errores detectados en el pipeline",
+    "latency_detail": "retrieval=0.01s coverage=1.32s synth=2.01s",
+    "answer_preview": "El subgrafo proporcionado no contiene información sobre el score CVSS v3 de CVE-2021-26855 (ProxyLogon, Microsoft Exchange). Por lo tanto, no puedo responder a la pregunta sobre el score CVSS v3 de esta vulnerabilidad específica.\n\nSi necesitas información adicional sobre CVE-2021-26855, te recomenda…"
+  }
+}

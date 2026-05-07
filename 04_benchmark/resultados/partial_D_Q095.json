@@ -1,0 +1,85 @@
+{
+  "result": {
+    "answer": "No se han encontrado CVEs recientes que se correlacionen directamente con la técnica T1059.001 (PowerShell) en las búsquedas realizadas. Sin embargo, es importante que los analistas de seguridad estén al tanto de las vulnerabilidades en software que puedan ser utilizadas en combinación con PowerShell, ya que esta técnica es común en ataques.\n\n**Fuentes consultadas:** query_mitre_graph, query_nvd_api",
+    "steps": [
+      {
+        "thought": "",
+        "action": "query_mitre_graph",
+        "action_input": {
+          "question": "¿Qué información hay sobre la técnica T1059.001 (PowerShell)?"
+        },
+        "observation_preview": "{\n  \"context\": \"=== SUBGRAFO MITRE ATT&CK ===\\n\\n--- Entidades recuperadas ---\\n  [intrusion-set] G0033 — Poseidon Group\\n     [Poseidon Group](https://attack.mitre.org/groups/G0033) is a Portuguese-speaking threat group that has been active since at least 2005. The group has a history of using info…"
+      },
+      {
+        "thought": "",
+        "action": "query_nvd_api",
+        "action_input": {
+          "keyword": "PowerShell",
+          "max_results": 5
+        },
+        "observation_preview": "{\n  \"data\": [\n    {\n      \"id\": \"CVE-2015-2108\",\n      \"sourceIdentifier\": \"hp-security-alert@hp.com\",\n      \"published\": \"2015-03-31T10:59:05.917\",\n      \"lastModified\": \"2025-04-12T10:46:40.837\",\n      \"vulnStatus\": \"Deferred\",\n      \"cveTags\": [],\n      \"descriptions\": [\n        {\n          \"lang…"
+      },
+      {
+        "thought": "",
+        "action": "query_nvd_api",
+        "action_input": {
+          "keyword": "PowerShell",
+          "max_results": 10
+        },
+        "observation_preview": "{\n  \"data\": [\n    {\n      \"id\": \"CVE-2015-2108\",\n      \"sourceIdentifier\": \"hp-security-alert@hp.com\",\n      \"published\": \"2015-03-31T10:59:05.917\",\n      \"lastModified\": \"2025-04-12T10:46:40.837\",\n      \"vulnStatus\": \"Deferred\",\n      \"cveTags\": [],\n      \"descriptions\": [\n        {\n          \"lang…"
+      },
+      {
+        "thought": "",
+        "action": "query_nvd_api",
+        "action_input": {
+          "severity": "HIGH",
+          "max_results": 5
+        },
+        "observation_preview": "{\n  \"data\": [\n    {\n      \"id\": \"CVE-1999-0236\",\n      \"sourceIdentifier\": \"cve@mitre.org\",\n      \"published\": \"1997-01-01T05:00:00.000\",\n      \"lastModified\": \"2026-04-16T00:27:16.627\",\n      \"vulnStatus\": \"Modified\",\n      \"cveTags\": [],\n      \"descriptions\": [\n        {\n          \"lang\": \"en\",\n  …"
+      },
+      {
+        "thought": "",
+        "action": "query_nvd_api",
+        "action_input": {
+          "max_results": 10
+        },
+        "observation_preview": "{\n  \"data\": [\n    {\n      \"id\": \"CVE-1999-0095\",\n      \"sourceIdentifier\": \"cve@mitre.org\",\n      \"published\": \"1988-10-01T04:00:00.000\",\n      \"lastModified\": \"2026-04-16T00:27:16.627\",\n      \"vulnStatus\": \"Modified\",\n      \"cveTags\": [],\n      \"descriptions\": [\n        {\n          \"lang\": \"en\",\n  …"
+      }
+    ],
+    "tools_used": [
+      "query_mitre_graph",
+      "query_nvd_api",
+      "query_nvd_api",
+      "query_nvd_api",
+      "query_nvd_api"
+    ],
+    "iterations": 5,
+    "forced_final": false,
+    "hallucination_risk": false,
+    "usage": {
+      "prompt_tokens": 18520,
+      "completion_tokens": 662,
+      "total_tokens": 19182,
+      "total_latency_s": 22.538
+    },
+    "architecture": "D_Toolformer"
+  },
+  "metrics": {
+    "question_id": "Q095",
+    "level": 3,
+    "domain": "BOTH",
+    "architecture": "D_Toolformer",
+    "accuracy": 0.4286,
+    "hallucination_risk": 0.0,
+    "traceability": 0.5,
+    "error_handling": 1.0,
+    "latency_s": 22.538,
+    "total_tokens": 19182,
+    "accuracy_detail": "Score=0.429 | completas=['T1059.001', 'PowerShell', 'CVE'] | parciales=[] | ausentes=['execution', 'correlación', 'AMSI', 'logging']",
+    "hallucination_detail": "Sin señales de alucinación detectadas",
+    "traceability_detail": "Markers texto: ['nvd', 'mitre', 'fuente'] | Fuente estructurada: api_source=False, seed_nodes=False, sql=False",
+    "error_handling_detail": "Sin errores detectados en el pipeline",
+    "latency_detail": "total_react=22.54s iterations=5",
+    "answer_preview": "No se han encontrado CVEs recientes que se correlacionen directamente con la técnica T1059.001 (PowerShell) en las búsquedas realizadas. Sin embargo, es importante que los analistas de seguridad estén al tanto de las vulnerabilidades en software que puedan ser utilizadas en combinación con PowerShel…"
+  }
+}

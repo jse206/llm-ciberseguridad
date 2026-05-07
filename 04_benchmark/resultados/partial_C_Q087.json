@@ -1,0 +1,47 @@
+{
+  "result": {
+    "answer": "Según MITRE ATT&CK, la técnica T1078 (Valid Accounts) se refiere a la obtención y abuso de credenciales de cuentas existentes para lograr acceso inicial, persistencia, escalada de privilegios o evasión de defensa. Para abordar esta amenaza, es crucial priorizar las siguientes medidas urgentes y CVEs:\n\n1. **Implementar Gestión de Cuentas Privilegiadas (M1026)**: Asegúrese de que las políticas y controles para gestionar cuentas privilegiadas estén en su lugar. Esto incluye restringir el acceso a cuentas críticas y monitorear su uso.\n\n2. **Establecer Políticas de Uso de Cuentas (M1036)**: Configure y haga cumplir reglas que regulen cómo y cuándo se pueden usar las cuentas. Esto puede incluir mecanismos de bloqueo de cuentas y auditorías regulares.\n\n3. **Autenticación Multifactor (M1032)**: Implemente MFA para todas las cuentas, especialmente las privilegiadas, para añadir una capa adicional de seguridad.\n\n4. **Políticas de Contraseñas (M1027)**: Asegúrese de que se apliquen políticas de contraseñas seguras, que incluyan complejidad y cambios regulares de contraseña.\n\n5. **Gestión de Cuentas de Usuario (M1018)**: Aplique políticas para el ciclo de vida de las cuentas de usuario, asegurando que las cuentas inactivas sean desactivadas y que se realicen auditorías periódicas.\n\nEn cuanto a los CVEs específicos que deberían priorizarse, el subgrafo proporcionado no incluye información sobre vulnerabilidades específicas (CVEs) que deban ser parcheadas. Por lo tanto, se recomienda realizar un análisis de vulnerabilidades en su infraestructura para identificar y priorizar los CVEs relevantes que puedan estar relacionados con las cuentas válidas y su gestión.\n\nEn resumen, la respuesta a la detección de T1078 debe centrarse en la implementación de controles de gestión de cuentas y políticas de seguridad robustas, mientras que la identificación de CVEs específicos debe realizarse a través de un análisis de vulnerabilidades.",
+    "seed_nodes": [
+      "T1078",
+      "S0066"
+    ],
+    "subgraph_nodes": 40,
+    "subgraph_edges": 76,
+    "coverage": {
+      "sufficient": false,
+      "missing_entities": [
+        "CVEs",
+        "urgent measures"
+      ],
+      "confidence": 0.4
+    },
+    "hallucination_risk": true,
+    "usage": {
+      "prompt_tokens": 2792,
+      "completion_tokens": 466,
+      "total_tokens": 3258,
+      "retrieval_latency_s": 0.015,
+      "coverage_latency_s": 1.349,
+      "synthesis_latency_s": 6.821
+    },
+    "architecture": "C_GraphRAG"
+  },
+  "metrics": {
+    "question_id": "Q087",
+    "level": 3,
+    "domain": "BOTH",
+    "architecture": "C_GraphRAG",
+    "accuracy": 1.0,
+    "hallucination_risk": 0.7,
+    "traceability": 1.0,
+    "error_handling": 1.0,
+    "latency_s": 8.185,
+    "total_tokens": 3258,
+    "accuracy_detail": "Score=1.000 | completas=['T1078', 'valid accounts', 'MFA', 'parche', 'CVE', 'credenciales', 'acceso'] | parciales=[] | ausentes=[]",
+    "hallucination_detail": "Flag de riesgo activo (sin datos de fuente verificados)",
+    "traceability_detail": "Markers texto: ['mitre', 'att&ck', 'según'] | Fuente estructurada: api_source=False, seed_nodes=True, sql=False",
+    "error_handling_detail": "Sin errores detectados en el pipeline",
+    "latency_detail": "retrieval=0.01s coverage=1.35s synth=6.82s",
+    "answer_preview": "Según MITRE ATT&CK, la técnica T1078 (Valid Accounts) se refiere a la obtención y abuso de credenciales de cuentas existentes para lograr acceso inicial, persistencia, escalada de privilegios o evasión de defensa. Para abordar esta amenaza, es crucial priorizar las siguientes medidas urgentes y CVEs…"
+  }
+}

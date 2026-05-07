@@ -1,0 +1,13 @@
+services:
+  api:
+    build: .
+    ports:
+      - "8001:8001"
+    env_file:
+      - .env
+    volumes:
+      - llm_data:/app/03_implementacion/data/storage
+    restart: unless-stopped
+
+volumes:
+  llm_data:

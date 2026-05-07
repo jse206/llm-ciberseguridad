@@ -1,0 +1,48 @@
+{
+  "result": {
+    "answer": "Según el subgrafo recuperado del framework MITRE ATT&CK, las tres técnicas más relevantes que podrían ser utilizadas por grupos APT de estado-nación son:\n\n1. **Técnica T1566 — Phishing**: Esta técnica implica el envío de mensajes de phishing para obtener acceso a sistemas de las víctimas. Es una táctica común para la **acceso inicial** y puede ser utilizada por diversos grupos APT para comprometer objetivos. Las vulnerabilidades críticas asociadas a esta técnica pueden incluir aquellas que permiten la ejecución de código remoto a través de archivos adjuntos maliciosos o enlaces en correos electrónicos.\n\n2. **Técnica T1550.003 — Pass the Ticket**: Esta técnica permite a los adversarios \"pasar el ticket\" utilizando tickets Kerberos robados para moverse lateralmente dentro de un entorno, eludiendo controles de acceso normales. Es utilizada en la táctica de **defensa-evasión** y **movimiento lateral**. Las vulnerabilidades críticas asociadas pueden incluir aquellas que afectan a la implementación de Kerberos o a la gestión de tickets en sistemas Windows.\n\n3. **Técnica T1003.001 — LSASS Memory**: Esta técnica implica el acceso a materiales de credenciales almacenados en la memoria del proceso de Local Security Authority Subsystem Service (LSASS). Es utilizada para **acceso a credenciales** y puede ser crítica para la obtención de privilegios en un sistema. Las vulnerabilidades críticas asociadas pueden incluir aquellas que permiten la explotación de la memoria de procesos en sistemas Windows.\n\nEs importante mencionar que el subgrafo no proporciona información específica sobre las CVE (Common Vulnerabilities and Exposures) asociadas a estas técnicas. Por lo tanto, no se pueden listar vulnerabilidades críticas concretas sin información adicional. \n\nEn resumen, las técnicas mencionadas son comúnmente utilizadas por grupos APT de estado-nación, pero para obtener detalles sobre vulnerabilidades específicas, se requeriría información adicional.",
+    "seed_nodes": [
+      "T1053.002",
+      "S0110"
+    ],
+    "subgraph_nodes": 40,
+    "subgraph_edges": 6,
+    "coverage": {
+      "sufficient": false,
+      "missing_entities": [
+        "técnicas MITRE ATT&CK",
+        "grupos APT de estado-nación",
+        "vulnerabilidades críticas (CVE)"
+      ],
+      "confidence": 0.2
+    },
+    "hallucination_risk": true,
+    "usage": {
+      "prompt_tokens": 2709,
+      "completion_tokens": 463,
+      "total_tokens": 3172,
+      "retrieval_latency_s": 0.012,
+      "coverage_latency_s": 1.516,
+      "synthesis_latency_s": 7.967
+    },
+    "architecture": "C_GraphRAG"
+  },
+  "metrics": {
+    "question_id": "Q044",
+    "level": 3,
+    "domain": "BOTH",
+    "architecture": "C_GraphRAG",
+    "accuracy": 0.7143,
+    "hallucination_risk": 0.7,
+    "traceability": 1.0,
+    "error_handling": 1.0,
+    "latency_s": 9.495,
+    "total_tokens": 3172,
+    "accuracy_detail": "Score=0.714 | completas=['APT', 'técnicas', 'T1566', 'CVE', 'estado-nación'] | parciales=[] | ausentes=['T1078', 'T1059']",
+    "hallucination_detail": "Flag de riesgo activo (sin datos de fuente verificados)",
+    "traceability_detail": "Markers texto: ['mitre', 'att&ck', 'según'] | Fuente estructurada: api_source=False, seed_nodes=True, sql=False",
+    "error_handling_detail": "Sin errores detectados en el pipeline",
+    "latency_detail": "retrieval=0.01s coverage=1.52s synth=7.97s",
+    "answer_preview": "Según el subgrafo recuperado del framework MITRE ATT&CK, las tres técnicas más relevantes que podrían ser utilizadas por grupos APT de estado-nación son:\n\n1. **Técnica T1566 — Phishing**: Esta técnica implica el envío de mensajes de phishing para obtener acceso a sistemas de las víctimas. Es una tác…"
+  }
+}

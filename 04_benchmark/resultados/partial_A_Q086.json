@@ -1,0 +1,39 @@
+{
+  "result": {
+    "answer": "Según los resultados obtenidos de la base de datos NVD/NIST, existen un total de 104 vulnerabilidades con un puntaje CVSS v3 de 10.0 publicadas en el año 2023.",
+    "sql": "SELECT COUNT(*) AS total_vulnerabilities\nFROM cve AS c\nWHERE c.cvss_v3_score = 10.0 AND c.published LIKE '2023%'",
+    "sql_rows": 1,
+    "correction_attempts": 0,
+    "sql_error": null,
+    "api_fallback": null,
+    "hallucination_risk": false,
+    "usage": {
+      "prompt_tokens": 2984,
+      "completion_tokens": 172,
+      "total_tokens": 3156,
+      "schema_linking_latency_s": 2.641,
+      "sql_generation_latency_s": 1.639,
+      "self_correction_latency_s": 0,
+      "synthesis_latency_s": 1.417
+    },
+    "architecture": "A_Text2SQL"
+  },
+  "metrics": {
+    "question_id": "Q086",
+    "level": 2,
+    "domain": "NVD",
+    "architecture": "A_Text2SQL",
+    "accuracy": 0.4,
+    "hallucination_risk": 0.0,
+    "traceability": 1.0,
+    "error_handling": 1.0,
+    "latency_s": 5.697,
+    "total_tokens": 3156,
+    "accuracy_detail": "Score=0.400 | completas=['10.0', '2023'] | parciales=[] | ausentes=['critical', 'máximo', 'score']",
+    "hallucination_detail": "Sin señales de alucinación detectadas",
+    "traceability_detail": "Markers texto: ['nvd', 'nist', 'según'] | Fuente estructurada: api_source=False, seed_nodes=False, sql=True",
+    "error_handling_detail": "Sin errores detectados en el pipeline",
+    "latency_detail": "linking=2.64s sql=1.64s corr=0.00s synth=1.42s",
+    "answer_preview": "Según los resultados obtenidos de la base de datos NVD/NIST, existen un total de 104 vulnerabilidades con un puntaje CVSS v3 de 10.0 publicadas en el año 2023."
+  }
+}

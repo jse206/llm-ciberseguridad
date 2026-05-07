@@ -1,0 +1,43 @@
+{
+  "result": {
+    "answer": "La técnica T1059 (Command and Scripting Interpreter) tiene un total de 8 sub-técnicas. Estas son:\n\n1. **T1059.001** — PowerShell\n2. **T1059.002** — AppleScript\n3. **T1059.003** — Windows Command Shell\n4. **T1059.005** — Visual Basic\n5. **T1059.006** — Python\n6. **T1059.007** — JavaScript\n7. **T1059.008** — Network Device CLI\n8. **T1059.012** — Hypervisor CLI\n9. **T1059.013** — Container CLI/API\n\nCada una de estas sub-técnicas representa una forma específica en la que los adversarios pueden abusar de los intérpretes de comandos y scripts para ejecutar comandos, scripts o binarios en diferentes plataformas y entornos.\n\nSegún MITRE ATT&CK, la técnica T1059 y sus sub-técnicas son utilizadas en la táctica de ejecución, lo que indica que son métodos comunes para que los atacantes ejecuten código malicioso en los sistemas de las víctimas.",
+    "seed_nodes": [
+      "T1059"
+    ],
+    "subgraph_nodes": 40,
+    "subgraph_edges": 75,
+    "coverage": {
+      "sufficient": true,
+      "missing_entities": [],
+      "confidence": 0.9
+    },
+    "hallucination_risk": false,
+    "usage": {
+      "prompt_tokens": 2797,
+      "completion_tokens": 270,
+      "total_tokens": 3067,
+      "retrieval_latency_s": 0.006,
+      "coverage_latency_s": 1.627,
+      "synthesis_latency_s": 5.633
+    },
+    "architecture": "C_GraphRAG"
+  },
+  "metrics": {
+    "question_id": "Q017",
+    "level": 1,
+    "domain": "MITRE",
+    "architecture": "C_GraphRAG",
+    "accuracy": 0.75,
+    "hallucination_risk": 0.0,
+    "traceability": 1.0,
+    "error_handling": 1.0,
+    "latency_s": 7.266,
+    "total_tokens": 3067,
+    "accuracy_detail": "Score=0.750 | completas=['sub-técnica', 'T1059', 'scripting'] | parciales=[] | ausentes=['subtechnique']",
+    "hallucination_detail": "Sin señales de alucinación detectadas",
+    "traceability_detail": "Markers texto: ['mitre', 'att&ck', 'según'] | Fuente estructurada: api_source=False, seed_nodes=True, sql=False",
+    "error_handling_detail": "Sin errores detectados en el pipeline",
+    "latency_detail": "retrieval=0.01s coverage=1.63s synth=5.63s",
+    "answer_preview": "La técnica T1059 (Command and Scripting Interpreter) tiene un total de 8 sub-técnicas. Estas son:\n\n1. **T1059.001** — PowerShell\n2. **T1059.002** — AppleScript\n3. **T1059.003** — Windows Command Shell\n4. **T1059.005** — Visual Basic\n5. **T1059.006** — Python\n6. **T1059.007** — JavaScript\n7. **T1059.…"
+  }
+}

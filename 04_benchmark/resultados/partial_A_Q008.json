@@ -1,0 +1,39 @@
+{
+  "result": {
+    "answer": "Los datos sobre las vulnerabilidades con mayor puntaje CVSS v3 publicadas en 2023 provienen de la base de datos NVD/NIST. A continuación, se presentan las cinco vulnerabilidades con el puntaje más alto:\n\n1. **CVE-2023-52181**\n   - **CVSS v3 Score:** 10.0\n   - **Fecha de publicación:** 31 de diciembre de 2023\n\n2. **CVE-2023-51475**\n   - **CVSS v3 Score:** 10.0\n   - **Fecha de publicación:** 29 de diciembre de 2023\n\n3. **CVE-2023-51473**\n   - **CVSS v3 Score:** 10.0\n   - **Fecha de publicación:** 29 de diciembre de 2023\n\n4. **CVE-2023-51468**\n   - **CVSS v3 Score:** 10.0\n   - **Fecha de publicación:** 29 de diciembre de 2023\n\n5. **CVE-2023-51419**\n   - **CVSS v3 Score:** 10.0\n   - **Fecha de publicación:** 29 de diciembre de 2023\n\nTodas estas vulnerabilidades tienen un puntaje CVSS v3 de 10.0, lo que indica que son críticas.",
+    "sql": "SELECT cve.cve_id, cve.cvss_v3_score, cve.published\nFROM cve\nWHERE published LIKE '2023%'\nORDER BY cve.cvss_v3_score DESC\nLIMIT 5;",
+    "sql_rows": 5,
+    "correction_attempts": 0,
+    "sql_error": null,
+    "api_fallback": null,
+    "hallucination_risk": false,
+    "usage": {
+      "prompt_tokens": 3222,
+      "completion_tokens": 427,
+      "total_tokens": 3649,
+      "schema_linking_latency_s": 1.96,
+      "sql_generation_latency_s": 1.19,
+      "self_correction_latency_s": 0,
+      "synthesis_latency_s": 4.758
+    },
+    "architecture": "A_Text2SQL"
+  },
+  "metrics": {
+    "question_id": "Q008",
+    "level": 1,
+    "domain": "NVD",
+    "architecture": "A_Text2SQL",
+    "accuracy": 0.5,
+    "hallucination_risk": 0.0,
+    "traceability": 1.0,
+    "error_handling": 1.0,
+    "latency_s": 7.908,
+    "total_tokens": 3649,
+    "accuracy_detail": "Score=0.500 | completas=['10.0', '2023'] | parciales=[] | ausentes=['9.9', 'critical']",
+    "hallucination_detail": "Sin señales de alucinación detectadas",
+    "traceability_detail": "Markers texto: ['nvd', 'nist', 'base de datos'] | Fuente estructurada: api_source=False, seed_nodes=False, sql=True",
+    "error_handling_detail": "Sin errores detectados en el pipeline",
+    "latency_detail": "linking=1.96s sql=1.19s corr=0.00s synth=4.76s",
+    "answer_preview": "Los datos sobre las vulnerabilidades con mayor puntaje CVSS v3 publicadas en 2023 provienen de la base de datos NVD/NIST. A continuación, se presentan las cinco vulnerabilidades con el puntaje más alto:\n\n1. **CVE-2023-52181**\n   - **CVSS v3 Score:** 10.0\n   - **Fecha de publicación:** 31 de diciembr…"
+  }
+}

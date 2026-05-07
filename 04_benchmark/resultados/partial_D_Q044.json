@@ -1,0 +1,95 @@
+{
+  "result": {
+    "answer": "Con la información recopilada hasta ahora, no se han identificado las tres técnicas más utilizadas de MITRE ATT&CK por grupos APT de estado-nación, ni se han encontrado vulnerabilidades críticas (CVE) asociadas a ellas. \n\nSin embargo, en general, algunas de las técnicas comúnmente asociadas con grupos APT incluyen:\n\n1. **Phishing**: Utilizado para obtener credenciales o acceso inicial a sistemas.\n2. **Explotación de vulnerabilidades de software**: Grupos APT a menudo aprovechan vulnerabilidades conocidas en software para obtener acceso a sistemas.\n3. **Movimientos laterales**: Técnicas que permiten a los atacantes moverse dentro de una red una vez que han obtenido acceso inicial.\n\nEn cuanto a las vulnerabilidades críticas, algunas CVEs notables que han sido explotadas en el pasado incluyen:\n\n- **CVE-2017-0144**: Vulnerabilidad en SMBv1 que fue utilizada en el ataque de WannaCry.\n- **CVE-2017-5638**: Vulnerabilidad en Apache Struts que fue utilizada en el ataque a Equifax.\n\nPara obtener información más específica sobre las técnicas y vulnerabilidades actuales, se recomienda consultar la base de datos de MITRE ATT&CK y el NVD (National Vulnerability Database).\n\n**Fuentes consultadas:** query_mitre_graph, query_nvd_api",
+    "steps": [
+      {
+        "thought": "",
+        "action": "query_mitre_graph",
+        "action_input": {
+          "question": "¿Cuáles son las técnicas más usadas por grupos APT de estado-nación?"
+        },
+        "observation_preview": "{\n  \"context\": \"\",\n  \"seed_nodes\": [],\n  \"nodes\": 0,\n  \"edges\": 0,\n  \"source\": \"MITRE ATT&CK Enterprise (grafo local)\"\n}"
+      },
+      {
+        "thought": "",
+        "action": "query_mitre_graph",
+        "action_input": {
+          "question": "¿Qué técnicas utilizan los grupos APT de estado-nación?"
+        },
+        "observation_preview": "{\n  \"context\": \"\",\n  \"seed_nodes\": [],\n  \"nodes\": 0,\n  \"edges\": 0,\n  \"source\": \"MITRE ATT&CK Enterprise (grafo local)\"\n}"
+      },
+      {
+        "thought": "",
+        "action": "query_nvd_api",
+        "action_input": {
+          "severity": "CRITICAL",
+          "max_results": 5
+        },
+        "observation_preview": "{\n  \"data\": [\n    {\n      \"id\": \"CVE-1999-0426\",\n      \"sourceIdentifier\": \"cve@mitre.org\",\n      \"published\": \"1999-03-01T05:00:00.000\",\n      \"lastModified\": \"2026-04-16T00:27:16.627\",\n      \"vulnStatus\": \"Modified\",\n      \"cveTags\": [],\n      \"descriptions\": [\n        {\n          \"lang\": \"en\",\n  …"
+      },
+      {
+        "thought": "",
+        "action": "query_nvd_api",
+        "action_input": {
+          "severity": "CRITICAL",
+          "max_results": 5
+        },
+        "observation_preview": "{\n  \"data\": [\n    {\n      \"id\": \"CVE-1999-0426\",\n      \"sourceIdentifier\": \"cve@mitre.org\",\n      \"published\": \"1999-03-01T05:00:00.000\",\n      \"lastModified\": \"2026-04-16T00:27:16.627\",\n      \"vulnStatus\": \"Modified\",\n      \"cveTags\": [],\n      \"descriptions\": [\n        {\n          \"lang\": \"en\",\n  …"
+      },
+      {
+        "thought": "",
+        "action": "query_nvd_api",
+        "action_input": {
+          "keyword": "APT",
+          "severity": "CRITICAL",
+          "max_results": 5
+        },
+        "observation_preview": "{\n  \"data\": [\n    {\n      \"id\": \"CVE-2017-7278\",\n      \"sourceIdentifier\": \"cve@mitre.org\",\n      \"published\": \"2017-08-18T14:29:00.767\",\n      \"lastModified\": \"2025-04-20T01:37:25.860\",\n      \"vulnStatus\": \"Deferred\",\n      \"cveTags\": [],\n      \"descriptions\": [\n        {\n          \"lang\": \"en\",\n  …"
+      },
+      {
+        "thought": "",
+        "action": "query_mitre_graph",
+        "action_input": {
+          "question": "¿Cuáles son los grupos APT más conocidos y qué técnicas utilizan?"
+        },
+        "observation_preview": "{\n  \"context\": \"\",\n  \"seed_nodes\": [],\n  \"nodes\": 0,\n  \"edges\": 0,\n  \"source\": \"MITRE ATT&CK Enterprise (grafo local)\"\n}"
+      }
+    ],
+    "tools_used": [
+      "query_mitre_graph",
+      "query_mitre_graph",
+      "query_nvd_api",
+      "query_nvd_api",
+      "query_nvd_api",
+      "query_mitre_graph"
+    ],
+    "iterations": 6,
+    "forced_final": true,
+    "hallucination_risk": false,
+    "usage": {
+      "prompt_tokens": 12472,
+      "completion_tokens": 830,
+      "total_tokens": 13302,
+      "total_latency_s": 17.574
+    },
+    "architecture": "D_Toolformer"
+  },
+  "metrics": {
+    "question_id": "Q044",
+    "level": 3,
+    "domain": "BOTH",
+    "architecture": "D_Toolformer",
+    "accuracy": 0.5714,
+    "hallucination_risk": 0.0,
+    "traceability": 0.5,
+    "error_handling": 0.3,
+    "latency_s": 17.574,
+    "total_tokens": 13302,
+    "accuracy_detail": "Score=0.571 | completas=['APT', 'técnicas', 'CVE', 'estado-nación'] | parciales=[] | ausentes=['T1566', 'T1078', 'T1059']",
+    "hallucination_detail": "Sin señales de alucinación detectadas",
+    "traceability_detail": "Markers texto: ['nvd', 'national vulnerability', 'mitre'] | Fuente estructurada: api_source=False, seed_nodes=False, sql=False",
+    "error_handling_detail": "Error presente — la respuesta no lo reconoce explícitamente",
+    "latency_detail": "total_react=17.57s iterations=6",
+    "answer_preview": "Con la información recopilada hasta ahora, no se han identificado las tres técnicas más utilizadas de MITRE ATT&CK por grupos APT de estado-nación, ni se han encontrado vulnerabilidades críticas (CVE) asociadas a ellas. \n\nSin embargo, en general, algunas de las técnicas comúnmente asociadas con grup…"
+  }
+}

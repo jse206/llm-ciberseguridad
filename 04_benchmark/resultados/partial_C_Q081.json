@@ -1,0 +1,52 @@
+{
+  "result": {
+    "answer": "El subgrafo proporcionado no contiene información sobre CVEs (Common Vulnerabilities and Exposures) ni sobre sus puntajes CVSS (Common Vulnerability Scoring System) relacionados con productos Microsoft publicados en 2021. \n\nPor lo tanto, no puedo responder a la pregunta sobre cuáles son los CVEs con mayor CVSS score en ese contexto. \n\nSi necesitas información específica sobre CVEs, te recomendaría consultar bases de datos de vulnerabilidades como el NVD (National Vulnerability Database) o el sitio web de Microsoft relacionado con seguridad.",
+    "seed_nodes": [
+      "S0691",
+      "S0686",
+      "S0685",
+      "S0667",
+      "S0589"
+    ],
+    "subgraph_nodes": 40,
+    "subgraph_edges": 86,
+    "coverage": {
+      "sufficient": false,
+      "missing_entities": [
+        "CVEs",
+        "CVSS score",
+        "productos Microsoft",
+        "2021"
+      ],
+      "confidence": 0.3
+    },
+    "hallucination_risk": true,
+    "usage": {
+      "prompt_tokens": 2668,
+      "completion_tokens": 155,
+      "total_tokens": 2823,
+      "retrieval_latency_s": 0.023,
+      "coverage_latency_s": 1.806,
+      "synthesis_latency_s": 2.732
+    },
+    "architecture": "C_GraphRAG"
+  },
+  "metrics": {
+    "question_id": "Q081",
+    "level": 2,
+    "domain": "NVD",
+    "architecture": "C_GraphRAG",
+    "accuracy": 0.6,
+    "hallucination_risk": 0.7,
+    "traceability": 1.0,
+    "error_handling": 1.0,
+    "latency_s": 4.561,
+    "total_tokens": 2823,
+    "accuracy_detail": "Score=0.600 | completas=['microsoft', '2021', 'CVE'] | parciales=[] | ausentes=['critical', '10.0']",
+    "hallucination_detail": "Flag de riesgo activo (sin datos de fuente verificados)",
+    "traceability_detail": "Markers texto: ['nvd', 'national vulnerability', 'database'] | Fuente estructurada: api_source=False, seed_nodes=True, sql=False",
+    "error_handling_detail": "Sin errores detectados en el pipeline",
+    "latency_detail": "retrieval=0.02s coverage=1.81s synth=2.73s",
+    "answer_preview": "El subgrafo proporcionado no contiene información sobre CVEs (Common Vulnerabilities and Exposures) ni sobre sus puntajes CVSS (Common Vulnerability Scoring System) relacionados con productos Microsoft publicados en 2021. \n\nPor lo tanto, no puedo responder a la pregunta sobre cuáles son los CVEs con…"
+  }
+}

@@ -1,0 +1,86 @@
+{
+  "result": {
+    "answer": "Para contener el movimiento lateral utilizando la técnica T1021, se deben priorizar los siguientes CVEs:\n\n1. **CVE-2001-0014**: \n   - **Descripción**: Vulnerabilidad en el Protocolo de Escritorio Remoto (RDP) en Windows 2000 que permite a atacantes remotos causar una denegación de servicio mediante paquetes malformados.\n   - **CVSS**: 5.0 (Severidad: Media)\n   - **Referencias**: [Microsoft Security Bulletin](https://docs.microsoft.com/en-us/security-updates/securitybulletins/2001/ms01-006)\n\n2. **CVE-2001-0540**: \n   - **Descripción**: Fuga de memoria en servidores terminales de Windows NT y Windows 2000 que permite a atacantes remotos causar una denegación de servicio mediante solicitudes RDP malformadas.\n   - **CVSS**: 5.0 (Severidad: Media)\n   - **Referencias**: [Microsoft Security Bulletin](https://docs.microsoft.com/en-us/security-updates/securitybulletins/2001/ms01-040)\n\n3. **CVE-1999-0013**: \n   - **Descripción**: Credenciales robadas de clientes SSH a través del programa ssh-agent, permitiendo a otros usuarios locales acceder a cuentas remotas.\n   - **CVSS**: 8.4 (Severidad: Alta)\n   - **Referencias**: [CVE Details](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-1999-0013)\n\nEstos CVEs representan vulnerabilidades críticas que deben ser parcheadas para mitigar el riesgo de movimiento lateral en la red.\n\n**Fuentes consultadas:** query_mitre_graph, query_nvd_api",
+    "steps": [
+      {
+        "thought": "",
+        "action": "query_mitre_graph",
+        "action_input": {
+          "question": "¿Qué CVEs están asociados con la técnica T1021 Lateral Movement?"
+        },
+        "observation_preview": "{\n  \"context\": \"=== SUBGRAFO MITRE ATT&CK ===\\n\\n--- Entidades recuperadas ---\\n★ [attack-pattern] T1570 — Lateral Tool Transfer\\n     Adversaries may transfer tools or other files between systems in a compromised environment. Once brought into the victim environment (i.e., [Ingress Tool Transfer](h…"
+      },
+      {
+        "thought": "",
+        "action": "query_nvd_api",
+        "action_input": {
+          "keyword": "RDP",
+          "max_results": 5
+        },
+        "observation_preview": "{\n  \"data\": [\n    {\n      \"id\": \"CVE-2001-0014\",\n      \"sourceIdentifier\": \"cve@mitre.org\",\n      \"published\": \"2001-02-12T05:00:00.000\",\n      \"lastModified\": \"2026-04-16T00:27:16.627\",\n      \"vulnStatus\": \"Modified\",\n      \"cveTags\": [],\n      \"descriptions\": [\n        {\n          \"lang\": \"en\",\n  …"
+      },
+      {
+        "thought": "",
+        "action": "query_nvd_api",
+        "action_input": {
+          "keyword": "SSH",
+          "max_results": 5
+        },
+        "observation_preview": "{\n  \"data\": [\n    {\n      \"id\": \"CVE-1999-0013\",\n      \"sourceIdentifier\": \"cve@mitre.org\",\n      \"published\": \"1998-01-22T05:00:00.000\",\n      \"lastModified\": \"2026-04-16T00:27:16.627\",\n      \"vulnStatus\": \"Modified\",\n      \"cveTags\": [],\n      \"descriptions\": [\n        {\n          \"lang\": \"en\",\n  …"
+      },
+      {
+        "thought": "",
+        "action": "query_nvd_api",
+        "action_input": {
+          "keyword": "Remote Desktop Protocol",
+          "max_results": 5
+        },
+        "observation_preview": "{\n  \"data\": [\n    {\n      \"id\": \"CVE-2001-0540\",\n      \"sourceIdentifier\": \"cve@mitre.org\",\n      \"published\": \"2001-10-30T05:00:00.000\",\n      \"lastModified\": \"2026-04-16T00:27:16.627\",\n      \"vulnStatus\": \"Modified\",\n      \"cveTags\": [],\n      \"descriptions\": [\n        {\n          \"lang\": \"en\",\n  …"
+      },
+      {
+        "thought": "",
+        "action": "query_nvd_api",
+        "action_input": {
+          "keyword": "SSH",
+          "max_results": 5
+        },
+        "observation_preview": "{\n  \"data\": [\n    {\n      \"id\": \"CVE-1999-0013\",\n      \"sourceIdentifier\": \"cve@mitre.org\",\n      \"published\": \"1998-01-22T05:00:00.000\",\n      \"lastModified\": \"2026-04-16T00:27:16.627\",\n      \"vulnStatus\": \"Modified\",\n      \"cveTags\": [],\n      \"descriptions\": [\n        {\n          \"lang\": \"en\",\n  …"
+      }
+    ],
+    "tools_used": [
+      "query_mitre_graph",
+      "query_nvd_api",
+      "query_nvd_api",
+      "query_nvd_api",
+      "query_nvd_api"
+    ],
+    "iterations": 5,
+    "forced_final": false,
+    "hallucination_risk": false,
+    "usage": {
+      "prompt_tokens": 18609,
+      "completion_tokens": 971,
+      "total_tokens": 19580,
+      "total_latency_s": 27.224
+    },
+    "architecture": "D_Toolformer"
+  },
+  "metrics": {
+    "question_id": "Q045",
+    "level": 3,
+    "domain": "BOTH",
+    "architecture": "D_Toolformer",
+    "accuracy": 0.6429,
+    "hallucination_risk": 0.0,
+    "traceability": 0.5,
+    "error_handling": 1.0,
+    "latency_s": 27.224,
+    "total_tokens": 19580,
+    "accuracy_detail": "Score=0.643 | completas=['T1021', 'RDP', 'CVE', 'parche'] | parciales=['lateral movement(50%)'] | ausentes=['remote services', 'SMB']",
+    "hallucination_detail": "Sin señales de alucinación detectadas",
+    "traceability_detail": "Markers texto: ['nvd', 'mitre', 'fuente'] | Fuente estructurada: api_source=False, seed_nodes=False, sql=False",
+    "error_handling_detail": "Sin errores detectados en el pipeline",
+    "latency_detail": "total_react=27.22s iterations=5",
+    "answer_preview": "Para contener el movimiento lateral utilizando la técnica T1021, se deben priorizar los siguientes CVEs:\n\n1. **CVE-2001-0014**: \n   - **Descripción**: Vulnerabilidad en el Protocolo de Escritorio Remoto (RDP) en Windows 2000 que permite a atacantes remotos causar una denegación de servicio mediante …"
+  }
+}

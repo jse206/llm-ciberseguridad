@@ -1,0 +1,82 @@
+{
+  "result": {
+    "answer": "APT28 utiliza varias herramientas en sus técnicas de ataque, entre las cuales se destacan: \n\n1. **Wevtutil**: Una utilidad de línea de comandos de Windows que permite a los administradores recuperar información sobre registros de eventos y editores.\n2. **JHUHUGIT**: Un malware utilizado por APT28, basado en el código fuente de Carberp, que sirve como malware de reconocimiento.\n\nEstas herramientas son parte de las tácticas de acceso a credenciales, persistencia y descubrimiento de dispositivos periféricos, entre otras.\n\n**Fuentes consultadas:** query_mitre_graph",
+    "steps": [
+      {
+        "thought": "",
+        "action": "query_mitre_graph",
+        "action_input": {
+          "question": "¿Qué herramientas usa el grupo APT28?"
+        },
+        "observation_preview": "{\n  \"context\": \"=== SUBGRAFO MITRE ATT&CK ===\\n\\n--- Entidades recuperadas ---\\n  [attack-pattern] T1560.001 — Archive via Utility\\n     Adversaries may use utilities to compress and/or encrypt collected data prior to exfiltration. Many utilities include functionalities to compress, encrypt, or othe…"
+      },
+      {
+        "thought": "",
+        "action": "query_mitre_graph",
+        "action_input": {
+          "question": "¿Qué herramientas están asociadas con las técnicas de APT28?"
+        },
+        "observation_preview": "{\n  \"context\": \"=== SUBGRAFO MITRE ATT&CK ===\\n\\n--- Entidades recuperadas ---\\n  [attack-pattern] T1560.001 — Archive via Utility\\n     Adversaries may use utilities to compress and/or encrypt collected data prior to exfiltration. Many utilities include functionalities to compress, encrypt, or othe…"
+      },
+      {
+        "thought": "",
+        "action": "query_mitre_graph",
+        "action_input": {
+          "question": "Lista las herramientas utilizadas por APT28 en sus técnicas"
+        },
+        "observation_preview": "{\n  \"context\": \"=== SUBGRAFO MITRE ATT&CK ===\\n\\n--- Entidades recuperadas ---\\n  [attack-pattern] T1560.001 — Archive via Utility\\n     Adversaries may use utilities to compress and/or encrypt collected data prior to exfiltration. Many utilities include functionalities to compress, encrypt, or othe…"
+      },
+      {
+        "thought": "",
+        "action": "query_mitre_graph",
+        "action_input": {
+          "question": "¿Cuáles son las herramientas específicas utilizadas por APT28 en sus técnicas de ataque?"
+        },
+        "observation_preview": "{\n  \"context\": \"=== SUBGRAFO MITRE ATT&CK ===\\n\\n--- Entidades recuperadas ---\\n  [attack-pattern] T1110.001 — Password Guessing\\n     Adversaries with no prior knowledge of legitimate credentials within the system or environment may guess passwords to attempt access to accounts. Without knowledge o…"
+      },
+      {
+        "thought": "",
+        "action": "query_mitre_graph",
+        "action_input": {
+          "question": "¿Qué herramientas son utilizadas por APT28 en sus técnicas de ataque?"
+        },
+        "observation_preview": "{\n  \"context\": \"=== SUBGRAFO MITRE ATT&CK ===\\n\\n--- Entidades recuperadas ---\\n  [attack-pattern] T1110.001 — Password Guessing\\n     Adversaries with no prior knowledge of legitimate credentials within the system or environment may guess passwords to attempt access to accounts. Without knowledge o…"
+      }
+    ],
+    "tools_used": [
+      "query_mitre_graph",
+      "query_mitre_graph",
+      "query_mitre_graph",
+      "query_mitre_graph",
+      "query_mitre_graph"
+    ],
+    "iterations": 5,
+    "forced_final": false,
+    "hallucination_risk": false,
+    "usage": {
+      "prompt_tokens": 16604,
+      "completion_tokens": 601,
+      "total_tokens": 17205,
+      "total_latency_s": 45.93
+    },
+    "architecture": "D_Toolformer"
+  },
+  "metrics": {
+    "question_id": "Q084",
+    "level": 2,
+    "domain": "MITRE",
+    "architecture": "D_Toolformer",
+    "accuracy": 0.1667,
+    "hallucination_risk": 0.0,
+    "traceability": 0.5,
+    "error_handling": 1.0,
+    "latency_s": 45.93,
+    "total_tokens": 17205,
+    "accuracy_detail": "Score=0.167 | completas=['APT28'] | parciales=[] | ausentes=['G0007', 'Sofacy', 'X-Agent', 'Mimikatz', 'software']",
+    "hallucination_detail": "Sin señales de alucinación detectadas",
+    "traceability_detail": "Markers texto: ['nist', 'mitre', 'fuente'] | Fuente estructurada: api_source=False, seed_nodes=False, sql=False",
+    "error_handling_detail": "Sin errores detectados en el pipeline",
+    "latency_detail": "total_react=45.93s iterations=5",
+    "answer_preview": "APT28 utiliza varias herramientas en sus técnicas de ataque, entre las cuales se destacan: \n\n1. **Wevtutil**: Una utilidad de línea de comandos de Windows que permite a los administradores recuperar información sobre registros de eventos y editores.\n2. **JHUHUGIT**: Un malware utilizado por APT28, b…"
+  }
+}

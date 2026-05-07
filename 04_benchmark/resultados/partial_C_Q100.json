@@ -1,0 +1,49 @@
+{
+  "result": {
+    "answer": "El subgrafo proporcionado no contiene información específica sobre las vulnerabilidades comunes (CVE) y los factores que hacen que sean más propensas a ser explotadas por grupos APT. Sin embargo, se pueden inferir algunos aspectos generales sobre cómo los grupos APT pueden seleccionar sus objetivos y cómo las organizaciones pueden anticipar estos ataques.\n\n1. **Interés en la Plataforma**: Los grupos APT suelen centrarse en plataformas específicas, como Windows, Linux y macOS, que son ampliamente utilizadas en entornos corporativos. Por ejemplo, técnicas como T1203 — Exploitation for Client Execution, que se refiere a la explotación de vulnerabilidades en aplicaciones cliente, son relevantes para estas plataformas. Las organizaciones deben estar al tanto de las CVE que afectan a las plataformas que utilizan.\n\n2. **Técnicas de Movimiento Lateral**: Técnicas como T1570 — Lateral Tool Transfer y T1550.002 — Pass the Hash son utilizadas por adversarios para moverse lateralmente dentro de una red. Las CVE que permiten la ejecución de código o la escalada de privilegios pueden ser más atractivas para los grupos APT, ya que les permiten obtener acceso a sistemas críticos.\n\n3. **Métodos de Acceso Inicial**: Las técnicas de acceso inicial, como T1566 — Phishing y T1199 — Trusted Relationship, son comunes entre los grupos APT. Las CVE que facilitan el phishing o que permiten abusar de relaciones de confianza pueden ser más propensas a ser explotadas.\n\n4. **Mitigaciones**: Las organizaciones pueden anticipar la explotación de CVE mediante la implementación de prácticas de seguridad robustas, como la actualización regular de software, la capacitación en concienciación sobre seguridad para los empleados y la monitorización de la red para detectar comportamientos anómalos.\n\nEn resumen, aunque el subgrafo no proporciona detalles específicos sobre las CVE, se puede concluir que los grupos APT tienden a explotar vulnerabilidades en plataformas comunes y técnicas que facilitan el movimiento lateral y el acceso inicial. Las organizaciones deben estar atentas a las vulnerabilidades que afectan a sus sistemas y aplicar medidas de mitigación adecuadas. \n\nSegún MITRE ATT&CK, la comprensión de las tácticas y técnicas utilizadas por los grupos APT puede ayudar a las organizaciones a anticipar y defenderse contra posibles ataques.",
+    "seed_nodes": [
+      "S0183"
+    ],
+    "subgraph_nodes": 40,
+    "subgraph_edges": 35,
+    "coverage": {
+      "sufficient": false,
+      "missing_entities": [
+        "factores de explotación",
+        "grupos APT",
+        "estrategias de anticipación",
+        "ejemplos de CVE",
+        "medidas de mitigación"
+      ],
+      "confidence": 0.3
+    },
+    "hallucination_risk": true,
+    "usage": {
+      "prompt_tokens": 2796,
+      "completion_tokens": 546,
+      "total_tokens": 3342,
+      "retrieval_latency_s": 0.01,
+      "coverage_latency_s": 1.522,
+      "synthesis_latency_s": 8.914
+    },
+    "architecture": "C_GraphRAG"
+  },
+  "metrics": {
+    "question_id": "Q100",
+    "level": 3,
+    "domain": "BOTH",
+    "architecture": "C_GraphRAG",
+    "accuracy": 0.25,
+    "hallucination_risk": 0.7,
+    "traceability": 1.0,
+    "error_handling": 1.0,
+    "latency_s": 10.446,
+    "total_tokens": 3342,
+    "accuracy_detail": "Score=0.250 | completas=['explotación', 'APT'] | parciales=[] | ausentes=['CVSS', 'KEV', 'EPSS', 'patch management', 'T1190', 'supply chain']",
+    "hallucination_detail": "Flag de riesgo activo (sin datos de fuente verificados)",
+    "traceability_detail": "Markers texto: ['mitre', 'att&ck', 'según'] | Fuente estructurada: api_source=False, seed_nodes=True, sql=False",
+    "error_handling_detail": "Sin errores detectados en el pipeline",
+    "latency_detail": "retrieval=0.01s coverage=1.52s synth=8.91s",
+    "answer_preview": "El subgrafo proporcionado no contiene información específica sobre las vulnerabilidades comunes (CVE) y los factores que hacen que sean más propensas a ser explotadas por grupos APT. Sin embargo, se pueden inferir algunos aspectos generales sobre cómo los grupos APT pueden seleccionar sus objetivos …"
+  }
+}

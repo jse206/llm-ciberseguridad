@@ -1,0 +1,39 @@
+{
+  "result": {
+    "answer": "Los datos proporcionados provienen de la base de datos NVD/NIST y se centran en las vulnerabilidades CVE que tienen una alta probabilidad de ser explotadas por grupos APT (Amenazas Persistentes Avanzadas). \n\nLos factores que hacen que una CVE sea más susceptible a la explotación por parte de grupos APT incluyen:\n\n1. **Severidad y puntuación CVSS**: Las vulnerabilidades con una puntuación CVSS de 7.0 o superior, especialmente aquellas clasificadas como \"CRÍTICAS\", son más atractivas para los atacantes. Por ejemplo, la CVE-2021-45951 tiene una puntuación de 9.8 y es considerada crítica, lo que indica su potencial para ser explotada.\n\n2. **Tipo de vulnerabilidad**: Las vulnerabilidades que permiten la ejecución remota de código, como los desbordamientos de búfer, son particularmente peligrosas. La CVE-2021-45951, por ejemplo, presenta un desbordamiento de búfer en Dnsmasq, lo que podría permitir a un atacante ejecutar código malicioso.\n\n3. **Disponibilidad de exploits**: Si existen exploits públicos o pruebas de concepto disponibles, la probabilidad de que la vulnerabilidad sea explotada aumenta significativamente.\n\n4. **Impacto en la infraestructura**: Las vulnerabilidades que afectan a componentes críticos de la infraestructura de TI, como servidores DNS o DHCP, son de particular interés para los grupos APT, ya que pueden proporcionar acceso a redes más amplias.\n\nPara anticipar estas amenazas, las organizaciones deben implementar un monitoreo continuo de las vulnerabilidades, priorizar la remediación de aquellas con alta severidad y mantener actualizados sus sistemas y aplicaciones. Además, es crucial realizar pruebas de penetración y simulaciones de ataque para evaluar la resiliencia ante posibles explotaciones.",
+    "sql": "SELECT c.cve_id, c.description, c.cvss_v3_score, c.cvss_v3_severity, cr.url, cr.source, cr.tags\nFROM cve AS c\nJOIN cve_reference AS cr ON c.cve_id = cr.cve_id\nWHERE c.cvss_v3_severity IN ('HIGH', 'CRITICAL') OR c.cvss_v3_score >= 7.0\nLIMIT 10;",
+    "sql_rows": 10,
+    "correction_attempts": 0,
+    "sql_error": null,
+    "api_fallback": null,
+    "hallucination_risk": false,
+    "usage": {
+      "prompt_tokens": 5002,
+      "completion_tokens": 636,
+      "total_tokens": 5638,
+      "schema_linking_latency_s": 3.488,
+      "sql_generation_latency_s": 1.944,
+      "self_correction_latency_s": 0,
+      "synthesis_latency_s": 8.086
+    },
+    "architecture": "A_Text2SQL"
+  },
+  "metrics": {
+    "question_id": "Q100",
+    "level": 3,
+    "domain": "BOTH",
+    "architecture": "A_Text2SQL",
+    "accuracy": 0.375,
+    "hallucination_risk": 0.0,
+    "traceability": 1.0,
+    "error_handling": 1.0,
+    "latency_s": 13.518,
+    "total_tokens": 5638,
+    "accuracy_detail": "Score=0.375 | completas=['CVSS', 'explotación', 'APT'] | parciales=[] | ausentes=['KEV', 'EPSS', 'patch management', 'T1190', 'supply chain']",
+    "hallucination_detail": "Sin señales de alucinación detectadas",
+    "traceability_detail": "Markers texto: ['nvd', 'nist', 'base de datos'] | Fuente estructurada: api_source=False, seed_nodes=False, sql=True",
+    "error_handling_detail": "Sin errores detectados en el pipeline",
+    "latency_detail": "linking=3.49s sql=1.94s corr=0.00s synth=8.09s",
+    "answer_preview": "Los datos proporcionados provienen de la base de datos NVD/NIST y se centran en las vulnerabilidades CVE que tienen una alta probabilidad de ser explotadas por grupos APT (Amenazas Persistentes Avanzadas). \n\nLos factores que hacen que una CVE sea más susceptible a la explotación por parte de grupos …"
+  }
+}

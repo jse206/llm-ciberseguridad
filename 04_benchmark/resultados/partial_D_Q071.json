@@ -1,0 +1,46 @@
+{
+  "result": {
+    "answer": "La táctica MITRE ATT&CK 'Persistence' (TA0003) se refiere a las técnicas que los adversarios utilizan para mantener su acceso a los sistemas a través de reinicios, cambios de credenciales y otras interrupciones. El objetivo es asegurar que el adversario pueda mantener su presencia en el sistema a pesar de las medidas de seguridad implementadas.\n\n**Fuentes consultadas:** query_mitre_graph",
+    "steps": [
+      {
+        "thought": "",
+        "action": "query_mitre_graph",
+        "action_input": {
+          "question": "¿Qué descripción tiene la táctica MITRE ATT&CK 'Persistence' (TA0003)?"
+        },
+        "observation_preview": "{\n  \"context\": \"=== SUBGRAFO MITRE ATT&CK ===\\n\\n--- Entidades recuperadas ---\\n  [course-of-action] M1028 — Operating System Configuration\\n     Operating System Configuration involves adjusting system settings and hardening the default configurations of an operating system (OS) to mitigate adversa…"
+      }
+    ],
+    "tools_used": [
+      "query_mitre_graph"
+    ],
+    "iterations": 1,
+    "forced_final": false,
+    "hallucination_risk": false,
+    "usage": {
+      "prompt_tokens": 2431,
+      "completion_tokens": 194,
+      "total_tokens": 2625,
+      "total_latency_s": 4.285
+    },
+    "architecture": "D_Toolformer"
+  },
+  "metrics": {
+    "question_id": "Q071",
+    "level": 1,
+    "domain": "MITRE",
+    "architecture": "D_Toolformer",
+    "accuracy": 0.6667,
+    "hallucination_risk": 0.0,
+    "traceability": 0.5,
+    "error_handling": 1.0,
+    "latency_s": 4.285,
+    "total_tokens": 2625,
+    "accuracy_detail": "Score=0.667 | completas=['persistence', 'TA0003', 'reinicio', 'acceso'] | parciales=[] | ausentes=['persistencia', 'reboot']",
+    "hallucination_detail": "Sin señales de alucinación detectadas",
+    "traceability_detail": "Markers texto: ['mitre', 'att&ck', 'fuente'] | Fuente estructurada: api_source=False, seed_nodes=False, sql=False",
+    "error_handling_detail": "Sin errores detectados en el pipeline",
+    "latency_detail": "total_react=4.29s iterations=1",
+    "answer_preview": "La táctica MITRE ATT&CK 'Persistence' (TA0003) se refiere a las técnicas que los adversarios utilizan para mantener su acceso a los sistemas a través de reinicios, cambios de credenciales y otras interrupciones. El objetivo es asegurar que el adversario pueda mantener su presencia en el sistema a pe…"
+  }
+}

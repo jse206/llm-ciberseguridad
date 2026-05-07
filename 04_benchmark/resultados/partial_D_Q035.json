@@ -1,0 +1,91 @@
+{
+  "result": {
+    "answer": "La información recopilada hasta ahora no proporciona detalles específicos sobre las herramientas de software asociadas a APT41 según MITRE ATT&CK. Sin embargo, se han identificado algunas técnicas relevantes que APT41 podría utilizar, como:\n\n1. **T1570 — Lateral Tool Transfer**: Esta técnica implica la transferencia de herramientas o archivos entre sistemas en un entorno comprometido. Es utilizada para facilitar el movimiento lateral dentro de la red de la víctima.\n\n2. **T1560.001 — Archive via Utility**: Esta técnica se refiere al uso de utilidades para archivar datos, lo que puede ser parte de las actividades de un adversario para ocultar o empaquetar información.\n\nPara obtener información más específica sobre las herramientas de software utilizadas por APT41, sería necesario consultar fuentes adicionales o la base de datos de MITRE ATT&CK directamente.\n\n**Fuentes consultadas:** query_mitre_graph",
+    "steps": [
+      {
+        "thought": "",
+        "action": "query_mitre_graph",
+        "action_input": {
+          "question": "¿Qué herramientas están asociadas a APT41?"
+        },
+        "observation_preview": "{\n  \"context\": \"=== SUBGRAFO MITRE ATT&CK ===\\n\\n--- Entidades recuperadas ---\\n  [attack-pattern] T1570 — Lateral Tool Transfer\\n     Adversaries may transfer tools or other files between systems in a compromised environment. Once brought into the victim environment (i.e., [Ingress Tool Transfer](h…"
+      },
+      {
+        "thought": "",
+        "action": "query_mitre_graph",
+        "action_input": {
+          "question": "Lista las herramientas asociadas a APT41."
+        },
+        "observation_preview": "{\n  \"context\": \"=== SUBGRAFO MITRE ATT&CK ===\\n\\n--- Entidades recuperadas ---\\n  [attack-pattern] T1570 — Lateral Tool Transfer\\n     Adversaries may transfer tools or other files between systems in a compromised environment. Once brought into the victim environment (i.e., [Ingress Tool Transfer](h…"
+      },
+      {
+        "thought": "",
+        "action": "query_mitre_graph",
+        "action_input": {
+          "question": "¿Cuáles son las herramientas utilizadas por APT41?"
+        },
+        "observation_preview": "{\n  \"context\": \"=== SUBGRAFO MITRE ATT&CK ===\\n\\n--- Entidades recuperadas ---\\n  [attack-pattern] T1570 — Lateral Tool Transfer\\n     Adversaries may transfer tools or other files between systems in a compromised environment. Once brought into the victim environment (i.e., [Ingress Tool Transfer](h…"
+      },
+      {
+        "thought": "",
+        "action": "query_mitre_graph",
+        "action_input": {
+          "question": "¿Qué herramientas son utilizadas por APT41?"
+        },
+        "observation_preview": "{\n  \"context\": \"=== SUBGRAFO MITRE ATT&CK ===\\n\\n--- Entidades recuperadas ---\\n  [attack-pattern] T1570 — Lateral Tool Transfer\\n     Adversaries may transfer tools or other files between systems in a compromised environment. Once brought into the victim environment (i.e., [Ingress Tool Transfer](h…"
+      },
+      {
+        "thought": "",
+        "action": "query_mitre_graph",
+        "action_input": {
+          "question": "¿Cuáles son las herramientas utilizadas por APT41?"
+        },
+        "observation_preview": "{\n  \"context\": \"=== SUBGRAFO MITRE ATT&CK ===\\n\\n--- Entidades recuperadas ---\\n  [attack-pattern] T1570 — Lateral Tool Transfer\\n     Adversaries may transfer tools or other files between systems in a compromised environment. Once brought into the victim environment (i.e., [Ingress Tool Transfer](h…"
+      },
+      {
+        "thought": "",
+        "action": "query_mitre_graph",
+        "action_input": {
+          "question": "¿Cuáles son las herramientas utilizadas por APT41?"
+        },
+        "observation_preview": "{\n  \"context\": \"=== SUBGRAFO MITRE ATT&CK ===\\n\\n--- Entidades recuperadas ---\\n  [attack-pattern] T1570 — Lateral Tool Transfer\\n     Adversaries may transfer tools or other files between systems in a compromised environment. Once brought into the victim environment (i.e., [Ingress Tool Transfer](h…"
+      }
+    ],
+    "tools_used": [
+      "query_mitre_graph",
+      "query_mitre_graph",
+      "query_mitre_graph",
+      "query_mitre_graph",
+      "query_mitre_graph",
+      "query_mitre_graph"
+    ],
+    "iterations": 6,
+    "forced_final": true,
+    "hallucination_risk": false,
+    "usage": {
+      "prompt_tokens": 17596,
+      "completion_tokens": 512,
+      "total_tokens": 18108,
+      "total_latency_s": 9.397
+    },
+    "architecture": "D_Toolformer"
+  },
+  "metrics": {
+    "question_id": "Q035",
+    "level": 2,
+    "domain": "BOTH",
+    "architecture": "D_Toolformer",
+    "accuracy": 0.4,
+    "hallucination_risk": 0.0,
+    "traceability": 0.5,
+    "error_handling": 0.3,
+    "latency_s": 9.397,
+    "total_tokens": 18108,
+    "accuracy_detail": "Score=0.400 | completas=['APT41', 'software'] | parciales=[] | ausentes=['G0096', 'malware', 'china']",
+    "hallucination_detail": "Sin señales de alucinación detectadas",
+    "traceability_detail": "Markers texto: ['mitre', 'att&ck', 'según'] | Fuente estructurada: api_source=False, seed_nodes=False, sql=False",
+    "error_handling_detail": "Error presente — la respuesta no lo reconoce explícitamente",
+    "latency_detail": "total_react=9.40s iterations=6",
+    "answer_preview": "La información recopilada hasta ahora no proporciona detalles específicos sobre las herramientas de software asociadas a APT41 según MITRE ATT&CK. Sin embargo, se han identificado algunas técnicas relevantes que APT41 podría utilizar, como:\n\n1. **T1570 — Lateral Tool Transfer**: Esta técnica implica…"
+  }
+}

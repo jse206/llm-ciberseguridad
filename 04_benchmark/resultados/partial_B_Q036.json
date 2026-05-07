@@ -1,0 +1,37 @@
+{
+  "result": {
+    "answer": "En la base de datos local, se ha identificado una vulnerabilidad de tipo 'buffer overflow' correspondiente a CWE-120. Esta vulnerabilidad está documentada en el CVE-1999-0046, que se refiere a un desbordamiento de búfer en el programa rlogin al utilizar la variable ambiental TERM. \n\nSegún la información recuperada, el CVE-1999-0046 tiene un puntaje CVSS v2 de 10.0, lo que indica un nivel de severidad alto. La vulnerabilidad permite un impacto completo en la confidencialidad, integridad y disponibilidad del sistema afectado (NVD).\n\nNo se ha encontrado información sobre vulnerabilidades adicionales de tipo 'buffer overflow' (CWE-121) en los datos proporcionados. Por lo tanto, en resumen, actualmente hay una vulnerabilidad de tipo 'buffer overflow' (CWE-120) en la base de datos local.\n\nFuente consultada: NVD (https://services.nvd.nist.gov/rest/json/cves/2.0?resultsPerPage=100&cweId=CWE-120).",
+    "intent": "search_cves",
+    "api_source": "https://services.nvd.nist.gov/rest/json/cves/2.0?resultsPerPage=100&cweId=CWE-120",
+    "api_error": null,
+    "router_confidence": 0.8,
+    "usage": {
+      "prompt_tokens": 3213,
+      "completion_tokens": 273,
+      "total_tokens": 3486,
+      "router_latency_s": 1.441,
+      "api_latency_s": 1.24,
+      "synthesis_latency_s": 5.445
+    },
+    "hallucination_risk": false,
+    "architecture": "B_API"
+  },
+  "metrics": {
+    "question_id": "Q036",
+    "level": 2,
+    "domain": "NVD",
+    "architecture": "B_API",
+    "accuracy": 1.0,
+    "hallucination_risk": 0.0,
+    "traceability": 1.0,
+    "error_handling": 1.0,
+    "latency_s": 8.126,
+    "total_tokens": 3486,
+    "accuracy_detail": "Score=1.000 | completas=['buffer overflow', 'CWE-120', 'CWE-121'] | parciales=[] | ausentes=[]",
+    "hallucination_detail": "Sin señales de alucinación detectadas",
+    "traceability_detail": "Markers texto: ['nvd', 'nist', 'según'] | Fuente estructurada: api_source=True, seed_nodes=False, sql=False",
+    "error_handling_detail": "Sin errores detectados en el pipeline",
+    "latency_detail": "router=1.44s api=1.24s synth=5.45s",
+    "answer_preview": "En la base de datos local, se ha identificado una vulnerabilidad de tipo 'buffer overflow' correspondiente a CWE-120. Esta vulnerabilidad está documentada en el CVE-1999-0046, que se refiere a un desbordamiento de búfer en el programa rlogin al utilizar la variable ambiental TERM. \n\nSegún la informa…"
+  }
+}

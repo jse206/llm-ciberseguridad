@@ -1,0 +1,47 @@
+{
+  "result": {
+    "answer": "Según MITRE ATT&CK, las técnicas asociadas a la táctica de **Persistence** son las siguientes:\n\n1. **T1547.012 — Print Processors**: Los adversarios pueden abusar de los procesadores de impresión para ejecutar DLLs maliciosas durante el arranque del sistema, lo que les permite establecer persistencia y/o escalar privilegios. Esta técnica es específica para plataformas Windows.\n\n2. **T1525 — Implant Internal Image**: Los adversarios pueden implantar imágenes de nube o contenedores con código malicioso para establecer persistencia después de haber ganado acceso a un entorno. Esta técnica se aplica a plataformas de IaaS y contenedores.\n\n3. **T1574.012 — COR_PROFILER**: Los adversarios pueden aprovechar la variable de entorno COR_PROFILER para secuestrar el flujo de ejecución de programas que cargan el CLR de .NET. Esta técnica también está relacionada con la persistencia, así como con la escalada de privilegios y la evasión de defensas, y es específica para Windows.\n\n4. **T1543.002 — Systemd Service**: Los adversarios pueden crear o modificar servicios de systemd para ejecutar repetidamente cargas útiles maliciosas como parte de la persistencia. Esta técnica es aplicable a plataformas Linux.\n\n5. **T1543.004 — Launch Daemon**: Los adversarios pueden crear o modificar Launch Daemons para ejecutar cargas útiles maliciosas como parte de la persistencia. Esta técnica se utiliza en plataformas macOS.\n\n6. **T1197 — BITS Jobs**: Los adversarios pueden abusar de los trabajos de BITS (Background Intelligent Transfer Service) para ejecutar código de manera persistente y realizar varias tareas en segundo plano. Esta técnica es específica para Windows.\n\nEstas técnicas permiten a los adversarios mantener su acceso a los sistemas comprometidos incluso después de reinicios o intentos de limpieza.",
+    "seed_nodes": [
+      "TA0003",
+      "T1053.002",
+      "S0110"
+    ],
+    "subgraph_nodes": 40,
+    "subgraph_edges": 6,
+    "coverage": {
+      "sufficient": false,
+      "missing_entities": [
+        "técnicas específicas de MITRE ATT&CK asociadas a la táctica Persistence"
+      ],
+      "confidence": 0.3
+    },
+    "hallucination_risk": true,
+    "usage": {
+      "prompt_tokens": 2670,
+      "completion_tokens": 443,
+      "total_tokens": 3113,
+      "retrieval_latency_s": 0.009,
+      "coverage_latency_s": 1.422,
+      "synthesis_latency_s": 7.577
+    },
+    "architecture": "C_GraphRAG"
+  },
+  "metrics": {
+    "question_id": "Q079",
+    "level": 2,
+    "domain": "MITRE",
+    "architecture": "C_GraphRAG",
+    "accuracy": 0.3333,
+    "hallucination_risk": 0.7,
+    "traceability": 1.0,
+    "error_handling": 1.0,
+    "latency_s": 9.008,
+    "total_tokens": 3113,
+    "accuracy_detail": "Score=0.333 | completas=['persistence', 'T1547'] | parciales=[] | ausentes=['TA0003', 'T1078', 'T1053', 'scheduled task']",
+    "hallucination_detail": "Flag de riesgo activo (sin datos de fuente verificados)",
+    "traceability_detail": "Markers texto: ['mitre', 'att&ck', 'según'] | Fuente estructurada: api_source=False, seed_nodes=True, sql=False",
+    "error_handling_detail": "Sin errores detectados en el pipeline",
+    "latency_detail": "retrieval=0.01s coverage=1.42s synth=7.58s",
+    "answer_preview": "Según MITRE ATT&CK, las técnicas asociadas a la táctica de **Persistence** son las siguientes:\n\n1. **T1547.012 — Print Processors**: Los adversarios pueden abusar de los procesadores de impresión para ejecutar DLLs maliciosas durante el arranque del sistema, lo que les permite establecer persistenci…"
+  }
+}

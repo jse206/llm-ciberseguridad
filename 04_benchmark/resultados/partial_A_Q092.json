@@ -1,0 +1,39 @@
+{
+  "result": {
+    "answer": "Los resultados de la consulta SQL ejecutada contra la base de datos NVD/NIST indican que no se encontraron vulnerabilidades de acceso inicial (T1190) con un puntaje CVSS mayor de 9.5 que hayan sido publicadas en 2024. Esto significa que, hasta la fecha de la consulta, no hay registros de tales vulnerabilidades en la base de datos NVD/CVE.",
+    "sql": "SELECT cve.cve_id, cve.cvss_v3_score, cve_cpe.cpe_uri\nFROM cve\nJOIN cve_cpe ON cve.cve_id = cve_cpe.cve_id\nWHERE cve.cvss_v3_score > 9.5 \nAND cve.published LIKE '2024%'\nAND cve.description LIKE '%T1190%'",
+    "sql_rows": 0,
+    "correction_attempts": 0,
+    "sql_error": null,
+    "api_fallback": null,
+    "hallucination_risk": false,
+    "usage": {
+      "prompt_tokens": 3088,
+      "completion_tokens": 310,
+      "total_tokens": 3398,
+      "schema_linking_latency_s": 3.272,
+      "sql_generation_latency_s": 2.043,
+      "self_correction_latency_s": 0,
+      "synthesis_latency_s": 2.042
+    },
+    "architecture": "A_Text2SQL"
+  },
+  "metrics": {
+    "question_id": "Q092",
+    "level": 3,
+    "domain": "BOTH",
+    "architecture": "A_Text2SQL",
+    "accuracy": 0.5714,
+    "hallucination_risk": 0.0,
+    "traceability": 1.0,
+    "error_handling": 1.0,
+    "latency_s": 7.357,
+    "total_tokens": 3398,
+    "accuracy_detail": "Score=0.571 | completas=['T1190', '2024', 'CVSS', '9.5'] | parciales=[] | ausentes=['initial access', 'crítica', 'CVE-2024']",
+    "hallucination_detail": "Sin señales de alucinación detectadas",
+    "traceability_detail": "Markers texto: ['nvd', 'nist', 'base de datos'] | Fuente estructurada: api_source=False, seed_nodes=False, sql=True",
+    "error_handling_detail": "Sin errores detectados en el pipeline",
+    "latency_detail": "linking=3.27s sql=2.04s corr=0.00s synth=2.04s",
+    "answer_preview": "Los resultados de la consulta SQL ejecutada contra la base de datos NVD/NIST indican que no se encontraron vulnerabilidades de acceso inicial (T1190) con un puntaje CVSS mayor de 9.5 que hayan sido publicadas en 2024. Esto significa que, hasta la fecha de la consulta, no hay registros de tales vulne…"
+  }
+}

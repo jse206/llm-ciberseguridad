@@ -1,0 +1,5 @@
+Arquitectura,Nivel 1 (N=43),Nivel 2 (N=33),Nivel 3 (N=24),Global
+A — Text2SQL,0.479,0.443,0.499,0.472
+B — API Calls,0.345,0.144,0.131,0.227
+C — GraphRAG,0.461,0.497,0.532,0.490
+D — Toolformer,0.562,0.479,0.460,0.510

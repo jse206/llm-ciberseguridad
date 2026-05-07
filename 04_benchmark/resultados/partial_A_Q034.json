@@ -1,0 +1,39 @@
+{
+  "result": {
+    "answer": "Los resultados de la consulta SQL ejecutada indican que no hay datos disponibles sobre técnicas de MITRE ATT&CK asociadas a ataques de ransomware en el esquema proporcionado. Esto significa que, según la base de datos NVD/NIST, no se han encontrado registros que vinculen específicamente técnicas de MITRE ATT&CK con incidentes de ransomware en la información consultada.\n\nSi necesitas información más detallada sobre técnicas de MITRE ATT&CK relacionadas con ransomware, te recomendaría consultar directamente la matriz de MITRE ATT&CK, donde se pueden encontrar técnicas específicas que los atacantes suelen utilizar en este tipo de ataques. Sin embargo, en el contexto de la consulta realizada, no se dispone de datos relevantes en la base de datos NVD/NIST.",
+    "sql": "SELECT 'No hay datos disponibles sobre técnicas de MITRE ATT&CK asociadas a ataques de ransomware en el esquema proporcionado.' AS mensaje;",
+    "sql_rows": 1,
+    "correction_attempts": 0,
+    "sql_error": null,
+    "api_fallback": null,
+    "hallucination_risk": false,
+    "usage": {
+      "prompt_tokens": 2924,
+      "completion_tokens": 249,
+      "total_tokens": 3173,
+      "schema_linking_latency_s": 1.471,
+      "sql_generation_latency_s": 1.497,
+      "self_correction_latency_s": 0,
+      "synthesis_latency_s": 3.673
+    },
+    "architecture": "A_Text2SQL"
+  },
+  "metrics": {
+    "question_id": "Q034",
+    "level": 2,
+    "domain": "MITRE",
+    "architecture": "A_Text2SQL",
+    "accuracy": 0.1667,
+    "hallucination_risk": 0.0,
+    "traceability": 1.0,
+    "error_handling": 1.0,
+    "latency_s": 6.641,
+    "total_tokens": 3173,
+    "accuracy_detail": "Score=0.167 | completas=['ransomware'] | parciales=[] | ausentes=['T1486', 'T1489', 'T1490', 'impact', 'encryption']",
+    "hallucination_detail": "Sin señales de alucinación detectadas",
+    "traceability_detail": "Markers texto: ['nvd', 'nist', 'mitre'] | Fuente estructurada: api_source=False, seed_nodes=False, sql=True",
+    "error_handling_detail": "Sin errores detectados en el pipeline",
+    "latency_detail": "linking=1.47s sql=1.50s corr=0.00s synth=3.67s",
+    "answer_preview": "Los resultados de la consulta SQL ejecutada indican que no hay datos disponibles sobre técnicas de MITRE ATT&CK asociadas a ataques de ransomware en el esquema proporcionado. Esto significa que, según la base de datos NVD/NIST, no se han encontrado registros que vinculen específicamente técnicas de …"
+  }
+}

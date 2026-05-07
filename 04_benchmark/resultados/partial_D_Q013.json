@@ -1,0 +1,55 @@
+{
+  "result": {
+    "answer": "La técnica MITRE ATT&CK con ID T1078 se llama \"Default Accounts\". Esta técnica se refiere a cómo los adversarios pueden obtener y abusar de las credenciales de una cuenta predeterminada como medio para ganar acceso inicial, persistencia, escalada de privilegios o evasión de defensa. Las cuentas predeterminadas son aquellas que se crean por defecto en sistemas y aplicaciones.\n\n**Fuentes consultadas:** query_mitre_graph",
+    "steps": [
+      {
+        "thought": "",
+        "action": "query_mitre_graph",
+        "action_input": {
+          "question": "¿Cuál es el nombre de la técnica MITRE ATT&CK con ID T1078?"
+        },
+        "observation_preview": "{\n  \"context\": \"=== SUBGRAFO MITRE ATT&CK ===\\n\\n--- Entidades recuperadas ---\\n  [course-of-action] M1026 — Privileged Account Management\\n     Privileged Account Management focuses on implementing policies, controls, and tools to securely manage privileged accounts (e.g., SYSTEM, root, or administ…"
+      },
+      {
+        "thought": "",
+        "action": "query_mitre_graph",
+        "action_input": {
+          "question": "¿Cuál es el nombre y la descripción de la técnica MITRE ATT&CK con ID T1078?"
+        },
+        "observation_preview": "{\n  \"context\": \"=== SUBGRAFO MITRE ATT&CK ===\\n\\n--- Entidades recuperadas ---\\n  [course-of-action] M1026 — Privileged Account Management\\n     Privileged Account Management focuses on implementing policies, controls, and tools to securely manage privileged accounts (e.g., SYSTEM, root, or administ…"
+      }
+    ],
+    "tools_used": [
+      "query_mitre_graph",
+      "query_mitre_graph"
+    ],
+    "iterations": 2,
+    "forced_final": false,
+    "hallucination_risk": false,
+    "usage": {
+      "prompt_tokens": 4946,
+      "completion_tokens": 248,
+      "total_tokens": 5194,
+      "total_latency_s": 6.704
+    },
+    "architecture": "D_Toolformer"
+  },
+  "metrics": {
+    "question_id": "Q013",
+    "level": 1,
+    "domain": "MITRE",
+    "architecture": "D_Toolformer",
+    "accuracy": 0.6667,
+    "hallucination_risk": 0.0,
+    "traceability": 0.5,
+    "error_handling": 1.0,
+    "latency_s": 6.704,
+    "total_tokens": 5194,
+    "accuracy_detail": "Score=0.667 | completas=['T1078'] | parciales=['valid accounts(50%)', 'cuentas válidas(50%)'] | ausentes=[]",
+    "hallucination_detail": "Sin señales de alucinación detectadas",
+    "traceability_detail": "Markers texto: ['mitre', 'att&ck', 'fuente'] | Fuente estructurada: api_source=False, seed_nodes=False, sql=False",
+    "error_handling_detail": "Sin errores detectados en el pipeline",
+    "latency_detail": "total_react=6.70s iterations=2",
+    "answer_preview": "La técnica MITRE ATT&CK con ID T1078 se llama \"Default Accounts\". Esta técnica se refiere a cómo los adversarios pueden obtener y abusar de las credenciales de una cuenta predeterminada como medio para ganar acceso inicial, persistencia, escalada de privilegios o evasión de defensa. Las cuentas pred…"
+  }
+}

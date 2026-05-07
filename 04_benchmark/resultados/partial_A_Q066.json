@@ -1,0 +1,39 @@
+{
+  "result": {
+    "answer": "Los resultados de la consulta SQL ejecutada contra la base de datos NVD/NIST no arrojan ningún resultado relacionado con la técnica T1027 (Obfuscated Files or Information). Esto indica que no se han encontrado plataformas específicas afectadas por esta técnica en la base de datos consultada. \n\nSi necesitas información adicional sobre la técnica T1027 o su impacto en otras plataformas, te recomendaría consultar otras fuentes o bases de datos de ciberseguridad que puedan tener información más detallada.",
+    "sql": "SELECT cpe_uri FROM cve_cpe WHERE cpe_uri LIKE '%T1027%'",
+    "sql_rows": 0,
+    "correction_attempts": 0,
+    "sql_error": null,
+    "api_fallback": null,
+    "hallucination_risk": false,
+    "usage": {
+      "prompt_tokens": 2945,
+      "completion_tokens": 242,
+      "total_tokens": 3187,
+      "schema_linking_latency_s": 3.982,
+      "sql_generation_latency_s": 1.931,
+      "self_correction_latency_s": 0,
+      "synthesis_latency_s": 2.789
+    },
+    "architecture": "A_Text2SQL"
+  },
+  "metrics": {
+    "question_id": "Q066",
+    "level": 1,
+    "domain": "MITRE",
+    "architecture": "A_Text2SQL",
+    "accuracy": 0.2,
+    "hallucination_risk": 0.0,
+    "traceability": 1.0,
+    "error_handling": 1.0,
+    "latency_s": 8.702,
+    "total_tokens": 3187,
+    "accuracy_detail": "Score=0.200 | completas=['T1027'] | parciales=[] | ausentes=['windows', 'linux', 'macos', 'obfuscation']",
+    "hallucination_detail": "Sin señales de alucinación detectadas",
+    "traceability_detail": "Markers texto: ['nvd', 'nist', 'fuente'] | Fuente estructurada: api_source=False, seed_nodes=False, sql=True",
+    "error_handling_detail": "Sin errores detectados en el pipeline",
+    "latency_detail": "linking=3.98s sql=1.93s corr=0.00s synth=2.79s",
+    "answer_preview": "Los resultados de la consulta SQL ejecutada contra la base de datos NVD/NIST no arrojan ningún resultado relacionado con la técnica T1027 (Obfuscated Files or Information). Esto indica que no se han encontrado plataformas específicas afectadas por esta técnica en la base de datos consultada. \n\nSi ne…"
+  }
+}

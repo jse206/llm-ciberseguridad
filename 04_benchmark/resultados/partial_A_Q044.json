@@ -1,0 +1,39 @@
+{
+  "result": {
+    "answer": "Los datos proporcionados provienen de la base de datos NVD/NIST. Según la consulta SQL ejecutada, se han identificado tres vulnerabilidades críticas (CVE) con un puntaje CVSS v3 de 9.0 o superior. A continuación, se detallan estas vulnerabilidades:\n\n1. **CVE-2022-22115**\n   - **Puntaje CVSS v3**: 9.0\n   - **Severidad**: CRITICAL\n\n2. **CVE-2022-21846**\n   - **Puntaje CVSS v3**: 9.0\n   - **Severidad**: CRITICAL\n\n3. **CVE-2022-21855**\n   - **Puntaje CVSS v3**: 9.0\n   - **Severidad**: CRITICAL\n\nEn cuanto a las técnicas MITRE ATT&CK más utilizadas por grupos APT de estado-nación, no se han proporcionado datos específicos en los resultados de la consulta. Sin embargo, es común que las vulnerabilidades críticas mencionadas sean explotadas en ataques dirigidos, y estas pueden estar asociadas a técnicas como la ejecución remota de código, la escalada de privilegios y el acceso inicial.\n\nPara un análisis más detallado sobre las técnicas MITRE ATT&CK y su relación con estas vulnerabilidades, se recomienda consultar fuentes adicionales que relacionen las CVE con las tácticas y técnicas específicas de los grupos APT.",
+    "sql": "SELECT c.cve_id, c.cvss_v3_score, c.cvss_v3_severity\nFROM cve AS c\nWHERE c.cvss_v3_score >= 9.0\nLIMIT 3;",
+    "sql_rows": 3,
+    "correction_attempts": 0,
+    "sql_error": null,
+    "api_fallback": null,
+    "hallucination_risk": false,
+    "usage": {
+      "prompt_tokens": 3217,
+      "completion_tokens": 509,
+      "total_tokens": 3726,
+      "schema_linking_latency_s": 4.066,
+      "sql_generation_latency_s": 1.399,
+      "self_correction_latency_s": 0,
+      "synthesis_latency_s": 7.868
+    },
+    "architecture": "A_Text2SQL"
+  },
+  "metrics": {
+    "question_id": "Q044",
+    "level": 3,
+    "domain": "BOTH",
+    "architecture": "A_Text2SQL",
+    "accuracy": 0.5714,
+    "hallucination_risk": 0.0,
+    "traceability": 1.0,
+    "error_handling": 1.0,
+    "latency_s": 13.333,
+    "total_tokens": 3726,
+    "accuracy_detail": "Score=0.571 | completas=['APT', 'técnicas', 'CVE', 'estado-nación'] | parciales=[] | ausentes=['T1566', 'T1078', 'T1059']",
+    "hallucination_detail": "Sin señales de alucinación detectadas",
+    "traceability_detail": "Markers texto: ['nvd', 'nist', 'mitre'] | Fuente estructurada: api_source=False, seed_nodes=False, sql=True",
+    "error_handling_detail": "Sin errores detectados en el pipeline",
+    "latency_detail": "linking=4.07s sql=1.40s corr=0.00s synth=7.87s",
+    "answer_preview": "Los datos proporcionados provienen de la base de datos NVD/NIST. Según la consulta SQL ejecutada, se han identificado tres vulnerabilidades críticas (CVE) con un puntaje CVSS v3 de 9.0 o superior. A continuación, se detallan estas vulnerabilidades:\n\n1. **CVE-2022-22115**\n   - **Puntaje CVSS v3**: 9.…"
+  }
+}

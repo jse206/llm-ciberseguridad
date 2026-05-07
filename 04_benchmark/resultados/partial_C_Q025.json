@@ -1,0 +1,51 @@
+{
+  "result": {
+    "answer": "Según el subgrafo recuperado del framework MITRE ATT&CK, el grupo Lazarus Group (ID G0032) utiliza las siguientes herramientas maliciosas:\n\n1. **Proxysvc** (ID S0238): Es una DLL maliciosa utilizada por Lazarus Group en una campaña conocida como Operation GhostSecret. Esta herramienta ha sido identificada en sus operaciones y se asocia con técnicas de comando y control.\n\n2. **FALLCHILL** (ID S0181): Este es un Remote Access Trojan (RAT) que ha sido utilizado por Lazarus Group desde al menos 2016. FALLCHILL se ha dirigido a sectores como la industria aeroespacial y las telecomunicaciones.\n\n3. **AuditCred** (ID S0347): Es otra DLL maliciosa que ha sido utilizada por Lazarus Group durante sus ataques en 2018. Esta herramienta también se relaciona con sus actividades de intrusión.\n\nEstas herramientas son representativas de las capacidades del grupo y se utilizan en diversas tácticas y técnicas para llevar a cabo sus operaciones de ciberespionaje y ataques. \n\nSegún MITRE ATT&CK, estas herramientas son parte de un conjunto más amplio de capacidades que el grupo emplea para lograr sus objetivos.",
+    "seed_nodes": [
+      "G0032",
+      "T1588.001",
+      "T1587.001",
+      "T1053.002",
+      "S0110"
+    ],
+    "subgraph_nodes": 40,
+    "subgraph_edges": 48,
+    "coverage": {
+      "sufficient": false,
+      "missing_entities": [
+        "Lazarus Group",
+        "herramientas maliciosas",
+        "malware"
+      ],
+      "confidence": 0.3
+    },
+    "hallucination_risk": true,
+    "usage": {
+      "prompt_tokens": 2837,
+      "completion_tokens": 298,
+      "total_tokens": 3135,
+      "retrieval_latency_s": 0.009,
+      "coverage_latency_s": 1.428,
+      "synthesis_latency_s": 5.663
+    },
+    "architecture": "C_GraphRAG"
+  },
+  "metrics": {
+    "question_id": "Q025",
+    "level": 2,
+    "domain": "BOTH",
+    "architecture": "C_GraphRAG",
+    "accuracy": 0.3333,
+    "hallucination_risk": 0.7,
+    "traceability": 1.0,
+    "error_handling": 1.0,
+    "latency_s": 7.1,
+    "total_tokens": 3135,
+    "accuracy_detail": "Score=0.333 | completas=['lazarus', 'S0'] | parciales=[] | ausentes=['WannaCry', 'malware', 'DPRK', 'korea']",
+    "hallucination_detail": "Flag de riesgo activo (sin datos de fuente verificados)",
+    "traceability_detail": "Markers texto: ['mitre', 'att&ck', 'según'] | Fuente estructurada: api_source=False, seed_nodes=True, sql=False",
+    "error_handling_detail": "Sin errores detectados en el pipeline",
+    "latency_detail": "retrieval=0.01s coverage=1.43s synth=5.66s",
+    "answer_preview": "Según el subgrafo recuperado del framework MITRE ATT&CK, el grupo Lazarus Group (ID G0032) utiliza las siguientes herramientas maliciosas:\n\n1. **Proxysvc** (ID S0238): Es una DLL maliciosa utilizada por Lazarus Group en una campaña conocida como Operation GhostSecret. Esta herramienta ha sido identi…"
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "result": {
+    "answer": "El subgrafo proporcionado no contiene información sobre el vector CVSS v3 de la vulnerabilidad CVE-2021-26084. Para obtener detalles sobre el vector CVSS v3 de esta vulnerabilidad específica, se recomienda consultar fuentes adicionales, como la base de datos de CVE o el sitio web del NVD (National Vulnerability Database).\n\nSegún MITRE ATT&CK, no se encuentra información relevante sobre CVE-2021-26084 en el contexto del subgrafo proporcionado.",
+    "seed_nodes": [
+      "S0183"
+    ],
+    "subgraph_nodes": 40,
+    "subgraph_edges": 35,
+    "coverage": {
+      "sufficient": false,
+      "missing_entities": [
+        "CVSS v3 vector",
+        "CVE-2021-26084"
+      ],
+      "confidence": 0.3
+    },
+    "hallucination_risk": true,
+    "usage": {
+      "prompt_tokens": 2780,
+      "completion_tokens": 147,
+      "total_tokens": 2927,
+      "retrieval_latency_s": 0.007,
+      "coverage_latency_s": 1.258,
+      "synthesis_latency_s": 2.932
+    },
+    "architecture": "C_GraphRAG"
+  },
+  "metrics": {
+    "question_id": "Q006",
+    "level": 1,
+    "domain": "NVD",
+    "architecture": "C_GraphRAG",
+    "accuracy": 0.0,
+    "hallucination_risk": 0.7,
+    "traceability": 1.0,
+    "error_handling": 1.0,
+    "latency_s": 4.197,
+    "total_tokens": 2927,
+    "accuracy_detail": "Score=0.000 | completas=[] | parciales=[] | ausentes=['confluence', 'atlassian', 'AV:N', 'network']",
+    "hallucination_detail": "Flag de riesgo activo (sin datos de fuente verificados)",
+    "traceability_detail": "Markers texto: ['nvd', 'national vulnerability', 'mitre'] | Fuente estructurada: api_source=False, seed_nodes=True, sql=False",
+    "error_handling_detail": "Sin errores detectados en el pipeline",
+    "latency_detail": "retrieval=0.01s coverage=1.26s synth=2.93s",
+    "answer_preview": "El subgrafo proporcionado no contiene información sobre el vector CVSS v3 de la vulnerabilidad CVE-2021-26084. Para obtener detalles sobre el vector CVSS v3 de esta vulnerabilidad específica, se recomienda consultar fuentes adicionales, como la base de datos de CVE o el sitio web del NVD (National V…"
+  }
+}

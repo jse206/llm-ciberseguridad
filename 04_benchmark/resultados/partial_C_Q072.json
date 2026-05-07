@@ -1,0 +1,47 @@
+{
+  "result": {
+    "answer": "La técnica MITRE ATT&CK que describe el uso de cuentas de servicio para persistencia es **T1543.002 — Systemd Service**. Según MITRE ATT&CK, los adversarios pueden crear o modificar servicios de systemd para ejecutar repetidamente cargas útiles maliciosas como parte de la persistencia. Systemd es un gestor de sistema y servicios comúnmente utilizado en sistemas Linux para gestionar demonios en segundo plano.\n\nAdemás, otra técnica relevante es **T1547.012 — Print Processors**, donde los adversarios pueden abusar de los procesadores de impresión para ejecutar DLLs maliciosas durante el arranque del sistema, lo que también puede contribuir a la persistencia.\n\nAmbas técnicas están relacionadas con la táctica de **persistencia**, que es el objetivo de los adversarios al utilizar cuentas de servicio o mecanismos similares para mantener el acceso a un sistema comprometido.\n\nSegún MITRE ATT&CK, estas técnicas son utilizadas en plataformas como Linux y Windows, lo que resalta la versatilidad de los métodos de persistencia en diferentes entornos.\n\nEn resumen, para el uso de cuentas de servicio para persistencia, se puede referir a **T1543.002 — Systemd Service**.",
+    "seed_nodes": [
+      "T1053.002",
+      "S0110",
+      "S0066"
+    ],
+    "subgraph_nodes": 40,
+    "subgraph_edges": 12,
+    "coverage": {
+      "sufficient": false,
+      "missing_entities": [
+        "técnica MITRE ATT&CK relacionada con cuentas de servicio"
+      ],
+      "confidence": 0.4
+    },
+    "hallucination_risk": true,
+    "usage": {
+      "prompt_tokens": 2813,
+      "completion_tokens": 292,
+      "total_tokens": 3105,
+      "retrieval_latency_s": 0.007,
+      "coverage_latency_s": 1.426,
+      "synthesis_latency_s": 6.451
+    },
+    "architecture": "C_GraphRAG"
+  },
+  "metrics": {
+    "question_id": "Q072",
+    "level": 1,
+    "domain": "MITRE",
+    "architecture": "C_GraphRAG",
+    "accuracy": 0.3,
+    "hallucination_risk": 0.7,
+    "traceability": 1.0,
+    "error_handling": 1.0,
+    "latency_s": 7.884,
+    "total_tokens": 3105,
+    "accuracy_detail": "Score=0.300 | completas=['cuentas de servicio'] | parciales=['service accounts(50%)'] | ausentes=['T1078', 'valid accounts', 'persistence']",
+    "hallucination_detail": "Flag de riesgo activo (sin datos de fuente verificados)",
+    "traceability_detail": "Markers texto: ['mitre', 'att&ck', 'según'] | Fuente estructurada: api_source=False, seed_nodes=True, sql=False",
+    "error_handling_detail": "Sin errores detectados en el pipeline",
+    "latency_detail": "retrieval=0.01s coverage=1.43s synth=6.45s",
+    "answer_preview": "La técnica MITRE ATT&CK que describe el uso de cuentas de servicio para persistencia es **T1543.002 — Systemd Service**. Según MITRE ATT&CK, los adversarios pueden crear o modificar servicios de systemd para ejecutar repetidamente cargas útiles maliciosas como parte de la persistencia. Systemd es un…"
+  }
+}

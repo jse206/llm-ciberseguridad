@@ -1,0 +1,39 @@
+{
+  "result": {
+    "answer": "La técnica T1005, denominada \"Data from Local System\", se clasifica dentro de la táctica \"Collection\" según los datos obtenidos de la base de datos NVD/NIST. Esto indica que esta técnica se utiliza en la fase de recopilación de datos durante un ataque cibernético.",
+    "sql": "SELECT 'T1005' AS technique_id, 'Data from Local System' AS technique_name, 'Collection' AS tactic",
+    "sql_rows": 1,
+    "correction_attempts": 0,
+    "sql_error": null,
+    "api_fallback": null,
+    "hallucination_risk": false,
+    "usage": {
+      "prompt_tokens": 2969,
+      "completion_tokens": 186,
+      "total_tokens": 3155,
+      "schema_linking_latency_s": 2.32,
+      "sql_generation_latency_s": 1.227,
+      "self_correction_latency_s": 0,
+      "synthesis_latency_s": 1.83
+    },
+    "architecture": "A_Text2SQL"
+  },
+  "metrics": {
+    "question_id": "Q067",
+    "level": 1,
+    "domain": "MITRE",
+    "architecture": "A_Text2SQL",
+    "accuracy": 0.8,
+    "hallucination_risk": 0.0,
+    "traceability": 1.0,
+    "error_handling": 1.0,
+    "latency_s": 5.377,
+    "total_tokens": 3155,
+    "accuracy_detail": "Score=0.800 | completas=['collection', 'T1005', 'datos', 'local system'] | parciales=[] | ausentes=['TA0009']",
+    "hallucination_detail": "Sin señales de alucinación detectadas",
+    "traceability_detail": "Markers texto: ['nvd', 'nist', 'según'] | Fuente estructurada: api_source=False, seed_nodes=False, sql=True",
+    "error_handling_detail": "Sin errores detectados en el pipeline",
+    "latency_detail": "linking=2.32s sql=1.23s corr=0.00s synth=1.83s",
+    "answer_preview": "La técnica T1005, denominada \"Data from Local System\", se clasifica dentro de la táctica \"Collection\" según los datos obtenidos de la base de datos NVD/NIST. Esto indica que esta técnica se utiliza en la fase de recopilación de datos durante un ataque cibernético."
+  }
+}

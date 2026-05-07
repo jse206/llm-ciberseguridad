@@ -1,0 +1,39 @@
+{
+  "result": {
+    "answer": "Los datos sobre las debilidades CWE asociadas a CVE-2021-44228 provienen de la base de datos NVD/NIST. Según los resultados obtenidos, las siguientes debilidades CWE están relacionadas con esta vulnerabilidad:\n\n1. **CWE-20**: Errores en la validación de entrada.\n2. **CWE-400**: La limitación de recursos.\n3. **CWE-502**: Deserialización de datos no confiables.\n4. **CWE-917**: Uso de un recurso externo que puede ser controlado por un atacante.\n\nEstas debilidades reflejan las áreas de riesgo que pueden ser explotadas en el contexto de la vulnerabilidad de ejecución remota de código en Apache Log4j2.",
+    "sql": "SELECT cwe_id FROM cve_cwe WHERE cve_id = 'CVE-2021-44228';",
+    "sql_rows": 1,
+    "correction_attempts": 0,
+    "sql_error": null,
+    "api_fallback": "NVD API — CVE-2021-44228",
+    "hallucination_risk": false,
+    "usage": {
+      "prompt_tokens": 4553,
+      "completion_tokens": 270,
+      "total_tokens": 4823,
+      "schema_linking_latency_s": 1.878,
+      "sql_generation_latency_s": 1.299,
+      "self_correction_latency_s": 0,
+      "synthesis_latency_s": 3.268
+    },
+    "architecture": "A_Text2SQL"
+  },
+  "metrics": {
+    "question_id": "Q004",
+    "level": 1,
+    "domain": "NVD",
+    "architecture": "A_Text2SQL",
+    "accuracy": 0.75,
+    "hallucination_risk": 0.0,
+    "traceability": 1.0,
+    "error_handling": 1.0,
+    "latency_s": 6.445,
+    "total_tokens": 4823,
+    "accuracy_detail": "Score=0.750 | completas=['CWE-917', 'CWE-400', 'log4j'] | parciales=[] | ausentes=['injection']",
+    "hallucination_detail": "Sin señales de alucinación detectadas",
+    "traceability_detail": "Markers texto: ['nvd', 'nist', 'según'] | Fuente estructurada: api_source=False, seed_nodes=False, sql=True",
+    "error_handling_detail": "Sin errores detectados en el pipeline",
+    "latency_detail": "linking=1.88s sql=1.30s corr=0.00s synth=3.27s",
+    "answer_preview": "Los datos sobre las debilidades CWE asociadas a CVE-2021-44228 provienen de la base de datos NVD/NIST. Según los resultados obtenidos, las siguientes debilidades CWE están relacionadas con esta vulnerabilidad:\n\n1. **CWE-20**: Errores en la validación de entrada.\n2. **CWE-400**: La limitación de recu…"
+  }
+}

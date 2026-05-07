@@ -1,0 +1,37 @@
+{
+  "result": {
+    "answer": "El ataque de ransomware que utiliza la técnica T1486, que implica la encriptación de archivos para extorsionar a las víctimas, puede tener un impacto devastador en las organizaciones. Este tipo de ataque puede resultar en la pérdida de datos críticos, interrupciones operativas y costos significativos relacionados con la recuperación y la mitigación de daños. Además, la reputación de la empresa puede verse gravemente afectada, lo que puede llevar a la pérdida de confianza por parte de clientes y socios.\n\nRecientemente, se han identificado varias vulnerabilidades (CVEs) que podrían facilitar el acceso inicial para un ataque de ransomware:\n\n1. **CVE-2018-6318**: Esta vulnerabilidad en Sophos Tester Tool 3.2.0.7 Beta permite un ataque de secuestro de DLL, donde un atacante puede cargar un DLL malicioso debido a la falta de validación del controlador. La puntuación CVSS 3.0 es de 7.8 (alta), lo que indica un riesgo significativo. La explotación de esta vulnerabilidad podría permitir a un atacante ejecutar código malicioso en el contexto de la aplicación, facilitando así la entrega de ransomware (fuente: NVD).\n\n2. **CVE-2017-18362**: Esta vulnerabilidad en Kaseya VSA permite comandos remotos no autenticados, lo que da acceso completo a la base de datos de Kaseya. Los atacantes han explotado esta vulnerabilidad para descargar y ejecutar cargas útiles de ransomware. La puntuación CVSS 3.1 es de 9.8 (crítica), lo que la convierte en un vector de ataque muy peligroso (fuente: NVD).\n\nAmbas vulnerabilidades destacan la importancia de mantener actualizados los sistemas y aplicar parches de seguridad para mitigar el riesgo de ataques de ransomware.",
+    "intent": "search_cves",
+    "api_source": "https://services.nvd.nist.gov/rest/json/cves/2.0?resultsPerPage=10&keywordSearch=ransomware",
+    "api_error": null,
+    "router_confidence": 0.8,
+    "usage": {
+      "prompt_tokens": 2739,
+      "completion_tokens": 420,
+      "total_tokens": 3159,
+      "router_latency_s": 1.504,
+      "api_latency_s": 1.035,
+      "synthesis_latency_s": 8.502
+    },
+    "hallucination_risk": false,
+    "architecture": "B_API"
+  },
+  "metrics": {
+    "question_id": "Q043",
+    "level": 3,
+    "domain": "BOTH",
+    "architecture": "B_API",
+    "accuracy": 0.6667,
+    "hallucination_risk": 0.0,
+    "traceability": 1.0,
+    "error_handling": 1.0,
+    "latency_s": 11.041,
+    "total_tokens": 3159,
+    "accuracy_detail": "Score=0.667 | completas=['T1486', 'ransomware', 'CVE', 'impacto'] | parciales=[] | ausentes=['initial access', 'critical']",
+    "hallucination_detail": "Sin señales de alucinación detectadas",
+    "traceability_detail": "Markers texto: ['nvd', 'fuente', 'base de datos'] | Fuente estructurada: api_source=True, seed_nodes=False, sql=False",
+    "error_handling_detail": "Sin errores detectados en el pipeline",
+    "latency_detail": "router=1.50s api=1.03s synth=8.50s",
+    "answer_preview": "El ataque de ransomware que utiliza la técnica T1486, que implica la encriptación de archivos para extorsionar a las víctimas, puede tener un impacto devastador en las organizaciones. Este tipo de ataque puede resultar en la pérdida de datos críticos, interrupciones operativas y costos significativo…"
+  }
+}

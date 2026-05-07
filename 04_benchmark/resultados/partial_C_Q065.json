@@ -1,0 +1,47 @@
+{
+  "result": {
+    "answer": "La técnica MITRE ATT&CK con ID T1003 se denomina \"OS Credential Dumping\". Según MITRE ATT&CK, esta técnica se refiere a que los adversarios pueden intentar volcar credenciales para obtener información de inicio de sesión y material de credenciales, normalmente en forma de un hash o una contraseña en texto claro. Las credenciales pueden ser obtenidas de cachés del sistema operativo, memoria, y otros lugares donde se almacenan datos de autenticación.\n\nEsta técnica se clasifica dentro de la táctica de \"credential-access\" y es aplicable a múltiples plataformas, incluyendo Linux, macOS y Windows. \n\nPara más información, puedes consultar la entrada correspondiente en el sitio de MITRE ATT&CK.",
+    "seed_nodes": [
+      "T1003",
+      "T1053.002",
+      "S0110"
+    ],
+    "subgraph_nodes": 40,
+    "subgraph_edges": 80,
+    "coverage": {
+      "sufficient": false,
+      "missing_entities": [
+        "nombre de la técnica T1003"
+      ],
+      "confidence": 0.3
+    },
+    "hallucination_risk": true,
+    "usage": {
+      "prompt_tokens": 2802,
+      "completion_tokens": 184,
+      "total_tokens": 2986,
+      "retrieval_latency_s": 0.009,
+      "coverage_latency_s": 1.521,
+      "synthesis_latency_s": 3.482
+    },
+    "architecture": "C_GraphRAG"
+  },
+  "metrics": {
+    "question_id": "Q065",
+    "level": 1,
+    "domain": "MITRE",
+    "architecture": "C_GraphRAG",
+    "accuracy": 0.8,
+    "hallucination_risk": 0.7,
+    "traceability": 1.0,
+    "error_handling": 1.0,
+    "latency_s": 5.012,
+    "total_tokens": 2986,
+    "accuracy_detail": "Score=0.800 | completas=['OS Credential Dumping', 'T1003', 'credenciales', 'dumping'] | parciales=[] | ausentes=['credentials']",
+    "hallucination_detail": "Flag de riesgo activo (sin datos de fuente verificados)",
+    "traceability_detail": "Markers texto: ['mitre', 'att&ck', 'según'] | Fuente estructurada: api_source=False, seed_nodes=True, sql=False",
+    "error_handling_detail": "Sin errores detectados en el pipeline",
+    "latency_detail": "retrieval=0.01s coverage=1.52s synth=3.48s",
+    "answer_preview": "La técnica MITRE ATT&CK con ID T1003 se denomina \"OS Credential Dumping\". Según MITRE ATT&CK, esta técnica se refiere a que los adversarios pueden intentar volcar credenciales para obtener información de inicio de sesión y material de credenciales, normalmente en forma de un hash o una contraseña en…"
+  }
+}

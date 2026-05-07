@@ -1,0 +1,39 @@
+{
+  "result": {
+    "answer": "Los resultados de la consulta SQL ejecutada contra la base de datos NVD/CVE indican que no hay datos disponibles sobre técnicas de MITRE ATT&CK en el esquema proporcionado. Esto significa que no se encontraron registros relacionados con las técnicas de la táctica Defense Evasion en la base de datos NVD/NIST. \n\nSi necesitas información específica sobre técnicas de MITRE ATT&CK en esta táctica, te recomendaría consultar directamente la matriz de MITRE ATT&CK, donde se detallan las técnicas y tácticas asociadas.",
+    "sql": "SELECT 'No hay datos disponibles sobre técnicas de MITRE ATT&CK en el esquema proporcionado.'",
+    "sql_rows": 1,
+    "correction_attempts": 0,
+    "sql_error": null,
+    "api_fallback": null,
+    "hallucination_risk": false,
+    "usage": {
+      "prompt_tokens": 2954,
+      "completion_tokens": 222,
+      "total_tokens": 3176,
+      "schema_linking_latency_s": 2.553,
+      "sql_generation_latency_s": 0.919,
+      "self_correction_latency_s": 0,
+      "synthesis_latency_s": 2.606
+    },
+    "architecture": "A_Text2SQL"
+  },
+  "metrics": {
+    "question_id": "Q076",
+    "level": 2,
+    "domain": "MITRE",
+    "architecture": "A_Text2SQL",
+    "accuracy": 0.1667,
+    "hallucination_risk": 0.0,
+    "traceability": 1.0,
+    "error_handling": 1.0,
+    "latency_s": 6.078,
+    "total_tokens": 3176,
+    "accuracy_detail": "Score=0.167 | completas=['defense evasion'] | parciales=[] | ausentes=['TA0005', 'T1055', 'T1027', 'T1562', 'evasión']",
+    "hallucination_detail": "Sin señales de alucinación detectadas",
+    "traceability_detail": "Markers texto: ['nvd', 'nist', 'mitre'] | Fuente estructurada: api_source=False, seed_nodes=False, sql=True",
+    "error_handling_detail": "Sin errores detectados en el pipeline",
+    "latency_detail": "linking=2.55s sql=0.92s corr=0.00s synth=2.61s",
+    "answer_preview": "Los resultados de la consulta SQL ejecutada contra la base de datos NVD/CVE indican que no hay datos disponibles sobre técnicas de MITRE ATT&CK en el esquema proporcionado. Esto significa que no se encontraron registros relacionados con las técnicas de la táctica Defense Evasion en la base de datos …"
+  }
+}

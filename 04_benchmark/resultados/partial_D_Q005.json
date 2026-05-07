@@ -1,0 +1,46 @@
+{
+  "result": {
+    "answer": "La vulnerabilidad CVE-2022-30190 fue publicada el 1 de junio de 2022.\n\n**Fuentes consultadas:** query_nvd_api",
+    "steps": [
+      {
+        "thought": "",
+        "action": "query_nvd_api",
+        "action_input": {
+          "cve_id": "CVE-2022-30190"
+        },
+        "observation_preview": "{\n  \"data\": {\n    \"id\": \"CVE-2022-30190\",\n    \"sourceIdentifier\": \"secure@microsoft.com\",\n    \"published\": \"2022-06-01T20:15:07.983\",\n    \"lastModified\": \"2025-10-30T19:19:41.540\",\n    \"vulnStatus\": \"Analyzed\",\n    \"cveTags\": [],\n    \"descriptions\": [\n      {\n        \"lang\": \"en\",\n        \"value\": \"…"
+      }
+    ],
+    "tools_used": [
+      "query_nvd_api"
+    ],
+    "iterations": 1,
+    "forced_final": false,
+    "hallucination_risk": false,
+    "usage": {
+      "prompt_tokens": 2499,
+      "completion_tokens": 133,
+      "total_tokens": 2632,
+      "total_latency_s": 6.038
+    },
+    "architecture": "D_Toolformer"
+  },
+  "metrics": {
+    "question_id": "Q005",
+    "level": 1,
+    "domain": "NVD",
+    "architecture": "D_Toolformer",
+    "accuracy": 0.2,
+    "hallucination_risk": 0.0,
+    "traceability": 0.5,
+    "error_handling": 1.0,
+    "latency_s": 6.038,
+    "total_tokens": 2632,
+    "accuracy_detail": "Score=0.200 | completas=['2022'] | parciales=[] | ausentes=['mayo', 'may', 'follina', 'msdt']",
+    "hallucination_detail": "Sin señales de alucinación detectadas",
+    "traceability_detail": "Markers texto: ['nvd', 'fuente', 'api'] | Fuente estructurada: api_source=False, seed_nodes=False, sql=False",
+    "error_handling_detail": "Sin errores detectados en el pipeline",
+    "latency_detail": "total_react=6.04s iterations=1",
+    "answer_preview": "La vulnerabilidad CVE-2022-30190 fue publicada el 1 de junio de 2022.\n\n**Fuentes consultadas:** query_nvd_api"
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "result": {
+    "answer": "Según MITRE ATT&CK, APT28 utiliza varias herramientas de ataque. Entre ellas se destacan:\n\n1. **JHUHUGIT** (S0044): Este malware es utilizado por APT28 y se basa en el código fuente de Carberp. Se clasifica como malware de reconocimiento, lo que indica que se utiliza para recopilar información sobre los objetivos. (Fuente: Según MITRE ATT&CK).\n\n2. **Zebrocy** (S0251): Este es un troyano que APT28 ha estado utilizando desde al menos noviembre de 2015. Zebrocy se presenta en varias formas de programas y se utiliza para llevar a cabo diversas actividades maliciosas. (Fuente: Según MITRE ATT&CK).\n\n3. **USBStealer** (S0136): Esta herramienta ha sido utilizada por APT28 desde al menos 2005 para extraer información de redes aisladas (air-gapped). (Fuente: Según MITRE ATT&CK).\n\n4. **CORESHELL** (S0137): Este es un downloader que APT28 utiliza para descargar otros componentes maliciosos. Las versiones más antiguas de este malware son conocidas como SOURFACE. (Fuente: Según MITRE ATT&CK).\n\n5. **DealersChoice** (S0243): Este es un marco de explotación de Flash que ha sido utilizado por APT28. (Fuente: Según MITRE ATT&CK).\n\n6. **ADVSTORESHELL** (S0045): Este es un backdoor de espionaje que APT28 ha utilizado desde al menos 2012 hasta 2016. Se utiliza generalmente para actividades de espionaje. (Fuente: Según MITRE ATT&CK).\n\nEstas herramientas reflejan la variedad de métodos que APT28 emplea para llevar a cabo sus operaciones de ciberespionaje y ataque.",
+    "seed_nodes": [
+      "G0007",
+      "T1592.002",
+      "T1053.002",
+      "S0110"
+    ],
+    "subgraph_nodes": 40,
+    "subgraph_edges": 33,
+    "coverage": {
+      "sufficient": false,
+      "missing_entities": [
+        "APT28",
+        "herramientas de software S0"
+      ],
+      "confidence": 0.3
+    },
+    "hallucination_risk": true,
+    "usage": {
+      "prompt_tokens": 2760,
+      "completion_tokens": 423,
+      "total_tokens": 3183,
+      "retrieval_latency_s": 0.017,
+      "coverage_latency_s": 1.275,
+      "synthesis_latency_s": 6.92
+    },
+    "architecture": "C_GraphRAG"
+  },
+  "metrics": {
+    "question_id": "Q084",
+    "level": 2,
+    "domain": "MITRE",
+    "architecture": "C_GraphRAG",
+    "accuracy": 0.1667,
+    "hallucination_risk": 0.7,
+    "traceability": 1.0,
+    "error_handling": 1.0,
+    "latency_s": 8.212,
+    "total_tokens": 3183,
+    "accuracy_detail": "Score=0.167 | completas=['APT28'] | parciales=[] | ausentes=['G0007', 'Sofacy', 'X-Agent', 'Mimikatz', 'software']",
+    "hallucination_detail": "Flag de riesgo activo (sin datos de fuente verificados)",
+    "traceability_detail": "Markers texto: ['mitre', 'att&ck', 'según'] | Fuente estructurada: api_source=False, seed_nodes=True, sql=False",
+    "error_handling_detail": "Sin errores detectados en el pipeline",
+    "latency_detail": "retrieval=0.02s coverage=1.27s synth=6.92s",
+    "answer_preview": "Según MITRE ATT&CK, APT28 utiliza varias herramientas de ataque. Entre ellas se destacan:\n\n1. **JHUHUGIT** (S0044): Este malware es utilizado por APT28 y se basa en el código fuente de Carberp. Se clasifica como malware de reconocimiento, lo que indica que se utiliza para recopilar información sobre…"
+  }
+}

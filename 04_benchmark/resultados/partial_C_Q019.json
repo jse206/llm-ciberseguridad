@@ -1,0 +1,41 @@
+{
+  "result": {
+    "answer": "No he encontrado información relevante en el grafo MITRE ATT&CK para responder a tu pregunta sobre el estado de la vulnerabilidad CVE-2024-3400 en NVD. \n\nEl sistema MITRE ATT&CK se centra en técnicas de ataque, grupos APT, tácticas, mitigaciones y herramientas utilizadas en ciberseguridad. Si tienes preguntas sobre alguno de estos temas, estaré encantado de ayudarte.",
+    "seed_nodes": [],
+    "subgraph_nodes": 0,
+    "subgraph_edges": 0,
+    "coverage": {
+      "sufficient": false,
+      "missing_entities": [],
+      "confidence": 0.0
+    },
+    "hallucination_risk": true,
+    "usage": {
+      "prompt_tokens": 145,
+      "completion_tokens": 87,
+      "total_tokens": 232,
+      "retrieval_latency_s": 0.016,
+      "coverage_latency_s": 0,
+      "synthesis_latency_s": 2.241
+    },
+    "architecture": "C_GraphRAG"
+  },
+  "metrics": {
+    "question_id": "Q019",
+    "level": 1,
+    "domain": "NVD",
+    "architecture": "C_GraphRAG",
+    "accuracy": 0.0,
+    "hallucination_risk": 0.7,
+    "traceability": 0.5,
+    "error_handling": 1.0,
+    "latency_s": 2.257,
+    "total_tokens": 232,
+    "accuracy_detail": "Score=0.000 | completas=[] | parciales=[] | ausentes=['palo alto', 'pan-os', 'firewall', 'critical', '10.0']",
+    "hallucination_detail": "Flag de riesgo activo (sin datos de fuente verificados)",
+    "traceability_detail": "Markers texto: ['nvd', 'mitre', 'att&ck'] | Fuente estructurada: api_source=False, seed_nodes=False, sql=False",
+    "error_handling_detail": "Sin errores detectados en el pipeline",
+    "latency_detail": "retrieval=0.02s coverage=0.00s synth=2.24s",
+    "answer_preview": "No he encontrado información relevante en el grafo MITRE ATT&CK para responder a tu pregunta sobre el estado de la vulnerabilidad CVE-2024-3400 en NVD. \n\nEl sistema MITRE ATT&CK se centra en técnicas de ataque, grupos APT, tácticas, mitigaciones y herramientas utilizadas en ciberseguridad. Si tienes…"
+  }
+}

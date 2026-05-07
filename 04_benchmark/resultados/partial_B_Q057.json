@@ -1,0 +1,37 @@
+{
+  "result": {
+    "answer": "El score CVSS v3 de la vulnerabilidad CVE-2022-1388, que afecta a F5 BIG-IP, es de **9.8**, lo que la clasifica como **CRÍTICA**. Este puntaje se basa en el siguiente vector: `CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H`, donde se destacan los siguientes aspectos:\n\n- **Attack Vector (AV)**: NETWORK (la vulnerabilidad puede ser explotada a través de la red).\n- **Attack Complexity (AC)**: LOW (la complejidad de ataque es baja).\n- **Privileges Required (PR)**: NONE (no se requieren privilegios para explotar la vulnerabilidad).\n- **User Interaction (UI)**: NONE (no se requiere interacción del usuario).\n- **Scope (S)**: UNCHANGED (el alcance de la vulnerabilidad no cambia).\n- **Confidentiality Impact (C)**: HIGH (impacto alto en la confidencialidad).\n- **Integrity Impact (I)**: HIGH (impacto alto en la integridad).\n- **Availability Impact (A)**: HIGH (impacto alto en la disponibilidad).\n\nEstos datos fueron proporcionados por F5 y también están disponibles en la base de datos del NVD/NIST (National Vulnerability Database) (fuente: NVD/NIST). \n\nLa vulnerabilidad permite que solicitudes no reveladas omitan la autenticación REST de iControl en varias versiones de F5 BIG-IP, lo que puede tener graves consecuencias para la seguridad de los sistemas afectados (fuente: f5sirt@f5.com).",
+    "intent": "get_cve_by_id",
+    "api_source": "https://services.nvd.nist.gov/rest/json/cves/2.0?cveId=CVE-2022-1388",
+    "api_error": null,
+    "router_confidence": 0.9,
+    "usage": {
+      "prompt_tokens": 3033,
+      "completion_tokens": 384,
+      "total_tokens": 3417,
+      "router_latency_s": 1.324,
+      "api_latency_s": 1.127,
+      "synthesis_latency_s": 8.601
+    },
+    "hallucination_risk": false,
+    "architecture": "B_API"
+  },
+  "metrics": {
+    "question_id": "Q057",
+    "level": 1,
+    "domain": "NVD",
+    "architecture": "B_API",
+    "accuracy": 0.6,
+    "hallucination_risk": 0.0,
+    "traceability": 1.0,
+    "error_handling": 1.0,
+    "latency_s": 11.052,
+    "total_tokens": 3417,
+    "accuracy_detail": "Score=0.600 | completas=['9.8', 'F5', 'BIG-IP'] | parciales=[] | ausentes=['critical', 'authentication bypass']",
+    "hallucination_detail": "Sin señales de alucinación detectadas",
+    "traceability_detail": "Markers texto: ['nvd', 'nist', 'national vulnerability'] | Fuente estructurada: api_source=True, seed_nodes=False, sql=False",
+    "error_handling_detail": "Sin errores detectados en el pipeline",
+    "latency_detail": "router=1.32s api=1.13s synth=8.60s",
+    "answer_preview": "El score CVSS v3 de la vulnerabilidad CVE-2022-1388, que afecta a F5 BIG-IP, es de **9.8**, lo que la clasifica como **CRÍTICA**. Este puntaje se basa en el siguiente vector: `CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H`, donde se destacan los siguientes aspectos:\n\n- **Attack Vector (AV)**: NETWORK…"
+  }
+}

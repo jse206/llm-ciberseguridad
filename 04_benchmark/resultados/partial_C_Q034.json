@@ -1,0 +1,48 @@
+{
+  "result": {
+    "answer": "Según MITRE ATT&CK, las técnicas asociadas a ataques de ransomware no están explícitamente mencionadas en el subgrafo proporcionado. Sin embargo, se pueden inferir algunas técnicas que podrían ser relevantes en el contexto de un ataque de ransomware, basándose en tácticas comunes utilizadas por los adversarios.\n\n1. **T1566 — Phishing**: Esta técnica se utiliza para obtener acceso inicial a los sistemas de las víctimas mediante mensajes de phishing. Los ataques de ransomware a menudo comienzan con un compromiso inicial que puede ser facilitado por phishing. \n\n2. **T1547.012 — Print Processors**: Aunque esta técnica se centra en la persistencia y escalación de privilegios, los adversarios pueden utilizarla para mantener el acceso a un sistema comprometido, lo que podría ser útil en un ataque de ransomware.\n\n3. **T1570 — Lateral Tool Transfer**: Esta técnica permite a los adversarios transferir herramientas entre sistemas en un entorno comprometido, lo que podría ser parte de la propagación del ransomware a través de la red.\n\n4. **T1556.005 — Reversible Encryption**: Esta técnica puede ser utilizada para acceder a credenciales en sistemas Windows, lo que podría facilitar el movimiento lateral y la ejecución de ransomware en múltiples sistemas.\n\n5. **T1657 — Financial Theft**: Aunque esta técnica se refiere a la extorsión y el robo financiero, es relevante en el contexto de ransomware, ya que los atacantes buscan obtener beneficios económicos a través de la encriptación de datos y la demanda de rescate.\n\n6. **T1563 — Remote Service Session Hijacking**: Esta técnica permite a los adversarios tomar control de sesiones existentes, lo que podría facilitar la propagación del ransomware en un entorno.\n\nEs importante señalar que, aunque estas técnicas pueden estar asociadas indirectamente con ataques de ransomware, el subgrafo no proporciona una lista específica de técnicas de ransomware. Para obtener información más detallada sobre técnicas específicas de ransomware, se recomienda consultar la base de datos completa de MITRE ATT&CK.\n\nEn resumen, el subgrafo no contiene información suficiente para identificar técnicas de ransomware de manera directa, pero se pueden inferir algunas técnicas relevantes.",
+    "seed_nodes": [
+      "T1053.002",
+      "S0110"
+    ],
+    "subgraph_nodes": 40,
+    "subgraph_edges": 6,
+    "coverage": {
+      "sufficient": false,
+      "missing_entities": [
+        "técnicas de ransomware",
+        "detalles sobre T1053.002",
+        "relaciones con otras técnicas de MITRE ATT&CK"
+      ],
+      "confidence": 0.3
+    },
+    "hallucination_risk": true,
+    "usage": {
+      "prompt_tokens": 2663,
+      "completion_tokens": 508,
+      "total_tokens": 3171,
+      "retrieval_latency_s": 0.009,
+      "coverage_latency_s": 1.497,
+      "synthesis_latency_s": 9.136
+    },
+    "architecture": "C_GraphRAG"
+  },
+  "metrics": {
+    "question_id": "Q034",
+    "level": 2,
+    "domain": "MITRE",
+    "architecture": "C_GraphRAG",
+    "accuracy": 0.3333,
+    "hallucination_risk": 0.7,
+    "traceability": 1.0,
+    "error_handling": 1.0,
+    "latency_s": 10.642,
+    "total_tokens": 3171,
+    "accuracy_detail": "Score=0.333 | completas=['ransomware', 'encryption'] | parciales=[] | ausentes=['T1486', 'T1489', 'T1490', 'impact']",
+    "hallucination_detail": "Flag de riesgo activo (sin datos de fuente verificados)",
+    "traceability_detail": "Markers texto: ['mitre', 'att&ck', 'según'] | Fuente estructurada: api_source=False, seed_nodes=True, sql=False",
+    "error_handling_detail": "Sin errores detectados en el pipeline",
+    "latency_detail": "retrieval=0.01s coverage=1.50s synth=9.14s",
+    "answer_preview": "Según MITRE ATT&CK, las técnicas asociadas a ataques de ransomware no están explícitamente mencionadas en el subgrafo proporcionado. Sin embargo, se pueden inferir algunas técnicas que podrían ser relevantes en el contexto de un ataque de ransomware, basándose en tácticas comunes utilizadas por los …"
+  }
+}

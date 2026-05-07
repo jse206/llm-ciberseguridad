@@ -1,0 +1,39 @@
+{
+  "result": {
+    "answer": "Los resultados de la consulta SQL ejecutada contra la base de datos NVD/CVE indican que no hay datos disponibles sobre grupos APT asociados a China en el esquema proporcionado. Esto significa que, según la información de la base de datos NVD/NIST, no se han documentado grupos APT específicos relacionados con China en este contexto.\n\nSi necesitas información más detallada o específica sobre grupos APT asociados a China, te recomendaría consultar directamente la base de datos MITRE ATT&CK o fuentes adicionales especializadas en ciberseguridad.",
+    "sql": "SELECT 'No hay datos disponibles sobre grupos APT asociados a China en el esquema proporcionado.' AS mensaje;",
+    "sql_rows": 1,
+    "correction_attempts": 0,
+    "sql_error": null,
+    "api_fallback": null,
+    "hallucination_risk": false,
+    "usage": {
+      "prompt_tokens": 2925,
+      "completion_tokens": 212,
+      "total_tokens": 3137,
+      "schema_linking_latency_s": 2.455,
+      "sql_generation_latency_s": 1.12,
+      "self_correction_latency_s": 0,
+      "synthesis_latency_s": 3.26
+    },
+    "architecture": "A_Text2SQL"
+  },
+  "metrics": {
+    "question_id": "Q080",
+    "level": 2,
+    "domain": "MITRE",
+    "architecture": "A_Text2SQL",
+    "accuracy": 0.1667,
+    "hallucination_risk": 0.0,
+    "traceability": 1.0,
+    "error_handling": 1.0,
+    "latency_s": 6.835,
+    "total_tokens": 3137,
+    "accuracy_detail": "Score=0.167 | completas=['china'] | parciales=[] | ausentes=['APT41', 'APT10', 'G0096', 'G0045', 'PRC']",
+    "hallucination_detail": "Sin señales de alucinación detectadas",
+    "traceability_detail": "Markers texto: ['nvd', 'nist', 'mitre'] | Fuente estructurada: api_source=False, seed_nodes=False, sql=True",
+    "error_handling_detail": "Sin errores detectados en el pipeline",
+    "latency_detail": "linking=2.46s sql=1.12s corr=0.00s synth=3.26s",
+    "answer_preview": "Los resultados de la consulta SQL ejecutada contra la base de datos NVD/CVE indican que no hay datos disponibles sobre grupos APT asociados a China en el esquema proporcionado. Esto significa que, según la información de la base de datos NVD/NIST, no se han documentado grupos APT específicos relacio…"
+  }
+}

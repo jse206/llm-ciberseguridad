@@ -1,0 +1,50 @@
+{
+  "result": {
+    "answer": "El subgrafo proporcionado no contiene información específica sobre vulnerabilidades asociadas a CWE-200 (Information Exposure). Por lo tanto, no puedo determinar cuántas vulnerabilidades están relacionadas con CWE-200 en la base de datos local.\n\nSegún MITRE ATT&CK, la información sobre vulnerabilidades específicas y su clasificación bajo CWE no está incluida en el subgrafo que se me ha proporcionado. Si necesitas información sobre vulnerabilidades específicas, te recomendaría consultar una base de datos de vulnerabilidades como la NVD (National Vulnerability Database) o el propio sitio de MITRE para obtener detalles sobre CWE-200 y sus vulnerabilidades asociadas.",
+    "seed_nodes": [
+      "T1053.002",
+      "S0110",
+      "T1596.005",
+      "T1596",
+      "T1497.003"
+    ],
+    "subgraph_nodes": 40,
+    "subgraph_edges": 11,
+    "coverage": {
+      "sufficient": false,
+      "missing_entities": [
+        "CWE-200",
+        "vulnerabilidades asociadas"
+      ],
+      "confidence": 0.2
+    },
+    "hallucination_risk": true,
+    "usage": {
+      "prompt_tokens": 2983,
+      "completion_tokens": 171,
+      "total_tokens": 3154,
+      "retrieval_latency_s": 0.011,
+      "coverage_latency_s": 1.268,
+      "synthesis_latency_s": 3.685
+    },
+    "architecture": "C_GraphRAG"
+  },
+  "metrics": {
+    "question_id": "Q059",
+    "level": 1,
+    "domain": "NVD",
+    "architecture": "C_GraphRAG",
+    "accuracy": 0.6667,
+    "hallucination_risk": 0.7,
+    "traceability": 1.0,
+    "error_handling": 1.0,
+    "latency_s": 4.964,
+    "total_tokens": 3154,
+    "accuracy_detail": "Score=0.667 | completas=['CWE-200', 'information exposure'] | parciales=[] | ausentes=['divulgación']",
+    "hallucination_detail": "Flag de riesgo activo (sin datos de fuente verificados)",
+    "traceability_detail": "Markers texto: ['nvd', 'national vulnerability', 'mitre'] | Fuente estructurada: api_source=False, seed_nodes=True, sql=False",
+    "error_handling_detail": "Sin errores detectados en el pipeline",
+    "latency_detail": "retrieval=0.01s coverage=1.27s synth=3.69s",
+    "answer_preview": "El subgrafo proporcionado no contiene información específica sobre vulnerabilidades asociadas a CWE-200 (Information Exposure). Por lo tanto, no puedo determinar cuántas vulnerabilidades están relacionadas con CWE-200 en la base de datos local.\n\nSegún MITRE ATT&CK, la información sobre vulnerabilida…"
+  }
+}

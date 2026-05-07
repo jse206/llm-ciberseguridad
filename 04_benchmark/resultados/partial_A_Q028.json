@@ -1,0 +1,39 @@
+{
+  "result": {
+    "answer": "Los datos proporcionados provienen de la base de datos NVD/NIST. A continuación, se presenta la lista de los 10 CVEs más recientes relacionados con vulnerabilidades de tipo SQL Injection (CWE-89) publicados en 2024:\n\n1. **CVE-2024-13085** - Publicado el 31 de diciembre de 2024 a las 23:15:07.440\n2. **CVE-2024-13084** - Publicado el 31 de diciembre de 2024 a las 22:15:07.783\n3. **CVE-2024-13079** - Publicado el 31 de diciembre de 2024 a las 20:15:27.937\n4. **CVE-2024-13078** - Publicado el 31 de diciembre de 2024 a las 19:15:08.067\n5. **CVE-2024-13072** - Publicado el 31 de diciembre de 2024 a las 15:15:08.083\n6. **CVE-2024-13070** - Publicado el 31 de diciembre de 2024 a las 15:15:07.853\n7. **CVE-2024-56042** - Publicado el 31 de diciembre de 2024 a las 13:15:07.823\n8. **CVE-2024-56041** - Publicado el 31 de diciembre de 2024 a las 13:15:07.670\n9. **CVE-2024-56039** - Publicado el 31 de diciembre de 2024 a las 13:15:07.517\n10. **CVE-2024-56212** - Publicado el 31 de diciembre de 2024 a las 10:15:09.573\n\nEstos CVEs reflejan las vulnerabilidades más recientes en el ámbito de SQL Injection según la información disponible en la base de datos NVD/NIST.",
+    "sql": "SELECT cve.cve_id, cve.published\nFROM cve\nJOIN cve_cwe ON cve.cve_id = cve_cwe.cve_id\nWHERE cve_cwe.cwe_id = 'CWE-89' AND cve.published >= '2024-01-01' AND cve.published < '2025-01-01'\nORDER BY cve.published DESC\nLIMIT 10;",
+    "sql_rows": 10,
+    "correction_attempts": 0,
+    "sql_error": null,
+    "api_fallback": null,
+    "hallucination_risk": false,
+    "usage": {
+      "prompt_tokens": 3452,
+      "completion_tokens": 660,
+      "total_tokens": 4112,
+      "schema_linking_latency_s": 3.395,
+      "sql_generation_latency_s": 2.375,
+      "self_correction_latency_s": 0,
+      "synthesis_latency_s": 8.703
+    },
+    "architecture": "A_Text2SQL"
+  },
+  "metrics": {
+    "question_id": "Q028",
+    "level": 2,
+    "domain": "NVD",
+    "architecture": "A_Text2SQL",
+    "accuracy": 1.0,
+    "hallucination_risk": 0.0,
+    "traceability": 1.0,
+    "error_handling": 1.0,
+    "latency_s": 14.473,
+    "total_tokens": 4112,
+    "accuracy_detail": "Score=1.000 | completas=['sql injection', 'CWE-89', '2024'] | parciales=[] | ausentes=[]",
+    "hallucination_detail": "Sin señales de alucinación detectadas",
+    "traceability_detail": "Markers texto: ['nvd', 'nist', 'según'] | Fuente estructurada: api_source=False, seed_nodes=False, sql=True",
+    "error_handling_detail": "Sin errores detectados en el pipeline",
+    "latency_detail": "linking=3.40s sql=2.38s corr=0.00s synth=8.70s",
+    "answer_preview": "Los datos proporcionados provienen de la base de datos NVD/NIST. A continuación, se presenta la lista de los 10 CVEs más recientes relacionados con vulnerabilidades de tipo SQL Injection (CWE-89) publicados en 2024:\n\n1. **CVE-2024-13085** - Publicado el 31 de diciembre de 2024 a las 23:15:07.440\n2. …"
+  }
+}

@@ -1,0 +1,82 @@
+{
+  "result": {
+    "answer": "La táctica \"Collection\" en MITRE ATT&CK incluye al menos la técnica T1114 - Email Collection, que se refiere a la recolección de información sensible a través de correos electrónicos. Sin embargo, no se han recuperado más técnicas específicas asociadas a esta táctica en las consultas realizadas.\n\n**Fuentes consultadas:** query_mitre_graph",
+    "steps": [
+      {
+        "thought": "",
+        "action": "query_mitre_graph",
+        "action_input": {
+          "question": "¿Qué técnicas están asociadas a la táctica Collection?"
+        },
+        "observation_preview": "{\n  \"context\": \"=== SUBGRAFO MITRE ATT&CK ===\\n\\n--- Entidades recuperadas ---\\n★ [x-mitre-tactic] TA0009 — Collection\\n     The adversary is trying to gather data of interest to their goal.\\n\\nCollection consists of techniques adversaries may use to gather information and the sources information is…"
+      },
+      {
+        "thought": "",
+        "action": "query_mitre_graph",
+        "action_input": {
+          "question": "¿Cuáles son las técnicas asociadas a la táctica TA0009 Collection?"
+        },
+        "observation_preview": "{\n  \"context\": \"=== SUBGRAFO MITRE ATT&CK ===\\n\\n--- Entidades recuperadas ---\\n★ [x-mitre-tactic] TA0009 — Collection\\n     The adversary is trying to gather data of interest to their goal.\\n\\nCollection consists of techniques adversaries may use to gather information and the sources information is…"
+      },
+      {
+        "thought": "",
+        "action": "query_mitre_graph",
+        "action_input": {
+          "question": "Listar técnicas de la táctica Collection en MITRE ATT&CK"
+        },
+        "observation_preview": "{\n  \"context\": \"=== SUBGRAFO MITRE ATT&CK ===\\n\\n--- Entidades recuperadas ---\\n  [course-of-action] M1026 — Privileged Account Management\\n     Privileged Account Management focuses on implementing policies, controls, and tools to securely manage privileged accounts (e.g., SYSTEM, root, or administ…"
+      },
+      {
+        "thought": "",
+        "action": "query_mitre_graph",
+        "action_input": {
+          "question": "¿Cuáles son las técnicas específicas de la táctica Collection en MITRE ATT&CK?"
+        },
+        "observation_preview": "{\n  \"context\": \"=== SUBGRAFO MITRE ATT&CK ===\\n\\n--- Entidades recuperadas ---\\n  [course-of-action] M1026 — Privileged Account Management\\n     Privileged Account Management focuses on implementing policies, controls, and tools to securely manage privileged accounts (e.g., SYSTEM, root, or administ…"
+      },
+      {
+        "thought": "",
+        "action": "query_mitre_graph",
+        "action_input": {
+          "question": "Listar todas las técnicas de la táctica Collection en MITRE ATT&CK"
+        },
+        "observation_preview": "{\n  \"context\": \"=== SUBGRAFO MITRE ATT&CK ===\\n\\n--- Entidades recuperadas ---\\n  [course-of-action] M1026 — Privileged Account Management\\n     Privileged Account Management focuses on implementing policies, controls, and tools to securely manage privileged accounts (e.g., SYSTEM, root, or administ…"
+      }
+    ],
+    "tools_used": [
+      "query_mitre_graph",
+      "query_mitre_graph",
+      "query_mitre_graph",
+      "query_mitre_graph",
+      "query_mitre_graph"
+    ],
+    "iterations": 5,
+    "forced_final": false,
+    "hallucination_risk": false,
+    "usage": {
+      "prompt_tokens": 12278,
+      "completion_tokens": 602,
+      "total_tokens": 12880,
+      "total_latency_s": 14.636
+    },
+    "architecture": "D_Toolformer"
+  },
+  "metrics": {
+    "question_id": "Q085",
+    "level": 2,
+    "domain": "MITRE",
+    "architecture": "D_Toolformer",
+    "accuracy": 0.1667,
+    "hallucination_risk": 0.0,
+    "traceability": 0.5,
+    "error_handling": 1.0,
+    "latency_s": 14.636,
+    "total_tokens": 12880,
+    "accuracy_detail": "Score=0.167 | completas=['collection'] | parciales=[] | ausentes=['TA0009', 'T1005', 'T1056', 'T1113', 'keylogging']",
+    "hallucination_detail": "Sin señales de alucinación detectadas",
+    "traceability_detail": "Markers texto: ['mitre', 'att&ck', 'fuente'] | Fuente estructurada: api_source=False, seed_nodes=False, sql=False",
+    "error_handling_detail": "Sin errores detectados en el pipeline",
+    "latency_detail": "total_react=14.64s iterations=5",
+    "answer_preview": "La táctica \"Collection\" en MITRE ATT&CK incluye al menos la técnica T1114 - Email Collection, que se refiere a la recolección de información sensible a través de correos electrónicos. Sin embargo, no se han recuperado más técnicas específicas asociadas a esta táctica en las consultas realizadas.\n\n**…"
+  }
+}

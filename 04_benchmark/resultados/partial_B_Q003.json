@@ -1,0 +1,37 @@
+{
+  "result": {
+    "answer": "La vulnerabilidad CVE-2023-23397 se describe como una \"Vulnerabilidad de Elevación de Privilegios en Microsoft Outlook\" (Microsoft Outlook Elevation of Privilege Vulnerability) según la información recuperada. Esta vulnerabilidad permite a un atacante elevar sus privilegios en el sistema afectado.\n\nEn términos de severidad, esta vulnerabilidad tiene un puntaje base de 9.8 en la escala CVSS 3.1, lo que la clasifica como \"CRÍTICA\". Los detalles del vector de ataque indican que se puede explotar a través de la red (AV:N), con una complejidad de ataque baja (AC:L), sin requerir privilegios previos (PR:N) ni interacción del usuario (UI:N). Además, tiene un impacto alto en la confidencialidad, integridad y disponibilidad (C:H, I:H, A:H) del sistema afectado (según NVD).\n\nLa vulnerabilidad afecta a varias versiones de Microsoft Outlook y Microsoft 365, incluyendo:\n- Microsoft 365 Apps\n- Microsoft Office 2019\n- Microsoft Office Long Term Servicing Channel 2021\n- Microsoft Outlook 2013 (SP1)\n- Microsoft Outlook 2016\n\nSe recomienda aplicar las actualizaciones según las instrucciones del proveedor para mitigar esta vulnerabilidad (CISA).\n\nPara más información, puedes consultar los siguientes enlaces:\n- [Microsoft Security Response Center](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-23397)\n- [CISA - Conocido catálogo de vulnerabilidades explotadas](https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2023-23397)\n\nFuente: Según NVD y Microsoft.",
+    "intent": "get_cve_by_id",
+    "api_source": "https://services.nvd.nist.gov/rest/json/cves/2.0?cveId=CVE-2023-23397",
+    "api_error": null,
+    "router_confidence": 1.0,
+    "usage": {
+      "prompt_tokens": 1911,
+      "completion_tokens": 405,
+      "total_tokens": 2316,
+      "router_latency_s": 1.464,
+      "api_latency_s": 1.124,
+      "synthesis_latency_s": 6.322
+    },
+    "hallucination_risk": false,
+    "architecture": "B_API"
+  },
+  "metrics": {
+    "question_id": "Q003",
+    "level": 1,
+    "domain": "NVD",
+    "architecture": "B_API",
+    "accuracy": 0.6,
+    "hallucination_risk": 0.0,
+    "traceability": 1.0,
+    "error_handling": 1.0,
+    "latency_s": 8.91,
+    "total_tokens": 2316,
+    "accuracy_detail": "Score=0.600 | completas=['outlook', 'microsoft', 'privilege'] | parciales=[] | ausentes=['ntlm', 'hash']",
+    "hallucination_detail": "Sin señales de alucinación detectadas",
+    "traceability_detail": "Markers texto: ['nvd', 'según', 'fuente'] | Fuente estructurada: api_source=True, seed_nodes=False, sql=False",
+    "error_handling_detail": "Sin errores detectados en el pipeline",
+    "latency_detail": "router=1.46s api=1.12s synth=6.32s",
+    "answer_preview": "La vulnerabilidad CVE-2023-23397 se describe como una \"Vulnerabilidad de Elevación de Privilegios en Microsoft Outlook\" (Microsoft Outlook Elevation of Privilege Vulnerability) según la información recuperada. Esta vulnerabilidad permite a un atacante elevar sus privilegios en el sistema afectado.\n\n…"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "result": {
+    "answer": "La severidad CVSS v3 de la vulnerabilidad CVE-2017-0144 es **8.8**, lo que se clasifica como **ALTA**. Esta puntuación se basa en el vector de ataque que indica que la vulnerabilidad permite a atacantes remotos ejecutar código arbitrario a través de paquetes manipulados en el servidor SMBv1 de varias versiones de Microsoft Windows (incluyendo Windows Vista, Windows 7, Windows 8.1, entre otros) (Según NVD).\n\nEl vector CVSS para esta vulnerabilidad es: \n- **AV:N** (Vector de ataque: Red)\n- **AC:L** (Complejidad del ataque: Baja)\n- **PR:L** (Privilegios requeridos: Bajo)\n- **UI:N** (Interacción del usuario: Ninguna)\n- **S:U** (Alcance: Sin cambios)\n- **C:H** (Impacto en la confidencialidad: Alto)\n- **I:H** (Impacto en la integridad: Alto)\n- **A:H** (Impacto en la disponibilidad: Alto)\n\nEstos factores contribuyen a la alta puntuación de severidad, indicando que la vulnerabilidad es crítica y debe ser atendida con urgencia (Según NVD).",
+    "intent": "get_cve_by_id",
+    "api_source": "https://services.nvd.nist.gov/rest/json/cves/2.0?cveId=CVE-2017-0144",
+    "api_error": null,
+    "router_confidence": 0.9,
+    "usage": {
+      "prompt_tokens": 3086,
+      "completion_tokens": 306,
+      "total_tokens": 3392,
+      "router_latency_s": 1.45,
+      "api_latency_s": 1.122,
+      "synthesis_latency_s": 5.252
+    },
+    "hallucination_risk": false,
+    "architecture": "B_API"
+  },
+  "metrics": {
+    "question_id": "Q002",
+    "level": 1,
+    "domain": "NVD",
+    "architecture": "B_API",
+    "accuracy": 0.4,
+    "hallucination_risk": 0.0,
+    "traceability": 1.0,
+    "error_handling": 1.0,
+    "latency_s": 7.824,
+    "total_tokens": 3392,
+    "accuracy_detail": "Score=0.400 | completas=['crítica', 'smb'] | parciales=[] | ausentes=['critical', '9.8', 'eternalblue']",
+    "hallucination_detail": "Sin señales de alucinación detectadas",
+    "traceability_detail": "Markers texto: ['nvd', 'según'] | Fuente estructurada: api_source=True, seed_nodes=False, sql=False",
+    "error_handling_detail": "Sin errores detectados en el pipeline",
+    "latency_detail": "router=1.45s api=1.12s synth=5.25s",
+    "answer_preview": "La severidad CVSS v3 de la vulnerabilidad CVE-2017-0144 es **8.8**, lo que se clasifica como **ALTA**. Esta puntuación se basa en el vector de ataque que indica que la vulnerabilidad permite a atacantes remotos ejecutar código arbitrario a través de paquetes manipulados en el servidor SMBv1 de varia…"
+  }
+}

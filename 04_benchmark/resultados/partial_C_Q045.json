@@ -1,0 +1,51 @@
+{
+  "result": {
+    "answer": "Según MITRE ATT&CK, el movimiento lateral puede ser realizado a través de varias técnicas, incluyendo T1021 — Remote Services, que permite a los adversarios utilizar cuentas válidas para acceder a servicios que aceptan conexiones remotas, como SSH, RDP y VNC. En este contexto, es crucial priorizar la mitigación de vulnerabilidades que podrían ser explotadas para facilitar este tipo de movimiento.\n\nSin embargo, el subgrafo proporcionado no incluye información específica sobre CVEs (Common Vulnerabilities and Exposures) que deban ser priorizados para contener el movimiento lateral. Para abordar esta situación, se recomienda realizar un análisis de las vulnerabilidades conocidas en los servicios que se utilizan para el movimiento lateral, como SSH (T1021.004), RDP (T1021.001) y VNC (T1021.005), y priorizar el parcheo de aquellas que sean críticas o de alta severidad.\n\nAdemás, se pueden considerar las siguientes mitigaciones generales que se mencionan en el subgrafo:\n\n1. **M1026 — Privileged Account Management**: Implementar políticas y controles para gestionar de manera segura las cuentas privilegiadas, lo que puede ayudar a prevenir el acceso no autorizado.\n2. **M1035 — Limit Access to Resource Over Network**: Restringir el acceso a recursos de red solo a usuarios y sistemas que tengan una necesidad legítima.\n3. **M1027 — Password Policies**: Establecer y hacer cumplir políticas de contraseñas seguras para reducir la probabilidad de acceso no autorizado.\n\nEn resumen, aunque el subgrafo no proporciona CVEs específicos, se sugiere realizar un análisis de vulnerabilidades en los servicios utilizados para el movimiento lateral y aplicar las mitigaciones mencionadas para fortalecer la seguridad de la red.",
+    "seed_nodes": [
+      "T1021",
+      "TA0008",
+      "T1053.002",
+      "S0110",
+      "T1570"
+    ],
+    "subgraph_nodes": 40,
+    "subgraph_edges": 67,
+    "coverage": {
+      "sufficient": false,
+      "missing_entities": [
+        "CVE",
+        "vulnerabilidades específicas",
+        "técnicas de mitigación"
+      ],
+      "confidence": 0.6
+    },
+    "hallucination_risk": true,
+    "usage": {
+      "prompt_tokens": 2846,
+      "completion_tokens": 412,
+      "total_tokens": 3258,
+      "retrieval_latency_s": 0.013,
+      "coverage_latency_s": 1.443,
+      "synthesis_latency_s": 7.291
+    },
+    "architecture": "C_GraphRAG"
+  },
+  "metrics": {
+    "question_id": "Q045",
+    "level": 3,
+    "domain": "BOTH",
+    "architecture": "C_GraphRAG",
+    "accuracy": 0.7857,
+    "hallucination_risk": 0.7,
+    "traceability": 1.0,
+    "error_handling": 1.0,
+    "latency_s": 8.747,
+    "total_tokens": 3258,
+    "accuracy_detail": "Score=0.786 | completas=['T1021', 'remote services', 'RDP', 'CVE', 'parche'] | parciales=['lateral movement(50%)'] | ausentes=['SMB']",
+    "hallucination_detail": "Flag de riesgo activo (sin datos de fuente verificados)",
+    "traceability_detail": "Markers texto: ['mitre', 'att&ck', 'según'] | Fuente estructurada: api_source=False, seed_nodes=True, sql=False",
+    "error_handling_detail": "Sin errores detectados en el pipeline",
+    "latency_detail": "retrieval=0.01s coverage=1.44s synth=7.29s",
+    "answer_preview": "Según MITRE ATT&CK, el movimiento lateral puede ser realizado a través de varias técnicas, incluyendo T1021 — Remote Services, que permite a los adversarios utilizar cuentas válidas para acceder a servicios que aceptan conexiones remotas, como SSH, RDP y VNC. En este contexto, es crucial priorizar l…"
+  }
+}

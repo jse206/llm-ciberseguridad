@@ -1,0 +1,91 @@
+{
+  "result": {
+    "answer": "Los factores que hacen que una Vulnerabilidad Común y Explotable (CVE) sea más probable de ser explotada por grupos de Amenaza Persistente Avanzada (APT) incluyen:\n\n1. **Gravedad de la Vulnerabilidad**: Las CVEs con un alto puntaje en el Common Vulnerability Scoring System (CVSS) son más atractivas para los grupos APT, ya que indican un mayor potencial de impacto.\n\n2. **Facilidad de Explotación**: Las vulnerabilidades que son fáciles de explotar, especialmente aquellas que no requieren privilegios elevados o que pueden ser explotadas de forma remota, son más propensas a ser utilizadas por los atacantes.\n\n3. **Interés Geopolítico**: Las CVEs que afectan a sectores o tecnologías de interés estratégico para un grupo APT específico (por ejemplo, infraestructura crítica, tecnología de defensa, etc.) son más susceptibles a ser explotadas.\n\n4. **Disponibilidad de Exploits**: Si hay exploits públicos disponibles o si se han observado ataques exitosos utilizando una CVE específica, es más probable que los grupos APT la utilicen.\n\n5. **Contexto del Entorno**: La presencia de sistemas vulnerables en un entorno específico, como redes corporativas o gubernamentales, puede aumentar la probabilidad de explotación.\n\nPara que una organización pueda anticipar y mitigar el riesgo de explotación de CVEs por grupos APT, puede implementar las siguientes estrategias:\n\n- **Monitoreo Continuo**: Mantener un monitoreo constante de las CVEs relevantes para su infraestructura y evaluar su impacto potencial.\n\n- **Actualizaciones y Parches**: Aplicar parches de seguridad de manera oportuna para mitigar las vulnerabilidades conocidas.\n\n- **Análisis de Amenazas**: Realizar análisis de amenazas para identificar qué grupos APT podrían estar interesados en su organización y qué CVEs podrían utilizar.\n\n- **Capacitación y Concienciación**: Capacitar al personal sobre las mejores prácticas de seguridad y la importancia de la ciberseguridad para reducir el riesgo de explotación.\n\n- **Implementación de Controles de Seguridad**: Utilizar herramientas de detección y respuesta ante amenazas, así como controles de seguridad en la red, para identificar y mitigar actividades sospechosas.\n\nAl adoptar estas medidas, las organizaciones pueden mejorar su postura de seguridad y reducir la probabilidad de ser víctimas de ataques por parte de grupos APT.\n\n**Fuentes consultadas:** query_mitre_graph",
+    "steps": [
+      {
+        "thought": "",
+        "action": "query_mitre_graph",
+        "action_input": {
+          "question": "¿Qué factores hacen que una CVE sea más probable de ser explotada por grupos APT?"
+        },
+        "observation_preview": "{\n  \"context\": \"=== SUBGRAFO MITRE ATT&CK ===\\n\\n--- Entidades recuperadas ---\\n  [attack-pattern] T1570 — Lateral Tool Transfer\\n     Adversaries may transfer tools or other files between systems in a compromised environment. Once brought into the victim environment (i.e., [Ingress Tool Transfer](h…"
+      },
+      {
+        "thought": "",
+        "action": "query_mitre_graph",
+        "action_input": {
+          "question": "¿Qué mitigaciones existen para las técnicas utilizadas por grupos APT?"
+        },
+        "observation_preview": "{\n  \"context\": \"=== SUBGRAFO MITRE ATT&CK ===\\n\\n--- Entidades recuperadas ---\\n  [malware] S0050 — CosmicDuke\\n     [CosmicDuke](https://attack.mitre.org/software/S0050) is malware that was used by [APT29](https://attack.mitre.org/groups/G0016) from 2010 to 2015. (Citation: F-Secure The Dukes)\\n  […"
+      },
+      {
+        "thought": "",
+        "action": "query_mitre_graph",
+        "action_input": {
+          "question": "¿Qué mitigaciones existen para T1566 Phishing y T1570 Lateral Tool Transfer?"
+        },
+        "observation_preview": "{\n  \"context\": \"=== SUBGRAFO MITRE ATT&CK ===\\n\\n--- Entidades recuperadas ---\\n★ [attack-pattern] T1570 — Lateral Tool Transfer\\n     Adversaries may transfer tools or other files between systems in a compromised environment. Once brought into the victim environment (i.e., [Ingress Tool Transfer](h…"
+      },
+      {
+        "thought": "",
+        "action": "query_mitre_graph",
+        "action_input": {
+          "question": "¿Cuáles son las mitigaciones para T1566 Phishing y T1570 Lateral Tool Transfer?"
+        },
+        "observation_preview": "{\n  \"context\": \"=== SUBGRAFO MITRE ATT&CK ===\\n\\n--- Entidades recuperadas ---\\n★ [attack-pattern] T1570 — Lateral Tool Transfer\\n     Adversaries may transfer tools or other files between systems in a compromised environment. Once brought into the victim environment (i.e., [Ingress Tool Transfer](h…"
+      },
+      {
+        "thought": "",
+        "action": "query_mitre_graph",
+        "action_input": {
+          "question": "¿Cuáles son las mitigaciones para las técnicas T1566 y T1570?"
+        },
+        "observation_preview": "{\n  \"context\": \"=== SUBGRAFO MITRE ATT&CK ===\\n\\n--- Entidades recuperadas ---\\n★ [attack-pattern] T1570 — Lateral Tool Transfer\\n     Adversaries may transfer tools or other files between systems in a compromised environment. Once brought into the victim environment (i.e., [Ingress Tool Transfer](h…"
+      },
+      {
+        "thought": "",
+        "action": "query_mitre_graph",
+        "action_input": {
+          "question": "¿Cuáles son las mitigaciones específicas para T1566 Phishing y T1570 Lateral Tool Transfer?"
+        },
+        "observation_preview": "{\n  \"context\": \"=== SUBGRAFO MITRE ATT&CK ===\\n\\n--- Entidades recuperadas ---\\n★ [attack-pattern] T1570 — Lateral Tool Transfer\\n     Adversaries may transfer tools or other files between systems in a compromised environment. Once brought into the victim environment (i.e., [Ingress Tool Transfer](h…"
+      }
+    ],
+    "tools_used": [
+      "query_mitre_graph",
+      "query_mitre_graph",
+      "query_mitre_graph",
+      "query_mitre_graph",
+      "query_mitre_graph",
+      "query_mitre_graph"
+    ],
+    "iterations": 6,
+    "forced_final": true,
+    "hallucination_risk": false,
+    "usage": {
+      "prompt_tokens": 19804,
+      "completion_tokens": 1208,
+      "total_tokens": 21012,
+      "total_latency_s": 17.563
+    },
+    "architecture": "D_Toolformer"
+  },
+  "metrics": {
+    "question_id": "Q100",
+    "level": 3,
+    "domain": "BOTH",
+    "architecture": "D_Toolformer",
+    "accuracy": 0.375,
+    "hallucination_risk": 0.0,
+    "traceability": 0.5,
+    "error_handling": 0.3,
+    "latency_s": 17.563,
+    "total_tokens": 21012,
+    "accuracy_detail": "Score=0.375 | completas=['CVSS', 'explotación', 'APT'] | parciales=[] | ausentes=['KEV', 'EPSS', 'patch management', 'T1190', 'supply chain']",
+    "hallucination_detail": "Sin señales de alucinación detectadas",
+    "traceability_detail": "Markers texto: ['mitre', 'fuente', 'graph'] | Fuente estructurada: api_source=False, seed_nodes=False, sql=False",
+    "error_handling_detail": "Error presente — la respuesta no lo reconoce explícitamente",
+    "latency_detail": "total_react=17.56s iterations=6",
+    "answer_preview": "Los factores que hacen que una Vulnerabilidad Común y Explotable (CVE) sea más probable de ser explotada por grupos de Amenaza Persistente Avanzada (APT) incluyen:\n\n1. **Gravedad de la Vulnerabilidad**: Las CVEs con un alto puntaje en el Common Vulnerability Scoring System (CVSS) son más atractivas …"
+  }
+}

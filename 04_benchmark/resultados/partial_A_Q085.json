@@ -1,0 +1,39 @@
+{
+  "result": {
+    "answer": "Los resultados de la consulta SQL ejecutada contra la base de datos NVD/CVE indican que no hay datos disponibles sobre técnicas de MITRE ATT&CK asociadas a la táctica Collection en el esquema proporcionado. Esto significa que no se encontraron registros que vinculen técnicas específicas de MITRE ATT&CK con esta táctica en la base de datos NVD/NIST. \n\nSi necesitas información adicional o un análisis más detallado sobre la táctica Collection y sus técnicas, te recomendaría consultar directamente la matriz de MITRE ATT&CK o fuentes especializadas en ciberseguridad.",
+    "sql": "SELECT 'No hay datos disponibles sobre técnicas de MITRE ATT&CK en el esquema proporcionado.'",
+    "sql_rows": 1,
+    "correction_attempts": 0,
+    "sql_error": null,
+    "api_fallback": null,
+    "hallucination_risk": false,
+    "usage": {
+      "prompt_tokens": 2955,
+      "completion_tokens": 233,
+      "total_tokens": 3188,
+      "schema_linking_latency_s": 2.248,
+      "sql_generation_latency_s": 1.125,
+      "self_correction_latency_s": 0,
+      "synthesis_latency_s": 2.982
+    },
+    "architecture": "A_Text2SQL"
+  },
+  "metrics": {
+    "question_id": "Q085",
+    "level": 2,
+    "domain": "MITRE",
+    "architecture": "A_Text2SQL",
+    "accuracy": 0.1667,
+    "hallucination_risk": 0.0,
+    "traceability": 1.0,
+    "error_handling": 1.0,
+    "latency_s": 6.355,
+    "total_tokens": 3188,
+    "accuracy_detail": "Score=0.167 | completas=['collection'] | parciales=[] | ausentes=['TA0009', 'T1005', 'T1056', 'T1113', 'keylogging']",
+    "hallucination_detail": "Sin señales de alucinación detectadas",
+    "traceability_detail": "Markers texto: ['nvd', 'nist', 'mitre'] | Fuente estructurada: api_source=False, seed_nodes=False, sql=True",
+    "error_handling_detail": "Sin errores detectados en el pipeline",
+    "latency_detail": "linking=2.25s sql=1.12s corr=0.00s synth=2.98s",
+    "answer_preview": "Los resultados de la consulta SQL ejecutada contra la base de datos NVD/CVE indican que no hay datos disponibles sobre técnicas de MITRE ATT&CK asociadas a la táctica Collection en el esquema proporcionado. Esto significa que no se encontraron registros que vinculen técnicas específicas de MITRE ATT…"
+  }
+}

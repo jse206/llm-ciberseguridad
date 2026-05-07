@@ -1,0 +1,49 @@
+# Entorno Python
+__pycache__/
+*.py[cod]
+*.pyo
+.venv/
+venv/
+env/
+.ruff_cache/
+
+# Variables de entorno (NUNCA subir)
+.env
+
+# Datos generados / descargados (demasiado grandes para git)
+03_implementacion/data/storage/nvd_cve.db
+03_implementacion/data/storage/enterprise-attack.json
+03_implementacion/data/storage/mitre_graph.pkl
+
+# Documentos académicos (privados)
+**/*.docx
+00_Contexto/
+01_estado_del_arte/
+02_metodologia/
+05_redaccion/
+06_bibliografia/
+agente_redaccion.py
+escribir_capitulos.py
+
+# Claude Code (configuración local)
+CLAUDE.md
+.claude/
+docs/superpowers/
+.superpowers/
+SESSION_LOG.md
+
+# Scripts de redacción académica (privados)
+escribir_*.py
+generar_*.py
+insertar_*.py
+
+# Carpetas académicas adicionales
+07_Agentes/
+
+# Logs y artefactos temporales
+*.log
+04_benchmark/resultados/log_*.txt
+
+# OS
+.DS_Store
+Thumbs.db

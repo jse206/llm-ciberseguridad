@@ -1,0 +1,50 @@
+{
+  "result": {
+    "answer": "Según el subgrafo recuperado del framework MITRE ATT&CK, las herramientas asociadas a APT41 (G0096) son:\n\n1. **MOPSLED (S1221)**: Es un backdoor modular basado en shellcode que ha sido utilizado por actores de ciberespionaje relacionados con China, incluyendo a APT41. Este malware permite a los adversarios mantener acceso a sistemas comprometidos.\n\n2. **MESSAGETAP (S0443)**: Es una familia de malware de minería de datos desplegada por APT41 en redes de telecomunicaciones para monitorear y guardar mensajes SMS. Esta herramienta permite la recolección de información sensible a través de la interceptación de comunicaciones.\n\n3. **BLACKCOFFEE (S0069)**: Este malware ha sido utilizado por varios grupos chinos desde al menos 2013. Aunque el subgrafo no proporciona detalles específicos sobre su funcionalidad, se asocia con actividades de ciberespionaje.\n\n4. **Empire (S0363)**: Es un marco de administración remota y post-explotación de código abierto que está disponible públicamente en GitHub. Aunque no se menciona explícitamente su uso por APT41 en el subgrafo, es una herramienta comúnmente utilizada en ataques de este tipo.\n\n5. **Mimikatz (S0002)**: Aunque no se menciona directamente en el contexto de APT41, es una herramienta ampliamente conocida para la recolección de credenciales en entornos Windows, y su uso es común entre grupos de amenazas avanzadas.\n\nEstas herramientas reflejan la capacidad de APT41 para realizar actividades de ciberespionaje y mantener acceso persistente a los sistemas comprometidos. \n\nSegún MITRE ATT&CK, estas herramientas son parte de las tácticas y técnicas que APT41 utiliza para llevar a cabo sus operaciones.",
+    "seed_nodes": [
+      "G0096",
+      "T1592.002",
+      "T1053.002",
+      "S0110"
+    ],
+    "subgraph_nodes": 40,
+    "subgraph_edges": 17,
+    "coverage": {
+      "sufficient": false,
+      "missing_entities": [
+        "herramienta1",
+        "herramienta2",
+        "herramienta3"
+      ],
+      "confidence": 0.4
+    },
+    "hallucination_risk": true,
+    "usage": {
+      "prompt_tokens": 2747,
+      "completion_tokens": 429,
+      "total_tokens": 3176,
+      "retrieval_latency_s": 0.012,
+      "coverage_latency_s": 0.699,
+      "synthesis_latency_s": 8.417
+    },
+    "architecture": "C_GraphRAG"
+  },
+  "metrics": {
+    "question_id": "Q035",
+    "level": 2,
+    "domain": "BOTH",
+    "architecture": "C_GraphRAG",
+    "accuracy": 0.8,
+    "hallucination_risk": 0.7,
+    "traceability": 1.0,
+    "error_handling": 1.0,
+    "latency_s": 9.128,
+    "total_tokens": 3176,
+    "accuracy_detail": "Score=0.800 | completas=['APT41', 'G0096', 'malware', 'china'] | parciales=[] | ausentes=['software']",
+    "hallucination_detail": "Flag de riesgo activo (sin datos de fuente verificados)",
+    "traceability_detail": "Markers texto: ['nist', 'mitre', 'att&ck'] | Fuente estructurada: api_source=False, seed_nodes=True, sql=False",
+    "error_handling_detail": "Sin errores detectados en el pipeline",
+    "latency_detail": "retrieval=0.01s coverage=0.70s synth=8.42s",
+    "answer_preview": "Según el subgrafo recuperado del framework MITRE ATT&CK, las herramientas asociadas a APT41 (G0096) son:\n\n1. **MOPSLED (S1221)**: Es un backdoor modular basado en shellcode que ha sido utilizado por actores de ciberespionaje relacionados con China, incluyendo a APT41. Este malware permite a los adve…"
+  }
+}

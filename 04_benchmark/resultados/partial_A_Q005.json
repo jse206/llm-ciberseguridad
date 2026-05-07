@@ -1,0 +1,39 @@
+{
+  "result": {
+    "answer": "La vulnerabilidad CVE-2022-30190 fue publicada el 1 de junio de 2022 a las 20:15:07 (UTC). Esta información proviene de la base de datos NVD/NIST.",
+    "sql": "SELECT published FROM cve WHERE cve_id = 'CVE-2022-30190';",
+    "sql_rows": 1,
+    "correction_attempts": 0,
+    "sql_error": null,
+    "api_fallback": null,
+    "hallucination_risk": false,
+    "usage": {
+      "prompt_tokens": 2932,
+      "completion_tokens": 150,
+      "total_tokens": 3082,
+      "schema_linking_latency_s": 1.836,
+      "sql_generation_latency_s": 1.089,
+      "self_correction_latency_s": 0,
+      "synthesis_latency_s": 1.361
+    },
+    "architecture": "A_Text2SQL"
+  },
+  "metrics": {
+    "question_id": "Q005",
+    "level": 1,
+    "domain": "NVD",
+    "architecture": "A_Text2SQL",
+    "accuracy": 0.2,
+    "hallucination_risk": 0.0,
+    "traceability": 1.0,
+    "error_handling": 1.0,
+    "latency_s": 4.286,
+    "total_tokens": 3082,
+    "accuracy_detail": "Score=0.200 | completas=['2022'] | parciales=[] | ausentes=['mayo', 'may', 'follina', 'msdt']",
+    "hallucination_detail": "Sin señales de alucinación detectadas",
+    "traceability_detail": "Markers texto: ['nvd', 'nist', 'base de datos'] | Fuente estructurada: api_source=False, seed_nodes=False, sql=True",
+    "error_handling_detail": "Sin errores detectados en el pipeline",
+    "latency_detail": "linking=1.84s sql=1.09s corr=0.00s synth=1.36s",
+    "answer_preview": "La vulnerabilidad CVE-2022-30190 fue publicada el 1 de junio de 2022 a las 20:15:07 (UTC). Esta información proviene de la base de datos NVD/NIST."
+  }
+}

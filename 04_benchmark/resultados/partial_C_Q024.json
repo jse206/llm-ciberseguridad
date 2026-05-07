@@ -1,0 +1,50 @@
+{
+  "result": {
+    "answer": "El subgrafo proporcionado no contiene información específica sobre las mitigaciones recomendadas por MITRE ATT&CK para defenderse contra la técnica T1486 (Data Encrypted for Impact), que se refiere al uso de ransomware para cifrar datos y afectar la disponibilidad de los recursos del sistema y la red.\n\nDado que no se han encontrado referencias directas a mitigaciones específicas para T1486 en el subgrafo, no puedo proporcionar una respuesta basada en la información disponible. Para obtener recomendaciones sobre mitigaciones contra ransomware, se sugiere consultar la documentación completa de MITRE ATT&CK o fuentes adicionales que aborden específicamente este tema.\n\nSi necesitas más información o detalles sobre otro aspecto relacionado, no dudes en preguntar.",
+    "seed_nodes": [
+      "T1486",
+      "T1053.002",
+      "S0110",
+      "S0066"
+    ],
+    "subgraph_nodes": 40,
+    "subgraph_edges": 48,
+    "coverage": {
+      "sufficient": false,
+      "missing_entities": [
+        "mitigaciones",
+        "recomendaciones",
+        "T1486"
+      ],
+      "confidence": 0.3
+    },
+    "hallucination_risk": true,
+    "usage": {
+      "prompt_tokens": 3082,
+      "completion_tokens": 188,
+      "total_tokens": 3270,
+      "retrieval_latency_s": 0.009,
+      "coverage_latency_s": 1.844,
+      "synthesis_latency_s": 3.072
+    },
+    "architecture": "C_GraphRAG"
+  },
+  "metrics": {
+    "question_id": "Q024",
+    "level": 2,
+    "domain": "BOTH",
+    "architecture": "C_GraphRAG",
+    "accuracy": 0.3,
+    "hallucination_risk": 0.7,
+    "traceability": 1.0,
+    "error_handling": 1.0,
+    "latency_s": 4.925,
+    "total_tokens": 3270,
+    "accuracy_detail": "Score=0.300 | completas=['ransomware'] | parciales=['data protection(50%)'] | ausentes=['backup', 'M1053', 'M1040']",
+    "hallucination_detail": "Flag de riesgo activo (sin datos de fuente verificados)",
+    "traceability_detail": "Markers texto: ['mitre', 'att&ck', 'fuente'] | Fuente estructurada: api_source=False, seed_nodes=True, sql=False",
+    "error_handling_detail": "Sin errores detectados en el pipeline",
+    "latency_detail": "retrieval=0.01s coverage=1.84s synth=3.07s",
+    "answer_preview": "El subgrafo proporcionado no contiene información específica sobre las mitigaciones recomendadas por MITRE ATT&CK para defenderse contra la técnica T1486 (Data Encrypted for Impact), que se refiere al uso de ransomware para cifrar datos y afectar la disponibilidad de los recursos del sistema y la re…"
+  }
+}

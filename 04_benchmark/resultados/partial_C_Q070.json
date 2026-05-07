@@ -1,0 +1,47 @@
+{
+  "result": {
+    "answer": "La técnica T1041, conocida como \"Exfiltration Over C2 Channel\", se clasifica dentro de la táctica de \"Exfiltration\" (Exfiltración) en el framework MITRE ATT&CK. Esta técnica se refiere a la capacidad de los adversarios para robar datos al exfiltrarlos a través de un canal de comando y control (C2) existente, utilizando el mismo protocolo que se emplea para la comunicación de C2.\n\nSegún MITRE ATT&CK, la exfiltración es una táctica que abarca las acciones que los adversarios realizan para extraer datos de un entorno comprometido. La técnica T1041 permite a los atacantes ocultar la exfiltración de datos dentro del tráfico normal de C2, lo que puede dificultar la detección por parte de las defensas de seguridad.\n\nEn resumen, T1041 se clasifica en la táctica de Exfiltration.",
+    "seed_nodes": [
+      "T1041",
+      "TA0010",
+      "T1053.002",
+      "S0110",
+      "TA0007"
+    ],
+    "subgraph_nodes": 40,
+    "subgraph_edges": 36,
+    "coverage": {
+      "sufficient": true,
+      "missing_entities": [],
+      "confidence": 0.85
+    },
+    "hallucination_risk": false,
+    "usage": {
+      "prompt_tokens": 3129,
+      "completion_tokens": 222,
+      "total_tokens": 3351,
+      "retrieval_latency_s": 0.016,
+      "coverage_latency_s": 1.19,
+      "synthesis_latency_s": 3.788
+    },
+    "architecture": "C_GraphRAG"
+  },
+  "metrics": {
+    "question_id": "Q070",
+    "level": 1,
+    "domain": "MITRE",
+    "architecture": "C_GraphRAG",
+    "accuracy": 0.734,
+    "hallucination_risk": 0.0,
+    "traceability": 1.0,
+    "error_handling": 1.0,
+    "latency_s": 4.994,
+    "total_tokens": 3351,
+    "accuracy_detail": "Score=0.734 | completas=['exfiltration', 'T1041', 'C2'] | parciales=['command and control(67%)'] | ausentes=['TA0010']",
+    "hallucination_detail": "Sin señales de alucinación detectadas",
+    "traceability_detail": "Markers texto: ['mitre', 'att&ck', 'según'] | Fuente estructurada: api_source=False, seed_nodes=True, sql=False",
+    "error_handling_detail": "Sin errores detectados en el pipeline",
+    "latency_detail": "retrieval=0.02s coverage=1.19s synth=3.79s",
+    "answer_preview": "La técnica T1041, conocida como \"Exfiltration Over C2 Channel\", se clasifica dentro de la táctica de \"Exfiltration\" (Exfiltración) en el framework MITRE ATT&CK. Esta técnica se refiere a la capacidad de los adversarios para robar datos al exfiltrarlos a través de un canal de comando y control (C2) e…"
+  }
+}

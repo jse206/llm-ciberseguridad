@@ -1,0 +1,47 @@
+{
+  "result": {
+    "answer": "La técnica T1059.001, que se refiere al uso de PowerShell, afecta principalmente a la plataforma Windows. PowerShell es un marco de automatización y configuración de tareas desarrollado por Microsoft, que se utiliza ampliamente en sistemas operativos Windows para la administración del sistema y la automatización de tareas.\n\nSegún MITRE ATT&CK, PowerShell es una herramienta poderosa que los atacantes pueden utilizar para ejecutar comandos y scripts maliciosos en sistemas Windows, lo que lo convierte en un vector común para diversas actividades maliciosas, incluyendo la ejecución de malware y la exfiltración de datos.\n\nEn el contexto del subgrafo proporcionado, se observa que varios grupos de amenazas y malware han utilizado PowerShell como parte de sus operaciones. Por ejemplo, el malware S0674 (CharmPower) es un backdoor basado en PowerShell utilizado por el grupo de amenazas Magic Hound, y el malware S0363 (Empire) es un marco de administración remota que también utiliza PowerShell.\n\nEn resumen, la técnica T1059.001 afecta principalmente a la plataforma Windows, y su uso es común entre diversos grupos de amenazas y tipos de malware que operan en este entorno.",
+    "seed_nodes": [
+      "T1059.001",
+      "T1053.002",
+      "S0110"
+    ],
+    "subgraph_nodes": 40,
+    "subgraph_edges": 3,
+    "coverage": {
+      "sufficient": false,
+      "missing_entities": [
+        "plataformas afectadas"
+      ],
+      "confidence": 0.3
+    },
+    "hallucination_risk": true,
+    "usage": {
+      "prompt_tokens": 2942,
+      "completion_tokens": 274,
+      "total_tokens": 3216,
+      "retrieval_latency_s": 0.007,
+      "coverage_latency_s": 1.222,
+      "synthesis_latency_s": 4.526
+    },
+    "architecture": "C_GraphRAG"
+  },
+  "metrics": {
+    "question_id": "Q014",
+    "level": 1,
+    "domain": "MITRE",
+    "architecture": "C_GraphRAG",
+    "accuracy": 1.0,
+    "hallucination_risk": 0.7,
+    "traceability": 1.0,
+    "error_handling": 1.0,
+    "latency_s": 5.755,
+    "total_tokens": 3216,
+    "accuracy_detail": "Score=1.000 | completas=['windows', 'T1059.001', 'powershell'] | parciales=[] | ausentes=[]",
+    "hallucination_detail": "Flag de riesgo activo (sin datos de fuente verificados)",
+    "traceability_detail": "Markers texto: ['nist', 'mitre', 'att&ck'] | Fuente estructurada: api_source=False, seed_nodes=True, sql=False",
+    "error_handling_detail": "Sin errores detectados en el pipeline",
+    "latency_detail": "retrieval=0.01s coverage=1.22s synth=4.53s",
+    "answer_preview": "La técnica T1059.001, que se refiere al uso de PowerShell, afecta principalmente a la plataforma Windows. PowerShell es un marco de automatización y configuración de tareas desarrollado por Microsoft, que se utiliza ampliamente en sistemas operativos Windows para la administración del sistema y la a…"
+  }
+}

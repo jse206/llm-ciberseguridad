@@ -1,0 +1,39 @@
+{
+  "result": {
+    "answer": "Los datos proporcionados provienen de la base de datos NVD/NIST. Según los resultados de la consulta SQL, se han identificado varias vulnerabilidades relacionadas con la táctica de ejecución (Execution) en diferentes plataformas. A continuación, se detallan las vulnerabilidades encontradas:\n\n1. **CVE-2005-10004**: Cacti versiones anteriores a 0.8.6-d presentan una vulnerabilidad de ejecución remota de comandos en el script graph_view.php. Esta vulnerabilidad permite a un usuario autenticado inyectar comandos de shell arbitrarios. \n   - **Plataforma**: Cacti (cpe:2.3:a:cacti:cacti:*:*:*:*:*:*:*:*)\n\n2. **CVE-2010-20121**: EasyFTP Server hasta la versión 1.7.0.11 tiene una vulnerabilidad de desbordamiento de búfer que permite la ejecución remota de código sin autenticación.\n   - **Plataforma**: EasyFTP Server (cpe:2.3:a:easyftp_server_project:easyftp_server:*:*:*:*:*:*:*:*)\n\n3. **CVE-2011-10019**: Spreecommerce versiones anteriores a 0.60.2 tienen una vulnerabilidad de ejecución remota de comandos en su funcionalidad de búsqueda, permitiendo a atacantes ejecutar comandos arbitrarios sin autenticación.\n   - **Plataforma**: Spreecommerce (cpe:2.3:a:spreecommerce:spree:*:*:*:*:*:*:*:*)\n\n4. **CVE-2011-10026**: Similar a la anterior, esta vulnerabilidad en Spreecommerce permite la ejecución de comandos arbitrarios a través de la API de búsqueda.\n   - **Plataforma**: Spreecommerce (cpe:2.3:a:spreecommerce:spree:*:*:*:*:*:*:*:*)\n\n5. **CVE-2011-10035**: Nagios XI versiones anteriores a 2011R1.9 presentan vulnerabilidades de escalada de privilegios que pueden permitir la ejecución de comandos con privilegios elevados.\n   - **Plataforma**: Nagios XI (cpe:2.3:a:nagios:nagios_xi:*:*:*:*:*:*:*:*)\n\nEn resumen, se han encontrado vulnerabilidades que permiten la ejecución de comandos en plataformas como Cacti, EasyFTP Server, Spreecommerce y Nagios XI.",
+    "sql": "SELECT cve.cve_id, cve.description, cve_cpe.cpe_uri\nFROM cve\nJOIN cve_cpe ON cve.cve_id = cve_cpe.cve_id\nWHERE cve.description LIKE '%Execution%'\nLIMIT 10;",
+    "sql_rows": 10,
+    "correction_attempts": 0,
+    "sql_error": null,
+    "api_fallback": null,
+    "hallucination_risk": false,
+    "usage": {
+      "prompt_tokens": 4393,
+      "completion_tokens": 701,
+      "total_tokens": 5094,
+      "schema_linking_latency_s": 3.497,
+      "sql_generation_latency_s": 1.9,
+      "self_correction_latency_s": 0,
+      "synthesis_latency_s": 11.788
+    },
+    "architecture": "A_Text2SQL"
+  },
+  "metrics": {
+    "question_id": "Q029",
+    "level": 2,
+    "domain": "BOTH",
+    "architecture": "A_Text2SQL",
+    "accuracy": 0.2,
+    "hallucination_risk": 0.0,
+    "traceability": 1.0,
+    "error_handling": 1.0,
+    "latency_s": 17.185,
+    "total_tokens": 5094,
+    "accuracy_detail": "Score=0.200 | completas=['execution'] | parciales=[] | ausentes=['APT', 'windows', 'linux', 'T1059']",
+    "hallucination_detail": "Sin señales de alucinación detectadas",
+    "traceability_detail": "Markers texto: ['nvd', 'nist', 'según'] | Fuente estructurada: api_source=False, seed_nodes=False, sql=True",
+    "error_handling_detail": "Sin errores detectados en el pipeline",
+    "latency_detail": "linking=3.50s sql=1.90s corr=0.00s synth=11.79s",
+    "answer_preview": "Los datos proporcionados provienen de la base de datos NVD/NIST. Según los resultados de la consulta SQL, se han identificado varias vulnerabilidades relacionadas con la táctica de ejecución (Execution) en diferentes plataformas. A continuación, se detallan las vulnerabilidades encontradas:\n\n1. **CV…"
+  }
+}

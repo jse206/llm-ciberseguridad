@@ -1,0 +1,39 @@
+{
+  "result": {
+    "answer": "El score CVSS v3 para la vulnerabilidad CVE-2021-26855, también conocida como ProxyLogon en Microsoft Exchange, es de **9.8**. Este valor indica una severidad crítica. \n\nLos datos provienen de la base de datos NVD/NIST, donde se detalla que el vector de ataque es \"CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H\", lo que significa que la vulnerabilidad puede ser explotada a través de la red, tiene una complejidad baja, no requiere privilegios ni interacción del usuario, y tiene un impacto alto en la confidencialidad, integridad y disponibilidad.\n\nSi necesitas más información sobre esta vulnerabilidad o su mitigación, no dudes en preguntar.",
+    "sql": "SELECT cvss_v3_score FROM cve WHERE cve_id = 'CVE-2021-26855';",
+    "sql_rows": 1,
+    "correction_attempts": 0,
+    "sql_error": null,
+    "api_fallback": "NVD API — CVE-2021-26855",
+    "hallucination_risk": false,
+    "usage": {
+      "prompt_tokens": 4662,
+      "completion_tokens": 274,
+      "total_tokens": 4936,
+      "schema_linking_latency_s": 2.144,
+      "sql_generation_latency_s": 1.546,
+      "self_correction_latency_s": 0,
+      "synthesis_latency_s": 3.7
+    },
+    "architecture": "A_Text2SQL"
+  },
+  "metrics": {
+    "question_id": "Q056",
+    "level": 1,
+    "domain": "NVD",
+    "architecture": "A_Text2SQL",
+    "accuracy": 0.6667,
+    "hallucination_risk": 0.0,
+    "traceability": 1.0,
+    "error_handling": 1.0,
+    "latency_s": 7.39,
+    "total_tokens": 4936,
+    "accuracy_detail": "Score=0.667 | completas=['9.8', 'exchange', 'microsoft', 'proxylogon'] | parciales=[] | ausentes=['critical', 'SSRF']",
+    "hallucination_detail": "Sin señales de alucinación detectadas",
+    "traceability_detail": "Markers texto: ['nvd', 'nist', 'base de datos'] | Fuente estructurada: api_source=False, seed_nodes=False, sql=True",
+    "error_handling_detail": "Sin errores detectados en el pipeline",
+    "latency_detail": "linking=2.14s sql=1.55s corr=0.00s synth=3.70s",
+    "answer_preview": "El score CVSS v3 para la vulnerabilidad CVE-2021-26855, también conocida como ProxyLogon en Microsoft Exchange, es de **9.8**. Este valor indica una severidad crítica. \n\nLos datos provienen de la base de datos NVD/NIST, donde se detalla que el vector de ataque es \"CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:…"
+  }
+}

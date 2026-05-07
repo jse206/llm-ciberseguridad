@@ -1,0 +1,39 @@
+{
+  "result": {
+    "answer": "Los datos provienen de la base de datos NVD/NIST. Según la consulta SQL ejecutada, no hay información disponible sobre las técnicas MITRE ATT&CK utilizadas por el grupo APT29 en el esquema proporcionado. Esto indica que no se encontraron registros o detalles específicos sobre las técnicas asociadas a este grupo en la base de datos consultada.",
+    "sql": "SELECT 'No hay información disponible sobre técnicas MITRE ATT&CK para el grupo APT29 en el esquema proporcionado.' AS respuesta;",
+    "sql_rows": 1,
+    "correction_attempts": 0,
+    "sql_error": null,
+    "api_fallback": null,
+    "hallucination_risk": false,
+    "usage": {
+      "prompt_tokens": 2943,
+      "completion_tokens": 195,
+      "total_tokens": 3138,
+      "schema_linking_latency_s": 2.204,
+      "sql_generation_latency_s": 1.201,
+      "self_correction_latency_s": 0,
+      "synthesis_latency_s": 1.965
+    },
+    "architecture": "A_Text2SQL"
+  },
+  "metrics": {
+    "question_id": "Q021",
+    "level": 2,
+    "domain": "BOTH",
+    "architecture": "A_Text2SQL",
+    "accuracy": 0.1667,
+    "hallucination_risk": 0.0,
+    "traceability": 1.0,
+    "error_handling": 1.0,
+    "latency_s": 5.37,
+    "total_tokens": 3138,
+    "accuracy_detail": "Score=0.167 | completas=['APT29'] | parciales=[] | ausentes=['cozy bear', 'T1566', 'phishing', 'T1078', 'russia']",
+    "hallucination_detail": "Sin señales de alucinación detectadas",
+    "traceability_detail": "Markers texto: ['nvd', 'nist', 'mitre'] | Fuente estructurada: api_source=False, seed_nodes=False, sql=True",
+    "error_handling_detail": "Sin errores detectados en el pipeline",
+    "latency_detail": "linking=2.20s sql=1.20s corr=0.00s synth=1.97s",
+    "answer_preview": "Los datos provienen de la base de datos NVD/NIST. Según la consulta SQL ejecutada, no hay información disponible sobre las técnicas MITRE ATT&CK utilizadas por el grupo APT29 en el esquema proporcionado. Esto indica que no se encontraron registros o detalles específicos sobre las técnicas asociadas …"
+  }
+}

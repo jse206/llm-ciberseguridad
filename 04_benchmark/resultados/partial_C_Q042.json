@@ -1,0 +1,48 @@
+{
+  "result": {
+    "answer": "El subgrafo proporcionado no contiene información específica sobre la vulnerabilidad CVE-2021-44228 (Log4Shell) ni sobre los grupos APT que la han explotado. Por lo tanto, no puedo establecer una relación directa entre esta vulnerabilidad y las técnicas del framework MITRE ATT&CK, ni identificar grupos APT asociados a su explotación.\n\nCVE-2021-44228 es una vulnerabilidad crítica en la biblioteca de registro Log4j, que permite la ejecución remota de código (RCE) y ha sido ampliamente explotada por diversos actores maliciosos. Sin embargo, para obtener detalles sobre las técnicas específicas de MITRE ATT&CK relacionadas con esta vulnerabilidad o los grupos APT que la han utilizado, se requeriría información adicional que no está presente en el subgrafo.\n\nSi necesitas información sobre técnicas de MITRE ATT&CK o grupos APT en general, estaré encantado de ayudarte con eso.",
+    "seed_nodes": [
+      "T1053.002",
+      "S0110"
+    ],
+    "subgraph_nodes": 40,
+    "subgraph_edges": 6,
+    "coverage": {
+      "sufficient": false,
+      "missing_entities": [
+        "CVE-2021-44228",
+        "Log4Shell",
+        "grupos APT"
+      ],
+      "confidence": 0.3
+    },
+    "hallucination_risk": true,
+    "usage": {
+      "prompt_tokens": 2711,
+      "completion_tokens": 243,
+      "total_tokens": 2954,
+      "retrieval_latency_s": 0.009,
+      "coverage_latency_s": 2.116,
+      "synthesis_latency_s": 5.01
+    },
+    "architecture": "C_GraphRAG"
+  },
+  "metrics": {
+    "question_id": "Q042",
+    "level": 3,
+    "domain": "BOTH",
+    "architecture": "C_GraphRAG",
+    "accuracy": 0.5,
+    "hallucination_risk": 0.7,
+    "traceability": 1.0,
+    "error_handling": 1.0,
+    "latency_s": 7.135,
+    "total_tokens": 2954,
+    "accuracy_detail": "Score=0.500 | completas=['log4shell', 'RCE', 'APT'] | parciales=[] | ausentes=['T1190', 'initial access', 'exploitation']",
+    "hallucination_detail": "Flag de riesgo activo (sin datos de fuente verificados)",
+    "traceability_detail": "Markers texto: ['mitre', 'att&ck', 'grafo'] | Fuente estructurada: api_source=False, seed_nodes=True, sql=False",
+    "error_handling_detail": "Sin errores detectados en el pipeline",
+    "latency_detail": "retrieval=0.01s coverage=2.12s synth=5.01s",
+    "answer_preview": "El subgrafo proporcionado no contiene información específica sobre la vulnerabilidad CVE-2021-44228 (Log4Shell) ni sobre los grupos APT que la han explotado. Por lo tanto, no puedo establecer una relación directa entre esta vulnerabilidad y las técnicas del framework MITRE ATT&CK, ni identificar gru…"
+  }
+}

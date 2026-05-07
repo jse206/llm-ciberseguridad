@@ -1,0 +1,37 @@
+{
+  "result": {
+    "answer": "Según los datos recuperados, hay al menos una vulnerabilidad asociada a la debilidad CWE-79 en la base de datos local. Esta vulnerabilidad es identificada como CVE-2000-1205, la cual se refiere a vulnerabilidades de Cross Site Scripting (XSS) en Apache HTTP Server versiones 1.3.0 a 1.3.11. Esta vulnerabilidad permite a atacantes remotos ejecutar scripts como otros visitantes del sitio web a través de varios vectores, incluyendo el CGI printenv y páginas generadas por ciertas funciones de Apache que no codifican su salida (según NVD).\n\nLa información sobre esta vulnerabilidad incluye detalles como su estado de modificación, la fecha de publicación (1 de febrero de 2000) y su severidad base, que es clasificada como \"MEDIA\" con un puntaje CVSS de 4.3 (según NVD).\n\nNo se han encontrado más vulnerabilidades asociadas a CWE-79 en los datos proporcionados, lo que sugiere que esta es la única registrada en la base de datos consultada.\n\nPara más información, puedes consultar la fuente de los datos: [NVD](https://services.nvd.nist.gov/rest/json/cves/2.0?resultsPerPage=10&cweId=CWE-79).",
+    "intent": "search_cves",
+    "api_source": "https://services.nvd.nist.gov/rest/json/cves/2.0?resultsPerPage=10&cweId=CWE-79",
+    "api_error": null,
+    "router_confidence": 0.8,
+    "usage": {
+      "prompt_tokens": 3103,
+      "completion_tokens": 312,
+      "total_tokens": 3415,
+      "router_latency_s": 1.232,
+      "api_latency_s": 1.568,
+      "synthesis_latency_s": 6.916
+    },
+    "hallucination_risk": false,
+    "architecture": "B_API"
+  },
+  "metrics": {
+    "question_id": "Q009",
+    "level": 1,
+    "domain": "NVD",
+    "architecture": "B_API",
+    "accuracy": 0.8333,
+    "hallucination_risk": 0.0,
+    "traceability": 1.0,
+    "error_handling": 1.0,
+    "latency_s": 9.716,
+    "total_tokens": 3415,
+    "accuracy_detail": "Score=0.833 | completas=['CWE-79', 'xss'] | parciales=['cross-site scripting(50%)'] | ausentes=[]",
+    "hallucination_detail": "Sin señales de alucinación detectadas",
+    "traceability_detail": "Markers texto: ['nvd', 'nist', 'según'] | Fuente estructurada: api_source=True, seed_nodes=False, sql=False",
+    "error_handling_detail": "Sin errores detectados en el pipeline",
+    "latency_detail": "router=1.23s api=1.57s synth=6.92s",
+    "answer_preview": "Según los datos recuperados, hay al menos una vulnerabilidad asociada a la debilidad CWE-79 en la base de datos local. Esta vulnerabilidad es identificada como CVE-2000-1205, la cual se refiere a vulnerabilidades de Cross Site Scripting (XSS) en Apache HTTP Server versiones 1.3.0 a 1.3.11. Esta vuln…"
+  }
+}

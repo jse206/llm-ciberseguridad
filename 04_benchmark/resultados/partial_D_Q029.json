@@ -1,0 +1,55 @@
+{
+  "result": {
+    "answer": "La táctica Execution en el marco MITRE ATT&CK incluye varias técnicas que pueden ser utilizadas por grupos APT, aunque no se identificaron grupos específicos en esta consulta. Algunas de las técnicas de ejecución y las plataformas que atacan son:\n\n1. **T1204.003 — Malicious Image**\n   - **Plataformas**: IaaS, Containers (como Amazon Web Services, Google Cloud Platform, Azure).\n\n2. **T1570 — Lateral Tool Transfer**\n   - **Plataformas**: ESXi, Linux, macOS, Windows.\n\n3. **T1547.012 — Print Processors**\n   - **Plataformas**: Windows.\n\n4. **T1562.010 — Downgrade Attack**\n   - **Plataformas**: Windows, Linux, macOS.\n\n5. **T1525 — Implant Internal Image**\n   - **Plataformas**: IaaS, Containers.\n\nAunque no se identificaron grupos APT específicos en esta consulta, estas técnicas son comúnmente utilizadas en ataques cibernéticos.\n\n**Fuentes consultadas:** query_mitre_graph",
+    "steps": [
+      {
+        "thought": "",
+        "action": "query_mitre_graph",
+        "action_input": {
+          "question": "¿Qué grupos APT utilizan técnicas de la táctica Execution y qué plataformas atacan?"
+        },
+        "observation_preview": "{\n  \"context\": \"=== SUBGRAFO MITRE ATT&CK ===\\n\\n--- Entidades recuperadas ---\\n  [attack-pattern] T1570 — Lateral Tool Transfer\\n     Adversaries may transfer tools or other files between systems in a compromised environment. Once brought into the victim environment (i.e., [Ingress Tool Transfer](h…"
+      },
+      {
+        "thought": "",
+        "action": "query_mitre_graph",
+        "action_input": {
+          "question": "¿Qué grupos APT están asociados con las técnicas de la táctica Execution?"
+        },
+        "observation_preview": "{\n  \"context\": \"=== SUBGRAFO MITRE ATT&CK ===\\n\\n--- Entidades recuperadas ---\\n★ [x-mitre-tactic] TA0002 — Execution\\n     The adversary is trying to run malicious code.\\n\\nExecution consists of techniques that result in adversary-controlled code running on a local or remote system. Techniques that…"
+      }
+    ],
+    "tools_used": [
+      "query_mitre_graph",
+      "query_mitre_graph"
+    ],
+    "iterations": 2,
+    "forced_final": false,
+    "hallucination_risk": false,
+    "usage": {
+      "prompt_tokens": 4259,
+      "completion_tokens": 445,
+      "total_tokens": 4704,
+      "total_latency_s": 9.069
+    },
+    "architecture": "D_Toolformer"
+  },
+  "metrics": {
+    "question_id": "Q029",
+    "level": 2,
+    "domain": "BOTH",
+    "architecture": "D_Toolformer",
+    "accuracy": 0.8,
+    "hallucination_risk": 0.0,
+    "traceability": 0.5,
+    "error_handling": 1.0,
+    "latency_s": 9.069,
+    "total_tokens": 4704,
+    "accuracy_detail": "Score=0.800 | completas=['execution', 'APT', 'windows', 'linux'] | parciales=[] | ausentes=['T1059']",
+    "hallucination_detail": "Sin señales de alucinación detectadas",
+    "traceability_detail": "Markers texto: ['mitre', 'att&ck', 'fuente'] | Fuente estructurada: api_source=False, seed_nodes=False, sql=False",
+    "error_handling_detail": "Sin errores detectados en el pipeline",
+    "latency_detail": "total_react=9.07s iterations=2",
+    "answer_preview": "La táctica Execution en el marco MITRE ATT&CK incluye varias técnicas que pueden ser utilizadas por grupos APT, aunque no se identificaron grupos específicos en esta consulta. Algunas de las técnicas de ejecución y las plataformas que atacan son:\n\n1. **T1204.003 — Malicious Image**\n   - **Plataforma…"
+  }
+}

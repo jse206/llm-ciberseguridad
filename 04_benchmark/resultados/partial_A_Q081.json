@@ -1,0 +1,39 @@
+{
+  "result": {
+    "answer": "Los resultados de la consulta SQL ejecutada contra la base de datos NVD/NIST no arrojan ningún resultado. Esto significa que no se encontraron CVEs relacionados con productos Microsoft publicados en 2021 que tengan un CVSS score registrado en la base de datos.",
+    "sql": "SELECT c.cve_id, MAX(c.cvss_v3_score) AS max_cvss_score\nFROM cve AS c\nJOIN cve_cpe AS cp ON c.cve_id = cp.cve_id\nWHERE c.published LIKE '2021%' AND cp.cpe_uri LIKE 'cpe:2.3:a:microsoft:%'\nGROUP BY c.cve_id",
+    "sql_rows": 0,
+    "correction_attempts": 0,
+    "sql_error": null,
+    "api_fallback": null,
+    "hallucination_risk": false,
+    "usage": {
+      "prompt_tokens": 3033,
+      "completion_tokens": 260,
+      "total_tokens": 3293,
+      "schema_linking_latency_s": 3.147,
+      "sql_generation_latency_s": 2.294,
+      "self_correction_latency_s": 0,
+      "synthesis_latency_s": 2.231
+    },
+    "architecture": "A_Text2SQL"
+  },
+  "metrics": {
+    "question_id": "Q081",
+    "level": 2,
+    "domain": "NVD",
+    "architecture": "A_Text2SQL",
+    "accuracy": 0.6,
+    "hallucination_risk": 0.0,
+    "traceability": 1.0,
+    "error_handling": 1.0,
+    "latency_s": 7.672,
+    "total_tokens": 3293,
+    "accuracy_detail": "Score=0.600 | completas=['microsoft', '2021', 'CVE'] | parciales=[] | ausentes=['critical', '10.0']",
+    "hallucination_detail": "Sin señales de alucinación detectadas",
+    "traceability_detail": "Markers texto: ['nvd', 'nist', 'base de datos'] | Fuente estructurada: api_source=False, seed_nodes=False, sql=True",
+    "error_handling_detail": "Sin errores detectados en el pipeline",
+    "latency_detail": "linking=3.15s sql=2.29s corr=0.00s synth=2.23s",
+    "answer_preview": "Los resultados de la consulta SQL ejecutada contra la base de datos NVD/NIST no arrojan ningún resultado. Esto significa que no se encontraron CVEs relacionados con productos Microsoft publicados en 2021 que tengan un CVSS score registrado en la base de datos."
+  }
+}

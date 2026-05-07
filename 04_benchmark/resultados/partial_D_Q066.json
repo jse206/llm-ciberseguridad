@@ -1,0 +1,46 @@
+{
+  "result": {
+    "answer": "La técnica T1027 (Obfuscated Files or Information) afecta a las siguientes plataformas: Linux, Windows y macOS. Esta técnica se utiliza para evadir defensas mediante la ofuscación de archivos o información, y puede involucrar el uso de formatos de archivo comprimidos como ZIP, gzip, 7z y RAR.\n\n**Fuentes consultadas:** query_mitre_graph",
+    "steps": [
+      {
+        "thought": "",
+        "action": "query_mitre_graph",
+        "action_input": {
+          "question": "¿Qué plataformas afecta la técnica T1027 (Obfuscated Files or Information)?"
+        },
+        "observation_preview": "{\n  \"context\": \"=== SUBGRAFO MITRE ATT&CK ===\\n\\n--- Entidades recuperadas ---\\n  [malware] S0484 — Carberp\\n     [Carberp](https://attack.mitre.org/software/S0484) is a credential and information stealing malware that has been active since at least 2009. [Carberp](https://attack.mitre.org/software/…"
+      }
+    ],
+    "tools_used": [
+      "query_mitre_graph"
+    ],
+    "iterations": 1,
+    "forced_final": false,
+    "hallucination_risk": false,
+    "usage": {
+      "prompt_tokens": 2524,
+      "completion_tokens": 159,
+      "total_tokens": 2683,
+      "total_latency_s": 4.182
+    },
+    "architecture": "D_Toolformer"
+  },
+  "metrics": {
+    "question_id": "Q066",
+    "level": 1,
+    "domain": "MITRE",
+    "architecture": "D_Toolformer",
+    "accuracy": 0.8,
+    "hallucination_risk": 0.0,
+    "traceability": 0.5,
+    "error_handling": 1.0,
+    "latency_s": 4.182,
+    "total_tokens": 2683,
+    "accuracy_detail": "Score=0.800 | completas=['windows', 'linux', 'macos', 'T1027'] | parciales=[] | ausentes=['obfuscation']",
+    "hallucination_detail": "Sin señales de alucinación detectadas",
+    "traceability_detail": "Markers texto: ['mitre', 'fuente', 'graph'] | Fuente estructurada: api_source=False, seed_nodes=False, sql=False",
+    "error_handling_detail": "Sin errores detectados en el pipeline",
+    "latency_detail": "total_react=4.18s iterations=1",
+    "answer_preview": "La técnica T1027 (Obfuscated Files or Information) afecta a las siguientes plataformas: Linux, Windows y macOS. Esta técnica se utiliza para evadir defensas mediante la ofuscación de archivos o información, y puede involucrar el uso de formatos de archivo comprimidos como ZIP, gzip, 7z y RAR.\n\n**Fue…"
+  }
+}

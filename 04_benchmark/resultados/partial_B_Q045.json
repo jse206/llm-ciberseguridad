@@ -1,0 +1,37 @@
+{
+  "result": {
+    "answer": "Para contener el movimiento lateral identificado en el tráfico anómalo (T1021), se deben priorizar los siguientes CVEs:\n\n1. **CVE-2018-20735**: Este CVE afecta al BMC PATROL Agent hasta la versión 11.3.01. Se ha descubierto que la aplicación PatrolCli permite el movimiento lateral y el escalado de privilegios en un entorno de Active Directory de Windows. Un usuario con privilegios bajos puede autenticarse y ejecutar comandos como SYSTEM en un controlador de dominio, lo que permite escalar a \"domain admin\". Este CVE tiene un puntaje CVSS de 7.8, lo que indica una severidad alta (según NVD).\n\n   - **Descripción**: La aplicación solo verifica la contraseña del usuario, sin comprobar los permisos en la red.\n   - **Referencia**: [Exploit-DB](https://www.exploit-db.com/exploits/46556/).\n\n2. **CVE-2019-19895**: Este CVE afecta a IXP EasyInstall versión 6.2.13723. Permite el movimiento lateral utilizando el Agent Service contra otros usuarios en un sistema cliente. Un atacante autenticado puede modificar un archivo de script para ejecutar código en el contexto de otros usuarios, lo que también representa un riesgo significativo. Este CVE tiene un puntaje CVSS de 7.8, indicando una severidad alta.\n\n   - **Descripción**: Modificación de un archivo de script permite la ejecución de código en el contexto de otros usuarios.\n   - **Referencia**: [NVD](https://nvd.nist.gov/vuln/detail/CVE-2019-19895).\n\nAmbos CVEs presentan un alto riesgo de escalado de privilegios y movimiento lateral, por lo que deben ser abordados con urgencia para mitigar posibles ataques en la red.",
+    "intent": "search_cves",
+    "api_source": "https://services.nvd.nist.gov/rest/json/cves/2.0?resultsPerPage=10&keywordSearch=Lateral Movement",
+    "api_error": null,
+    "router_confidence": 0.8,
+    "usage": {
+      "prompt_tokens": 2669,
+      "completion_tokens": 428,
+      "total_tokens": 3097,
+      "router_latency_s": 1.632,
+      "api_latency_s": 1.124,
+      "synthesis_latency_s": 8.493
+    },
+    "hallucination_risk": false,
+    "architecture": "B_API"
+  },
+  "metrics": {
+    "question_id": "Q045",
+    "level": 3,
+    "domain": "BOTH",
+    "architecture": "B_API",
+    "accuracy": 0.3571,
+    "hallucination_risk": 0.0,
+    "traceability": 1.0,
+    "error_handling": 1.0,
+    "latency_s": 11.249,
+    "total_tokens": 3097,
+    "accuracy_detail": "Score=0.357 | completas=['T1021', 'CVE'] | parciales=['lateral movement(50%)'] | ausentes=['remote services', 'SMB', 'RDP', 'parche']",
+    "hallucination_detail": "Sin señales de alucinación detectadas",
+    "traceability_detail": "Markers texto: ['nvd', 'nist', 'según'] | Fuente estructurada: api_source=True, seed_nodes=False, sql=False",
+    "error_handling_detail": "Sin errores detectados en el pipeline",
+    "latency_detail": "router=1.63s api=1.12s synth=8.49s",
+    "answer_preview": "Para contener el movimiento lateral identificado en el tráfico anómalo (T1021), se deben priorizar los siguientes CVEs:\n\n1. **CVE-2018-20735**: Este CVE afecta al BMC PATROL Agent hasta la versión 11.3.01. Se ha descubierto que la aplicación PatrolCli permite el movimiento lateral y el escalado de p…"
+  }
+}

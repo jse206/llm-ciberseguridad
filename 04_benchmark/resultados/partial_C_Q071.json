@@ -1,0 +1,47 @@
+{
+  "result": {
+    "answer": "El subgrafo proporcionado no contiene información específica sobre la táctica MITRE ATT&CK 'Persistence' (TA0003). Por lo tanto, no puedo ofrecer una descripción detallada de esta táctica. \n\nSin embargo, puedo mencionar que la táctica de 'Persistence' se refiere a las técnicas que los adversarios utilizan para mantener el acceso a un sistema o red incluso después de que se haya reiniciado o se haya cerrado la sesión. Esto puede incluir métodos como la creación de servicios, la modificación de registros de inicio, o el uso de técnicas específicas para sistemas operativos.\n\nPara obtener una descripción completa y precisa de la táctica 'Persistence', se recomienda consultar directamente la base de datos de MITRE ATT&CK. \n\nSi necesitas información sobre técnicas específicas dentro de la táctica de 'Persistence', como T1547.012 (Print Processors) o T1543.004 (Launch Daemon), puedo proporcionarte detalles sobre esas técnicas.",
+    "seed_nodes": [
+      "TA0003",
+      "T1053.002",
+      "S0110"
+    ],
+    "subgraph_nodes": 40,
+    "subgraph_edges": 6,
+    "coverage": {
+      "sufficient": false,
+      "missing_entities": [
+        "descripción de la táctica MITRE ATT&CK 'Persistence'"
+      ],
+      "confidence": 0.3
+    },
+    "hallucination_risk": true,
+    "usage": {
+      "prompt_tokens": 2674,
+      "completion_tokens": 237,
+      "total_tokens": 2911,
+      "retrieval_latency_s": 0.007,
+      "coverage_latency_s": 1.527,
+      "synthesis_latency_s": 4.094
+    },
+    "architecture": "C_GraphRAG"
+  },
+  "metrics": {
+    "question_id": "Q071",
+    "level": 1,
+    "domain": "MITRE",
+    "architecture": "C_GraphRAG",
+    "accuracy": 0.5,
+    "hallucination_risk": 0.7,
+    "traceability": 1.0,
+    "error_handling": 1.0,
+    "latency_s": 5.628,
+    "total_tokens": 2911,
+    "accuracy_detail": "Score=0.500 | completas=['persistence', 'TA0003', 'acceso'] | parciales=[] | ausentes=['persistencia', 'reinicio', 'reboot']",
+    "hallucination_detail": "Flag de riesgo activo (sin datos de fuente verificados)",
+    "traceability_detail": "Markers texto: ['mitre', 'att&ck', 'base de datos'] | Fuente estructurada: api_source=False, seed_nodes=True, sql=False",
+    "error_handling_detail": "Sin errores detectados en el pipeline",
+    "latency_detail": "retrieval=0.01s coverage=1.53s synth=4.09s",
+    "answer_preview": "El subgrafo proporcionado no contiene información específica sobre la táctica MITRE ATT&CK 'Persistence' (TA0003). Por lo tanto, no puedo ofrecer una descripción detallada de esta táctica. \n\nSin embargo, puedo mencionar que la táctica de 'Persistence' se refiere a las técnicas que los adversarios ut…"
+  }
+}

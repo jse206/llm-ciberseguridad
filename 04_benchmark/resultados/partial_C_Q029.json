@@ -1,0 +1,51 @@
+{
+  "result": {
+    "answer": "Según el subgrafo proporcionado, se identifican las siguientes técnicas de la táctica **Execution** y sus respectivas plataformas:\n\n1. **T1204.003 — Malicious Image**\n   - **Plataformas**: IaaS, Containers\n\n2. **T1059.007 — JavaScript**\n   - **Plataformas**: Linux, macOS, Windows\n\n3. **T1569.001 — Launchctl**\n   - **Plataformas**: macOS\n\nEn cuanto a los grupos APT que utilizan estas técnicas, el subgrafo no proporciona información específica sobre grupos APT asociados a las técnicas de la táctica Execution. Por lo tanto, no se puede determinar qué grupos APT utilizan estas técnicas basándose únicamente en la información disponible en el subgrafo.\n\nEn resumen, las técnicas de la táctica Execution identificadas son T1204.003, T1059.007 y T1569.001, y las plataformas atacadas incluyen IaaS, Containers, Linux, macOS y Windows. Sin embargo, no hay información sobre grupos APT específicos que utilicen estas técnicas. \n\nEsto indica que, para obtener información sobre grupos APT, sería necesario consultar un subgrafo más completo o específico que incluya esa información.",
+    "seed_nodes": [
+      "TA0002",
+      "T1053.002",
+      "S0110",
+      "T1678",
+      "T1677"
+    ],
+    "subgraph_nodes": 40,
+    "subgraph_edges": 5,
+    "coverage": {
+      "sufficient": false,
+      "missing_entities": [
+        "grupos APT",
+        "táctica Execution",
+        "plataformas atacadas"
+      ],
+      "confidence": 0.2
+    },
+    "hallucination_risk": true,
+    "usage": {
+      "prompt_tokens": 2677,
+      "completion_tokens": 308,
+      "total_tokens": 2985,
+      "retrieval_latency_s": 0.007,
+      "coverage_latency_s": 1.079,
+      "synthesis_latency_s": 6.791
+    },
+    "architecture": "C_GraphRAG"
+  },
+  "metrics": {
+    "question_id": "Q029",
+    "level": 2,
+    "domain": "BOTH",
+    "architecture": "C_GraphRAG",
+    "accuracy": 1.0,
+    "hallucination_risk": 0.7,
+    "traceability": 1.0,
+    "error_handling": 1.0,
+    "latency_s": 7.877,
+    "total_tokens": 2985,
+    "accuracy_detail": "Score=1.000 | completas=['execution', 'APT', 'windows', 'linux', 'T1059'] | parciales=[] | ausentes=[]",
+    "hallucination_detail": "Flag de riesgo activo (sin datos de fuente verificados)",
+    "traceability_detail": "Markers texto: ['según', 'grafo'] | Fuente estructurada: api_source=False, seed_nodes=True, sql=False",
+    "error_handling_detail": "Sin errores detectados en el pipeline",
+    "latency_detail": "retrieval=0.01s coverage=1.08s synth=6.79s",
+    "answer_preview": "Según el subgrafo proporcionado, se identifican las siguientes técnicas de la táctica **Execution** y sus respectivas plataformas:\n\n1. **T1204.003 — Malicious Image**\n   - **Plataformas**: IaaS, Containers\n\n2. **T1059.007 — JavaScript**\n   - **Plataformas**: Linux, macOS, Windows\n\n3. **T1569.001 — L…"
+  }
+}

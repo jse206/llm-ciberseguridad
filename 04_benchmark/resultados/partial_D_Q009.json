@@ -1,0 +1,46 @@
+{
+  "result": {
+    "answer": "En la base de datos local, hay un total de 23,624 vulnerabilidades asociadas a la debilidad CWE-79.\n\n**Fuentes consultadas:** query_nvd_local",
+    "steps": [
+      {
+        "thought": "",
+        "action": "query_nvd_local",
+        "action_input": {
+          "question": "¿Cuántas vulnerabilidades están asociadas a la debilidad CWE-79?"
+        },
+        "observation_preview": "{\n  \"answer\": \"Los datos provienen de la base de datos NVD/NIST. Según los resultados de la consulta SQL ejecutada, hay un total de 23,624 vulnerabilidades asociadas a la debilidad CWE-79.\",\n  \"sql\": \"SELECT COUNT(DISTINCT c.cve_id) AS total_vulnerabilities\\nFROM cve_cwe AS cc\\nJOIN cve AS c ON cc.c…"
+      }
+    ],
+    "tools_used": [
+      "query_nvd_local"
+    ],
+    "iterations": 1,
+    "forced_final": false,
+    "hallucination_risk": false,
+    "usage": {
+      "prompt_tokens": 1863,
+      "completion_tokens": 137,
+      "total_tokens": 2000,
+      "total_latency_s": 10.141
+    },
+    "architecture": "D_Toolformer"
+  },
+  "metrics": {
+    "question_id": "Q009",
+    "level": 1,
+    "domain": "NVD",
+    "architecture": "D_Toolformer",
+    "accuracy": 0.3333,
+    "hallucination_risk": 0.0,
+    "traceability": 0.5,
+    "error_handling": 1.0,
+    "latency_s": 10.141,
+    "total_tokens": 2000,
+    "accuracy_detail": "Score=0.333 | completas=['CWE-79'] | parciales=[] | ausentes=['cross-site scripting', 'xss']",
+    "hallucination_detail": "Sin señales de alucinación detectadas",
+    "traceability_detail": "Markers texto: ['nvd', 'fuente', 'base de datos'] | Fuente estructurada: api_source=False, seed_nodes=False, sql=False",
+    "error_handling_detail": "Sin errores detectados en el pipeline",
+    "latency_detail": "total_react=10.14s iterations=1",
+    "answer_preview": "En la base de datos local, hay un total de 23,624 vulnerabilidades asociadas a la debilidad CWE-79.\n\n**Fuentes consultadas:** query_nvd_local"
+  }
+}
