@@ -22,7 +22,7 @@ Implementación y benchmark comparativo de cuatro arquitecturas LLM con recupera
 
 ```bash
 # 1. Clonar el repositorio
-git clone https://github.com/TU_USUARIO/llm-ciberseguridad.git
+git clone https://github.com/jse206/llm-ciberseguridad.git
 cd llm-ciberseguridad
 
 # 2. Crear entorno virtual e instalar dependencias
