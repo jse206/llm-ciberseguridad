@@ -12,4 +12,4 @@ if [ ! -f "$DB_FILE" ]; then
     echo "[setup] Datos listos."
 fi
 
-exec uvicorn api.main:app --host 0.0.0.0 --port 8001
+exec uvicorn api.main:app --host 0.0.0.0 --port "${PORT:-8001}"
