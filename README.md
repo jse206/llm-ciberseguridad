@@ -34,10 +34,8 @@ pip install -r requirements.txt
 
 # 3. Configurar claves de API
 cp .env.example .env
-# Editar .env con tus claves reales
 
 # 4. Descargar datos y construir el grafo MITRE ATT&CK
-#    (primera ejecución, puede tardar varios minutos)
 cd 03_implementacion
 python setup.py
 cd ..
@@ -47,12 +45,11 @@ uvicorn api.main:app --reload --port 8001
 # → http://localhost:8001
 ```
 
-## Con Docker (recomendado)
+## Con Docker 
 
 ```bash
 # 1. Copiar y configurar variables de entorno
 cp .env.example .env
-# Editar .env con tus claves reales
 
 # 2. Arrancar
 docker compose up --build
@@ -61,7 +58,7 @@ docker compose up --build
 ```
 
 > La primera vez que se levanta el contenedor, `setup.py` descarga automáticamente
-> los datos NVD/CVE (~335 MB) y construye el grafo MITRE ATT&CK. Los datos se
+> los datos NVD/CVE y construye el grafo MITRE ATT&CK. Los datos se
 > persisten en un volumen Docker para ejecuciones posteriores.
 
 ## Interfaz web
@@ -70,7 +67,7 @@ La aplicación incluye una SPA con tres pestañas:
 
 - **Chat** — consultas en lenguaje natural con cualquiera de las 4 arquitecturas
 - **Benchmark** — visualización de resultados o relanzamiento del benchmark completo
-- **Informe** — gráficas comparativas (radar chart, barras por métrica)
+- **Informe** — gráficas comparativas 
 
 ## Benchmark
 
