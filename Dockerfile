@@ -14,7 +14,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Copiar código
 COPY . .
 
-# Crear directorio de datos (se llena en el primer arranque via setup.py)
+# Crear directorio de datos 
 RUN mkdir -p 03_implementacion/data/storage
 
 EXPOSE 8001
