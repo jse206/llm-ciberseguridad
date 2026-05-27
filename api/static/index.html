@@ -886,7 +886,6 @@ tbody td { padding: .72rem 1rem; }
     <div class="card-bd" style="padding:.8rem 1.2rem;display:flex;align-items:center;justify-content:space-between">
       <span class="section-lbl" style="margin:0">Informe comparativo — 4 arquitecturas × 5 métricas</span>
       <div style="display:flex;gap:.5rem;align-items:center">
-        <button class="btn btn-sec" id="regen-btn" onclick="regenFigs(this)">↻ Regenerar figuras</button>
         <button class="btn btn-ghost" onclick="window.open('/api/report/export/csv')" title="Descargar CSV de resultados">↓ CSV</button>
         <button class="btn btn-ghost" onclick="window.open('/api/report/export/summary')" title="Descargar resumen JSON con IC">↓ JSON</button>
       </div>
@@ -913,14 +912,6 @@ tbody td { padding: .72rem 1rem; }
     <div class="card-bd"><div class="chart-box"><canvas id="c-hall"></canvas></div></div>
   </div>
 
-  <div class="card full" id="figs-card">
-    <div class="card-hd"><span class="card-title">Figuras — report_generator</span></div>
-    <div class="card-bd">
-      <div class="figs" id="figs-grid">
-        <p style="color:var(--text-lo);font-size:.82rem">Cargando figuras…</p>
-      </div>
-    </div>
-  </div>
 </div>
 
 <!-- ── CATÁLOGO ───────────────────────────────────── -->
@@ -1544,7 +1535,6 @@ async function initInforme() {
     const r = await fetch('/api/benchmark/results');
     if (r.ok) { const d = await r.json(); buildCharts(d.summary); }
   } catch(_) {}
-  loadFigs();
 }
 
 function buildCharts(summary) {
@@ -1618,46 +1608,6 @@ function destroyChart(key) {
   if (CHARTS[key]) { CHARTS[key].destroy(); delete CHARTS[key]; }
 }
 
-const _FIG_TITLES = {
-  'fig1_barras_metricas.png':    'Exactitud por arquitectura',
-  'fig2_radar_arquitecturas.png':'Perfil de métricas — Radar',
-  'fig3_latencia_por_nivel.png': 'Latencia media (segundos)',
-  'fig4_accuracy_por_nivel.png': 'Tasa de alucinación',
-};
-
-async function loadFigs() {
-  try {
-    const r = await fetch('/api/report/figures');
-    const d = await r.json();
-    const pngs = (d.figures||[]).filter(f=>f.endsWith('.png'));
-    const grid = document.getElementById('figs-grid');
-    if (!pngs.length) {
-      grid.innerHTML = '<p style="color:var(--text-lo);font-size:.82rem">No hay figuras. Pulsa "Regenerar figuras".</p>';
-      return;
-    }
-    const ts = Date.now();
-    grid.innerHTML = pngs.map(f=>`
-      <div class="fig-item">
-        <div class="fig-title">${esc(_FIG_TITLES[f] || f)}</div>
-        <img src="/api/report/figures/${encodeURIComponent(f)}?t=${ts}" alt="${esc(f)}" loading="lazy">
-      </div>`).join('');
-  } catch(_) {}
-}
-
-async function regenFigs(btn) {
-  btn.disabled = true;
-  btn.innerHTML = '<span class="spin"></span> Generando…';
-  try {
-    const r = await fetch('/api/report/generate', {method:'POST'});
-    if (!r.ok) throw new Error(`HTTP ${r.status}`);
-    await loadFigs();
-    btn.innerHTML = '✓ Actualizado';
-    setTimeout(()=>{ btn.innerHTML='↻ Regenerar figuras'; btn.disabled=false; }, 2200);
-  } catch(e) {
-    btn.innerHTML = '✗ Error';
-    btn.disabled = false;
-  }
-}
 
 /* ── UTILS ──────────────────────────────────────── */
 function esc(s){ return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
