@@ -176,9 +176,11 @@ def _build_response(result: dict, arch_key: str) -> ChatResponse:
         total_tokens=usage_raw.get("total_tokens", 0),
         latency_s=round(total_latency, 3),
     )
+    _STRIP = {"sql", "sql_error", "api_fallback"}
     metadata = {
         k: v for k, v in result.items()
         if k not in ("answer", "hallucination_risk", "usage", "architecture")
+        and k not in _STRIP
     }
     return ChatResponse(
         answer=result.get("answer", ""),

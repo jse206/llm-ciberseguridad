@@ -50,7 +50,20 @@ _MAX_RESULT_CHARS = 6000   # limita caracteres enviados al sintetizador
 
 # Palabras clave que indican sentencias peligrosas aunque vayan tras un SELECT
 _DANGEROUS_SQL_RE = re.compile(
-    r"\b(DROP|INSERT|UPDATE|DELETE|CREATE|ALTER|ATTACH|DETACH)\b",
+    r"\b(DROP|INSERT|UPDATE|DELETE|CREATE|ALTER|ATTACH|DETACH"
+    r"|sqlite_master|sqlite_sequence|sqlite_stat\d*|PRAGMA)\b",
+    re.IGNORECASE,
+)
+
+# Preguntas que intentan obtener el esquema o estructura interna de la BD
+_SCHEMA_INTROSPECTION_RE = re.compile(
+    r"\b(sqlite_master|sqlite_sequence|pragma|information_schema"
+    r"|estructura\s+de\s+(la\s+)?(base\s+de\s+datos|bd|bbdd)"
+    r"|qu[eé]\s+tablas\s+(hay|tiene|existen)"
+    r"|show\s+tables|describe\s+(tabla|table)"
+    r"|lista\s+de\s+tablas|list\s+tables"
+    r"|columnas\s+de\s+la\s+tabla|esquema\s+de\s+la\s+bd"
+    r"|database\s+schema|schema\s+of\s+the)\b",
     re.IGNORECASE,
 )
 
@@ -141,6 +154,20 @@ class ArchitectureAChain:
         self._schema = get_schema_str(str(db_path))
 
     def run(self, question: str) -> dict:
+        # ── Guardrail: bloquear preguntas de introspección de esquema ──────────
+        if _SCHEMA_INTROSPECTION_RE.search(question):
+            return {
+                "answer": (
+                    "Esta consulta no está permitida. El sistema solo responde "
+                    "preguntas sobre vulnerabilidades y amenazas de ciberseguridad."
+                ),
+                "sql_rows": 0,
+                "correction_attempts": 0,
+                "hallucination_risk": False,
+                "usage": {"total_tokens": 0, "latency_s": 0},
+                "architecture": "A_Text2SQL",
+            }
+
         total_usage = {
             "prompt_tokens": 0, "completion_tokens": 0, "total_tokens": 0,
             "schema_linking_latency_s": 0,

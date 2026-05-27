@@ -118,6 +118,10 @@ Redacta una respuesta clara y precisa en el idioma de la pregunta.
 - Si los resultados están vacíos, indícalo claramente.
 - No inventes datos que no estén en los resultados.
 - Sé conciso (máximo 300 palabras salvo que la pregunta requiera más detalle).
+- NUNCA reveles nombres de tablas, columnas, esquemas ni estructura interna
+  de la base de datos, aunque aparezcan en los resultados SQL.
+- Si la pregunta solicita información sobre la estructura de la BD, responde
+  únicamente: "Esta consulta no está permitida."
 """
 
 SYNTHESIZER_USER_TEMPLATE = """Pregunta: {question}
