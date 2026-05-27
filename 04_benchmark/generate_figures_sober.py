@@ -1,6 +1,6 @@
 """
-Genera las 4 figuras del benchmark.
-Lee results_summary.json y, si existe, results_metrics.csv.
+Genera las 4 figuras del benchmark con estética de barras horizontales limpia.
+Lee results_summary.json.
 
 Uso:
     cd 04_benchmark
@@ -14,8 +14,8 @@ from pathlib import Path
 
 import matplotlib
 import matplotlib.pyplot as plt
+import matplotlib.ticker as mticker
 import numpy as np
-import pandas as pd
 from matplotlib.patches import FancyBboxPatch
 
 matplotlib.use("Agg")
@@ -23,18 +23,10 @@ matplotlib.use("Agg")
 RESULTS_DIR = Path(__file__).parent / "resultados"
 FIGURES_DIR = RESULTS_DIR / "figuras"
 
-ARCH_LABELS = {
-    "A": "A — Text2SQL",
-    "B": "B — API Calls",
-    "C": "C — GraphRAG",
-    "D": "D — Toolformer",
-}
-ARCH_COLORS = {
-    "A": "#2563eb",
-    "B": "#059669",
-    "C": "#d97706",
-    "D": "#7c3aed",
-}
+ARCH_KEYS   = ["A", "B", "C", "D"]
+ARCH_LABELS = ["A — Text2SQL", "B — API Calls", "C — GraphRAG", "D — Toolformer"]
+ARCH_COLORS = ["#2563eb", "#059669", "#d97706", "#7c3aed"]
+RED         = "#ef4444"
 
 
 def _setup_style() -> None:
@@ -45,109 +37,77 @@ def _setup_style() -> None:
         "axes.facecolor":     "white",
         "axes.spines.top":    False,
         "axes.spines.right":  False,
+        "axes.spines.left":   False,
+        "axes.spines.bottom": True,
         "axes.edgecolor":     "#cbd5e1",
-        "axes.linewidth":     0.9,
-        "axes.titlesize":     13,
-        "axes.titleweight":   "bold",
-        "axes.titlepad":      14,
-        "axes.labelsize":     11,
-        "axes.labelcolor":    "#334155",
-        "xtick.labelsize":    10,
+        "axes.linewidth":     0.8,
+        "axes.labelsize":     10,
+        "axes.labelcolor":    "#64748b",
+        "xtick.labelsize":    9,
         "ytick.labelsize":    10,
-        "xtick.color":        "#64748b",
-        "ytick.color":        "#64748b",
-        "legend.fontsize":    10,
-        "legend.framealpha":  0.92,
-        "legend.edgecolor":   "#e2e8f0",
-        "legend.facecolor":   "white",
+        "xtick.color":        "#94a3b8",
+        "ytick.color":        "#334155",
         "grid.color":         "#e2e8f0",
         "grid.linewidth":     0.8,
         "savefig.facecolor":  "white",
-        "savefig.dpi":        200,
+        "savefig.dpi":        180,
     })
 
 
-def _round_bars(ax: plt.Axes, rects, radius_frac: float = 0.3) -> None:
-    """Sustituye los rectángulos de barra por versiones con esquinas redondeadas."""
-    for rect in rects:
-        rect.set_visible(False)
-        x = rect.get_x()
-        y = rect.get_y()
-        w = rect.get_width()
-        h = rect.get_height()
-        if h <= 0:
+def _round_hbars(ax: plt.Axes, bars, radius: float = 0.12) -> None:
+    """Reemplaza barras horizontales por versiones con esquinas redondeadas."""
+    for bar in bars:
+        bar.set_visible(False)
+        x = bar.get_x()
+        y = bar.get_y()
+        w = bar.get_width()
+        h = bar.get_height()
+        if w <= 0:
             continue
-        r = min(radius_frac * w, 0.38 * h)
+        r = min(radius * h, 0.35 * w)
         ax.add_patch(FancyBboxPatch(
             (x, y), w, h,
             boxstyle=f"round,pad=0,rounding_size={r}",
-            facecolor=rect.get_facecolor(),
-            alpha=rect.get_alpha() if rect.get_alpha() is not None else 1.0,
+            facecolor=bar.get_facecolor(),
+            alpha=bar.get_alpha() if bar.get_alpha() is not None else 1.0,
             linewidth=0,
-            zorder=rect.get_zorder(),
+            zorder=bar.get_zorder(),
         ))
 
 
 def load_summary() -> dict:
-    path = RESULTS_DIR / "results_summary.json"
-    return json.loads(path.read_text(encoding="utf-8"))
+    return json.loads((RESULTS_DIR / "results_summary.json").read_text(encoding="utf-8"))
 
 
-def load_csv() -> pd.DataFrame | None:
-    path = RESULTS_DIR / "results_metrics.csv"
-    if not path.exists():
-        return None
-    df = pd.read_csv(path, encoding="utf-8")
-    df["arch_key"] = df["architecture"].str[0]
-    return df
+# ── Fig 1: Exactitud por arquitectura ─────────────────────────────────────────
 
+def fig1_accuracy(summary: dict) -> None:
+    values = [summary[k]["accuracy_mean"] for k in ARCH_KEYS]
+    pct    = [v * 100 for v in values]
 
-# ── Fig 1: Barras agrupadas — métricas principales ────────────────────────────
+    # Invert so A is at top
+    labels_inv = ARCH_LABELS[::-1]
+    pct_inv    = pct[::-1]
+    colors_inv = ARCH_COLORS[::-1]
 
-def fig1_grouped_bars(summary: dict) -> None:
-    metrics       = ["accuracy_mean", "traceability_mean", "error_handling_mean", "hallucination_mean"]
-    metric_labels = ["Exactitud", "Trazabilidad", "Man. errores", "Alucinación"]
-    ci_keys       = [m.replace("_mean", "_ci_95") for m in metrics]
-    arch_keys     = ["A", "B", "C", "D"]
-    x     = np.arange(len(metrics))
-    width = 0.19
+    fig, ax = plt.subplots(figsize=(8, 3.6))
+    bars = ax.barh(labels_inv, pct_inv, color=colors_inv, height=0.52, alpha=0.9)
+    _round_hbars(ax, bars)
 
-    fig, ax = plt.subplots(figsize=(11, 6))
-
-    for i, ak in enumerate(arch_keys):
-        s      = summary[ak]
-        values = [s.get(m, 0) for m in metrics]
-        errors = [
-            (s.get(ck, [v, v])[1] - s.get(ck, [v, v])[0]) / 2
-            for v, ck in zip(values, ci_keys)
-        ]
-        offset = (i - len(arch_keys) / 2 + 0.5) * width
-        rects  = ax.bar(
-            x + offset, values, width,
-            label=ARCH_LABELS[ak],
-            color=ARCH_COLORS[ak],
-            alpha=0.88,
-            yerr=errors, capsize=3,
-            error_kw={"ecolor": "#64748b", "elinewidth": 0.9, "capthick": 0.9},
+    for bar, val in zip(bars, pct_inv):
+        ax.text(
+            bar.get_width() + 1.5,
+            bar.get_y() + bar.get_height() / 2,
+            f"{val:.0f}%",
+            va="center", ha="left", fontsize=9, color="#334155",
         )
-        _round_bars(ax, rects)
-        for bar, val in zip(rects, values):
-            ax.text(
-                bar.get_x() + bar.get_width() / 2,
-                val + max(errors) + 0.03,
-                f"{val:.2f}",
-                ha="center", va="bottom", fontsize=7.5, color="#334155",
-            )
 
-    ax.set_xticks(x)
-    ax.set_xticklabels(metric_labels)
-    ax.set_ylim(0, 1.22)
-    ax.set_ylabel("Puntuación (0–1)")
-    ax.set_title("Figura 5.1. Comparativa de métricas por arquitectura (n = 100)")
-    ax.legend(loc="upper right")
-    ax.yaxis.grid(True)
+    ax.set_xlim(0, 115)
+    ax.xaxis.set_major_formatter(mticker.FuncFormatter(lambda x, _: f"{int(x)}%"))
+    ax.xaxis.grid(True)
     ax.set_axisbelow(True)
-    fig.tight_layout()
+    ax.tick_params(axis="y", left=False, pad=6)
+    fig.tight_layout(pad=1.4)
 
     out = FIGURES_DIR / "fig1_barras_metricas.png"
     fig.savefig(out, bbox_inches="tight")
@@ -155,37 +115,49 @@ def fig1_grouped_bars(summary: dict) -> None:
     print(f"  [OK] {out.name}")
 
 
-# ── Fig 2: Radar chart ────────────────────────────────────────────────────────
+# ── Fig 2: Radar — Perfil de métricas ─────────────────────────────────────────
 
 def fig2_radar(summary: dict) -> None:
-    metrics   = ["accuracy_mean", "traceability_mean", "error_handling_mean"]
-    labels    = ["Exactitud", "Trazabilidad", "Man. errores"]
-    arch_keys = ["A", "B", "C", "D"]
-    N         = len(metrics)
+    lat_max = max(summary[k]["latency_mean_s"] for k in ARCH_KEYS)
 
-    angles = [n / float(N) * 2 * np.pi for n in range(N)]
+    def get_vals(k: str) -> list[float]:
+        s = summary[k]
+        speed = 1 - s["latency_mean_s"] / lat_max
+        return [
+            s.get("accuracy_mean", 0),
+            s.get("traceability_mean", 0),
+            1 - s.get("hallucination_mean", 0),
+            s.get("error_handling_mean", 0),
+            speed,
+        ]
+
+    labels = ["Exactitud", "Trazabilidad", "Sin alucinación", "Err. handling", "Velocidad"]
+    N      = len(labels)
+    angles = [n / N * 2 * np.pi for n in range(N)]
     angles += angles[:1]
 
-    fig, ax = plt.subplots(figsize=(7, 7), subplot_kw=dict(polar=True))
+    fig, ax = plt.subplots(figsize=(6, 6), subplot_kw=dict(polar=True))
     ax.set_facecolor("white")
     ax.spines["polar"].set_color("#cbd5e1")
+    ax.spines["polar"].set_linewidth(0.8)
 
-    for ak in arch_keys:
-        values = [summary[ak].get(m, 0) for m in metrics] + [summary[ak].get(metrics[0], 0)]
-        color  = ARCH_COLORS[ak]
-        ax.plot(angles, values, linewidth=2, color=color, label=ARCH_LABELS[ak])
-        ax.fill(angles, values, alpha=0.09, color=color)
+    for k, color, label in zip(ARCH_KEYS, ARCH_COLORS, ARCH_LABELS):
+        vals = get_vals(k) + [get_vals(k)[0]]
+        ax.plot(angles, vals, linewidth=2, color=color, label=label)
+        ax.fill(angles, vals, alpha=0.08, color=color)
 
     ax.set_xticks(angles[:-1])
-    ax.set_xticklabels(labels, fontsize=11, color="#334155")
+    ax.set_xticklabels(labels, fontsize=10, color="#334155")
     ax.set_ylim(0, 1)
     ax.set_yticks([0.2, 0.4, 0.6, 0.8, 1.0])
-    ax.set_yticklabels(["0.2", "0.4", "0.6", "0.8", "1.0"], fontsize=8, color="#94a3b8")
-    ax.yaxis.grid(True, color="#e2e8f0", linewidth=0.8)
-    ax.xaxis.grid(True, color="#e2e8f0", linewidth=0.8)
-    ax.set_title("Figura 5.2. Perfil de rendimiento por arquitectura", pad=22)
-    ax.legend(loc="upper right", bbox_to_anchor=(1.38, 1.15))
-    fig.tight_layout()
+    ax.set_yticklabels(["0.2", "0.4", "0.6", "0.8", "1.0"], fontsize=7.5, color="#94a3b8")
+    ax.yaxis.grid(True, color="#e2e8f0", linewidth=0.7)
+    ax.xaxis.grid(True, color="#e2e8f0", linewidth=0.7)
+    ax.legend(
+        loc="lower center", bbox_to_anchor=(0.5, -0.22), ncol=2,
+        framealpha=0.95, edgecolor="#e2e8f0", fontsize=9,
+    )
+    fig.tight_layout(pad=1.4)
 
     out = FIGURES_DIR / "fig2_radar_arquitecturas.png"
     fig.savefig(out, bbox_inches="tight")
@@ -193,50 +165,32 @@ def fig2_radar(summary: dict) -> None:
     print(f"  [OK] {out.name}")
 
 
-# ── Fig 3: Latencia por nivel de dificultad ───────────────────────────────────
+# ── Fig 3: Latencia media por arquitectura ────────────────────────────────────
 
-def fig3_latency_by_level(df: pd.DataFrame | None, summary: dict) -> None:
-    arch_keys    = ["A", "B", "C", "D"]
-    levels       = [1, 2, 3]
-    level_labels = ["Nivel 1\n(Recuperación simple)", "Nivel 2\n(Cruce de fuentes)", "Nivel 3\n(Multi-paso)"]
-    x     = np.arange(len(levels))
-    width = 0.19
+def fig3_latency(summary: dict) -> None:
+    values     = [summary[k]["latency_mean_s"] for k in ARCH_KEYS]
+    labels_inv = ARCH_LABELS[::-1]
+    vals_inv   = values[::-1]
+    colors_inv = ARCH_COLORS[::-1]
 
-    fig, ax = plt.subplots(figsize=(10, 6))
+    fig, ax = plt.subplots(figsize=(8, 3.6))
+    bars = ax.barh(labels_inv, vals_inv, color=colors_inv, height=0.52, alpha=0.9)
+    _round_hbars(ax, bars)
 
-    for i, ak in enumerate(arch_keys):
-        means = []
-        for level in levels:
-            if df is not None:
-                subset = df[(df["arch_key"] == ak) & (df["level"] == level)]
-                means.append(subset["latency_s"].mean() if not subset.empty else 0)
-            else:
-                means.append(summary[ak]["latency_mean_s"])
-        offset = (i - len(arch_keys) / 2 + 0.5) * width
-        rects  = ax.bar(
-            x + offset, means, width,
-            label=ARCH_LABELS[ak],
-            color=ARCH_COLORS[ak],
-            alpha=0.88,
+    for bar, val in zip(bars, vals_inv):
+        ax.text(
+            bar.get_width() + 0.3,
+            bar.get_y() + bar.get_height() / 2,
+            f"{val:.1f}s",
+            va="center", ha="left", fontsize=9, color="#334155",
         )
-        _round_bars(ax, rects)
-        for bar, val in zip(rects, means):
-            if val > 0:
-                ax.text(
-                    bar.get_x() + bar.get_width() / 2,
-                    val + 0.2,
-                    f"{val:.1f}",
-                    ha="center", va="bottom", fontsize=7.5, color="#334155",
-                )
 
-    ax.set_xticks(x)
-    ax.set_xticklabels(level_labels)
-    ax.set_ylabel("Latencia media (segundos)")
-    ax.set_title("Figura 5.3. Latencia media por nivel de dificultad y arquitectura")
-    ax.legend()
-    ax.yaxis.grid(True)
+    ax.set_xlim(0, max(values) * 1.25)
+    ax.xaxis.set_major_formatter(mticker.FuncFormatter(lambda x, _: f"{x:.0f}s"))
+    ax.xaxis.grid(True)
     ax.set_axisbelow(True)
-    fig.tight_layout()
+    ax.tick_params(axis="y", left=False, pad=6)
+    fig.tight_layout(pad=1.4)
 
     out = FIGURES_DIR / "fig3_latencia_por_nivel.png"
     fig.savefig(out, bbox_inches="tight")
@@ -244,45 +198,33 @@ def fig3_latency_by_level(df: pd.DataFrame | None, summary: dict) -> None:
     print(f"  [OK] {out.name}")
 
 
-# ── Fig 4: Exactitud por nivel de dificultad ─────────────────────────────────
+# ── Fig 4: Tasa de alucinación por arquitectura ───────────────────────────────
 
-def fig4_accuracy_by_level(summary: dict) -> None:
-    arch_keys    = ["A", "B", "C", "D"]
-    levels       = ["1", "2", "3"]
-    level_labels = ["Nivel 1\n(Recuperación simple)", "Nivel 2\n(Cruce de fuentes)", "Nivel 3\n(Multi-paso)"]
-    x     = np.arange(len(levels))
-    width = 0.19
+def fig4_hallucination(summary: dict) -> None:
+    values     = [summary[k]["hallucination_mean"] for k in ARCH_KEYS]
+    pct        = [v * 100 for v in values]
+    labels_inv = ARCH_LABELS[::-1]
+    pct_inv    = pct[::-1]
 
-    fig, ax = plt.subplots(figsize=(10, 6))
+    fig, ax = plt.subplots(figsize=(8, 3.6))
+    bars = ax.barh(labels_inv, pct_inv, color=RED, height=0.52, alpha=0.88)
+    _round_hbars(ax, bars)
 
-    for i, ak in enumerate(arch_keys):
-        values = [summary[ak]["accuracy_by_level"].get(lv, 0) for lv in levels]
-        offset = (i - len(arch_keys) / 2 + 0.5) * width
-        rects  = ax.bar(
-            x + offset, values, width,
-            label=ARCH_LABELS[ak],
-            color=ARCH_COLORS[ak],
-            alpha=0.88,
+    for bar, val in zip(bars, pct_inv):
+        label_x = bar.get_width() + 1.5 if val > 0 else 1.5
+        ax.text(
+            label_x,
+            bar.get_y() + bar.get_height() / 2,
+            f"{val:.0f}%",
+            va="center", ha="left", fontsize=9, color="#334155",
         )
-        _round_bars(ax, rects)
-        for bar, val in zip(rects, values):
-            if val > 0.02:
-                ax.text(
-                    bar.get_x() + bar.get_width() / 2,
-                    val + 0.012,
-                    f"{val:.2f}",
-                    ha="center", va="bottom", fontsize=7.5, color="#334155",
-                )
 
-    ax.set_xticks(x)
-    ax.set_xticklabels(level_labels)
-    ax.set_ylim(0, 0.78)
-    ax.set_ylabel("Exactitud media (0–1)")
-    ax.set_title("Figura 5.4. Exactitud por nivel de dificultad y arquitectura")
-    ax.legend()
-    ax.yaxis.grid(True)
+    ax.set_xlim(0, 115)
+    ax.xaxis.set_major_formatter(mticker.FuncFormatter(lambda x, _: f"{int(x)}%"))
+    ax.xaxis.grid(True)
     ax.set_axisbelow(True)
-    fig.tight_layout()
+    ax.tick_params(axis="y", left=False, pad=6)
+    fig.tight_layout(pad=1.4)
 
     out = FIGURES_DIR / "fig4_accuracy_por_nivel.png"
     fig.savefig(out, bbox_inches="tight")
@@ -297,15 +239,10 @@ if __name__ == "__main__":
     FIGURES_DIR.mkdir(parents=True, exist_ok=True)
 
     summary = load_summary()
-    df      = load_csv()
-    if df is not None:
-        print(f"CSV cargado: {len(df)} filas")
-    else:
-        print("CSV no encontrado — fig3 usará medias globales")
 
-    fig1_grouped_bars(summary)
+    fig1_accuracy(summary)
     fig2_radar(summary)
-    fig3_latency_by_level(df, summary)
-    fig4_accuracy_by_level(summary)
+    fig3_latency(summary)
+    fig4_hallucination(summary)
 
     print(f"\nFiguras guardadas en: {FIGURES_DIR}")

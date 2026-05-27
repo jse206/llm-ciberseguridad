@@ -557,8 +557,15 @@ tbody td { padding: .72rem 1rem; }
 }
 .fig-item:hover { border-color: var(--border-hi); }
 .fig-item img { width: 100%; height: auto; display: block; background: var(--surf); }
+.fig-title {
+  padding: .55rem .85rem .4rem;
+  font-family: var(--head); font-size: .68rem; font-weight: 700;
+  text-transform: uppercase; letter-spacing: .09em;
+  color: var(--cyan); background: var(--surf);
+  border-bottom: 1px solid var(--border);
+}
 .fig-cap {
-  padding: .36rem .7rem; font-size: .65rem; color: var(--text-lo);
+  padding: .28rem .7rem; font-size: .6rem; color: var(--text-lo);
   font-family: var(--mono); background: var(--surf);
   border-top: 1px solid var(--border);
 }
@@ -1611,6 +1618,13 @@ function destroyChart(key) {
   if (CHARTS[key]) { CHARTS[key].destroy(); delete CHARTS[key]; }
 }
 
+const _FIG_TITLES = {
+  'fig1_barras_metricas.png':    'Exactitud por arquitectura',
+  'fig2_radar_arquitecturas.png':'Perfil de métricas — Radar',
+  'fig3_latencia_por_nivel.png': 'Latencia media (segundos)',
+  'fig4_accuracy_por_nivel.png': 'Tasa de alucinación',
+};
+
 async function loadFigs() {
   try {
     const r = await fetch('/api/report/figures');
@@ -1624,8 +1638,8 @@ async function loadFigs() {
     const ts = Date.now();
     grid.innerHTML = pngs.map(f=>`
       <div class="fig-item">
+        <div class="fig-title">${esc(_FIG_TITLES[f] || f)}</div>
         <img src="/api/report/figures/${encodeURIComponent(f)}?t=${ts}" alt="${esc(f)}" loading="lazy">
-        <div class="fig-cap">${esc(f)}</div>
       </div>`).join('');
   } catch(_) {}
 }
