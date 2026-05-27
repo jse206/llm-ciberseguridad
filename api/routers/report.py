@@ -13,7 +13,7 @@ router = APIRouter(prefix="/api/report", tags=["report"])
 
 _PROJECT_ROOT = Path(__file__).parent.parent.parent
 _FIGURES_DIR = _PROJECT_ROOT / "04_benchmark" / "resultados" / "figuras"
-_REPORT_GENERATOR = _PROJECT_ROOT / "04_benchmark" / "report_generator.py"
+_REPORT_GENERATOR = _PROJECT_ROOT / "04_benchmark" / "generate_figures_sober.py"
 
 _ALLOWED_EXTENSIONS = {".png", ".csv"}
 
