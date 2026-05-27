@@ -11,7 +11,13 @@ from typing import AsyncGenerator
 from fastapi import APIRouter, HTTPException, Request
 from sse_starlette.sse import EventSourceResponse
 
-from api.schemas import ArchSummary, BenchmarkResults, BenchmarkRunRequest
+from api.schemas import (
+    ArchSummary,
+    BenchmarkResults,
+    BenchmarkRunRequest,
+    QuestionCatalog,
+    QuestionItem,
+)
 
 router = APIRouter(prefix="/api/benchmark", tags=["benchmark"])
 
@@ -66,6 +72,74 @@ def get_results() -> BenchmarkResults:
             csv_rows = list(reader)
 
     return BenchmarkResults(summary=summary, csv_rows=csv_rows)
+
+
+@router.get("/questions", response_model=QuestionCatalog)
+def get_questions(
+    level: int | None = None,
+    domain: str | None = None,
+    limit: int = 100,
+    offset: int = 0,
+) -> QuestionCatalog:
+    questions_path = _BENCHMARK_DIR / "questions.json"
+    if not questions_path.exists():
+        raise HTTPException(status_code=404, detail="questions.json no encontrado.")
+    questions = json.loads(questions_path.read_text(encoding="utf-8"))
+    if level is not None:
+        questions = [q for q in questions if q.get("level") == level]
+    if domain:
+        questions = [
+            q for q in questions
+            if domain.lower() in q.get("domain", "").lower()
+        ]
+    total = len(questions)
+    page = questions[offset: offset + limit]
+    return QuestionCatalog(
+        total=total,
+        questions=[
+            QuestionItem(
+                id=q["id"],
+                question=q["question"],
+                level=q["level"],
+                domain=q.get("domain", ""),
+                expected_keywords=q.get("expected_keywords", []),
+            )
+            for q in page
+        ],
+    )
+
+
+@router.get("/results/detail")
+def get_results_detail(
+    arch: str | None = None,
+    level: int | None = None,
+    domain: str | None = None,
+    limit: int = 200,
+    offset: int = 0,
+) -> dict:
+    csv_path = _RESULTS_DIR / "results_metrics.csv"
+    if not csv_path.exists():
+        raise HTTPException(status_code=404, detail="No hay resultados CSV.")
+
+    rows = []
+    with open(csv_path, encoding="utf-8") as f:
+        reader = csv.DictReader(f)
+        for row in reader:
+            if arch and not row.get("architecture", "").startswith(arch):
+                continue
+            if level is not None:
+                try:
+                    if int(row.get("level", 0)) != level:
+                        continue
+                except (ValueError, TypeError):
+                    continue
+            if domain and domain.lower() not in row.get("domain", "").lower():
+                continue
+            rows.append(row)
+
+    total = len(rows)
+    page = rows[offset: offset + limit]
+    return {"total": total, "offset": offset, "limit": limit, "rows": page}
 
 
 @router.post("/run")
@@ -130,7 +204,10 @@ async def run_benchmark(request: Request, body: BenchmarkRunRequest):
         # Summary final
         summary: dict[str, dict] = {}
         for arch_key in body.architectures:
-            arch_metrics = [m for m in all_metrics if str(m.get("architecture", "")).startswith(arch_key)]
+            arch_metrics = [
+                m for m in all_metrics
+                if str(m.get("architecture", "")).startswith(arch_key)
+            ]
             if arch_metrics:
                 summary[arch_key] = aggregate(arch_metrics)
 

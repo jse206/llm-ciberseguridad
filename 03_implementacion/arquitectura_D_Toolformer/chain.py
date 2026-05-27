@@ -28,8 +28,7 @@ import re
 import time
 from dataclasses import dataclass, field
 
-from openai import OpenAI
-from config import OPENAI_API_KEY, LLM_MODEL
+from shared.llm_client import chat
 from arquitectura_D_Toolformer.tools import call_tool, TOOLS_BY_NAME
 from arquitectura_D_Toolformer.prompts import (
     get_react_system,
@@ -78,6 +77,7 @@ class ReActStep:
     action_input: dict = field(default_factory=dict)
     observation: str = ""
     raw: str = ""
+    latency_s: float = 0.0
 
 
 class ArchitectureDChain:
@@ -96,17 +96,19 @@ class ArchitectureDChain:
     """
 
     def __init__(self):
-        self._client = OpenAI(api_key=OPENAI_API_KEY)
         self._system = get_react_system()
 
-    def run(self, question: str) -> dict:
-        messages = [
-            {"role": "system", "content": self._system},
+    def run(self, question: str, on_step=None) -> dict:
+        # Sistema separado de la conversación para que chat() lo anteponga correctamente
+        conversation: list[dict] = [
             {"role": "user", "content": REACT_USER_TEMPLATE.format(question=question)},
         ]
 
-        total_usage = {"prompt_tokens": 0, "completion_tokens": 0, "total_tokens": 0,
-                       "total_latency_s": 0.0}
+        total_usage = {
+            "prompt_tokens": 0, "completion_tokens": 0, "total_tokens": 0,
+            "total_latency_s": 0.0,
+            "iteration_latencies_s": [],  # desglose por iteración para la API
+        }
         steps: list[ReActStep] = []
         tools_used: list[str] = []
         forced_final = False
@@ -115,18 +117,18 @@ class ArchitectureDChain:
         t_start = time.perf_counter()
 
         for iteration in range(_MAX_ITERATIONS):
-            # ── Llamada al LLM ─────────────────────────────────────────────────
-            response = self._client.chat.completions.create(
-                model=LLM_MODEL,
-                messages=messages,
+            # ── Llamada al LLM (con retry via tenacity del cliente compartido) ──
+            raw, step_usage = chat(
+                messages=conversation,
+                system=self._system,
                 temperature=0.0,
                 max_tokens=1024,
-                stop=["Observation:"],  # el LLM para antes de inventar la Observation
+                stop=["Observation:"],
             )
-            raw = response.choices[0].message.content or ""
-            total_usage["prompt_tokens"] += response.usage.prompt_tokens
-            total_usage["completion_tokens"] += response.usage.completion_tokens
-            total_usage["total_tokens"] += response.usage.total_tokens
+            total_usage["prompt_tokens"] += step_usage["prompt_tokens"]
+            total_usage["completion_tokens"] += step_usage["completion_tokens"]
+            total_usage["total_tokens"] += step_usage["total_tokens"]
+            total_usage["iteration_latencies_s"].append(step_usage["latency_s"])
 
             logger.debug("Iteración %d LLM output:\n%s", iteration + 1, raw)
 
@@ -134,7 +136,7 @@ class ArchitectureDChain:
             final_match = _FINAL_RE.search(raw)
             if final_match:
                 answer = final_match.group(1).strip()
-                messages.append({"role": "assistant", "content": raw})
+                conversation.append({"role": "assistant", "content": raw})
                 break
 
             # ── Parsear Action + Action Input ──────────────────────────────────
@@ -142,13 +144,13 @@ class ArchitectureDChain:
             action_match = _ACTION_RE.search(raw)
 
             if not action_match:
-                # El LLM no siguió el formato; forzamos cierre
                 logger.warning("Sin Action en iteración %d. Forzando Final Answer.", iteration + 1)
                 forced_final = True
                 break
 
             step.action = action_match.group(1).strip()
             step.action_input = _extract_action_input(raw)
+            step.latency_s = step_usage["latency_s"]
 
             # ── Ejecutar herramienta ───────────────────────────────────────────
             if step.action not in TOOLS_BY_NAME:
@@ -156,8 +158,6 @@ class ArchitectureDChain:
             else:
                 tool_result = call_tool(step.action, step.action_input)
                 tools_used.append(step.action)
-
-                # Serializar la observación de forma legible pero acotada
                 obs_str = json.dumps(tool_result, ensure_ascii=False, indent=2, default=str)
                 if len(obs_str) > 3000:
                     obs_str = obs_str[:3000] + "\n[... truncado ...]"
@@ -165,9 +165,22 @@ class ArchitectureDChain:
 
             steps.append(step)
 
-            # ── Añadir al historial de mensajes ───────────────────────────────
-            messages.append({"role": "assistant", "content": raw})
-            messages.append({
+            # ── Notificar al caller si hay callback ───────────────────────────
+            if on_step is not None:
+                try:
+                    on_step({
+                        "type": "step",
+                        "iteration": iteration + 1,
+                        "action": step.action,
+                        "observation_preview": step.observation[:200],
+                        "latency_s": step.latency_s,
+                    })
+                except Exception:
+                    pass  # no dejar que el callback rompa el ciclo ReAct
+
+            # ── Añadir al historial de conversación ───────────────────────────
+            conversation.append({"role": "assistant", "content": raw})
+            conversation.append({
                 "role": "user",
                 "content": OBSERVATION_TEMPLATE.format(observation=step.observation),
             })
@@ -176,7 +189,7 @@ class ArchitectureDChain:
 
         # ── Añadir fuentes consultadas al final answer ────────────────────────
         if answer and tools_used:
-            unique_tools = list(dict.fromkeys(tools_used))  # orden de aparición, sin duplicados
+            unique_tools = list(dict.fromkeys(tools_used))
             answer = answer + "\n\n**Fuentes consultadas:** " + ", ".join(unique_tools)
 
         # ── Síntesis forzada si no hubo Final Answer ───────────────────────────
@@ -185,21 +198,18 @@ class ArchitectureDChain:
             obs_summary = "\n\n".join(
                 f"[{s.action}]: {s.observation[:500]}" for s in steps if s.observation
             ) or "Sin observaciones disponibles."
-            response = self._client.chat.completions.create(
-                model=LLM_MODEL,
-                messages=[
-                    {"role": "system", "content": FORCED_FINAL_SYSTEM},
-                    {"role": "user", "content": FORCED_FINAL_USER_TEMPLATE.format(
-                        question=question, observations_summary=obs_summary
-                    )},
-                ],
+            fallback_text, fallback_usage = chat(
+                messages=[{"role": "user", "content": FORCED_FINAL_USER_TEMPLATE.format(
+                    question=question, observations_summary=obs_summary,
+                )}],
+                system=FORCED_FINAL_SYSTEM,
                 temperature=0.0,
                 max_tokens=512,
             )
-            answer = response.choices[0].message.content or ""
-            total_usage["prompt_tokens"] += response.usage.prompt_tokens
-            total_usage["completion_tokens"] += response.usage.completion_tokens
-            total_usage["total_tokens"] += response.usage.total_tokens
+            answer = fallback_text
+            total_usage["prompt_tokens"] += fallback_usage["prompt_tokens"]
+            total_usage["completion_tokens"] += fallback_usage["completion_tokens"]
+            total_usage["total_tokens"] += fallback_usage["total_tokens"]
             if tools_used:
                 unique_tools = list(dict.fromkeys(tools_used))
                 answer = answer + "\n\n**Fuentes consultadas:** " + ", ".join(unique_tools)
@@ -227,4 +237,5 @@ def _step_to_dict(step: ReActStep) -> dict:
         "action": step.action,
         "action_input": step.action_input,
         "observation_preview": step.observation[:300] + "…" if len(step.observation) > 300 else step.observation,
+        "latency_s": step.latency_s,
     }

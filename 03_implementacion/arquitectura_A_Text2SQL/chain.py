@@ -48,6 +48,12 @@ _MAX_CORRECTION_ATTEMPTS = 2
 _MAX_RESULT_ROWS = 20      # limita filas enviadas al sintetizador
 _MAX_RESULT_CHARS = 6000   # limita caracteres enviados al sintetizador
 
+# Palabras clave que indican sentencias peligrosas aunque vayan tras un SELECT
+_DANGEROUS_SQL_RE = re.compile(
+    r"\b(DROP|INSERT|UPDATE|DELETE|CREATE|ALTER|ATTACH|DETACH)\b",
+    re.IGNORECASE,
+)
+
 
 def _extract_sql(text: str) -> str | None:
     """Extrae el SQL entre etiquetas <sql>…</sql>."""
@@ -56,9 +62,12 @@ def _extract_sql(text: str) -> str | None:
 
 
 def _is_safe_sql(sql: str) -> bool:
-    """Rechaza sentencias que modifiquen la BD (solo SELECT permitido)."""
-    first_token = sql.strip().split()[0].upper() if sql.strip() else ""
-    return first_token == "SELECT"
+    """Rechaza sentencias que no sean SELECT puro o que contengan DDL/DML peligroso."""
+    stripped = sql.strip()
+    first_token = stripped.split()[0].upper() if stripped else ""
+    if first_token != "SELECT":
+        return False
+    return not _DANGEROUS_SQL_RE.search(stripped)
 
 
 def _execute_sql(sql: str, db_path: Path = NVD_DB_PATH) -> tuple[list[dict], str | None]:
@@ -238,7 +247,8 @@ class ArchitectureAChain:
             "correction_attempts": correction_attempts,
             "sql_error": sql_error,
             "api_fallback": api_fallback_note,
-            "hallucination_risk": bool(sql_error),
+            # Riesgo real solo si el SQL falló Y no hay datos de ninguna fuente
+            "hallucination_risk": bool(sql_error) and len(rows) == 0,
             "usage": total_usage,
             "architecture": "A_Text2SQL",
         }

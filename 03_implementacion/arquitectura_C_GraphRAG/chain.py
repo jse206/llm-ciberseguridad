@@ -137,7 +137,9 @@ class ArchitectureCChain:
             "subgraph_nodes": len(nodes),
             "subgraph_edges": len(edges),
             "coverage": coverage,
-            "hallucination_risk": not coverage.get("sufficient", False),
+            # Señal objetiva: subgrafo vacío. Evita el sesgo de autoconfianza del LLM
+            # que a veces declara cobertura suficiente cuando el contexto es escaso.
+            "hallucination_risk": not bool(nodes),
             "usage": total_usage,
             "architecture": "C_GraphRAG",
         }

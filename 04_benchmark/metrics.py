@@ -28,6 +28,9 @@ from typing import Any
 
 logger = logging.getLogger(__name__)
 
+# Semilla fija para reproducibilidad del bootstrap CI (Efron & Hastie, 2016)
+_rng = _random.Random(42)
+
 # Palabras clave que indican citación de fuente en la respuesta
 _SOURCE_MARKERS = [
     "nvd", "nist", "national vulnerability", "mitre", "att&ck", "abuseipdb",
@@ -155,9 +158,11 @@ def error_handling(result: dict, answer: str) -> tuple[float, str]:
     Returns:
         (0.0-1.0, justificación)
     """
+    # iterations==0 en D no es error: el LLM puede dar Final Answer sin invocar herramientas.
+    # forced_final=True sí indica fallo real (límite alcanzado o formato inválido del LLM).
     has_error = bool(
         result.get("api_error") or result.get("sql_error") or
-        result.get("forced_final") or (result.get("iterations", 0) == 0 and result.get("architecture") == "D_Toolformer")
+        result.get("forced_final")
     )
 
     if not has_error:
@@ -296,7 +301,7 @@ def _bootstrap_ci(
         return round(v, 4), round(v, 4)
     n = len(values)
     boot_means = sorted(
-        sum(_random.choices(values, k=n)) / n
+        sum(_rng.choices(values, k=n)) / n
         for _ in range(n_iters)
     )
     lo = boot_means[int(alpha / 2 * n_iters)]

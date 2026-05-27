@@ -60,3 +60,33 @@ def generate_report() -> dict:
     if _FIGURES_DIR.exists():
         figures = [f.name for f in sorted(_FIGURES_DIR.iterdir()) if f.suffix == ".png"]
     return {"status": "ok", "figures": figures}
+
+
+@router.get("/export/csv")
+def export_csv():
+    csv_path = _PROJECT_ROOT / "04_benchmark" / "resultados" / "results_metrics.csv"
+    if not csv_path.exists():
+        raise HTTPException(
+            status_code=404,
+            detail="No hay resultados CSV. Ejecuta el benchmark primero.",
+        )
+    return FileResponse(
+        str(csv_path),
+        media_type="text/csv",
+        filename="results_metrics.csv",
+    )
+
+
+@router.get("/export/summary")
+def export_summary():
+    summary_path = _PROJECT_ROOT / "04_benchmark" / "resultados" / "results_summary.json"
+    if not summary_path.exists():
+        raise HTTPException(
+            status_code=404,
+            detail="No hay resumen de resultados.",
+        )
+    return FileResponse(
+        str(summary_path),
+        media_type="application/json",
+        filename="results_summary.json",
+    )
