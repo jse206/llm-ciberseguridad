@@ -38,7 +38,11 @@ def get_figure(filename: str):
     if not path.exists() or path.suffix not in _ALLOWED_EXTENSIONS:
         raise HTTPException(status_code=404, detail=f"Figura '{filename}' no encontrada.")
     media_type = "image/png" if path.suffix == ".png" else "text/csv"
-    return FileResponse(str(path), media_type=media_type)
+    return FileResponse(
+        str(path),
+        media_type=media_type,
+        headers={"Cache-Control": "no-cache, no-store, must-revalidate", "Pragma": "no-cache"},
+    )
 
 
 @router.post("/generate")

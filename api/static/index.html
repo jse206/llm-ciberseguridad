@@ -1621,9 +1621,10 @@ async function loadFigs() {
       grid.innerHTML = '<p style="color:var(--text-lo);font-size:.82rem">No hay figuras. Pulsa "Regenerar figuras".</p>';
       return;
     }
+    const ts = Date.now();
     grid.innerHTML = pngs.map(f=>`
       <div class="fig-item">
-        <img src="/api/report/figures/${encodeURIComponent(f)}" alt="${esc(f)}" loading="lazy">
+        <img src="/api/report/figures/${encodeURIComponent(f)}?t=${ts}" alt="${esc(f)}" loading="lazy">
         <div class="fig-cap">${esc(f)}</div>
       </div>`).join('');
   } catch(_) {}
